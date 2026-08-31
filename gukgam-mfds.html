@@ -240,7 +240,7 @@
     var rows=(d.items||[]).filter(function(i){ return (i.group==='식품의약품안전처') || (i.agency||'').indexOf('식품의약품안전처')>=0; });
     var box=document.getElementById('findList');
     if(!rows.length){ box.innerHTML='<div class="empty">추출된 항목이 없습니다.</div>'; return; }
-    box.innerHTML='<div class="qa" style="border-left-color:#a03030;"><div class="who"><span class="nm">'+d.year+'년 결과보고서 — 질병관리청 소관 '+rows.length+'건</span>'+
+    box.innerHTML='<div class="qa" style="border-left-color:#a03030;"><div class="who"><span class="nm">'+d.year+'년 결과보고서 — 식품의약품안전처 소관 '+rows.length+'건</span>'+
       '<a class="badge" style="text-decoration:none;" href="'+esc(d.source_pdf)+'" target="_blank" rel="noopener">원문 PDF ↗</a></div>'+
       '<div class="fleg"><b>분류 색</b><span class="fkey k1a">감염병 계열</span><span class="fkey k2a">의료체계</span><span class="fkey k3a">돌봄·생애주기</span><span class="fkey k4a">소득·안전망</span><span class="fkey k5a">의약품·식품</span><span class="fkey k6a">기관운영·연구</span><span class="fkey k7a">관리·제도</span><span class="fkey k8a">사업·홍보</span><span class="fkey est">추정<i>?</i></span><span style="color:var(--muted);">회색은 근거가 한 단어뿐인 추정 분류입니다</span></div>'+
       '<ul style="margin:6px 0 0;padding-left:20px;font-size:.88rem;">'+
