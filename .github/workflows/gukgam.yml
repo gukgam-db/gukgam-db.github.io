@@ -3,6 +3,13 @@ name: 국정감사 자료 DB 자동 갱신
 # 열린국회정보 Open API에서 국정감사 결과보고서·시정처리결과·회의록 메타데이터를 수집합니다.
 # ASSEMBLY_API_KEY 시크릿(https://open.assembly.go.kr 무료 발급)이 있으면 전체 수집,
 # 없으면 샘플 모드로 동작하되 기존 full 데이터는 덮어쓰지 않습니다.
+#
+# 모든 스텝이 외부 사이트(open.assembly.go.kr / likms.assembly.go.kr / 기관 게시판)에
+# 의존하므로, 한쪽이 응답하지 않아도 나머지 수집분은 살리도록 설계돼 있습니다.
+#  - 스텝마다 timeout-minutes 로 벽시계 시간을 제한한다 (한 스텝이 무한정 재시도하지 못하게)
+#  - 수집 스텝은 continue-on-error 로 실패해도 뒤 스텝을 계속 진행한다 (수집은 증분식)
+#  - 커밋 스텝은 if: always() 로 항상 실행해 그때까지 갱신된 내용을 저장한다
+#  - 마지막 점검 스텝은 '모든 수집이 실패'한 경우에만 워크플로를 실패로 표시한다
 on:
   schedule:
     - cron: '10 20 * * 0'      # 평시: 매주 월요일 KST 05:10
@@ -15,54 +22,84 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-24.04
+    timeout-minutes: 120   # 스텝별 제한이 모두 뚫렸을 때의 최종 안전장치
     steps:
       - uses: actions/checkout@v4
 
       - name: 국정감사 자료 수집 → data/gukgam/
+        id: fetch_assembly
+        continue-on-error: true
+        timeout-minutes: 20
         env:
           ASSEMBLY_API_KEY: ${{ secrets.ASSEMBLY_API_KEY }}
         run: python3 scripts/gukgam/fetch_assembly.py
 
       - name: 국회 주요 일정 수집
+        id: fetch_schedule
+        continue-on-error: true
+        timeout-minutes: 15
         env:
           ASSEMBLY_API_KEY: ${{ secrets.ASSEMBLY_API_KEY }}
         run: python3 scripts/gukgam/fetch_schedule.py
 
       - name: 보건복지위 위원 프로필 수집
+        id: fetch_members
+        continue-on-error: true
+        timeout-minutes: 10
         env:
           ASSEMBLY_API_KEY: ${{ secrets.ASSEMBLY_API_KEY }}
         run: python3 scripts/gukgam/fetch_members.py
 
       - name: likms 위원회 게시판 최신 자료 수집 (키 불필요, 누적)
+        id: fetch_likms
+        continue-on-error: true
+        timeout-minutes: 15
         run: python3 scripts/gukgam/fetch_likms.py
 
       - name: 보건복지 트랙 기관 게시판 수집 (키 불필요, 누적)
+        id: fetch_health
+        continue-on-error: true
+        timeout-minutes: 20
         run: python3 scripts/gukgam/fetch_health.py
 
       - name: 문서 요약 추출 (보건복지위 회의록·결과보고서, 증분)
+        continue-on-error: true
+        timeout-minutes: 25
         run: |
           pip install --quiet pypdf
           python3 scripts/gukgam/build_summaries.py
 
       - name: 의원별 관심 분야 분석 (국감 회의록 발언, 증분)
+        continue-on-error: true
+        timeout-minutes: 20
         run: python3 scripts/gukgam/build_member_topics.py
 
       - name: 질병관리청 Q&A 추출 (국감 회의록, 증분)
+        continue-on-error: true
+        timeout-minutes: 20
         run: python3 scripts/gukgam/build_kdca_qa.py
 
       - name: 보건복지부 Q&A 추출 (국감 회의록, 증분)
+        continue-on-error: true
+        timeout-minutes: 20
         run: python3 scripts/gukgam/build_mohw_qa.py
 
       - name: 식품의약품안전처 Q&A 추출 (국감 회의록, 증분)
+        continue-on-error: true
+        timeout-minutes: 20
         run: python3 scripts/gukgam/build_mfds_qa.py
 
       - name: 하이라이트·의원별 가이드북 생성
+        continue-on-error: true
+        timeout-minutes: 15
         run: |
           python3 scripts/gukgam/build_highlights.py
           python3 scripts/gukgam/build_guides.py
           python3 scripts/gukgam/build_extra_records.py
 
       - name: 이슈 연대기 집계 (질병청·복지부)
+        continue-on-error: true
+        timeout-minutes: 20
         env:
           ASSEMBLY_API_KEY: ${{ secrets.ASSEMBLY_API_KEY }}
         run: |
@@ -70,7 +107,10 @@ jobs:
           GUKGAM_TL_AGENCY=mohw python3 scripts/gukgam/build_timeline.py
           GUKGAM_TL_AGENCY=mfds python3 scripts/gukgam/build_timeline.py
 
+      # 앞 스텝이 일부 실패했더라도, 그때까지 갱신된 데이터는 반드시 커밋한다.
       - name: 변경 시 커밋
+        if: always()
+        timeout-minutes: 10
         run: |
           if git diff --quiet -- data/gukgam; then
             echo "변경 없음"
@@ -81,3 +121,28 @@ jobs:
             git commit -m "국정감사 자료 DB 자동 갱신"
             git push
           fi
+
+      # 수집이 전부 실패했다면(외부 API 전면 장애 등) 성공으로 감추지 않고 빨간불로 남긴다.
+      - name: 수집 결과 점검
+        if: always()
+        env:
+          R_ASSEMBLY: ${{ steps.fetch_assembly.outcome }}
+          R_SCHEDULE: ${{ steps.fetch_schedule.outcome }}
+          R_MEMBERS: ${{ steps.fetch_members.outcome }}
+          R_LIKMS: ${{ steps.fetch_likms.outcome }}
+          R_HEALTH: ${{ steps.fetch_health.outcome }}
+        run: |
+          echo "국정감사 자료 수집:      $R_ASSEMBLY"
+          echo "국회 주요 일정 수집:     $R_SCHEDULE"
+          echo "위원 프로필 수집:        $R_MEMBERS"
+          echo "likms 게시판 수집:       $R_LIKMS"
+          echo "보건복지 기관 게시판:    $R_HEALTH"
+          ok=0
+          for r in "$R_ASSEMBLY" "$R_SCHEDULE" "$R_MEMBERS" "$R_LIKMS" "$R_HEALTH"; do
+            [ "$r" = "success" ] && ok=$((ok + 1))
+          done
+          if [ "$ok" -eq 0 ]; then
+            echo "::error::수집 스텝이 모두 실패했습니다. 외부 사이트 장애 또는 러너의 아웃바운드 차단을 확인하세요."
+            exit 1
+          fi
+          echo "수집 성공 $ok/5 — 기존 데이터는 보존되었습니다."

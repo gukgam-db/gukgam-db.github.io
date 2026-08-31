@@ -26,6 +26,11 @@ _DEFAULT_ERAS = "제16대,제17대,제18대,제19대,제20대,제21대,제22대"
 ERAS = [e.strip() for e in os.environ.get("GUKGAM_ERAS", _DEFAULT_ERAS).split(",") if e.strip()]
 PAGE_SIZE = 100 if KEY else 5
 TODAY = datetime.date.today()
+HTTP_TIMEOUT = int(os.environ.get("GUKGAM_HTTP_TIMEOUT", "30"))
+# 상대 서버가 완전히 응답하지 않을 때 30초 타임아웃 x 3회 재시도를 호출마다 반복하면
+# 한 스텝이 수십 분을 낭비한다. 연속 N회 실패하면 남은 호출을 건너뛴다(서킷 브레이커).
+MAX_CONSEC_FAIL = int(os.environ.get("GUKGAM_MAX_CONSEC_FAIL", "3"))
+NET = {"consec_fail": 0, "down": False, "any_fail": False}
 
 
 def call(service, **params):
@@ -34,23 +39,34 @@ def call(service, **params):
     if KEY:
         q["KEY"] = KEY
     q.update(params)
+    if NET["down"]:
+        return [], 0
     url = BASE + service + "?" + urllib.parse.urlencode(q)
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (gukgam-db collector)"})
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(req, timeout=30) as r:
+            with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT) as r:
                 data = json.loads(r.read().decode("utf-8"))
+            NET["consec_fail"] = 0
             break
         except Exception as e:
             if attempt < 2:
                 time.sleep(3 * (attempt + 1))
             else:
                 print(f"[{service}] 호출 실패: {e}")
+                NET["any_fail"] = True
+                NET["consec_fail"] += 1
+                if NET["consec_fail"] >= MAX_CONSEC_FAIL:
+                    NET["down"] = True
+                    print(f"※ 연속 {MAX_CONSEC_FAIL}회 호출 실패 → open.assembly.go.kr 접속 불가로 판단, 남은 호출을 건너뜁니다.")
                 return [], 0
     if service not in data:  # {"RESULT":{"CODE":"INFO-200"...}} = 데이터 없음/오류
         code = (data.get("RESULT") or {}).get("CODE", "?")
         if code != "INFO-200":
+            # INFO-200(데이터 없음)이 아니면 인증키 오류·호출 한도 초과 등 '실패'다.
+            # 이걸 정상 0건으로 취급하면 기존 데이터를 0건으로 덮어쓰게 된다.
             print(f"[{service}] 응답 오류: {code}")
+            NET["any_fail"] = True
         return [], 0
     head, body = data[service][0], data[service][1]
     total = head["head"][0].get("list_total_count", 0)
@@ -136,8 +152,12 @@ def collect_minutes():
     return items
 
 
-def save(name, payload):
+def save(name, payload, empty=False):
     path = os.path.join(OUT_DIR, name)
+    # 수집이 0건이면(네트워크 실패 등) 기존 데이터를 절대 덮어쓰지 않음
+    if empty and os.path.exists(path):
+        print(f"{name}: 수집 0건(호출 실패) → 기존 파일 유지(덮어쓰지 않음)")
+        return False
     # 샘플 모드는 full 데이터를 덮어쓰지 않음
     if MODE == "sample" and os.path.exists(path):
         try:
@@ -161,8 +181,11 @@ def main():
 
     reports = collect_reports()
     minutes = collect_minutes()
-    save("reports.json", {"updated": updated, "mode": MODE, "items": reports})
-    save("minutes.json", {"updated": updated, "mode": MODE, "items": minutes})
+    # 호출이 실패해서 0건이 된 것과, 진짜로 0건인 것을 구분한다.
+    reports_empty = NET["any_fail"] and not reports
+    minutes_empty = NET["any_fail"] and not minutes
+    save("reports.json", {"updated": updated, "mode": MODE, "items": reports}, empty=reports_empty)
+    save("minutes.json", {"updated": updated, "mode": MODE, "items": minutes}, empty=minutes_empty)
 
     idx = {
         "updated": updated,
@@ -178,8 +201,11 @@ def main():
         },
         "years": sorted({i["year"] for i in reports if i["year"]}, reverse=True),
     }
-    save("index.json", {"items": [], **idx})
+    save("index.json", {"items": [], **idx}, empty=reports_empty and minutes_empty)
     print(f"완료: 보고서 {len(reports)}건, 회의록 {len(minutes)}건 (mode={MODE})")
+    if reports_empty and minutes_empty:
+        print("※ API 호출이 모두 실패해 이번 실행에서 갱신된 내용이 없습니다.")
+        return 1
     return 0
 
 
