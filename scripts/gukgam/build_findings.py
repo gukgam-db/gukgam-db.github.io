@@ -43,8 +43,13 @@ def pdf_text(url):
     return "\n".join((p.extract_text() or "") for p in reader.pages)
 
 
-# 지적사항 분류 키워드 (앞쪽일수록 우선). 목록 화면에서 파란 강조어로 표시된다.
-FIND_KEYS = [
+# 지적사항 분류는 두 축이다.
+#  ① 주제(무엇에 대한 지적인가): 검역, 결핵, 연금 …            → key / key_conf
+#  ② 성격(무엇을 하라는 지적인가): 예산·재정, 관리·감독 …      → key2 / key2_conf
+# 예: "노숙인 결핵시설 예산 삭감 재검토" = 주제 '결핵' × 성격 '예산·재정'.
+# 한 축만 쓰면 빈도 싸움에서 진 쪽 정보가 사라진다(위 예가 '결핵' 하나로만 잡혀
+# 예산 문제라는 사실이 안 보이던 문제). 키워드는 앞쪽일수록 우선.
+SUBJECT_KEYS = [
     ("검역", ["검역", "선박위생", "국립검역소", "공항만", "항공기 내 위생", "관능검사"]),
     ("백신·예방접종", ["백신", "예방접종", "접종률", "이상반응", "NIP", "항체 접종"]),
     ("결핵", ["결핵", "국립마산병원", "국립목포병원"]),
@@ -70,6 +75,9 @@ FIND_KEYS = [
     ("국제협력·ODA", ["ODA", "국제협력", "해외사무소", "국제기구", "재외"]),
     ("의약품·마약류", ["의약품", "마약", "제약", "약가", "품절약", "임상시험"]),
     ("식품·의료기기", ["식품", "식중독", "의료기기", "화장품", "위생"]),
+]
+
+NATURE_KEYS = [
     ("조직·인력", ["정원", "인력", "결원", "충원", "조직", "직급", "채용", "고용", "위원 위촉",
                 "위원회 구성", "전문성", "겸직", "산하기관", "기관장"]),
     ("처우·노무", ["처우", "임금", "수당", "근로", "괴롭힘", "갑질", "성비위", "복무", "노동"]),
@@ -83,6 +91,10 @@ FIND_KEYS = [
     ("홍보·교육", ["홍보", "교육", "안내", "캠페인", "인식개선"]),
     ("사업운영·성과", ["사업", "운영", "성과", "실효성", "지원 확대", "협업", "대책"]),
 ]
+
+# 1축(key)은 종전과 똑같이 주제+성격 통합 목록에서 최빈 분류를 고른다
+# (기존 화면·집계·번호 체계와 호환). 2축(key2)은 성격 목록만 따로 본다.
+FIND_KEYS = SUBJECT_KEYS + NATURE_KEYS
 
 # 소관이 분명한 분류는 키워드 빈도와 무관하게 먼저 확정한다.
 # 예: 검역은 국립검역소 소관이라 본문에 '감염병'이 여러 번 나와도 검역으로 잡아야
@@ -155,8 +167,20 @@ def assign_ids(items, year):
     return items
 
 
+def rank_keys(text, keys):
+    """키워드 빈도 순위 → (최빈 분류, 신뢰도 high|low) 또는 (None, None)"""
+    ranked = sorted(((sum(text.count(k) for k in kws), label) for label, kws in keys),
+                    key=lambda x: -x[0])
+    if not ranked or ranked[0][0] == 0:
+        return None, None
+    top = ranked[0][0]
+    second = ranked[1][0] if len(ranked) > 1 else 0
+    # 근거가 2회 이상이고 2위와 벌어져야 '확실'로 본다
+    return ranked[0][1], ("high" if (top >= 2 and top > second) else "low")
+
+
 def classify(text):
-    """지적사항 → (분류 키워드, 요구 강도, 분류 신뢰도 high|low|None)"""
+    """지적사항 → (주제 key, 요구 강도 act, 주제 신뢰도, 성격 key2, 성격 신뢰도)"""
     # 분류와 함께 '얼마나 믿을 만한가'를 같이 낸다.
     # 근거가 한 단어뿐인 분류가 전체의 절반이라, 이를 확실한 분류와 똑같이
     # 선명하게 보여주면 오분류 하나가 사이트 전체의 신뢰를 깎는다.
@@ -166,20 +190,18 @@ def classify(text):
             best, conf = label, "high"      # 소관이 분명한 우선규칙
             break
     if best is None:
-        ranked = sorted(((sum(text.count(k) for k in kws), label) for label, kws in FIND_KEYS),
-                        key=lambda x: -x[0])
-        if ranked and ranked[0][0] > 0:
-            top = ranked[0][0]
-            second = ranked[1][0] if len(ranked) > 1 else 0
-            best = ranked[0][1]
-            # 근거가 2회 이상이고 2위와 벌어져야 '확실'로 본다
-            conf = "high" if (top >= 2 and top > second) else "low"
+        best, conf = rank_keys(text, FIND_KEYS)
+    # 2축(성격): 성격 목록만 따로 센다. 1축이 이미 같은 성격 분류로 잡혔으면
+    # 같은 말을 두 번 붙이는 셈이라 비워 둔다.
+    best2, conf2 = rank_keys(text, NATURE_KEYS)
+    if best2 == best:
+        best2, conf2 = None, None
     act = None
     for label, kws in ACT_RULES:
         if any(k in text for k in kws):
             act = label
             break
-    return best, act, conf
+    return best, act, conf, best2, conf2
 
 
 def parse(text):
@@ -198,9 +220,10 @@ def parse(text):
         if buf is not None:
             t = re.sub(r"\s+", " ", buf).strip()
             if len(t) > 8:
-                key, act, conf = classify(t)
+                key, act, conf, key2, conf2 = classify(t)
                 items.append({"group": group, "agency": agency, "dept": dept, "topic": topic,
-                              "key": key, "key_conf": conf, "act": act, "text": t})
+                              "key": key, "key_conf": conf, "key2": key2, "key2_conf": conf2,
+                              "act": act, "text": t})
         buf = None
 
     for raw in sec.split("\n"):

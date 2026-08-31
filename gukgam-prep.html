@@ -65,6 +65,9 @@
   li:target, div.row:target{ background:#fffbe6; border-radius:8px; }
   .fkey.est{ background:#f1f3f5 !important; color:#5a6673 !important; }  /* 근거가 한 단어뿐 — 추정 */
   .fkey i{ font-style:normal; font-size:.72em; opacity:.8; margin-left:4px; font-weight:700; }
+  /* 성격 축(key2) — 주제 색 배지와 달리 점선 테두리의 무채색으로 구분 */
+  .fkey2{ font-weight:700; color:#4a5866; background:#fff; border:1px dashed #a9b6c3;
+          border-radius:6px; padding:0 7px; margin-right:7px; white-space:nowrap; font-size:.8rem; }
   .fkey.k1a{ background:#fdeaef; color:#9b1c3d; }  /* 감염병·백신 */
   .fkey.k1b{ background:#f8d5e0; color:#82122e; }
   .fkey.k1c{ background:#f2bccd; color:#6d0f26; }
@@ -151,13 +154,14 @@
     <select id="gYear" title="연도 선택"></select>
     <select id="gAgency"><option value="">전체 기관</option></select>
     <select id="gKey"><option value="">전체 분류</option></select>
+    <select id="gKey2"><option value="">전체 성격</option></select>
     <input id="gQuery" type="search" placeholder="지적사항 키워드·번호 검색 (예: 2025-질병청-014)">
     <label style="font-size:.84rem;font-weight:700;display:flex;align-items:center;gap:6px;">
       <input type="checkbox" id="gAsQuestion"> 질의형으로 보기
     </label>
     <span id="gCount" style="font-size:.82rem;color:var(--muted);"></span>
   </div>
-  <div class="fleg"><b>분류 색</b><span class="fkey k1a">감염병 계열</span><span class="fkey k2a">의료체계</span><span class="fkey k3a">돌봄·생애주기</span><span class="fkey k4a">소득·안전망</span><span class="fkey k5a">의약품·식품</span><span class="fkey k6a">기관운영·연구</span><span class="fkey k7a">관리·제도</span><span class="fkey k8a">사업·홍보</span><span class="fkey est">추정<i>?</i></span><span style="color:var(--muted);">회색은 근거가 한 단어뿐인 추정 분류입니다</span></div>
+  <div class="fleg"><b>분류 색</b><span class="fkey k1a">감염병 계열</span><span class="fkey k2a">의료체계</span><span class="fkey k3a">돌봄·생애주기</span><span class="fkey k4a">소득·안전망</span><span class="fkey k5a">의약품·식품</span><span class="fkey k6a">기관운영·연구</span><span class="fkey k7a">관리·제도</span><span class="fkey k8a">사업·홍보</span><span class="fkey est">추정<i>?</i></span><span class="fkey2">성격</span><span style="color:var(--muted);">회색은 근거가 한 단어뿐인 추정 분류 · 점선 배지는 주제와 별개인 요구 성격(예산·재정, 관리·감독 등)입니다</span></div>
   <div id="findings" style="margin-top:12px;"></div>
   <button class="more" id="gMore" hidden>더 보기</button>
 
@@ -191,6 +195,12 @@
     var low = i.key_conf === 'low';
     return '<span class="'+(low?'fkey est':fkeyCls(i.key))+'">'+t+
            (low?'<i>추정</i>':'')+'</span>';
+  }
+  function fkey2Tag(i){
+    if(!i.key2) return '';
+    var t = String(i.key2).replace(/[&<>"]/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; });
+    return '<span class="fkey2" title="요구 성격 — 주제와 별개 축 (키워드 기반)">'+t+'</span>';
   }
   function fkeyCls(k){ return 'fkey k'+(FKEY_FAM[k]||'6a'); }
 
@@ -248,19 +258,31 @@
   document.getElementById('fRisk').addEventListener('change', function(){ state.risk=this.value; render(); });
   document.getElementById('fQuery').addEventListener('input', function(){ state.q=this.value.trim(); render(); });
   // ---- 작년 지적사항 전수 목록 (결과보고서 자동 추출) ----
-  var FIND=[], gShown=100, gState={agency:'', key:'', q:'', asQ:false};
+  var FIND=[], gShown=100, gState={agency:'', key:'', key2:'', q:'', asQ:false};
   var srcLinks={};
   function loadYear(y){
     fetch('data/gukgam/findings-'+y+'.json?_='+Date.now())
       .then(function(r){ if(!r.ok) throw 0; return r.json(); })
       .then(function(d){
-        FIND=d.items||[]; gShown=100; gState.agency=''; gState.key='';
+        FIND=d.items||[]; gShown=100; gState.agency=''; gState.key=''; gState.key2='';
         var kc={};
         FIND.forEach(function(i){ if(i.key) kc[i.key]=(kc[i.key]||0)+1; });
         var ks=document.getElementById('gKey');
         ks.innerHTML='<option value="">전체 분류</option>'+
           Object.keys(kc).sort(function(a,b){ return kc[b]-kc[a]; })
             .map(function(k){ return '<option value="'+esc(k)+'">'+esc(k)+' ('+kc[k]+')</option>'; }).join('');
+        // 성격 축: 성격이 2축(key2)으로 잡혔거나 1축(key) 자체가 성격 분류인 항목 모두 센다
+        var K2SET={'조직·인력':1,'처우·노무':1,'예산·재정':1,'정보시스템·데이터':1,'연구·R&D':1,
+                   '통계·실태조사':1,'관리·감독':1,'법령·제도개선':1,'홍보·교육':1,'사업운영·성과':1};
+        var k2c={};
+        FIND.forEach(function(i){
+          if(i.key2) k2c[i.key2]=(k2c[i.key2]||0)+1;
+          else if(i.key && K2SET[i.key]) k2c[i.key]=(k2c[i.key]||0)+1;
+        });
+        var ks2=document.getElementById('gKey2');
+        ks2.innerHTML='<option value="">전체 성격</option>'+
+          Object.keys(k2c).sort(function(a,b){ return k2c[b]-k2c[a]; })
+            .map(function(k){ return '<option value="'+esc(k)+'">'+esc(k)+' ('+k2c[k]+')</option>'; }).join('');
         document.getElementById('findingsTitle').textContent='📋 '+d.year+'년 지적사항 전수 목록 ('+FIND.length+'건 자동 추출)';
         var sel=document.getElementById('gAgency');
         sel.innerHTML='<option value="">전체 기관</option>';
@@ -296,6 +318,7 @@
     var rows=FIND.filter(function(i){
       if(gState.agency && i.agency!==gState.agency) return false;
       if(gState.key && i.key!==gState.key) return false;
+      if(gState.key2 && i.key2!==gState.key2 && i.key!==gState.key2) return false;
       if(gState.q){ var t=(i.text+' '+(i.dept||'')+' '+(i.topic||'')+' '+(i.id||'')).toLowerCase(); if(t.indexOf(gState.q.toLowerCase())<0) return false; }
       return true;
     });
@@ -307,7 +330,7 @@
       if(i.agency) meta.push('<span class="badge">'+esc(i.agency)+'</span>');
       if(i.dept) meta.push('<span class="badge">'+esc(i.dept)+'</span>');
       if(i.topic) meta.push('<span class="badge">'+esc(i.topic)+'</span>');
-      var lead = fkeyTag(i);
+      var lead = fkeyTag(i)+fkey2Tag(i);
       var act  = i.act ? '<span class="fact act-'+(i.act.indexOf('마련')>=0?'a':i.act.indexOf('검토')>=0?'b':i.act.indexOf('노력')>=0?'c':'d')+'">'+esc(i.act)+'</span>' : '';
       return '<div class="row" id="'+(i.id||'')+'"><div class="main"><div style="font-size:.92rem;line-height:1.6;">'+
         fnoTag(i)+
@@ -319,6 +342,7 @@
   initYears();
   document.getElementById('gAgency').addEventListener('change', function(){ gState.agency=this.value; gShown=100; renderFindings(); });
   document.getElementById('gKey').addEventListener('change', function(){ gState.key=this.value; gShown=100; renderFindings(); });
+  document.getElementById('gKey2').addEventListener('change', function(){ gState.key2=this.value; gShown=100; renderFindings(); });
   document.getElementById('gQuery').addEventListener('input', function(){ gState.q=this.value.trim(); gShown=100; renderFindings(); });
   document.getElementById('gAsQuestion').addEventListener('change', function(){ gState.asQ=this.checked; renderFindings(); });
   document.getElementById('gMore').addEventListener('click', function(){ gShown+=100; renderFindings(); });

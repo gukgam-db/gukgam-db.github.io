@@ -723,6 +723,16 @@
           });
           h+='</div></details>';
         }
+        if(a.by_key2&&a.by_key2.length){
+          h+='<details class="br-fold"><summary>요구 성격별 건수 <span class="cnt">(예산·재정, 관리·감독 등 — 주제와 별개 축)</span></summary><div>';
+          a.by_key2.forEach(function(x,i,arr){
+            h+='<div class="barrow"><span class="nm">'+esc(x.key)+'</span>'+
+               '<span class="bar"><i style="width:'+Math.round(100*x.n/arr[0].n)+'%"></i></span>'+
+               '<span class="n">'+x.n+'건</span></div>';
+          });
+          h+='<div style="font-size:.76rem;color:var(--muted);margin-top:6px;">"무엇에 대한 지적인가"(분류)와 별도로 "무엇을 하라는 지적인가"를 센 것입니다. 예산 증액·집행 요구가 많은 해는 결산 자료를, 관리·감독 요구가 많은 해는 점검 실적을 먼저 준비하세요.</div>';
+          h+='</div></details>';
+        }
         box.innerHTML=h;
       }
       sel.addEventListener('change', function(){ draw(this.value); });

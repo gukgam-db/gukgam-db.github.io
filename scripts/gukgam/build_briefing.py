@@ -138,6 +138,15 @@ def main():
         keys = collections.Counter(i["key"] for i in items_cur if i.get("key"))
         by_key = [{"key": k, "n": v, "repeat": k in keys_prev} for k, v in keys.most_common()]
 
+        # ── 성격별 건수 (2축) — 성격이 2축(key2)으로 잡혔거나 1축(key) 자체가 성격인 항목
+        NATURE = {"조직·인력", "처우·노무", "예산·재정", "정보시스템·데이터", "연구·R&D",
+                  "통계·실태조사", "관리·감독", "법령·제도개선", "홍보·교육", "사업운영·성과"}
+        keys2 = collections.Counter(
+            (i.get("key2") or (i.get("key") if i.get("key") in NATURE else None))
+            for i in items_cur)
+        keys2.pop(None, None)
+        by_key2 = [{"key": k, "n": v} for k, v in keys2.most_common()]
+
         # ── 반복 지적 (문장 단위) — 작년 원문과 나란히 보여 주기 위함
         idx = [(toks(i["text"]), i) for i in items_prev]
         repeats = []
@@ -191,6 +200,7 @@ def main():
             "act": dict(act.most_common()),
             "dept": [{"dept": d, "n": n} for d, n in dept.most_common(20)],
             "by_key": by_key[:20],
+            "by_key2": by_key2[:10],
             "repeat_key_n": sum(1 for k in by_key if k["repeat"]),
             "repeats": repeats,
             "audit_days": days,
