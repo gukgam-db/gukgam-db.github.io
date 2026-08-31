@@ -95,6 +95,7 @@ def main():
     cur, prev = FIND_YEARS[-1], (FIND_YEARS[-2] if len(FIND_YEARS) > 1 else None)
 
     F = {y: (load("findings-%d.json" % y) or {}).get("items", []) for y in FIND_YEARS}
+    SUMM = (load("summaries.json") or {}).get("items", {})
 
     # 기관별 지적 건수 / 순위
     counts = {y: collections.Counter(i.get("agency") or "" for i in F[y]) for y in FIND_YEARS}
@@ -143,6 +144,24 @@ def main():
         repeats.sort(key=lambda x: -x["sim"])
         repeats = repeats[:TOP_REPEAT]
 
+
+        # ── 감사일 이력 — "우리 기관은 언제 감사받나"
+        # 국정감사계획서(감사일정×피감기관 표)는 첨부파일이라 아직 파싱하지 않는다.
+        # 대신 지난 회의록에 붙은 피감기관 정보로 실제 감사받은 날을 되짚는다.
+        # 국감 일정은 해마다 시기가 거의 고정이라 이것만으로도 준비 시점을 잡을 수 있다.
+        days = []
+        for rec_ in (SUMM or {}).values():
+            if rec_.get("kind") != "minutes":
+                continue
+            tg = rec_.get("targets") or []
+            if not any(agency in t for t in tg):
+                continue
+            m = re.search(r"(\d{4})년\s*(\d{1,2})월\s*(\d{1,2})일", rec_.get("when") or "")
+            if m:
+                days.append({"date": "%s-%02d-%02d" % (m.group(1), int(m.group(2)), int(m.group(3))),
+                             "with": [t for t in tg if agency not in t][:4]})
+        days.sort(key=lambda x: x["date"])
+
         rec = {
             "count": {str(y): counts[y].get(agency, 0) for y in FIND_YEARS},
             "rank": ranked.index(agency) + 1,
@@ -152,7 +171,9 @@ def main():
             "by_key": by_key[:20],
             "repeat_key_n": sum(1 for k in by_key if k["repeat"]),
             "repeats": repeats,
+            "audit_days": days,
         }
+
 
         # ── 주제 추세·질의 의원 (Q&A가 있는 기관만)
         files = QA_FILES.get(agency)
