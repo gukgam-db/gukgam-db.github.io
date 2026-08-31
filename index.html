@@ -170,6 +170,7 @@
   .dir{ font-size:.72rem; font-weight:800; border-radius:6px; padding:1px 7px; white-space:nowrap; }
   .dir.up{ background:#fbeaea; color:#a03030; }
   .dir.down{ background:#eaf4f0; color:#136350; }
+  .dir.flat{ background:#f1f3f5; color:#5a6673; }  /* 변화 없음 — 빈칸으로 두면 누락으로 읽힌다 */
   .dup{ font-size:.7rem; font-weight:800; border-radius:6px; padding:1px 7px;
         background:#fdf0e3; color:#8a5a17; white-space:nowrap; }  /* 전년 중복 — 증감 표시와 구분 */
   .br-fold{ margin-top:8px; }
@@ -570,6 +571,15 @@
         return '<option value="'+esc(n)+'"'+(n===first?' selected':'')+'>'+esc(n)+
                ' ('+BR.agencies[n].count[BR.cur_year]+'건)</option>'; }).join('');
 
+      // 빈칸은 '데이터 없음'으로 오해된다. 판정이 안 되는 경우에도 왜 그런지 말한다.
+      function dirBadge(t){
+        var d=t.share_delta, p=(d===null||d===undefined)?'':' '+(d>0?'+':'')+Math.round(d*100)+'%';
+        if(t.dir==='up')   return '<span class="dir up">▲ 늘고 있음'+p+'</span>';
+        if(t.dir==='down') return '<span class="dir down">▼ 줄고 있음'+p+'</span>';
+        if(d===null||d===undefined) return '<span class="dir flat">표본 부족</span>';
+        return '<span class="dir flat">— 변화 없음'+p+'</span>';
+      }
+
       function spark(series, years){
         var vals=years.map(function(y){ return series[y]||0; });
         var mx=Math.max.apply(null, vals)||1, W=76, H=18, n=vals.length;
@@ -633,25 +643,33 @@
           h+='<div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">'+
              '<table class="trend-tb"><thead><tr><th>주제</th><th>추세</th>'+
              '<th class="num">'+ys[0]+'</th><th class="num">'+ys[ys.length-1]+'</th>'+
-             '<th class="num">계</th><th></th></tr></thead><tbody>';
+             '<th class="num">계</th><th>비중 추세</th></tr></thead><tbody>';
           a.topics.slice(0,8).forEach(function(t){
             h+='<tr><td>'+esc(t.topic)+'</td><td>'+spark(t.series,ys)+'</td>'+
                '<td class="num">'+(t.series[ys[0]]||0)+'</td>'+
                '<td class="num">'+(t.series[ys[ys.length-1]]||0)+'</td>'+
-               '<td class="num">'+t.total+'</td><td>'+
-               (t.dir==='up'?'<span class="dir up">▲ 늘고 있음</span>':
-                t.dir==='down'?'<span class="dir down">▼ 줄고 있음</span>':'')+'</td></tr>';
+               '<td class="num">'+t.total+'</td><td>'+dirBadge(t)+'</td></tr>';
           });
-          h+='</tbody></table></div>';
+          h+='</tbody></table></div>'+
+             '<div style="font-size:.76rem;color:var(--muted);margin:6px 2px 0;">'+
+             '추세는 <b>그해 전체 질의 중 비중</b>으로 비교합니다. 국감 질의는 해마다 총량이 늘어(이 기관은 '+
+             (a.qa_total||0).toLocaleString()+'건) 건수로만 보면 제자리인 주제도 모두 늘어난 것처럼 보입니다.</div>';
         }
         if(a.members&&a.members.length){
-          h+='<div class="br-sec">주로 묻는 위원</div><div>';
-          a.members.slice(0,6).forEach(function(m,i,arr){
+          var ef=a.members_era_from||2024, ys2=a.qa_years||[];
+          h+='<div class="br-sec">우리 기관에 묻는 위원 '+
+             '<span style="font-weight:600;color:var(--muted);">현 위원만 · 막대는 '+ef+'년 이후</span></div>'+
+             '<div>';
+          var mx=Math.max.apply(null,a.members.map(function(m){ return m.recent||0; }))||1;
+          a.members.slice(0,6).forEach(function(m){
+            var cum=(m.n>(m.recent||0))?' <span style="color:var(--muted);font-size:.76rem;">누적 '+m.n+'</span>':'';
             h+='<div class="barrow"><span class="nm">'+esc(m.name)+'</span>'+
-               '<span class="bar"><i style="width:'+Math.round(100*m.n/arr[0].n)+'%"></i></span>'+
-               '<span class="n">'+m.n+'회</span></div>';
+               '<span class="bar"><i style="width:'+Math.round(100*(m.recent||0)/mx)+'%"></i></span>'+
+               '<span class="n">'+(m.recent||0)+'회'+cum+'</span></div>';
           });
-          h+='</div>';
+          h+='</div><div style="font-size:.76rem;color:var(--muted);margin:6px 2px 0;">'+
+             '회의록 '+(ys2[0]||'')+'~'+(ys2[ys2.length-1]||'')+' 중 이 기관 대상 질의만 셉니다. '+
+             '위원 카드의 ‘국감 발언’은 전 기관·전 대수 발언 수라 값이 다릅니다.</div>';
         }
 
         h+='<div class="br-sec">실무자가 바로 쓸 것</div>';

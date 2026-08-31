@@ -155,6 +155,12 @@ def main():
     for p in sorted(glob.glob(os.path.join(DATA, "mohw-qa-2*.json"))):
         with open(p, encoding="utf-8") as f:
             qa += [dict(i, src="복지부") for i in json.load(f)["items"]]
+    # 식약처 Q&A는 나중에 추가된 소스라 여기서 빠져 있었다. 남인순 위원처럼
+    # 식약처 질의가 많은 위원은 발언량이 실제보다 훨씬 적게 잡혔다.
+    _mfds_p = os.path.join(DATA, "mfds-qa.json")
+    if os.path.exists(_mfds_p):
+        with open(_mfds_p, encoding="utf-8") as f:
+            qa += [dict(i, src="식약처") for i in json.load(f)["items"]]
 
     by_member = collections.defaultdict(list)
     for i in qa:
@@ -192,13 +198,13 @@ def main():
         mt = topics_map.get(name) or {}
         summary = []
         if items:
-            summary.append(f"최근 국감({years[0]}~{years[-1]}년)에서 복지부·질병청 관련 질의 {len(items)}건 (현 위원 중 발언량 {rank_of.get(name)}위).")
+            summary.append(f"최근 국감({years[0]}~{years[-1]}년)에서 복지부·질병청·식약처 관련 질의 {len(items)}건 (현 위원 중 발언량 {rank_of.get(name)}위).")
             if top_topics:
                 summary.append("주요 관심 분야는 " + ", ".join(f"{t}({c}건)" for t, c in top_topics[:3]) + ".")
             if with_a and len(items):
                 summary.append(f"질의 중 {round(with_a/len(items)*100)}%가 장관·청장 답변으로 이어진 실질 질의형.")
         else:
-            summary.append("최근 국감(제21~22대) 회의록에서 복지부·질병청 관련 발언이 확인되지 않음 (신규 위원 또는 사보임 가능성). 약력·언론 보도로 관심사를 사전 파악할 것.")
+            summary.append("최근 국감(제21~22대) 회의록에서 복지부·질병청·식약처 관련 발언이 확인되지 않음 (신규 위원 또는 사보임 가능성). 약력·언론 보도로 관심사를 사전 파악할 것.")
         # 대응 포인트
         prep = [{"topic": t, "guide": TOPIC_GUIDE.get(t, "관련 최신 통계와 작년 지적사항 이행 현황 준비.")}
                 for t, _ in top_topics[:4]]

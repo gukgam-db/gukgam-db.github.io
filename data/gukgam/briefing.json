@@ -116,7 +116,7 @@
     },
     {
      "key": "장애인",
-     "n": 60,
+     "n": 59,
      "repeat": true
     },
     {
@@ -399,6 +399,18 @@
      ]
     },
     {
+     "date": "2025-10-14",
+     "with": [
+      "질병관리청"
+     ]
+    },
+    {
+     "date": "2025-10-15",
+     "with": [
+      "질병관리청"
+     ]
+    },
+    {
      "date": "2025-10-30",
      "with": [
       "식품의약품안전처",
@@ -426,7 +438,8 @@
       "2025": 242
      },
      "total": 1213,
-     "dir": "up"
+     "dir": null,
+     "share_delta": -0.033
     },
     {
      "topic": "연말정산·재정",
@@ -439,7 +452,8 @@
       "2025": 160
      },
      "total": 815,
-     "dir": "up"
+     "dir": null,
+     "share_delta": -0.09
     },
     {
      "topic": "장애인",
@@ -452,7 +466,8 @@
       "2025": 171
      },
      "total": 603,
-     "dir": "up"
+     "dir": null,
+     "share_delta": 0.121
     },
     {
      "topic": "필수·지역의료",
@@ -465,7 +480,8 @@
       "2025": 78
      },
      "total": 488,
-     "dir": "up"
+     "dir": "up",
+     "share_delta": 0.479
     },
     {
      "topic": "노인·돌봄",
@@ -478,7 +494,8 @@
       "2025": 110
      },
      "total": 438,
-     "dir": "up"
+     "dir": null,
+     "share_delta": 0.133
     },
     {
      "topic": "연금",
@@ -491,7 +508,8 @@
       "2025": 66
      },
      "total": 362,
-     "dir": "up"
+     "dir": "up",
+     "share_delta": 0.355
     },
     {
      "topic": "의약품·제약",
@@ -504,7 +522,8 @@
       "2025": 66
      },
      "total": 353,
-     "dir": null
+     "dir": null,
+     "share_delta": -0.235
     },
     {
      "topic": "의사인력·의대정원",
@@ -517,7 +536,8 @@
       "2025": 63
      },
      "total": 343,
-     "dir": "up"
+     "dir": "up",
+     "share_delta": 1.79
     },
     {
      "topic": "저출산·보육",
@@ -530,7 +550,8 @@
       "2025": 28
      },
      "total": 340,
-     "dir": "down"
+     "dir": "down",
+     "share_delta": -0.64
     },
     {
      "topic": "정신건강·자살",
@@ -543,7 +564,8 @@
       "2025": 57
      },
      "total": 246,
-     "dir": "up"
+     "dir": null,
+     "share_delta": 0.129
     },
     {
      "topic": "공공의료",
@@ -556,7 +578,8 @@
       "2025": 55
      },
      "total": 237,
-     "dir": "up"
+     "dir": null,
+     "share_delta": -0.214
     },
     {
      "topic": "아동·청소년",
@@ -569,43 +592,54 @@
       "2025": 47
      },
      "total": 226,
-     "dir": null
+     "dir": "down",
+     "share_delta": -0.327
     }
    ],
    "members": [
     {
-     "name": "남인순",
-     "n": 404
-    },
-    {
-     "name": "김미애",
-     "n": 354
-    },
-    {
-     "name": "백종헌",
-     "n": 281
-    },
-    {
-     "name": "서영석",
-     "n": 272
-    },
-    {
-     "name": "김원이",
-     "n": 258
-    },
-    {
      "name": "서미화",
+     "recent": 243,
      "n": 243
     },
     {
-     "name": "강선우",
-     "n": 231
+     "name": "이수진",
+     "recent": 185,
+     "n": 185
     },
     {
-     "name": "정춘숙",
-     "n": 213
+     "name": "전진숙",
+     "recent": 162,
+     "n": 162
+    },
+    {
+     "name": "김윤",
+     "recent": 157,
+     "n": 157
+    },
+    {
+     "name": "남인순",
+     "recent": 139,
+     "n": 404
+    },
+    {
+     "name": "한지아",
+     "recent": 128,
+     "n": 128
+    },
+    {
+     "name": "소병훈",
+     "recent": 124,
+     "n": 124
+    },
+    {
+     "name": "최보윤",
+     "recent": 119,
+     "n": 119
     }
    ],
+   "members_era_from": 2024,
+   "members_note": "현 위원 기준",
    "qa_total": 7285
   },
   "식품의약품안전처": {
@@ -884,7 +918,8 @@
       "2025": 150
      },
      "total": 801,
-     "dir": null
+     "dir": null,
+     "share_delta": -0.132
     },
     {
      "topic": "식품 안전",
@@ -897,7 +932,8 @@
       "2025": 110
      },
      "total": 579,
-     "dir": null
+     "dir": null,
+     "share_delta": 0.052
     },
     {
      "topic": "마약류 관리",
@@ -910,7 +946,8 @@
       "2025": 64
      },
      "total": 427,
-     "dir": "up"
+     "dir": "up",
+     "share_delta": 0.701
     },
     {
      "topic": "온라인 불법유통",
@@ -923,7 +960,8 @@
       "2025": 61
      },
      "total": 224,
-     "dir": "up"
+     "dir": "up",
+     "share_delta": 0.418
     },
     {
      "topic": "임상시험·허가심사",
@@ -936,7 +974,8 @@
       "2025": 24
      },
      "total": 155,
-     "dir": null
+     "dir": null,
+     "share_delta": -0.147
     },
     {
      "topic": "조직·인력",
@@ -949,7 +988,8 @@
       "2025": 32
      },
      "total": 123,
-     "dir": "up"
+     "dir": "up",
+     "share_delta": 0.358
     },
     {
      "topic": "첨단바이오·백신",
@@ -962,7 +1002,8 @@
       "2025": 2
      },
      "total": 121,
-     "dir": "down"
+     "dir": "down",
+     "share_delta": -0.885
     },
     {
      "topic": "예산·재정",
@@ -975,7 +1016,8 @@
       "2025": 19
      },
      "total": 99,
-     "dir": null
+     "dir": null,
+     "share_delta": 0.005
     },
     {
      "topic": "화장품",
@@ -988,7 +1030,8 @@
       "2025": 19
      },
      "total": 92,
-     "dir": null
+     "dir": null,
+     "share_delta": 0.209
     },
     {
      "topic": "의료기기",
@@ -1001,7 +1044,8 @@
       "2025": 6
      },
      "total": 81,
-     "dir": "down"
+     "dir": "down",
+     "share_delta": -0.488
     },
     {
      "topic": "수입식품·통관",
@@ -1014,7 +1058,8 @@
       "2025": 8
      },
      "total": 78,
-     "dir": "up"
+     "dir": "up",
+     "share_delta": 0.783
     },
     {
      "topic": "건강기능식품",
@@ -1027,43 +1072,54 @@
       "2025": 15
      },
      "total": 76,
-     "dir": null
+     "dir": null,
+     "share_delta": 0.19
     }
    ],
    "members": [
     {
-     "name": "김미애",
-     "n": 202
+     "name": "서미화",
+     "recent": 71,
+     "n": 71
     },
     {
      "name": "남인순",
+     "recent": 66,
      "n": 157
     },
     {
+     "name": "소병훈",
+     "recent": 54,
+     "n": 54
+    },
+    {
+     "name": "이수진",
+     "recent": 51,
+     "n": 51
+    },
+    {
+     "name": "최보윤",
+     "recent": 43,
+     "n": 43
+    },
+    {
      "name": "서영석",
+     "recent": 42,
      "n": 141
     },
     {
-     "name": "백종헌",
-     "n": 125
+     "name": "전진숙",
+     "recent": 42,
+     "n": 42
     },
     {
-     "name": "최연숙",
-     "n": 107
-    },
-    {
-     "name": "김원이",
-     "n": 104
-    },
-    {
-     "name": "서정숙",
-     "n": 100
-    },
-    {
-     "name": "신현영",
-     "n": 89
+     "name": "김윤",
+     "recent": 36,
+     "n": 36
     }
    ],
+   "members_era_from": 2024,
+   "members_note": "현 위원 기준",
    "qa_total": 2974
   },
   "국민연금공단": {
@@ -1359,7 +1415,7 @@
    "by_key": [
     {
      "key": "백신·예방접종",
-     "n": 37,
+     "n": 36,
      "repeat": true
     },
     {
@@ -1375,6 +1431,11 @@
     {
      "key": "결핵",
      "n": 7,
+     "repeat": true
+    },
+    {
+     "key": "성매개감염병",
+     "n": 6,
      "repeat": true
     },
     {
@@ -1398,11 +1459,6 @@
      "repeat": false
     },
     {
-     "key": "홍보·교육",
-     "n": 3,
-     "repeat": true
-    },
-    {
      "key": "호흡기감염병",
      "n": 2,
      "repeat": true
@@ -1410,11 +1466,6 @@
     {
      "key": "정보시스템·데이터",
      "n": 2,
-     "repeat": false
-    },
-    {
-     "key": "지역·돌봄체계",
-     "n": 1,
      "repeat": false
     },
     {
@@ -1438,12 +1489,12 @@
      "repeat": false
     },
     {
-     "key": "저출산·모자보건",
+     "key": "홍보·교육",
      "n": 1,
-     "repeat": false
+     "repeat": true
     },
     {
-     "key": "관리·감독",
+     "key": "저출산·모자보건",
      "n": 1,
      "repeat": false
     },
@@ -1458,7 +1509,7 @@
      "repeat": false
     }
    ],
-   "repeat_key_n": 11,
+   "repeat_key_n": 12,
    "repeats": [],
    "audit_days": [
     {
@@ -1525,6 +1576,18 @@
      ]
     },
     {
+     "date": "2025-10-14",
+     "with": [
+      "보건복지부"
+     ]
+    },
+    {
+     "date": "2025-10-15",
+     "with": [
+      "보건복지부"
+     ]
+    },
+    {
      "date": "2025-10-30",
      "with": [
       "보건복지부",
@@ -1552,7 +1615,8 @@
       "2025": 51
      },
      "total": 398,
-     "dir": "down"
+     "dir": "up",
+     "share_delta": 0.306
     },
     {
      "topic": "백신·예방접종",
@@ -1565,7 +1629,8 @@
       "2025": 20
      },
      "total": 390,
-     "dir": "down"
+     "dir": "down",
+     "share_delta": -0.433
     },
     {
      "topic": "예산·재정",
@@ -1578,7 +1643,8 @@
       "2025": 13
      },
      "total": 89,
-     "dir": "up"
+     "dir": "up",
+     "share_delta": 2.934
     },
     {
      "topic": "피해보상",
@@ -1591,7 +1657,8 @@
       "2025": 3
      },
      "total": 75,
-     "dir": "down"
+     "dir": "down",
+     "share_delta": -0.467
     },
     {
      "topic": "정보시스템",
@@ -1604,7 +1671,8 @@
       "2025": 4
      },
      "total": 73,
-     "dir": "down"
+     "dir": null,
+     "share_delta": -0.181
     },
     {
      "topic": "조직·인력",
@@ -1617,7 +1685,8 @@
       "2025": 7
      },
      "total": 67,
-     "dir": "down"
+     "dir": null,
+     "share_delta": 0.214
     },
     {
      "topic": "지역·지자체 협력",
@@ -1630,7 +1699,8 @@
       "2025": 4
      },
      "total": 61,
-     "dir": "down"
+     "dir": "down",
+     "share_delta": -0.257
     },
     {
      "topic": "미래 팬데믹 대비",
@@ -1643,7 +1713,8 @@
       "2025": 10
      },
      "total": 48,
-     "dir": "up"
+     "dir": "up",
+     "share_delta": 2.3
     },
     {
      "topic": "만성·희귀질환",
@@ -1656,7 +1727,8 @@
       "2025": 9
      },
      "total": 35,
-     "dir": "up"
+     "dir": "up",
+     "share_delta": 7.237
     },
     {
      "topic": "연구개발",
@@ -1669,7 +1741,8 @@
       "2025": 6
      },
      "total": 27,
-     "dir": null
+     "dir": "up",
+     "share_delta": 0.932
     },
     {
      "topic": "검역·해외유입",
@@ -1682,7 +1755,8 @@
       "2025": 13
      },
      "total": 26,
-     "dir": null
+     "dir": "up",
+     "share_delta": 1.508
     },
     {
      "topic": "백신 폐기·수급",
@@ -1695,43 +1769,54 @@
       "2025": 0
      },
      "total": 17,
-     "dir": "down"
+     "dir": "down",
+     "share_delta": -0.687
     }
    ],
    "members": [
     {
-     "name": "김원이",
-     "n": 119
+     "name": "소병훈",
+     "recent": 18,
+     "n": 18
     },
     {
-     "name": "김미애",
-     "n": 94
-    },
-    {
-     "name": "신현영",
-     "n": 74
-    },
-    {
-     "name": "강선우",
-     "n": 60
-    },
-    {
-     "name": "전봉민",
-     "n": 58
-    },
-    {
-     "name": "남인순",
-     "n": 56
+     "name": "서미화",
+     "recent": 15,
+     "n": 15
     },
     {
      "name": "백종헌",
+     "recent": 10,
      "n": 55
     },
     {
+     "name": "최보윤",
+     "recent": 9,
+     "n": 9
+    },
+    {
+     "name": "김윤",
+     "recent": 8,
+     "n": 8
+    },
+    {
+     "name": "전진숙",
+     "recent": 6,
+     "n": 6
+    },
+    {
+     "name": "남인순",
+     "recent": 5,
+     "n": 56
+    },
+    {
      "name": "서영석",
+     "recent": 4,
      "n": 54
     }
    ],
+   "members_era_from": 2024,
+   "members_note": "현 위원 기준",
    "qa_total": 1336
   },
   "건강보험심사평가원": {

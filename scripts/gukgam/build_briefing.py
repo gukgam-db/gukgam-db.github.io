@@ -37,6 +37,7 @@ QA_FILES = {
 MIN_ITEMS = 15          # 이보다 적은 기관은 브리핑을 만들지 않는다(표본 부족)
 REPEAT_SIM = 0.30       # 반복 지적으로 볼 문장 유사도(주제어 기준)
 TOP_REPEAT = 25         # 기관당 반복 지적 보관 수
+ERA_FROM = 2024         # 현 대수(제22대) 시작 연도 — 이 이후가 "지금 물을 사람"이다
 
 
 def load(name):
@@ -73,20 +74,30 @@ def jaccard(a, b):
     return i / (len(a) + len(b) - i)
 
 
-def trend(series, years):
-    """앞 절반 대비 뒤 절반 평균으로 상승/하락 판정. 표본이 적으면 판정하지 않는다."""
+SHARE_UP, SHARE_DOWN = 0.25, -0.25   # 비중 기준이라 건수 기준보다 문턱을 낮게 둔다
+
+
+def trend(series, years, totals):
+    """앞 절반 대비 뒤 절반 평균으로 상승/하락 판정.
+
+    반드시 '그해 전체 질의 중 비중'으로 비교한다. 건수로 보면 전체 질의량이
+    늘어난 것(복지부는 2020년 822건 → 2025년 1410건, +56%)에 휩쓸려
+    제자리인 주제까지 전부 '늘고 있음'으로 찍힌다.
+
+    반환: (방향, 비중 증감률) — 방향이 None이어도 증감률은 돌려줘서
+    화면이 빈칸 대신 '변화 없음'을 숫자와 함께 보여줄 수 있게 한다.
+    """
     vals = [series.get(y, 0) for y in years]
     if sum(vals) < 8 or len(years) < 4:
-        return None
+        return None, None            # 표본 부족 — 판정하지 않는다
+    shares = [(series.get(y, 0) / totals[y]) if totals.get(y) else 0.0 for y in years]
     h = len(years) // 2
-    old = sum(vals[:h]) / h
-    new = sum(vals[h:]) / (len(years) - h)
-    if old == 0 and new == 0:
-        return None
+    old = sum(shares[:h]) / h
+    new = sum(shares[h:]) / (len(years) - h)
     if old == 0:
-        return "up"
+        return ("up", None) if new > 0 else (None, None)
     r = (new - old) / old
-    return "up" if r >= 0.4 else ("down" if r <= -0.4 else None)
+    return ("up" if r >= SHARE_UP else ("down" if r <= SHARE_DOWN else None)), round(r, 3)
 
 
 def main():
@@ -96,6 +107,13 @@ def main():
 
     F = {y: (load("findings-%d.json" % y) or {}).get("items", []) for y in FIND_YEARS}
     SUMM = (load("summaries.json") or {}).get("items", {})
+    # summaries 의 when 은 PDF 본문에서 긁은 값이라 "불출석을 양해하였다는" 같은
+    # 문장이 들어오는 경우가 있다. 회의 날짜는 회의록 메타데이터(API)를 기준으로 잡는다.
+    URL2DATE = {m["url"]: m.get("date") for m in (load("minutes.json") or {}).get("items", [])
+                if m.get("url")}
+    # 회의록은 제21대부터 쌓여 있어 누적만 세면 이미 위원이 아닌 사람이 상위에 온다.
+    # 국감 대비는 "지금 우리를 물을 사람"을 알아야 하므로 현 위원으로 좁힌다.
+    CUR_MEM = {m["name"] for m in (load("members.json") or {}).get("items", []) if m.get("name")}
 
     # 기관별 지적 건수 / 순위
     counts = {y: collections.Counter(i.get("agency") or "" for i in F[y]) for y in FIND_YEARS}
@@ -149,17 +167,21 @@ def main():
         # 국정감사계획서(감사일정×피감기관 표)는 첨부파일이라 아직 파싱하지 않는다.
         # 대신 지난 회의록에 붙은 피감기관 정보로 실제 감사받은 날을 되짚는다.
         # 국감 일정은 해마다 시기가 거의 고정이라 이것만으로도 준비 시점을 잡을 수 있다.
-        days = []
-        for rec_ in (SUMM or {}).values():
+        days, seen = [], set()
+        for url_, rec_ in (SUMM or {}).items():
             if rec_.get("kind") != "minutes":
                 continue
             tg = rec_.get("targets") or []
             if not any(agency in t for t in tg):
                 continue
-            m = re.search(r"(\d{4})년\s*(\d{1,2})월\s*(\d{1,2})일", rec_.get("when") or "")
-            if m:
-                days.append({"date": "%s-%02d-%02d" % (m.group(1), int(m.group(2)), int(m.group(3))),
-                             "with": [t for t in tg if agency not in t][:4]})
+            d_ = URL2DATE.get(url_)
+            if not d_:   # 메타데이터에 없으면 본문 표기로 보완
+                m = re.search(r"(\d{4})년\s*(\d{1,2})월\s*(\d{1,2})일", rec_.get("when") or "")
+                d_ = "%s-%02d-%02d" % (m.group(1), int(m.group(2)), int(m.group(3))) if m else None
+            if not d_ or d_ in seen:
+                continue
+            seen.add(d_)
+            days.append({"date": d_, "with": [t for t in tg if agency not in t][:4]})
         days.sort(key=lambda x: x["date"])
 
         rec = {
@@ -190,17 +212,29 @@ def main():
                     y = q.get("year")
                     for tp in (q.get("topics") or []):
                         mat[tp][int(y)] += 1
+                yr_tot = collections.Counter(int(q["year"]) for q in qa if q.get("year"))
                 tr = []
                 for tp, ser in mat.items():
                     s = {y: ser.get(y, 0) for y in yrs}
+                    d, delta = trend(s, yrs, yr_tot)
                     tr.append({"topic": tp, "series": s, "total": sum(s.values()),
-                               "dir": trend(s, yrs)})
+                               "dir": d, "share_delta": delta})
                 tr.sort(key=lambda x: -x["total"])
                 rec["qa_years"] = yrs
                 rec["topics"] = tr[:12]
-                rec["members"] = [{"name": n, "n": c} for n, c in
-                                  collections.Counter(q.get("member") or "" for q in qa
-                                                      if q.get("member")).most_common(8)]
+                cum = collections.Counter(); rec_c = collections.Counter()
+                for q in qa:
+                    nm = q.get("member")
+                    if not nm or (CUR_MEM and nm not in CUR_MEM):
+                        continue
+                    cum[nm] += 1
+                    if int(q.get("year") or 0) >= ERA_FROM:
+                        rec_c[nm] += 1
+                # 현 대수 질의 수를 우선, 같으면 누적 순 — 예측력이 있는 쪽을 앞세운다
+                rec["members"] = [{"name": n, "recent": rec_c.get(n, 0), "n": cum[n]}
+                                  for n in sorted(cum, key=lambda x: (-rec_c.get(x, 0), -cum[x]))][:8]
+                rec["members_era_from"] = ERA_FROM
+                rec["members_note"] = "현 위원 기준"
                 rec["qa_total"] = len(qa)
         out_ag[agency] = rec
 

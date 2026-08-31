@@ -57,6 +57,14 @@
   .more{ display:block; margin:14px auto 0; border:1px solid var(--line); background:#fff; border-radius:10px; padding:10px 26px; font-size:.9rem; font-weight:700; cursor:pointer; color:#2a4d7d; }
   .fkey{ font-family:'맑은 고딕','Malgun Gothic',sans-serif; font-weight:800; color:#1657b0; background:#eef4fc;
          border-radius:6px; padding:1px 8px; margin-right:7px; white-space:nowrap; font-size:.86rem; }
+  .fno{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.72rem;
+        color:#5a6673; background:#f5f7fa; border:1px solid var(--line); border-radius:5px;
+        padding:0 5px; margin-right:6px; text-decoration:none; white-space:nowrap; }
+  .fno:hover{ background:#eaf1fc; color:#12518f; }
+  :target > .fno, :target{ scroll-margin-top:12px; }
+  li:target, div.row:target{ background:#fffbe6; border-radius:8px; }
+  .fkey.est{ background:#f1f3f5 !important; color:#5a6673 !important; }  /* 근거가 한 단어뿐 — 추정 */
+  .fkey i{ font-style:normal; font-size:.72em; opacity:.8; margin-left:4px; font-weight:700; }
   .fkey.k1a{ background:#fdeaef; color:#9b1c3d; }  /* 감염병·백신 */
   .fkey.k1b{ background:#f8d5e0; color:#82122e; }
   .fkey.k1c{ background:#f2bccd; color:#6d0f26; }
@@ -143,13 +151,13 @@
     <select id="gYear" title="연도 선택"></select>
     <select id="gAgency"><option value="">전체 기관</option></select>
     <select id="gKey"><option value="">전체 분류</option></select>
-    <input id="gQuery" type="search" placeholder="지적사항 키워드 검색">
+    <input id="gQuery" type="search" placeholder="지적사항 키워드·번호 검색 (예: 2025-질병청-014)">
     <label style="font-size:.84rem;font-weight:700;display:flex;align-items:center;gap:6px;">
       <input type="checkbox" id="gAsQuestion"> 질의형으로 보기
     </label>
     <span id="gCount" style="font-size:.82rem;color:var(--muted);"></span>
   </div>
-  <div class="fleg"><b>분류 색</b><span class="fkey k1a">감염병 계열</span><span class="fkey k2a">의료체계</span><span class="fkey k3a">돌봄·생애주기</span><span class="fkey k4a">소득·안전망</span><span class="fkey k5a">의약품·식품</span><span class="fkey k6a">기관운영·연구</span><span class="fkey k7a">관리·제도</span><span class="fkey k8a">사업·홍보</span></div>
+  <div class="fleg"><b>분류 색</b><span class="fkey k1a">감염병 계열</span><span class="fkey k2a">의료체계</span><span class="fkey k3a">돌봄·생애주기</span><span class="fkey k4a">소득·안전망</span><span class="fkey k5a">의약품·식품</span><span class="fkey k6a">기관운영·연구</span><span class="fkey k7a">관리·제도</span><span class="fkey k8a">사업·홍보</span><span class="fkey est">추정<i>?</i></span><span style="color:var(--muted);">회색은 근거가 한 단어뿐인 추정 분류입니다</span></div>
   <div id="findings" style="margin-top:12px;"></div>
   <button class="more" id="gMore" hidden>더 보기</button>
 
@@ -162,13 +170,28 @@
     <button class="rehearse-btn off" id="rehearseBtn">🎬 리허설 모드</button>
   </div>
   <p class="hint">카드를 누르면 답변 요지가 열립니다. 리허설 모드에서는 질문이 무작위 순서로 나오고, 스스로 답한 뒤 카드를 눌러 요지와 비교하세요. 인쇄(Ctrl+P)하면 전체 답변자료집이 됩니다.
-  <br>※ 현재 카드는 <strong>구조 예시</strong>입니다 — <code>data/gukgam/prep-questions.json</code>의 [ ] 부분을 실제 수치·내용으로 채워 기관 맞춤 자료집으로 만드세요.</p>
+  <br>※ 현재 카드는 <strong>구조 예시</strong>입니다 — 여당·야당·공통 각 3장으로 맞춰 둔 것이며, <strong>카드 수가 실제 여야 질의 비중을 뜻하지 않습니다</strong> — <code>data/gukgam/prep-questions.json</code>의 [ ] 부분을 실제 수치·내용으로 채워 기관 맞춤 자료집으로 만드세요.</p>
   <div id="cards"><div class="empty">질의 카드를 불러오는 중입니다…</div></div>
 </main>
 
 <script>
   /* 지적사항 분류(26종) → 색 계열 8개 + 계열 안 농도 2단계. 색상=주제 계열, 농도=계열 안 구분 */
-  var FKEY_FAM={'감염병·방역':'1b','건강보험':'2a','검역':'1a','결핵':'1c','관리·감독':'7a','국제협력·ODA':'8a','노인·요양':'3b','백신·예방접종':'1a','법령·제도개선':'7b','빈곤·기초생활':'4a','사업운영·성과':'8a','식품·의료기기':'5b','아동·보육':'3a','연구·R&D':'6a','연금':'4a','예산·재정':'6b','의료관련감염·항생제내성':'1c','의료인력':'2a','의약품·마약류':'5a','장애인':'3a','저출산·모자보건':'3b','정보시스템·데이터':'6a','정신건강·자살':'4b','조직·인력':'6a','지역·돌봄체계':'4b','처우·노무':'6b','통계·실태조사':'6b','필수·지역의료':'2b','호흡기감염병':'1b','홍보·교육':'8b'};
+  var FKEY_FAM={'성매개감염병':'1c','감염병·방역':'1b','건강보험':'2a','검역':'1a','결핵':'1c','관리·감독':'7a','국제협력·ODA':'8a','노인·요양':'3b','백신·예방접종':'1a','법령·제도개선':'7b','빈곤·기초생활':'4a','사업운영·성과':'8a','식품·의료기기':'5b','아동·보육':'3a','연구·R&D':'6a','연금':'4a','예산·재정':'6b','의료관련감염·항생제내성':'1c','의료인력':'2a','의약품·마약류':'5a','장애인':'3a','저출산·모자보건':'3b','정보시스템·데이터':'6a','정신건강·자살':'4b','조직·인력':'6a','지역·돌봄체계':'4b','처우·노무':'6b','통계·실태조사':'6b','필수·지역의료':'2b','호흡기감염병':'1b','홍보·교육':'8b'};
+  // 분류 근거가 한 단어뿐인 건(전체의 절반)을 확실한 분류와 똑같이 선명하게 보여주면
+  // 오분류 하나가 사이트 전체의 신뢰를 깎는다. 약한 건 회색 '추정'으로 낮춘다.
+  // 지적사항을 지목할 이름. 클릭하면 그 건으로 바로 가는 주소가 된다.
+  function fnoTag(i){
+    return i.id ? '<a class="fno" href="#'+i.id+'" title="이 지적사항 링크">'+i.id+'</a>' : '';
+  }
+  function fkeyTag(i){
+    if(!i.key) return '';
+    // esc()가 IIFE 안에만 있는 페이지가 있어 여기서는 자체 처리한다
+    var t = String(i.key).replace(/[&<>"]/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; });
+    var low = i.key_conf === 'low';
+    return '<span class="'+(low?'fkey est':fkeyCls(i.key))+'">'+t+
+           (low?'<i>추정</i>':'')+'</span>';
+  }
   function fkeyCls(k){ return 'fkey k'+(FKEY_FAM[k]||'6a'); }
 
 (function(){
@@ -273,7 +296,7 @@
     var rows=FIND.filter(function(i){
       if(gState.agency && i.agency!==gState.agency) return false;
       if(gState.key && i.key!==gState.key) return false;
-      if(gState.q){ var t=(i.text+' '+(i.dept||'')+' '+(i.topic||'')).toLowerCase(); if(t.indexOf(gState.q.toLowerCase())<0) return false; }
+      if(gState.q){ var t=(i.text+' '+(i.dept||'')+' '+(i.topic||'')+' '+(i.id||'')).toLowerCase(); if(t.indexOf(gState.q.toLowerCase())<0) return false; }
       return true;
     });
     document.getElementById('gCount').textContent='조건 일치 '+rows.length+'건';
@@ -284,9 +307,10 @@
       if(i.agency) meta.push('<span class="badge">'+esc(i.agency)+'</span>');
       if(i.dept) meta.push('<span class="badge">'+esc(i.dept)+'</span>');
       if(i.topic) meta.push('<span class="badge">'+esc(i.topic)+'</span>');
-      var lead = i.key ? '<span class="'+fkeyCls(i.key)+'">'+esc(i.key)+'</span>' : '';
+      var lead = fkeyTag(i);
       var act  = i.act ? '<span class="fact act-'+(i.act.indexOf('마련')>=0?'a':i.act.indexOf('검토')>=0?'b':i.act.indexOf('노력')>=0?'c':'d')+'">'+esc(i.act)+'</span>' : '';
-      return '<div class="row"><div class="main"><div style="font-size:.92rem;line-height:1.6;">'+
+      return '<div class="row" id="'+(i.id||'')+'"><div class="main"><div style="font-size:.92rem;line-height:1.6;">'+
+        fnoTag(i)+
         (gState.asQ?'<strong>Q. </strong>'+esc(toQuestion(i.text)):(lead+esc(i.text)+act))+
         '</div><div class="meta" style="margin-top:6px;">'+meta.join('')+'</div></div></div>';
     }).join('');

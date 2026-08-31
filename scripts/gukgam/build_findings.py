@@ -48,6 +48,7 @@ FIND_KEYS = [
     ("검역", ["검역", "선박위생", "국립검역소", "공항만", "항공기 내 위생", "관능검사"]),
     ("백신·예방접종", ["백신", "예방접종", "접종률", "이상반응", "NIP", "항체 접종"]),
     ("결핵", ["결핵", "국립마산병원", "국립목포병원"]),
+    ("성매개감염병", ["HIV", "에이즈", "후천성면역결핍", "매독", "성매개", "성병", "클라미디아"]),
     ("의료관련감염·항생제내성", ["의료관련감염", "감염관리", "항생제 내성", "항생제내성",
                         "다제내성", "카바페넴", "CRE", "내성균"]),
     ("호흡기감염병", ["RSV", "호흡기세포융합", "호흡기감염", "호흡기 감염", "인플루엔자", "독감",
@@ -94,8 +95,13 @@ FIND_KEYS = [
 # 순서가 곧 우선순위다. 접종 도입 요구는 백신, 질환 관리·감시 요구는 질환 분류로 간다.
 PRIORITY_KEYS = [
     ("검역", ["검역", "선박위생", "국립검역소", "공항만", "항공기 내 위생", "관능검사"]),
+    # 신종·고위험 감염병은 백신이 소재로 언급돼도 주제는 감염병 대비다.
+    # ("조류인플루엔자 백신 … 제1급 니파바이러스 대비를 철저히 할 것")
+    ("감염병·방역", ["니파", "신종감염병", "신종 감염병", "제1급", "1급 감염병",
+                 "고위험병원체", "인수공통"]),
     ("백신·예방접종", ["백신", "예방접종", "접종률", "이상반응", "NIP", "항체 접종"]),
     ("결핵", ["결핵", "국립마산병원", "국립목포병원"]),
+    ("성매개감염병", ["HIV", "에이즈", "후천성면역결핍", "매독", "성매개", "성병", "클라미디아"]),
     ("의료관련감염·항생제내성", ["의료관련감염", "감염관리", "항생제 내성", "항생제내성",
                         "다제내성", "카바페넴", "CRE", "내성균"]),
     ("호흡기감염병", ["RSV", "호흡기세포융합", "호흡기감염", "호흡기 감염", "인플루엔자", "독감",
@@ -115,25 +121,65 @@ ACT_RULES = [
 ]
 
 
+# 지적사항을 부를 이름 — 부서 배분·자료요구 회신에서 "몇 번 건"으로 지목하려면
+# 안정적인 번호가 있어야 한다. 결과보고서는 확정 문서라 본문 등장 순서가 바뀌지
+# 않으므로, 연도·기관별 등장 순번을 번호로 쓴다.
+AGENCY_SHORT = {
+    "보건복지부": "복지부", "질병관리청": "질병청", "식품의약품안전처": "식약처",
+    "국민건강보험공단": "건보공단", "건강보험심사평가원": "심평원",
+    "국민연금공단": "연금공단", "한국보건산업진흥원": "보산진",
+    "한국사회보장정보원": "사보정원", "한국보건복지인재원": "인재원",
+    "한국노인인력개발원": "노인인력원", "한국장애인개발원": "장애인개발원",
+    "아동권리보장원": "아동권리원", "대한적십자사": "적십자",
+    "대한결핵협회": "결핵협회", "국립암센터": "암센터",
+}
+
+
+def short_agency(name):
+    n = (name or "").strip()
+    if n in AGENCY_SHORT:
+        return AGENCY_SHORT[n]
+    for suf in ("주식회사", "재단법인", "사단법인"):
+        n = n.replace(suf, "")
+    return n[:6] or "기타"
+
+
+def assign_ids(items, year):
+    """연도·기관별 등장 순번으로 번호를 매긴다. 예: 2025-질병청-014"""
+    seq = {}
+    for it in items:
+        a = short_agency(it.get("agency"))
+        seq[a] = seq.get(a, 0) + 1
+        it["no"] = seq[a]
+        it["id"] = "%s-%s-%03d" % (year, a, seq[a])
+    return items
+
+
 def classify(text):
-    """지적사항 → (분류 키워드, 요구 강도)"""
-    best = None
+    """지적사항 → (분류 키워드, 요구 강도, 분류 신뢰도 high|low|None)"""
+    # 분류와 함께 '얼마나 믿을 만한가'를 같이 낸다.
+    # 근거가 한 단어뿐인 분류가 전체의 절반이라, 이를 확실한 분류와 똑같이
+    # 선명하게 보여주면 오분류 하나가 사이트 전체의 신뢰를 깎는다.
+    best, conf = None, None
     for label, kws in PRIORITY_KEYS:
         if any(k in text for k in kws):
-            best = label
+            best, conf = label, "high"      # 소관이 분명한 우선규칙
             break
     if best is None:
-        best_c = 0
-        for label, kws in FIND_KEYS:
-            c = sum(text.count(k) for k in kws)
-            if c > best_c:
-                best, best_c = label, c
+        ranked = sorted(((sum(text.count(k) for k in kws), label) for label, kws in FIND_KEYS),
+                        key=lambda x: -x[0])
+        if ranked and ranked[0][0] > 0:
+            top = ranked[0][0]
+            second = ranked[1][0] if len(ranked) > 1 else 0
+            best = ranked[0][1]
+            # 근거가 2회 이상이고 2위와 벌어져야 '확실'로 본다
+            conf = "high" if (top >= 2 and top > second) else "low"
     act = None
     for label, kws in ACT_RULES:
         if any(k in text for k in kws):
             act = label
             break
-    return best, act
+    return best, act, conf
 
 
 def parse(text):
@@ -152,9 +198,9 @@ def parse(text):
         if buf is not None:
             t = re.sub(r"\s+", " ", buf).strip()
             if len(t) > 8:
-                key, act = classify(t)
+                key, act, conf = classify(t)
                 items.append({"group": group, "agency": agency, "dept": dept, "topic": topic,
-                              "key": key, "act": act, "text": t})
+                              "key": key, "key_conf": conf, "act": act, "text": t})
         buf = None
 
     for raw in sec.split("\n"):
@@ -196,7 +242,7 @@ def main():
     else:
         rpt = find_report()
     print(f"대상: {rpt['year']}년 {rpt['committee']} 결과보고서")
-    items = parse(pdf_text(rpt["pdf"]))
+    items = assign_ids(parse(pdf_text(rpt["pdf"])), rpt["year"])
     out = {
         "updated": datetime.date.today().isoformat(),
         "year": rpt["year"],
