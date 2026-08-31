@@ -114,6 +114,11 @@
   .tl-legend svg{ vertical-align:-2px; margin-right:3px; }
   #tlSvg text{ font-family:inherit; }
   .more{ display:block; margin:14px auto 0; border:1px solid var(--line); background:#fff; border-radius:10px; padding:10px 26px; font-size:.9rem; font-weight:700; cursor:pointer; color:#2a4d7d; }
+  .scope-note{ font-size:.8rem; color:var(--muted); margin:-4px 2px 10px; }
+  .scope-note b{ color:#12365f; }
+  .scope-note button{ border:1px solid var(--line); background:#fff; border-radius:8px;
+                      padding:2px 10px; margin-left:8px; font-size:.78rem; font-weight:700;
+                      color:#2a4d7d; cursor:pointer; }
   .foot{ font-size:.78rem; color:var(--muted); margin-top:26px; }
 </style>
 </head>
@@ -199,6 +204,7 @@
     </div>
     <input id="fQuery" type="search" placeholder="제목·위원회 검색">
   </div>
+  <div id="scopeNote" class="scope-note" hidden></div>
 
   <div class="list" id="list"><div class="empty">자료를 불러오는 중입니다…</div></div>
   <button class="more" id="moreBtn" hidden>더 보기</button>
@@ -247,6 +253,15 @@
       }
       return true;
     });
+    var note=document.getElementById('scopeNote');
+    if(state.committee){
+      note.innerHTML='<b>'+esc(state.committee)+'</b> 자료만 보고 있습니다 — 수집된 '+DOCS.length.toLocaleString()+
+        '건 중 '+rows.length.toLocaleString()+'건'+
+        '<button type="button" id="scopeAll">전체 위원회 보기</button>';
+      note.hidden=false;
+      var ba=document.getElementById('scopeAll');
+      if(ba) ba.onclick=function(){ state.committee=''; document.getElementById('fCommittee').value=''; SHOWN=80; render(); };
+    } else { note.hidden=true; }
     if(!rows.length){ list.innerHTML='<div class="empty">조건에 맞는 자료가 없습니다.</div>'; document.getElementById('moreBtn').hidden=true; return; }
     var slice = rows.slice(0, SHOWN);
     list.innerHTML = slice.map(function(d){
@@ -450,6 +465,10 @@
     DOCS.forEach(function(d){ if(d.year) years[d.year]=1; if(d.committee) comms[d.committee]=1; });
     fill('fYear', Object.keys(years).sort().reverse());
     fill('fCommittee', Object.keys(comms).sort());
+    // 이 사이트는 보건복지위 국감 DB인데 수집 자료의 95%가 타 위원회다.
+    // 기본값을 전체로 두면 첫 화면이 국회운영위·교육위 회의록으로 차므로 보건복지위로 좁혀 시작한다.
+    var HB = Object.keys(comms).filter(function(c){ return /보건복지/.test(c); })[0];
+    if(HB){ state.committee = HB; document.getElementById('fCommittee').value = HB; }
     render();
   }).catch(function(){
     document.getElementById('list').innerHTML='<div class="empty">자료를 불러오지 못했습니다.</div>';
