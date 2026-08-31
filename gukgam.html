@@ -83,6 +83,26 @@
   .scat.k4{ background:#f3ecfb; color:#6b3fa0; }
   .scat.k5{ background:#fdeee3; color:#a35b1e; }
   .scat.k6{ background:#f1f3f5; color:#5a6673; }
+  .sched-h{ font-size:.86rem; font-weight:800; color:var(--navy); margin:2px 2px 8px;
+            display:flex; align-items:center; gap:7px; }
+  .sched-h::before{ content:""; width:4px; height:14px; border-radius:2px; background:#a03030; }
+  .sched-h .cnt{ font-weight:700; color:var(--muted); font-size:.78rem; }
+  .sched-other{ margin-top:12px; }
+  .sched-other summary{ cursor:pointer; font-size:.84rem; font-weight:700; color:#2a4d7d;
+                        padding:8px 12px; background:#fff; border:1px solid var(--line); border-radius:10px; }
+  .sched-other summary .cnt{ font-weight:600; color:var(--muted); }
+  .sched-other[open] summary{ margin-bottom:8px; }
+  .dday{ font-size:.7rem; font-weight:800; color:#a03030; background:#fbeaea;
+         border-radius:6px; padding:1px 6px; flex:0 0 auto; }
+  .dday.far{ color:#5a6673; background:#f1f3f5; }
+  .scat.g1{ background:#fbeaea; color:#a03030; }
+  .scat.g2{ background:#fdeee3; color:#a35b1e; }
+  .scat.g3{ background:#dcefe6; color:#0f5b46; }
+  .scat.g4{ background:#e6efdc; color:#4a6414; }
+  .scat.g5{ background:#eaf4ef; color:#3d6b58; }
+  .scat.g6{ background:#dff2ec; color:#136350; }
+  .scat.g7{ background:#e8f0fb; color:#1c4f9c; }
+  .scat.g8{ background:#f1f3f5; color:#5a6673; }
   .sched-empty{ background:#fff; border:1px dashed var(--line); border-radius:12px; padding:14px 16px; font-size:.86rem; color:var(--muted); }
   .gsearch{ margin:2px 0 18px; }
   .gs-bar{ display:flex; gap:8px; }
@@ -182,8 +202,13 @@
   </section>
 
   <section id="schedSection">
-    <h2>📅 국회 주요 일정 <span style="font-size:.75rem;color:var(--muted);font-weight:400;" id="schedRange"></span></h2>
-    <div id="schedList"></div>
+    <h2>📅 국회 일정 <span style="font-size:.75rem;color:var(--muted);font-weight:400;" id="schedRange"></span></h2>
+    <div class="sched-h">우리 일정 — 보건복지위 <span class="cnt" id="schedMineN"></span></div>
+    <div id="schedMine"></div>
+    <details class="sched-other" id="schedOtherWrap">
+      <summary>그 밖의 국회 일정 <span class="cnt" id="schedOtherN"></span></summary>
+      <div id="schedOther"></div>
+    </details>
   </section>
 
   <section id="memSection" hidden>
@@ -379,29 +404,71 @@
       b.classList.add('on');
       renderTimeline(TL[b.dataset.a], QAPAGE[b.dataset.a]);
     });
-    // 국회 주요 일정
+    // 국회 일정 — 보건복지위(우리 일정)를 위로 올리고 나머지는 접는다.
+    // 수집 자체는 전 위원회를 받지만, 이 사이트 사용자는 보건복지위 소관이라
+    // 남의 위원회 일정이 먼저 보이면 정작 우리 일정을 놓친다.
     (function(sc){
-      var box=document.getElementById('schedList');
-      if(!sc){ box.innerHTML='<div class="sched-empty">일정 데이터를 불러오지 못했습니다.</div>'; return; }
-      document.getElementById('schedRange').textContent='앞으로 '+(sc.horizon_days||35)+'일 · 갱신 '+(sc.updated||'');
+      var mine=document.getElementById('schedMine'), other=document.getElementById('schedOther');
+      if(!sc){ mine.innerHTML='<div class="sched-empty">일정 데이터를 불러오지 못했습니다.</div>'; return; }
+      var HZ=sc.horizon_days||35;
+      document.getElementById('schedRange').textContent='앞으로 '+HZ+'일 · 갱신 '+(sc.updated||'');
       var items=sc.items||[];
-      if(!items.length){
-        box.innerHTML='<div class="sched-empty">앞으로 '+(sc.horizon_days||35)+'일 내 국회 회의 일정이 아직 없습니다. '+
-          '국정감사는 통상 <strong>정기회 기간(10월)</strong>에 실시되며, 국회 일정이 공지되면 자동으로 여기에 표시됩니다.</div>';
-        return;
+
+      // 회의 종류 — 준비 부담이 다르므로 위원회 단위가 아니라 회의 단위로 구분한다.
+      function kind(i){
+        var c=(i.content||'')+' '+(i.dgr||'');
+        if(i.cat==='국정감사'||/국정감사/.test(c)) return ['국정감사','g1'];
+        if(/인사청문/.test(c)) return ['인사청문','g2'];
+        if(/법안심사[^]*?소위/.test(c)) return ['법안소위','g3'];
+        if(/(예산결산|결산|예산)[^]*?소위/.test(c)) return ['예산소위','g4'];
+        if(/청원[^]*?소위/.test(c)) return ['청원소위','g5'];
+        if(/소위원회/.test(c)) return ['소위','g5'];
+        if(/전체회의/.test(c)) return ['전체회의','g6'];
+        if(/본회의/.test(c)||i.cat==='본회의') return ['본회의','g7'];
+        return [i.cat||'회의','g8'];
       }
-      var byDate={};
-      items.forEach(function(i){ (byDate[i.date]=byDate[i.date]||[]).push(i); });
-      var CAT={'국정감사':'k1','보건복지위':'k2','본회의':'k3','예결위':'k4','법사위':'k5','위원회':'k6'};
-      box.innerHTML=Object.keys(byDate).sort().map(function(d){
-        var day=['일','월','화','수','목','금','토'][new Date(d+'T00:00:00').getDay()];
-        return '<div class="sched-day"><div class="sd">'+d+' ('+day+')</div>'+
-          byDate[d].map(function(i){
-            return '<div class="sched-item"><span class="tm">'+esc(i.time||'')+'</span>'+
-              '<span class="scat '+(CAT[i.cat]||'')+'">'+esc(i.cat)+'</span>'+
-              '<span>'+esc(i.content)+(i.committee?' · '+esc(i.committee):'')+(i.place?' · '+esc(i.place):'')+'</span></div>';
-          }).join('')+'</div>';
-      }).join('');
+      // 위원회 미표기 국정감사는 놓치면 안 되므로 우리 일정에 포함한다.
+      function ours(i){
+        var cm=i.committee||'';
+        return /보건복지/.test(cm) || i.cat==='보건복지위' || (i.cat==='국정감사' && !cm);
+      }
+
+      var today=new Date(); today.setHours(0,0,0,0);
+      function dday(d){
+        var t=new Date(d+'T00:00:00'); if(isNaN(t)) return '';
+        var n=Math.round((t-today)/86400000);
+        if(n<0) return '';
+        var lb = n===0?'오늘' : (n===1?'내일' : 'D-'+n);
+        return '<span class="dday'+(n>7?' far':'')+'">'+lb+'</span>';
+      }
+
+      function draw(list, withDday){
+        var byDate={};
+        list.forEach(function(i){ (byDate[i.date]=byDate[i.date]||[]).push(i); });
+        return Object.keys(byDate).sort().map(function(d){
+          var day=['일','월','화','수','목','금','토'][new Date(d+'T00:00:00').getDay()];
+          return '<div class="sched-day"><div class="sd">'+d+' ('+day+')'+
+            (withDday?' '+dday(d):'')+'</div>'+
+            byDate[d].map(function(i){
+              var k=kind(i);
+              return '<div class="sched-item"><span class="tm">'+esc(i.time||'')+'</span>'+
+                '<span class="scat '+k[1]+'">'+esc(k[0])+'</span>'+
+                '<span>'+esc(i.content)+(i.committee?' · '+esc(i.committee):'')+
+                (i.place?' · '+esc(i.place):'')+'</span></div>';
+            }).join('')+'</div>';
+        }).join('');
+      }
+
+      var A=items.filter(ours), B=items.filter(function(i){ return !ours(i); });
+      document.getElementById('schedMineN').textContent = A.length?'('+A.length+'건)':'';
+      document.getElementById('schedOtherN').textContent = '('+B.length+'건)';
+
+      mine.innerHTML = A.length ? draw(A, true) :
+        '<div class="sched-empty">앞으로 '+HZ+'일 내 보건복지위 일정이 없습니다. '+
+        '국정감사는 통상 <strong>정기회 기간(10월)</strong>에 실시되며, 위원회 일정이 공지되면 여기에 먼저 표시됩니다.</div>';
+      other.innerHTML = B.length ? draw(B, false) :
+        '<div class="sched-empty">그 밖의 일정이 없습니다.</div>';
+      if(!B.length) document.getElementById('schedOtherWrap').hidden=true;
     })(res[7]);
     var reports=res[0], minutes=res[1], idx=res[2], likms=res[3];
     SUM = res[4].items || {};

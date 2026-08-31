@@ -59,6 +59,7 @@
          border-radius:6px; padding:1px 8px; margin-right:7px; white-space:nowrap; font-size:.86rem; }
   .fkey.k1a{ background:#fdeaef; color:#9b1c3d; }  /* 감염병·백신 */
   .fkey.k1b{ background:#f8d5e0; color:#82122e; }
+  .fkey.k1c{ background:#f2bccd; color:#6d0f26; }
   .fkey.k2a{ background:#eaf1fc; color:#12518f; }  /* 의료체계 */
   .fkey.k2b{ background:#d8e5f7; color:#0d4176; }
   .fkey.k3a{ background:#e8f4ec; color:#1c6340; }  /* 돌봄·생애주기 */
@@ -148,7 +149,7 @@
     </label>
     <span id="gCount" style="font-size:.82rem;color:var(--muted);"></span>
   </div>
-  <div class="fleg"><b>분류 색</b><span class="fkey k1a">감염병·백신·검역</span><span class="fkey k2a">의료체계</span><span class="fkey k3a">돌봄·생애주기</span><span class="fkey k4a">소득·안전망</span><span class="fkey k5a">의약품·식품</span><span class="fkey k6a">기관운영·연구</span><span class="fkey k7a">관리·제도</span><span class="fkey k8a">사업·홍보</span></div>
+  <div class="fleg"><b>분류 색</b><span class="fkey k1a">감염병 계열</span><span class="fkey k2a">의료체계</span><span class="fkey k3a">돌봄·생애주기</span><span class="fkey k4a">소득·안전망</span><span class="fkey k5a">의약품·식품</span><span class="fkey k6a">기관운영·연구</span><span class="fkey k7a">관리·제도</span><span class="fkey k8a">사업·홍보</span></div>
   <div id="findings" style="margin-top:12px;"></div>
   <button class="more" id="gMore" hidden>더 보기</button>
 
@@ -167,7 +168,7 @@
 
 <script>
   /* 지적사항 분류(26종) → 색 계열 8개 + 계열 안 농도 2단계. 색상=주제 계열, 농도=계열 안 구분 */
-  var FKEY_FAM={'검역':'1a','감염병·방역':'1a','건강보험':'2a','관리·감독':'7a','국제협력·ODA':'8a','노인·요양':'3b','백신·예방접종':'1b','법령·제도개선':'7b','빈곤·기초생활':'4a','사업운영·성과':'8a','식품·의료기기':'5b','아동·보육':'3a','연구·R&D':'6a','연금':'4a','예산·재정':'6b','의료인력':'2a','의약품·마약류':'5a','장애인':'3a','저출산·모자보건':'3b','정보시스템·데이터':'6a','정신건강·자살':'4b','조직·인력':'6a','지역·돌봄체계':'4b','처우·노무':'6b','통계·실태조사':'6b','필수·지역의료':'2b','홍보·교육':'8b'};
+  var FKEY_FAM={'감염병·방역':'1b','건강보험':'2a','검역':'1a','결핵':'1c','관리·감독':'7a','국제협력·ODA':'8a','노인·요양':'3b','백신·예방접종':'1a','법령·제도개선':'7b','빈곤·기초생활':'4a','사업운영·성과':'8a','식품·의료기기':'5b','아동·보육':'3a','연구·R&D':'6a','연금':'4a','예산·재정':'6b','의료관련감염·항생제내성':'1c','의료인력':'2a','의약품·마약류':'5a','장애인':'3a','저출산·모자보건':'3b','정보시스템·데이터':'6a','정신건강·자살':'4b','조직·인력':'6a','지역·돌봄체계':'4b','처우·노무':'6b','통계·실태조사':'6b','필수·지역의료':'2b','호흡기감염병':'1b','홍보·교육':'8b'};
   function fkeyCls(k){ return 'fkey k'+(FKEY_FAM[k]||'6a'); }
 
 (function(){
