@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>국정감사 답변 대비 워크북</title>
+<meta name="description" content="국정감사장에서 기관장이 여야 의원 질의에 또박또박 답변할 수 있도록 준비하는 워크북 — 예상질의 카드, 답변 요지, 근거 수치, 리허설 모드, 답변 10계명.">
+<style>
+  :root{ --navy:#12365f; --line:#e3e9f0; --muted:#6b7a8c; --bg:#f5f7fa; --accent:#8a4b12; --chip:#eef3f8; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif; background:var(--bg); color:#22303e; line-height:1.6; }
+  a{ color:inherit; }
+  .top{ background:#5c3310; color:#fff; padding:26px 18px 22px; }
+  .top-inner{ max-width:1000px; margin:0 auto; }
+  .top h1{ margin:0 0 6px; font-size:1.5rem; }
+  .top p{ margin:0; font-size:.92rem; opacity:.9; }
+  .top-nav{ margin-top:12px; display:flex; gap:8px; flex-wrap:wrap; }
+  .top-nav a{ color:#fff; text-decoration:none; font-size:.85rem; font-weight:700; background:rgba(255,255,255,.16); border-radius:20px; padding:6px 14px; }
+  .top-nav a.on, .top-nav a:hover{ background:rgba(255,255,255,.3); }
+  .wrap{ max-width:1000px; margin:0 auto; padding:20px 18px 60px; }
+  h2{ font-size:1.1rem; color:var(--navy); margin:28px 0 12px; }
+  .rules{ display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:10px; }
+  .rule{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 14px; font-size:.88rem; }
+  .rule b{ color:var(--navy); display:block; margin-bottom:3px; }
+  .rule .no{ display:inline-block; width:22px; height:22px; border-radius:50%; background:#5c3310; color:#fff; text-align:center; line-height:22px; font-size:.75rem; font-weight:800; margin-right:6px; }
+  .filters{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 14px; display:flex; gap:10px; flex-wrap:wrap; align-items:center; position:sticky; top:0; z-index:5; box-shadow:0 2px 8px rgba(0,0,0,.04); }
+  .filters select{ border:1px solid var(--line); border-radius:8px; padding:8px 10px; font-size:.9rem; background:#fff; }
+  .filters input{ flex:1; min-width:160px; border:1px solid var(--line); border-radius:8px; padding:8px 10px; font-size:.9rem; }
+  .rehearse-btn{ border:0; background:#5c3310; color:#fff; border-radius:20px; padding:9px 18px; font-size:.88rem; font-weight:800; cursor:pointer; }
+  .rehearse-btn.off{ background:#8a4b12; }
+  .card{ background:#fff; border:1px solid var(--line); border-radius:14px; margin-bottom:14px; overflow:hidden; }
+  .card.risk-상{ border-left:5px solid #c0392b; }
+  .card.risk-중{ border-left:5px solid #e69b23; }
+  .card.risk-하{ border-left:5px solid #7fa8d0; }
+  .q{ padding:15px 18px; cursor:pointer; }
+  .q .qt{ font-weight:800; font-size:1rem; color:#1c2b3a; }
+  .q .qm{ margin-top:6px; display:flex; gap:6px; flex-wrap:wrap; font-size:.75rem; }
+  .badge{ border-radius:9px; padding:1px 9px; font-weight:800; background:var(--chip); color:#3d4f63; }
+  .badge.ang-야당{ background:#fbeaea; color:#a03030; }
+  .badge.ang-여당{ background:#e8f0fb; color:#1c4f9c; }
+  .badge.ang-공통{ background:#e9f6ef; color:#1f6f5c; }
+  .badge.st-draft{ background:#fff3d6; color:#8a6d1a; }
+  .badge.st-ready{ background:#dff2ec; color:#136350; }
+  .a{ display:none; border-top:1px dashed var(--line); padding:14px 18px 16px; background:#fbfcfe; }
+  .card.open .a{ display:block; }
+  .a h4{ margin:10px 0 5px; font-size:.8rem; color:var(--muted); letter-spacing:.03em; }
+  .a .core{ font-size:.95rem; font-weight:800; color:#0f4c3a; background:#eef8f3; border:1px solid #d3eadf; border-radius:10px; padding:10px 12px; }
+  .a ul{ margin:4px 0 0; padding-left:20px; font-size:.88rem; }
+  .a .why{ font-size:.83rem; color:#7a4a12; background:#fdf6ec; border-radius:8px; padding:8px 11px; }
+  .a .own{ font-size:.8rem; color:var(--muted); margin-top:10px; }
+  .a .links a{ font-size:.8rem; font-weight:800; color:#2a4d7d; }
+  .hint{ font-size:.78rem; color:var(--muted); margin:8px 2px 16px; }
+  .empty{ text-align:center; color:var(--muted); padding:36px 0; background:#fff; border:1px dashed var(--line); border-radius:12px; }
+  .row{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 16px; margin-bottom:8px; display:flex; gap:12px; }
+  .row .main{ flex:1; min-width:0; }
+  .row .meta{ display:flex; gap:6px; flex-wrap:wrap; }
+  .more{ display:block; margin:14px auto 0; border:1px solid var(--line); background:#fff; border-radius:10px; padding:10px 26px; font-size:.9rem; font-weight:700; cursor:pointer; color:#2a4d7d; }
+  .fkey{ font-family:'맑은 고딕','Malgun Gothic',sans-serif; font-weight:800; color:#1657b0; background:#eef4fc;
+         border-radius:6px; padding:1px 8px; margin-right:7px; white-space:nowrap; font-size:.86rem; }
+  .fact{ font-size:.72rem; font-weight:800; border-radius:6px; padding:1px 7px; margin-left:7px; white-space:nowrap; vertical-align:2px; }
+  .fact.act-a{ background:#fdeaea; color:#a03030; }   /* 마련·수립 — 계획 제출 필요 */
+  .fact.act-b{ background:#fff4e2; color:#8a5a17; }   /* 검토 */
+  .fact.act-c{ background:#f1f3f5; color:#5a6673; }   /* 노력 */
+  .fact.act-d{ background:#eaf4f0; color:#136350; }   /* 개선·확대·점검 */
+  .flow{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px 18px; font-size:.88rem; }
+  .flow ol{ margin:6px 0 0; padding-left:20px; }
+  @media print{
+    .top-nav,.filters,.hint{ display:none !important; }
+    body{ background:#fff; }
+    .card{ break-inside:avoid; }
+    .card .a{ display:block !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="top-inner">
+    <h1>🎤 국정감사 답변 대비 워크북</h1>
+    <p>국감장에서 기관장이 여야 의원 질의에 <strong>또박또박, 근거 있게</strong> 답변하도록 준비합니다. 질의의 8할은 작년 지적사항·시정처리·예산에서 나옵니다.</p>
+    <div class="top-nav">
+      <a href="gukgam.html">통합 DB</a>
+      <a href="gukgam-health.html">보건복지 트랙</a>
+      <a href="gukgam-mohw.html">복지부 Q&amp;A</a>
+      <a href="gukgam-kdca.html">질병청 Q&amp;A</a>
+      <a href="gukgam-mfds.html">식약처 Q&amp;A</a>
+      <a href="gukgam-prep.html" class="on">답변 대비 워크북</a>
+      <a href="gukgam-guide.html">의원별 가이드북</a>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+  <h2>📌 답변 10계명 — 또박또박의 기술</h2>
+  <div class="rules">
+    <div class="rule"><b><span class="no">1</span>결론부터 말한다</b>"예/아니오 + 한 문장 결론" 후 부연. 배경 설명부터 시작하면 말을 끊긴다.</div>
+    <div class="rule"><b><span class="no">2</span>수치는 정확히, 모르면 서면으로</b>즉석 추정은 금물. "정확한 수치는 확인해서 서면으로 보고드리겠습니다"가 정답. 단, 핵심 수치 20개는 외운다.</div>
+    <div class="rule"><b><span class="no">3</span>지적은 먼저 수용한다</b>"의원님 지적 취지에 공감합니다" 후 사실관계 설명. 변명부터 시작하면 공방이 된다.</div>
+    <div class="rule"><b><span class="no">4</span>여야 구분 없이 같은 태도</b>답변 태도가 당에 따라 다르면 그 자체가 다음 질의 소재가 된다.</div>
+    <div class="rule"><b><span class="no">5</span>남 탓하지 않는다</b>전임자·타 부처·지자체 탓은 금물. "저희가 챙기겠습니다"로 받는다.</div>
+    <div class="rule"><b><span class="no">6</span>약속의 무게를 안다</b>"하겠습니다"는 시정처리결과 보고서로 돌아온다. 확신 없으면 "적극 검토하겠습니다"와 구분해 쓴다.</div>
+    <div class="rule"><b><span class="no">7</span>짧게 답한다</b>질의시간은 의원의 것. 길게 답하면 "말 돌리지 마세요"가 나온다. 핵심만 15초.</div>
+    <div class="rule"><b><span class="no">8</span>감정에 말리지 않는다</b>고성·면박에도 톤 유지. 사과할 일은 깔끔히 사과하고 다음으로 넘어간다.</div>
+    <div class="rule"><b><span class="no">9</span>연도·단위를 틀리지 않는다</b>"작년"인지 "재작년"인지, 억인지 조인지. 단위 실수 하나가 보도자료가 된다.</div>
+    <div class="rule"><b><span class="no">10</span>서면답변 약속은 전부 이행한다</b>국감장에서 약속한 서면답변·자료제출 목록을 당일 정리하고 기한 내 제출한다.</div>
+  </div>
+
+  <h2>🗂️ 준비 절차 (D-30 → 당일)</h2>
+  <div class="flow">
+    <ol>
+      <li><strong>D-30</strong> — <a href="gukgam.html">통합 DB</a>에서 작년 결과보고서·시정처리결과를 열어 지적사항 전수 목록화 → 과제별 이행현황 표 작성</li>
+      <li><strong>D-21</strong> — 의원실 요구자료 접수 대장 정리(제출률 즉답 가능하게), 언론 보도·보좌진 관심사에서 신규 쟁점 추출</li>
+      <li><strong>D-14</strong> — 아래 예상질의 카드 작성·부서 배정, 핵심 수치 20개 암기카드 확정</li>
+      <li><strong>D-7</strong> — 리허설 모드로 모의 질의응답(악역 배정), 답변 15초 룰 훈련</li>
+      <li><strong>당일</strong> — 이 페이지 인쇄본 지참(인쇄하면 답변 요지가 모두 펼쳐짐), 약속한 서면답변 실시간 기록</li>
+    </ol>
+  </div>
+
+  <h2 id="findingsTitle">📋 작년 지적사항 전수 목록</h2>
+  <p class="hint" id="findingsHint">결과보고서 PDF에서 자동 추출한 시정·처리요구사항입니다. 질의의 8할이 여기서 다시 나옵니다 — 기관 필터로 소관 기관을 골라 이행현황을 점검하세요.</p>
+  <div class="filters" style="position:static;">
+    <select id="gYear" title="연도 선택"></select>
+    <select id="gAgency"><option value="">전체 기관</option></select>
+    <select id="gKey"><option value="">전체 분류</option></select>
+    <input id="gQuery" type="search" placeholder="지적사항 키워드 검색">
+    <label style="font-size:.84rem;font-weight:700;display:flex;align-items:center;gap:6px;">
+      <input type="checkbox" id="gAsQuestion"> 질의형으로 보기
+    </label>
+    <span id="gCount" style="font-size:.82rem;color:var(--muted);"></span>
+  </div>
+  <div id="findings" style="margin-top:12px;"></div>
+  <button class="more" id="gMore" hidden>더 보기</button>
+
+  <h2>❓ 예상 질의 카드</h2>
+  <div class="filters">
+    <select id="fTopic"><option value="">전체 주제</option></select>
+    <select id="fAngle"><option value="">여야 전체</option><option>공통</option><option>여당</option><option>야당</option></select>
+    <select id="fRisk"><option value="">위험도 전체</option><option value="상">위험도 상</option><option value="중">위험도 중</option><option value="하">위험도 하</option></select>
+    <input id="fQuery" type="search" placeholder="질문·키워드 검색">
+    <button class="rehearse-btn off" id="rehearseBtn">🎬 리허설 모드</button>
+  </div>
+  <p class="hint">카드를 누르면 답변 요지가 열립니다. 리허설 모드에서는 질문이 무작위 순서로 나오고, 스스로 답한 뒤 카드를 눌러 요지와 비교하세요. 인쇄(Ctrl+P)하면 전체 답변자료집이 됩니다.
+  <br>※ 현재 카드는 <strong>구조 예시</strong>입니다 — <code>data/gukgam/prep-questions.json</code>의 [ ] 부분을 실제 수치·내용으로 채워 기관 맞춤 자료집으로 만드세요.</p>
+  <div id="cards"><div class="empty">질의 카드를 불러오는 중입니다…</div></div>
+</main>
+
+<script>
+(function(){
+  var ITEMS=[], rehearse=false;
+  var state={topic:'',angle:'',risk:'',q:''};
+  function esc(s){ return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function shuffle(a){ a=a.slice(); for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)), t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+
+  function render(){
+    var rows=ITEMS.filter(function(d){
+      if(state.topic && d.topic!==state.topic) return false;
+      if(state.angle && d.angle!==state.angle) return false;
+      if(state.risk && d.risk!==state.risk) return false;
+      if(state.q){ var t=(d.question+' '+d.topic+' '+(d.answer_core||'')).toLowerCase(); if(t.indexOf(state.q.toLowerCase())<0) return false; }
+      return true;
+    });
+    if(rehearse) rows=shuffle(rows);
+    var box=document.getElementById('cards');
+    if(!rows.length){ box.innerHTML='<div class="empty">조건에 맞는 질의 카드가 없습니다.</div>'; return; }
+    box.innerHTML=rows.map(function(d){
+      var links=(d.links||[]).map(function(l){ return '<a href="'+esc(l.url)+'">'+esc(l.label)+' →</a>'; }).join(' · ');
+      return '<div class="card risk-'+esc(d.risk||'하')+'" data-id="'+esc(d.id)+'">'+
+        '<div class="q"><div class="qt">Q. '+esc(d.question)+'</div>'+
+        '<div class="qm"><span class="badge">'+esc(d.topic)+'</span>'+
+        '<span class="badge ang-'+esc(d.angle)+'">'+esc(d.angle)+'</span>'+
+        '<span class="badge">위험도 '+esc(d.risk||'-')+'</span>'+
+        '<span class="badge st-'+esc(d.status)+'">'+(d.status==='ready'?'답변 확정':'작성 중')+'</span></div></div>'+
+        '<div class="a">'+
+        (d.why?'<div class="why">💡 왜 나오는 질문인가 — '+esc(d.why)+'</div>':'')+
+        '<h4>답변 요지 (15초 결론)</h4><div class="core">'+esc(d.answer_core||'(작성 필요)')+'</div>'+
+        ((d.evidence&&d.evidence.length)?'<h4>근거 수치·사실</h4><ul>'+d.evidence.map(function(e){return '<li>'+esc(e)+'</li>';}).join('')+'</ul>':'')+
+        ((d.followups&&d.followups.length)?'<h4>예상 추가 질의</h4><ul>'+d.followups.map(function(f){return '<li>'+esc(f)+'</li>';}).join('')+'</ul>':'')+
+        '<div class="own">담당: '+esc(d.owner||'-')+(links?' · 관련: <span class="links">'+links+'</span>':'')+'</div>'+
+        '</div></div>';
+    }).join('');
+  }
+
+  fetch('data/gukgam/prep-questions.json?_='+Date.now()).then(function(r){return r.json();}).then(function(d){
+    ITEMS=d.items||[];
+    var topics={};
+    ITEMS.forEach(function(i){ topics[i.topic]=1; });
+    var ft=document.getElementById('fTopic');
+    Object.keys(topics).forEach(function(t){ var o=document.createElement('option'); o.value=t; o.textContent=t; ft.appendChild(o); });
+    render();
+  }).catch(function(){ document.getElementById('cards').innerHTML='<div class="empty">질의 카드를 불러오지 못했습니다.</div>'; });
+
+  document.getElementById('cards').addEventListener('click', function(e){
+    var c=e.target.closest('.card'); if(!c) return;
+    if(e.target.closest('a')) return;
+    c.classList.toggle('open');
+  });
+  document.getElementById('fTopic').addEventListener('change', function(){ state.topic=this.value; render(); });
+  document.getElementById('fAngle').addEventListener('change', function(){ state.angle=this.value; render(); });
+  document.getElementById('fRisk').addEventListener('change', function(){ state.risk=this.value; render(); });
+  document.getElementById('fQuery').addEventListener('input', function(){ state.q=this.value.trim(); render(); });
+  // ---- 작년 지적사항 전수 목록 (결과보고서 자동 추출) ----
+  var FIND=[], gShown=100, gState={agency:'', key:'', q:'', asQ:false};
+  var srcLinks={};
+  function loadYear(y){
+    fetch('data/gukgam/findings-'+y+'.json?_='+Date.now())
+      .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+      .then(function(d){
+        FIND=d.items||[]; gShown=100; gState.agency=''; gState.key='';
+        var kc={};
+        FIND.forEach(function(i){ if(i.key) kc[i.key]=(kc[i.key]||0)+1; });
+        var ks=document.getElementById('gKey');
+        ks.innerHTML='<option value="">전체 분류</option>'+
+          Object.keys(kc).sort(function(a,b){ return kc[b]-kc[a]; })
+            .map(function(k){ return '<option value="'+esc(k)+'">'+esc(k)+' ('+kc[k]+')</option>'; }).join('');
+        document.getElementById('findingsTitle').textContent='📋 '+d.year+'년 지적사항 전수 목록 ('+FIND.length+'건 자동 추출)';
+        var sel=document.getElementById('gAgency');
+        sel.innerHTML='<option value="">전체 기관</option>';
+        var ags={};
+        FIND.forEach(function(i){ if(i.agency) ags[i.agency]=1; });
+        Object.keys(ags).sort().forEach(function(a){ var o=document.createElement('option'); o.value=a; o.textContent=a; sel.appendChild(o); });
+        var hint=document.getElementById('findingsHint');
+        hint.innerHTML='결과보고서 PDF에서 자동 추출한 시정·처리요구사항입니다. 질의의 8할이 여기서 다시 나옵니다 — 기관 필터로 소관 기관을 골라 이행현황을 점검하세요. 출처: <a href="'+esc(d.source_pdf)+'" target="_blank" rel="noopener">'+d.year+'년 '+esc(d.committee)+' 결과보고서 원문(PDF)</a>';
+        renderFindings();
+      }).catch(function(){
+        document.getElementById('findings').innerHTML='<div class="empty">'+y+'년 데이터를 불러오지 못했습니다.</div>';
+      });
+  }
+  function initYears(){
+    // 존재하는 연도 파일 탐색(2020~2026) → 연도 선택 셀렉트 구성, 최신 연도 기본
+    var cands=[2026,2025,2024,2023,2022,2021,2020];
+    Promise.all(cands.map(function(y){
+      return fetch('data/gukgam/findings-'+y+'.json',{method:'HEAD'}).then(function(r){ return r.ok?y:null; }).catch(function(){ return null; });
+    })).then(function(res){
+      var years=res.filter(Boolean);
+      if(!years.length){ document.getElementById('findings').innerHTML='<div class="empty">추출된 지적사항 데이터가 없습니다.</div>'; return; }
+      var sel=document.getElementById('gYear');
+      sel.innerHTML=years.map(function(y){ return '<option value="'+y+'">'+y+'년 국감</option>'; }).join('');
+      sel.value=String(years[0]);
+      sel.addEventListener('change', function(){ loadYear(this.value); });
+      loadYear(years[0]);
+    });
+  }
+  function toQuestion(t){
+    return '지난 국정감사에서 "'+t.replace(/(할 것|바람|질의)$/, '').trim()+'"을(를) 요구받으셨습니다. 지난 1년간의 조치 결과를 구체적으로 답변해 주시기 바랍니다.';
+  }
+  function renderFindings(){
+    var rows=FIND.filter(function(i){
+      if(gState.agency && i.agency!==gState.agency) return false;
+      if(gState.key && i.key!==gState.key) return false;
+      if(gState.q){ var t=(i.text+' '+(i.dept||'')+' '+(i.topic||'')).toLowerCase(); if(t.indexOf(gState.q.toLowerCase())<0) return false; }
+      return true;
+    });
+    document.getElementById('gCount').textContent='조건 일치 '+rows.length+'건';
+    var box=document.getElementById('findings');
+    if(!rows.length){ box.innerHTML='<div class="empty">조건에 맞는 지적사항이 없습니다.</div>'; document.getElementById('gMore').hidden=true; return; }
+    box.innerHTML=rows.slice(0,gShown).map(function(i,n){
+      var meta=[];
+      if(i.agency) meta.push('<span class="badge">'+esc(i.agency)+'</span>');
+      if(i.dept) meta.push('<span class="badge">'+esc(i.dept)+'</span>');
+      if(i.topic) meta.push('<span class="badge">'+esc(i.topic)+'</span>');
+      var lead = i.key ? '<span class="fkey">'+esc(i.key)+'</span>' : '';
+      var act  = i.act ? '<span class="fact act-'+(i.act.indexOf('마련')>=0?'a':i.act.indexOf('검토')>=0?'b':i.act.indexOf('노력')>=0?'c':'d')+'">'+esc(i.act)+'</span>' : '';
+      return '<div class="row"><div class="main"><div style="font-size:.92rem;line-height:1.6;">'+
+        (gState.asQ?'<strong>Q. </strong>'+esc(toQuestion(i.text)):(lead+esc(i.text)+act))+
+        '</div><div class="meta" style="margin-top:6px;">'+meta.join('')+'</div></div></div>';
+    }).join('');
+    document.getElementById('gMore').hidden=rows.length<=gShown;
+  }
+  initYears();
+  document.getElementById('gAgency').addEventListener('change', function(){ gState.agency=this.value; gShown=100; renderFindings(); });
+  document.getElementById('gKey').addEventListener('change', function(){ gState.key=this.value; gShown=100; renderFindings(); });
+  document.getElementById('gQuery').addEventListener('input', function(){ gState.q=this.value.trim(); gShown=100; renderFindings(); });
+  document.getElementById('gAsQuestion').addEventListener('change', function(){ gState.asQ=this.checked; renderFindings(); });
+  document.getElementById('gMore').addEventListener('click', function(){ gShown+=100; renderFindings(); });
+
+  document.getElementById('rehearseBtn').addEventListener('click', function(){
+    rehearse=!rehearse;
+    this.classList.toggle('off', !rehearse);
+    this.textContent = rehearse ? '⏹ 리허설 종료' : '🎬 리허설 모드';
+    render();
+    if(rehearse) window.scrollTo({top:document.getElementById('cards').offsetTop-80, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+</html>

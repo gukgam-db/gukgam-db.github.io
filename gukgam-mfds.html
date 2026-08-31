@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>식품의약품안전처 국정감사 Q&A</title>
+<meta name="description" content="식품의약품안전처 국정감사 질의·답변 아카이브 — 제21·22대 보건복지위 회의록에서 위원 질의와 처장 답변을 자동 추출해 연도별·위원별·주제별로 정리했습니다.">
+<style>
+  :root{ --navy:#12365f; --line:#e3e9f0; --muted:#6b7a8c; --bg:#f5f7fa; --brand:#7b2d43; --chip:#eef3f8; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif; background:var(--bg); color:#22303e; line-height:1.6; }
+  a{ color:inherit; }
+  .top{ background:var(--brand); color:#fff; padding:26px 18px 22px; }
+  .top-inner{ max-width:1000px; margin:0 auto; }
+  .top h1{ margin:0 0 6px; font-size:1.5rem; }
+  .top p{ margin:0; font-size:.92rem; opacity:.9; }
+  .top-nav{ margin-top:12px; display:flex; gap:8px; flex-wrap:wrap; }
+  .top-nav a{ color:#fff; text-decoration:none; font-size:.85rem; font-weight:700; background:rgba(255,255,255,.16); border-radius:20px; padding:6px 14px; }
+  .top-nav a.on, .top-nav a:hover{ background:rgba(255,255,255,.3); }
+  .wrap{ max-width:1000px; margin:0 auto; padding:20px 18px 60px; }
+  h2{ font-size:1.1rem; color:var(--navy); margin:26px 0 12px; }
+  .stats{ display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:16px 0; }
+  .stat{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:13px 16px; }
+  .stat .n{ font-size:1.4rem; font-weight:800; color:var(--brand); }
+  .stat .l{ font-size:.78rem; color:var(--muted); margin-top:2px; }
+  .yeartabs{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
+  .yeartabs button{ border:1px solid var(--line); background:#fff; border-radius:20px; padding:8px 16px; font-size:.88rem; font-weight:800; color:#4a5a6b; cursor:pointer; }
+  .yeartabs button.on{ background:var(--brand); border-color:var(--brand); color:#fff; }
+  .filters{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 14px; display:flex; gap:10px; flex-wrap:wrap; align-items:center; position:sticky; top:0; z-index:5; box-shadow:0 2px 8px rgba(0,0,0,.04); }
+  .filters select{ border:1px solid var(--line); border-radius:8px; padding:8px 10px; font-size:.9rem; background:#fff; }
+  .filters input{ flex:1; min-width:170px; border:1px solid var(--line); border-radius:8px; padding:8px 10px; font-size:.9rem; }
+  .qa{ background:#fff; border:1px solid var(--line); border-left:5px solid var(--brand); border-radius:12px; padding:14px 18px; margin-bottom:12px; }
+  .qa .who{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-bottom:8px; }
+  .qa .who img{ width:34px; height:44px; object-fit:cover; border-radius:6px; background:#eef1f5; }
+  .qa .who .nm{ font-weight:800; color:var(--navy); }
+  .badge{ border-radius:9px; padding:1px 9px; font-size:.72rem; font-weight:800; background:var(--chip); color:#3d4f63; }
+  .badge.pty{ background:#f1f5fa; }
+  .badge.tp{ background:#f7ecef; color:#7b2d43; }
+  .qa .q{ font-size:.92rem; }
+  .qa .q b, .qa .a b{ flex:0 0 auto; }
+  .qa .q::before{ content:"Q. "; font-weight:900; color:#a03030; }
+  .qa .a{ margin-top:8px; font-size:.92rem; background:#fbf4f6; border-radius:10px; padding:9px 12px; }
+  .qa .a::before{ content:"A. (처장) "; font-weight:900; color:var(--brand); }
+  .qa .src{ margin-top:8px; font-size:.75rem; }
+  .qa .src a{ color:#2a4d7d; font-weight:800; }
+  .empty{ text-align:center; color:var(--muted); padding:36px 0; background:#fff; border:1px dashed var(--line); border-radius:12px; }
+  .fkey{ font-family:'맑은 고딕','Malgun Gothic',sans-serif; font-weight:800; color:#1657b0; background:#eef4fc;
+         border-radius:6px; padding:1px 8px; margin-right:7px; white-space:nowrap; font-size:.85rem; }
+  .fact{ font-size:.72rem; font-weight:800; border-radius:6px; padding:1px 7px; margin-left:6px; background:#f1f3f5; color:#5a6673; white-space:nowrap; }
+  .more{ display:block; margin:14px auto 0; border:1px solid var(--line); background:#fff; border-radius:10px; padding:10px 26px; font-size:.9rem; font-weight:700; cursor:pointer; color:#2a4d7d; }
+  .mchips{ display:flex; gap:6px; flex-wrap:wrap; margin:8px 0 14px; }
+  .mchip{ border:1px solid var(--line); background:#fff; border-radius:16px; padding:4px 12px; font-size:.8rem; font-weight:800; color:#3d4f63; cursor:pointer; }
+  .mchip.on{ background:var(--navy); color:#fff; border-color:var(--navy); }
+  .mchip small{ font-weight:400; color:inherit; opacity:.7; }
+  .foot{ font-size:.78rem; color:var(--muted); margin-top:26px; }
+  .notice{ background:#fff8e6; border:1px solid #f0dfae; border-radius:10px; padding:10px 14px; font-size:.85rem; margin:14px 0 0; color:#5c4a15; }
+  @media print{ .filters,.yeartabs,.mchips,.more{ display:none !important; } .qa{ break-inside:avoid; } }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="top-inner">
+    <h1>💊 식품의약품안전처 국정감사 Q&A</h1>
+    <p>제21·22대 보건복지위 국정감사 회의록에서 <strong>위원 질의와 식품의약품안전처장 답변</strong>을 자동 추출해 연도별·위원별·주제별로 정리했습니다.</p>
+    <div class="top-nav">
+      <a href="gukgam.html">통합 DB</a>
+      <a href="gukgam-health.html">보건복지 트랙</a>
+      <a href="gukgam-mohw.html">복지부 Q&A</a>
+      <a href="gukgam-kdca.html">질병청 Q&A</a>
+      <a href="gukgam-mfds.html" class="on">식약처 Q&A</a>
+      <a href="gukgam-prep.html">답변 워크북</a>
+      <a href="gukgam-guide.html">의원별 가이드북</a>
+    </div>
+    <div class="notice">회의록 원문에서 기계적으로 추출한 것으로 발언 맥락이 잘린 경우가 있을 수 있습니다. 인용 전 반드시 원문 회의록으로 확인하세요.</div>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="stats" id="stats"></div>
+
+  <h2>연도별 · 위원별 · 주제별 질의</h2>
+  <div class="yeartabs" id="yearTabs"></div>
+  <div class="mchips" id="memChips"></div>
+  <div class="filters">
+    <select id="fTopic"><option value="">전체 주제</option></select>
+    <select id="fAns"><option value="">답변 유무 전체</option><option value="y">처장 답변 있는 질의만</option></select>
+    <input id="fQuery" type="search" placeholder="키워드 검색 (예: 마약, 식중독, 임상시험)">
+    <span id="cnt" style="font-size:.82rem;color:var(--muted);"></span>
+  </div>
+  <div id="list" style="margin-top:14px;"><div class="empty">Q&A를 불러오는 중입니다…</div></div>
+  <button class="more" id="moreBtn" hidden>더 보기</button>
+
+  <h2>📋 식품의약품안전처 시정·처리요구 (결과보고서)</h2>
+  <p style="font-size:.82rem;color:var(--muted);margin:-4px 0 10px;">국정감사 결과보고서에서 추출한 식품의약품안전처 소관 공식 시정·처리요구 목록입니다. <a href="gukgam-prep.html" style="font-weight:800;color:#2a4d7d;">답변 워크북</a>에서 전체 기관을 볼 수 있습니다.</p>
+  <div id="findList"><div class="empty">불러오는 중…</div></div>
+
+  <p class="foot">출처: 국회회의록시스템(국정감사 회의록), 국정감사 결과보고서. 원문 저작권은 대한민국 국회에 있습니다.</p>
+</main>
+
+<script>
+(function(){
+  var esc=function(s){ return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); };
+  var QA=[], MEMBERS={}, SHOWN=30;
+  var state={year:'', member:'', topic:'', ans:'', q:''};
+
+  function counts(rows, key){
+    var m={}; rows.forEach(function(r){ var v=r[key]; if(v) m[v]=(m[v]||0)+1; }); return m;
+  }
+  function filtered(){
+    return QA.filter(function(r){
+      if(state.year && String(r.year)!==state.year) return false;
+      if(state.member && r.member!==state.member) return false;
+      if(state.topic && (r.topics||[]).indexOf(state.topic)<0) return false;
+      if(state.ans==='y' && !r.a) return false;
+      if(state.q){ var t=(r.q+' '+r.a).toLowerCase(); if(t.indexOf(state.q.toLowerCase())<0) return false; }
+      return true;
+    });
+  }
+  function renderChips(){
+    // 위원 칩: 현재 연도 필터 기준 질의 수 상위
+    var rows=QA.filter(function(r){ return !state.year || String(r.year)===state.year; });
+    var c=counts(rows,'member');
+    var names=Object.keys(c).sort(function(a,b){ return c[b]-c[a]; });
+    document.getElementById('memChips').innerHTML =
+      '<span class="mchip'+(state.member?'':' on')+'" data-m="">전체 위원</span>'+
+      names.map(function(n){
+        return '<span class="mchip'+(state.member===n?' on':'')+'" data-m="'+esc(n)+'">'+esc(n)+' <small>'+c[n]+'</small></span>';
+      }).join('');
+  }
+  function render(){
+    var rows=filtered();
+    document.getElementById('cnt').textContent='조건 일치 '+rows.length+'건';
+    var box=document.getElementById('list');
+    if(!rows.length){ box.innerHTML='<div class="empty">조건에 맞는 질의가 없습니다.</div>'; document.getElementById('moreBtn').hidden=true; return; }
+    box.innerHTML=rows.slice(0,SHOWN).map(function(r){
+      var m=MEMBERS[r.member]||{};
+      return '<div class="qa"><div class="who">'+
+        (m.photo?'<img src="'+esc(m.photo)+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">':'')+
+        '<span class="nm">'+esc(r.member)+' 위원</span>'+
+        (m.party?'<span class="badge pty">'+esc(m.party)+'</span>':'')+
+        '<span class="badge">'+esc(r.date)+'</span>'+
+        (r.topics||[]).map(function(t){ return '<span class="badge tp">'+esc(t)+'</span>'; }).join('')+
+        '</div>'+
+        '<div class="q">'+esc(r.q)+'</div>'+
+        (r.a?'<div class="a">'+esc(r.a)+'</div>':'')+
+        '<div class="src"><a href="'+esc(r.minutes_url)+'" target="_blank" rel="noopener">회의록 원문(PDF) ↗</a></div>'+
+        '</div>';
+    }).join('');
+    document.getElementById('moreBtn').hidden=rows.length<=SHOWN;
+  }
+  function renderAll(){ renderChips(); render(); }
+
+  Promise.all([
+    fetch('data/gukgam/mfds-qa.json?_='+Date.now()).then(function(r){return r.json();}),
+    fetch('data/gukgam/members.json?_='+Date.now()).then(function(r){return r.json();}).catch(function(){return {items:[]};}),
+    fetch('data/gukgam/findings-2024.json?_='+Date.now()).then(function(r){return r.json();}).catch(function(){return null;})
+  ]).then(function(res){
+    QA=res[0].items||[];
+    (res[1].items||[]).forEach(function(m){ MEMBERS[m.name]=m; });
+
+    // 통계
+    var years={}, mems={}, withA=0;
+    QA.forEach(function(r){ years[r.year]=(years[r.year]||0)+1; mems[r.member]=1; if(r.a) withA++; });
+    document.getElementById('stats').innerHTML =
+      '<div class="stat"><div class="n">'+QA.length+'</div><div class="l">추출된 질의</div></div>'+
+      '<div class="stat"><div class="n">'+withA+'</div><div class="l">처장 답변 포함</div></div>'+
+      '<div class="stat"><div class="n">'+Object.keys(mems).length+'</div><div class="l">질의 위원 수</div></div>'+
+      '<div class="stat"><div class="n">'+Object.keys(years).length+'</div><div class="l">연도 수</div></div>';
+
+    // 연도 탭
+    var yl=Object.keys(years).sort().reverse();
+    document.getElementById('yearTabs').innerHTML =
+      '<button data-y="" class="on">전체</button>'+
+      yl.map(function(y){ return '<button data-y="'+y+'">'+y+' <small>('+years[y]+')</small></button>'; }).join('');
+
+    // 주제 옵션
+    var tset={};
+    QA.forEach(function(r){ (r.topics||[]).forEach(function(t){ tset[t]=1; }); });
+    var ft=document.getElementById('fTopic');
+    Object.keys(tset).sort().forEach(function(t){ var o=document.createElement('option'); o.value=t; o.textContent=t; ft.appendChild(o); });
+
+    renderAll();
+  }).catch(function(){
+    document.getElementById('list').innerHTML='<div class="empty">Q&A 데이터가 아직 없습니다. scripts/gukgam/build_mfds_qa.py 실행 후 생성됩니다.</div>';
+  });
+
+  // 시정·처리요구 (결과보고서) — 최신 연도 우선
+  fetch('data/gukgam/findings-2025.json?_='+Date.now()).then(function(r){ if(!r.ok) throw 0; return r.json(); })
+    .catch(function(){ return fetch('data/gukgam/findings-2024.json?_='+Date.now()).then(function(r){return r.json();}); })
+    .then(function(d){
+    var rows=(d.items||[]).filter(function(i){ return (i.group==='식품의약품안전처') || (i.agency||'').indexOf('식품의약품안전처')>=0; });
+    var box=document.getElementById('findList');
+    if(!rows.length){ box.innerHTML='<div class="empty">추출된 항목이 없습니다.</div>'; return; }
+    box.innerHTML='<div class="qa" style="border-left-color:#a03030;"><div class="who"><span class="nm">'+d.year+'년 결과보고서 — 질병관리청 소관 '+rows.length+'건</span>'+
+      '<a class="badge" style="text-decoration:none;" href="'+esc(d.source_pdf)+'" target="_blank" rel="noopener">원문 PDF ↗</a></div>'+
+      '<ul style="margin:6px 0 0;padding-left:20px;font-size:.88rem;">'+
+      rows.slice(0,50).map(function(i){
+        var lead=i.key?'<span class="fkey">'+esc(i.key)+'</span>':'';
+        var act=i.act?'<span class="fact">'+esc(i.act)+'</span>':'';
+        return '<li style="padding:3px 0;line-height:1.6;">'+lead+esc(i.text)+act+(i.dept?' <span class="badge">'+esc(i.dept)+'</span>':'')+'</li>';
+      }).join('')+
+      '</ul>'+(rows.length>50?'<div style="font-size:.8rem;color:var(--muted);margin-top:6px;">외 '+(rows.length-50)+'건 — 답변 워크북에서 전체 확인</div>':'')+'</div>';
+  }).catch(function(){});
+
+  document.getElementById('yearTabs').addEventListener('click', function(e){
+    var b=e.target.closest('button'); if(!b) return;
+    this.querySelectorAll('button').forEach(function(x){ x.classList.remove('on'); });
+    b.classList.add('on'); state.year=b.dataset.y; state.member=''; SHOWN=30; renderAll();
+  });
+  document.getElementById('memChips').addEventListener('click', function(e){
+    var c=e.target.closest('.mchip'); if(!c) return;
+    state.member=c.dataset.m; SHOWN=30; renderAll();
+  });
+  document.getElementById('fTopic').addEventListener('change', function(){ state.topic=this.value; SHOWN=30; render(); });
+  document.getElementById('fAns').addEventListener('change', function(){ state.ans=this.value; SHOWN=30; render(); });
+  document.getElementById('fQuery').addEventListener('input', function(){ state.q=this.value.trim(); SHOWN=30; render(); });
+  document.getElementById('moreBtn').addEventListener('click', function(){ SHOWN+=30; render(); });
+})();
+</script>
+</body>
+</html>
