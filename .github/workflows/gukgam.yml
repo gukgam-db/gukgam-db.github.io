@@ -112,6 +112,11 @@ jobs:
           GUKGAM_TL_AGENCY=mohw python3 scripts/gukgam/build_timeline.py
           GUKGAM_TL_AGENCY=mfds python3 scripts/gukgam/build_timeline.py
 
+      - name: 데이터 자가 점검 (경고는 로그와 healthcheck.json에 남는다)
+        continue-on-error: true
+        timeout-minutes: 5
+        run: python3 scripts/gukgam/healthcheck.py
+
       # 앞 스텝이 일부 실패했더라도, 그때까지 갱신된 데이터는 반드시 커밋한다.
       - name: 변경 시 커밋
         if: always()

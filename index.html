@@ -315,6 +315,7 @@
   <button class="more" id="moreBtn" hidden>더 보기</button>
   </details>
 
+  <div id="hcNote" class="scope-note" style="margin-top:18px;" hidden></div>
   <p class="foot">
     출처: 열린국회정보 Open API(국회사무처) — 국정감사 결과보고서·시정 및 처리 요구사항 결과보고서·국정감사 회의록.
     본 페이지는 메타데이터와 원문 링크만 제공하며, 원문 파일의 저작권은 대한민국 국회에 있습니다(공공누리 출처표시).
@@ -398,6 +399,19 @@
     var el=document.getElementById(sel);
     values.forEach(function(v){ var o=document.createElement('option'); o.value=v; o.textContent=v; el.appendChild(o); });
   }
+
+  // 데이터 자가 점검 결과 — 이 사이트가 스스로 뭘 점검하는지 밝혀 두는 것도 신뢰의 일부다
+  fetch('data/gukgam/healthcheck.json?_='+Date.now()).then(function(r){return r.json();}).then(function(h){
+    var el=document.getElementById('hcNote'); if(!el||!h) return;
+    var warns=(h.findings||[]).filter(function(x){return x.level==='warn';});
+    if(warns.length){
+      el.innerHTML='⚠️ <b>데이터 자가 점검: 경고 '+warns.length+'건</b> ('+(h.updated||'')+') — '+
+        warns.map(function(x){ return x.msg.replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];}); }).join(' · ');
+    } else {
+      el.innerHTML='✓ 데이터 자가 점검 이상 없음 ('+(h.updated||'')+') — 감사일 누락·전임 위원 혼입·추세 편향·수집량 급감 등을 빌드마다 자동 점검합니다.';
+    }
+    el.hidden=false;
+  }).catch(function(){});
 
   Promise.all([
     fetch('data/gukgam/reports.json?_='+Date.now()).then(function(r){return r.json();}),
