@@ -46,6 +46,26 @@
   .empty{ text-align:center; color:var(--muted); padding:36px 0; background:#fff; border:1px dashed var(--line); border-radius:12px; }
   .fkey{ font-family:'맑은 고딕','Malgun Gothic',sans-serif; font-weight:800; color:#1657b0; background:#eef4fc;
          border-radius:6px; padding:1px 8px; margin-right:7px; white-space:nowrap; font-size:.85rem; }
+  .fkey.k1a{ background:#fdeaef; color:#9b1c3d; }  /* 감염병·백신 */
+  .fkey.k1b{ background:#f8d5e0; color:#82122e; }
+  .fkey.k2a{ background:#eaf1fc; color:#12518f; }  /* 의료체계 */
+  .fkey.k2b{ background:#d8e5f7; color:#0d4176; }
+  .fkey.k3a{ background:#e8f4ec; color:#1c6340; }  /* 돌봄·생애주기 */
+  .fkey.k3b{ background:#d4ebde; color:#145232; }
+  .fkey.k4a{ background:#e4f2f6; color:#0e6b7d; }  /* 소득·안전망 */
+  .fkey.k4b{ background:#cee7ee; color:#0a5563; }
+  .fkey.k5a{ background:#f1ecfa; color:#5b3a9b; }  /* 의약품·식품 */
+  .fkey.k5b{ background:#e3daf5; color:#492c82; }
+  .fkey.k6a{ background:#eef1f5; color:#40566e; }  /* 기관운영·연구 */
+  .fkey.k6b{ background:#dde4ec; color:#32455a; }
+  .fkey.k7a{ background:#fbf0dd; color:#7d5411; }  /* 관리·제도 */
+  .fkey.k7b{ background:#f4e1c1; color:#68450a; }
+  .fkey.k8a{ background:#fdeee4; color:#9a4a1c; }  /* 사업·홍보 */
+  .fkey.k8b{ background:#f8dccd; color:#823b12; }
+  .fleg{ display:flex; flex-wrap:wrap; gap:5px 7px; align-items:center; margin:0 2px 12px;
+         font-size:.74rem; color:var(--muted); }
+  .fleg b{ font-weight:700; margin-right:2px; }
+  .fleg .fkey{ font-size:.74rem; margin-right:0; }
   .fact{ font-size:.72rem; font-weight:800; border-radius:6px; padding:1px 7px; margin-left:6px; background:#f1f3f5; color:#5a6673; white-space:nowrap; }
   .more{ display:block; margin:14px auto 0; border:1px solid var(--line); background:#fff; border-radius:10px; padding:10px 26px; font-size:.9rem; font-weight:700; cursor:pointer; color:#2a4d7d; }
   .mchips{ display:flex; gap:6px; flex-wrap:wrap; margin:8px 0 14px; }
@@ -99,6 +119,10 @@
 </main>
 
 <script>
+  /* 지적사항 분류(26종) → 색 계열 8개 + 계열 안 농도 2단계. 색상=주제 계열, 농도=계열 안 구분 */
+  var FKEY_FAM={'검역':'1a','감염병·방역':'1a','건강보험':'2a','관리·감독':'7a','국제협력·ODA':'8a','노인·요양':'3b','백신·예방접종':'1b','법령·제도개선':'7b','빈곤·기초생활':'4a','사업운영·성과':'8a','식품·의료기기':'5b','아동·보육':'3a','연구·R&D':'6a','연금':'4a','예산·재정':'6b','의료인력':'2a','의약품·마약류':'5a','장애인':'3a','저출산·모자보건':'3b','정보시스템·데이터':'6a','정신건강·자살':'4b','조직·인력':'6a','지역·돌봄체계':'4b','처우·노무':'6b','통계·실태조사':'6b','필수·지역의료':'2b','홍보·교육':'8b'};
+  function fkeyCls(k){ return 'fkey k'+(FKEY_FAM[k]||'6a'); }
+
 (function(){
   var esc=function(s){ return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); };
   var QA=[], MEMBERS={}, SHOWN=30;
@@ -194,9 +218,10 @@
     if(!rows.length){ box.innerHTML='<div class="empty">추출된 항목이 없습니다.</div>'; return; }
     box.innerHTML='<div class="qa" style="border-left-color:#a03030;"><div class="who"><span class="nm">'+d.year+'년 결과보고서 — 질병관리청 소관 '+rows.length+'건</span>'+
       '<a class="badge" style="text-decoration:none;" href="'+esc(d.source_pdf)+'" target="_blank" rel="noopener">원문 PDF ↗</a></div>'+
+      '<div class="fleg"><b>분류 색</b><span class="fkey k1a">감염병·백신·검역</span><span class="fkey k2a">의료체계</span><span class="fkey k3a">돌봄·생애주기</span><span class="fkey k4a">소득·안전망</span><span class="fkey k5a">의약품·식품</span><span class="fkey k6a">기관운영·연구</span><span class="fkey k7a">관리·제도</span><span class="fkey k8a">사업·홍보</span></div>'+
       '<ul style="margin:6px 0 0;padding-left:20px;font-size:.88rem;">'+
       rows.slice(0,50).map(function(i){
-        var lead=i.key?'<span class="fkey">'+esc(i.key)+'</span>':'';
+        var lead=i.key?'<span class="'+fkeyCls(i.key)+'">'+esc(i.key)+'</span>':'';
         var act=i.act?'<span class="fact">'+esc(i.act)+'</span>':'';
         return '<li style="padding:3px 0;line-height:1.6;">'+lead+esc(i.text)+act+(i.dept?' <span class="badge">'+esc(i.dept)+'</span>':'')+'</li>';
       }).join('')+

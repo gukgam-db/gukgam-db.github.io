@@ -45,7 +45,8 @@ def pdf_text(url):
 
 # 지적사항 분류 키워드 (앞쪽일수록 우선). 목록 화면에서 파란 강조어로 표시된다.
 FIND_KEYS = [
-    ("감염병·방역", ["감염병", "방역", "코로나", "결핵", "인플루엔자", "엠폭스", "검역", "역학조사"]),
+    ("검역", ["검역", "선박위생", "국립검역소", "공항만", "항공기 내 위생", "관능검사"]),
+    ("감염병·방역", ["감염병", "방역", "코로나", "결핵", "인플루엔자", "엠폭스", "역학조사"]),
     ("백신·예방접종", ["백신", "예방접종", "접종률", "이상반응"]),
     ("의료인력", ["의대 정원", "의대정원", "전공의", "의사 인력", "간호사", "간호인력", "의료인력"]),
     ("필수·지역의료", ["필수의료", "지역의료", "응급", "분만", "소아", "취약지", "공공병원", "지방의료원"]),
@@ -76,6 +77,14 @@ FIND_KEYS = [
     ("사업운영·성과", ["사업", "운영", "성과", "실효성", "지원 확대", "협업", "대책"]),
 ]
 
+# 소관이 분명한 분류는 키워드 빈도와 무관하게 먼저 확정한다.
+# 예: 검역은 국립검역소 소관이라 본문에 '감염병'이 여러 번 나와도 검역으로 잡아야
+# 실무 배분이 맞고, '항공기 내 위생'처럼 '위생' 한 단어 때문에 식품·의료기기로
+# 새는 것도 막힌다.
+PRIORITY_KEYS = [
+    ("검역", ["검역", "선박위생", "국립검역소", "공항만", "항공기 내 위생", "관능검사"]),
+]
+
 # 요구 강도 (답변 부담이 다르므로 별도 표시)
 ACT_RULES = [
     ("마련·수립", ["마련할 것", "수립할 것", "마련하고", "수립하고"]),
@@ -89,11 +98,17 @@ ACT_RULES = [
 
 def classify(text):
     """지적사항 → (분류 키워드, 요구 강도)"""
-    best, best_c = None, 0
-    for label, kws in FIND_KEYS:
-        c = sum(text.count(k) for k in kws)
-        if c > best_c:
-            best, best_c = label, c
+    best = None
+    for label, kws in PRIORITY_KEYS:
+        if any(k in text for k in kws):
+            best = label
+            break
+    if best is None:
+        best_c = 0
+        for label, kws in FIND_KEYS:
+            c = sum(text.count(k) for k in kws)
+            if c > best_c:
+                best, best_c = label, c
     act = None
     for label, kws in ACT_RULES:
         if any(k in text for k in kws):
