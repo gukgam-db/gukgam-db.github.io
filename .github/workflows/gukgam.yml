@@ -97,6 +97,11 @@ jobs:
           python3 scripts/gukgam/build_guides.py
           python3 scripts/gukgam/build_extra_records.py
 
+      - name: 기관별 국감 브리핑 집계
+        continue-on-error: true
+        timeout-minutes: 15
+        run: python3 scripts/gukgam/build_briefing.py
+
       - name: 이슈 연대기 집계 (질병청·복지부)
         continue-on-error: true
         timeout-minutes: 20

@@ -134,6 +134,60 @@
   .tl-legend svg{ vertical-align:-2px; margin-right:3px; }
   #tlSvg text{ font-family:inherit; }
   .more{ display:block; margin:14px auto 0; border:1px solid var(--line); background:#fff; border-radius:10px; padding:10px 26px; font-size:.9rem; font-weight:700; cursor:pointer; color:#2a4d7d; }
+  /* 국감 브리핑 */
+  .br-pick{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin:0 2px 12px; }
+  .br-pick label{ font-size:.82rem; font-weight:800; color:var(--navy); }
+  .br-pick select{ font-size:.9rem; padding:6px 10px; border:1px solid var(--line);
+                   border-radius:9px; background:#fff; color:#22303e; }
+  .br-hint{ font-size:.78rem; color:var(--muted); }
+  .br-sec{ font-size:.8rem; font-weight:800; color:var(--navy); margin:14px 2px 8px;
+           display:flex; align-items:center; gap:7px; }
+  .br-sec::before{ content:""; width:4px; height:13px; border-radius:2px; background:#12365f; }
+  .kpi{ display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:8px; }
+  .kpi .t{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 14px; }
+  .kpi .lb{ font-size:.76rem; color:var(--muted); margin-bottom:4px; }
+  .kpi .vl{ font-size:1.7rem; font-weight:700; color:var(--navy); line-height:1.1; }
+  .kpi .vl small{ font-size:.9rem; font-weight:700; color:var(--muted); margin-left:2px; }
+  .kpi .dl{ font-size:.78rem; font-weight:800; margin-top:3px; }
+  .kpi .dl.bad{ color:#a03030; }   /* 지적이 늘어난 것은 나쁜 방향 */
+  .kpi .dl.good{ color:#136350; }
+  .kpi .dl.flat{ color:var(--muted); }
+  .kpi .sub{ font-size:.74rem; color:var(--muted); margin-top:3px; }
+  .trend-tb{ width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--line);
+             border-radius:12px; overflow:hidden; font-size:.84rem; }
+  .trend-tb th{ text-align:left; font-size:.74rem; color:var(--muted); font-weight:700;
+                padding:8px 12px; border-bottom:1px solid var(--line); }
+  .trend-tb td{ padding:7px 12px; border-bottom:1px solid #eef2f6; vertical-align:middle; }
+  .trend-tb tr:last-child td{ border-bottom:0; }
+  .trend-tb .num{ text-align:right; font-variant-numeric:tabular-nums; color:var(--muted); }
+  .dir{ font-size:.72rem; font-weight:800; border-radius:6px; padding:1px 7px; white-space:nowrap; }
+  .dir.up{ background:#fbeaea; color:#a03030; }
+  .dir.down{ background:#eaf4f0; color:#136350; }
+  .br-fold{ margin-top:8px; }
+  .br-fold summary{ cursor:pointer; font-size:.84rem; font-weight:700; color:#2a4d7d;
+                    padding:9px 13px; background:#fff; border:1px solid var(--line); border-radius:10px; }
+  .br-fold summary .cnt{ font-weight:600; color:var(--muted); }
+  .br-fold[open] summary{ margin-bottom:8px; }
+  .rep{ background:#fff; border:1px solid var(--line); border-left:4px solid #c8d2dc;
+        border-radius:10px; padding:10px 14px; margin-bottom:7px; font-size:.86rem; }
+  .rep.same{ border-left-color:#a03030; }
+  .rep.near{ border-left-color:#c9853f; }
+  .rep .yr{ font-size:.72rem; font-weight:800; color:var(--muted); margin-right:6px; }
+  .rep .ln{ line-height:1.55; margin:2px 0; }
+  .rep .tag{ font-size:.71rem; font-weight:800; border-radius:6px; padding:1px 7px; margin-right:5px; }
+  .rep .tag.same{ background:#fbeaea; color:#a03030; }
+  .rep .tag.near{ background:#fdf0e3; color:#8a5a17; }
+  .rep .tag.like{ background:#f1f3f5; color:#5a6673; }
+  .barrow{ display:flex; align-items:center; gap:8px; font-size:.84rem; padding:4px 0; }
+  .barrow .nm{ flex:0 0 auto; min-width:180px; color:#22303e; }
+  .barrow .bar{ flex:1; height:8px; background:#eef2f6; border-radius:4px; overflow:hidden; }
+  .barrow .bar i{ display:block; height:100%; background:#12365f; border-radius:4px; }
+  .barrow .n{ flex:0 0 auto; font-variant-numeric:tabular-nums; color:var(--muted); font-size:.8rem; }
+  .doc-fold{ margin-top:20px; }
+  .doc-fold summary{ cursor:pointer; font-size:.95rem; font-weight:800; color:var(--navy);
+                     padding:11px 14px; background:#fff; border:1px solid var(--line); border-radius:11px; }
+  .doc-fold summary .cnt{ font-weight:600; color:var(--muted); font-size:.8rem; }
+  .doc-fold[open] summary{ margin-bottom:12px; }
   .scope-note{ font-size:.8rem; color:var(--muted); margin:-4px 2px 10px; }
   .scope-note b{ color:#12365f; }
   .scope-note button{ border:1px solid var(--line); background:#fff; border-radius:8px;
@@ -217,7 +271,16 @@
     <div class="mem-grid" id="members"></div>
   </section>
 
-  <h2>📄 국정감사 자료</h2>
+  <h2>🎯 국감 브리핑 <span style="font-size:.75rem;color:var(--muted);font-weight:400;" id="brNote"></span></h2>
+  <div class="br-pick">
+    <label for="brAgency">기관</label>
+    <select id="brAgency"></select>
+    <span class="br-hint">기관을 고르면 그 기관이 이번에 맞을 곳이 나옵니다.</span>
+  </div>
+  <div id="brBox"><div class="empty">브리핑을 불러오는 중입니다…</div></div>
+
+  <details class="doc-fold" id="docFold">
+    <summary>📄 국정감사 자료 목록 <span class="cnt" id="docFoldN"></span></summary>
   <div class="filters">
     <select id="fYear"><option value="">전체 연도</option></select>
     <select id="fCommittee"><option value="">전체 위원회</option></select>
@@ -233,6 +296,7 @@
 
   <div class="list" id="list"><div class="empty">자료를 불러오는 중입니다…</div></div>
   <button class="more" id="moreBtn" hidden>더 보기</button>
+  </details>
 
   <p class="foot">
     출처: 열린국회정보 Open API(국회사무처) — 국정감사 결과보고서·시정 및 처리 요구사항 결과보고서·국정감사 회의록.
@@ -331,7 +395,8 @@
     fetch('data/gukgam/mohw-timeline.json?_='+Date.now()).then(function(r){return r.json();}).catch(function(){return null;}),
     fetch('data/gukgam/highlights.json?_='+Date.now()).then(function(r){return r.json();}).catch(function(){return null;}),
     fetch('data/gukgam/guides.json?_='+Date.now()).then(function(r){return r.json();}).catch(function(){return {items:[]};}),
-    fetch('data/gukgam/mfds-timeline.json?_='+Date.now()).then(function(r){return r.json();}).catch(function(){return null;})
+    fetch('data/gukgam/mfds-timeline.json?_='+Date.now()).then(function(r){return r.json();}).catch(function(){return null;}),
+    fetch('data/gukgam/briefing.json?_='+Date.now()).then(function(r){return r.json();}).catch(function(){return null;})
   ]).then(function(res){
     var TAGS={};
     ((res[11]||{}).items||[]).forEach(function(g){ if(g.tag) TAGS[g.name]=g.tag; });
@@ -470,6 +535,131 @@
         '<div class="sched-empty">그 밖의 일정이 없습니다.</div>';
       if(!B.length) document.getElementById('schedOtherWrap').hidden=true;
     })(res[7]);
+    // ── 국감 브리핑 ─────────────────────────────────────────────
+    // 자료 '목록'은 "무엇이 있다"만 답한다. 브리핑은 "그래서 우리가 이번에
+    // 어디서 맞을 것인가"에 답한다. 무거운 집계는 build_briefing.py 가 미리 해둔다.
+    (function(BR){
+      var box=document.getElementById('brBox'), sel=document.getElementById('brAgency');
+      if(!BR||!BR.agencies||!Object.keys(BR.agencies).length){
+        box.innerHTML='<div class="empty">브리핑 데이터가 아직 없습니다. '+
+          'scripts/gukgam/build_briefing.py 실행 후 생성됩니다.</div>';
+        document.querySelector('.br-pick').hidden=true; return;
+      }
+      document.getElementById('brNote').textContent=BR.cur_year+'년 기준 · 갱신 '+(BR.updated||'');
+      var names=Object.keys(BR.agencies).sort(function(a,b){ return BR.agencies[a].rank-BR.agencies[b].rank; });
+      // 보건복지 트랙 기관을 먼저 보여준다
+      var PREF=['질병관리청','보건복지부','식품의약품안전처'];
+      var first=PREF.filter(function(n){ return names.indexOf(n)>=0; })[0]||names[0];
+      sel.innerHTML=names.map(function(n){
+        return '<option value="'+esc(n)+'"'+(n===first?' selected':'')+'>'+esc(n)+
+               ' ('+BR.agencies[n].count[BR.cur_year]+'건)</option>'; }).join('');
+
+      function spark(series, years){
+        var vals=years.map(function(y){ return series[y]||0; });
+        var mx=Math.max.apply(null, vals)||1, W=76, H=18, n=vals.length;
+        var pts=vals.map(function(v,i){
+          return [(n<2?0:i*(W/(n-1))).toFixed(1), (H-2-(v/mx)*(H-4)).toFixed(1)]; });
+        var d=pts.map(function(p,i){ return (i?'L':'M')+p[0]+' '+p[1]; }).join(' ');
+        var last=pts[pts.length-1];
+        return '<svg width="'+W+'" height="'+H+'" aria-hidden="true">'+
+          '<path d="'+d+'" fill="none" stroke="#c8d2dc" stroke-width="2" '+
+          'stroke-linecap="round" stroke-linejoin="round"/>'+
+          '<circle cx="'+last[0]+'" cy="'+last[1]+'" r="2.6" fill="#12365f"/></svg>';
+      }
+
+      function draw(name){
+        var a=BR.agencies[name], cy=String(BR.cur_year), py=String(BR.prev_year);
+        var cur=a.count[cy]||0, prev=a.count[py]||0, d=cur-prev;
+        var plan=(a.act&&a.act['마련·수립'])||0;
+        var h='';
+
+        h+='<div class="br-sec">기관장·국장이 먼저 볼 것</div><div class="kpi">';
+        h+='<div class="t"><div class="lb">'+cy+'년 지적</div><div class="vl">'+cur+
+           '<small>건</small></div>'+
+           (prev? '<div class="dl '+(d>0?'bad':(d<0?'good':'flat'))+'">'+
+                  (d>0?'▲ +':(d<0?'▼ ':'– '))+(d?Math.abs(d):'')+
+                  ' <span style="font-weight:600;">'+py+'년 대비</span></div>':'')+
+           '</div>';
+        h+='<div class="t"><div class="lb">피감기관 중 순위</div><div class="vl">'+a.rank+
+           '<small>위</small></div><div class="sub">브리핑 대상 '+a.rank_of+'개 기관 중</div></div>';
+        h+='<div class="t"><div class="lb">'+py+'년에도 지적된 주제</div><div class="vl">'+
+           a.repeat_key_n+'<small>개</small></div><div class="sub">올해 지적 주제 '+
+           a.by_key.length+'개 중</div></div>';
+        h+='<div class="t"><div class="lb">계획 제출 필요</div><div class="vl">'+plan+
+           '<small>건</small></div><div class="sub">‘마련·수립’ 요구 — 서면 계획 대상</div></div>';
+        h+='</div>';
+
+        // 주제 추세 — 12개나 되므로 차트가 아니라 표로 둔다
+        if(a.topics&&a.topics.length){
+          var ys=a.qa_years||[];
+          h+='<div class="br-sec">질의 주제 추세 <span style="font-weight:600;color:var(--muted);">'+
+             ys[0]+'~'+ys[ys.length-1]+' 회의록 '+(a.qa_total||0).toLocaleString()+'건</span></div>';
+          h+='<table class="trend-tb"><thead><tr><th>주제</th><th>추세</th>'+
+             '<th class="num">'+ys[0]+'</th><th class="num">'+ys[ys.length-1]+'</th>'+
+             '<th class="num">계</th><th></th></tr></thead><tbody>';
+          a.topics.slice(0,8).forEach(function(t){
+            h+='<tr><td>'+esc(t.topic)+'</td><td>'+spark(t.series,ys)+'</td>'+
+               '<td class="num">'+(t.series[ys[0]]||0)+'</td>'+
+               '<td class="num">'+(t.series[ys[ys.length-1]]||0)+'</td>'+
+               '<td class="num">'+t.total+'</td><td>'+
+               (t.dir==='up'?'<span class="dir up">▲ 늘고 있음</span>':
+                t.dir==='down'?'<span class="dir down">▼ 줄고 있음</span>':'')+'</td></tr>';
+          });
+          h+='</tbody></table>';
+        }
+        if(a.members&&a.members.length){
+          h+='<div class="br-sec">주로 묻는 위원</div><div>';
+          a.members.slice(0,6).forEach(function(m,i,arr){
+            h+='<div class="barrow"><span class="nm">'+esc(m.name)+'</span>'+
+               '<span class="bar"><i style="width:'+Math.round(100*m.n/arr[0].n)+'%"></i></span>'+
+               '<span class="n">'+m.n+'회</span></div>';
+          });
+          h+='</div>';
+        }
+
+        h+='<div class="br-sec">실무자가 바로 쓸 것</div>';
+        if(a.repeats&&a.repeats.length){
+          var same=a.repeats.filter(function(r){ return r.level==='same'; }).length;
+          h+='<details class="br-fold"><summary>'+py+'년과 겹치는 지적 <span class="cnt">('+
+             a.repeats.length+'건'+(same?' · 사실상 동일 '+same+'건':'')+')</span></summary><div>';
+          a.repeats.forEach(function(r){
+            var lb={same:'사실상 동일',near:'거의 같음',like:'비슷함'}[r.level];
+            h+='<div class="rep '+r.level+'">'+
+               '<span class="tag '+r.level+'">'+lb+'</span>'+
+               (r.key?'<span class="tag like">'+esc(r.key)+'</span>':'')+
+               (r.dept?'<span class="tag like">'+esc(r.dept)+'</span>':'')+
+               '<div class="ln"><span class="yr">'+py+'</span>'+esc(r.prev)+'</div>'+
+               '<div class="ln"><span class="yr">'+cy+'</span>'+esc(r.cur)+'</div></div>';
+          });
+          h+='</div></details>';
+        }
+        if(a.dept&&a.dept.length){
+          h+='<details class="br-fold"><summary>소관 부서별 배분 <span class="cnt">('+
+             a.dept.length+'개 부서)</span></summary><div>';
+          a.dept.forEach(function(x,i,arr){
+            h+='<div class="barrow"><span class="nm">'+esc(x.dept)+'</span>'+
+               '<span class="bar"><i style="width:'+Math.round(100*x.n/arr[0].n)+'%"></i></span>'+
+               '<span class="n">'+x.n+'건</span></div>';
+          });
+          h+='</div></details>';
+        }
+        if(a.by_key&&a.by_key.length){
+          h+='<details class="br-fold"><summary>분류별 건수 <span class="cnt">('+
+             a.by_key.length+'개 분류)</span></summary><div>';
+          a.by_key.forEach(function(x,i,arr){
+            h+='<div class="barrow"><span class="nm">'+esc(x.key)+
+               (x.repeat?' <span class="dir up" style="font-size:.68rem;">'+py+'년에도</span>':'')+
+               '</span><span class="bar"><i style="width:'+Math.round(100*x.n/arr[0].n)+'%"></i></span>'+
+               '<span class="n">'+x.n+'건</span></div>';
+          });
+          h+='</div></details>';
+        }
+        box.innerHTML=h;
+      }
+      sel.addEventListener('change', function(){ draw(this.value); });
+      draw(first);
+    })(res[13]);
+
     var reports=res[0], minutes=res[1], idx=res[2], likms=res[3];
     SUM = res[4].items || {};
     var mem = res[5];
