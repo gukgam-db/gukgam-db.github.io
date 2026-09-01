@@ -78,11 +78,16 @@ SHARE_UP, SHARE_DOWN = 0.25, -0.25   # 비중 기준이라 건수 기준보다 �
 
 
 def trend(series, years, totals):
-    """앞 절반 대비 뒤 절반 평균으로 상승/하락 판정.
+    """최신 연도 비중을 이전 연도들의 평균 비중과 비교해 상승/하락 판정.
 
     반드시 '그해 전체 질의 중 비중'으로 비교한다. 건수로 보면 전체 질의량이
     늘어난 것(복지부는 2020년 822건 → 2025년 1410건, +56%)에 휩쓸려
     제자리인 주제까지 전부 '늘고 있음'으로 찍힌다.
+
+    비교 기준이 최신 연도인 이유: 전반기/후반기 평균 비교는 "2024년 정점 후
+    2025년 반토막"(의사인력 132→63건)도 후반기 평균이 높다는 이유로
+    '늘고 있음 +179%'로 찍었다. 국감 대비의 질문은 "요즘도 이걸 묻는가"이므로
+    가장 최근 국감의 비중이 기준이어야 한다.
 
     반환: (방향, 비중 증감률) — 방향이 None이어도 증감률은 돌려줘서
     화면이 빈칸 대신 '변화 없음'을 숫자와 함께 보여줄 수 있게 한다.
@@ -91,12 +96,11 @@ def trend(series, years, totals):
     if sum(vals) < 8 or len(years) < 4:
         return None, None            # 표본 부족 — 판정하지 않는다
     shares = [(series.get(y, 0) / totals[y]) if totals.get(y) else 0.0 for y in years]
-    h = len(years) // 2
-    old = sum(shares[:h]) / h
-    new = sum(shares[h:]) / (len(years) - h)
-    if old == 0:
+    base = sum(shares[:-1]) / (len(shares) - 1)   # 최신 연도 제외한 평균 비중
+    new = shares[-1]
+    if base == 0:
         return ("up", None) if new > 0 else (None, None)
-    r = (new - old) / old
+    r = (new - base) / base
     return ("up" if r >= SHARE_UP else ("down" if r <= SHARE_DOWN else None)), round(r, 3)
 
 
@@ -129,6 +133,10 @@ def main():
 
         # ── 요구 강도 (계획 제출 부담)
         act = collections.Counter(i.get("act") or "그 밖" for i in items_cur)
+
+        # ── 분류 신뢰도 구성 — 사이트 전체 평균(추정 51%)만 알려주면 기관별
+        # 편차가 감춰진다(질병청은 확실이 76%). 기관 화면에 그 기관 수치를 보인다.
+        conf = collections.Counter(i.get("key_conf") or "none" for i in items_cur)
 
         # ── 소관 부서별 배분
         dept = collections.Counter(i["dept"] for i in items_cur if i.get("dept"))
@@ -198,6 +206,7 @@ def main():
             "rank": ranked.index(agency) + 1,
             "rank_of": len(ranked),
             "act": dict(act.most_common()),
+            "conf": {"high": conf.get("high", 0), "low": conf.get("low", 0), "none": conf.get("none", 0)},
             "dept": [{"dept": d, "n": n} for d, n in dept.most_common(20)],
             "by_key": by_key[:20],
             "by_key2": by_key2[:10],

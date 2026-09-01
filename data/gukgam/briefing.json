@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-31",
+ "updated": "2026-09-01",
  "cur_year": 2025,
  "prev_year": 2024,
  "years": [
@@ -24,6 +24,11 @@
     "확대·강화": 42,
     "노력": 19,
     "점검·관리": 17
+   },
+   "conf": {
+    "high": 200,
+    "low": 413,
+    "none": 131
    },
    "dept": [
     {
@@ -481,7 +486,7 @@
      },
      "total": 1213,
      "dir": null,
-     "share_delta": -0.033
+     "share_delta": 0.012
     },
     {
      "topic": "연말정산·재정",
@@ -495,7 +500,7 @@
      },
      "total": 815,
      "dir": null,
-     "share_delta": -0.09
+     "share_delta": -0.006
     },
     {
      "topic": "장애인",
@@ -508,8 +513,8 @@
       "2025": 171
      },
      "total": 603,
-     "dir": null,
-     "share_delta": 0.121
+     "dir": "up",
+     "share_delta": 0.696
     },
     {
      "topic": "필수·지역의료",
@@ -522,8 +527,8 @@
       "2025": 78
      },
      "total": 488,
-     "dir": "up",
-     "share_delta": 0.479
+     "dir": null,
+     "share_delta": -0.168
     },
     {
      "topic": "노인·돌봄",
@@ -536,8 +541,8 @@
       "2025": 110
      },
      "total": 438,
-     "dir": null,
-     "share_delta": 0.133
+     "dir": "up",
+     "share_delta": 0.454
     },
     {
      "topic": "연금",
@@ -550,8 +555,8 @@
       "2025": 66
      },
      "total": 362,
-     "dir": "up",
-     "share_delta": 0.355
+     "dir": null,
+     "share_delta": -0.031
     },
     {
      "topic": "의약품·제약",
@@ -565,7 +570,7 @@
      },
      "total": 353,
      "dir": null,
-     "share_delta": -0.235
+     "share_delta": -0.093
     },
     {
      "topic": "의사인력·의대정원",
@@ -578,8 +583,8 @@
       "2025": 63
      },
      "total": 343,
-     "dir": "up",
-     "share_delta": 1.79
+     "dir": null,
+     "share_delta": 0.071
     },
     {
      "topic": "저출산·보육",
@@ -593,7 +598,7 @@
      },
      "total": 340,
      "dir": "down",
-     "share_delta": -0.64
+     "share_delta": -0.675
     },
     {
      "topic": "정신건강·자살",
@@ -607,7 +612,7 @@
      },
      "total": 246,
      "dir": null,
-     "share_delta": 0.129
+     "share_delta": 0.199
     },
     {
      "topic": "공공의료",
@@ -621,7 +626,7 @@
      },
      "total": 237,
      "dir": null,
-     "share_delta": -0.214
+     "share_delta": 0.128
     },
     {
      "topic": "아동·청소년",
@@ -634,8 +639,8 @@
       "2025": 47
      },
      "total": 226,
-     "dir": "down",
-     "share_delta": -0.327
+     "dir": null,
+     "share_delta": -0.072
     }
    ],
    "members": [
@@ -699,6 +704,11 @@
     "노력": 7,
     "개선": 6,
     "점검·관리": 5
+   },
+   "conf": {
+    "high": 47,
+    "low": 87,
+    "none": 31
    },
    "dept": [
     {
@@ -1003,7 +1013,7 @@
      },
      "total": 801,
      "dir": null,
-     "share_delta": -0.132
+     "share_delta": 0.048
     },
     {
      "topic": "식품 안전",
@@ -1017,7 +1027,7 @@
      },
      "total": 579,
      "dir": null,
-     "share_delta": 0.052
+     "share_delta": 0.08
     },
     {
      "topic": "마약류 관리",
@@ -1030,8 +1040,8 @@
       "2025": 64
      },
      "total": 427,
-     "dir": "up",
-     "share_delta": 0.701
+     "dir": null,
+     "share_delta": -0.166
     },
     {
      "topic": "온라인 불법유통",
@@ -1045,7 +1055,7 @@
      },
      "total": 224,
      "dir": "up",
-     "share_delta": 0.418
+     "share_delta": 0.699
     },
     {
      "topic": "임상시험·허가심사",
@@ -1059,7 +1069,7 @@
      },
      "total": 155,
      "dir": null,
-     "share_delta": -0.147
+     "share_delta": -0.172
     },
     {
      "topic": "조직·인력",
@@ -1073,7 +1083,7 @@
      },
      "total": 123,
      "dir": "up",
-     "share_delta": 0.358
+     "share_delta": 0.609
     },
     {
      "topic": "첨단바이오·백신",
@@ -1087,7 +1097,7 @@
      },
      "total": 121,
      "dir": "down",
-     "share_delta": -0.885
+     "share_delta": -0.931
     },
     {
      "topic": "예산·재정",
@@ -1101,7 +1111,7 @@
      },
      "total": 99,
      "dir": null,
-     "share_delta": 0.005
+     "share_delta": 0.12
     },
     {
      "topic": "화장품",
@@ -1115,7 +1125,7 @@
      },
      "total": 92,
      "dir": null,
-     "share_delta": 0.209
+     "share_delta": 0.237
     },
     {
      "topic": "의료기기",
@@ -1129,7 +1139,7 @@
      },
      "total": 81,
      "dir": "down",
-     "share_delta": -0.488
+     "share_delta": -0.637
     },
     {
      "topic": "수입식품·통관",
@@ -1142,8 +1152,8 @@
       "2025": 8
      },
      "total": 78,
-     "dir": "up",
-     "share_delta": 0.783
+     "dir": "down",
+     "share_delta": -0.48
     },
     {
      "topic": "건강기능식품",
@@ -1157,7 +1167,7 @@
      },
      "total": 76,
      "dir": null,
-     "share_delta": 0.19
+     "share_delta": 0.15
     }
    ],
    "members": [
@@ -1220,6 +1230,11 @@
     "개선": 5,
     "확대·강화": 2,
     "점검·관리": 1
+   },
+   "conf": {
+    "high": 21,
+    "low": 66,
+    "none": 33
    },
    "dept": [],
    "by_key": [
@@ -1387,6 +1402,11 @@
     "개선": 8,
     "노력": 3,
     "점검·관리": 3
+   },
+   "conf": {
+    "high": 27,
+    "low": 65,
+    "none": 25
    },
    "dept": [],
    "by_key": [
@@ -1566,6 +1586,11 @@
     "점검·관리": 5,
     "개선": 2,
     "노력": 1
+   },
+   "conf": {
+    "high": 81,
+    "low": 14,
+    "none": 11
    },
    "dept": [],
    "by_key": [
@@ -1814,7 +1839,7 @@
      },
      "total": 398,
      "dir": "up",
-     "share_delta": 0.306
+     "share_delta": 0.292
     },
     {
      "topic": "백신·예방접종",
@@ -1828,7 +1853,7 @@
      },
      "total": 390,
      "dir": "down",
-     "share_delta": -0.433
+     "share_delta": -0.486
     },
     {
      "topic": "예산·재정",
@@ -1841,8 +1866,8 @@
       "2025": 13
      },
      "total": 89,
-     "dir": "up",
-     "share_delta": 2.934
+     "dir": null,
+     "share_delta": 0.137
     },
     {
      "topic": "피해보상",
@@ -1856,7 +1881,7 @@
      },
      "total": 75,
      "dir": "down",
-     "share_delta": -0.467
+     "share_delta": -0.576
     },
     {
      "topic": "정보시스템",
@@ -1869,8 +1894,8 @@
       "2025": 4
      },
      "total": 73,
-     "dir": null,
-     "share_delta": -0.181
+     "dir": "down",
+     "share_delta": -0.463
     },
     {
      "topic": "조직·인력",
@@ -1884,7 +1909,7 @@
      },
      "total": 67,
      "dir": null,
-     "share_delta": 0.214
+     "share_delta": 0.015
     },
     {
      "topic": "지역·지자체 협력",
@@ -1898,7 +1923,7 @@
      },
      "total": 61,
      "dir": "down",
-     "share_delta": -0.257
+     "share_delta": -0.384
     },
     {
      "topic": "미래 팬데믹 대비",
@@ -1912,7 +1937,7 @@
      },
      "total": 48,
      "dir": "up",
-     "share_delta": 2.3
+     "share_delta": 0.907
     },
     {
      "topic": "만성·희귀질환",
@@ -1926,7 +1951,7 @@
      },
      "total": 35,
      "dir": "up",
-     "share_delta": 7.237
+     "share_delta": 1.208
     },
     {
      "topic": "연구개발",
@@ -1940,7 +1965,7 @@
      },
      "total": 27,
      "dir": "up",
-     "share_delta": 0.932
+     "share_delta": 1.416
     },
     {
      "topic": "검역·해외유입",
@@ -1954,7 +1979,7 @@
      },
      "total": 26,
      "dir": "up",
-     "share_delta": 1.508
+     "share_delta": 11.54
     },
     {
      "topic": "백신 폐기·수급",
@@ -1968,7 +1993,7 @@
      },
      "total": 17,
      "dir": "down",
-     "share_delta": -0.687
+     "share_delta": -1.0
     }
    ],
    "members": [
@@ -2031,6 +2056,11 @@
     "개선": 4,
     "점검·관리": 4,
     "확대·강화": 2
+   },
+   "conf": {
+    "high": 16,
+    "low": 36,
+    "none": 27
    },
    "dept": [],
    "by_key": [
@@ -2197,6 +2227,11 @@
     "점검·관리": 1,
     "개선": 1
    },
+   "conf": {
+    "high": 29,
+    "low": 33,
+    "none": 17
+   },
    "dept": [],
    "by_key": [
     {
@@ -2338,6 +2373,11 @@
     "확대·강화": 2,
     "점검·관리": 1
    },
+   "conf": {
+    "high": 21,
+    "low": 19,
+    "none": 4
+   },
    "dept": [],
    "by_key": [
     {
@@ -2433,6 +2473,11 @@
     "검토": 3,
     "점검·관리": 1,
     "노력": 1
+   },
+   "conf": {
+    "high": 4,
+    "low": 27,
+    "none": 4
    },
    "dept": [],
    "by_key": [
@@ -2569,6 +2614,11 @@
     "점검·관리": 1,
     "개선": 1
    },
+   "conf": {
+    "high": 10,
+    "low": 18,
+    "none": 1
+   },
    "dept": [],
    "by_key": [
     {
@@ -2691,6 +2741,11 @@
     "노력": 5,
     "개선": 3,
     "검토": 2
+   },
+   "conf": {
+    "high": 12,
+    "low": 16,
+    "none": 1
    },
    "dept": [],
    "by_key": [
@@ -2849,6 +2904,11 @@
     "검토": 1,
     "점검·관리": 1
    },
+   "conf": {
+    "high": 5,
+    "low": 15,
+    "none": 3
+   },
    "dept": [],
    "by_key": [
     {
@@ -2977,6 +3037,11 @@
     "검토": 2,
     "점검·관리": 1
    },
+   "conf": {
+    "high": 6,
+    "low": 12,
+    "none": 1
+   },
    "dept": [],
    "by_key": [
     {
@@ -3080,6 +3145,11 @@
     "노력": 5,
     "검토": 4,
     "확대·강화": 1
+   },
+   "conf": {
+    "high": 8,
+    "low": 7,
+    "none": 3
    },
    "dept": [],
    "by_key": [
@@ -3202,6 +3272,11 @@
     "검토": 2,
     "개선": 1,
     "점검·관리": 1
+   },
+   "conf": {
+    "high": 0,
+    "low": 6,
+    "none": 9
    },
    "dept": [],
    "by_key": [

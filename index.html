@@ -228,6 +228,7 @@
       <a href="gukgam-prep.html">답변 대비 워크북</a>
       <a href="gukgam-guide.html">의원별 가이드북</a>
     </div>
+    <div class="unofficial-note" style="font-size:.74rem;color:rgba(255,255,255,.82);margin:8px 2px 0;">개인이 만든 <b>비공식 참고자료</b>입니다 — 국회·보건복지부·질병관리청·식품의약품안전처 등 어떤 기관의 공식 사이트도 아니며, 모든 자료의 원 출처는 대한민국 국회(열린국회정보·회의록·결과보고서)입니다.</div>
     <div class="notice" id="modeNotice" hidden></div>
   </div>
 </div>
@@ -404,12 +405,18 @@
   // 데이터 자가 점검 결과 — 이 사이트가 스스로 뭘 점검하는지 밝혀 두는 것도 신뢰의 일부다
   fetch('data/gukgam/healthcheck.json?_='+Date.now()).then(function(r){return r.json();}).then(function(h){
     var el=document.getElementById('hcNote'); if(!el||!h) return;
+    var e2=function(s){ return String(s||'').replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];}); };
     var warns=(h.findings||[]).filter(function(x){return x.level==='warn';});
+    var infos=(h.findings||[]).filter(function(x){return x.level!=='warn';});
     if(warns.length){
       el.innerHTML='⚠️ <b>데이터 자가 점검: 경고 '+warns.length+'건</b> ('+(h.updated||'')+') — '+
-        warns.map(function(x){ return x.msg.replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];}); }).join(' · ');
+        warns.map(function(x){ return e2(x.msg); }).join(' · ');
     } else {
-      el.innerHTML='✓ 데이터 자가 점검 이상 없음 ('+(h.updated||'')+') — 감사일 누락·전임 위원 혼입·추세 편향·수집량 급감 등을 빌드마다 자동 점검합니다.';
+      el.innerHTML='✓ 데이터 자가 점검 경고 없음 ('+(h.updated||'')+') — 감사일 누락·전임 위원 혼입·추세 편향·수집량 급감 등을 빌드마다 자동 점검합니다.';
+    }
+    // '이상 없음'만 보여주고 참고 사항(분류의 절반이 추정 등)을 숨기면 반쪽 공개다
+    if(infos.length){
+      el.innerHTML+='<br>참고: '+infos.map(function(x){ return e2(x.msg); }).join(' · ');
     }
     el.hidden=false;
   }).catch(function(){});
@@ -708,7 +715,8 @@
           });
           h+='</tbody></table></div>'+
              '<div style="font-size:.76rem;color:var(--muted);margin:6px 2px 0;">'+
-             '추세는 <b>그해 전체 질의 중 비중</b>으로 비교합니다. 국감 질의는 해마다 총량이 늘어(이 기관은 '+
+             '추세는 <b>가장 최근 국감의 비중</b>을 이전 연도 평균 비중과 비교합니다(작년에 정점을 찍고 올해 줄어든 주제가 '+
+             '‘늘고 있음’으로 잘못 찍히지 않게). 건수 대신 비중을 쓰는 이유: 질의 총량이 해마다 늘어(이 기관은 '+
              (a.qa_total||0).toLocaleString()+'건) 건수로만 보면 제자리인 주제도 모두 늘어난 것처럼 보입니다.</div>';
         }
         if(a.members&&a.members.length){
@@ -728,20 +736,30 @@
              '위원 카드의 ‘국감 발언’은 전 기관·전 대수 발언 수라 값이 다릅니다.</div>';
         }
 
+        if(a.conf){
+          var cn=(a.conf.high||0)+(a.conf.low||0)+(a.conf.none||0)||1;
+          h+='<div style="font-size:.78rem;color:var(--muted);margin:8px 2px 0;">이 기관 지적사항 분류 신뢰도: '+
+             '확실 '+Math.round(100*(a.conf.high||0)/cn)+'% · 추정 '+Math.round(100*(a.conf.low||0)/cn)+'% · 미분류 '+
+             Math.round(100*(a.conf.none||0)/cn)+'% <span style="opacity:.8;">(키워드 자동 분류의 근거 강도 — 기관마다 다릅니다)</span></div>';
+        }
         h+='<div class="br-sec">실무자가 바로 쓸 것</div>';
         if(a.repeats&&a.repeats.length){
           var same=a.repeats.filter(function(r){ return r.level==='same'; }).length;
           h+='<details class="br-fold"><summary>'+py+'년과 겹치는 지적 <span class="cnt">('+
              a.repeats.length+'건'+(same?' · 사실상 동일 '+same+'건':'')+')</span></summary><div>';
           a.repeats.forEach(function(r){
-            var lb={same:'사실상 동일',near:'거의 같음',like:'비슷함'}[r.level];
+            // '부분 유사'는 문구만 닮은 다른 사안일 수 있다(작년 천식 산정특례 vs
+            // 올해 IgA신병증 산정특례가 31%로 걸린 실례) — 유사도를 숨기지 않는다
+            var lb={same:'사실상 동일',near:'거의 같음',like:'부분 유사'}[r.level];
             h+='<div class="rep '+r.level+'">'+
-               '<span class="tag '+r.level+'">'+lb+'</span>'+
+               '<span class="tag '+r.level+'">'+lb+' '+Math.round((r.sim||0)*100)+'%</span>'+
                (r.key?'<span class="tag like">'+esc(r.key)+'</span>':'')+
                (r.dept?'<span class="tag like">'+esc(r.dept)+'</span>':'')+
                '<div class="ln"><span class="yr">'+py+'</span>'+esc(r.prev)+'</div>'+
                '<div class="ln"><span class="yr">'+cy+'</span>'+esc(r.cur)+'</div></div>';
           });
+          h+='<div style="font-size:.76rem;color:var(--muted);margin-top:6px;">주제어 유사도(%) 기준 자동 대조입니다. '+
+             '<b>부분 유사</b>는 요구 문구만 닮은 별개 사안일 수 있으니 원문을 확인하고 인용하세요.</div>';
           h+='</div></details>';
         }
         if(a.dept&&a.dept.length){
