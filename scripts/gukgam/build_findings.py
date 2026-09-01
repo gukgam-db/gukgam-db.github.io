@@ -64,9 +64,9 @@ SUBJECT_KEYS = [
     ("필수·지역의료", ["필수의료", "지역의료", "응급", "분만", "소아", "취약지", "공공병원", "지방의료원"]),
     ("건강보험", ["건강보험", "건보", "수가", "급여화", "비급여", "보장성", "요양급여"]),
     ("연금", ["국민연금", "연금개혁", "기초연금", "퇴직연금"]),
-    ("장애인", ["장애인", "장애아", "탈시설", "활동지원"]),
+    ("장애인", ["장애인", "장애아", "발달장애", "장애유형", "장애 유형", "탈시설", "활동지원"]),
     ("아동·보육", ["아동", "보육", "어린이집", "입양", "자립준비", "돌봄교실"]),
-    ("노인·요양", ["노인", "장기요양", "요양기관", "요양병원", "치매", "경로당"]),
+    ("노인·요양", ["노인", "장기요양", "요양기관", "요양병원", "요양시설", "요양 시설", "치매", "경로당"]),
     ("정신건강·자살", ["정신건강", "자살", "정신질환", "중독"]),
     ("저출산·모자보건", ["저출산", "출산", "난임", "산모", "산후조리", "임신"]),
     ("빈곤·기초생활", ["기초생활", "수급자", "빈곤", "복지사각", "사각지대", "긴급복지", "부양의무자",
@@ -167,11 +167,22 @@ def assign_ids(items, year):
     return items
 
 
+# 짧은 키워드가 더 긴 다른 낱말의 일부로 잡히는 오탐. "치과위생사"의 '위생'이
+# 식품·의료기기로 새던 실례(2025-복지부-199·200). 포함하는 낱말 수만큼 뺀다.
+EXCLUDE = {
+    "위생": ["위생사"],
+}
+
+
+def cnt(text, k):
+    return text.count(k) - sum(text.count(x) for x in EXCLUDE.get(k, []))
+
+
 def rank_keys(text, keys):
     """키워드 빈도 순위 → (최빈 분류, 신뢰도 high|low) 또는 (None, None)"""
-    ranked = sorted(((sum(text.count(k) for k in kws), label) for label, kws in keys),
+    ranked = sorted(((sum(cnt(text, k) for k in kws), label) for label, kws in keys),
                     key=lambda x: -x[0])
-    if not ranked or ranked[0][0] == 0:
+    if not ranked or ranked[0][0] <= 0:
         return None, None
     top = ranked[0][0]
     second = ranked[1][0] if len(ranked) > 1 else 0
@@ -179,29 +190,47 @@ def rank_keys(text, keys):
     return ranked[0][1], ("high" if (top >= 2 and top > second) else "low")
 
 
+NATURE_LABELS = {label for label, _ in NATURE_KEYS}
+
+
 def classify(text):
-    """지적사항 → (주제 key, 요구 강도 act, 주제 신뢰도, 성격 key2, 성격 신뢰도)"""
+    """지적사항 → dict(key, key_conf, act, key2, key2_conf, subject, subject_conf, nature, nature_conf)
+
+    key   : 1축. 주제+성격 통합 목록의 최빈 분류(종전과 호환 — 화면 색 배지·집계 기준)
+    subject / nature : 주제 축과 성격 축을 각각 따로 판정한 값
+    key2  : 1축이 담지 못한 다른 축. 1축이 주제면 성격을, 1축이 성격(예산·재정 등)이면
+            주제를 넣는다. 종전엔 성격만 넣어서 1축이 성격인 544건(31%)의 주제가
+            사라졌다("최중증발달장애인 통합돌봄 대책"이 사업운영·성과 더미에 묻힘).
+    """
     # 분류와 함께 '얼마나 믿을 만한가'를 같이 낸다.
     # 근거가 한 단어뿐인 분류가 전체의 절반이라, 이를 확실한 분류와 똑같이
     # 선명하게 보여주면 오분류 하나가 사이트 전체의 신뢰를 깎는다.
     best, conf = None, None
+    subject, subject_conf = None, None
     for label, kws in PRIORITY_KEYS:
         if any(k in text for k in kws):
             best, conf = label, "high"      # 소관이 분명한 우선규칙
+            subject, subject_conf = label, "high"
             break
     if best is None:
         best, conf = rank_keys(text, FIND_KEYS)
-    # 2축(성격): 성격 목록만 따로 센다. 1축이 이미 같은 성격 분류로 잡혔으면
-    # 같은 말을 두 번 붙이는 셈이라 비워 둔다.
-    best2, conf2 = rank_keys(text, NATURE_KEYS)
-    if best2 == best:
-        best2, conf2 = None, None
+    if subject is None:
+        subject, subject_conf = rank_keys(text, SUBJECT_KEYS)
+    nature, nature_conf = rank_keys(text, NATURE_KEYS)
+    if best in NATURE_LABELS:
+        key2, key2_conf = subject, subject_conf
+    else:
+        key2, key2_conf = nature, nature_conf
+    if key2 == best:
+        key2, key2_conf = None, None
     act = None
     for label, kws in ACT_RULES:
         if any(k in text for k in kws):
             act = label
             break
-    return best, act, conf, best2, conf2
+    return {"key": best, "key_conf": conf, "act": act, "key2": key2, "key2_conf": key2_conf,
+            "subject": subject, "subject_conf": subject_conf,
+            "nature": nature, "nature_conf": nature_conf}
 
 
 def parse(text):
@@ -220,10 +249,10 @@ def parse(text):
         if buf is not None:
             t = re.sub(r"\s+", " ", buf).strip()
             if len(t) > 8:
-                key, act, conf, key2, conf2 = classify(t)
-                items.append({"group": group, "agency": agency, "dept": dept, "topic": topic,
-                              "key": key, "key_conf": conf, "key2": key2, "key2_conf": conf2,
-                              "act": act, "text": t})
+                it = {"group": group, "agency": agency, "dept": dept, "topic": topic}
+                it.update(classify(t))
+                it["text"] = t
+                items.append(it)
         buf = None
 
     for raw in sec.split("\n"):
