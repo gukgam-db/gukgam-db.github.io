@@ -6,7 +6,7 @@
 <title>의원별 답변 가이드북</title>
 <meta name="description" content="보건복지위 위원별 국정감사 답변 가이드북 — 발언 이력·관심 분야·대표 질의·대응 포인트를 위원 한 명당 한 장의 브리핑으로 정리했습니다.">
 <style>
-  :root{ --navy:#12365f; --line:#e3e9f0; --muted:#6b7a8c; --bg:#f5f7fa; --gold:#8a6d1a; --chip:#eef3f8; }
+  :root{ --navy:#12365f; --line:#e3e9f0; --muted:#5f6e80; --bg:#f5f7fa; --gold:#8a6d1a; --chip:#eef3f8; }
   *{ box-sizing:border-box; }
   body{ margin:0; font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif; background:var(--bg); color:#22303e; line-height:1.6; }
   a{ color:inherit; }
@@ -107,7 +107,7 @@
 
   function renderRoster(){
     document.getElementById('roster').innerHTML=
-      '<div style="font-size:.7rem;color:#6b7a8c;padding:4px 9px 8px;line-height:1.5;border-bottom:1px solid #e3e9f0;margin-bottom:6px;">'+
+      '<div style="font-size:.7rem;color:#5f6e80;padding:4px 9px 8px;line-height:1.5;border-bottom:1px solid #e3e9f0;margin-bottom:6px;">'+
       '숫자 = <b>2020~2025년(제21~22대) 국감</b> 복지부·질병청 질의 수.<br><b>신규</b> = 2026년 사보임으로 새로 온 위원 (올해가 복지위 국감 첫 출석 — 과거 발언 기록 없음).</div>'+
       G.map(function(g,i){
       return '<div class="r-item'+(cur===i?' on':'')+'" data-i="'+i+'">'+
@@ -175,13 +175,13 @@
         var ex=EXTRA[g.name]; if(!ex||!ex.turns) return '';
         var yrs=ex.dates.length?ex.dates[0].slice(0,4)+'~'+ex.dates[ex.dates.length-1].slice(0,4):'';
         return '<div class="sec"><h3>전 상임위 국감 기록 (참고 — '+esc(ex.committee)+')</h3>'+
-          '<div style="font-size:.8rem;color:#6b7a8c;margin-bottom:6px;">복지위 발언 기록이 없는 신규 위원의 이전 상임위 국감 활동입니다. 질의 스타일·태도 파악용 참고 자료.</div>'+
+          '<div style="font-size:.8rem;color:#5f6e80;margin-bottom:6px;">복지위 발언 기록이 없는 신규 위원의 이전 상임위 국감 활동입니다. 질의 스타일·태도 파악용 참고 자료.</div>'+
           '<div class="statrow" style="margin-bottom:10px;">'+
             '<div class="st"><div class="n">'+ex.turns+'</div><div class="l">국감 발언 횟수</div></div>'+
             '<div class="st"><div class="n">'+ex.dates.length+'일</div><div class="l">출석 감사일</div></div>'+
             '<div class="st"><div class="n">'+yrs+'</div><div class="l">활동 기간</div></div>'+
           '</div>'+
-          ((ex.top_terms||[]).length?'<div style="font-size:.78rem;color:#6b7a8c;margin-bottom:4px;">자주 쓴 용어:</div><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">'+
+          ((ex.top_terms||[]).length?'<div style="font-size:.78rem;color:#5f6e80;margin-bottom:4px;">자주 쓴 용어:</div><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">'+
             ex.top_terms.map(function(t){ return '<span class="badge" title="'+t.c+'회">'+esc(t.w)+' <small>'+t.c+'</small></span>'; }).join('')+'</div>':'')+
           (ex.quotes||[]).map(function(q){
             return '<div class="quote"><div class="qm"><span>'+esc(q.date)+'</span><span>'+esc(ex.committee)+' 국감</span>'+
@@ -191,10 +191,10 @@
           '</div>';
       })()+
       (g.style?'<div class="sec"><h3>답변서 작성 가이드 (실무자용)</h3>'+
-        (g.terms&&g.terms.length?'<div style="font-size:.8rem;color:#6b7a8c;margin-bottom:5px;">이 위원이 질의에서 유독 자주 쓰는 용어 — <b>답변서·구두답변에 같은 용어를 쓰면 논점이 정확히 맞물립니다</b>:</div>'+
+        (g.terms&&g.terms.length?'<div style="font-size:.8rem;color:#5f6e80;margin-bottom:5px;">이 위원이 질의에서 유독 자주 쓰는 용어 — <b>답변서·구두답변에 같은 용어를 쓰면 논점이 정확히 맞물립니다</b>:</div>'+
           '<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">'+
           g.terms.map(function(t){ return '<span class="badge" style="background:#fdf6ec;color:#8a5a17;" title="질의 중 '+t.c+'회 언급">'+esc(t.w)+' <small>'+t.c+'</small></span>'; }).join('')+'</div>':'')+
-        '<div style="display:flex;gap:14px;flex-wrap:wrap;font-size:.78rem;color:#6b7a8c;margin-bottom:8px;">'+
+        '<div style="display:flex;gap:14px;flex-wrap:wrap;font-size:.78rem;color:#5f6e80;margin-bottom:8px;">'+
           '<span>수치 인용률 <b style="color:#1c1c28">'+Math.round(g.style.num_rate*100)+'%</b></span>'+
           '<span>시각자료 활용 <b style="color:#1c1c28">'+Math.round(g.style.ppt_rate*100)+'%</b></span>'+
           '<span>기한 추궁 <b style="color:#1c1c28">'+Math.round(g.style.deadline_rate*100)+'%</b></span>'+
@@ -228,7 +228,7 @@
   ]).then(function(res){
     G=res[0].items||[];
     EXTRA=(res[1]||{}).items||{};
-    if(!G.length){ document.getElementById('brief').innerHTML='<div style="text-align:center;color:#6b7a8c;padding:40px 0;">가이드 데이터가 없습니다.</div>'; return; }
+    if(!G.length){ document.getElementById('brief').innerHTML='<div style="text-align:center;color:#5f6e80;padding:40px 0;">가이드 데이터가 없습니다.</div>'; return; }
     renderBrief(0);
   });
   document.getElementById('roster').addEventListener('click', function(e){

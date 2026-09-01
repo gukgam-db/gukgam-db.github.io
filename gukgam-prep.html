@@ -6,7 +6,7 @@
 <title>국정감사 답변 대비 워크북</title>
 <meta name="description" content="국정감사장에서 기관장이 여야 의원 질의에 또박또박 답변할 수 있도록 준비하는 워크북 — 예상질의 카드, 답변 요지, 근거 수치, 리허설 모드, 답변 10계명.">
 <style>
-  :root{ --navy:#12365f; --line:#e3e9f0; --muted:#6b7a8c; --bg:#f5f7fa; --accent:#8a4b12; --chip:#eef3f8; }
+  :root{ --navy:#12365f; --line:#e3e9f0; --muted:#5f6e80; --bg:#f5f7fa; --accent:#8a4b12; --chip:#eef3f8; }
   *{ box-sizing:border-box; }
   body{ margin:0; font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif; background:var(--bg); color:#22303e; line-height:1.6; }
   a{ color:inherit; }
@@ -98,6 +98,9 @@
   .flow ol{ margin:6px 0 0; padding-left:20px; }
   @media print{
     .top-nav,.filters,.hint{ display:none !important; }
+    /* '지적사항만 인쇄' — 안내문·예시 카드는 빼고 현재 조건의 목록만 종이에 나간다 */
+    body.print-findings .rules, body.print-findings .flow, body.print-findings #cards,
+    body.print-findings .rehearse-btn, body.print-findings h2:not(#findingsTitle){ display:none !important; }
     body{ background:#fff; }
     .card{ break-inside:avoid; }
     .card .a{ display:block !important; }
@@ -152,16 +155,17 @@
   <h2 id="findingsTitle">📋 작년 지적사항 전수 목록</h2>
   <p class="hint" id="findingsHint">결과보고서 PDF에서 자동 추출한 시정·처리요구사항입니다. 질의의 8할이 여기서 다시 나옵니다 — 기관 필터로 소관 기관을 골라 이행현황을 점검하세요.</p>
   <div class="filters" style="position:static;">
-    <select id="gYear" title="연도 선택"></select>
-    <select id="gAgency"><option value="">전체 기관</option></select>
-    <select id="gKey"><option value="">전체 분류</option></select>
-    <select id="gKey2"><option value="">전체 성격</option></select>
-    <input id="gQuery" type="search" placeholder="지적사항 키워드·번호 검색 (예: 2025-질병청-014)">
+    <select id="gYear" aria-label="지적사항 연도 선택" title="연도 선택"></select>
+    <select id="gAgency" aria-label="지적사항 기관 필터"><option value="">전체 기관</option></select>
+    <select id="gKey" aria-label="지적사항 분류 필터"><option value="">전체 분류</option></select>
+    <select id="gKey2" aria-label="지적사항 요구 성격 필터"><option value="">전체 성격</option></select>
+    <input id="gQuery" aria-label="지적사항 키워드·번호 검색" type="search" placeholder="지적사항 키워드·번호 검색 (예: 2025-질병청-014)">
     <label style="font-size:.84rem;font-weight:700;display:flex;align-items:center;gap:6px;">
       <input type="checkbox" id="gAsQuestion"> 질의형으로 보기
     </label>
     <span id="gCount" style="font-size:.82rem;color:var(--muted);"></span>
     <button id="gCopy" type="button" style="border:1px solid var(--line);background:#fff;border-radius:8px;padding:6px 12px;font-size:.82rem;font-weight:700;color:#2a4d7d;cursor:pointer;" title="현재 조건의 지적사항을 번호·분류·본문 텍스트로 복사">목록 복사</button>
+    <button id="gPrint" type="button" style="border:1px solid var(--line);background:#fff;border-radius:8px;padding:6px 12px;font-size:.82rem;font-weight:700;color:#2a4d7d;cursor:pointer;" title="안내문·예시 카드를 빼고 현재 조건의 지적사항 전체만 인쇄">지적사항만 인쇄</button>
   </div>
   <div class="fleg"><b>분류 색</b><span class="fkey k1a">감염병 계열</span><span class="fkey k2a">의료체계</span><span class="fkey k3a">돌봄·생애주기</span><span class="fkey k4a">소득·안전망</span><span class="fkey k5a">의약품·식품</span><span class="fkey k6a">기관운영·연구</span><span class="fkey k7a">관리·제도</span><span class="fkey k8a">사업·홍보</span><span class="fkey est">추정<i>?</i></span><span class="fkey2">성격</span><span style="color:var(--muted);">회색은 근거가 한 단어뿐인 추정 분류 · 점선 배지는 다른 축입니다 — 주제 분류엔 요구 성격(예산·재정 등)을, 성격 분류(예산·재정 등)엔 주제를 붙입니다</span></div>
   <div id="findings" style="margin-top:12px;"></div>
@@ -169,10 +173,10 @@
 
   <h2>❓ 예상 질의 카드</h2>
   <div class="filters">
-    <select id="fTopic"><option value="">전체 주제</option></select>
-    <select id="fAngle"><option value="">여야 전체</option><option>공통</option><option>여당</option><option>야당</option></select>
-    <select id="fRisk"><option value="">위험도 전체</option><option value="상">위험도 상</option><option value="중">위험도 중</option><option value="하">위험도 하</option></select>
-    <input id="fQuery" type="search" placeholder="질문·키워드 검색">
+    <select id="fTopic" aria-label="주제 필터"><option value="">전체 주제</option></select>
+    <select id="fAngle" aria-label="여야 관점 필터"><option value="">여야 전체</option><option>공통</option><option>여당</option><option>야당</option></select>
+    <select id="fRisk" aria-label="위험도 필터"><option value="">위험도 전체</option><option value="상">위험도 상</option><option value="중">위험도 중</option><option value="하">위험도 하</option></select>
+    <input id="fQuery" aria-label="키워드 검색" type="search" placeholder="질문·키워드 검색">
     <button class="rehearse-btn off" id="rehearseBtn">🎬 리허설 모드</button>
   </div>
   <p class="hint">카드를 누르면 답변 요지가 열립니다. 리허설 모드에서는 질문이 무작위 순서로 나오고, 스스로 답한 뒤 카드를 눌러 요지와 비교하세요. 인쇄(Ctrl+P)하면 전체 답변자료집이 됩니다.
@@ -344,6 +348,12 @@
   document.getElementById('gQuery').addEventListener('input', function(){ gState.q=this.value.trim(); gShown=100; renderFindings(); });
   document.getElementById('gAsQuestion').addEventListener('change', function(){ gState.asQ=this.checked; renderFindings(); });
   document.getElementById('gMore').addEventListener('click', function(){ gShown+=100; renderFindings(); });
+  // 현재 조건의 지적사항 전체(더 보기 한도 무시)만 인쇄하고 원래 화면으로 되돌린다
+  document.getElementById('gPrint').addEventListener('click', function(){
+    var keep=gShown; gShown=1000000; renderFindings(); document.body.classList.add('print-findings');
+    var restore=function(){ document.body.classList.remove('print-findings'); gShown=keep; renderFindings(); window.removeEventListener('afterprint', restore); };
+    window.addEventListener('afterprint', restore); setTimeout(function(){ window.print(); }, 50); setTimeout(restore, 60000);
+  });
   // 한글(HWP) 답변서에 바로 붙이도록 현재 조건의 목록을 줄 단위 텍스트로 복사한다
   document.getElementById('gCopy').addEventListener('click', function(){
     var btn=this;

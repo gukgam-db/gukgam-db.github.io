@@ -6,7 +6,7 @@
 <title>국정감사 자료 DB</title>
 <meta name="description" content="국정감사 결과보고서·시정처리 결과·회의록을 한곳에서 검색하는 통합 DB. 보건복지부·질병관리청·심평원 등 보건복지위원회 소관기관은 전용 페이지로 제공합니다.">
 <style>
-  :root{ --navy:#12365f; --line:#e3e9f0; --muted:#6b7a8c; --bg:#f5f7fa; --accent:#1f6f5c; --chip:#eef3f8; }
+  :root{ --navy:#12365f; --line:#e3e9f0; --muted:#5f6e80; --bg:#f5f7fa; --accent:#1f6f5c; --chip:#eef3f8; }
   *{ box-sizing:border-box; }
   body{ margin:0; font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif; background:var(--bg); color:#22303e; line-height:1.55; }
   a{ color:inherit; }
@@ -236,7 +236,7 @@
 <main class="wrap">
   <section class="gsearch">
     <div class="gs-bar">
-      <input id="gsInput" type="search" placeholder="🔍 통합 검색 — 위원·질의·답변·지적사항·자료 전체에서 찾기 (예: 백신 폐기, 남인순, 장기요양)">
+      <input id="gsInput" aria-label="통합 검색" type="search" placeholder="🔍 통합 검색 — 위원·질의·답변·지적사항·자료 전체에서 찾기 (예: 백신 폐기, 남인순, 장기요양)">
       <button id="gsBtn">검색</button>
     </div>
     <div id="gsOut" hidden></div>
@@ -293,7 +293,7 @@
   <h2>🎯 국감 브리핑 <span style="font-size:.75rem;color:var(--muted);font-weight:400;" id="brNote"></span></h2>
   <div class="br-pick">
     <label for="brAgency">기관</label>
-    <select id="brAgency"></select>
+    <select id="brAgency" aria-label="브리핑 기관 선택"></select>
     <span class="br-hint">기관을 고르면 그 기관이 이번에 맞을 곳이 나옵니다.</span>
   </div>
   <div id="brBox"><div class="empty">브리핑을 불러오는 중입니다…</div></div>
@@ -301,15 +301,15 @@
   <details class="doc-fold" id="docFold">
     <summary>📄 국정감사 자료 목록 <span class="cnt" id="docFoldN"></span></summary>
   <div class="filters">
-    <select id="fYear"><option value="">전체 연도</option></select>
-    <select id="fCommittee"><option value="">전체 위원회</option></select>
+    <select id="fYear" aria-label="연도 필터"><option value="">전체 연도</option></select>
+    <select id="fCommittee" aria-label="위원회 필터"><option value="">전체 위원회</option></select>
     <div class="typebtns" id="fType">
       <button data-t="" class="on">전체</button>
       <button data-t="result_report">결과보고서</button>
       <button data-t="followup">시정·처리결과</button>
       <button data-t="minutes">회의록</button>
     </div>
-    <input id="fQuery" type="search" placeholder="제목·위원회 검색">
+    <input id="fQuery" aria-label="키워드 검색" type="search" placeholder="제목·위원회 검색">
   </div>
   <div id="scopeNote" class="scope-note" hidden></div>
 
@@ -475,7 +475,7 @@
       years.forEach(function(y,i){
         var x=LBL+CELL*i+CELL/2;
         s+='<text x="'+x+'" y="18" text-anchor="middle" font-size="14" font-weight="800" fill="#12365f">'+y+'</text>';
-        s+='<text x="'+x+'" y="34" text-anchor="middle" font-size="10" fill="#6b7a8c">여당: '+esc((tl.ruling||{})[String(y)]||'')+'</text>';
+        s+='<text x="'+x+'" y="34" text-anchor="middle" font-size="10" fill="#5f6e80">여당: '+esc((tl.ruling||{})[String(y)]||'')+'</text>';
       });
       issues.forEach(function(is,r){
         var cy=TOPH+ROW*r+ROW/2;

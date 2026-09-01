@@ -6,7 +6,7 @@
 <title>국정감사 보건복지 트랙</title>
 <meta name="description" content="보건복지위원회 국정감사 전용 DB — 보건복지부·질병관리청·식약처·심평원·건보공단 등 소관기관의 결과보고서·회의록·업무보고·서면답변을 기관 계층으로 정리했습니다.">
 <style>
-  :root{ --navy:#12365f; --line:#e3e9f0; --muted:#6b7a8c; --bg:#f5f7fa; --accent:#1f6f5c; --chip:#eef3f8; }
+  :root{ --navy:#12365f; --line:#e3e9f0; --muted:#5f6e80; --bg:#f5f7fa; --accent:#1f6f5c; --chip:#eef3f8; }
   *{ box-sizing:border-box; }
   body{ margin:0; font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif; background:var(--bg); color:#22303e; line-height:1.55; }
   a{ color:inherit; }
@@ -110,8 +110,8 @@
 
   <h2>📄 국정감사 자료</h2>
   <div class="filters">
-    <select id="fYear"><option value="">전체 연도</option></select>
-    <select id="fType">
+    <select id="fYear" aria-label="연도 필터"><option value="">전체 연도</option></select>
+    <select id="fType" aria-label="자료 유형 필터">
       <option value="">전체 유형</option>
       <option value="result_report">결과보고서</option>
       <option value="followup">시정·처리결과</option>
@@ -120,7 +120,7 @@
       <option value="written_answer">서면답변</option>
       <option value="request_list">요구자료</option>
     </select>
-    <select id="fAgency"><option value="">전체 기관</option></select>
+    <select id="fAgency" aria-label="기관 필터"><option value="">전체 기관</option></select>
   </div>
   <div id="list" style="margin-top:14px;"><div class="empty">자료를 불러오는 중입니다…</div></div>
 

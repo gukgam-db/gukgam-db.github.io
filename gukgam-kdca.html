@@ -6,7 +6,7 @@
 <title>질병관리청 국정감사 Q&A</title>
 <meta name="description" content="질병관리청 국정감사 질의·답변 아카이브 — 제21·22대 보건복지위 회의록에서 위원 질의와 청장 답변을 자동 추출해 연도별·위원별·주제별로 정리했습니다.">
 <style>
-  :root{ --navy:#12365f; --line:#e3e9f0; --muted:#6b7a8c; --bg:#f5f7fa; --teal:#0e5f63; --chip:#eef3f8; }
+  :root{ --navy:#12365f; --line:#e3e9f0; --muted:#5f6e80; --bg:#f5f7fa; --teal:#0e5f63; --chip:#eef3f8; }
   *{ box-sizing:border-box; }
   body{ margin:0; font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif; background:var(--bg); color:#22303e; line-height:1.6; }
   a{ color:inherit; }
@@ -116,9 +116,9 @@
   <div class="yeartabs" id="yearTabs"></div>
   <div class="mchips" id="memChips"></div>
   <div class="filters">
-    <select id="fTopic"><option value="">전체 주제</option></select>
-    <select id="fAns"><option value="">답변 유무 전체</option><option value="y">청장 답변 있는 질의만</option></select>
-    <input id="fQuery" type="search" placeholder="키워드 검색 (예: 백신, 인력, 예산)">
+    <select id="fTopic" aria-label="주제 필터"><option value="">전체 주제</option></select>
+    <select id="fAns" aria-label="답변 유무 필터"><option value="">답변 유무 전체</option><option value="y">청장 답변 있는 질의만</option></select>
+    <input id="fQuery" aria-label="키워드 검색" type="search" placeholder="키워드 검색 (예: 백신, 인력, 예산)">
     <span id="cnt" style="font-size:.82rem;color:var(--muted);"></span>
   </div>
   <div id="list" style="margin-top:14px;"><div class="empty">Q&A를 불러오는 중입니다…</div></div>
