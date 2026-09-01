@@ -274,6 +274,7 @@
 
   <section id="schedSection">
     <h2>📅 국회 일정 <span style="font-size:.75rem;color:var(--muted);font-weight:400;" id="schedRange"></span></h2>
+    <div id="planBox"></div>
     <div class="sched-h">우리 일정 — 보건복지위 <span class="cnt" id="schedMineN"></span></div>
     <div id="schedMine"></div>
     <details class="sched-other" id="schedOtherWrap">
@@ -566,6 +567,47 @@
         '<div class="sched-empty">그 밖의 일정이 없습니다.</div>';
       if(!B.length) document.getElementById('schedOtherWrap').hidden=true;
     })(res[7]);
+    // 국정감사 확정 일정 — 위원회가 채택한 계획서(plan-연도.json, 연 1회
+    // build_plan.py 로 생성)가 있으면 표시한다. 의사일정 API의 추정과 달리
+    // 인용 가능한 확정 일정이므로 일반 일정 위에 따로 둔다.
+    (function(){
+      var thisY=new Date().getFullYear();
+      var cand=[thisY+1, thisY, thisY-1];
+      function tryLoad(i){
+        if(i>=cand.length) return;
+        fetch('data/gukgam/plan-'+cand[i]+'.json?_='+Date.now())
+          .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+          .then(render).catch(function(){ tryLoad(i+1); });
+      }
+      function render(d){
+        var today=new Date(); today.setHours(0,0,0,0);
+        var past = d.year < thisY || (d.period && new Date(d.period.end+'T23:59:59') < today);
+        var h='<div class="sched-h" style="margin-top:2px;">'+d.year+'년 국정감사 확정 일정 — 계획서 기준'+
+          (past?' <span class="cnt">(지난 감사 · '+(thisY)+'년 계획서가 채택되면 자동 교체)</span>':'')+'</div>';
+        h+='<div style="font-size:.8rem;color:var(--muted);margin:0 2px 6px;">감사기간 <strong>'+
+           esc(d.period.start)+' ~ '+esc(d.period.end)+'</strong> ('+d.period.days+'일간) · 대상기관 '+
+           ((d.targets&&d.targets.total)||'-')+'개 · 출처: 보건복지위원회 국정감사계획서</div>';
+        (d.schedule||[]).forEach(function(day){
+          var ss=(day.sessions||[]).filter(function(s){ return s.kind!=='rest'; });
+          if(!ss.length) return;
+          var t=new Date(day.date+'T00:00:00');
+          var n=Math.round((t-today)/86400000);
+          var dd = n===0?'오늘':(n===1?'내일':(n>1?'D-'+n:''));
+          h+='<div class="sched-day"><div class="sd">'+esc(day.date)+' ('+esc(day.dow)+')'+
+             (dd?' <span class="dday'+(n>7?' far':'')+'">'+dd+'</span>':'')+'</div>'+
+            ss.map(function(s){
+              var cls = s.kind==='종합감사'?'g1':(s.kind==='시찰'?'g5':'g1');
+              return '<div class="sched-item"><span class="tm">'+esc(s.time||'')+'</span>'+
+                '<span class="scat '+cls+'">'+esc(s.kind==='감사'?'국정감사':s.kind)+'</span>'+
+                '<span>'+esc((s.targets||[]).join(', '))+(s.place?' · '+esc(s.place):'')+
+                (s.note?' <span style="color:var(--muted);font-size:.78rem;">※ '+esc(s.note)+'</span>':'')+
+                '</span></div>';
+            }).join('')+'</div>';
+        });
+        document.getElementById('planBox').innerHTML=h;
+      }
+      tryLoad(0);
+    })();
     // ── 국감 브리핑 ─────────────────────────────────────────────
     // 자료 '목록'은 "무엇이 있다"만 답한다. 브리핑은 "그래서 우리가 이번에
     // 어디서 맞을 것인가"에 답한다. 무거운 집계는 build_briefing.py 가 미리 해둔다.
@@ -721,6 +763,16 @@
                '</span><span class="bar"><i style="width:'+Math.round(100*x.n/arr[0].n)+'%"></i></span>'+
                '<span class="n">'+x.n+'건</span></div>';
           });
+          h+='</div></details>';
+        }
+        if(a.by_key2&&a.by_key2.length){
+          h+='<details class="br-fold"><summary>요구 성격별 건수 <span class="cnt">(예산·재정, 관리·감독 등 — 주제와 별개 축)</span></summary><div>';
+          a.by_key2.forEach(function(x,i,arr){
+            h+='<div class="barrow"><span class="nm">'+esc(x.key)+'</span>'+
+               '<span class="bar"><i style="width:'+Math.round(100*x.n/arr[0].n)+'%"></i></span>'+
+               '<span class="n">'+x.n+'건</span></div>';
+          });
+          h+='<div style="font-size:.76rem;color:var(--muted);margin-top:6px;">"무엇에 대한 지적인가"(분류)와 별도로 "무엇을 하라는 지적인가"를 센 것입니다. 예산 증액·집행 요구가 많은 해는 결산 자료를, 관리·감독 요구가 많은 해는 점검 실적을 먼저 준비하세요.</div>';
           h+='</div></details>';
         }
         box.innerHTML=h;
