@@ -2,21 +2,29 @@
  "updated": "2026-08-17",
  "note": "보건복지 트랙 수동 시드 자료. API로 수집되지 않는 기관별 공개자료(업무보고·서면답변 등)의 검증된 링크를 손으로 추가한다. Phase 2에서 크롤러로 대체 예정. doc_type: briefing(업무보고) | written_answer(서면답변) | request_list(요구자료 목록) | reference(참고자료)",
  "items": [
-  {"year": 2024, "agency_id": "mohw", "doc_type": "briefing",
+  {
+   "year": 2024,
+   "agency_id": "mohw",
+   "doc_type": "briefing",
    "title": "2024년 국정감사 업무보고 자료 (보건복지부 주요 업무 추진현황)",
    "source": "복지부 사전정보공표",
-   "url": "https://www.mohw.go.kr/board.es?mid=a10107010100&bid=0037&act=view&list_no=1483650&tag=&cg_code=&list_depth=1"},
-  {"year": 2024, "agency_id": "hira", "doc_type": "written_answer",
+   "url": "https://www.mohw.go.kr/board.es?mid=a10107010100&bid=0037&act=view&list_no=1483650&tag=&cg_code=&list_depth=1"
+  },
+  {
+   "year": 2024,
+   "agency_id": "hira",
+   "doc_type": "written_answer",
    "title": "국정감사 서면질의 답변서 (건강보험심사평가원)",
    "source": "심평원 홈페이지",
-   "url": "https://www.hira.or.kr/bbs/bbsCDownLoad.do?apndNo=29744&apndBrdBltNo=12038&apndBrdTyNo=1&apndBltNo=240"},
-  {"year": 2025, "agency_id": null, "doc_type": "written_answer",
-   "title": "(2025년) 국정감사 서면질의 답변서 [전자자료] — 국회도서관 소장",
-   "source": "국회도서관",
-   "url": "https://dl.nanet.go.kr/detail/NONB12025000023540"},
-  {"year": null, "agency_id": "nhis", "doc_type": "request_list",
+   "url": "https://www.hira.or.kr/bbs/bbsCDownLoad.do?apndNo=29744&apndBrdBltNo=12038&apndBrdTyNo=1&apndBltNo=240"
+  },
+  {
+   "year": null,
+   "agency_id": "nhis",
+   "doc_type": "request_list",
    "title": "(제320회 보건복지위원회) 국정감사 요구자료 — 건보공단 전문도서관 소장",
    "source": "국민건강보험 전문도서관",
-   "url": "http://lib.nhis.or.kr/search/detail/CATXEZ000000004000"}
+   "url": "http://lib.nhis.or.kr/search/detail/CATXEZ000000004000"
+  }
  ]
 }

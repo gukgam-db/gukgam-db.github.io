@@ -97,8 +97,8 @@ def main():
             with open(OUT, encoding="utf-8") as f:
                 old = len(json.load(f).get("items", []))
             if old and len(items) < old * 0.5:
-                print(f"수집 {len(items)}명 < 기존 {old}명의 절반 → 기존 파일 유지")
-                return 1
+                print(f"수집 {len(items)}명 < 기존 {old}명의 절반 → 기존 파일 유지 (경고, 뒷단계는 계속)")
+                return 0
         except Exception:
             pass
     with open(OUT, "w", encoding="utf-8") as f:

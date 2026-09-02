@@ -904,7 +904,8 @@
       fetch('data/gukgam/kdca-qa.json').then(function(r){return r.json();}).catch(function(){return {items:[]};}),
       fetch('data/gukgam/mohw-qa-index.json').then(function(r){return r.json();}).catch(function(){return null;}),
       fetch('data/gukgam/findings-2025.json').then(function(r){return r.json();}).catch(function(){return null;}),
-      fetch('data/gukgam/findings-2024.json').then(function(r){return r.json();}).catch(function(){return null;})
+      fetch('data/gukgam/findings-2024.json').then(function(r){return r.json();}).catch(function(){return null;}),
+      fetch('data/gukgam/remarks-index.json').then(function(r){return r.json();}).catch(function(){return null;})
     ];
     return Promise.all(jobs).then(function(res){
       var qa=(res[1].items||[]).map(function(i){ i._src='질병청'; i._page='gukgam-kdca.html'; return i; });
@@ -915,8 +916,12 @@
         shards.forEach(function(s){ (s.items||[]).forEach(function(i){ i._src='복지부'; i._page='gukgam-mohw.html'; qa.push(i); }); });
         var fnd=[];
         [res[3],res[4]].forEach(function(f){ if(f) (f.items||[]).forEach(function(i){ i._year=f.year; fnd.push(i); }); });
-        SDATA={ members:res[0].items||[], qa:qa, findings:fnd };
-        return SDATA;
+        // 위원 발언 전체 색인(답변이 안 붙은 '지나간 발언' 포함) — 연도별 파일, 있으면 얹는다
+        var ry=Object.keys((res[5]&&res[5].years)||{});
+        return Promise.all(ry.map(function(y){ return fetch('data/gukgam/remarks-'+y+'.json').then(function(r){return r.json();}).catch(function(){return {items:[]};}); }))
+        .then(function(rs){ var rem=[]; rs.forEach(function(s){ var u=s.urls||{}; (s.items||[]).forEach(function(i){ if(!i.minutes_url) i.minutes_url=u[i.date]||''; rem.push(i); }); });
+          SDATA={ members:res[0].items||[], qa:qa, findings:fnd, remarks:rem };
+          return SDATA; });
       });
     });
   }
@@ -937,6 +942,7 @@
       var terms=q.toLowerCase().split(/\s+/).filter(Boolean);
       var hit=function(text){ var t=String(text).toLowerCase().replace(/\s+/g,''); return terms.every(function(w){ return t.indexOf(w.replace(/\s+/g,''))>=0; }); };
       var q1=terms[0]||q; // 하이라이트는 첫 단어 기준
+      var ql=q.toLowerCase();
       var html='';
       // 위원
       var mems=d.members.filter(function(m){ return hit(m.name+' '+m.party+' '+m.elecd+' '+(m.brf||'')); });
@@ -948,7 +954,6 @@
       var qa=d.qa.filter(function(i){ return hit(i.q+' '+(i.a||'')+' '+i.member); });
       if(qa.length){
         // 위원 이름으로 찾으면 그 위원 본인의 질의를 먼저, 그 다음 최신순 (본문에 이름만 언급된 건이 위로 오지 않게)
-        var ql=q.toLowerCase();
         qa.sort(function(a,b){ var am=((a.member||'').toLowerCase()===ql)?0:1, bm=((b.member||'').toLowerCase()===ql)?0:1; if(am!==bm) return am-bm; return b.date<a.date?-1:1; });
         html+='<div class="gs-group"><h4>💬 질의·답변 '+qa.length+'건 <a href="gukgam-mohw.html">복지부 →</a><a href="gukgam-kdca.html">질병청 →</a></h4>'+
           qa.slice(0,8).map(function(i){
@@ -963,6 +968,17 @@
         html+='<div class="gs-group"><h4>📋 시정·처리요구(지적사항) '+fnd.length+'건 <a href="gukgam-prep.html">워크북 →</a></h4>'+
           fnd.slice(0,6).map(function(i){
             return '<div class="gs-item">'+hl(i.text, q1, 55)+'<div class="gm"><span>'+i._year+'년</span>'+(i.agency?'<span>'+esc(i.agency)+'</span>':'')+'</div></div>';
+          }).join('')+'</div>';
+      }
+      // 위원 발언 전체 — Q&A로 안 잡힌 발언까지. 이름으로 찾으면 본인 발언 우선, 그 다음 최신순
+      var rem=(d.remarks||[]).filter(function(i){ return hit(i.text+' '+(i.member||'')); });
+      if(rem.length){
+        rem.sort(function(a,b){ var am=((a.member||'').toLowerCase()===ql)?0:1, bm=((b.member||'').toLowerCase()===ql)?0:1; if(am!==bm) return am-bm; return b.date<a.date?-1:1; });
+        html+='<div class="gs-group"><h4>🗣 위원 발언 전체 '+rem.length+'건 <span style="font-weight:400;color:var(--muted);font-size:.78rem;">답변이 안 붙은 발언 포함 · 회의록 원문 발췌</span></h4>'+
+          rem.slice(0,8).map(function(i){
+            return '<div class="gs-item">'+hl(i.text, q1, 55)+'<div class="gm"><span>'+esc(i.member)+' '+esc(i.role||'위원')+'</span><span>'+esc(i.date)+'</span>'+
+              (i.answered_by?'<span>답변: '+esc(i.answered_by)+'</span>':'<span>답변 없이 지나감</span>')+
+              (i.minutes_url?'<a href="'+esc(i.minutes_url)+'" target="_blank" rel="noopener" style="font-weight:800;color:#2a4d7d;">회의록 원문 →</a>':'')+'</div></div>';
           }).join('')+'</div>';
       }
       // 자료 (제목)

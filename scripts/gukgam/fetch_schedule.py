@@ -17,11 +17,6 @@ OUT = os.path.join(ROOT, "data", "gukgam", "schedule.json")
 KEY = os.environ.get("ASSEMBLY_API_KEY", "").strip()
 UA = {"User-Agent": "Mozilla/5.0 (gukgam-db collector)"}
 DAYS = int(os.environ.get("GUKGAM_SCHED_DAYS", "35"))
-HTTP_TIMEOUT = int(os.environ.get("GUKGAM_HTTP_TIMEOUT", "30"))
-# 35일치를 하루씩 호출하므로, 서버가 죽어 있으면 (타임아웃 30초 x 3회) x 35일 = 약 55분을
-# 그대로 낭비한다. 연속 N회 실패하면 남은 날짜 호출을 건너뛴다(서킷 브레이커).
-MAX_CONSEC_FAIL = int(os.environ.get("GUKGAM_MAX_CONSEC_FAIL", "3"))
-NET = {"consec_fail": 0, "down": False, "any_fail": False}
 
 
 def call(date_str):
@@ -32,30 +27,14 @@ def call(date_str):
     req = urllib.request.Request(url, headers=UA)
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT) as r:
+            with urllib.request.urlopen(req, timeout=30) as r:
                 d = json.loads(r.read().decode("utf-8"))
-            NET["consec_fail"] = 0
             body = d.get("ALLSCHEDULE")
-            if body:
-                return body[1].get("row", [])
-            # 본문이 없으면 데이터 없음(INFO-200) 또는 오류. 오류는 실패로 계산해야
-            # 기존 schedule.json 을 0건으로 덮어쓰는 사고를 막을 수 있다.
-            code = (d.get("RESULT") or {}).get("CODE", "?")
-            if code != "INFO-200":
-                print(f"[ALLSCHEDULE {date_str}] 응답 오류: {code}")
-                NET["any_fail"] = True
-            return []
-        except Exception as e:
+            return body[1].get("row", []) if body else []
+        except Exception:
             if attempt < 2:
                 time.sleep(2)
-            else:
-                print(f"[ALLSCHEDULE {date_str}] 호출 실패: {e}")
-                NET["any_fail"] = True
-                NET["consec_fail"] += 1
-                if NET["consec_fail"] >= MAX_CONSEC_FAIL:
-                    NET["down"] = True
-                    print(f"※ 연속 {MAX_CONSEC_FAIL}회 호출 실패 → open.assembly.go.kr 접속 불가로 판단, 남은 날짜를 건너뜁니다.")
-    return []
+    return None   # 실패는 None — 빈 목록([]=일정 없음)과 구분한다
 
 
 def classify(r):
@@ -83,11 +62,19 @@ def main():
         print("※ ASSEMBLY_API_KEY 미설정 → 샘플 범위만 수집될 수 있음")
     today = datetime.date.today()
     items, seen = [], set()
+    fails, ok_calls = 0, 0
     for i in range(DAYS):
-        if NET["down"]:
-            break
         d = (today + datetime.timedelta(days=i)).isoformat()
-        for r in call(d):
+        rows = call(d)
+        if rows is None:
+            fails += 1
+            if fails >= 3:   # API가 죽은 날 35일×3회×30초(≈52분)를 다 기다리지 않는다 — 9/1 실제 사고
+                print("연속 3일 조회 실패 → 중단, 기존 schedule.json 유지")
+                return 0
+            continue
+        fails = 0
+        ok_calls += 1
+        for r in rows:
             cat = classify(r)
             if not cat:
                 continue
@@ -106,15 +93,14 @@ def main():
                 "place": r.get("EV_PLC") or "",
             })
         time.sleep(0.4)
+    if ok_calls == 0 and os.path.exists(OUT):
+        print("조회 성공 0건 → 기존 schedule.json 유지")
+        return 0
     items.sort(key=lambda x: (x["date"], x["time"]))
-    # 호출 실패로 0건이 된 경우 기존 일정을 덮어쓰지 않는다(진짜 0건과 구분).
-    if not items and NET["any_fail"] and os.path.exists(OUT):
-        print("수집 0건(호출 실패) → 기존 schedule.json 유지(덮어쓰지 않음)")
-        return 1
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump({"updated": today.isoformat(), "horizon_days": DAYS, "items": items}, f, ensure_ascii=False, indent=1)
     print(f"완료: {DAYS}일 범위에서 관련 일정 {len(items)}건 저장")
-    return 1 if NET["any_fail"] and not items else 0
+    return 0
 
 
 if __name__ == "__main__":
