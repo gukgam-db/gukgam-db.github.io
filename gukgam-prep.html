@@ -323,7 +323,7 @@
       if(gState.agency && i.agency!==gState.agency) return false;
       if(gState.key && i.key!==gState.key && i.subject!==gState.key) return false;
       if(gState.key2 && i.nature!==gState.key2) return false;
-      if(gState.q){ var t=(i.text+' '+(i.dept||'')+' '+(i.topic||'')+' '+(i.id||'')).toLowerCase(); if(t.indexOf(gState.q.toLowerCase())<0) return false; }
+      if(gState.q){ var t=(i.text+' '+(i.dept||'')+' '+(i.topic||'')+' '+(i.id||'')).toLowerCase().replace(/\s+/g,''); if(t.indexOf(gState.q.toLowerCase().replace(/\s+/g,''))<0) return false; }
       return true;
     });
     document.getElementById('gCount').textContent='조건 일치 '+rows.length+'건';
@@ -363,7 +363,7 @@
       if(gState.agency && i.agency!==gState.agency) return false;
       if(gState.key && i.key!==gState.key && i.subject!==gState.key) return false;
       if(gState.key2 && i.nature!==gState.key2) return false;
-      if(gState.q){ var t=(i.text+' '+(i.dept||'')+' '+(i.topic||'')+' '+(i.id||'')).toLowerCase(); if(t.indexOf(gState.q.toLowerCase())<0) return false; }
+      if(gState.q){ var t=(i.text+' '+(i.dept||'')+' '+(i.topic||'')+' '+(i.id||'')).toLowerCase().replace(/\s+/g,''); if(t.indexOf(gState.q.toLowerCase().replace(/\s+/g,''))<0) return false; }
       return true;
     });
     var lines=rows.map(function(i){

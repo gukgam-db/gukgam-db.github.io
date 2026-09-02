@@ -859,7 +859,11 @@
     } else if(idx){
       var n2=document.getElementById('modeNotice');
       n2.hidden=false; n2.style.background='#eef6f0'; n2.style.borderColor='#cfe5d6';
-      n2.textContent='최근 갱신 '+(idx.updated||'')+' · 전체 수집 모드';
+      n2.textContent='자료 갱신 '+(idx.updated||'')+' · 전체 수집 모드';
+      // '자료 갱신'은 새 자료가 들어온 마지막 날. 매일 점검해도 새 자료가 없으면 멈춘 것처럼 보이므로 점검 시각을 따로 보인다
+      fetch('data/gukgam/last-run.json?_='+Date.now()).then(function(r){ return r.ok?r.json():null; }).then(function(lr){
+        if(lr&&lr.checked_kst) n2.textContent='자료 갱신 '+(idx.updated||'')+' (새 자료가 들어온 마지막 날) · 마지막 점검 '+lr.checked_kst+' · 전체 수집 모드';
+      }).catch(function(){});
     }
     window.__DOCS = DOCS;
     // 필터 옵션
@@ -929,8 +933,9 @@
     if(!SDATA && !loading){ loading=true; out.innerHTML='<div class="gs-loading">전체 데이터를 불러오는 중입니다… (최초 1회, 몇 초 소요)</div>'; }
     ensureData().then(function(d){
       loading=false;
+      // 회의록 PDF 추출 텍스트는 '중증열성 혈소판감소증후군'처럼 낱말 중간에 공백이 끼므로, 공백을 지운 뒤 비교한다
       var terms=q.toLowerCase().split(/\s+/).filter(Boolean);
-      var hit=function(text){ var t=text.toLowerCase(); return terms.every(function(w){ return t.indexOf(w)>=0; }); };
+      var hit=function(text){ var t=String(text).toLowerCase().replace(/\s+/g,''); return terms.every(function(w){ return t.indexOf(w.replace(/\s+/g,''))>=0; }); };
       var q1=terms[0]||q; // 하이라이트는 첫 단어 기준
       var html='';
       // 위원

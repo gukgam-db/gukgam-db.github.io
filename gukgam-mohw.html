@@ -166,7 +166,7 @@
       if(state.member && r.member!==state.member) return false;
       if(state.topic && (r.topics||[]).indexOf(state.topic)<0) return false;
       if(state.ans==='y' && !r.a) return false;
-      if(state.q){ var t=(r.q+' '+r.a).toLowerCase(); if(t.indexOf(state.q.toLowerCase())<0) return false; }
+      if(state.q){ var t=(r.q+' '+r.a).toLowerCase().replace(/\s+/g,''); if(t.indexOf(state.q.toLowerCase().replace(/\s+/g,''))<0) return false; }  // 공백 무시(PDF 추출 낱말 끊김 대비)
       return true;
     });
   }

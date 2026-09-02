@@ -194,13 +194,13 @@
     }).join('') || '<div class="empty">현 위원 중 코로나 질의 이력이 없습니다.</div>';
   }
   function filtered(){
-    var q=state.q.toLowerCase();
+    var q=state.q.toLowerCase().replace(/\s+/g,'');  // 공백 무시(PDF 추출 낱말 끊김 대비)
     return D.items.filter(function(i){
       if(state.year && i.year!==state.year) return false;
       if(state.theme && i.theme!==state.theme) return false;
       if(state.member && i.member!==state.member) return false;
       if(state.high && i.conf!=='high') return false;
-      if(q && ((i.q||'')+' '+(i.a||'')+' '+(i.member||'')).toLowerCase().indexOf(q)<0) return false;
+      if(q && ((i.q||'')+' '+(i.a||'')+' '+(i.member||'')).toLowerCase().replace(/\s+/g,'').indexOf(q)<0) return false;
       return true;
     });
   }

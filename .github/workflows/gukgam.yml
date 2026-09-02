@@ -92,6 +92,9 @@ jobs:
       - name: 데이터 자가 점검 (경고는 로그와 healthcheck.json에 남는다)
         run: python3 scripts/gukgam/healthcheck.py
 
+      - name: 점검 시각 기록 (새 자료가 없어도 '마지막 점검'이 화면에 보이게)
+        run: python3 scripts/gukgam/write_last_run.py workflow
+
       - name: 변경 시 커밋
         run: |
           if git diff --quiet -- data/gukgam; then
