@@ -50,6 +50,41 @@
   .notice{ background:#fff8e6; border:1px solid #f0dfae; border-radius:10px; padding:10px 14px; font-size:.85rem; margin:14px 0 0; color:#5c4a15; }
   .foot{ font-size:.78rem; color:var(--muted); margin-top:26px; }
   @media print{ .filters,.yeartabs,.mchips,.more{ display:none !important; } .qa{ break-inside:avoid; } }
+  .fkey{ font-family:'맑은 고딕','Malgun Gothic',sans-serif; font-weight:800; color:#1657b0; background:#eef4fc;
+         border-radius:6px; padding:1px 8px; margin-right:7px; white-space:nowrap; font-size:.85rem; }
+  .fno{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.72rem;
+        color:#5a6673; background:#f5f7fa; border:1px solid var(--line); border-radius:5px;
+        padding:0 5px; margin-right:6px; text-decoration:none; white-space:nowrap; }
+  .fno:hover{ background:#eaf1fc; color:#12518f; }
+  :target > .fno, :target{ scroll-margin-top:12px; }
+  li:target, div.row:target{ background:#fffbe6; border-radius:8px; }
+  .fkey.est{ background:#f1f3f5 !important; color:#5a6673 !important; }  /* 근거가 한 단어뿐 — 추정 */
+  .fkey i{ font-style:normal; font-size:.72em; opacity:.8; margin-left:4px; font-weight:700; }
+  /* 성격 축(key2) — 주제 색 배지와 달리 점선 테두리의 무채색으로 구분 */
+  .fkey2{ font-weight:700; color:#4a5866; background:#fff; border:1px dashed #a9b6c3;
+          border-radius:6px; padding:0 7px; margin-right:7px; white-space:nowrap; font-size:.8rem; }
+  .fkey.k1a{ background:#fdeaef; color:#9b1c3d; }  /* 감염병·백신 */
+  .fkey.k1b{ background:#f8d5e0; color:#82122e; }
+  .fkey.k1c{ background:#f2bccd; color:#6d0f26; }
+  .fkey.k2a{ background:#eaf1fc; color:#12518f; }  /* 의료체계 */
+  .fkey.k2b{ background:#d8e5f7; color:#0d4176; }
+  .fkey.k3a{ background:#e8f4ec; color:#1c6340; }  /* 돌봄·생애주기 */
+  .fkey.k3b{ background:#d4ebde; color:#145232; }
+  .fkey.k4a{ background:#e4f2f6; color:#0e6b7d; }  /* 소득·안전망 */
+  .fkey.k4b{ background:#cee7ee; color:#0a5563; }
+  .fkey.k5a{ background:#f1ecfa; color:#5b3a9b; }  /* 의약품·식품 */
+  .fkey.k5b{ background:#e3daf5; color:#492c82; }
+  .fkey.k6a{ background:#eef1f5; color:#40566e; }  /* 기관운영·연구 */
+  .fkey.k6b{ background:#dde4ec; color:#32455a; }
+  .fkey.k7a{ background:#fbf0dd; color:#7d5411; }  /* 관리·제도 */
+  .fkey.k7b{ background:#f4e1c1; color:#68450a; }
+  .fkey.k8a{ background:#fdeee4; color:#9a4a1c; }  /* 사업·홍보 */
+  .fkey.k8b{ background:#f8dccd; color:#823b12; }
+  .fleg{ display:flex; flex-wrap:wrap; gap:5px 7px; align-items:center; margin:0 2px 12px;
+         font-size:.74rem; color:var(--muted); }
+  .fleg b{ font-weight:700; margin-right:2px; }
+  .fleg .fkey{ font-size:.74rem; margin-right:0; }
+  .fact{ font-size:.72rem; font-weight:800; border-radius:6px; padding:1px 7px; margin-left:6px; background:#f1f3f5; color:#5a6673; white-space:nowrap; }
 </style>
 </head>
 <body>
@@ -87,10 +122,39 @@
   <div id="list" style="margin-top:14px;"><div class="empty">연도를 선택하면 질의를 불러옵니다…</div></div>
   <button class="more" id="moreBtn" hidden>더 보기</button>
 
+  <h2>📋 보건복지부 시정·처리요구 (결과보고서)</h2>
+  <p style="font-size:.82rem;color:var(--muted);margin:-4px 0 10px;">국정감사 결과보고서에서 추출한 보건복지부 소관 공식 시정·처리요구 목록입니다. <a href="gukgam-prep.html" style="font-weight:800;color:#2a4d7d;">답변 워크북</a>에서 전체 기관을 볼 수 있습니다.</p>
+  <div id="findList"><div class="empty">불러오는 중…</div></div>
+
   <p class="foot">출처: 국회회의록시스템(국정감사 회의록). 원문 저작권은 대한민국 국회에 있습니다.</p>
 </main>
 
 <script>
+  var FKEY_FAM={'성매개감염병':'1c','감염병·방역':'1b','건강보험':'2a','검역':'1a','결핵':'1c','관리·감독':'7a','국제협력·ODA':'8a','노인·요양':'3b','백신·예방접종':'1a','법령·제도개선':'7b','빈곤·기초생활':'4a','사업운영·성과':'8a','식품·의료기기':'5b','담배·유해물질':'5a','표시·광고':'5b','수입·수출':'5a','아동·보육':'3a','연구·R&D':'6a','연금':'4a','예산·재정':'6b','의료관련감염·항생제내성':'1c','의료인력':'2a','의약품·마약류':'5a','장애인':'3a','저출산·모자보건':'3b','정보시스템·데이터':'6a','정신건강·자살':'4b','조직·인력':'6a','지역·돌봄체계':'4b','처우·노무':'6b','통계·실태조사':'6b','필수·지역의료':'2b','호흡기감염병':'1b','홍보·교육':'8b'};
+  function fkeyCls(k){ return 'fkey k'+(FKEY_FAM[k]||'6a'); }
+  // 분류 근거가 한 단어뿐인 건(전체의 절반)을 확실한 분류와 똑같이 선명하게 보여주면
+  // 오분류 하나가 사이트 전체의 신뢰를 깎는다. 약한 건 회색 '추정'으로 낮춘다.
+  // 지적사항을 지목할 이름. 클릭하면 그 건으로 바로 가는 주소가 된다.
+  function fnoTag(i){
+    return i.id ? '<a class="fno" href="#'+i.id+'" title="이 지적사항 링크">'+i.id+'</a> ' : '';
+  }
+  function fkeyTag(i){
+    // 분류 없음도 빈칸 대신 밝힌다 — 빈칸은 '빠뜨린 것'으로 읽힌다
+    if(!i.key) return '<span class="fkey est" title="주제·성격 키워드가 없는 문장">미분류</span> ';
+    // esc()가 IIFE 안에만 있는 페이지가 있어 여기서는 자체 처리한다
+    var t = String(i.key).replace(/[&<>"]/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; });
+    var low = i.key_conf === 'low';
+    return '<span class="'+(low?'fkey est':fkeyCls(i.key))+'">'+t+
+           (low?'<i>추정</i>':'')+'</span> ';
+  }
+  function fkey2Tag(i){
+    if(!i.key2) return '';
+    var t = String(i.key2).replace(/[&<>"]/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; });
+    return '<span class="fkey2" title="다른 축 — 주제 분류엔 요구 성격, 성격 분류엔 주제 (키워드 기반)">'+t+'</span> ';
+  }
+
 (function(){
   var esc=function(s){ return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); };
   var QA=[], MEMBERS={}, SHOWN=30, CACHE={};
@@ -188,6 +252,26 @@
   document.getElementById('fQuery').addEventListener('input', function(){ state.q=this.value.trim(); SHOWN=30; render(); });
   document.getElementById('moreBtn').addEventListener('click', function(){ SHOWN+=30; render(); });
 })();
+  // esc()는 위 즉시실행함수 안에만 있어 여기서 못 쓴다 — 자체 처리 (오류가 catch에 삼켜져 빈 화면이 되는 것 방지)
+  var escF=function(x){ return String(x||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); };
+  // 시정·처리요구 (결과보고서) — 최신 연도 우선
+  fetch('data/gukgam/findings-2025.json?_='+Date.now()).then(function(r){ if(!r.ok) throw 0; return r.json(); })
+    .catch(function(){ return fetch('data/gukgam/findings-2024.json?_='+Date.now()).then(function(r){return r.json();}); })
+    .then(function(d){
+    var rows=(d.items||[]).filter(function(i){ return i.agency==='보건복지부'; });
+    var box=document.getElementById('findList');
+    if(!rows.length){ box.innerHTML='<div class="empty">추출된 항목이 없습니다.</div>'; return; }
+    box.innerHTML='<div class="qa" style="border-left-color:#a03030;"><div class="who"><span class="nm">'+d.year+'년 결과보고서 — 보건복지부 소관 '+rows.length+'건</span>'+
+      '<a class="badge" style="text-decoration:none;" href="'+escF(d.source_pdf)+'" target="_blank" rel="noopener">원문 PDF ↗</a></div>'+
+      '<div class="fleg"><b>분류 색</b><span class="fkey k1a">감염병 계열</span><span class="fkey k2a">의료체계</span><span class="fkey k3a">돌봄·생애주기</span><span class="fkey k4a">소득·안전망</span><span class="fkey k5a">의약품·식품</span><span class="fkey k6a">기관운영·연구</span><span class="fkey k7a">관리·제도</span><span class="fkey k8a">사업·홍보</span><span class="fkey est">추정<i>?</i></span><span class="fkey2">성격</span><span style="color:var(--muted);">회색은 근거가 한 단어뿐인 추정 분류 · 점선 배지는 다른 축입니다 — 주제 분류엔 요구 성격(예산·재정 등)을, 성격 분류(예산·재정 등)엔 주제를 붙입니다</span></div>'+
+      '<ul style="margin:6px 0 0;padding-left:20px;font-size:.88rem;">'+
+      rows.slice(0,50).map(function(i){
+        var lead=fkeyTag(i)+fkey2Tag(i);
+        var act=i.act?' <span class="fact">'+escF(i.act)+'</span>':'';
+        return '<li id="'+(i.id||'')+'" style="padding:3px 0;line-height:1.6;">'+fnoTag(i)+lead+escF(i.text)+act+(i.dept?' <span class="badge">'+escF(i.dept)+'</span>':'')+'</li>';
+      }).join('')+
+      '</ul>'+(rows.length>50?'<div style="font-size:.8rem;color:var(--muted);margin-top:6px;">외 '+(rows.length-50)+'건 — 답변 워크북에서 전체 확인</div>':'')+'</div>';
+  }).catch(function(){});
 </script>
 </body>
 </html>
