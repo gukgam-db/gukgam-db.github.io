@@ -83,14 +83,13 @@
     <h1>🦠 코로나19·팬데믹 대비 — 질병청 국감 5년 기록</h1>
     <p>2020~2025년 질병관리청 국정감사에서 <strong>코로나19 관련 질의·답변·지적사항만</strong> 모아, 질문이 어떻게 옮겨갔고 무엇이 아직 살아있는지 정리했습니다. 2026 국감의 코로나 질의는 “그때 뭐 했나”가 아니라 <strong>“5년 지났는데 준비됐나”</strong>로 나옵니다.</p>
     <div class="top-nav">
-      <a href="gukgam.html">통합 DB</a>
-      <a href="gukgam-health.html">보건복지 트랙</a>
-      <a href="gukgam-mohw.html">복지부 Q&A</a>
-      <a href="gukgam-kdca.html">질병청 Q&A</a>
-      <a href="gukgam-covid.html" class="on">코로나19 5년</a>
-      <a href="gukgam-mfds.html">식약처 Q&A</a>
-      <a href="gukgam-prep.html">답변 워크북</a>
-      <a href="gukgam-guide.html">의원별 가이드북</a>
+      <a href="gukgam.html">홈</a>
+      <a href="gukgam-2025.html">2025 국감</a>
+      <a href="gukgam-mohw.html">복지부</a>
+      <a href="gukgam-kdca.html">질병청</a>
+      <a href="gukgam-mfds.html">식약처</a>
+      <a href="gukgam-covid.html" class="on">코로나19</a>
+      <a href="gukgam-all.html">전체 자료·도구</a>
     </div>
     <div class="unofficial-note" style="font-size:.74rem;color:rgba(255,255,255,.82);margin:8px 2px 0;">개인이 만든 <b>비공식 참고자료</b>입니다 — 국회·보건복지부·질병관리청·식품의약품안전처 등 어떤 기관의 공식 사이트도 아니며, 모든 자료의 원 출처는 대한민국 국회(열린국회정보·회의록·결과보고서)입니다.</div>
     <div class="notice">코로나 관련 여부와 세부 주제는 키워드로 자동 판별한 것입니다. ‘코로나·COVID’가 직접 나오면 확실, 팬데믹·거리두기·격리 등 주변어만 있으면 <b>추정</b>으로 표시합니다. 인용 전 회의록 원문을 확인하세요.</div>
@@ -101,7 +100,7 @@
   <div class="stats" id="stats"></div>
 
   <h2>📈 5년의 흐름 — 질문이 어디로 옮겨갔나</h2>
-  <p class="sub">막대는 그해 질병청 국감 질의 중 코로나 관련 비중. 주제는 그해 상위 2개(키워드 자동 분류).</p>
+  <p class="sub">막대는 그해 질병청 국감 질의 중 코로나 관련 비중(막대 전체 = 100%). 주제는 그해 상위 2개(키워드 자동 분류).</p>
   <div class="card" id="years"></div>
 
   <h2>🔥 아직 살아있는 질문 — 최근 결과보고서의 코로나 관련 지적</h2>
@@ -149,13 +148,17 @@
     ].map(function(x){ return '<div class="stat"><div class="n">'+x[0]+'</div><div class="l">'+x[1]+'</div></div>'; }).join('');
   }
   function renderYears(){
-    var mx=Math.max.apply(null,D.years.map(function(y){ return y.share||0; }))||1;
+    // 막대 폭 = 비중 그대로 (트랙 전체가 100%). 최대 연도를 100%로 늘리면 35%가 꽉 찬 것처럼 보인다
     document.getElementById('years').innerHTML=D.years.map(function(y){
-      var w=Math.round(100*(y.share||0)/mx);
+      var w=Math.max(1, Math.round(100*(y.share||0)));
       var s=(y.samples||[]).map(function(p){
         return '<div class="smp"><span class="who">'+esc(p.member)+' 위원</span> <span class="badge tp">'+esc(p.theme)+'</span> '+confTag(p.conf)+
           '<div>'+esc(p.q)+'</div>'+(p.url?'<a href="'+esc(p.url)+'" target="_blank" rel="noopener" style="font-size:.76rem;color:#2a4d7d;font-weight:800;">회의록 원문 ↗</a>':'')+'</div>';
-      }).join('');
+      }).join('')+
+      '<div style="font-size:.74rem;color:var(--muted);margin:10px 2px 0;border-top:1px dashed var(--line);padding-top:6px;">'+
+      '<b>산출 근거</b> — 비중 = 그해 질병관리청 질의·답변 중 코로나 관련 건수 ÷ 그해 질병관리청 질의·답변 전체 건수(100%). '+
+      '코로나 관련 여부는 회의록 문장의 키워드(코로나·COVID·백신 접종 등)로 자동 판정하며 확실/추정을 구분해 표시합니다. '+
+      '자료: 국회 국정감사 회의록(열린국회정보 공개 API) 자동 추출 — 공식 통계가 아닙니다.</div>';
       return '<div class="yr"><div class="y">'+esc(y.year)+'</div>'+
         '<div><div class="bar" title="'+esc(y.year)+'년 코로나 관련 '+y.n+'건 / 전체 '+y.total+'건"><i style="width:'+w+'%"></i></div>'+
         '<div class="v"><b>'+y.n+'건</b> / '+y.total+'건 · 비중 '+pct(y.share)+'</div>'+

@@ -17,6 +17,9 @@ on:
 permissions:
   contents: write
 
+env:
+  PYTHONUNBUFFERED: "1"   # 진행 로그가 실시간으로 보이게 (버퍼링되면 6시간 뒤 취소돼도 어디서 멈췄는지 모른다)
+
 jobs:
   build:
     runs-on: ubuntu-24.04
@@ -61,7 +64,12 @@ jobs:
         run: python3 scripts/gukgam/build_kdca_qa.py
 
       - name: 위원 발언 전체 색인 (답변 미연결 발언 포함, 증분)
+        timeout-minutes: 100      # 국회 PDF 서버가 멎은 날 6시간을 통째로 잃지 않게 — 빌더는 끝에서만 파일을 쓰므로 중단돼도 기존 색인은 그대로
+        continue-on-error: true
         run: python3 scripts/gukgam/build_remarks.py
+
+      - name: 역대 보건복지위 위원 명단 (국감 연도별, 회의록 발언 기준)
+        run: python3 scripts/gukgam/build_rosters.py
 
       - name: 코로나19 5년 기록 집계 (질병청 Q&A·지적사항)
         run: python3 scripts/gukgam/build_covid.py

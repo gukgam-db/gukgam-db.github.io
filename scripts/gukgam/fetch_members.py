@@ -64,6 +64,19 @@ def main():
         page += 1
         time.sleep(0.6)
     cur = [r for r in rows if ERA in (r.get("GTELT_ERACO") or "")]
+    # 역대 명단용: 보건복지위 소속 이력이 있는 의원 전체(약 250명) — 정당·지역구·사진·당선 대수만
+    if rows:
+        allout = os.path.join(os.path.dirname(OUT), "members-all.json")
+        allitems = [{"name": r.get("NAAS_NM") or "", "hanja": r.get("NAAS_CH_NM") or "",
+                     "party": last(r.get("PLPT_NM")), "parties": r.get("PLPT_NM") or "",
+                     "elecd": last(r.get("ELECD_NM")), "rlct": r.get("RLCT_DIV_NM") or "",
+                     "eras": r.get("GTELT_ERACO") or "", "photo": r.get("NAAS_PIC") or ""} for r in rows]
+        allitems.sort(key=lambda x: x["name"])
+        with open(allout, "w", encoding="utf-8") as f:
+            json.dump({"updated": datetime.date.today().isoformat(), "committee": COMMITTEE,
+                       "note": f"{COMMITTEE} 소속 이력이 있는 역대 의원 — 열린국회정보 ALLNAMEMBER. 어느 대수에 소속이었는지는 API가 주지 않아 국감 회의록 발언으로 연도를 가른다.",
+                       "items": allitems}, f, ensure_ascii=False, indent=1)
+        print(f"members-all.json: {len(allitems)}명")
     items = []
     for r in cur:
         items.append({

@@ -125,6 +125,21 @@ def terms_of(items, global_freq, global_total):
     return [{"w": w, "c": c} for w, c, _ in scored[:10]]
 
 
+def member_tags(m, items, rank):
+    """카드 배지 목록: 역할(위원장·간사)이 있으면 먼저, 그 뒤에 성향 표식 1개.
+    위원장이 첫 국감이면 '위원장'과 '첫 국감'이 나란히 붙는다 — 역할이 성향을 가리지 않게."""
+    out = []
+    duty = m.get("duty") or ""
+    if "위원장" in duty:
+        out.append({"label": "👑 위원장", "cls": "chair"})
+    elif "간사" in duty:
+        out.append({"label": "⭐ 간사", "cls": "whip"})
+    t = member_tag(dict(m, duty=""), items, rank)
+    if t:
+        out.append(t)
+    return out
+
+
 def member_tag(m, items, rank):
     """카드 우측 상단 구별 배지 (위원당 1개, 우선순위순). cls는 페이지 CSS 클래스."""
     duty = m.get("duty") or ""
@@ -223,6 +238,7 @@ def main():
             "style": style_of(items) if items else None,
             "terms": terms_of(items, global_freq, global_total) if items else [],
             "tag": member_tag(m, items, rank_of.get(name)),
+            "tags": member_tags(m, items, rank_of.get(name)),
         })
     guides.sort(key=lambda g: -g["stats"]["n"])
     with open(OUT, "w", encoding="utf-8") as f:
