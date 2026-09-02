@@ -942,7 +942,9 @@
       // Q&A
       var qa=d.qa.filter(function(i){ return hit(i.q+' '+(i.a||'')+' '+i.member); });
       if(qa.length){
-        qa.sort(function(a,b){ return b.date<a.date?-1:1; });
+        // 위원 이름으로 찾으면 그 위원 본인의 질의를 먼저, 그 다음 최신순 (본문에 이름만 언급된 건이 위로 오지 않게)
+        var ql=q.toLowerCase();
+        qa.sort(function(a,b){ var am=((a.member||'').toLowerCase()===ql)?0:1, bm=((b.member||'').toLowerCase()===ql)?0:1; if(am!==bm) return am-bm; return b.date<a.date?-1:1; });
         html+='<div class="gs-group"><h4>💬 질의·답변 '+qa.length+'건 <a href="gukgam-mohw.html">복지부 →</a><a href="gukgam-kdca.html">질병청 →</a></h4>'+
           qa.slice(0,8).map(function(i){
             return '<div class="gs-item">'+hl(i.q+' '+(i.a||''), q1, 55)+
@@ -973,6 +975,10 @@
   }
   document.getElementById('gsBtn').addEventListener('click', run);
   document.getElementById('gsInput').addEventListener('keydown', function(e){ if(e.key==='Enter') run(); });
+  // 휴대폰 자판은 Enter 대신 '검색' 키를 누르거나 아예 안 누르는 경우가 많다 → 타자 중 자동 검색(0.4초 디바운스) + search 이벤트
+  var gsTimer=null;
+  document.getElementById('gsInput').addEventListener('input', function(){ clearTimeout(gsTimer); var v=this.value.trim(); if(v.length<2){ return; } gsTimer=setTimeout(run, 400); });
+  document.getElementById('gsInput').addEventListener('search', run);
 })();
 </script>
 <footer class="site-credit" style="max-width:1100px;margin:6px auto 30px;padding:0 18px;font-size:.76rem;color:#5f6e80;text-align:right;">ⓒ <b>지음웍스닷컴</b> · 2026년 9월</footer>
