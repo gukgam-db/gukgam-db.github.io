@@ -19,7 +19,22 @@
   .top-nav a.on, .top-nav a:hover{ background:rgba(255,255,255,.3); }
   .notice{ background:#fff8e6; border:1px solid #f0dfae; border-radius:10px; padding:10px 14px; font-size:.85rem; margin:14px 0 0; color:#5c4a15; }
   .wrap{ max-width:1100px; margin:0 auto; padding:20px 18px 60px; display:grid; grid-template-columns:250px 1fr; gap:18px; align-items:start; }
-  @media(max-width:840px){ .wrap{ grid-template-columns:1fr; } }
+  @media(max-width:840px){
+    .wrap{ grid-template-columns:1fr; gap:12px; padding:14px 12px 50px; }
+    /* 휴대폰에서는 27명 세로 목록이 화면을 다 차지해 상세가 밀려난다 → 가로로 미는 칩 띠로 */
+    .roster{ position:static !important; max-height:none !important; padding:8px 8px 4px; }
+    .roster .r-note{ font-size:.68rem !important; padding:0 4px 6px !important; margin-bottom:6px !important; }
+    .roster .r-list{ display:flex; gap:6px; overflow-x:auto; padding-bottom:6px; -webkit-overflow-scrolling:touch; scroll-snap-type:x proximity; }
+    .roster .r-item{ flex:0 0 auto; flex-direction:column; align-items:center; gap:3px; padding:6px 7px; min-width:66px; text-align:center; scroll-snap-align:start; }
+    .roster .r-item img{ width:34px; height:42px; }
+    .roster .r-item .rn{ font-size:.8rem; line-height:1.2; }
+    .roster .r-item .rp{ display:none; }
+    .roster .r-item .rc{ margin-left:0; font-size:.66rem; }
+    .brief{ padding:14px 14px 18px; border-radius:12px; }
+    .b-head{ gap:12px; }
+    .b-head img{ width:64px; height:82px; }
+    .b-head h2{ font-size:1.25rem; }
+  }
   .roster{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:10px; max-height:80vh; overflow-y:auto; position:sticky; top:12px; min-width:0; }
   .wrap>*{ min-width:0; }
   .r-item{ display:flex; gap:9px; align-items:center; padding:7px 9px; border-radius:9px; cursor:pointer; }
@@ -107,15 +122,15 @@
 
   function renderRoster(){
     document.getElementById('roster').innerHTML=
-      '<div style="font-size:.7rem;color:#5f6e80;padding:4px 9px 8px;line-height:1.5;border-bottom:1px solid #e3e9f0;margin-bottom:6px;">'+
+      '<div class="r-note" style="font-size:.7rem;color:#5f6e80;padding:4px 9px 8px;line-height:1.5;border-bottom:1px solid #e3e9f0;margin-bottom:6px;">'+
       '숫자 = <b>2020~2025년(제21~22대) 국감</b> 복지부·질병청 질의 수.<br><b>신규</b> = 2026년 사보임으로 새로 온 위원 (올해가 복지위 국감 첫 출석 — 과거 발언 기록 없음).</div>'+
-      G.map(function(g,i){
+      '<div class="r-list">'+G.map(function(g,i){
       return '<div class="r-item'+(cur===i?' on':'')+'" data-i="'+i+'">'+
         (g.photo?'<img src="'+esc(g.photo)+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">':'')+
         '<div><div class="rn">'+esc(g.name)+'</div><div class="rp">'+esc(g.party)+(g.duty?' · '+esc(g.duty):'')+'</div></div>'+
         (g.stats.n?'<span class="rc">'+g.stats.n+'</span>':'<span class="rc" style="background:#fdeee3;color:#a35b1e;border-radius:7px;padding:1px 7px;opacity:1;">신규</span>')+
         '</div>';
-    }).join('');
+    }).join('')+'</div>';
   }
   function renderBrief(i){
     cur=i; renderRoster();
@@ -234,6 +249,11 @@
   document.getElementById('roster').addEventListener('click', function(e){
     var it=e.target.closest('.r-item'); if(!it) return;
     renderBrief(+it.dataset.i);
+    if(window.innerWidth<=840){
+      // 목록이 위에 놓이는 휴대폰 레이아웃: 누른 의원의 상세가 바로 보이게 한다
+      var sel=document.querySelector('.r-item.on'); if(sel&&sel.scrollIntoView) sel.scrollIntoView({inline:'center',block:'nearest'});
+      var b=document.getElementById('brief'); if(b) setTimeout(function(){ b.scrollIntoView({behavior:'smooth',block:'start'}); }, 30);
+    }
   });
 })();
 </script>
