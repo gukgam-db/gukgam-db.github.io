@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>코로나19·팬데믹 대비 국감 5년 기록</title>
+<meta name="description" content="질병관리청 국정감사 5년(2020~2025)의 코로나19 질의·답변·지적사항만 모아 질문이 어떻게 옮겨갔는지, 아직 살아있는 질문은 무엇인지 정리했습니다.">
+<style>
+  :root{ --navy:#12365f; --line:#e3e9f0; --muted:#5f6e80; --bg:#f5f7fa; --teal:#0e5f63; --chip:#eef3f8; --bar:#0e5f63; --barlt:#cfe6e7; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif; background:var(--bg); color:#22303e; line-height:1.6; }
+  a{ color:inherit; }
+  .top{ background:var(--teal); color:#fff; padding:26px 18px 22px; }
+  .top-inner{ max-width:1000px; margin:0 auto; }
+  .top h1{ margin:0 0 6px; font-size:1.5rem; }
+  .top p{ margin:0; font-size:.92rem; opacity:.9; }
+  .top-nav{ margin-top:12px; display:flex; gap:8px; flex-wrap:wrap; }
+  .top-nav a{ color:#fff; text-decoration:none; font-size:.85rem; font-weight:700; background:rgba(255,255,255,.16); border-radius:20px; padding:6px 14px; }
+  .top-nav a.on, .top-nav a:hover{ background:rgba(255,255,255,.3); }
+  .notice{ background:#fff8e6; border:1px solid #f0dfae; border-radius:10px; padding:10px 14px; font-size:.85rem; margin:14px 0 0; color:#5c4a15; }
+  .wrap{ max-width:1000px; margin:0 auto; padding:20px 18px 40px; }
+  h2{ font-size:1.1rem; color:var(--navy); margin:30px 0 6px; }
+  .sub{ font-size:.82rem; color:var(--muted); margin:0 0 12px; }
+  .stats{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:16px 0; }
+  .stat{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:13px 16px; }
+  .stat .n{ font-size:1.4rem; font-weight:800; color:var(--teal); line-height:1.2; }
+  .stat .l{ font-size:.78rem; color:var(--muted); margin-top:4px; }
+  .card{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px 18px; margin-bottom:10px; }
+  /* 연도별 흐름 — 단일 색조 막대, 값은 글자로 직접 표기 */
+  .yr{ display:grid; grid-template-columns:56px 1fr; gap:10px 14px; align-items:center; padding:8px 0; border-bottom:1px solid var(--line); }
+  .yr:last-child{ border-bottom:0; }
+  .yr .y{ font-weight:800; color:var(--navy); font-size:1rem; }
+  .yr .bar{ height:10px; background:#eef2f6; border-radius:4px; overflow:hidden; }
+  .yr .bar i{ display:block; height:100%; background:var(--bar); border-radius:4px; }
+  .yr .v{ font-size:.82rem; color:#22303e; font-variant-numeric:tabular-nums; margin-top:3px; }
+  .yr .v b{ color:var(--teal); }
+  .yr .lb{ font-size:.8rem; color:var(--muted); }
+  .yr details{ grid-column:1 / -1; margin:2px 0 4px; }
+  .yr summary{ cursor:pointer; font-size:.8rem; color:#2a4d7d; font-weight:700; }
+  .smp{ font-size:.85rem; padding:6px 0 4px 10px; border-left:3px solid var(--barlt); margin:6px 0; }
+  .smp .who{ font-weight:800; color:var(--navy); font-size:.8rem; }
+  .badge{ border-radius:9px; padding:1px 9px; font-size:.72rem; font-weight:800; background:var(--chip); color:#3d4f63; white-space:nowrap; }
+  .badge.tp{ background:#e6f2f2; color:#0e5f63; }
+  .badge.est{ background:#f1f3f5; color:#5a6673; }
+  .badge.pty{ background:#f1f5fa; }
+  .fno{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.72rem; color:#5a6673; background:#f5f7fa; border:1px solid var(--line); border-radius:5px; padding:0 5px; margin-right:6px; white-space:nowrap; }
+  .fact{ font-size:.72rem; font-weight:800; border-radius:6px; padding:1px 7px; margin-left:6px; background:#f1f3f5; color:#5a6673; white-space:nowrap; }
+  .live li{ padding:5px 0; line-height:1.6; font-size:.88rem; }
+  .rep{ margin-bottom:8px; }
+  .rep .th{ font-weight:800; color:var(--navy); }
+  .rep .ys{ font-size:.76rem; color:var(--muted); margin-left:6px; }
+  .rep .ex{ font-size:.84rem; padding:4px 0 4px 10px; border-left:3px solid var(--barlt); margin:5px 0; }
+  .rep .ex b{ color:var(--teal); font-size:.78rem; margin-right:6px; }
+  .mem{ display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:10px; }
+  .mem .m{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 14px; }
+  .mem .m .nm{ font-weight:800; color:var(--navy); }
+  .mem .m .cnt{ font-size:.8rem; color:var(--muted); margin:2px 0 6px; }
+  .mem .m .lq{ font-size:.8rem; color:#3d4f63; border-top:1px dashed var(--line); padding-top:6px; margin-top:6px; }
+  .filters{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 14px; display:flex; gap:10px; flex-wrap:wrap; align-items:center; position:sticky; top:0; z-index:5; box-shadow:0 2px 8px rgba(0,0,0,.04); }
+  .filters select{ border:1px solid var(--line); border-radius:8px; padding:8px 10px; font-size:.9rem; background:#fff; }
+  .filters input[type=search]{ flex:1; min-width:160px; border:1px solid var(--line); border-radius:8px; padding:8px 10px; font-size:.9rem; }
+  .filters label{ font-size:.82rem; color:var(--muted); display:flex; align-items:center; gap:4px; }
+  .qa{ background:#fff; border:1px solid var(--line); border-left:5px solid var(--teal); border-radius:12px; padding:14px 18px; margin-bottom:12px; }
+  .qa .who{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-bottom:8px; }
+  .qa .who .nm{ font-weight:800; color:var(--navy); }
+  .qa .q{ font-size:.92rem; }
+  .qa .q::before{ content:"Q. "; font-weight:900; color:#a03030; }
+  .qa .a{ margin-top:8px; font-size:.92rem; background:#f2f8f8; border-radius:10px; padding:9px 12px; }
+  .qa .a::before{ content:"A. (청장) "; font-weight:900; color:var(--teal); }
+  .qa .src{ margin-top:8px; font-size:.75rem; }
+  .qa .src a{ color:#2a4d7d; font-weight:800; }
+  .empty{ text-align:center; color:var(--muted); padding:36px 0; background:#fff; border:1px dashed var(--line); border-radius:12px; }
+  .more{ display:block; margin:14px auto 0; border:1px solid var(--line); background:#fff; border-radius:10px; padding:10px 26px; font-size:.9rem; font-weight:700; cursor:pointer; color:#2a4d7d; }
+  .foot{ font-size:.78rem; color:var(--muted); margin-top:26px; }
+  @media(max-width:600px){ .yr{ grid-template-columns:48px 1fr; } .top h1{ font-size:1.25rem; } }
+  @media print{ .filters,.more,.top-nav{ display:none !important; } .qa,.card{ break-inside:avoid; } }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="top-inner">
+    <h1>🦠 코로나19·팬데믹 대비 — 질병청 국감 5년 기록</h1>
+    <p>2020~2025년 질병관리청 국정감사에서 <strong>코로나19 관련 질의·답변·지적사항만</strong> 모아, 질문이 어떻게 옮겨갔고 무엇이 아직 살아있는지 정리했습니다. 2026 국감의 코로나 질의는 “그때 뭐 했나”가 아니라 <strong>“5년 지났는데 준비됐나”</strong>로 나옵니다.</p>
+    <div class="top-nav">
+      <a href="gukgam.html">통합 DB</a>
+      <a href="gukgam-health.html">보건복지 트랙</a>
+      <a href="gukgam-mohw.html">복지부 Q&A</a>
+      <a href="gukgam-kdca.html">질병청 Q&A</a>
+      <a href="gukgam-covid.html" class="on">코로나19 5년</a>
+      <a href="gukgam-mfds.html">식약처 Q&A</a>
+      <a href="gukgam-prep.html">답변 워크북</a>
+      <a href="gukgam-guide.html">의원별 가이드북</a>
+    </div>
+    <div class="unofficial-note" style="font-size:.74rem;color:rgba(255,255,255,.82);margin:8px 2px 0;">개인이 만든 <b>비공식 참고자료</b>입니다 — 국회·보건복지부·질병관리청·식품의약품안전처 등 어떤 기관의 공식 사이트도 아니며, 모든 자료의 원 출처는 대한민국 국회(열린국회정보·회의록·결과보고서)입니다.</div>
+    <div class="notice">코로나 관련 여부와 세부 주제는 키워드로 자동 판별한 것입니다. ‘코로나·COVID’가 직접 나오면 확실, 팬데믹·거리두기·격리 등 주변어만 있으면 <b>추정</b>으로 표시합니다. 인용 전 회의록 원문을 확인하세요.</div>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="stats" id="stats"></div>
+
+  <h2>📈 5년의 흐름 — 질문이 어디로 옮겨갔나</h2>
+  <p class="sub">막대는 그해 질병청 국감 질의 중 코로나 관련 비중. 주제는 그해 상위 2개(키워드 자동 분류).</p>
+  <div class="card" id="years"></div>
+
+  <h2>🔥 아직 살아있는 질문 — 최근 결과보고서의 코로나 관련 지적</h2>
+  <p class="sub">위원회가 공식으로 시정·처리를 요구한 항목입니다. 이행 답변이 필요한 것들이라 올해 다시 나옵니다.</p>
+  <div class="card"><ul class="live" id="live" style="margin:0;padding-left:18px;"></ul></div>
+
+  <h2>🔁 5년 내내 반복된 질문</h2>
+  <p class="sub">3개 연도 이상 같은 주제로 나온 질의 — 연도별 대표 질의 한 건씩. “올해도 나온다”는 신호입니다.</p>
+  <div class="card" id="repeats"></div>
+
+  <h2>🧑‍⚖️ 코로나를 물었던 현 위원</h2>
+  <p class="sub">현 보건복지위 위원 중 코로나 질의 이력이 있는 분만. 막대 대신 건수와 최근 질의를 그대로 보입니다.</p>
+  <div class="mem" id="members"></div>
+
+  <h2>📚 코로나 Q&A 전체</h2>
+  <div class="filters">
+    <select id="fYear" aria-label="연도 필터"><option value="">전체 연도</option></select>
+    <select id="fTheme" aria-label="세부 주제 필터"><option value="">전체 주제</option></select>
+    <select id="fMember" aria-label="위원 필터"><option value="">전체 위원</option></select>
+    <input id="fQuery" type="search" aria-label="키워드 검색" placeholder="키워드 검색 (예: 백신 폐기, 피해보상, 병상)">
+    <label><input type="checkbox" id="fHigh"> 확실만</label>
+    <span id="count" style="font-size:.82rem;color:var(--muted);"></span>
+  </div>
+  <div id="list" style="margin-top:12px;"></div>
+  <button class="more" id="moreBtn" hidden>더 보기</button>
+
+  <p class="foot" id="foot">출처: 국회회의록시스템(국정감사 회의록) · 열린국회정보 국정감사 결과보고서 — 원문 링크를 제공하며 저작권은 대한민국 국회에 있습니다(공공누리 출처표시). 코로나 판별·세부 주제는 자동 분류이며 갱신일은 데이터 파일 기준입니다.</p>
+</main>
+
+<script>
+(function(){
+  var esc=function(s){ return String(s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); };
+  var D=null, state={year:'',theme:'',member:'',q:'',high:false}, SHOWN=30;
+  function confTag(c){ return c==='low' ? '<span class="badge est" title="코로나 직접 언급 없이 주변어(팬데믹·격리 등)로 판별">추정</span>' : ''; }
+  function pct(x){ return Math.round(100*(x||0))+'%'; }
+
+  function renderStats(){
+    var k=D.kpi;
+    document.getElementById('stats').innerHTML=[
+      ['<span style="font-size:1rem;">'+k.qa_n.toLocaleString()+'</span><span style="font-size:.9rem;font-weight:600;color:var(--muted);"> / '+k.qa_all.toLocaleString()+'건</span>', '코로나 관련 Q&A / 질병청 전체 ('+pct(k.qa_n/k.qa_all)+')'],
+      [k.qa_high+'<span style="font-size:.9rem;font-weight:600;color:var(--muted);"> 확실 · '+(k.qa_n-k.qa_high)+' 추정</span>', '판별 근거 강도'],
+      [k.peak_year+'년 '+pct(k.peak_share)+' → '+k.latest_year+'년 '+pct(k.latest_share), '코로나 질의 비중의 정점과 지금'],
+      [k.live_n+'건', '최근 2개 연도 결과보고서의 코로나 관련 지적'],
+      [k.members_n+'명', '현 위원 중 코로나 질의 이력'],
+    ].map(function(x){ return '<div class="stat"><div class="n">'+x[0]+'</div><div class="l">'+x[1]+'</div></div>'; }).join('');
+  }
+  function renderYears(){
+    var mx=Math.max.apply(null,D.years.map(function(y){ return y.share||0; }))||1;
+    document.getElementById('years').innerHTML=D.years.map(function(y){
+      var w=Math.round(100*(y.share||0)/mx);
+      var s=(y.samples||[]).map(function(p){
+        return '<div class="smp"><span class="who">'+esc(p.member)+' 위원</span> <span class="badge tp">'+esc(p.theme)+'</span> '+confTag(p.conf)+
+          '<div>'+esc(p.q)+'</div>'+(p.url?'<a href="'+esc(p.url)+'" target="_blank" rel="noopener" style="font-size:.76rem;color:#2a4d7d;font-weight:800;">회의록 원문 ↗</a>':'')+'</div>';
+      }).join('');
+      return '<div class="yr"><div class="y">'+esc(y.year)+'</div>'+
+        '<div><div class="bar" title="'+esc(y.year)+'년 코로나 관련 '+y.n+'건 / 전체 '+y.total+'건"><i style="width:'+w+'%"></i></div>'+
+        '<div class="v"><b>'+y.n+'건</b> / '+y.total+'건 · 비중 '+pct(y.share)+'</div>'+
+        '<div class="lb">'+esc(y.label)+'</div></div>'+
+        (s?'<details><summary>대표 질의 '+y.samples.length+'건 보기</summary>'+s+'</details>':'')+
+        '</div>';
+    }).join('');
+  }
+  function renderLive(){
+    var el=document.getElementById('live');
+    if(!D.live.length){ el.innerHTML='<li style="list-style:none;color:var(--muted);">해당 항목 없음</li>'; return; }
+    var by={}; D.live.forEach(function(i){ (by[i.theme]=by[i.theme]||[]).push(i); });
+    el.innerHTML=Object.keys(by).map(function(t){
+      return '<li style="list-style:none;margin:6px 0 2px;"><span class="badge tp">'+esc(t)+'</span> <span style="font-size:.76rem;color:var(--muted);">'+by[t].length+'건</span></li>'+
+        by[t].map(function(i){
+          return '<li><span class="fno">'+esc(i.id)+'</span>'+esc(i.text)+(i.act?'<span class="fact">'+esc(i.act)+'</span>':'')+
+            (i.dept?' <span class="badge">'+esc(i.dept)+'</span>':'')+' '+confTag(i.conf)+'</li>';
+        }).join('');
+    }).join('');
+  }
+  function renderRepeats(){
+    document.getElementById('repeats').innerHTML=D.repeats.map(function(r){
+      return '<div class="rep"><span class="th">'+esc(r.theme)+'</span><span class="ys">'+r.n+'건 · '+r.years.join('·')+'</span>'+
+        '<details><summary style="cursor:pointer;font-size:.8rem;color:#2a4d7d;font-weight:700;">연도별 대표 질의</summary>'+
+        r.examples.map(function(e){ return '<div class="ex"><b>'+esc(e.year)+'</b>'+esc(e.member)+' 위원 — '+esc(e.q)+
+          (e.url?' <a href="'+esc(e.url)+'" target="_blank" rel="noopener" style="font-size:.74rem;color:#2a4d7d;font-weight:800;">원문 ↗</a>':'')+'</div>'; }).join('')+
+        '</details></div>';
+    }).join('') || '<div style="color:var(--muted);">3개 연도 이상 반복된 주제 없음</div>';
+  }
+  function renderMembers(){
+    document.getElementById('members').innerHTML=D.members.map(function(m){
+      return '<div class="m"><div class="nm">'+esc(m.name)+' <span class="badge pty">'+esc(m.party||'')+'</span>'+(m.duty?' <span class="badge">'+esc(m.duty)+'</span>':'')+'</div>'+
+        '<div class="cnt">코로나 질의 '+m.n+'회 · 2024년 이후 '+m.recent+'회 · '+m.years.join('·')+'</div>'+
+        '<div>'+(m.themes||[]).map(function(t){ return '<span class="badge tp">'+esc(t)+'</span> '; }).join('')+'</div>'+
+        '<div class="lq">최근('+esc(m.last.year)+'): '+esc(m.last.q)+(m.last.url?' <a href="'+esc(m.last.url)+'" target="_blank" rel="noopener" style="font-weight:800;color:#2a4d7d;">↗</a>':'')+'</div></div>';
+    }).join('') || '<div class="empty">현 위원 중 코로나 질의 이력이 없습니다.</div>';
+  }
+  function filtered(){
+    var q=state.q.toLowerCase();
+    return D.items.filter(function(i){
+      if(state.year && i.year!==state.year) return false;
+      if(state.theme && i.theme!==state.theme) return false;
+      if(state.member && i.member!==state.member) return false;
+      if(state.high && i.conf!=='high') return false;
+      if(q && ((i.q||'')+' '+(i.a||'')+' '+(i.member||'')).toLowerCase().indexOf(q)<0) return false;
+      return true;
+    });
+  }
+  function renderList(){
+    var rows=filtered(); rows=rows.slice().reverse();
+    document.getElementById('count').textContent='조건 일치 '+rows.length+'건';
+    var box=document.getElementById('list');
+    if(!rows.length){ box.innerHTML='<div class="empty">조건에 맞는 질의가 없습니다.</div>'; document.getElementById('moreBtn').hidden=true; return; }
+    box.innerHTML=rows.slice(0,SHOWN).map(function(i){
+      return '<div class="qa"><div class="who"><span class="nm">'+esc(i.member)+' 위원</span>'+(i.party?'<span class="badge pty">'+esc(i.party)+'</span>':'')+
+        '<span class="badge">'+esc(i.year)+(i.date?' · '+esc(i.date):'')+'</span><span class="badge tp">'+esc(i.theme)+'</span>'+confTag(i.conf)+'</div>'+
+        '<div class="q">'+esc(i.q)+'</div>'+(i.a?'<div class="a">'+esc(i.a)+'</div>':'<div style="font-size:.78rem;color:var(--muted);margin-top:6px;">답변 추출 없음 — 회의록 원문 확인</div>')+
+        (i.url?'<div class="src"><a href="'+esc(i.url)+'" target="_blank" rel="noopener">회의록 원문 ↗</a></div>':'')+'</div>';
+    }).join('');
+    document.getElementById('moreBtn').hidden=rows.length<=SHOWN;
+  }
+  function fill(id, vals){ var s=document.getElementById(id); vals.forEach(function(v){ var o=document.createElement('option'); o.value=v; o.textContent=v; s.appendChild(o); }); }
+
+  fetch('data/gukgam/covid.json?_='+Date.now()).then(function(r){ if(!r.ok) throw 0; return r.json(); }).then(function(d){
+    D=d;
+    renderStats(); renderYears(); renderLive(); renderRepeats(); renderMembers();
+    fill('fYear', D.years.map(function(y){ return y.year; }).reverse());
+    fill('fTheme', D.themes.map(function(t){ return t.theme; }));
+    var mc={}; D.items.forEach(function(i){ mc[i.member]=(mc[i.member]||0)+1; });
+    fill('fMember', Object.keys(mc).sort(function(a,b){ return mc[b]-mc[a]; }));
+    renderList();
+    document.getElementById('foot').textContent += ' 갱신 '+(D.updated||'')+'.';
+  }).catch(function(){
+    document.getElementById('list').innerHTML='<div class="empty">데이터(covid.json)를 불러오지 못했습니다. scripts/gukgam/build_covid.py 실행 후 생성됩니다.</div>';
+  });
+  document.getElementById('fYear').addEventListener('change', function(){ state.year=this.value; SHOWN=30; renderList(); });
+  document.getElementById('fTheme').addEventListener('change', function(){ state.theme=this.value; SHOWN=30; renderList(); });
+  document.getElementById('fMember').addEventListener('change', function(){ state.member=this.value; SHOWN=30; renderList(); });
+  document.getElementById('fQuery').addEventListener('input', function(){ state.q=this.value.trim(); SHOWN=30; renderList(); });
+  document.getElementById('fHigh').addEventListener('change', function(){ state.high=this.checked; SHOWN=30; renderList(); });
+  document.getElementById('moreBtn').addEventListener('click', function(){ SHOWN+=30; renderList(); });
+})();
+</script>
+<footer class="site-credit" style="max-width:1100px;margin:6px auto 30px;padding:0 18px;font-size:.76rem;color:#5f6e80;text-align:right;">ⓒ <b>지음웍스닷컴</b> · 2026년 9월</footer>
+</body>
+</html>

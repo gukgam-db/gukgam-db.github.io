@@ -55,6 +55,9 @@ jobs:
       - name: 질병관리청 Q&A 추출 (국감 회의록, 증분)
         run: python3 scripts/gukgam/build_kdca_qa.py
 
+      - name: 코로나19 5년 기록 집계 (질병청 Q&A·지적사항)
+        run: python3 scripts/gukgam/build_covid.py
+
       - name: 보건복지부 Q&A 추출 (국감 회의록, 증분)
         run: python3 scripts/gukgam/build_mohw_qa.py
 

@@ -443,7 +443,12 @@
     (function(hl){
       if(!hl || !(hl.items||[]).length) return;
       document.getElementById('hlSection').hidden=false;
-      document.getElementById('hlCards').innerHTML=(hl.items||[]).map(function(c){
+      // 고정 카드: 코로나19 5년 기록 — 2026 국감의 코로나 질의는 '준비됐나'로 나온다
+      var covidCard='<a class="hl-card" href="gukgam-covid.html" style="border-color:#0e5f63;">'+
+        '<div class="hl-thumb" style="background:#0e5f63;"><span class="hn">2020~2025</span><div class="ht">코로나19·팬데믹 대비<br>질병청 국감 5년 기록</div></div>'+
+        '<div class="hl-body"><div class="hd">질의 흐름 · 살아있는 지적 · 반복 질문</div>'+
+        '<div class="hg">“5년 지났는데 준비됐나”에 답할 자료</div></div></a>';
+      document.getElementById('hlCards').innerHTML=covidCard+(hl.items||[]).map(function(c){
         var kdcaOnly=(c.targets||[]).every(function(t){ return t.indexOf('질병')>=0; }) && (c.targets||[]).length;
         var page=kdcaOnly?'gukgam-kdca.html':'gukgam-mohw.html';
         return '<a class="hl-card" href="'+page+'">'+
