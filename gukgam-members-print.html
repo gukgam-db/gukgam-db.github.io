@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>보건복지위원회 위원 약력집 — 국정감사 자료 DB</title>
+<meta name="description" content="국정감사 결과보고서·시정처리 결과·회의록을 한곳에서 검색하는 통합 DB. 보건복지부·질병관리청·심평원 등 보건복지위원회 소관기관은 전용 페이지로 제공합니다.">
+<style>
+  [hidden]{ display:none !important; }
+  :root{ --navy:#12365f; --line:#e3e9f0; --muted:#5f6e80; --bg:#f5f7fa; --chip:#eef3f8; }
+  *{ box-sizing:border-box; } body{ margin:0; font-family:-apple-system,"Malgun Gothic","Apple SD Gothic Neo",sans-serif; background:var(--bg); color:#1f2a37; }
+  .top{ background:var(--navy); color:#fff; padding:22px 18px 18px; } .top-inner{ max-width:1100px; margin:0 auto; } .top h1{ margin:0 0 6px; font-size:1.4rem; } .top p{ margin:0; font-size:.9rem; opacity:.85; }
+  .top-nav{ margin-top:12px; display:flex; gap:8px; flex-wrap:wrap; } .top-nav a{ color:#fff; text-decoration:none; font-size:.85rem; font-weight:700; background:rgba(255,255,255,.14); border-radius:20px; padding:6px 14px; }
+  .wrap{ max-width:1100px; margin:0 auto; padding:18px; }
+  .tools{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-bottom:14px; font-size:.86rem; color:var(--muted); }
+  .tools button{ border:0; background:var(--navy); color:#fff; border-radius:10px; padding:10px 18px; font-size:.95rem; font-weight:800; cursor:pointer; }
+  .tools label{ display:flex; gap:6px; align-items:center; background:#fff; border:1px solid var(--line); border-radius:10px; padding:7px 10px; }
+  .grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(500px,1fr)); gap:12px; }
+  .card{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px 16px; display:grid; grid-template-columns:84px 1fr; gap:14px; break-inside:avoid; page-break-inside:avoid; }
+  .card.chair{ border:2px solid #c0392b; } .card.whip{ border:2px solid #e2a04a; }
+  .card img{ width:84px; height:108px; object-fit:cover; border-radius:8px; background:#eef1f5; }
+  .nm{ font-size:1.15rem; font-weight:900; color:var(--navy); } .nm small{ font-weight:400; color:var(--muted); font-size:.85rem; }
+  .pty{ display:inline-block; border-radius:8px; padding:1px 8px; font-size:.74rem; font-weight:800; background:var(--chip); color:#3d4f63; margin-right:3px; }
+  .pty.role{ background:#c0392b; color:#fff; } .pty.whip{ background:#fdf3e7; color:#a35b1e; border:1px solid #eecb9e; }
+  .md{ font-size:.8rem; color:var(--muted); margin-top:3px; }
+  .st{ font-size:.78rem; margin-top:5px; color:#3d4f63; } .st b{ color:var(--navy); }
+  .tchip{ display:inline-block; font-size:.7rem; font-weight:800; background:#eef8f3; color:#136350; border:1px solid #d5ebdf; border-radius:8px; padding:1px 7px; margin:2px 2px 0 0; }
+  .brf{ font-size:.76rem; color:#3d4f63; white-space:pre-line; line-height:1.5; margin-top:8px; border-top:1px dashed var(--line); padding-top:6px; }
+  .off{ font-size:.75rem; color:var(--muted); margin-top:6px; } .off b{ color:#3d4f63; }
+  .note{ font-size:.76rem; color:var(--muted); margin:10px 2px 0; line-height:1.5; }
+  @media print{
+    *{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
+    .top,.tools,.unofficial-note,.site-credit{ display:none !important; }
+    body{ background:#fff; } .wrap{ padding:0; max-width:none; }
+    .grid{ grid-template-columns:1fr 1fr; gap:8px; } .card{ padding:10px 12px; border-radius:6px; }
+    .ph{ display:block !important; font-size:.8rem; color:#5f6e80; margin:0 0 8px; }
+    a[href]::after{ content:none !important; }
+    @page{ size:A4; margin:12mm; }
+  }
+  .ph{ display:none; }
+</style>
+</head>
+<body>
+<div class="top"><div class="top-inner">
+  <h1>🗂 보건복지위원회 위원 약력집 <span id="cnt" style="font-size:1rem;font-weight:600;opacity:.85;"></span></h1>
+  <p>현 위원 전원의 정당·선수·지역구·국감 발언 통계·관심 주제·약력·의원실 연락처를 한 번에 인쇄합니다.</p>
+  <div class="top-nav">
+      <a href="gukgam.html">홈</a>
+      <a href="gukgam-year.html">최근 국감</a>
+      <a href="gukgam-mohw.html">복지부</a>
+      <a href="gukgam-kdca.html">질병청</a>
+      <a href="gukgam-mfds.html">식약처</a>
+      <a href="gukgam-covid.html">코로나19</a>
+      <a href="gukgam-guide.html">의원별 가이드북</a>
+      <a href="gukgam-all.html">전체 자료·도구</a>
+    </div>
+  <div class="unofficial-note" style="font-size:.74rem;color:rgba(255,255,255,.82);margin:8px 2px 0;">질병관리청 인공지능 놀이터 연구회에서 만든 <b>비공식 참고자료</b>입니다 — 국회·보건복지부·질병관리청·식품의약품안전처 등 어떤 기관의 공식 사이트도 아니며, 모든 자료의 원 출처는 대한민국 국회(열린국회정보·회의록·결과보고서)입니다.</div>
+</div></div>
+<main class="wrap">
+  <div class="tools">
+    <button type="button" onclick="window.print()">🖨️ 전체 인쇄 (A4, 2단)</button>
+    <label><input type="checkbox" id="optBrf" checked> 약력 포함</label>
+    <label><input type="checkbox" id="optOff" checked> 의원실 연락처 포함</label>
+    <label><input type="checkbox" id="optSt" checked> 국감 발언 통계 포함</label>
+    <span id="src"></span>
+  </div>
+  <div class="ph" id="ph"></div>
+  <div class="grid" id="grid"></div>
+  <div class="note">자료: 열린국회정보 국회의원 정보(약력·사진·의원실은 국회 공식 홈페이지 공개 프로필). 국감 발언 통계는 2020~2025 보건복지위 국정감사 회의록 기준. 위원장은 붉은 테두리, 간사는 주황 테두리.</div>
+</main>
+<footer class="site-credit" style="max-width:1100px;margin:6px auto 30px;padding:0 18px;font-size:.76rem;color:#5f6e80;text-align:right;">ⓒ <b>지음웍스닷컴</b> · 2026년 9월</footer>
+<script>
+(function(){
+  function esc(s){ return (s||'').replace(/&middot;/g,'·').replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function J(u,d){ return fetch('data/gukgam/'+u+'?_='+Date.now()).then(function(r){ if(!r.ok) throw 0; return r.json(); }).catch(function(){ return d; }); }
+  var MEM=null, MT={}, GD={};
+  function render(){
+    var brf=document.getElementById('optBrf').checked, off=document.getElementById('optOff').checked, st=document.getElementById('optSt').checked;
+    var items=(MEM.items||[]).slice().sort(function(a,b){ var ra=/위원장/.test(a.duty||'')?0:(/간사/.test(a.duty||'')?1:2), rb=/위원장/.test(b.duty||'')?0:(/간사/.test(b.duty||'')?1:2); return ra-rb || a.name.localeCompare(b.name,'ko'); });
+    document.getElementById('grid').innerHTML=items.map(function(m){
+      var isChair=/위원장/.test(m.duty||''), isWhip=/간사/.test(m.duty||''); var t=MT[m.name]; var g=GD[m.name]||{}; var o=m.office||{};
+      var staff=[]; if((o.aide||[]).length) staff.push('보좌관 '+o.aide.join('·')); if((o.chief_secretary||[]).length) staff.push('비서관 '+o.chief_secretary.join('·')); if((o.secretary||[]).length) staff.push('비서 '+o.secretary.join('·'));
+      return '<div class="card'+(isChair?' chair':(isWhip?' whip':''))+'">'+
+        (m.photo?'<img src="'+esc(m.photo)+'" alt="" loading="lazy" onerror="this.style.visibility=\'hidden\'">':'<div></div>')+
+        '<div><div class="nm">'+esc(m.name)+(m.hanja?' <small>'+esc(m.hanja)+'</small>':'')+'</div>'+
+        '<div style="margin-top:3px;">'+(isChair?'<span class="pty role">위원장</span>':'')+(isWhip?'<span class="pty whip">간사</span>':'')+'<span class="pty">'+esc(m.party||'-')+'</span>'+(g.tag&&g.tag.cls!=='chair'&&g.tag.cls!=='whip'?'<span class="pty">'+esc(g.tag.label)+'</span>':'')+'</div>'+
+        '<div class="md">'+esc([m.rlct,m.elecd].filter(Boolean).join(' · '))+(m.eras?' · '+esc(m.eras):'')+'</div>'+
+        (st&&t?'<div class="st">국감 발언 <b>'+t.turns+'회</b> · '+t.days+'일'+(g.summary?'<div style="margin-top:3px;">'+esc(g.summary)+'</div>':'')+'<div>'+(t.topics||[]).slice(0,5).map(function(x){ return '<span class="tchip">'+esc(x.t)+' '+x.c+'</span>'; }).join('')+'</div></div>':'')+
+        (off&&(o.room||o.tel||o.email||staff.length)?'<div class="off">'+[o.room?'<b>'+esc(/의원회관/.test(o.room)?o.room:('의원회관 '+o.room+(/호$/.test(o.room)?'':'호')))+'</b>':'',o.tel?'☎ '+esc(o.tel):'',o.email?esc(o.email):''].filter(Boolean).join(' · ')+(staff.length?'<br>'+esc(staff.join(' / ')):'')+'</div>':'')+
+        (brf&&m.brf?'<div class="brf">'+esc(m.brf)+'</div>':'')+
+        '</div></div>';
+    }).join('');
+    document.getElementById('cnt').textContent='('+items.length+'명)';
+    document.getElementById('ph').textContent=(MEM.era||'')+' 보건복지위원회 위원 약력집 · '+items.length+'명 · 국정감사 자료 DB · '+(MEM.updated||'');
+    document.getElementById('src').textContent='열린국회정보 기준 · 갱신 '+(MEM.updated||'');
+  }
+  Promise.all([J('members.json',null), J('member-topics.json',{members:{}}), J('guides.json',{items:[]})]).then(function(r){
+    MEM=r[0]||{items:[]}; MT=(r[1]||{}).members||{}; (r[2].items||[]).forEach(function(g){ GD[g.name]=g; });
+    render();
+    ['optBrf','optOff','optSt'].forEach(function(id){ document.getElementById(id).addEventListener('change', render); });
+    if(/[?&]print=1/.test(location.search)) setTimeout(function(){ window.print(); }, 800);
+  });
+})();
+</script>
+</body>
+</html>

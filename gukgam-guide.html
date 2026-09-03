@@ -82,9 +82,13 @@
   .off-contact{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:9px; }
   .off-contact span{ font-size:.82rem; font-weight:800; background:#eef4fc; color:#1657b0; border-radius:8px; padding:3px 11px; }
   .print-btn{ border:1px solid var(--line); background:#fff; border-radius:9px; padding:7px 14px; font-size:.82rem; font-weight:800; color:#2a4d7d; cursor:pointer; margin-left:auto; }
+  .tbar .bar{ border:1px solid #1c1c28; box-sizing:border-box; }   /* 배경색을 안 찍는 프린터에서도 막대 윤곽은 남게 */
   @media print{
+    *{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }   /* 막대·배지 배경색을 인쇄에도 그대로 */
     .top,.roster,.print-btn,.notice{ display:none !important; }
     body{ background:#fff; }
+    .sec, .qa, .stat{ break-inside:avoid; }
+    a[href]::after{ content:none !important; }
     .wrap{ display:block; padding:0; }
     .brief{ border:0; }
   }
@@ -145,7 +149,7 @@
         '<div class="b-meta"><span class="badge">'+esc(g.party)+'</span>'+
         (g.duty?'<span class="badge duty">'+esc(g.duty)+'</span>':'')+
         '<span class="badge">'+esc(g.rlct)+'</span><span class="badge">'+esc(g.elecd)+'</span></div></div>'+
-        '<button class="print-btn" onclick="window.print()">🖨️ 이 브리핑 인쇄</button>'+
+        '<button class="print-btn" onclick="window.print()">🖨️ 이 브리핑 인쇄</button> <a href="gukgam-members-print.html" class="print-btn" style="text-decoration:none;display:inline-block;">🗂 27명 약력 한꺼번에 인쇄</a>'+
       '</div>'+
       '<div class="sec"><h3>핵심 요약</h3><div class="lead-box">'+esc(g.summary)+'</div></div>'+
       '<div class="sec"><h3>발언 통계 (국감 회의록 기준)</h3><div class="statrow">'+
@@ -260,6 +264,13 @@
       var b=document.getElementById('brief'); if(b) setTimeout(function(){ b.scrollIntoView({behavior:'smooth',block:'start'}); }, 30);
     }
   });
+})();
+
+// 인쇄할 때는 접힌 항목(약력·공통 수칙)도 펼쳐서 찍고, 끝나면 원래대로
+(function(){
+  var opened=[];
+  window.addEventListener('beforeprint', function(){ opened=[]; var ds=document.querySelectorAll('details:not([open])'); for(var i=0;i<ds.length;i++){ ds[i].setAttribute('open',''); opened.push(ds[i]); } });
+  window.addEventListener('afterprint', function(){ for(var i=0;i<opened.length;i++) opened[i].removeAttribute('open'); opened=[]; });
 })();
 </script>
 <footer class="site-credit" style="max-width:1100px;margin:6px auto 30px;padding:0 18px;font-size:.76rem;color:#5f6e80;text-align:right;">ⓒ <b>지음웍스닷컴</b> · 2026년 9월</footer>
