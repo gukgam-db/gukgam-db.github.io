@@ -110,6 +110,7 @@
 
 <main class="wrap">
   <div class="stats" id="stats"></div>
+  <p class="basis" id="basisNote" style="font-size:.76rem;color:var(--muted);margin:-8px 2px 14px;line-height:1.5;border-top:1px dashed var(--line);padding-top:6px;"><b>산출 근거</b> — 추출된 질의 = 보건복지위 국감 회의록에서 보건복지부을(를) 언급했거나 장관·차관 답변이 바로 이어진 위원 발언 · 답변 포함 = 장관·차관 답변이 바로 붙은 질의 수 · 주제는 키워드 자동 분류(한 질의에 여러 주제 가능) · 회의록 원문에서 기계 추출한 것이라 발언 맥락이 잘린 경우가 있음 <span id="basisUpd"></span></p>
 
   <h2>연도별 · 위원별 · 주제별 질의</h2>
   <div class="yeartabs" id="yearTabs"></div>
@@ -124,7 +125,7 @@
   <button class="more" id="moreBtn" hidden>더 보기</button>
 
   <h2>📋 보건복지부 시정·처리요구 (결과보고서)</h2>
-  <p style="font-size:.82rem;color:var(--muted);margin:-4px 0 10px;">국정감사 결과보고서에서 추출한 보건복지부 소관 공식 시정·처리요구 목록입니다. <a href="gukgam-prep.html" style="font-weight:800;color:#2a4d7d;">답변 워크북</a>에서 전체 기관을 볼 수 있습니다.</p>
+  <p style="font-size:.82rem;color:var(--muted);margin:-4px 0 10px;">국정감사 결과보고서에서 추출한 보건복지부 소관 공식 시정·처리요구 목록입니다. 주제 분류는 키워드 자동이며 확실·추정·미분류를 구분해 표시합니다. <a href="gukgam-prep.html" style="font-weight:800;color:#2a4d7d;">답변 워크북</a>에서 전체 기관을 볼 수 있습니다.</p>
   <div id="findList"><div class="empty">불러오는 중…</div></div>
 
   <p class="foot">출처: 국회회의록시스템(국정감사 회의록). 원문 저작권은 대한민국 국회에 있습니다.</p>
@@ -163,6 +164,7 @@
 
   function filtered(){
     return QA.filter(function(r){
+      if(state.year && String(r.year)!==state.year) return false;
       if(state.member && r.member!==state.member) return false;
       if(state.topic && (r.topics||[]).indexOf(state.topic)<0) return false;
       if(state.ans==='y' && !r.a) return false;
@@ -170,13 +172,18 @@
       return true;
     });
   }
+function junkName(n){ return /^(대리|직무대리|출석전문|참고인|증인|위원장|위원)$|^(참고인|증인|출석)/.test(n||''); }
   function renderChips(){
     var c={};
-    QA.forEach(function(r){ c[r.member]=(c[r.member]||0)+1; });
-    var names=Object.keys(c).sort(function(a,b){ return c[b]-c[a]; }).slice(0,24);
+    QA.forEach(function(r){ if(state.year && String(r.year)!==state.year) return; c[r.member]=(c[r.member]||0)+1; });
+    var names=Object.keys(c).filter(function(n){ return !junkName(n); }).sort(function(a,b){ return c[b]-c[a]; });
+    var LIM=24, more=names.length-LIM;
+    var show=(state.allChips||more<=0)?names:names.slice(0,LIM);
+    if(state.member && show.indexOf(state.member)<0) show=show.concat([state.member]);
     document.getElementById('memChips').innerHTML =
       '<span class="mchip'+(state.member?'':' on')+'" data-m="">전체 위원</span>'+
-      names.map(function(n){ return '<span class="mchip'+(state.member===n?' on':'')+'" data-m="'+esc(n)+'">'+esc(n)+' <small>'+c[n]+'</small></span>'; }).join('');
+      show.map(function(n){ return '<span class="mchip'+(state.member===n?' on':'')+'" data-m="'+esc(n)+'">'+esc(n)+' <small>'+c[n]+'</small></span>'; }).join('')+
+      (more>0?'<span class="mchip" data-toggle="1" style="border-style:dashed;">'+(state.allChips?'접기':'위원 '+more+'명 더')+'</span>':'');
   }
   function renderTopics(){
     var tset={};
@@ -201,21 +208,16 @@
         '<span class="badge">'+esc(r.date)+'</span>'+
         (r.topics||[]).map(function(t){ return '<span class="badge tp">'+esc(t)+'</span>'; }).join('')+
         '</div>'+
-        '<div class="q">'+esc(r.q)+'</div>'+
+        '<div class="q">'+esc((r.q||'').replace(/^[\s,.\u3001\u00b7\u2026?!:;)\]]+/,''))+'</div>'+
         (r.a?'<div class="a">'+esc(r.a)+'</div>':'')+
         '<div class="src"><a href="'+esc(r.minutes_url)+'" target="_blank" rel="noopener">회의록 원문(PDF) ↗</a></div>'+
         '</div>';
     }).join('');
     document.getElementById('moreBtn').hidden=rows.length<=SHOWN;
   }
-  function loadYear(y){
+  function loadYear(y){   // 이름은 그대로 두되, 이제 연도는 필터일 뿐 (자료는 처음에 전 연도를 한 번에 읽는다 — 질병청·식약처 페이지와 동일)
     state.year=y; state.member=''; SHOWN=30;
-    if(CACHE[y]){ QA=CACHE[y]; renderChips(); renderTopics(); render(); return; }
-    document.getElementById('list').innerHTML='<div class="empty">'+y+'년 질의를 불러오는 중…</div>';
-    fetch('data/gukgam/mohw-qa-'+y+'.json?_='+Date.now()).then(function(r){return r.json();}).then(function(d){
-      CACHE[y]=d.items||[]; QA=CACHE[y];
-      renderChips(); renderTopics(); render();
-    }).catch(function(){ document.getElementById('list').innerHTML='<div class="empty">'+y+'년 데이터를 불러오지 못했습니다.</div>'; });
+    renderChips(); renderTopics(); render();
   }
 
   Promise.all([
@@ -225,16 +227,23 @@
     var idx=res[0];
     (res[1].items||[]).forEach(function(m){ MEMBERS[m.name]=m; });
     var years=(idx.years||[]).slice().sort().reverse();
-    var total=0, withA=0;
-    years.forEach(function(y){ var s=idx.stats[String(y)]||{}; total+=s.n||0; withA+=s.with_answer||0; });
-    document.getElementById('stats').innerHTML =
-      '<div class="stat"><div class="n">'+total+'</div><div class="l">추출된 질의</div></div>'+
-      '<div class="stat"><div class="n">'+withA+'</div><div class="l">장관·차관 답변 포함</div></div>'+
-      '<div class="stat"><div class="n">'+years.length+'</div><div class="l">연도 수</div></div>'+
-      '<div class="stat"><div class="n">'+(idx.updated||'')+'</div><div class="l">갱신일</div></div>';
-    document.getElementById('yearTabs').innerHTML =
-      years.map(function(y,i){ var s=idx.stats[String(y)]||{}; return '<button data-y="'+y+'"'+(i===0?' class="on"':'')+'>'+y+' <small>('+(s.n||0)+')</small></button>'; }).join('');
-    if(years.length) loadYear(years[0]);
+    document.getElementById('list').innerHTML='<div class="empty">질의를 불러오는 중… (연도별 파일 '+years.length+'개)</div>';
+    return Promise.all(years.map(function(y){ return fetch('data/gukgam/mohw-qa-'+y+'.json?_='+Date.now()).then(function(r){return r.json();}).then(function(d){ return (d.items||[]).map(function(r){ if(!r.year) r.year=y; return r; }); }).catch(function(){ return []; }); }))
+    .then(function(shards){
+      QA=[]; shards.forEach(function(a){ QA=QA.concat(a); });
+      var yc={}, mems={}, withA=0;
+      QA.forEach(function(r){ yc[r.year]=(yc[r.year]||0)+1; if(!junkName(r.member)) mems[r.member]=1; if(r.a) withA++; });
+      document.getElementById('stats').innerHTML =
+        '<div class="stat"><div class="n">'+QA.length+'</div><div class="l">추출된 질의</div></div>'+
+        '<div class="stat"><div class="n">'+withA+'</div><div class="l">장관·차관 답변 포함</div></div>'+
+        '<div class="stat"><div class="n">'+Object.keys(mems).length+'</div><div class="l">질의 위원 수</div></div>'+
+        '<div class="stat"><div class="n">'+years.length+'</div><div class="l">연도 수</div></div>';
+      document.getElementById('basisUpd').textContent='· 자료 갱신 '+(idx.updated||'');
+      document.getElementById('yearTabs').innerHTML =
+        '<button data-y="" class="on">전체</button>'+
+        years.map(function(y){ return '<button data-y="'+y+'">'+y+' <small>('+(yc[y]||0)+')</small></button>'; }).join('');
+      loadYear('');
+    });
   }).catch(function(){
     document.getElementById('list').innerHTML='<div class="empty">데이터가 아직 없습니다. scripts/gukgam/build_mohw_qa.py 실행 후 생성됩니다.</div>';
   });
@@ -246,6 +255,7 @@
   });
   document.getElementById('memChips').addEventListener('click', function(e){
     var c=e.target.closest('.mchip'); if(!c) return;
+    if(c.dataset.toggle){ state.allChips=!state.allChips; renderChips(); return; }
     state.member=c.dataset.m; SHOWN=30; renderChips(); render();
   });
   document.getElementById('fTopic').addEventListener('change', function(){ state.topic=this.value; SHOWN=30; render(); });
