@@ -91,6 +91,11 @@ def topics_of(q):
 def main():
     qa = (load("kdca-qa.json") or {}).get("items", [])
     members = {m["name"]: m for m in (load("members.json") or {}).get("items", []) if m.get("name")}
+    SATELLITE = {"더불어민주연합": "더불어민주당", "더불어시민당": "더불어민주당", "국민의미래": "국민의힘", "미래한국당": "국민의힘"}
+    for m in members.values():   # 비례 위성정당은 합당 후 정당으로 표기 (괄호에 원 정당)
+        pp = (m.get("party") or "").strip()
+        if pp in SATELLITE:
+            m["party"] = SATELLITE[pp] + "(" + pp + ")"
 
     items, total_by_year = [], collections.Counter()
     for q in qa:

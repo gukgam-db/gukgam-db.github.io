@@ -6,6 +6,7 @@
 <title>전체 자료·도구 — 국정감사 자료 DB</title>
 <meta name="description" content="국정감사 결과보고서·시정처리 결과·회의록을 한곳에서 검색하는 통합 DB. 보건복지부·질병관리청·심평원 등 보건복지위원회 소관기관은 전용 페이지로 제공합니다.">
 <style>
+  [hidden]{ display:none !important; }
   :root{ --navy:#12365f; --line:#e3e9f0; --muted:#5f6e80; --bg:#f5f7fa; --accent:#1f6f5c; --chip:#eef3f8; }
   *{ box-sizing:border-box; }
   body{ margin:0; font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif; background:var(--bg); color:#22303e; line-height:1.55; }
@@ -136,6 +137,15 @@
   .gs-item:last-child{ border-bottom:0; }
   .gs-item .gm{ font-size:.74rem; color:var(--muted); display:flex; gap:8px; flex-wrap:wrap; margin-top:2px; }
   .gs-item mark{ background:#ffe9a8; padding:0 1px; }
+  .gs-sug{ position:relative; }
+  .gs-sug .list{ position:absolute; left:0; right:0; top:4px; z-index:20; background:#fff; border:1px solid var(--line); border-radius:12px; box-shadow:0 10px 26px rgba(18,54,95,.14); overflow:hidden; }
+  .gs-sug button{ display:flex; width:100%; justify-content:space-between; align-items:center; gap:10px; border:0; background:#fff; padding:9px 14px; font-size:.92rem; cursor:pointer; text-align:left; border-bottom:1px solid #f0f3f7; }
+  .gs-sug button:last-child{ border-bottom:0; }
+  .gs-sug button:hover, .gs-sug button.on{ background:#f3f7fb; }
+  .gs-sug button b{ color:var(--navy); }
+  .gs-sug button .k{ font-size:.72rem; color:var(--muted); white-space:nowrap; }
+  .gs-sug button .k i{ font-style:normal; font-weight:800; border-radius:7px; padding:1px 6px; margin-right:6px; }
+  .gs-sug button .k i.m{ background:#e8f0fb; color:#1c4f9c; } .gs-sug button .k i.t{ background:#eef8f3; color:#136350; } .gs-sug button .k i.a{ background:#f3ecfb; color:#6b3fa0; }
   .gs-loading{ color:var(--muted); font-size:.88rem; }
   .hl-scroll{ display:flex; gap:12px; overflow-x:auto; padding:4px 2px 10px; scroll-snap-type:x mandatory; }
   .hl-card{ flex:0 0 250px; scroll-snap-align:start; border-radius:14px; overflow:hidden; background:#fff; border:1px solid var(--line); text-decoration:none; display:block; transition:transform .12s; }
@@ -240,11 +250,12 @@
     <p>국정감사 결과보고서 · 시정 및 처리결과 · 회의록을 한곳에서 검색합니다. 원문은 국회 공식 시스템으로 연결됩니다.</p>
     <div class="top-nav">
       <a href="gukgam.html">홈</a>
-      <a href="gukgam-2025.html">2025 국감</a>
+      <a href="gukgam-year.html">최근 국감</a>
       <a href="gukgam-mohw.html">복지부</a>
       <a href="gukgam-kdca.html">질병청</a>
       <a href="gukgam-mfds.html">식약처</a>
       <a href="gukgam-covid.html">코로나19</a>
+      <a href="gukgam-guide.html">의원별 가이드북</a>
       <a href="gukgam-all.html" class="on">전체 자료·도구</a>
     </div>
     <div class="unofficial-note" style="font-size:.74rem;color:rgba(255,255,255,.82);margin:8px 2px 0;">개인이 만든 <b>비공식 참고자료</b>입니다 — 국회·보건복지부·질병관리청·식품의약품안전처 등 어떤 기관의 공식 사이트도 아니며, 모든 자료의 원 출처는 대한민국 국회(열린국회정보·회의록·결과보고서)입니다.</div>
@@ -255,17 +266,19 @@
 <main class="wrap">
   <section class="gsearch">
     <div class="gs-bar">
-      <input id="gsInput" aria-label="통합 검색" type="search" placeholder="🔍 통합 검색 — 위원·질의·답변·지적사항·자료 전체에서 찾기 (예: 백신 폐기, 남인순, 장기요양)">
+      <input id="gsInput" aria-label="통합 검색" type="search" placeholder="🔍 통합 검색 — 보건복지위 국감 2020~2025의 위원 발언·질의·답변·지적사항·자료 (예: 백신 폐기, 남인순, 장기요양)">
       <button id="gsBtn">검색</button>
     </div>
+    <div class="gs-sug"><div class="list" id="gsSug" hidden></div></div>
     <div id="gsOut" hidden></div>
   </section>
 
   <div class="stats" id="stats"></div>
 
   <section id="hlSection" hidden>
-    <h2>🎬 국감 하이라이트 <span style="font-size:.75rem;color:var(--muted);font-weight:400;">감사일별 핵심 장면 · 회의록 데이터 자동 요약</span></h2>
+    <h2>🎬 국감 하이라이트 <span style="font-size:.75rem;color:var(--muted);font-weight:400;">감사일별 자동 요약</span></h2>
     <div class="hl-scroll" id="hlCards"></div>
+    <div style="font-size:.74rem;color:var(--muted);margin:2px 2px 0;line-height:1.5;">감사일마다 회의록에서 자동으로 뽑은 요약 카드 — 큰 글씨는 그날 가장 많이 언급된 주제, 사진은 그날 질의 횟수 상위 위원, 인용은 답변이 붙은 질의 중 가장 긴 것의 앞부분, 발언 수는 짝지은 질의·답변 건수. 영상 캡처가 아니며 편집자의 선정이 아닙니다.</div>
   </section>
 
   <section id="tlSection" hidden>
@@ -753,17 +766,18 @@
         if(a.members&&a.members.length){
           var ef=a.members_era_from||2024, ys2=a.qa_years||[];
           h+='<div class="br-sec">우리 기관에 묻는 위원 '+
-             '<span style="font-weight:600;color:var(--muted);">현 위원만 · 막대는 '+ef+'년 이후</span></div>'+
+             '<span style="font-weight:600;color:var(--muted);">현 위원만 · '+ef+'년 이후 · 막대 = 현 위원 질의 중 비중(막대 전체 100%)</span></div>'+
              '<div>';
-          var mx=Math.max.apply(null,a.members.map(function(m){ return m.recent||0; }))||1;
+          var tot=a.members.reduce(function(s,m){ return s+(m.recent||0); },0)||1;   // 막대는 최다 위원 기준이 아니라 전체(100%) 기준 — 18회가 꽉 찬 막대로 보이지 않게
           a.members.slice(0,6).forEach(function(m){
             var cum=(m.n>(m.recent||0))?' <span style="color:var(--muted);font-size:.76rem;">누적 '+m.n+'</span>':'';
+            var sh=Math.round(100*(m.recent||0)/tot);
             h+='<div class="barrow"><span class="nm">'+esc(m.name)+'</span>'+
-               '<span class="bar"><i style="width:'+Math.round(100*(m.recent||0)/mx)+'%"></i></span>'+
-               '<span class="n">'+(m.recent||0)+'회'+cum+'</span></div>';
+               '<span class="bar"><i style="width:'+Math.max(1,sh)+'%"></i></span>'+
+               '<span class="n">'+(m.recent||0)+'회 <span style="color:var(--muted);font-size:.76rem;">'+sh+'%</span>'+cum+'</span></div>';
           });
           h+='</div><div style="font-size:.76rem;color:var(--muted);margin:6px 2px 0;">'+
-             '회의록 '+(ys2[0]||'')+'~'+(ys2[ys2.length-1]||'')+' 중 이 기관 대상 질의만 셉니다. '+
+             '회의록 '+(ys2[0]||'')+'~'+(ys2[ys2.length-1]||'')+' 중 이 기관 대상 질의만 셉니다. 비중은 '+ef+'년 이후 현 위원 질의 '+tot+'회 중 몫. '+
              '위원 카드의 ‘국감 발언’은 전 기관·전 대수 발언 수라 값이 다릅니다.</div>';
         }
 
@@ -858,6 +872,7 @@
             return '<div class="tchips">'+chips.join('')+'</div>';
           })()+
           '<div class="mlinks">'+
+            '<a href="gukgam-guide.html?m='+encodeURIComponent(m.name)+'">가이드북 · 의원실</a>'+
             (m.homepage?'<a href="'+esc(m.homepage)+'" target="_blank" rel="noopener">홈페이지</a>':'')+
             '<a href="https://search.naver.com/search.naver?where=news&query='+encodeURIComponent(m.name+' 의원 국정감사')+'" target="_blank" rel="noopener">보도자료·뉴스</a>'+
           '</div>'+
@@ -985,7 +1000,10 @@
         var fnd=[];
         [res[3],res[4]].forEach(function(f){ if(f) (f.items||[]).forEach(function(i){ i._year=f.year; fnd.push(i); }); });
         // 위원 발언 전체 색인(답변이 안 붙은 '지나간 발언' 포함) — 연도별 파일, 있으면 얹는다
-        var ry=Object.keys((res[5]&&res[5].years)||{});
+        var ryAll=Object.keys((res[5]&&res[5].years)||{}).sort();
+        window.__RY=ryAll;
+        var ry=window.__ALLYEARS?ryAll:ryAll.slice(-6);   // 기본은 최근 6개년(용량), 옛 국감은 '옛 국감까지 검색'을 누르면 내려받는다
+        window.__RYLOADED=ry;
         return Promise.all(ry.map(function(y){ return fetch('data/gukgam/remarks-'+y+'.json').then(function(r){return r.json();}).catch(function(){return {items:[]};}); }))
         .then(function(rs){ var rem=[]; rs.forEach(function(s){ var u=s.urls||{}; (s.items||[]).forEach(function(i){ if(!i.minutes_url) i.minutes_url=u[i.date]||''; rem.push(i); }); });
           SDATA={ members:res[0].items||[], qa:qa, findings:fnd, remarks:rem };
@@ -993,6 +1011,9 @@
       });
     });
   }
+  function yearsLabel(){ var L=window.__RYLOADED||[]; return L.length?(L[0]+'~'+L[L.length-1]):'2020~2025'; }
+  function oldLink(){ var A=window.__RY||[], L=window.__RYLOADED||[]; if(!A.length||A.length<=L.length) return ''; return ' <a href="#" class="gs-old" style="font-size:.78rem;font-weight:800;color:#2a4d7d;">옛 국감('+A[0]+'~'+(A[A.length-L.length-1])+')까지 검색 →</a>'; }
+  document.addEventListener('click', function(e){ var a=e.target; while(a&&a!==document&&!(a.className&&String(a.className).indexOf('gs-old')>=0)) a=a.parentNode; if(a&&a!==document){ e.preventDefault(); window.__ALLYEARS=true; SDATA=null; run(); } });
   function hl(text, q, ctx){
     var i=text.toLowerCase().indexOf(q.toLowerCase());
     if(i<0) return esc(text.slice(0, ctx*2));
@@ -1042,7 +1063,7 @@
       var rem=(d.remarks||[]).filter(function(i){ return hit(i.text+' '+(i.member||'')); });
       if(rem.length){
         rem.sort(function(a,b){ var am=((a.member||'').toLowerCase()===ql)?0:1, bm=((b.member||'').toLowerCase()===ql)?0:1; if(am!==bm) return am-bm; return b.date<a.date?-1:1; });
-        html+='<div class="gs-group"><h4>🗣 위원 발언 전체 '+rem.length+'건 <span style="font-weight:400;color:var(--muted);font-size:.78rem;">답변이 안 붙은 발언 포함 · 회의록 원문 발췌</span></h4>'+
+        html+='<div class="gs-group"><h4>🗣 위원 발언 전체 '+rem.length+'건 <span style="font-weight:400;color:var(--muted);font-size:.78rem;">답변이 안 붙은 발언 포함 · '+yearsLabel()+'</span>'+oldLink()+'</h4>'+
           rem.slice(0,8).map(function(i){
             return '<div class="gs-item">'+hl(i.text, q1, 55)+'<div class="gm"><span>'+esc(i.member)+' '+esc(i.role||'위원')+'</span><span>'+esc(i.date)+'</span>'+
               (i.answered_by?'<span>답변: '+esc(i.answered_by)+'</span>':'<span>답변 없이 지나감</span>')+
@@ -1059,7 +1080,7 @@
               (link?'<a href="'+esc(link)+'" target="_blank" rel="noopener" style="font-weight:800;color:#2a4d7d;">원문 →</a>':'')+'</div></div>';
           }).join('')+'</div>';
       }
-      out.innerHTML = html || '<div class="gs-loading">"'+esc(q)+'"에 대한 결과가 없습니다.</div>';
+      out.innerHTML = html || '<div class="gs-loading">"'+esc(q)+'"에 대한 결과가 없습니다.'+oldLink()+'<div style="font-size:.8rem;margin-top:6px;line-height:1.55;color:#3d4f63;">이 검색은 <b>보건복지위원회 국정감사 회의록('+yearsLabel()+')</b>의 위원 발언·질의·답변·지적사항·자료 제목에서만 찾습니다. 위원 이름이라면 이 기간 보건복지위 소속이 아니었거나 국감에서 발언하지 않은 경우입니다. 다른 상임위 발언은 <a href="https://record.assembly.go.kr" target="_blank" rel="noopener" style="color:#2a4d7d;font-weight:800;">국회 회의록시스템</a>, 관련 보도는 <a href="https://search.naver.com/search.naver?where=news&query='+encodeURIComponent(q+' 국정감사')+'" target="_blank" rel="noopener" style="color:#2a4d7d;font-weight:800;">뉴스 검색</a>에서 확인하세요.</div></div>';
     });
   }
   document.getElementById('gsBtn').addEventListener('click', run);
@@ -1068,6 +1089,39 @@
   var gsTimer=null;
   document.getElementById('gsInput').addEventListener('input', function(){ clearTimeout(gsTimer); var v=this.value.trim(); if(v.length<2){ return; } gsTimer=setTimeout(run, 400); });
   document.getElementById('gsInput').addEventListener('search', run);
+})();
+
+// 연관어 자동완성 — 색인에 실제로 있는 온전한 단어만 보여준다 (없는 말은 안 뜬다 = 이 자료에 없다는 신호)
+(function(){
+  var inp=document.getElementById('gsInput'), box=document.getElementById('gsSug'); if(!inp||!box) return;
+  var TERMS=null, timer=null, sel=-1, skip=false;
+  function esc(s){ return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function norm(s){ return (s||'').toLowerCase().replace(/\s+/g,''); }
+  function load(){ if(TERMS) return Promise.resolve(TERMS); return fetch('data/gukgam/suggest.json').then(function(r){return r.json();}).then(function(d){ TERMS=(d.terms||[]).map(function(r){ return {t:r[0],n:r[1],k:r[2],z:norm(r[0])}; }); return TERMS; }).catch(function(){ TERMS=[]; return TERMS; }); }
+  function hide(){ box.hidden=true; box.innerHTML=''; sel=-1; }
+  function pick(t){ inp.value=t; hide(); skip=true; var ev=document.createEvent('Event'); ev.initEvent('input',true,true); inp.dispatchEvent(ev); }
+  function show(){
+    var q=norm(inp.value); if(q.length<1){ hide(); return; }
+    load().then(function(T){
+      if(norm(inp.value)!==q) return;
+      var pre=[], sub=[];
+      for(var i=0;i<T.length&&(pre.length+sub.length)<400;i++){ var z=T[i].z; if(z===q) continue; var p=z.indexOf(q); if(p===0) pre.push(T[i]); else if(p>0) sub.push(T[i]); }
+      var KIND={m:'위원',t:'주제',a:'기관'};
+      var list=pre.concat(sub).slice(0,8);
+      if(!list.length){ hide(); return; }
+      box.innerHTML=list.map(function(x){ return '<button type="button" data-t="'+esc(x.t)+'"><b>'+esc(x.t)+'</b><span class="k">'+(KIND[x.k]?'<i class="'+x.k+'">'+KIND[x.k]+'</i>':'')+x.n.toLocaleString()+(x.k==='m'?'회 발언':'건')+'</span></button>'; }).join('');
+      box.hidden=false; sel=-1;
+    });
+  }
+  inp.addEventListener('input', function(){ clearTimeout(timer); if(skip){ skip=false; return; } timer=setTimeout(show,120); });
+  inp.addEventListener('keydown', function(e){
+    if(box.hidden) return; var bs=box.querySelectorAll('button'); if(!bs.length) return;
+    if(e.key==='ArrowDown'){ e.preventDefault(); sel=(sel+1)%bs.length; } else if(e.key==='ArrowUp'){ e.preventDefault(); sel=(sel-1+bs.length)%bs.length; }
+    else if(e.key==='Enter'&&sel>=0){ e.preventDefault(); pick(bs[sel].getAttribute('data-t')); return; } else if(e.key==='Escape'){ hide(); return; } else return;
+    for(var i=0;i<bs.length;i++) bs[i].className=(i===sel?'on':'');
+  });
+  box.addEventListener('mousedown', function(e){ var b=e.target; while(b&&b!==box&&b.tagName!=='BUTTON') b=b.parentNode; if(b&&b!==box){ e.preventDefault(); pick(b.getAttribute('data-t')); } });
+  document.addEventListener('click', function(e){ if(e.target!==inp && !box.contains(e.target)) hide(); });
 })();
 </script>
 <footer class="site-credit" style="max-width:1100px;margin:6px auto 30px;padding:0 18px;font-size:.76rem;color:#5f6e80;text-align:right;">ⓒ <b>지음웍스닷컴</b> · 2026년 9월</footer>

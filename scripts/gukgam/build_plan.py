@@ -178,6 +178,7 @@ def main():
         "year": year,
         "committee": "보건복지위원회",
         "source": src,
+        "source_post": int(os.environ["GUKGAM_PLAN_POST"]) if os.environ.get("GUKGAM_PLAN_POST") else None,   # 자동 탐지한 게시글 번호
         "period": period,
         "targets": targets,
         "schedule": schedule,

@@ -10,7 +10,7 @@
 실행: python3 scripts/gukgam/build_highlights.py  (키 불필요)
 출력: data/gukgam/highlights.json
 """
-import os, re, json, glob, datetime, collections
+import re, os, json, glob, datetime, collections
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA = os.path.join(ROOT, "data", "gukgam")
@@ -23,11 +23,26 @@ def load(name):
         return json.load(f)
 
 
+def tidy_quote(q, limit=110):
+    """인용문은 문장 단위로 — 앞머리 조각('…니다. 청장님,')은 떼고, 끝은 마지막 완결 문장에서 자른다."""
+    s = re.sub(r"\s+", " ", q or "").strip()
+    m = re.match(r"^[^.?!]{0,25}[.?!]\s+", s)          # 25자 안에 문장이 끝나면 앞 조각으로 본다
+    if m and len(s) - m.end() > 40:
+        s = s[m.end():]
+    if len(s) > limit:
+        cut = s[:limit]
+        p = max(cut.rfind(". "), cut.rfind("? "), cut.rfind("다 "), cut.rfind("요 "))
+        s = (cut[:p + 1] if p > limit * 0.45 else cut).rstrip() + "…"
+    return s
+
+
 def main():
     qa = load("kdca-qa.json")["items"]
     for p in sorted(glob.glob(os.path.join(DATA, "mohw-qa-2*.json"))):
         with open(p, encoding="utf-8") as f:
             qa += json.load(f)["items"]
+    if os.path.exists(os.path.join(DATA, "mfds-qa.json")):      # 식약처 감사일도 같은 기준으로 센다
+        qa += load("mfds-qa.json")["items"]
     summaries = load("summaries.json")["items"]
     members = {m["name"]: m for m in load("members.json")["items"]}
 
@@ -57,7 +72,7 @@ def main():
             "topics": [t for t, _ in topics.most_common(3)],
             "top_members": top3m,
             "photo": photo,
-            "quote": (best["q"][:110] + "…") if len(best["q"]) > 110 else best["q"],
+            "quote": tidy_quote(best["q"]),
             "quote_member": best["member"],
             "minutes_url": url,
         })
@@ -65,7 +80,7 @@ def main():
     cards = cards[:MAX_CARDS]
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump({"updated": datetime.date.today().isoformat(),
-                   "note": "회의록 질의 데이터 기반 자동 요약 카드 (영상 캡처 아님)",
+                   "note": "감사일별 자동 요약 카드(영상 캡처 아님). 큰 글씨 = 그날 질의에서 가장 많이 언급된 주제, 사진 = 그날 질의 횟수 상위 위원, 인용 = 답변이 붙은 질의 중 가장 긴 것의 앞부분, 발언 수 = 회의록에서 짝지은 질의·답변 건수.",
                    "items": cards}, f, ensure_ascii=False, indent=1)
     print(f"완료: 하이라이트 카드 {len(cards)}장 ({cards[-1]['date']} ~ {cards[0]['date']})")
     return 0

@@ -47,12 +47,16 @@
   .fact{ font-size:.72rem; font-weight:800; border-radius:6px; padding:1px 7px; margin-left:6px; background:#f1f3f5; color:#5a6673; white-space:nowrap; }
   .live li{ padding:5px 0; line-height:1.6; font-size:.88rem; }
   .rep{ margin-bottom:8px; }
-  .rep .th{ font-weight:800; color:var(--navy); }
+  .rep .th{ font-weight:900; color:#d97757; font-size:1.02rem; }   /* 주제는 오렌지, 그 아래 연도·대표 질의는 남색 그대로 */
   .rep .ys{ font-size:.76rem; color:var(--muted); margin-left:6px; }
   .rep .ex{ font-size:.84rem; padding:4px 0 4px 10px; border-left:3px solid var(--barlt); margin:5px 0; }
   .rep .ex b{ color:var(--teal); font-size:.78rem; margin-right:6px; }
   .mem{ display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:10px; }
   .mem .m{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 14px; }
+  .mem .m{ border-top:4px solid #dfe5ec; }
+  .mem .m.recent{ border-top-color:#d97757; }
+  .mem .m .nm{ font-size:1.02rem; }
+  .mem .m .nm .since{ font-size:.7rem; font-weight:800; color:#d97757; margin-left:4px; }
   .mem .m .nm{ font-weight:800; color:var(--navy); }
   .mem .m .cnt{ font-size:.8rem; color:var(--muted); margin:2px 0 6px; }
   .mem .m .lq{ font-size:.8rem; color:#3d4f63; border-top:1px dashed var(--line); padding-top:6px; margin-top:6px; }
@@ -84,11 +88,12 @@
     <p>2020~2025년 질병관리청 국정감사에서 <strong>코로나19 관련 질의·답변·지적사항만</strong> 모아, 질문이 어떻게 옮겨갔고 무엇이 아직 살아있는지 정리했습니다. 2026 국감의 코로나 질의는 “그때 뭐 했나”가 아니라 <strong>“5년 지났는데 준비됐나”</strong>로 나옵니다.</p>
     <div class="top-nav">
       <a href="gukgam.html">홈</a>
-      <a href="gukgam-2025.html">2025 국감</a>
+      <a href="gukgam-year.html">최근 국감</a>
       <a href="gukgam-mohw.html">복지부</a>
       <a href="gukgam-kdca.html">질병청</a>
       <a href="gukgam-mfds.html">식약처</a>
       <a href="gukgam-covid.html" class="on">코로나19</a>
+      <a href="gukgam-guide.html">의원별 가이드북</a>
       <a href="gukgam-all.html">전체 자료·도구</a>
     </div>
     <div class="unofficial-note" style="font-size:.74rem;color:rgba(255,255,255,.82);margin:8px 2px 0;">개인이 만든 <b>비공식 참고자료</b>입니다 — 국회·보건복지부·질병관리청·식품의약품안전처 등 어떤 기관의 공식 사이트도 아니며, 모든 자료의 원 출처는 대한민국 국회(열린국회정보·회의록·결과보고서)입니다.</div>
@@ -190,7 +195,7 @@
   }
   function renderMembers(){
     document.getElementById('members').innerHTML=D.members.map(function(m){
-      return '<div class="m"><div class="nm">'+esc(m.name)+' <span class="badge pty">'+esc(m.party||'')+'</span>'+(m.duty?' <span class="badge">'+esc(m.duty)+'</span>':'')+'</div>'+
+      return '<div class="m'+(m.recent>0?' recent':'')+'"><div class="nm">'+esc(m.name)+' <span class="badge pty">'+esc(m.party||'')+'</span>'+(m.recent>0?'<span class="since">최근에도 질의</span>':'')+(m.duty?' <span class="badge">'+esc(m.duty)+'</span>':'')+'</div>'+
         '<div class="cnt">코로나 질의 '+m.n+'회 · 2024년 이후 '+m.recent+'회 · '+m.years.join('·')+'</div>'+
         '<div>'+(m.themes||[]).map(function(t){ return '<span class="badge tp">'+esc(t)+'</span> '; }).join('')+'</div>'+
         '<div class="lq">최근('+esc(m.last.year)+'): '+esc(m.last.q)+(m.last.url?' <a href="'+esc(m.last.url)+'" target="_blank" rel="noopener" style="font-weight:800;color:#2a4d7d;">↗</a>':'')+'</div></div>';

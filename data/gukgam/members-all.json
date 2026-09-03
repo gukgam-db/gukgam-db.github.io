@@ -1,0 +1,2487 @@
+{
+ "updated": "2026-09-02",
+ "committee": "보건복지위원회",
+ "note": "보건복지위원회 소속 이력이 있는 역대 의원 — 열린국회정보 ALLNAMEMBER. 어느 대수에 소속이었는지는 API가 주지 않아 국감 회의록 발언으로 연도를 가른다.",
+ "items": [
+  {
+   "name": "강기정",
+   "hanja": "姜琪正",
+   "party": "민주통합당",
+   "parties": "열린우리당/통합민주당/민주통합당",
+   "elecd": "광주 북구갑",
+   "rlct": "3선",
+   "eras": "제17대, 제18대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/1PK82111.jpg"
+  },
+  {
+   "name": "강명순",
+   "hanja": "姜命順",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/OSC50359.jpg"
+  },
+  {
+   "name": "강삼재",
+   "hanja": "姜三載",
+   "party": "한나라당",
+   "parties": "신한민주당/통일민주당/민주자유당/신한국당/한나라당",
+   "elecd": "경상남도 마산시회원구",
+   "rlct": "5선",
+   "eras": "제12대, 제13대, 제14대, 제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/35I30124.jpg"
+  },
+  {
+   "name": "강석진",
+   "hanja": "姜錫振",
+   "party": "새누리당",
+   "parties": "새누리당",
+   "elecd": "경남 산청군함양군거창군합천군",
+   "rlct": "초선",
+   "eras": "제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/IH436704.jpg"
+  },
+  {
+   "name": "강성구",
+   "hanja": "姜成求",
+   "party": "새천년민주당",
+   "parties": "새천년민주당",
+   "elecd": "경기도 오산시화성군",
+   "rlct": "초선",
+   "eras": "제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/AO340526.jpg"
+  },
+  {
+   "name": "강수림",
+   "hanja": "姜秀淋",
+   "party": "민주당",
+   "parties": "민주당",
+   "elecd": "서울 성동구병",
+   "rlct": "초선",
+   "eras": "제14대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/KY92872I.jpg"
+  },
+  {
+   "name": "강우혁",
+   "hanja": "康祐赫",
+   "party": "민주자유당",
+   "parties": "민주정의당/민주자유당",
+   "elecd": "인천 남동구",
+   "rlct": "재선",
+   "eras": "제13대, 제14대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/GZS38403.jpg"
+  },
+  {
+   "name": "강창희",
+   "hanja": "姜昌熙",
+   "party": "새누리당",
+   "parties": "민주정의당/민주정의당/무소속/자유민주연합/자유민주연합/새누리당",
+   "elecd": "대전 중구",
+   "rlct": "6선",
+   "eras": "제11대, 제12대, 제14대, 제15대, 제16대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/PAQ11014.jpg"
+  },
+  {
+   "name": "강희찬",
+   "hanja": "姜熹瓚",
+   "party": "민주당",
+   "parties": "민주당",
+   "elecd": "",
+   "rlct": "초선",
+   "eras": "제14대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/VW61947B.jpg"
+  },
+  {
+   "name": "고경화",
+   "hanja": "高京華",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/TOM5642Y.jpg"
+  },
+  {
+   "name": "고진부",
+   "hanja": "高珍富",
+   "party": "새천년민주당",
+   "parties": "새천년민주당",
+   "elecd": "제주도 서귀포시,남제주군",
+   "rlct": "초선",
+   "eras": "제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/VQS1607Y.jpg"
+  },
+  {
+   "name": "공성진",
+   "hanja": "孔星鎭",
+   "party": "한나라당",
+   "parties": "한나라당/한나라당",
+   "elecd": "서울 강남구을",
+   "rlct": "재선",
+   "eras": "제17대, 제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/99J1216Q.jpg"
+  },
+  {
+   "name": "곽성문",
+   "hanja": "郭成文",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "대구 중구,남구",
+   "rlct": "초선",
+   "eras": "제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/HGU6642R.jpg"
+  },
+  {
+   "name": "곽정숙",
+   "hanja": "郭貞淑",
+   "party": "민주노동당",
+   "parties": "민주노동당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/C0V2172Q.jpg"
+  },
+  {
+   "name": "권미혁",
+   "hanja": "權美赫",
+   "party": "더불어민주당",
+   "parties": "더불어민주당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/RH454994.jpg"
+  },
+  {
+   "name": "권성동",
+   "hanja": "權性東",
+   "party": "국민의힘",
+   "parties": "한나라당/새누리당/새누리당/무소속/국민의힘",
+   "elecd": "강원 강릉시",
+   "rlct": "5선",
+   "eras": "제18대, 제19대, 제20대, 제21대, 제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/GDG1847Z.jpg"
+  },
+  {
+   "name": "권익현",
+   "hanja": "權翊鉉",
+   "party": "신한국당",
+   "parties": "민주정의당/민주정의당/민주자유당/신한국당",
+   "elecd": "경남 산청,함양",
+   "rlct": "4선",
+   "eras": "제11대, 제12대, 제14대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/OUK2820Z.jpg"
+  },
+  {
+   "name": "권칠승",
+   "hanja": "權七勝",
+   "party": "더불어민주당",
+   "parties": "더불어민주당/더불어민주당/더불어민주당",
+   "elecd": "경기 화성시병",
+   "rlct": "3선",
+   "eras": "제20대, 제21대, 제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/732a1459c8554b999d8c248d703d8fa2.png"
+  },
+  {
+   "name": "김경재",
+   "hanja": "金景梓",
+   "party": "새천년민주당",
+   "parties": "새정치국민회의/새천년민주당",
+   "elecd": "전라남도 순천시",
+   "rlct": "재선",
+   "eras": "제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/M1E6908V.jpg"
+  },
+  {
+   "name": "김광수",
+   "hanja": "金光洙",
+   "party": "자유민주연합",
+   "parties": "무소속/민주공화당/한국국민당/민주자유당/자유민주연합",
+   "elecd": "전북 진안,무주,장수",
+   "rlct": "5선",
+   "eras": "제9대, 제10대, 제12대, 제14대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/X0K2352F.jpg"
+  },
+  {
+   "name": "김광수",
+   "hanja": "金光守",
+   "party": "국민의당",
+   "parties": "국민의당",
+   "elecd": "전북 전주시갑",
+   "rlct": "초선",
+   "eras": "제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/3NM5411H.jpg"
+  },
+  {
+   "name": "김교흥",
+   "hanja": "金敎興",
+   "party": "더불어민주당",
+   "parties": "열린우리당/더불어민주당/더불어민주당",
+   "elecd": "인천 서구갑",
+   "rlct": "3선",
+   "eras": "제17대, 제21대, 제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/c2640d735bdc4520ad3838183f97ad54.jpg"
+  },
+  {
+   "name": "김금래",
+   "hanja": "金錦來",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/J1G1329F.jpg"
+  },
+  {
+   "name": "김기선",
+   "hanja": "金起善",
+   "party": "새누리당",
+   "parties": "새누리당/새누리당",
+   "elecd": "강원 원주시갑",
+   "rlct": "재선",
+   "eras": "제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/NNP30098.jpg"
+  },
+  {
+   "name": "김기웅",
+   "hanja": "金基雄",
+   "party": "국민의힘",
+   "parties": "국민의힘",
+   "elecd": "대구 중구남구",
+   "rlct": "초선",
+   "eras": "제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/4e032a885456487ebe70f143ef373f92.png"
+  },
+  {
+   "name": "김덕규",
+   "hanja": "金德圭",
+   "party": "열린우리당",
+   "parties": "민주한국당/평화민주당/민주당/새천년민주당/열린우리당",
+   "elecd": "서울특별시 중랑구을",
+   "rlct": "5선",
+   "eras": "제11대, 제13대, 제14대, 제16대, 제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/KDB6892X.jpg"
+  },
+  {
+   "name": "김덕룡",
+   "hanja": "金德龍",
+   "party": "한나라당",
+   "parties": "통일민주당/민주자유당/신한국당/한나라당/한나라당",
+   "elecd": "서울특별시 서초구을",
+   "rlct": "5선",
+   "eras": "제13대, 제14대, 제15대, 제16대, 제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/WFJ6020P.jpg"
+  },
+  {
+   "name": "김동철",
+   "hanja": "金東喆",
+   "party": "국민의당",
+   "parties": "열린우리당/통합민주당/민주통합당/국민의당",
+   "elecd": "광주 광산구갑",
+   "rlct": "4선",
+   "eras": "제17대, 제18대, 제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/DCR84445.jpg"
+  },
+  {
+   "name": "김명섭",
+   "hanja": "金明燮",
+   "party": "새천년민주당",
+   "parties": "민주정의당/신한국당/새천년민주당",
+   "elecd": "서울특별시 영등포구갑",
+   "rlct": "3선",
+   "eras": "제13대, 제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/SX52964G.jpg"
+  },
+  {
+   "name": "김명연",
+   "hanja": "金明淵",
+   "party": "새누리당",
+   "parties": "새누리당/새누리당",
+   "elecd": "경기 안산시단원구갑",
+   "rlct": "재선",
+   "eras": "제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/9EA39580.jpg"
+  },
+  {
+   "name": "김미희",
+   "hanja": "金美希",
+   "party": "통합진보당",
+   "parties": "통합진보당",
+   "elecd": "경기 성남시중원구",
+   "rlct": "초선",
+   "eras": "제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/DW737223.jpg"
+  },
+  {
+   "name": "김병태",
+   "hanja": "金秉泰",
+   "party": "새정치국민회의",
+   "parties": "새정치국민회의",
+   "elecd": "서울 송파구병",
+   "rlct": "초선",
+   "eras": "제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/4MO1238K.jpg"
+  },
+  {
+   "name": "김병호",
+   "hanja": "金秉浩",
+   "party": "한나라당",
+   "parties": "한나라당/한나라당",
+   "elecd": "부산광역시 부산진구갑",
+   "rlct": "재선",
+   "eras": "제16대, 제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/ZY76641C.jpg"
+  },
+  {
+   "name": "김부겸",
+   "hanja": "金富謙",
+   "party": "더불어민주당",
+   "parties": "한나라당/열린우리당/통합민주당/더불어민주당",
+   "elecd": "대구 수성구갑",
+   "rlct": "4선",
+   "eras": "제16대, 제17대, 제18대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/UIZ3103R.jpg"
+  },
+  {
+   "name": "김상민",
+   "hanja": "金相珉",
+   "party": "새누리당",
+   "parties": "새누리당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/WXO1612R.jpg"
+  },
+  {
+   "name": "김상현",
+   "hanja": "金相賢",
+   "party": "새천년민주당",
+   "parties": "민중당/신민당/신민당/민주당/새정치국민회의/새천년민주당",
+   "elecd": "광주광역시 북구갑",
+   "rlct": "6선",
+   "eras": "제6대, 제7대, 제8대, 제14대, 제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/JJ64316E.jpg"
+  },
+  {
+   "name": "김선미",
+   "hanja": "金善美",
+   "party": "열린우리당",
+   "parties": "열린우리당",
+   "elecd": "경기도 안성시",
+   "rlct": "초선",
+   "eras": "제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/QMQ4659V.jpg"
+  },
+  {
+   "name": "김성순",
+   "hanja": "金聖順",
+   "party": "통합민주당",
+   "parties": "새천년민주당/통합민주당",
+   "elecd": "서울 송파구병",
+   "rlct": "재선",
+   "eras": "제16대, 제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/P6Q6720D.jpg"
+  },
+  {
+   "name": "김성회",
+   "hanja": "金成會",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "경기 화성시갑",
+   "rlct": "초선",
+   "eras": "제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/BEJ7022K.jpg"
+  },
+  {
+   "name": "김세연",
+   "hanja": "金世淵",
+   "party": "새누리당",
+   "parties": "무소속/새누리당/새누리당",
+   "elecd": "부산 금정구",
+   "rlct": "3선",
+   "eras": "제18대, 제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/2WQ6656P.jpg"
+  },
+  {
+   "name": "김순례",
+   "hanja": "金順禮",
+   "party": "새누리당",
+   "parties": "새누리당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/7KD2317D.jpg"
+  },
+  {
+   "name": "김승희",
+   "hanja": "金承禧",
+   "party": "새누리당",
+   "parties": "새누리당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/8WC7967F.jpg"
+  },
+  {
+   "name": "김영준",
+   "hanja": "金永俊",
+   "party": "무소속",
+   "parties": "민주한국당/무소속",
+   "elecd": "충북 제천시단양군",
+   "rlct": "재선",
+   "eras": "제11대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/L3E7778U.jpg"
+  },
+  {
+   "name": "김영진",
+   "hanja": "金泳鎭",
+   "party": "통합민주당",
+   "parties": "평화민주당/민주당/새정치국민회의/새천년민주당/통합민주당",
+   "elecd": "광주 서구을",
+   "rlct": "5선",
+   "eras": "제13대, 제14대, 제15대, 제16대, 제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/BCO6264C.jpg"
+  },
+  {
+   "name": "김영환",
+   "hanja": "金榮煥",
+   "party": "민주통합당",
+   "parties": "새정치국민회의/새천년민주당/민주당/민주통합당",
+   "elecd": "경기 안산시상록구을",
+   "rlct": "4선",
+   "eras": "제15대, 제16대, 제18대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/1C04271Z.jpg"
+  },
+  {
+   "name": "김용익",
+   "hanja": "金容益",
+   "party": "민주통합당",
+   "parties": "민주통합당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/ZP141168.jpg"
+  },
+  {
+   "name": "김윤",
+   "hanja": "金輪",
+   "party": "더불어민주연합",
+   "parties": "더불어민주연합",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/4fc8139485a9495c8bdaff681ac7c347.JPG"
+  },
+  {
+   "name": "김인곤",
+   "hanja": "金仁坤",
+   "party": "새정치국민회의",
+   "parties": "신민주공화당/민주당/새정치국민회의",
+   "elecd": "전남 함평,영광군",
+   "rlct": "3선",
+   "eras": "제13대, 제14대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/SRH7774W.jpg"
+  },
+  {
+   "name": "김재원",
+   "hanja": "金在原",
+   "party": "자유한국당",
+   "parties": "한나라당/새누리당/자유한국당",
+   "elecd": "경북 상주시군위군의성군청송군",
+   "rlct": "3선",
+   "eras": "제17대, 제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/QZU9232M.jpg"
+  },
+  {
+   "name": "김정록",
+   "hanja": "金正錄",
+   "party": "새누리당",
+   "parties": "새누리당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/XZT48020.jpg"
+  },
+  {
+   "name": "김정수",
+   "hanja": "金正秀",
+   "party": "신한국당",
+   "parties": "민권당/신한민주당/통일민주당/민주자유당/신한국당",
+   "elecd": "부산 부산진구을",
+   "rlct": "5선",
+   "eras": "제11대, 제12대, 제13대, 제14대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/A1819526.jpg"
+  },
+  {
+   "name": "김정숙",
+   "hanja": "金貞淑",
+   "party": "한나라당",
+   "parties": "신한국당/한나라당/한나라당",
+   "elecd": "비례대표",
+   "rlct": "3선",
+   "eras": "제14대, 제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/O4X7540B.jpg"
+  },
+  {
+   "name": "김제식",
+   "hanja": "金濟植",
+   "party": "새누리당",
+   "parties": "새누리당",
+   "elecd": "충남 서산시태안군",
+   "rlct": "초선",
+   "eras": "제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/5Z47834I.jpg"
+  },
+  {
+   "name": "김종인",
+   "hanja": "金鍾仁",
+   "party": "더불어민주당",
+   "parties": "민주정의당/민주정의당/민주자유당/새천년민주당/더불어민주당",
+   "elecd": "비례대표",
+   "rlct": "5선",
+   "eras": "제11대, 제12대, 제14대, 제17대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/E5N8503B.jpg"
+  },
+  {
+   "name": "김찬우",
+   "hanja": "金燦于",
+   "party": "한나라당",
+   "parties": "민주한국당/통일국민당/신한국당/한나라당",
+   "elecd": "경상북도 청송,영양,영덕군",
+   "rlct": "4선",
+   "eras": "제11대, 제14대, 제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/DPP5766B.jpg"
+  },
+  {
+   "name": "김찬진",
+   "hanja": "金贊鎭",
+   "party": "신한국당",
+   "parties": "신한국당",
+   "elecd": "",
+   "rlct": "초선",
+   "eras": "제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/O272385D.jpg"
+  },
+  {
+   "name": "김춘진",
+   "hanja": "金椿鎭",
+   "party": "민주통합당",
+   "parties": "열린우리당/통합민주당/민주통합당",
+   "elecd": "전북 고창군부안군",
+   "rlct": "3선",
+   "eras": "제17대, 제18대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/QZG38143.jpg"
+  },
+  {
+   "name": "김충환",
+   "hanja": "金忠環",
+   "party": "한나라당",
+   "parties": "한나라당/한나라당",
+   "elecd": "서울 강동구갑",
+   "rlct": "재선",
+   "eras": "제17대, 제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/H0G8409H.jpg"
+  },
+  {
+   "name": "김태랑",
+   "hanja": "金太郞",
+   "party": "새정치국민회의",
+   "parties": "새정치국민회의",
+   "elecd": "",
+   "rlct": "초선",
+   "eras": "제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/I2I23566.jpg"
+  },
+  {
+   "name": "김태식",
+   "hanja": "金台植",
+   "party": "새천년민주당",
+   "parties": "민주한국당/평화민주당/민주당/새정치국민회의/새천년민주당",
+   "elecd": "전북 완주,임실군",
+   "rlct": "5선",
+   "eras": "제11대, 제13대, 제14대, 제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/UWR1927I.jpg"
+  },
+  {
+   "name": "김태호",
+   "hanja": "金泰鎬",
+   "party": "한나라당",
+   "parties": "민주정의당/민주정의당/신한국당/한나라당",
+   "elecd": "울산광역시 중구",
+   "rlct": "4선",
+   "eras": "제12대, 제13대, 제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/DTM59312.jpg"
+  },
+  {
+   "name": "김태호",
+   "hanja": "金台鎬",
+   "party": "국민의힘",
+   "parties": "한나라당/새누리당/무소속/국민의힘",
+   "elecd": "경남 양산시을",
+   "rlct": "4선",
+   "eras": "제18대, 제19대, 제21대, 제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/f400573a310e49048ac59ffe27438e82.png"
+  },
+  {
+   "name": "김태홍",
+   "hanja": "金泰弘",
+   "party": "열린우리당",
+   "parties": "새천년민주당/열린우리당",
+   "elecd": "광주광역시 북구을",
+   "rlct": "재선",
+   "eras": "제16대, 제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/17671841.jpg"
+  },
+  {
+   "name": "김한규",
+   "hanja": "金漢圭",
+   "party": "민주자유당",
+   "parties": "민주정의당/민주자유당",
+   "elecd": "대구 달서구갑",
+   "rlct": "재선",
+   "eras": "제13대, 제14대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/KBJ1842L.jpg"
+  },
+  {
+   "name": "김허남",
+   "hanja": "金許男",
+   "party": "자유민주연합",
+   "parties": "자유민주연합",
+   "elecd": "",
+   "rlct": "초선",
+   "eras": "제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/2AS29941.jpg"
+  },
+  {
+   "name": "김현미",
+   "hanja": "金賢美",
+   "party": "더불어민주당",
+   "parties": "열린우리당/민주통합당/더불어민주당",
+   "elecd": "경기 고양시정",
+   "rlct": "3선",
+   "eras": "제17대, 제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/9XB6464U.jpg"
+  },
+  {
+   "name": "김현숙",
+   "hanja": "金賢淑",
+   "party": "새누리당",
+   "parties": "새누리당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/LGG10412.jpg"
+  },
+  {
+   "name": "김혜성",
+   "hanja": "金惠聖",
+   "party": "친박연대",
+   "parties": "친박연대",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/WYI5610U.jpg"
+  },
+  {
+   "name": "김홍신",
+   "hanja": "金洪信",
+   "party": "한나라당",
+   "parties": "통합민주당/한나라당",
+   "elecd": "비례대표",
+   "rlct": "재선",
+   "eras": "제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/ECQ9898H.jpg"
+  },
+  {
+   "name": "김화중",
+   "hanja": "金花中",
+   "party": "새천년민주당",
+   "parties": "새천년민주당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/5ZO7509R.jpg"
+  },
+  {
+   "name": "김효석",
+   "hanja": "金孝錫",
+   "party": "통합민주당",
+   "parties": "새천년민주당/새천년민주당/통합민주당",
+   "elecd": "전남 담양군곡성군구례군",
+   "rlct": "3선",
+   "eras": "제16대, 제17대, 제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/UIN2835Q.jpg"
+  },
+  {
+   "name": "남경필",
+   "hanja": "南景弼",
+   "party": "새누리당",
+   "parties": "한나라당/한나라당/한나라당/한나라당/새누리당",
+   "elecd": "경기 수원시병",
+   "rlct": "5선",
+   "eras": "제15대, 제16대, 제17대, 제18대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/EI023764.jpg"
+  },
+  {
+   "name": "남인순",
+   "hanja": "南仁順",
+   "party": "더불어민주당",
+   "parties": "민주통합당/더불어민주당/더불어민주당/더불어민주당",
+   "elecd": "서울 송파구병",
+   "rlct": "4선",
+   "eras": "제19대, 제20대, 제21대, 제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/b265059dddd24f329d9361e3d0f62e4e.jpg"
+  },
+  {
+   "name": "노승우",
+   "hanja": "盧承禹",
+   "party": "신한국당",
+   "parties": "민주자유당/신한국당",
+   "elecd": "서울 동대문구갑",
+   "rlct": "재선",
+   "eras": "제14대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/14C8747Q.jpg"
+  },
+  {
+   "name": "류지영",
+   "hanja": "柳知영",
+   "party": "새누리당",
+   "parties": "새누리당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/EJS5449A.jpg"
+  },
+  {
+   "name": "문병호",
+   "hanja": "文炳浩",
+   "party": "민주통합당",
+   "parties": "열린우리당/민주통합당",
+   "elecd": "인천 부평구갑",
+   "rlct": "재선",
+   "eras": "제17대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/RYL1698T.jpg"
+  },
+  {
+   "name": "문정림",
+   "hanja": "文靜林",
+   "party": "자유선진당",
+   "parties": "자유선진당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/3EF4589Q.jpg"
+  },
+  {
+   "name": "문창모",
+   "hanja": "文昌模",
+   "party": "통일국민당",
+   "parties": "통일국민당",
+   "elecd": "",
+   "rlct": "초선",
+   "eras": "제14대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/JQ81454B.jpg"
+  },
+  {
+   "name": "문희",
+   "hanja": "文姬",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/8QY4415F.jpg"
+  },
+  {
+   "name": "민현주",
+   "hanja": "閔炫珠",
+   "party": "새누리당",
+   "parties": "새누리당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/97C8328D.jpg"
+  },
+  {
+   "name": "박경미",
+   "hanja": "朴炅美",
+   "party": "더불어민주당",
+   "parties": "더불어민주당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/JMD3241I.jpg"
+  },
+  {
+   "name": "박관용",
+   "hanja": "朴寬用",
+   "party": "한나라당",
+   "parties": "민주한국당/신한민주당/통일민주당/민주자유당/신한국당/한나라당",
+   "elecd": "부산광역시 동래구",
+   "rlct": "6선",
+   "eras": "제11대, 제12대, 제13대, 제14대, 제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/TQH7044H.jpg"
+  },
+  {
+   "name": "박근혜",
+   "hanja": "朴槿惠",
+   "party": "새누리당",
+   "parties": "한나라당/한나라당/한나라당/한나라당/새누리당",
+   "elecd": "비례대표",
+   "rlct": "5선",
+   "eras": "제15대, 제16대, 제17대, 제18대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/4HB8518T.jpg"
+  },
+  {
+   "name": "박금자",
+   "hanja": "朴錦子",
+   "party": "새천년민주당",
+   "parties": "새천년민주당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/0664957K.jpg"
+  },
+  {
+   "name": "박명재",
+   "hanja": "朴明在",
+   "party": "새누리당",
+   "parties": "새누리당/새누리당",
+   "elecd": "경북 포항시남구울릉군",
+   "rlct": "재선",
+   "eras": "제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/OTE19384.jpg"
+  },
+  {
+   "name": "박상은",
+   "hanja": "朴商銀",
+   "party": "새누리당",
+   "parties": "한나라당/새누리당",
+   "elecd": "인천 중구동구옹진군",
+   "rlct": "재선",
+   "eras": "제18대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/RK22879B.jpg"
+  },
+  {
+   "name": "박상천",
+   "hanja": "朴相千",
+   "party": "통합민주당",
+   "parties": "평화민주당/민주당/새정치국민회의/새천년민주당/통합민주당",
+   "elecd": "전남 고흥군,보성군",
+   "rlct": "5선",
+   "eras": "제13대, 제14대, 제15대, 제16대, 제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/MHE1145A.jpg"
+  },
+  {
+   "name": "박성효",
+   "hanja": "朴城孝",
+   "party": "새누리당",
+   "parties": "새누리당",
+   "elecd": "대전 대덕구",
+   "rlct": "초선",
+   "eras": "제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/TS24083U.jpg"
+  },
+  {
+   "name": "박순자",
+   "hanja": "朴順子",
+   "party": "새누리당",
+   "parties": "한나라당/한나라당/새누리당",
+   "elecd": "경기 안산시단원구을",
+   "rlct": "3선",
+   "eras": "제17대, 제18대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/YLM92014.jpg"
+  },
+  {
+   "name": "박시균",
+   "hanja": "朴是均",
+   "party": "한나라당",
+   "parties": "무소속/한나라당",
+   "elecd": "경상북도 영주시",
+   "rlct": "재선",
+   "eras": "제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/PK58741O.jpg"
+  },
+  {
+   "name": "박용갑",
+   "hanja": "朴龍甲",
+   "party": "더불어민주당",
+   "parties": "더불어민주당",
+   "elecd": "대전 중구",
+   "rlct": "초선",
+   "eras": "제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/61ae3968052447c2b150bca49ff6aa7f.jpg"
+  },
+  {
+   "name": "박윤옥",
+   "hanja": "朴允玉",
+   "party": "새누리당",
+   "parties": "새누리당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/54Q4619H.jpg"
+  },
+  {
+   "name": "박은수",
+   "hanja": "朴殷秀",
+   "party": "통합민주당",
+   "parties": "통합민주당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/7GP7701F.jpg"
+  },
+  {
+   "name": "박인숙",
+   "hanja": "朴仁淑",
+   "party": "새누리당",
+   "parties": "새누리당/새누리당",
+   "elecd": "서울 송파구갑",
+   "rlct": "재선",
+   "eras": "제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/IQ54138I.jpg"
+  },
+  {
+   "name": "박재완",
+   "hanja": "朴宰完",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/JPE16970.jpg"
+  },
+  {
+   "name": "박종웅",
+   "hanja": "朴鍾雄",
+   "party": "한나라당",
+   "parties": "민주자유당/신한국당/한나라당",
+   "elecd": "부산광역시 사하구을",
+   "rlct": "3선",
+   "eras": "제14대, 제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/96J8998B.jpg"
+  },
+  {
+   "name": "박주천",
+   "hanja": "朴柱千",
+   "party": "한나라당",
+   "parties": "민주자유당/신한국당/한나라당",
+   "elecd": "서울특별시 마포구을",
+   "rlct": "3선",
+   "eras": "제14대, 제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/ACK5474A.jpg"
+  },
+  {
+   "name": "박지원",
+   "hanja": "朴芝源",
+   "party": "더불어민주당",
+   "parties": "더불어민주당",
+   "elecd": "전북 군산시김제시부안군을",
+   "rlct": "초선",
+   "eras": "제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/067a6ea7973e4986a0929c5d1c4be0ff.jpg"
+  },
+  {
+   "name": "박창달",
+   "hanja": "朴昌達",
+   "party": "한나라당",
+   "parties": "한나라당/한나라당/한나라당",
+   "elecd": "대구 동구을",
+   "rlct": "3선",
+   "eras": "제15대, 제16대, 제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/2GM8059R.jpg"
+  },
+  {
+   "name": "박태준",
+   "hanja": "朴泰俊",
+   "party": "무소속",
+   "parties": "민주정의당/민주정의당/민주자유당/무소속",
+   "elecd": "경북 포항시북구",
+   "rlct": "4선",
+   "eras": "제11대, 제13대, 제14대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/J4X86065.jpg"
+  },
+  {
+   "name": "박혁규",
+   "hanja": "朴赫圭",
+   "party": "한나라당",
+   "parties": "한나라당/한나라당",
+   "elecd": "경기 광주군",
+   "rlct": "재선",
+   "eras": "제16대, 제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/WZL8101U.jpg"
+  },
+  {
+   "name": "박희태",
+   "hanja": "朴熺太",
+   "party": "한나라당",
+   "parties": "민주정의당/민주자유당/신한국당/한나라당/한나라당/한나라당",
+   "elecd": "경남 양산시",
+   "rlct": "6선",
+   "eras": "제13대, 제14대, 제15대, 제16대, 제17대, 제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/FSN5613H.jpg"
+  },
+  {
+   "name": "배기선",
+   "hanja": "裵基善",
+   "party": "열린우리당",
+   "parties": "민주당/새천년민주당/열린우리당",
+   "elecd": "경기도 부천시원미구을",
+   "rlct": "3선",
+   "eras": "제14대, 제16대, 제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/Y009633J.jpg"
+  },
+  {
+   "name": "배덕광",
+   "hanja": "裵德光",
+   "party": "새누리당",
+   "parties": "새누리당/새누리당",
+   "elecd": "부산 해운대구을",
+   "rlct": "재선",
+   "eras": "제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/9CR4440H.jpg"
+  },
+  {
+   "name": "배명국",
+   "hanja": "裵命國",
+   "party": "민주자유당",
+   "parties": "민주정의당/민주정의당/민주자유당",
+   "elecd": "경남 진해,창원시",
+   "rlct": "3선",
+   "eras": "제11대, 제12대, 제14대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/2PC65130.jpg"
+  },
+  {
+   "name": "백선희",
+   "hanja": "白仙姬",
+   "party": "조국혁신당",
+   "parties": "조국혁신당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/446b8aed67c64e6097539b99b0eb97a7.jpg"
+  },
+  {
+   "name": "백원우",
+   "hanja": "白元宇",
+   "party": "통합민주당",
+   "parties": "열린우리당/통합민주당",
+   "elecd": "경기 시흥시갑",
+   "rlct": "재선",
+   "eras": "제17대, 제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/TA88758O.jpg"
+  },
+  {
+   "name": "백종헌",
+   "hanja": "白宗憲",
+   "party": "국민의힘",
+   "parties": "미래통합당/국민의힘",
+   "elecd": "부산 금정구",
+   "rlct": "재선",
+   "eras": "제21대, 제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/335e79371cec41a7991431788b9fead9.jpg"
+  },
+  {
+   "name": "변웅전",
+   "hanja": "邊雄田",
+   "party": "자유선진당",
+   "parties": "자유민주연합/자유민주연합/자유선진당",
+   "elecd": "충남 서산시,태안군",
+   "rlct": "3선",
+   "eras": "제15대, 제16대, 제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/BJW1335W.jpg"
+  },
+  {
+   "name": "서미화",
+   "hanja": "徐美和",
+   "party": "더불어민주연합",
+   "parties": "더불어민주연합",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/0694f551f21c40b2a4bbccd2e90ce40c.jpg"
+  },
+  {
+   "name": "서상목",
+   "hanja": "徐相穆",
+   "party": "신한국당",
+   "parties": "민주정의당/민주자유당/신한국당",
+   "elecd": "서울 강남구갑",
+   "rlct": "3선",
+   "eras": "제13대, 제14대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/33J43967.jpg"
+  },
+  {
+   "name": "서영석",
+   "hanja": "徐暎錫",
+   "party": "더불어민주당",
+   "parties": "더불어민주당/더불어민주당",
+   "elecd": "경기 부천시갑",
+   "rlct": "재선",
+   "eras": "제21대, 제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/bdf94a0756144b4a9ff6e71eb8bed16e.jpg"
+  },
+  {
+   "name": "서훈",
+   "hanja": "徐勳",
+   "party": "무소속",
+   "parties": "무소속/무소속",
+   "elecd": "대구 동구을",
+   "rlct": "재선",
+   "eras": "제14대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/MCV55303.jpg"
+  },
+  {
+   "name": "소병훈",
+   "hanja": "蘇秉勳",
+   "party": "더불어민주당",
+   "parties": "더불어민주당/더불어민주당/더불어민주당",
+   "elecd": "경기 광주시갑",
+   "rlct": "3선",
+   "eras": "제20대, 제21대, 제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/a8512c3a87fe463c9d063ecb7a34680c.jpg"
+  },
+  {
+   "name": "손세일",
+   "hanja": "孫世一",
+   "party": "새정치국민회의",
+   "parties": "민주한국당/민주당/새정치국민회의",
+   "elecd": "서울 은평구갑",
+   "rlct": "3선",
+   "eras": "",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/5OE21654.jpg"
+  },
+  {
+   "name": "손숙미",
+   "hanja": "孫淑美",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/INO4490Y.jpg"
+  },
+  {
+   "name": "손혜원",
+   "hanja": "孫惠園",
+   "party": "더불어민주당",
+   "parties": "더불어민주당",
+   "elecd": "서울 마포구을",
+   "rlct": "초선",
+   "eras": "제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/ZBX31520.jpg"
+  },
+  {
+   "name": "손희정",
+   "hanja": "孫希政",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/4PP40693.jpg"
+  },
+  {
+   "name": "송광호",
+   "hanja": "宋光浩",
+   "party": "새누리당",
+   "parties": "통일국민당/자유민주연합/한나라당/새누리당",
+   "elecd": "충북 제천시단양군",
+   "rlct": "4선",
+   "eras": "제14대, 제16대, 제18대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/LJJ52334.jpg"
+  },
+  {
+   "name": "송두호",
+   "hanja": "宋斗灝",
+   "party": "민주자유당",
+   "parties": "통일민주당/민주자유당",
+   "elecd": "부산 강서구",
+   "rlct": "재선",
+   "eras": "제13대, 제14대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/6Z125924.jpg"
+  },
+  {
+   "name": "송천영",
+   "hanja": "宋千永",
+   "party": "민주당",
+   "parties": "신한민주당/민주당",
+   "elecd": "대전 동구을",
+   "rlct": "재선",
+   "eras": "제12대, 제14대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/W753054A.jpg"
+  },
+  {
+   "name": "신경림",
+   "hanja": "辛瓊林",
+   "party": "새누리당",
+   "parties": "새누리당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/LAU79556.jpg"
+  },
+  {
+   "name": "신기남",
+   "hanja": "辛基南",
+   "party": "민주통합당",
+   "parties": "새정치국민회의/새천년민주당/열린우리당/민주통합당",
+   "elecd": "서울 강서구갑",
+   "rlct": "4선",
+   "eras": "제15대, 제16대, 제17대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/E2O7996B.jpg"
+  },
+  {
+   "name": "신기하",
+   "hanja": "辛基夏",
+   "party": "새정치국민회의",
+   "parties": "신한민주당/평화민주당/민주당/새정치국민회의",
+   "elecd": "광주 동구",
+   "rlct": "4선",
+   "eras": "제12대, 제13대, 제14대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/VYI2708Q.jpg"
+  },
+  {
+   "name": "신상우",
+   "hanja": "辛相佑",
+   "party": "신한국당",
+   "parties": "신민당/신민당/신민당/민주한국당/통일민주당/민주자유당/신한국당",
+   "elecd": "부산 사상구을",
+   "rlct": "7선",
+   "eras": "제8대, 제9대, 제10대, 제11대, 제13대, 제14대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/5637263F.jpg"
+  },
+  {
+   "name": "신상진",
+   "hanja": "申相珍",
+   "party": "새누리당",
+   "parties": "한나라당/한나라당/새누리당/새누리당",
+   "elecd": "경기 성남시중원구",
+   "rlct": "4선",
+   "eras": "제17대, 제18대, 제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/71M8132V.jpg"
+  },
+  {
+   "name": "신영균",
+   "hanja": "申榮均",
+   "party": "한나라당",
+   "parties": "신한국당/한나라당",
+   "elecd": "비례대표",
+   "rlct": "재선",
+   "eras": "제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/KBH6263N.jpg"
+  },
+  {
+   "name": "신의진",
+   "hanja": "申宜眞",
+   "party": "새누리당",
+   "parties": "새누리당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/KKD3190X.jpg"
+  },
+  {
+   "name": "심재철",
+   "hanja": "沈在哲",
+   "party": "새누리당",
+   "parties": "한나라당/한나라당/한나라당/새누리당/새누리당",
+   "elecd": "경기 안양시동안구을",
+   "rlct": "5선",
+   "eras": "제16대, 제17대, 제18대, 제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/FGX4881A.jpg"
+  },
+  {
+   "name": "안대륜",
+   "hanja": "安大崙",
+   "party": "자유민주연합",
+   "parties": "자유민주연합",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/BAR6880D.jpg"
+  },
+  {
+   "name": "안명옥",
+   "hanja": "安明玉",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/C687242Z.jpg"
+  },
+  {
+   "name": "안찬희",
+   "hanja": "安瓚熙",
+   "party": "민주자유당",
+   "parties": "민주정의당/민주자유당",
+   "elecd": "경기 가평군,양평군",
+   "rlct": "재선",
+   "eras": "제13대, 제14대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/Q7D3831A.jpg"
+  },
+  {
+   "name": "안홍준",
+   "hanja": "安鴻俊",
+   "party": "새누리당",
+   "parties": "한나라당/한나라당/새누리당",
+   "elecd": "경남 창원시마산회원구",
+   "rlct": "3선",
+   "eras": "제17대, 제18대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/FPX1564S.jpg"
+  },
+  {
+   "name": "양문희",
+   "hanja": "楊文熙",
+   "party": "민주당",
+   "parties": "민주당",
+   "elecd": "",
+   "rlct": "초선",
+   "eras": "제14대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/NKK6370Y.jpg"
+  },
+  {
+   "name": "양승조",
+   "hanja": "梁承晁",
+   "party": "더불어민주당",
+   "parties": "열린우리당/통합민주당/민주통합당/더불어민주당",
+   "elecd": "충남 천안시병",
+   "rlct": "4선",
+   "eras": "제17대, 제18대, 제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/TIS61927.jpg"
+  },
+  {
+   "name": "어준선",
+   "hanja": "魚浚善",
+   "party": "자유민주연합",
+   "parties": "자유민주연합",
+   "elecd": "충북 보은,옥천,영동군",
+   "rlct": "초선",
+   "eras": "제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/CK84835P.jpg"
+  },
+  {
+   "name": "오양순",
+   "hanja": "吳陽順",
+   "party": "신한국당",
+   "parties": "신한국당",
+   "elecd": "",
+   "rlct": "초선",
+   "eras": "제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/D8I8826O.jpg"
+  },
+  {
+   "name": "오영식",
+   "hanja": "吳泳食",
+   "party": "민주통합당",
+   "parties": "새천년민주당/열린우리당/민주통합당",
+   "elecd": "서울 강북구갑",
+   "rlct": "3선",
+   "eras": "제16대, 제17대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/OK55632O.jpg"
+  },
+  {
+   "name": "오장섭",
+   "hanja": "吳長燮",
+   "party": "자유민주연합",
+   "parties": "민주자유당/신한국당/자유민주연합",
+   "elecd": "충남 예산군",
+   "rlct": "3선",
+   "eras": "제14대, 제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/NJ55552S.jpg"
+  },
+  {
+   "name": "오제세",
+   "hanja": "吳濟世",
+   "party": "더불어민주당",
+   "parties": "열린우리당/통합민주당/민주통합당/더불어민주당",
+   "elecd": "충북 청주시서원구",
+   "rlct": "4선",
+   "eras": "제17대, 제18대, 제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/SVH30067.jpg"
+  },
+  {
+   "name": "원철희",
+   "hanja": "元喆喜",
+   "party": "자유민주연합",
+   "parties": "자유민주연합",
+   "elecd": "충청남도 아산시",
+   "rlct": "초선",
+   "eras": "제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/T7P8695T.jpg"
+  },
+  {
+   "name": "원희목",
+   "hanja": "元喜睦",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/4D93608C.jpg"
+  },
+  {
+   "name": "유시민",
+   "hanja": "柳時敏",
+   "party": "열린우리당",
+   "parties": "개혁국민정당/열린우리당",
+   "elecd": "경기도 고양시덕양구갑",
+   "rlct": "재선",
+   "eras": "제16대, 제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/XFH9918T.jpg"
+  },
+  {
+   "name": "유재중",
+   "hanja": "柳在仲",
+   "party": "새누리당",
+   "parties": "무소속/새누리당/새누리당",
+   "elecd": "부산 수영구",
+   "rlct": "3선",
+   "eras": "제18대, 제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/SEK1881Q.jpg"
+  },
+  {
+   "name": "유필우",
+   "hanja": "柳弼祐",
+   "party": "열린우리당",
+   "parties": "열린우리당",
+   "elecd": "인천광역시 남구갑",
+   "rlct": "초선",
+   "eras": "제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/YLM7354D.jpg"
+  },
+  {
+   "name": "윤건영",
+   "hanja": "尹建永",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/OHW68320.jpg"
+  },
+  {
+   "name": "윤석용",
+   "hanja": "尹碩鎔",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "서울 강동구을",
+   "rlct": "초선",
+   "eras": "제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/S312791R.jpg"
+  },
+  {
+   "name": "윤소하",
+   "hanja": "尹昭夏",
+   "party": "정의당",
+   "parties": "정의당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/8X46899U.jpg"
+  },
+  {
+   "name": "윤여준",
+   "hanja": "尹汝儁",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/YDT17694.jpg"
+  },
+  {
+   "name": "윤일규",
+   "hanja": "尹一逵",
+   "party": "더불어민주당",
+   "parties": "더불어민주당",
+   "elecd": "충남 천안시병",
+   "rlct": "초선",
+   "eras": "제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/5DR6334X.jpg"
+  },
+  {
+   "name": "윤종필",
+   "hanja": "尹鍾畢",
+   "party": "새누리당",
+   "parties": "새누리당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/Q6G2914I.jpg"
+  },
+  {
+   "name": "이강두",
+   "hanja": "李康斗",
+   "party": "한나라당",
+   "parties": "무소속/신한국당/한나라당/한나라당",
+   "elecd": "경남 산청,함양,거창군",
+   "rlct": "4선",
+   "eras": "제14대, 제15대, 제16대, 제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/W8L79935.jpg"
+  },
+  {
+   "name": "이기우",
+   "hanja": "李基宇",
+   "party": "열린우리당",
+   "parties": "열린우리당",
+   "elecd": "경기도 수원시권선구",
+   "rlct": "초선",
+   "eras": "제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/FP331081.jpg"
+  },
+  {
+   "name": "이달희",
+   "hanja": "李達姬",
+   "party": "국민의미래",
+   "parties": "국민의미래",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/65be51449b5f4f8fb007b5bf0f9bd3e2.png"
+  },
+  {
+   "name": "이두아",
+   "hanja": "李枓娥",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/EIV1883J.jpg"
+  },
+  {
+   "name": "이만희",
+   "hanja": "李晩熙",
+   "party": "국민의힘",
+   "parties": "새누리당/미래통합당/국민의힘",
+   "elecd": "경북 영천시청도군",
+   "rlct": "3선",
+   "eras": "제20대, 제21대, 제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/e1c9c9575d334b66943ed2fc9a8847ad.jpg"
+  },
+  {
+   "name": "이목희",
+   "hanja": "李穆熙",
+   "party": "민주통합당",
+   "parties": "열린우리당/민주통합당",
+   "elecd": "서울 금천구",
+   "rlct": "재선",
+   "eras": "제17대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/V822582Y.jpg"
+  },
+  {
+   "name": "이미경",
+   "hanja": "李美卿",
+   "party": "민주통합당",
+   "parties": "통합민주당/새천년민주당/열린우리당/통합민주당/민주통합당",
+   "elecd": "서울 은평구갑",
+   "rlct": "5선",
+   "eras": "제15대, 제16대, 제17대, 제18대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/EBU8493R.jpg"
+  },
+  {
+   "name": "이민헌",
+   "hanja": "李民憲",
+   "party": "민주자유당",
+   "parties": "민주자유당",
+   "elecd": "",
+   "rlct": "초선",
+   "eras": "제14대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/HR43900N.jpg"
+  },
+  {
+   "name": "이병석",
+   "hanja": "李秉錫",
+   "party": "새누리당",
+   "parties": "한나라당/한나라당/한나라당/새누리당",
+   "elecd": "경북 포항시북구",
+   "rlct": "4선",
+   "eras": "제16대, 제17대, 제18대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/D7L1937J.jpg"
+  },
+  {
+   "name": "이상락",
+   "hanja": "李相樂",
+   "party": "열린우리당",
+   "parties": "열린우리당",
+   "elecd": "경기도 성남시중원구",
+   "rlct": "초선",
+   "eras": "제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/7XG93147.jpg"
+  },
+  {
+   "name": "이상수",
+   "hanja": "李相洙",
+   "party": "새천년민주당",
+   "parties": "평화민주당/새정치국민회의/새천년민주당",
+   "elecd": "서울특별시 중랑구갑",
+   "rlct": "3선",
+   "eras": "제13대, 제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/5W34729L.jpg"
+  },
+  {
+   "name": "이석현",
+   "hanja": "李錫玄",
+   "party": "더불어민주당",
+   "parties": "민주당/새정치국민회의/열린우리당/통합민주당/민주통합당/더불어민주당",
+   "elecd": "경기 안양시동안구갑",
+   "rlct": "6선",
+   "eras": "제14대, 제15대, 제17대, 제18대, 제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/GMK1374L.jpg"
+  },
+  {
+   "name": "이성구",
+   "hanja": "李聲九",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/HQZ6238Q.jpg"
+  },
+  {
+   "name": "이성재",
+   "hanja": "李聖宰",
+   "party": "새정치국민회의",
+   "parties": "새정치국민회의",
+   "elecd": "",
+   "rlct": "초선",
+   "eras": "제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/04C1334C.jpg"
+  },
+  {
+   "name": "이소희",
+   "hanja": "李昭熙",
+   "party": "국민의힘",
+   "parties": "국민의힘",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/MRS4949T.jpg"
+  },
+  {
+   "name": "이수인",
+   "hanja": "李壽仁",
+   "party": "통합민주당",
+   "parties": "평화민주당/통합민주당",
+   "elecd": "전남 함평,영광군",
+   "rlct": "재선",
+   "eras": "제13대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/66U24346.jpg"
+  },
+  {
+   "name": "이수진",
+   "hanja": "李壽珍",
+   "party": "더불어민주당",
+   "parties": "더불어시민당/더불어민주당",
+   "elecd": "경기 성남시중원구",
+   "rlct": "재선",
+   "eras": "제21대, 제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/813a596915cc475d89c50722ce5764bc.jpg"
+  },
+  {
+   "name": "이애주",
+   "hanja": "李愛珠",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/JVR5259R.jpg"
+  },
+  {
+   "name": "이연석",
+   "hanja": "李年錫",
+   "party": "민주자유당",
+   "parties": "민주자유당",
+   "elecd": "",
+   "rlct": "초선",
+   "eras": "제14대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/M6Z6242O.jpg"
+  },
+  {
+   "name": "이완구",
+   "hanja": "李完九",
+   "party": "새누리당",
+   "parties": "신한국당/자유민주연합/새누리당",
+   "elecd": "충남 부여군청양군",
+   "rlct": "3선",
+   "eras": "제15대, 제16대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/WCA3290J.jpg"
+  },
+  {
+   "name": "이완영",
+   "hanja": "李完永",
+   "party": "새누리당",
+   "parties": "새누리당/새누리당",
+   "elecd": "경북 고령군성주군칠곡군",
+   "rlct": "재선",
+   "eras": "제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/8WV8289I.jpg"
+  },
+  {
+   "name": "이용삼",
+   "hanja": "李龍三",
+   "party": "통합민주당",
+   "parties": "민주자유당/신한국당/새천년민주당/통합민주당",
+   "elecd": "강원 철원,화천,양구,인제군",
+   "rlct": "4선",
+   "eras": "제14대, 제15대, 제16대, 제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/GBP60233.jpg"
+  },
+  {
+   "name": "이우재",
+   "hanja": "李佑宰",
+   "party": "한나라당",
+   "parties": "신한국당/한나라당",
+   "elecd": "서울특별시 금천구",
+   "rlct": "재선",
+   "eras": "제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/YZJ60561.jpg"
+  },
+  {
+   "name": "이원성",
+   "hanja": "李源性",
+   "party": "새천년민주당",
+   "parties": "새천년민주당",
+   "elecd": "충북 충주시",
+   "rlct": "초선",
+   "eras": "제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/A7577909.jpg"
+  },
+  {
+   "name": "이원창",
+   "hanja": "李元昌",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/PA52576I.jpg"
+  },
+  {
+   "name": "이원형",
+   "hanja": "李源炯",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/91155917.jpg"
+  },
+  {
+   "name": "이의익",
+   "hanja": "李義翊",
+   "party": "자유민주연합",
+   "parties": "자유민주연합",
+   "elecd": "대구 북구갑",
+   "rlct": "초선",
+   "eras": "제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/APN13982.jpg"
+  },
+  {
+   "name": "이인영",
+   "hanja": "李仁榮",
+   "party": "더불어민주당",
+   "parties": "열린우리당/민주통합당/더불어민주당/더불어민주당/더불어민주당",
+   "elecd": "서울 구로구갑",
+   "rlct": "5선",
+   "eras": "제17대, 제19대, 제20대, 제21대, 제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/b84f1139ee484de5a94962ac9bcff09b.png"
+  },
+  {
+   "name": "이인제",
+   "hanja": "李仁濟",
+   "party": "자유선진당",
+   "parties": "통일민주당/민주자유당/새천년민주당/자유민주연합/무소속/자유선진당",
+   "elecd": "충남 논산시계룡시금산군",
+   "rlct": "6선",
+   "eras": "제13대, 제14대, 제16대, 제17대, 제18대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/HJI9845B.jpg"
+  },
+  {
+   "name": "이재선",
+   "hanja": "李在善",
+   "party": "자유선진당",
+   "parties": "자유민주연합/자유민주연합/자유선진당",
+   "elecd": "대전 서구을",
+   "rlct": "3선",
+   "eras": "제15대, 제16대, 제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/DDK4008U.jpg"
+  },
+  {
+   "name": "이재오",
+   "hanja": "李在五",
+   "party": "새누리당",
+   "parties": "신한국당/한나라당/한나라당/한나라당/새누리당",
+   "elecd": "서울 은평구을",
+   "rlct": "5선",
+   "eras": "제15대, 제16대, 제17대, 제18대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/NDH62175.jpg"
+  },
+  {
+   "name": "이정무",
+   "hanja": "李廷武",
+   "party": "자유민주연합",
+   "parties": "민주정의당/자유민주연합",
+   "elecd": "대구 남구",
+   "rlct": "재선",
+   "eras": "제13대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/KNJ5466T.jpg"
+  },
+  {
+   "name": "이정선",
+   "hanja": "李貞善",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/3RK46312.jpg"
+  },
+  {
+   "name": "이종걸",
+   "hanja": "李鍾杰",
+   "party": "더불어민주당",
+   "parties": "새천년민주당/열린우리당/통합민주당/민주통합당/더불어민주당",
+   "elecd": "경기 안양시만안구",
+   "rlct": "5선",
+   "eras": "제16대, 제17대, 제18대, 제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/WDR7061Y.jpg"
+  },
+  {
+   "name": "이종진",
+   "hanja": "李鐘鎭",
+   "party": "새누리당",
+   "parties": "새누리당",
+   "elecd": "대구 달성군",
+   "rlct": "초선",
+   "eras": "제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/D3V12361.jpg"
+  },
+  {
+   "name": "이춘식",
+   "hanja": "李春植",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/LZW5716C.jpg"
+  },
+  {
+   "name": "이한구",
+   "hanja": "李漢久",
+   "party": "새누리당",
+   "parties": "한나라당/한나라당/한나라당/새누리당",
+   "elecd": "대구 수성구갑",
+   "rlct": "4선",
+   "eras": "제16대, 제17대, 제18대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/XGQ9659R.jpg"
+  },
+  {
+   "name": "이한동",
+   "hanja": "李漢東",
+   "party": "자유민주연합",
+   "parties": "민주정의당/민주정의당/민주정의당/민주자유당/신한국당/자유민주연합",
+   "elecd": "경기 연천군포천군",
+   "rlct": "6선",
+   "eras": "제11대, 제12대, 제13대, 제14대, 제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/NUX49887.jpg"
+  },
+  {
+   "name": "이해봉",
+   "hanja": "李海鳳",
+   "party": "무소속",
+   "parties": "무소속/한나라당/한나라당/무소속",
+   "elecd": "대구 달서구을",
+   "rlct": "4선",
+   "eras": "제15대, 제16대, 제17대, 제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/RVD1966C.jpg"
+  },
+  {
+   "name": "이해찬",
+   "hanja": "李海瓚",
+   "party": "무소속",
+   "parties": "평화민주당/민주당/새정치국민회의/새천년민주당/열린우리당/민주통합당/무소속",
+   "elecd": "세종특별자치시",
+   "rlct": "7선",
+   "eras": "제13대, 제14대, 제15대, 제16대, 제17대, 제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/9ZP9014Q.jpg"
+  },
+  {
+   "name": "이회창",
+   "hanja": "李會昌",
+   "party": "자유선진당",
+   "parties": "신한국당/한나라당/한나라당/자유선진당",
+   "elecd": "충남 홍성군예산군",
+   "rlct": "3선",
+   "eras": "제15대, 제15대, 제16대, 제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/0P85685J.jpg"
+  },
+  {
+   "name": "인요한",
+   "hanja": "印曜翰",
+   "party": "국민의미래",
+   "parties": "국민의미래",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/B7789327.jpg"
+  },
+  {
+   "name": "임두성",
+   "hanja": "林斗成",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/7NN1740A.jpg"
+  },
+  {
+   "name": "임채정",
+   "hanja": "林采正",
+   "party": "열린우리당",
+   "parties": "민주당/새정치국민회의/새천년민주당/열린우리당",
+   "elecd": "서울 노원구병",
+   "rlct": "4선",
+   "eras": "제14대, 제15대, 제16대, 제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/UWS28633.jpg"
+  },
+  {
+   "name": "장경수",
+   "hanja": "張炅秀",
+   "party": "열린우리당",
+   "parties": "열린우리당",
+   "elecd": "경기 안산시상록구갑",
+   "rlct": "초선",
+   "eras": "제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/KZA7680N.jpg"
+  },
+  {
+   "name": "장복심",
+   "hanja": "張福心",
+   "party": "열린우리당",
+   "parties": "열린우리당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/VTB9705E.jpg"
+  },
+  {
+   "name": "장성원",
+   "hanja": "張誠源",
+   "party": "새천년민주당",
+   "parties": "새정치국민회의/새천년민주당",
+   "elecd": "전북 김제시",
+   "rlct": "재선",
+   "eras": "제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/4OP2362T.jpg"
+  },
+  {
+   "name": "장영철",
+   "hanja": "張永喆",
+   "party": "신한국당",
+   "parties": "민주정의당/민주자유당/신한국당",
+   "elecd": "경북 군위,칠곡군",
+   "rlct": "3선",
+   "eras": "제13대, 제14대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/UWX81091.jpg"
+  },
+  {
+   "name": "장정숙",
+   "hanja": "張貞淑",
+   "party": "국민의당",
+   "parties": "국민의당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/0AI7568W.jpg"
+  },
+  {
+   "name": "장정은",
+   "hanja": "張廷銀",
+   "party": "새누리당",
+   "parties": "새누리당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/YSL5919D.jpg"
+  },
+  {
+   "name": "장향숙",
+   "hanja": "張香淑",
+   "party": "열린우리당",
+   "parties": "열린우리당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/UUE26413.jpg"
+  },
+  {
+   "name": "전용원",
+   "hanja": "田瑢源",
+   "party": "한나라당",
+   "parties": "민주정의당/신한국당/한나라당",
+   "elecd": "경기도 구리시",
+   "rlct": "3선",
+   "eras": "제13대, 제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/C6N4172N.jpg"
+  },
+  {
+   "name": "전재희",
+   "hanja": "全在姬",
+   "party": "한나라당",
+   "parties": "한나라당/한나라당/한나라당/한나라당",
+   "elecd": "경기 광명시을",
+   "rlct": "3선",
+   "eras": "제16대, 제16대, 제17대, 제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/0WH9705X.jpg"
+  },
+  {
+   "name": "전종덕",
+   "hanja": "全鍾德",
+   "party": "더불어민주연합",
+   "parties": "더불어민주연합",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/03451d7c87ab45a79b703e74ab36cfa3.png"
+  },
+  {
+   "name": "전진숙",
+   "hanja": "全眞淑",
+   "party": "더불어민주당",
+   "parties": "더불어민주당",
+   "elecd": "광주 북구을",
+   "rlct": "초선",
+   "eras": "제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/96be0f17dc92446d9570067f9b664a5a.jpg"
+  },
+  {
+   "name": "정갑윤",
+   "hanja": "鄭甲潤",
+   "party": "새누리당",
+   "parties": "한나라당/한나라당/한나라당/새누리당/새누리당",
+   "elecd": "울산 중구",
+   "rlct": "5선",
+   "eras": "제16대, 제17대, 제18대, 제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/CYD5815E.jpg"
+  },
+  {
+   "name": "정몽준",
+   "hanja": "鄭夢準",
+   "party": "새누리당",
+   "parties": "무소속/통일국민당/무소속/무소속/국민통합21/한나라당/새누리당",
+   "elecd": "서울 동작구을",
+   "rlct": "7선",
+   "eras": "제13대, 제14대, 제15대, 제16대, 제17대, 제18대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/5YX7831C.jpg"
+  },
+  {
+   "name": "정미경",
+   "hanja": "鄭美京",
+   "party": "새누리당",
+   "parties": "한나라당/새누리당",
+   "elecd": "경기 수원시을",
+   "rlct": "재선",
+   "eras": "제18대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/OTR59398.jpg"
+  },
+  {
+   "name": "정병국",
+   "hanja": "鄭柄國",
+   "party": "새누리당",
+   "parties": "한나라당/한나라당/한나라당/새누리당/새누리당",
+   "elecd": "경기 여주시양평군",
+   "rlct": "5선",
+   "eras": "제16대, 제17대, 제18대, 제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/P303213F.jpg"
+  },
+  {
+   "name": "정상구",
+   "hanja": "鄭相九",
+   "party": "자유민주연합",
+   "parties": "혁신동우회/신민당/신한민주당/통일민주당/자유민주연합",
+   "elecd": "부산 남구을",
+   "rlct": "5선",
+   "eras": "제5대, 제7대, 제12대, 제13대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/HFG6145J.jpg"
+  },
+  {
+   "name": "정의화",
+   "hanja": "鄭義和",
+   "party": "새누리당",
+   "parties": "신한국당/한나라당/한나라당/한나라당/새누리당",
+   "elecd": "부산 중구동구",
+   "rlct": "5선",
+   "eras": "제15대, 제16대, 제17대, 제18대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/V1849655.jpg"
+  },
+  {
+   "name": "정인화",
+   "hanja": "鄭仁和",
+   "party": "국민의당",
+   "parties": "국민의당",
+   "elecd": "전남 광양시곡성군구례군",
+   "rlct": "초선",
+   "eras": "제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/DKB8522X.jpg"
+  },
+  {
+   "name": "정하균",
+   "hanja": "鄭河均",
+   "party": "친박연대",
+   "parties": "친박연대",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/HJG1284F.jpg"
+  },
+  {
+   "name": "정형근",
+   "hanja": "鄭亨根",
+   "party": "한나라당",
+   "parties": "신한국당/한나라당/한나라당",
+   "elecd": "부산 북,강서구갑",
+   "rlct": "3선",
+   "eras": "제15대, 제16대, 제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/AUU8827S.jpg"
+  },
+  {
+   "name": "정화원",
+   "hanja": "鄭和元",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/P924524G.jpg"
+  },
+  {
+   "name": "조배숙",
+   "hanja": "趙培淑",
+   "party": "국민의미래",
+   "parties": "새천년민주당/열린우리당/통합민주당/국민의당/국민의미래",
+   "elecd": "비례대표",
+   "rlct": "5선",
+   "eras": "제16대, 제17대, 제18대, 제20대, 제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/4927504637a6435c84ff327c77eaf735.jpg"
+  },
+  {
+   "name": "조성준",
+   "hanja": "趙誠俊",
+   "party": "새천년민주당",
+   "parties": "새정치국민회의/새천년민주당",
+   "elecd": "경기도 성남시중원구",
+   "rlct": "재선",
+   "eras": "제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/NLM21386.jpg"
+  },
+  {
+   "name": "조세형",
+   "hanja": "趙世衡",
+   "party": "새정치국민회의",
+   "parties": "신민당/평화민주당/민주당/새정치국민회의",
+   "elecd": "경기 광명시을",
+   "rlct": "4선",
+   "eras": "제10대, 제13대, 제14대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/ACT1860R.jpg"
+  },
+  {
+   "name": "조중연",
+   "hanja": "趙重衍",
+   "party": "민주당",
+   "parties": "신민당/민주한국당/민주당",
+   "elecd": "충남 부여,서천,보령군",
+   "rlct": "3선",
+   "eras": "제10대, 제11대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/BTC9315F.jpg"
+  },
+  {
+   "name": "조철구",
+   "hanja": "趙澈九",
+   "party": "새정치국민회의",
+   "parties": "새정치국민회의",
+   "elecd": "인천 서구",
+   "rlct": "초선",
+   "eras": "제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/0PD7143R.jpg"
+  },
+  {
+   "name": "조희욱",
+   "hanja": "曺喜旭",
+   "party": "자유민주연합",
+   "parties": "자유민주연합",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/RIH3256C.jpg"
+  },
+  {
+   "name": "주성영",
+   "hanja": "朱盛英",
+   "party": "한나라당",
+   "parties": "한나라당/한나라당",
+   "elecd": "대구 동구갑",
+   "rlct": "재선",
+   "eras": "제17대, 제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/EWR39555.jpg"
+  },
+  {
+   "name": "주승용",
+   "hanja": "朱昇鎔",
+   "party": "국민의당",
+   "parties": "열린우리당/통합민주당/민주통합당/국민의당",
+   "elecd": "전남 여수시을",
+   "rlct": "4선",
+   "eras": "제17대, 제18대, 제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/GCA42857.jpg"
+  },
+  {
+   "name": "주양자",
+   "hanja": "朱良子",
+   "party": "자유민주연합",
+   "parties": "민주자유당/자유민주연합",
+   "elecd": "",
+   "rlct": "재선",
+   "eras": "제14대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/RF233621.jpg"
+  },
+  {
+   "name": "진경탁",
+   "hanja": "陳京鐸",
+   "party": "신한국당",
+   "parties": "신한국당",
+   "elecd": "",
+   "rlct": "초선",
+   "eras": "제14대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/SIK52470.jpg"
+  },
+  {
+   "name": "차수명",
+   "hanja": "車秀明",
+   "party": "신한국당",
+   "parties": "통일국민당/신한국당",
+   "elecd": "경남 울산시남구갑",
+   "rlct": "재선",
+   "eras": "제14대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/SQT3346Q.jpg"
+  },
+  {
+   "name": "채영석",
+   "hanja": "蔡映錫",
+   "party": "새정치국민회의",
+   "parties": "평화민주당/민주당/새정치국민회의",
+   "elecd": "전북 군산갑",
+   "rlct": "3선",
+   "eras": "제13대, 제14대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/P1T31301.jpg"
+  },
+  {
+   "name": "천용택",
+   "hanja": "千容宅",
+   "party": "새천년민주당",
+   "parties": "새정치국민회의/새천년민주당",
+   "elecd": "전라남도 강진,완도군",
+   "rlct": "재선",
+   "eras": "제15대, 제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/O8Z3184P.jpg"
+  },
+  {
+   "name": "천정배",
+   "hanja": "千正培",
+   "party": "국민의당",
+   "parties": "새정치국민회의/새천년민주당/열린우리당/통합민주당/무소속/국민의당",
+   "elecd": "광주 서구을",
+   "rlct": "6선",
+   "eras": "제15대, 제16대, 제17대, 제18대, 제19대, 제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/3SP89633.jpg"
+  },
+  {
+   "name": "최경희",
+   "hanja": "崔敬禧",
+   "party": "한나라당",
+   "parties": "한나라당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/FP15333B.jpg"
+  },
+  {
+   "name": "최도자",
+   "hanja": "崔道子",
+   "party": "국민의당",
+   "parties": "국민의당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제20대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/O8E1566L.jpg"
+  },
+  {
+   "name": "최동익",
+   "hanja": "崔東益",
+   "party": "민주통합당",
+   "parties": "민주통합당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/KM010870.jpg"
+  },
+  {
+   "name": "최병국",
+   "hanja": "崔炳國",
+   "party": "한나라당",
+   "parties": "한나라당/한나라당/한나라당",
+   "elecd": "울산 남구갑",
+   "rlct": "3선",
+   "eras": "제16대, 제17대, 제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/RN65198P.jpg"
+  },
+  {
+   "name": "최보윤",
+   "hanja": "崔寶允",
+   "party": "국민의미래",
+   "parties": "국민의미래",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/084ad27bfd414d249c73484f8a1abe40.png"
+  },
+  {
+   "name": "최영희",
+   "hanja": "崔英姬",
+   "party": "통합민주당",
+   "parties": "통합민주당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제18대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/W0E4362P.jpg"
+  },
+  {
+   "name": "최영희",
+   "hanja": "崔榮熙",
+   "party": "새천년민주당",
+   "parties": "새천년민주당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제16대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/4SF3150L.jpg"
+  },
+  {
+   "name": "최용규",
+   "hanja": "崔龍圭",
+   "party": "열린우리당",
+   "parties": "새천년민주당/열린우리당",
+   "elecd": "인천 부평구을",
+   "rlct": "재선",
+   "eras": "제16대, 제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/7W28547U.jpg"
+  },
+  {
+   "name": "최원식",
+   "hanja": "崔元植",
+   "party": "민주통합당",
+   "parties": "민주통합당",
+   "elecd": "인천 계양구을",
+   "rlct": "초선",
+   "eras": "제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/EOY55268.jpg"
+  },
+  {
+   "name": "추경호",
+   "hanja": "秋慶鎬",
+   "party": "국민의힘",
+   "parties": "새누리당/미래통합당/국민의힘",
+   "elecd": "대구 달성군",
+   "rlct": "3선",
+   "eras": "제20대, 제21대, 제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/G152611B.jpg"
+  },
+  {
+   "name": "한광옥",
+   "hanja": "韓光玉",
+   "party": "새정치국민회의",
+   "parties": "민주한국당/평화민주당/민주당/새정치국민회의",
+   "elecd": "서울 구로구을",
+   "rlct": "4선",
+   "eras": "제11대, 제13대, 제14대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/0EI5067Y.jpg"
+  },
+  {
+   "name": "한지아",
+   "hanja": "韓智雅",
+   "party": "국민의미래",
+   "parties": "국민의미래",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/3748b905b7394465962c8676cd0813dd.png"
+  },
+  {
+   "name": "허종식",
+   "hanja": "許琮植",
+   "party": "더불어민주당",
+   "parties": "더불어민주당/더불어민주당",
+   "elecd": "인천 동구미추홀구갑",
+   "rlct": "재선",
+   "eras": "제21대, 제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/339cde11231c491fa74e47d685b0dbc4.jpg"
+  },
+  {
+   "name": "현애자",
+   "hanja": "玄愛子",
+   "party": "민주노동당",
+   "parties": "민주노동당",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제17대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/ARF1960L.jpg"
+  },
+  {
+   "name": "황규선",
+   "hanja": "黃圭宣",
+   "party": "민주당",
+   "parties": "민주당",
+   "elecd": "경기 이천시",
+   "rlct": "초선",
+   "eras": "제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/BIS88804.jpg"
+  },
+  {
+   "name": "황성균",
+   "hanja": "黃性均",
+   "party": "무소속",
+   "parties": "민주정의당/무소속",
+   "elecd": "경남 사천시",
+   "rlct": "재선",
+   "eras": "제13대, 제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/6JD7752M.jpg"
+  },
+  {
+   "name": "황우여",
+   "hanja": "黃祐呂",
+   "party": "새누리당",
+   "parties": "신한국당/한나라당/한나라당/한나라당/새누리당",
+   "elecd": "인천 연수구",
+   "rlct": "5선",
+   "eras": "제15대, 제16대, 제17대, 제18대, 제19대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/Q5X4506F.jpg"
+  },
+  {
+   "name": "황학수",
+   "hanja": "黃鶴洙",
+   "party": "자유민주연합",
+   "parties": "자유민주연합",
+   "elecd": "강원 강릉시갑",
+   "rlct": "초선",
+   "eras": "제15대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/PMW8896E.jpg"
+  }
+ ]
+}

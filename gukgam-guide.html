@@ -98,12 +98,13 @@
     <p>보건복지위 위원 한 명당 한 장 — 발언 이력·관심 분야·대표 질의·대응 포인트를 브리핑 형식으로 정리했습니다. 인쇄하면 보고용 문서가 됩니다.</p>
     <div class="top-nav">
       <a href="gukgam.html">홈</a>
-      <a href="gukgam-2025.html">2025 국감</a>
+      <a href="gukgam-year.html">최근 국감</a>
       <a href="gukgam-mohw.html">복지부</a>
       <a href="gukgam-kdca.html">질병청</a>
       <a href="gukgam-mfds.html">식약처</a>
       <a href="gukgam-covid.html">코로나19</a>
-      <a href="gukgam-all.html" class="on">전체 자료·도구</a>
+      <a href="gukgam-guide.html" class="on">의원별 가이드북</a>
+      <a href="gukgam-all.html">전체 자료·도구</a>
     </div>
     <div class="unofficial-note" style="font-size:.74rem;color:rgba(255,255,255,.82);margin:8px 2px 0;">개인이 만든 <b>비공식 참고자료</b>입니다 — 국회·보건복지부·질병관리청·식품의약품안전처 등 어떤 기관의 공식 사이트도 아니며, 모든 자료의 원 출처는 대한민국 국회(열린국회정보·회의록·결과보고서)입니다.</div>
     <div class="notice">이 가이드는 <strong>국감 회의록(제21~22대)과 국회 공개 프로필에 근거한 자동 분석</strong>입니다. 대표 질의는 회의록 원문 인용이며, 성향 판단이 아닌 발언 기록 기반 분석입니다. 언론 보도·SNS 등 외부 평판 정보는 포함하지 않으니 참고 링크로 보완하세요.</div>
@@ -244,7 +245,11 @@
     G=res[0].items||[];
     EXTRA=(res[1]||{}).items||{};
     if(!G.length){ document.getElementById('brief').innerHTML='<div style="text-align:center;color:#5f6e80;padding:40px 0;">가이드 데이터가 없습니다.</div>'; return; }
-    renderBrief(0);
+    // 다른 페이지에서 ?m=이름 또는 #이름으로 넘어오면 그 위원을 바로 연다
+    var want=decodeURIComponent((/[?&]m=([^&]+)/.exec(location.search||'')||[])[1]||(location.hash||'').slice(1)||'');
+    var wi=want?G.map(function(g){return g.name;}).indexOf(want):-1;
+    renderBrief(wi>=0?wi:0);
+    if(wi>=0){ var b0=document.getElementById('brief'); if(b0) setTimeout(function(){ b0.scrollIntoView({behavior:'smooth',block:'start'}); }, 80); }
   });
   document.getElementById('roster').addEventListener('click', function(e){
     var it=e.target.closest('.r-item'); if(!it) return;

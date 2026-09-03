@@ -19,7 +19,7 @@ DATA = os.path.join(ROOT, "data", "gukgam")
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build_kdca_qa as K          # pdf_text · SPEAKER · parse_mark · clean 재사용
 
-ERAS = ("제21대", "제22대")
+ERAS = ("제19대", "제20대", "제21대", "제22대")   # 2012~ (SFTS 국내 첫 확인 2013년 — 그 무렵 국감까지)
 MAXLEN = 100000                    # 사실상 전문 — 발췌(600자)로 자르면 뒷부분 질환명이 검색에서 빠진다(1차 색인에서 10%가 잘림)
 FMT = 4                            # 파일 형식 버전 — 바뀌면 전체 재색인 (2: 전문 · 3: "…" 필터 비례화 · 4: 위원장대리 이름 정정)
 INDEX = os.path.join(DATA, "remarks-index.json")
@@ -116,7 +116,7 @@ def main():
         years[y] = len(items)
     with io.open(INDEX, "w", encoding="utf-8") as f:
         json.dump({"updated": datetime.date.today().isoformat(), "fmt": FMT,
-                   "note": "보건복지위 국감 회의록(제21~22대) 위원·위원장 발언 전체 색인(전문). 답변이 붙지 않은 발언도 포함. 회의록 URL은 연도 파일의 urls(날짜→URL).",
+                   "note": "보건복지위 국감 회의록(제19~22대, 2012~) 위원·위원장 발언 전체 색인(전문). 답변이 붙지 않은 발언도 포함. 회의록 URL은 연도 파일의 urls(날짜→URL).",
                    "processed": sorted(processed), "years": years}, f, ensure_ascii=False, indent=1)
     print("완료: 회의록 %d건 신규 · 연도별 발언 %s" % (new, years))
     return 0

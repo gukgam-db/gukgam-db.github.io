@@ -1,7 +1,7 @@
 {
  "updated": "2026-09-02",
  "note": "국정감사 회의록에 발언이 기록된 위원 기준. 국감에서 발언하지 않은 위원은 빠질 수 있음. 정당·지역구는 열린국회정보 ALLNAMEMBER(최근 소속) 기준. 위성정당은 합당 후 정당으로 표기.",
- "source_all": false,
+ "source_all": true,
  "years": [
   {
    "year": 2025,
@@ -25,7 +25,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 691,
+     "turns": 692,
      "days": 8,
      "chair": true,
      "acting": false
@@ -69,10 +69,10 @@
      "elecd": "경기 성남시중원구",
      "rlct": "재선",
      "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/813a596915cc475d89c50722ce5764bc.jpg",
-     "turns": 262,
+     "turns": 277,
      "days": 8,
      "chair": false,
-     "acting": false
+     "acting": true
     },
     {
      "name": "백혜련",
@@ -157,7 +157,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 169,
+     "turns": 170,
      "days": 8,
      "chair": false,
      "acting": false
@@ -201,7 +201,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 153,
+     "turns": 154,
      "days": 8,
      "chair": false,
      "acting": false
@@ -307,10 +307,21 @@
      "elecd": "경기 성남시중원구",
      "rlct": "재선",
      "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/813a596915cc475d89c50722ce5764bc.jpg",
-     "turns": 332,
+     "turns": 333,
      "days": 8,
      "chair": false,
      "acting": false
+    },
+    {
+     "name": "강선우",
+     "party": "",
+     "elecd": "",
+     "rlct": "",
+     "photo": "",
+     "turns": 288,
+     "days": 8,
+     "chair": false,
+     "acting": true
     },
     {
      "name": "김예지",
@@ -318,7 +329,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 274,
+     "turns": 276,
      "days": 8,
      "chair": false,
      "acting": false
@@ -335,18 +346,18 @@
      "acting": false
     },
     {
-     "name": "김남희",
+     "name": "김미애",
      "party": "",
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 267,
+     "turns": 269,
      "days": 8,
      "chair": false,
      "acting": false
     },
     {
-     "name": "김미애",
+     "name": "김남희",
      "party": "",
      "elecd": "",
      "rlct": "",
@@ -362,7 +373,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 263,
+     "turns": 265,
      "days": 8,
      "chair": false,
      "acting": false
@@ -384,18 +395,7 @@
      "elecd": "서울 송파구병",
      "rlct": "4선",
      "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/b265059dddd24f329d9361e3d0f62e4e.jpg",
-     "turns": 255,
-     "days": 8,
-     "chair": false,
-     "acting": false
-    },
-    {
-     "name": "강선우",
-     "party": "",
-     "elecd": "",
-     "rlct": "",
-     "photo": "",
-     "turns": 246,
+     "turns": 256,
      "days": 8,
      "chair": false,
      "acting": false
@@ -428,7 +428,7 @@
      "elecd": "경기 광주시갑",
      "rlct": "3선",
      "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/a8512c3a87fe463c9d063ecb7a34680c.jpg",
-     "turns": 210,
+     "turns": 213,
      "days": 8,
      "chair": false,
      "acting": false
@@ -439,7 +439,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 202,
+     "turns": 203,
      "days": 8,
      "chair": false,
      "acting": false
@@ -483,7 +483,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 174,
+     "turns": 177,
      "days": 8,
      "chair": false,
      "acting": false
@@ -505,7 +505,7 @@
      "elecd": "비례대표",
      "rlct": "초선",
      "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/084ad27bfd414d249c73484f8a1abe40.png",
-     "turns": 157,
+     "turns": 159,
      "days": 8,
      "chair": false,
      "acting": false
@@ -559,7 +559,7 @@
     "2023-10-25"
    ],
    "count": 23,
-   "party_known": 3,
+   "party_known": 4,
    "members": [
     {
      "name": "신동근",
@@ -567,7 +567,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 713,
+     "turns": 714,
      "days": 8,
      "chair": true,
      "acting": false
@@ -589,7 +589,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 282,
+     "turns": 283,
      "days": 8,
      "chair": false,
      "acting": false
@@ -600,7 +600,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 254,
+     "turns": 259,
      "days": 8,
      "chair": false,
      "acting": false
@@ -617,12 +617,23 @@
      "acting": false
     },
     {
+     "name": "고영인",
+     "party": "",
+     "elecd": "",
+     "rlct": "",
+     "photo": "",
+     "turns": 240,
+     "days": 8,
+     "chair": false,
+     "acting": true
+    },
+    {
      "name": "서영석",
      "party": "더불어민주당",
      "elecd": "경기 부천시갑",
      "rlct": "재선",
      "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/bdf94a0756144b4a9ff6e71eb8bed16e.jpg",
-     "turns": 234,
+     "turns": 235,
      "days": 8,
      "chair": false,
      "acting": false
@@ -633,10 +644,21 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 233,
+     "turns": 234,
      "days": 8,
      "chair": false,
      "acting": false
+    },
+    {
+     "name": "강기윤",
+     "party": "",
+     "elecd": "",
+     "rlct": "",
+     "photo": "",
+     "turns": 228,
+     "days": 8,
+     "chair": false,
+     "acting": true
     },
     {
      "name": "강은미",
@@ -650,12 +672,12 @@
      "acting": false
     },
     {
-     "name": "고영인",
+     "name": "전혜숙",
      "party": "",
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 212,
+     "turns": 204,
      "days": 8,
      "chair": false,
      "acting": false
@@ -666,18 +688,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 203,
-     "days": 8,
-     "chair": false,
-     "acting": false
-    },
-    {
-     "name": "전혜숙",
-     "party": "",
-     "elecd": "",
-     "rlct": "",
-     "photo": "",
-     "turns": 202,
+     "turns": 204,
      "days": 8,
      "chair": false,
      "acting": false
@@ -688,18 +699,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 195,
-     "days": 8,
-     "chair": false,
-     "acting": false
-    },
-    {
-     "name": "강기윤",
-     "party": "",
-     "elecd": "",
-     "rlct": "",
-     "photo": "",
-     "turns": 182,
+     "turns": 196,
      "days": 8,
      "chair": false,
      "acting": false
@@ -710,7 +710,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 177,
+     "turns": 184,
      "days": 8,
      "chair": false,
      "acting": false
@@ -721,7 +721,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 173,
+     "turns": 174,
      "days": 8,
      "chair": false,
      "acting": false
@@ -749,12 +749,12 @@
      "acting": false
     },
     {
-     "name": "최영희",
+     "name": "한정애",
      "party": "",
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 149,
+     "turns": 156,
      "days": 8,
      "chair": false,
      "acting": false
@@ -765,7 +765,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 148,
+     "turns": 149,
      "days": 8,
      "chair": false,
      "acting": false
@@ -776,18 +776,18 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 145,
+     "turns": 149,
      "days": 8,
      "chair": false,
      "acting": false
     },
     {
-     "name": "한정애",
-     "party": "",
-     "elecd": "",
-     "rlct": "",
-     "photo": "",
-     "turns": 144,
+     "name": "최영희",
+     "party": "통합민주당",
+     "elecd": "비례대표",
+     "rlct": "초선",
+     "photo": "https://www.assembly.go.kr/static/portal/img/openassm/W0E4362P.jpg",
+     "turns": 149,
      "days": 8,
      "chair": false,
      "acting": false
@@ -830,7 +830,7 @@
     "2022-10-20"
    ],
    "count": 23,
-   "party_known": 3,
+   "party_known": 4,
    "members": [
     {
      "name": "정춘숙",
@@ -838,7 +838,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 658,
+     "turns": 661,
      "days": 8,
      "chair": true,
      "acting": false
@@ -849,18 +849,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 345,
-     "days": 8,
-     "chair": false,
-     "acting": false
-    },
-    {
-     "name": "남인순",
-     "party": "더불어민주당",
-     "elecd": "서울 송파구병",
-     "rlct": "4선",
-     "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/b265059dddd24f329d9361e3d0f62e4e.jpg",
-     "turns": 267,
+     "turns": 348,
      "days": 8,
      "chair": false,
      "acting": false
@@ -871,7 +860,18 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 257,
+     "turns": 285,
+     "days": 8,
+     "chair": false,
+     "acting": true
+    },
+    {
+     "name": "남인순",
+     "party": "더불어민주당",
+     "elecd": "서울 송파구병",
+     "rlct": "4선",
+     "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/b265059dddd24f329d9361e3d0f62e4e.jpg",
+     "turns": 269,
      "days": 8,
      "chair": false,
      "acting": false
@@ -882,7 +882,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 256,
+     "turns": 258,
      "days": 8,
      "chair": false,
      "acting": false
@@ -893,7 +893,7 @@
      "elecd": "경기 부천시갑",
      "rlct": "재선",
      "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/bdf94a0756144b4a9ff6e71eb8bed16e.jpg",
-     "turns": 242,
+     "turns": 243,
      "days": 8,
      "chair": false,
      "acting": false
@@ -915,7 +915,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 230,
+     "turns": 233,
      "days": 8,
      "chair": false,
      "acting": false
@@ -926,7 +926,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 230,
+     "turns": 233,
      "days": 8,
      "chair": false,
      "acting": false
@@ -937,7 +937,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 218,
+     "turns": 219,
      "days": 8,
      "chair": false,
      "acting": false
@@ -948,7 +948,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 198,
+     "turns": 200,
      "days": 8,
      "chair": false,
      "acting": false
@@ -965,18 +965,18 @@
      "acting": false
     },
     {
-     "name": "최연숙",
+     "name": "최혜영",
      "party": "",
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 184,
+     "turns": 186,
      "days": 8,
      "chair": false,
      "acting": false
     },
     {
-     "name": "최혜영",
+     "name": "최연숙",
      "party": "",
      "elecd": "",
      "rlct": "",
@@ -1003,7 +1003,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 164,
+     "turns": 166,
      "days": 8,
      "chair": false,
      "acting": false
@@ -1014,18 +1014,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 163,
-     "days": 8,
-     "chair": false,
-     "acting": false
-    },
-    {
-     "name": "최영희",
-     "party": "",
-     "elecd": "",
-     "rlct": "",
-     "photo": "",
-     "turns": 145,
+     "turns": 164,
      "days": 8,
      "chair": false,
      "acting": false
@@ -1036,7 +1025,18 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 143,
+     "turns": 145,
+     "days": 8,
+     "chair": false,
+     "acting": false
+    },
+    {
+     "name": "최영희",
+     "party": "통합민주당",
+     "elecd": "비례대표",
+     "rlct": "초선",
+     "photo": "https://www.assembly.go.kr/static/portal/img/openassm/W0E4362P.jpg",
+     "turns": 145,
      "days": 8,
      "chair": false,
      "acting": false
@@ -1047,7 +1047,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 136,
+     "turns": 141,
      "days": 8,
      "chair": false,
      "acting": false
@@ -1058,7 +1058,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 98,
+     "turns": 116,
      "days": 8,
      "chair": false,
      "acting": false
@@ -1069,7 +1069,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 96,
+     "turns": 99,
      "days": 6,
      "chair": false,
      "acting": false
@@ -1080,7 +1080,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 59,
+     "turns": 60,
      "days": 8,
      "chair": false,
      "acting": false
@@ -1108,7 +1108,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 251,
+     "turns": 253,
      "days": 7,
      "chair": true,
      "acting": false
@@ -1119,7 +1119,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 261,
+     "turns": 262,
      "days": 7,
      "chair": false,
      "acting": false
@@ -1147,6 +1147,17 @@
      "acting": false
     },
     {
+     "name": "김성주",
+     "party": "",
+     "elecd": "",
+     "rlct": "",
+     "photo": "",
+     "turns": 217,
+     "days": 7,
+     "chair": false,
+     "acting": true
+    },
+    {
      "name": "최종윤",
      "party": "",
      "elecd": "",
@@ -1156,6 +1167,17 @@
      "days": 7,
      "chair": false,
      "acting": false
+    },
+    {
+     "name": "강기윤",
+     "party": "",
+     "elecd": "",
+     "rlct": "",
+     "photo": "",
+     "turns": 201,
+     "days": 7,
+     "chair": false,
+     "acting": true
     },
     {
      "name": "강병원",
@@ -1185,7 +1207,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 175,
+     "turns": 177,
      "days": 7,
      "chair": false,
      "acting": false
@@ -1207,7 +1229,7 @@
      "elecd": "서울 송파구병",
      "rlct": "4선",
      "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/b265059dddd24f329d9361e3d0f62e4e.jpg",
-     "turns": 160,
+     "turns": 161,
      "days": 7,
      "chair": false,
      "acting": false
@@ -1218,7 +1240,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 158,
+     "turns": 159,
      "days": 7,
      "chair": false,
      "acting": false
@@ -1229,7 +1251,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 141,
+     "turns": 144,
      "days": 7,
      "chair": false,
      "acting": false
@@ -1246,34 +1268,12 @@
      "acting": false
     },
     {
-     "name": "강기윤",
-     "party": "",
-     "elecd": "",
-     "rlct": "",
-     "photo": "",
-     "turns": 125,
-     "days": 7,
-     "chair": false,
-     "acting": false
-    },
-    {
      "name": "신현영",
      "party": "",
      "elecd": "",
      "rlct": "",
      "photo": "",
      "turns": 125,
-     "days": 7,
-     "chair": false,
-     "acting": false
-    },
-    {
-     "name": "김성주",
-     "party": "",
-     "elecd": "",
-     "rlct": "",
-     "photo": "",
-     "turns": 122,
      "days": 7,
      "chair": false,
      "acting": false
@@ -1295,7 +1295,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 109,
+     "turns": 113,
      "days": 7,
      "chair": false,
      "acting": false
@@ -1306,7 +1306,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 103,
+     "turns": 106,
      "days": 7,
      "chair": false,
      "acting": false
@@ -1317,7 +1317,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 96,
+     "turns": 101,
      "days": 7,
      "chair": false,
      "acting": false
@@ -1328,7 +1328,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 92,
+     "turns": 94,
      "days": 7,
      "chair": false,
      "acting": false
@@ -1339,7 +1339,7 @@
      "elecd": "인천 동구미추홀구갑",
      "rlct": "재선",
      "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/339cde11231c491fa74e47d685b0dbc4.jpg",
-     "turns": 72,
+     "turns": 73,
      "days": 7,
      "chair": false,
      "acting": false
@@ -1379,7 +1379,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 473,
+     "turns": 477,
      "days": 8,
      "chair": true,
      "acting": false
@@ -1390,10 +1390,21 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 274,
+     "turns": 275,
      "days": 8,
      "chair": false,
      "acting": false
+    },
+    {
+     "name": "김성주",
+     "party": "",
+     "elecd": "",
+     "rlct": "",
+     "photo": "",
+     "turns": 243,
+     "days": 8,
+     "chair": false,
+     "acting": true
     },
     {
      "name": "김원이",
@@ -1407,12 +1418,23 @@
      "acting": false
     },
     {
+     "name": "강기윤",
+     "party": "",
+     "elecd": "",
+     "rlct": "",
+     "photo": "",
+     "turns": 214,
+     "days": 8,
+     "chair": false,
+     "acting": true
+    },
+    {
      "name": "서영석",
      "party": "더불어민주당",
      "elecd": "경기 부천시갑",
      "rlct": "재선",
      "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/bdf94a0756144b4a9ff6e71eb8bed16e.jpg",
-     "turns": 198,
+     "turns": 199,
      "days": 8,
      "chair": false,
      "acting": false
@@ -1434,7 +1456,7 @@
      "elecd": "경기 화성시병",
      "rlct": "3선",
      "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/732a1459c8554b999d8c248d703d8fa2.png",
-     "turns": 176,
+     "turns": 179,
      "days": 8,
      "chair": false,
      "acting": false
@@ -1445,7 +1467,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 176,
+     "turns": 179,
      "days": 8,
      "chair": false,
      "acting": false
@@ -1467,7 +1489,7 @@
      "elecd": "서울 송파구병",
      "rlct": "4선",
      "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/b265059dddd24f329d9361e3d0f62e4e.jpg",
-     "turns": 163,
+     "turns": 165,
      "days": 8,
      "chair": false,
      "acting": false
@@ -1478,29 +1500,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 156,
-     "days": 8,
-     "chair": false,
-     "acting": false
-    },
-    {
-     "name": "강기윤",
-     "party": "",
-     "elecd": "",
-     "rlct": "",
-     "photo": "",
-     "turns": 150,
-     "days": 8,
-     "chair": false,
-     "acting": false
-    },
-    {
-     "name": "김성주",
-     "party": "",
-     "elecd": "",
-     "rlct": "",
-     "photo": "",
-     "turns": 149,
+     "turns": 159,
      "days": 8,
      "chair": false,
      "acting": false
@@ -1533,7 +1533,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 129,
+     "turns": 132,
      "days": 8,
      "chair": false,
      "acting": false
@@ -1544,7 +1544,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 117,
+     "turns": 122,
      "days": 8,
      "chair": false,
      "acting": false
@@ -1555,7 +1555,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 117,
+     "turns": 120,
      "days": 8,
      "chair": false,
      "acting": false
@@ -1566,7 +1566,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 106,
+     "turns": 111,
      "days": 8,
      "chair": false,
      "acting": false
@@ -1577,7 +1577,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 104,
+     "turns": 107,
      "days": 8,
      "chair": false,
      "acting": false
@@ -1588,7 +1588,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 99,
+     "turns": 107,
      "days": 8,
      "chair": false,
      "acting": false
@@ -1599,7 +1599,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 98,
+     "turns": 99,
      "days": 8,
      "chair": false,
      "acting": false
@@ -1610,7 +1610,7 @@
      "elecd": "인천 동구미추홀구갑",
      "rlct": "재선",
      "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/339cde11231c491fa74e47d685b0dbc4.jpg",
-     "turns": 85,
+     "turns": 91,
      "days": 8,
      "chair": false,
      "acting": false
@@ -1621,7 +1621,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 79,
+     "turns": 80,
      "days": 8,
      "chair": false,
      "acting": false
@@ -1632,7 +1632,7 @@
      "elecd": "",
      "rlct": "",
      "photo": "",
-     "turns": 55,
+     "turns": 56,
      "days": 8,
      "chair": false,
      "acting": false
