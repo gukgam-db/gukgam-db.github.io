@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-02",
+ "updated": "2026-09-03",
  "source": "likms.assembly.go.kr/inspections",
  "items": [
   {
@@ -347,6 +347,24 @@
     {
      "name": "2025년도 정무위 국정감사 결과보고서.pdf",
      "url": "https://policy.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000031&atchFileId=abcc430432594b2bb63750548bd06312&fileSn=2"
+    }
+   ]
+  },
+  {
+   "article_no": 3078677,
+   "year": 2025,
+   "committee": "행정안전위원회",
+   "doc_type": "result_report",
+   "title": "2025년도 국정감사 결과보고서",
+   "posted": "2026-09-02",
+   "files": [
+    {
+     "name": "2025년도 국정감사 결과보고서(행정안전위원회).hwp",
+     "url": "https://adminhom.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000031&atchFileId=e0cea4e43ce64f6293eeded57ddb3f84&fileSn=1"
+    },
+    {
+     "name": "2025년도 국정감사 결과보고서(행정안전위원회).pdf",
+     "url": "https://adminhom.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000031&atchFileId=e0cea4e43ce64f6293eeded57ddb3f84&fileSn=2"
     }
    ]
   },
