@@ -1,0 +1,112 @@
+{
+ "updated": "2026-09-03",
+ "window": "14d",
+ "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. 기관·위원 분류는 제목 키워드 자동.",
+ "count": 10,
+ "items": [
+  {
+   "title": "국감 앞두고 '6호처분' 주목... 경계선지능 아동 지원도 과제",
+   "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE50U3dTRGtJNkozcVRXYVpEdm9OcFNvR09BOGFHc1VfNjZud1pESWNLV0VRcm0wVTZuT0FNQ0N5cTFmVGhTX3c?oc=5",
+   "date": "2026-09-01",
+   "source": "v.daum.net",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-09-03"
+  },
+  {
+   "title": "[충청국감]이재명 정부 두 번째 정기국회 1일 개회…충청권 28명 국회의원 어느 상임위서 뛰나",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBwcjB3Ykx6VjRCdFJERlZETHZuSUdqN0pTcm56Sm5PZDF5MmpGSk5rNjY1djZITkxXc3NidFZxZnhOOGd2aDdmSFh3RWJqekVqajNRTnAyM3ZiZlVXRWtnbGN3eDRwQUtaS1VNbw?oc=5",
+   "date": "2026-08-31",
+   "source": "이세종경제",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-09-03"
+  },
+  {
+   "title": "22조원 비급여부터 필수의약품까지…국감 예상이슈 보건의료 난제들",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9nMDN1aXlIbmdGSE5Hc0hqSlVMQ1Rwal8zNlJTanc5U1N2WlJ2TG5hRUpfOUdMbXYxTkdOWjhQSDJuREJ5ZjZXLUV6Nll5THIzXzE4bHMwUEg2X3FSMEhlNjRJNFNXUnBYYkRZbldjRQ?oc=5",
+   "date": "2026-08-31",
+   "source": "newsthevoice.com",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-09-03"
+  },
+  {
+   "title": "[2026 국감 쟁점] ‘GMO 완전표시제’ D-4개월…식약처 안착 준비됐나",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5qSUhhNmlKM25jbUpzeW9UdlFGMXZ3b1JRWlJoSFZBUzlEc0lyalBOUGtBY0xDMC1vTTJESFBJYWtIUk42RUhxS0lfcjZqZUVvUDFadWhjU3R2UGlXdHZ3SXRPYmR5QQ?oc=5",
+   "date": "2026-08-31",
+   "source": "푸드투데이",
+   "score": 3,
+   "agencies": [
+    "식품의약품안전처"
+   ],
+   "members": [],
+   "first_seen": "2026-09-03"
+  },
+  {
+   "title": "[2026 국감 쟁점] 농식품부 국감, 농정 확대 이면 ‘지속가능성’ 따진다",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBERUxxd1dxa1FfbFA5aDJobDhLNXFQSERFMUM5a2JPWkd6d0NpLW52X21UU1NtXzB0cFFrcE9tS0pXN0hPNkYwdnk2aUh4QjZ0dk05MjMtOUlWaFJYX1JaMGNtTVZBUQ?oc=5",
+   "date": "2026-08-31",
+   "source": "푸드투데이",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-09-03"
+  },
+  {
+   "title": "상설 컨트롤타워 없는 '필수의약품 공급' 국감 이슈 '재부상'",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9jMHdHS1JnX1p3bE9oVkZPUTUxVGJfTW1Tb0hYdDZYUHZlNjg2SC1mQ3NWSlgtMW5yekNMOFFkYlFYNFlrYUxJS0RzUk1hNFpycFZobzBVcVNkcnRnSTI2eGp4X1ZhNWtDLS1scw?oc=5",
+   "date": "2026-08-28",
+   "source": "약사공론",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-09-03"
+  },
+  {
+   "title": "22조원 비급여, 관리급여로 잡을 수 있나…국감서 실효성 점검",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE96YTFKd01ub1lSODVnUjdoYUZidFBXWEptYkk3VTJfZkREb0lxcUtmN0JXODh6Y21qZlpTYkozazdBenRoVjA3VUtGRHl2dnFuUldpd0NCT3doRGVxczFrN3ZGUF9VdUxrZ25FLWE2UdIBc0FVX3lxTE9lVzExMjNKYWtCeGIyRm9La1dMSkNJSjBtTi1sczQ1b3NtSkFvMGFPUFRMN0M0clNhSHgxanlDeEUtM2pYZkRoNXlweVBWU2tmY3hnSkJsSXZQSnRWcV9PVlNCOEtoVGlwRTA2NDFJTG1QVjg?oc=5",
+   "date": "2026-08-27",
+   "source": "청년의사",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-09-03"
+  },
+  {
+   "title": "국회입법조사처, 2026 국정감사 이슈 분석 기자·보좌진 간담회…정부가 답해야 할 56개 결정적 질문 제시",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1FREkzeXZRQzRlTVYta0UwUENGU0dJWjEwd1k3MHZwcHZLb1ZtQkgzSUllbmZhM0t4dko0Qm4xUGw5Q3UyendwTjEwVjloYkEyVENrQXh6QjZ4Z9IBWEFVX3lxTFB1SFJxVFprYzdEVWdqMlo4TTlqcU5XQzhQbmJsWDJwTUY2WUFpYmgxMGJoandTTVhYVXhfUmVVb0RNclFEaUlvMW1fUEpqWERya0l6M3NUOG0?oc=5",
+   "date": "2026-08-27",
+   "source": "아주경제",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-09-03"
+  },
+  {
+   "title": "작년 국정감사 재평가 거론 약제, 희귀약 지정 해제 기로",
+   "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9zblk3cV8wZDVpRUQ1Z1ZFcXg1Mm13SzdvU3JualEtaGlUSUZ1Ql9qUHk4YXlkZkpYNVhPSVZ1dFZGVkRZU2stdHN4Rl9QS2xT?oc=5",
+   "date": "2026-08-26",
+   "source": "데일리팜",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-09-03"
+  },
+  {
+   "title": "이만희 보건복지위원장 \"현장 납득 못하는 의료개혁 성공 못해\"",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9Rc2VMclhBdFlwZl9HMGwtZWE3Y3FfR243SnI5Sm5MLXBjd2NYdGdfXzFSelB1UFpsU2lfd29ROUw1MjI4ckJtZ2lKX2k4dkZGdS1Ub09XUTBhNXRmYjJvbkY5N0RoNzN2RkRXc1pFTUlpQQ?oc=5",
+   "date": "2026-08-25",
+   "source": "의협신문",
+   "score": 3,
+   "agencies": [],
+   "members": [
+    "이만희"
+   ],
+   "first_seen": "2026-09-03"
+  }
+ ]
+}

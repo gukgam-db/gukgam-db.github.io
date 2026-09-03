@@ -71,6 +71,44 @@ def main():
                      "party": last(r.get("PLPT_NM")), "parties": r.get("PLPT_NM") or "",
                      "elecd": last(r.get("ELECD_NM")), "rlct": r.get("RLCT_DIV_NM") or "",
                      "eras": r.get("GTELT_ERACO") or "", "photo": r.get("NAAS_PIC") or ""} for r in rows]
+        # 위원회 필터는 '현재 소속'만 돌려준다 → 역대 명단(rosters.json)에 있는데 빠진 이름은 개별 조회로 보충
+        have = {a["name"] for a in allitems}
+        need = []
+        rp = os.path.join(os.path.dirname(OUT), "rosters.json")
+        if os.path.exists(rp):
+            try:
+                with open(rp, encoding="utf-8") as f:
+                    for y in json.load(f).get("years", []):
+                        for m in y.get("members", []):
+                            if m["name"] not in have and m["name"] not in need:
+                                need.append(m["name"])
+            except Exception:
+                pass
+        added = 0
+        for name in need:
+            q = {"Type": "json", "pIndex": 1, "pSize": 10, "NAAS_NM": name}
+            if KEY:
+                q["KEY"] = KEY
+            try:
+                url = "https://open.assembly.go.kr/portal/openapi/ALLNAMEMBER?" + urllib.parse.urlencode(q)
+                with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30) as r:
+                    body = json.loads(r.read().decode("utf-8")).get("ALLNAMEMBER")
+                rows2 = body[1].get("row", []) if body else []
+            except Exception as e:
+                print(f"개별 조회 실패 {name}: {e}")
+                rows2 = []
+            rows2.sort(key=lambda x: ("제21대" in (x.get("GTELT_ERACO") or "")) + ("제22대" in (x.get("GTELT_ERACO") or "")) + ("제20대" in (x.get("GTELT_ERACO") or "")), reverse=True)
+            for r in rows2:
+                if (r.get("NAAS_NM") or "") != name:
+                    continue
+                allitems.append({"name": name, "hanja": r.get("NAAS_CH_NM") or "", "party": last(r.get("PLPT_NM")),
+                                 "parties": r.get("PLPT_NM") or "", "elecd": last(r.get("ELECD_NM")), "rlct": r.get("RLCT_DIV_NM") or "",
+                                 "eras": r.get("GTELT_ERACO") or "", "photo": r.get("NAAS_PIC") or "", "lookup": "by_name"})
+                added += 1
+                break
+            time.sleep(0.4)
+        if need:
+            print(f"역대 명단 보충 조회 {len(need)}명 중 {added}명 확보")
         allitems.sort(key=lambda x: x["name"])
         with open(allout, "w", encoding="utf-8") as f:
             json.dump({"updated": datetime.date.today().isoformat(), "committee": COMMITTEE,

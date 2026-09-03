@@ -270,6 +270,8 @@
   .dir.up{ background:#fdeaea; color:#a03030; } .dir.down{ background:#e9f6ef; color:#1f6f5c; } .dir.flat{ background:var(--chip); color:#3d4f63; }
   .ins.hot{ background:#fffbea; border-color:#ecd89a; border-left:5px solid #e2a04a; }   /* 눈에 띄되 경고색은 아니게 — 크림빛 배경 + 호박색 띠 */
   .ins.hot h3{ color:#7a4a12; }
+  .ins .pt{ font-style:normal; font-size:.68rem; font-weight:800; border-radius:7px; padding:1px 6px; margin-left:4px; vertical-align:1px; }
+  .ins .pt.ag{ background:#e8f0fb; color:#1c4f9c; } .ins .pt.mb{ background:#fdeaea; color:#a03030; }
   .fold{ background:#fff; border:1px solid var(--line); border-radius:14px; padding:12px 16px; margin-top:16px; }
   .fold > summary{ cursor:pointer; font-size:.95rem; font-weight:800; color:var(--navy); }
   .fold > summary .cnt{ font-weight:600; color:var(--muted); font-size:.8rem; margin-left:6px; }
@@ -364,7 +366,7 @@
   Promise.all([
     J('briefing.json',null), J('highlights.json',null), J('covid.json',null), J('index.json',null), J('last-run.json',null),
     J('schedule.json',null), J('rosters.json',null).then(function(ro){ var ly0=((ro&&ro.years)||[]).map(function(y){return y.year;}).sort(function(a,b){return b-a;})[0]||(new Date().getFullYear()-1); return Promise.all([J('plan-'+ly0+'.json',null), ro, J('findings-'+ly0+'.json',null), J('plan-'+(ly0+1)+'.json',null)]); }), null, J('members.json',null), null,
-    null, J('member-topics.json',{members:{}}), J('guides.json',{items:[]}), J('remarks-index.json',null)
+    null, J('member-topics.json',{members:{}}), J('guides.json',{items:[]}), J('remarks-index.json',null), J('press.json',null)
   ]).then(function(r){
     var BR=r[0], HL=r[1], CV=r[2], IDX=r[3], LR=r[4], SC=r[5], PL=r[6][0], RO=r[6][1], MEM=r[8], FD=r[6][2], PL26=r[6][3], MT=(r[11]||{}).members||{}, GD=r[12], RI=r[13];
     var A=(BR&&BR.agencies)||{}; var cy=(BR&&BR.cur_year)||new Date().getFullYear()-1;
@@ -418,6 +420,18 @@
     else scH+='<li><span>'+(ly+1)+'년 국정감사계획서 <b>아직 미공개</b> — 통상 9월 말 채택, 10월 중순 시작</span><span class="ag">'+(PL&&PL.period?ly+'년은 '+PL.period.start.slice(5).replace('-','.')+'~'+PL.period.end.slice(5).replace('-','.'):'')+'</span></li>';
     scH+=sc.map(function(i){ return '<li><span>'+esc(i.date.slice(5).replace('-','.'))+' '+esc(i.time||'')+' '+esc(i.content||'')+'</span><span class="ag">'+esc((i.committee||'').replace('위원회',''))+'</span></li>'; }).join('');
     cards.push('<div class="ins hot"><h3>📅 다음 일정 <a href="gukgam-all.html">국회 일정 →</a></h3><ul>'+scH+'</ul><div class="why">열린국회정보 일정 API(향후 '+((SC&&SC.horizon_days)||35)+'일) 중 보건복지위·국정감사 관련만. 갱신 '+esc((SC&&SC.updated)||'')+'</div></div>');
+    // 5) 국감 관련 최근 보도 (구글 뉴스 검색 기반 — 의원실 보도자료 원문이 아님)
+    var PR=r[14]; var pit=(PR&&PR.items)||[];
+    if(pit.length){
+      var short={'질병관리청':'질병청','보건복지부':'복지부','식품의약품안전처':'식약처','국민건강보험공단':'건보공단','국민연금공단':'연금공단','건강보험심사평가원':'심평원'};
+      function row(a){ var tags=(a.agencies||[]).map(function(g){return '<i class="pt ag">'+esc(short[g]||g)+'</i>';}).concat((a.members||[]).map(function(n){return '<i class="pt mb">'+esc(n)+'</i>';})).join('');
+        return '<li style="display:block;"><a href="'+esc(a.url)+'" target="_blank" rel="noopener" style="color:#1f3b5a;font-weight:700;text-decoration:none;">'+esc(a.title)+'</a><div style="font-size:.73rem;color:var(--muted);margin-top:2px;">'+esc((a.date||'').slice(5).replace('-','.'))+' · '+esc(a.source||'')+' '+tags+'</div></li>'; }
+      var first=pit.slice(0,6), rest=pit.slice(6);
+      cards.unshift('<div class="ins" style="grid-column:1 / -1;"><h3>📰 국감 관련 최근 보도 <span style="font-size:.74rem;font-weight:600;color:var(--muted);">'+pit.length+'건 · 최근 '+esc((PR.window||'14d').replace('d','일'))+' · 갱신 '+esc(PR.updated||'')+'</span></h3>'+
+        '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:4px 18px;"><ul style="margin:0;">'+first.slice(0,3).map(row).join('')+'</ul><ul style="margin:0;">'+first.slice(3,6).map(row).join('')+'</ul></div>'+
+        (rest.length?'<details style="margin-top:6px;"><summary style="cursor:pointer;font-size:.8rem;font-weight:800;color:#2a4d7d;">나머지 '+rest.length+'건 보기</summary><ul style="margin:6px 0 0;">'+rest.map(row).join('')+'</ul></details>':'')+
+        '<div class="why">구글 뉴스에서 현 보건복지위 위원 27명 이름·기관명과 "국정감사"를 매일 검색해 제목에 국감이 들어간 기사만 모은 것. <b>언론 보도 기준이며 의원실 보도자료 원문이 아닙니다.</b> 기관·위원 표식은 제목 키워드 자동 분류. 국감 시즌(9~12월)엔 매일 갱신.</div></div>');
+    }
     document.getElementById('insGrid').innerHTML=cards.join('');
     // 하이라이트 최신 4장
     if(HL&&(HL.items||[]).length){
