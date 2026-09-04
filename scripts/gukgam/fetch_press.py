@@ -104,7 +104,8 @@ def main():
                 found[k] = a
             found[k]["queries"].append(q)
         time.sleep(0.8)
-    today = datetime.date.today()
+    now_kst = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))   # 러너 시간대와 무관하게 KST
+    today = now_kst.date()
     old = load("press.json").get("items", [])
     merged = {norm(a["title"])[:60]: a for a in old if a.get("first_seen") and (today - datetime.date.fromisoformat(a["first_seen"])).days <= KEEP_DAYS}
     new = 0
@@ -125,7 +126,7 @@ def main():
     for a in items:
         a.pop("queries", None); a.pop("_desc", None)
     with io.open(OUT, "w", encoding="utf-8") as f:
-        json.dump({"updated": today.isoformat(), "window": WINDOW,
+        json.dump({"updated": today.isoformat(), "updated_at": now_kst.strftime("%Y-%m-%d %H:%M"), "window": WINDOW,
                    "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. 기관·위원 분류는 제목 키워드 자동.",
                    "count": len(items), "items": items}, f, ensure_ascii=False, indent=1)
     by_ag = {}

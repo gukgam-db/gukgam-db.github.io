@@ -7,10 +7,23 @@ on:
   schedule:
     - cron: '10 20 * * 0'      # 평시: 매주 월요일 KST 05:10
     - cron: '40 20 * 9-12 1-6' # 국감 시즌(9~12월): 화~일 매일 KST 05:40 추가
+    - cron: '0 9 * 9-12 *'     # 국감 시즌: 매일 KST 18:00 한 번 더 (의원실 보도자료가 낮에 쏟아진다)
   workflow_dispatch:
     inputs:
       plan_url:
         description: '국정감사계획서 PDF 주소 (연 1회 — 입력하면 확정 일정 plan-연도.json 생성)'
+        required: false
+        type: string
+      scan_year:
+        description: '조사용: 이 연도 전 상임위 국감 회의록을 훑어 지정 위원·키워드 발언을 찾는다 (예: 2019)'
+        required: false
+        type: string
+      scan_members:
+        description: '조사용: 찾을 위원 이름(쉼표 구분, 예: 조경태)'
+        required: false
+        type: string
+      scan_keys:
+        description: '조사용: 찾을 키워드(쉼표 구분, 기본 SFTS,중증열성,진드기)'
         required: false
         type: string
 
@@ -19,6 +32,7 @@ permissions:
 
 env:
   PYTHONUNBUFFERED: "1"   # 진행 로그가 실시간으로 보이게 (버퍼링되면 6시간 뒤 취소돼도 어디서 멈췄는지 모른다)
+  TZ: Asia/Seoul          # 러너는 UTC라 KST 새벽에 돌면 '오늘'이 전날로 찍힌다 → 화면 날짜가 하루 늦어 보였다
 
 jobs:
   build:
@@ -126,6 +140,18 @@ jobs:
         run: |
           pip install --quiet pypdf
           python3 scripts/gukgam/build_plan.py
+
+      - name: 조사용 — 지정 연도 전 상임위 회의록 훑기 (scan_year 입력 시에만)
+        if: ${{ inputs.scan_year != '' && inputs.scan_year != null }}
+        timeout-minutes: 120
+        continue-on-error: true
+        env:
+          GUKGAM_SCAN_YEAR: ${{ inputs.scan_year }}
+          GUKGAM_SCAN_MEMBERS: ${{ inputs.scan_members }}
+          GUKGAM_SCAN_KEYS: ${{ inputs.scan_keys || 'SFTS,중증열성,진드기' }}
+        run: |
+          pip install --quiet pypdf
+          python3 scripts/gukgam/scan_year.py
 
       - name: 데이터 자가 점검 (경고는 로그와 healthcheck.json에 남는다)
         run: python3 scripts/gukgam/healthcheck.py
