@@ -481,12 +481,12 @@
       "2021": 114,
       "2022": 190,
       "2023": 226,
-      "2024": 257,
+      "2024": 256,
       "2025": 235
      },
-     "total": 1176,
+     "total": 1175,
      "dir": null,
-     "share_delta": 0.018
+     "share_delta": 0.02
     },
     {
      "topic": "연말정산·재정",
@@ -500,7 +500,7 @@
      },
      "total": 791,
      "dir": null,
-     "share_delta": -0.014
+     "share_delta": -0.012
     },
     {
      "topic": "장애인",
@@ -514,7 +514,7 @@
      },
      "total": 590,
      "dir": "up",
-     "share_delta": 0.689
+     "share_delta": 0.691
     },
     {
      "topic": "필수·지역의료",
@@ -528,7 +528,7 @@
      },
      "total": 477,
      "dir": null,
-     "share_delta": -0.169
+     "share_delta": -0.168
     },
     {
      "topic": "노인·돌봄",
@@ -542,7 +542,7 @@
      },
      "total": 427,
      "dir": "up",
-     "share_delta": 0.444
+     "share_delta": 0.446
     },
     {
      "topic": "연금",
@@ -556,7 +556,7 @@
      },
      "total": 351,
      "dir": null,
-     "share_delta": -0.058
+     "share_delta": -0.057
     },
     {
      "topic": "의사인력·의대정원",
@@ -566,11 +566,11 @@
       "2022": 25,
       "2023": 83,
       "2024": 130,
-      "2025": 64
+      "2025": 63
      },
-     "total": 338,
+     "total": 337,
      "dir": null,
-     "share_delta": 0.115
+     "share_delta": 0.098
     },
     {
      "topic": "저출산·보육",
@@ -584,7 +584,7 @@
      },
      "total": 333,
      "dir": "down",
-     "share_delta": -0.665
+     "share_delta": -0.664
     },
     {
      "topic": "의약품·제약",
@@ -598,7 +598,7 @@
      },
      "total": 331,
      "dir": null,
-     "share_delta": -0.042
+     "share_delta": -0.041
     },
     {
      "topic": "정신건강·자살",
@@ -612,7 +612,7 @@
      },
      "total": 238,
      "dir": null,
-     "share_delta": 0.162
+     "share_delta": 0.164
     },
     {
      "topic": "공공의료",
@@ -626,7 +626,7 @@
      },
      "total": 235,
      "dir": null,
-     "share_delta": 0.089
+     "share_delta": 0.09
     },
     {
      "topic": "아동·청소년",
@@ -640,7 +640,7 @@
      },
      "total": 221,
      "dir": null,
-     "share_delta": -0.069
+     "share_delta": -0.068
     }
    ],
    "members": [
@@ -661,8 +661,8 @@
     },
     {
      "name": "김윤",
-     "recent": 155,
-     "n": 155
+     "recent": 154,
+     "n": 154
     },
     {
      "name": "남인순",
@@ -687,7 +687,7 @@
    ],
    "members_era_from": 2024,
    "members_note": "현 위원 기준",
-   "qa_total": 7176
+   "qa_total": 7173
   },
   "식품의약품안전처": {
    "count": {
@@ -1013,7 +1013,7 @@
      },
      "total": 768,
      "dir": null,
-     "share_delta": 0.043
+     "share_delta": 0.042
     },
     {
      "topic": "식품 안전",
@@ -1069,7 +1069,7 @@
      },
      "total": 146,
      "dir": null,
-     "share_delta": -0.159
+     "share_delta": -0.16
     },
     {
      "topic": "조직·인력",
@@ -1111,7 +1111,7 @@
      },
      "total": 92,
      "dir": null,
-     "share_delta": 0.146
+     "share_delta": 0.145
     },
     {
      "topic": "화장품",
@@ -1153,7 +1153,7 @@
      },
      "total": 76,
      "dir": null,
-     "share_delta": 0.145
+     "share_delta": 0.144
     },
     {
      "topic": "의료기기",
@@ -1214,7 +1214,7 @@
    ],
    "members_era_from": 2024,
    "members_note": "현 위원 기준",
-   "qa_total": 2913
+   "qa_total": 2912
   },
   "국민연금공단": {
    "count": {

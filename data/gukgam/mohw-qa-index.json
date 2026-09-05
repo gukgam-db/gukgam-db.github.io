@@ -1,6 +1,6 @@
 {
- "updated": "2026-09-05",
- "scope_v": 3,
+ "updated": "2026-09-06",
+ "scope_v": 4,
  "source": "보건복지위 국정감사 회의록(제21~22대) 발언 자동 추출",
  "processed": [
   "050316",
@@ -81,13 +81,13 @@
    "members": 24
   },
   "2024": {
-   "n": 1674,
-   "with_answer": 1122,
+   "n": 1673,
+   "with_answer": 1121,
    "members": 25
   },
   "2025": {
-   "n": 1385,
-   "with_answer": 988,
+   "n": 1383,
+   "with_answer": 987,
    "members": 24
   }
  }
