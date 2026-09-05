@@ -1,10 +1,20 @@
 {
  "updated": "2026-09-05",
- "updated_at": "2026-09-05 05:29",
+ "updated_at": "2026-09-05 21:40",
  "window": "14d",
  "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. 기관·위원 분류는 제목 키워드 자동.",
- "count": 15,
+ "count": 16,
  "items": [
+  {
+   "title": "주진우 \"靑인사 라인=김현지…국감 출석 불가피\"",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1WRURJakpxekFFcHNqZDhaNDZ5dTdmal96eHlQUnBIb1ZqZDVETFVRMkczRjNlYk9UOWVQY0tpdHZ6VFBwbXQyS19xOXFnb1M1Z2Z2T2l4YmVGVDkxZzVZekFHQU9hYktsZGpv?oc=5",
+   "date": "2026-09-05",
+   "source": "thepublic.kr",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-09-05"
+  },
   {
    "title": "복지위 국감 화두는 '비급여·소아응급'…관리급여 실효성 따진다",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1jNTBPYW83NEk5RUVkTnpBZjRhSTAtdmk5anJsRm1QRkhMc3NkSTRRcXZRT05vRlRnX1dBTHlPTjJKdjBqWUNTWTBVN0UxMGpGcGJKb2pYR0pSd1hNV19CZUJNR0ZDc3JKSUlGTQ?oc=5",
@@ -49,9 +59,9 @@
   },
   {
    "title": "국감 앞두고 '6호처분' 주목... 경계선지능 아동 지원도 과제",
-   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE02R0FqeVY3LWlJNVB4WTRfMENwbk40OEVpdG5SZ1FuZk5yQ1l4U3IzRGVTczN2U3lxTU5kZkozX0JmRDBpWXhDemdwdUs1cXBBamdwT0NtN0lTM19IWU5lUmRGc3dIRGpOcktUSjRsZGZHUQ?oc=5",
-   "date": "2026-08-31",
-   "source": "느린인뉴스",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9MZ05HNkVXZ2hYQ2syNER3bHN3S1B0a3NRbWNTN0dMb2RTbzAwTWVBdG5rQkk4QzRzUFFtUk44cm5wa240LW51RzNKVHVVOTNPYVZOUmtXS3ZGbU1tTE5fOVJfZjdfd0pySENrQlF2MDV2VkcwN1o4?oc=5",
+   "date": "2026-09-01",
+   "source": "OhmyNews",
    "score": 2,
    "agencies": [],
    "members": [],
