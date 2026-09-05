@@ -10,8 +10,12 @@
 실행: python3 scripts/gukgam/build_kdca_qa.py   (의존성: pypdf, 키 불필요)
 출력: data/gukgam/kdca-qa.json
 """
-import os, re, io, json, time, datetime, hashlib
+import os, re, io, json, time, datetime, hashlib, sys
 import urllib.request
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import agency_scope                     # 호칭으로 소관을 가린다 (장관님=복지부·청장님=질병청·처장님=식약처)
+SCOPE_V = 4                            # 판정 규칙 판 번호 — 바뀌면 전체 재추출
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA = os.path.join(ROOT, "data", "gukgam")
@@ -84,10 +88,24 @@ def pdf_bytes(url):
     raise last
 
 
+TEXT_CACHE = os.environ.get("GUKGAM_TEXT_CACHE", "/tmp/gukgam-textcache")
+
+
 def pdf_text(url):
+    """PDF에서 뽑은 본문. 회의록은 한 번 확정되면 바뀌지 않으므로 텍스트를 캐시한다.
+    (워크플로가 이 디렉터리를 실행 간에 보관해, 국회 PDF 서버가 느린 날에도 재추출이 몇 분이면 끝난다)"""
+    os.makedirs(TEXT_CACHE, exist_ok=True)
+    path = os.path.join(TEXT_CACHE, hashlib.md5(url.encode()).hexdigest() + ".txt")
+    if os.path.exists(path) and os.path.getsize(path) > 500:
+        with open(path, encoding="utf-8") as f:
+            return f.read()
     from pypdf import PdfReader
     reader = PdfReader(io.BytesIO(pdf_bytes(url)))
-    return "\n".join((p.extract_text() or "") for p in reader.pages)
+    text = "\n".join((p.extract_text() or "") for p in reader.pages)
+    if len(text) > 500:
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(text)
+    return text
 
 
 def clean(s, limit=420):
@@ -123,9 +141,10 @@ def extract(text, date):
         q = text[endpos:end]
         nxt = marks[i + 1] if i + 1 < len(marks) else None
         # "◯질병관리청장 지영미"는 name='질병관리'+role='청장'으로 잡히므로 합쳐서 판정
-        nxt_is_kdca = bool(nxt) and (nxt[2] + nxt[3]).startswith("질병관리청")
+        nxt_is_mine = bool(nxt) and (nxt[2] + nxt[3]).startswith("질병관리청")
         has_kw = any(k in q for k in KDCA_KW)
-        if not (has_kw or nxt_is_kdca):
+        ok, basis = agency_scope.decide(q, "kdca", nxt_is_mine, has_kw)
+        if not ok:
             continue
         answer = ""
         # 이어지는 질병청 답변(연속 구간 병합, 최대 3발언)
@@ -141,7 +160,9 @@ def extract(text, date):
                 break
             else:
                 break
-        qc = clean(q)
+        qc = agency_scope.excerpt(q, "kdca", KDCA_KW)   # 소관 근거가 보이도록 발췌
+        if agency_scope.is_procedural(qc):      # 개회·산회 선포 등 의사진행 발언
+            continue
         if len(qc) < 40:  # 의사진행 발언 등 잡음 제거
             continue
         if qc.count("…") > 3 or qc.count(".") > len(qc) * 0.2:  # 말줄임·점선 위주 잡음 제거
@@ -152,6 +173,7 @@ def extract(text, date):
             "q": qc,
             "a": clean(answer) if answer.strip() else "",
             "topics": topics_of(q + " " + answer),
+            "basis": basis,
         })
     return items
 
@@ -165,8 +187,22 @@ def main():
             state = json.load(open(OUT, encoding="utf-8"))
         except Exception:
             pass
+    if state.get("scope_v") != SCOPE_V:      # 소관 판정 규칙이 바뀌면 전부 다시 뽑는다
+        # 기존 항목은 그대로 두고 회의록 단위로 갈아 끼운다 — 재추출이 여러 실행에 걸쳐도
+        # 공개 화면의 건수가 중간에 푹 꺼지지 않는다.
+        print("소관 판정 규칙 %s → %s: 전체 재추출" % (state.get("scope_v"), SCOPE_V))
+        state["processed"] = []
     processed = set(state.get("processed", []))
     items = state.get("items", [])
+
+    def save():
+        """받아 둔 데까지 그때그때 저장 — 국회 PDF 서버가 느린 날 단계가 끊겨도
+        다음 실행이 이어서 처리한다(끝에서만 쓰면 재추출이 매번 처음부터다)."""
+        items.sort(key=lambda x: (x["date"], x["member"]))
+        with open(OUT, "w", encoding="utf-8") as f:
+            json.dump({"updated": datetime.date.today().isoformat(), "scope_v": SCOPE_V,
+                       "source": "보건복지위 국정감사 회의록(제21~22대) 발언 자동 추출",
+                       "processed": sorted(processed), "items": items}, f, ensure_ascii=False, indent=1)
 
     new = 0
     for mt in sorted(minutes, key=lambda x: x["date"]):
@@ -177,20 +213,18 @@ def main():
             got = extract(text, mt["date"])
             for g in got:
                 g["minutes_url"] = mt["url"]
-            items += got
+            items[:] = [i for i in items if i.get("minutes_url") != mt["url"]] + got
             print(f"{mt['date']}: {len(got)}건")
         except Exception as e:
             print(f"{mt['date']} 실패: {e}")
             continue
         processed.add(mt["conf_id"])
         new += 1
+        if new % 3 == 0:      # 회의록 한 건에 십수 분이 걸리는 날도 있어 자주 저장한다
+            save()
         time.sleep(1)
 
-    items.sort(key=lambda x: (x["date"], x["member"]))
-    with open(OUT, "w", encoding="utf-8") as f:
-        json.dump({"updated": datetime.date.today().isoformat(),
-                   "source": "보건복지위 국정감사 회의록(제21~22대) 발언 자동 추출",
-                   "processed": sorted(processed), "items": items}, f, ensure_ascii=False, indent=1)
+    save()
     print(f"완료: 회의록 {new}건 신규 처리, Q&A 누적 {len(items)}건")
     return 0
 

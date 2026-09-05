@@ -40,6 +40,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # 회의록 PDF에서 뽑은 본문을 실행 간에 보관한다. 국회 PDF 서버가 느린 날
+      # 한 파일에 십수 분씩 잡아먹던 재추출이, 한 번 받아 두면 몇 분이면 끝난다.
+      - name: 회의록 본문 캐시 복원·보관
+        uses: actions/cache@v4
+        with:
+          path: /tmp/gukgam-textcache
+          key: gukgam-textcache-${{ github.run_id }}
+          restore-keys: |
+            gukgam-textcache-
+
       - name: 국정감사 자료 수집 → data/gukgam/
         timeout-minutes: 25
         continue-on-error: true   # 국회 API가 죽은 날에도 뒷단계는 기존 자료로 돈다
@@ -85,6 +95,8 @@ jobs:
         run: python3 scripts/gukgam/build_member_topics.py
 
       - name: 질병관리청 Q&A 추출 (국감 회의록, 증분)
+        timeout-minutes: 100      # 국회 PDF 서버가 느린 날 6시간을 통째로 잃지 않게 — 빌더는 끝에서만 파일을 쓰므로 중단돼도 기존 데이터는 그대로
+        continue-on-error: true
         run: python3 scripts/gukgam/build_kdca_qa.py
 
       - name: 위원 발언 전체 색인 (답변 미연결 발언 포함, 증분)
@@ -102,9 +114,13 @@ jobs:
         run: python3 scripts/gukgam/build_covid.py
 
       - name: 보건복지부 Q&A 추출 (국감 회의록, 증분)
+        timeout-minutes: 100      # 국회 PDF 서버가 느린 날 6시간을 통째로 잃지 않게 — 빌더는 끝에서만 파일을 쓰므로 중단돼도 기존 데이터는 그대로
+        continue-on-error: true
         run: python3 scripts/gukgam/build_mohw_qa.py
 
       - name: 식품의약품안전처 Q&A 추출 (국감 회의록, 증분)
+        timeout-minutes: 100      # 국회 PDF 서버가 느린 날 6시간을 통째로 잃지 않게 — 빌더는 끝에서만 파일을 쓰므로 중단돼도 기존 데이터는 그대로
+        continue-on-error: true
         run: python3 scripts/gukgam/build_mfds_qa.py
 
       - name: 하이라이트·의원별 가이드북 생성

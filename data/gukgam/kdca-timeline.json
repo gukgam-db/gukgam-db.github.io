@@ -19,15 +19,45 @@
  },
  "issues": [
   {
-   "name": "감염병 대응",
-   "total": 386,
+   "name": "백신·예방접종",
+   "total": 382,
    "cells": {
     "2020": {
-     "ruling": 43,
-     "opp": 35
+     "ruling": 55,
+     "opp": 79
     },
     "2021": {
-     "ruling": 36,
+     "ruling": 38,
+     "opp": 76
+    },
+    "2022": {
+     "ruling": 12,
+     "opp": 46
+    },
+    "2023": {
+     "ruling": 3,
+     "opp": 29
+    },
+    "2024": {
+     "ruling": 7,
+     "opp": 18
+    },
+    "2025": {
+     "ruling": 10,
+     "opp": 9
+    }
+   }
+  },
+  {
+   "name": "감염병 대응",
+   "total": 378,
+   "cells": {
+    "2020": {
+     "ruling": 41,
+     "opp": 33
+    },
+    "2021": {
+     "ruling": 37,
      "opp": 55
     },
     "2022": {
@@ -36,75 +66,45 @@
     },
     "2023": {
      "ruling": 6,
-     "opp": 44
+     "opp": 45
     },
     "2024": {
      "ruling": 7,
-     "opp": 29
+     "opp": 26
     },
     "2025": {
-     "ruling": 21,
+     "ruling": 18,
      "opp": 26
     }
    }
   },
   {
-   "name": "백신·예방접종",
-   "total": 386,
-   "cells": {
-    "2020": {
-     "ruling": 56,
-     "opp": 78
-    },
-    "2021": {
-     "ruling": 36,
-     "opp": 78
-    },
-    "2022": {
-     "ruling": 10,
-     "opp": 50
-    },
-    "2023": {
-     "ruling": 3,
-     "opp": 30
-    },
-    "2024": {
-     "ruling": 7,
-     "opp": 18
-    },
-    "2025": {
-     "ruling": 11,
-     "opp": 9
-    }
-   }
-  },
-  {
    "name": "예산·재정",
-   "total": 89,
+   "total": 77,
    "cells": {
     "2020": {
-     "ruling": 3,
-     "opp": 6
+     "ruling": 2,
+     "opp": 5
     },
     "2021": {
      "ruling": 2,
-     "opp": 11
+     "opp": 10
     },
     "2022": {
      "ruling": 1,
-     "opp": 11
+     "opp": 9
     },
     "2023": {
      "ruling": 1,
-     "opp": 20
-    },
-    "2024": {
-     "ruling": 2,
      "opp": 19
     },
+    "2024": {
+     "ruling": 2,
+     "opp": 17
+    },
     "2025": {
-     "ruling": 11,
-     "opp": 2
+     "ruling": 8,
+     "opp": 1
     }
    }
   },
@@ -140,60 +140,60 @@
   },
   {
    "name": "정보시스템",
-   "total": 73,
+   "total": 68,
    "cells": {
     "2020": {
-     "ruling": 11,
-     "opp": 8
+     "ruling": 10,
+     "opp": 7
     },
     "2021": {
      "ruling": 9,
-     "opp": 10
+     "opp": 11
     },
     "2022": {
      "ruling": 1,
-     "opp": 14
+     "opp": 13
     },
     "2023": {
      "ruling": 1,
-     "opp": 10
+     "opp": 9
     },
     "2024": {
-     "ruling": 3,
+     "ruling": 2,
      "opp": 2
     },
     "2025": {
-     "ruling": 3,
+     "ruling": 2,
      "opp": 1
     }
    }
   },
   {
-   "name": "조직·인력",
-   "total": 63,
+   "name": "지역·지자체 협력",
+   "total": 61,
    "cells": {
     "2020": {
-     "ruling": 5,
-     "opp": 10
-    },
-    "2021": {
-     "ruling": 5,
+     "ruling": 3,
      "opp": 11
     },
+    "2021": {
+     "ruling": 7,
+     "opp": 20
+    },
     "2022": {
-     "ruling": 1,
-     "opp": 12
+     "ruling": 2,
+     "opp": 3
     },
     "2023": {
      "ruling": 0,
-     "opp": 9
+     "opp": 5
     },
     "2024": {
-     "ruling": 1,
-     "opp": 4
+     "ruling": 0,
+     "opp": 6
     },
     "2025": {
-     "ruling": 5,
+     "ruling": 4,
      "opp": 0
     }
    }

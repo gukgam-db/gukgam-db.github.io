@@ -38,6 +38,7 @@
   .qa .who img{ width:34px; height:44px; object-fit:cover; border-radius:6px; background:#eef1f5; }
   .qa .who .nm{ font-weight:800; color:var(--navy); }
   .badge{ border-radius:9px; padding:1px 9px; font-size:.72rem; font-weight:800; background:var(--chip); color:#3d4f63; }
+  .badge.bs{ background:#f1f3f6; color:#6b7684; font-weight:700; }
   .badge.tp{ background:#ecebf7; color:#3d3a7c; }
   .qa .q{ font-size:.92rem; }
   .qa .q::before{ content:"Q. "; font-weight:900; color:#a03030; }
@@ -110,7 +111,7 @@
 
 <main class="wrap">
   <div class="stats" id="stats"></div>
-  <p class="basis" id="basisNote" style="font-size:.76rem;color:var(--muted);margin:-8px 2px 14px;line-height:1.5;border-top:1px dashed var(--line);padding-top:6px;"><b>산출 근거</b> — 추출된 질의 = 보건복지위 국감 회의록에서 보건복지부을(를) 언급했거나 장관·차관 답변이 바로 이어진 위원 발언 · 답변 포함 = 장관·차관 답변이 바로 붙은 질의 수 · 주제는 키워드 자동 분류(한 질의에 여러 주제 가능) · 회의록 원문에서 기계 추출한 것이라 발언 맥락이 잘린 경우가 있음 <span id="basisUpd"></span></p>
+  <p class="basis" id="basisNote" style="font-size:.76rem;color:var(--muted);margin:-8px 2px 14px;line-height:1.5;border-top:1px dashed var(--line);padding-top:6px;"><b>산출 근거</b> — 국감장에서 질의 상대는 호칭으로 갈립니다(장관님=복지부, 청장님=질병청, 처장님=식약처). 그래서 ① 장관·차관 답변이 바로 이어졌거나 ② 질의문이 <b>장관·차관님</b>을 부른 발언만 이 기관 질의로 봅니다. 다른 기관 호칭만 있으면 기관명이 나와도 제외하고, 호칭·답변 없이 기관명만 나온 발언은 <span class="badge bs">간접 언급</span>으로 표시합니다. · 답변 포함 = 장관·차관 답변이 바로 붙은 질의 수 · 주제는 키워드 자동 분류(한 질의에 여러 주제 가능) · 발췌는 소관 근거(호칭·기관명)가 보이는 대목을 중심으로 자르며, 앞뒤의 <b>…</b>는 생략된 부분이 있다는 표시 · 개회·산회 선포 같은 의사진행 발언은 제외 · 회의록 원문에서 기계 추출한 것이라 발언 맥락이 잘린 경우가 있음 <span id="basisUpd"></span></p>
 
   <h2>연도별 · 위원별 · 주제별 질의</h2>
   <div class="yeartabs" id="yearTabs"></div>
@@ -207,6 +208,7 @@ function junkName(n){ return /^(대리|직무대리|출석전문|참고인|증�
         (m.party?'<span class="badge">'+esc(m.party)+'</span>':'')+
         '<span class="badge">'+esc(r.date)+'</span>'+
         (r.topics||[]).map(function(t){ return '<span class="badge tp">'+esc(t)+'</span>'; }).join('')+
+        (r.basis==='mention'?'<span class="badge bs" title="이 기관을 호칭으로 부르지도, 이 기관이 답하지도 않았지만 기관명이 나온 발언">간접 언급</span>':'')+
         '</div>'+
         '<div class="q">'+esc((r.q||'').replace(/^[\s,.\u3001\u00b7\u2026?!:;)\]]+/,''))+'</div>'+
         (r.a?'<div class="a">'+esc(r.a)+'</div>':'')+

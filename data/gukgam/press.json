@@ -1,6 +1,6 @@
 {
  "updated": "2026-09-05",
- "updated_at": "2026-09-05 07:37",
+ "updated_at": "2026-09-05 05:29",
  "window": "14d",
  "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. 기관·위원 분류는 제목 키워드 자동.",
  "count": 15,
@@ -27,7 +27,7 @@
   },
   {
    "title": "한지아 “김승원, '신약 청탁' 의혹, 국감·감사원 감사로 밝힐 것”",
-   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1CcHVpSDRrUDBXcGtuWVJHeU0tYTkwQXNYWjI5eTZVdFU3d3pobWlHWUZ4bXN2VFcxUHl3SmN4dE1scC1CNWZ5N2VxYXY5M1ZXTGc?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE8xX2xxdkpZOWhwSmF2SmhSNWg4T1VEUHNVbjZ1WVZwbFo2QjhUeW03MkNIWHhkbV94NmxIeFMwTnBRbkhkM1psTWc1bl9EMzFqaUdyeHdwaw?oc=5",
    "date": "2026-09-03",
    "source": "MEDI:GATE NEWS",
    "score": 3,
@@ -133,7 +133,7 @@
    "title": "작년 국정감사 재평가 거론 약제, 희귀약 지정 해제 기로",
    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9YaUYtT25OS2RPTEM0Nmotc0VoalVrd3k2MndPZF9oT1JheVNvcmNJSThra2ZaYjAxMllkNjlsR3RUTWphTkVvcnczM3RaNWhQaVk3UjBn?oc=5",
    "date": "2026-08-26",
-   "source": "dailypharm.com",
+   "source": "데일리팜",
    "score": 2,
    "agencies": [],
    "members": [],

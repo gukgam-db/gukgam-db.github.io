@@ -1,5 +1,6 @@
 {
  "updated": "2026-09-05",
+ "scope_v": 3,
  "source": "보건복지위 국정감사 회의록(제21~22대) 발언 자동 추출",
  "processed": [
   "050316",
@@ -60,33 +61,33 @@
  ],
  "stats": {
   "2020": {
-   "n": 822,
-   "with_answer": 594,
-   "members": 25
+   "n": 803,
+   "with_answer": 588,
+   "members": 24
   },
   "2021": {
-   "n": 659,
-   "with_answer": 440,
-   "members": 24
+   "n": 650,
+   "with_answer": 438,
+   "members": 23
   },
   "2022": {
-   "n": 1369,
-   "with_answer": 988,
-   "members": 24
+   "n": 1347,
+   "with_answer": 981,
+   "members": 23
   },
   "2023": {
-   "n": 1332,
-   "with_answer": 956,
-   "members": 25
+   "n": 1317,
+   "with_answer": 953,
+   "members": 24
   },
   "2024": {
-   "n": 1693,
-   "with_answer": 1127,
+   "n": 1674,
+   "with_answer": 1122,
    "members": 25
   },
   "2025": {
-   "n": 1410,
-   "with_answer": 1000,
+   "n": 1385,
+   "with_answer": 988,
    "members": 24
   }
  }

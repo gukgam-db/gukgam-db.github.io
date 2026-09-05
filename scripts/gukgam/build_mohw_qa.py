@@ -11,8 +11,12 @@
 실행: python3 scripts/gukgam/build_mohw_qa.py   (의존성: pypdf, 키 불필요)
 출력: data/gukgam/mohw-qa-{연도}.json, data/gukgam/mohw-qa-index.json
 """
-import os, re, io, json, time, datetime, hashlib
+import os, re, io, json, time, datetime, hashlib, sys
 import urllib.request
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import agency_scope                     # 호칭으로 소관을 가린다 (장관님=복지부·청장님=질병청·처장님=식약처)
+SCOPE_V = 4                            # 판정 규칙 판 번호 — 바뀌면 전체 재추출
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA = os.path.join(ROOT, "data", "gukgam")
@@ -81,10 +85,24 @@ def pdf_bytes(url):
     raise last
 
 
+TEXT_CACHE = os.environ.get("GUKGAM_TEXT_CACHE", "/tmp/gukgam-textcache")
+
+
 def pdf_text(url):
+    """PDF에서 뽑은 본문. 회의록은 한 번 확정되면 바뀌지 않으므로 텍스트를 캐시한다.
+    (워크플로가 이 디렉터리를 실행 간에 보관해, 국회 PDF 서버가 느린 날에도 재추출이 몇 분이면 끝난다)"""
+    os.makedirs(TEXT_CACHE, exist_ok=True)
+    path = os.path.join(TEXT_CACHE, hashlib.md5(url.encode()).hexdigest() + ".txt")
+    if os.path.exists(path) and os.path.getsize(path) > 500:
+        with open(path, encoding="utf-8") as f:
+            return f.read()
     from pypdf import PdfReader
     reader = PdfReader(io.BytesIO(pdf_bytes(url)))
-    return "\n".join((p.extract_text() or "") for p in reader.pages)
+    text = "\n".join((p.extract_text() or "") for p in reader.pages)
+    if len(text) > 500:
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(text)
+    return text
 
 
 def clean(s, limit=360):
@@ -125,9 +143,10 @@ def extract(text, date):
         end = marks[i + 1][0] if i + 1 < len(marks) else len(text)
         q = text[endpos:end]
         nxt = marks[i + 1] if i + 1 < len(marks) else None
-        nxt_is_ag = bool(nxt) and (nxt[2] + nxt[3]).startswith(AGENCY_PREFIX)
+        nxt_is_mine = bool(nxt) and (nxt[2] + nxt[3]).startswith(AGENCY_PREFIX)
         has_kw = any(k in q for k in AGENCY_KW)
-        if not (has_kw or nxt_is_ag):
+        ok, basis = agency_scope.decide(q, "mohw", nxt_is_mine, has_kw)
+        if not ok:
             continue
         answer, j, taken = "", i + 1, 0
         while j < len(marks) and taken < 2:
@@ -139,7 +158,9 @@ def extract(text, date):
                 j += 1
             else:
                 break
-        qc = clean(q)
+        qc = agency_scope.excerpt(q, "mohw", AGENCY_KW, 360)   # 소관 근거가 보이도록 발췌
+        if agency_scope.is_procedural(qc):      # 개회·산회 선포 등 의사진행 발언
+            continue
         if len(qc) < 60:
             continue
         if qc.count("…") > 3 or qc.count(".") > len(qc) * 0.2:
@@ -150,6 +171,7 @@ def extract(text, date):
             "q": qc,
             "a": clean(answer) if answer.strip() else "",
             "topics": topics_of(q + " " + answer),
+            "basis": basis,
         })
     return items
 
@@ -163,10 +185,45 @@ def main():
             idx = json.load(open(IDX, encoding="utf-8"))
         except Exception:
             pass
+    if idx.get("scope_v") != SCOPE_V:        # 소관 판정 규칙이 바뀌면 전부 다시 뽑는다
+        # 연도별 파일은 지우지 않는다 — 회의록 단위로 갈아 끼워, 재추출이 여러 실행에
+        # 걸쳐도 공개 화면의 건수가 중간에 푹 꺼지지 않게 한다.
+        print("소관 판정 규칙 %s → %s: 전체 재추출" % (idx.get("scope_v"), SCOPE_V))
+        idx["processed"] = []
     processed = set(idx.get("processed", []))
 
     # 연도별 기존 샤드 로드
     shards = {}
+
+    def save():
+        """받아 둔 데까지 그때그때 저장 — 국회 PDF 서버가 느린 날 단계가 끊겨도
+        다음 실행이 이어서 처리한다(끝에서만 쓰면 재추출이 매번 처음부터다)."""
+        today = datetime.date.today().isoformat()
+        for y, items in shards.items():
+            items.sort(key=lambda x: (x["date"], x["member"]))
+            with open(os.path.join(DATA, f"mohw-qa-{y}.json"), "w", encoding="utf-8") as f:
+                json.dump({"updated": today, "year": y, "items": items}, f, ensure_ascii=False, indent=1)
+
+        # 인덱스(통계) 재계산: 모든 샤드 스캔
+        years, stats = [], {}
+        for fn in sorted(os.listdir(DATA)):
+            m = re.match(r"mohw-qa-(\d{4})\.json$", fn)
+            if not m:
+                continue
+            y = int(m.group(1))
+            items = json.load(open(os.path.join(DATA, fn), encoding="utf-8"))["items"]
+            years.append(y)
+            stats[str(y)] = {
+                "n": len(items),
+                "with_answer": sum(1 for i in items if i["a"]),
+                "members": len({i["member"] for i in items}),
+            }
+        with open(IDX, "w", encoding="utf-8") as f:
+            json.dump({"updated": today, "scope_v": SCOPE_V, "source": "보건복지위 국정감사 회의록(제21~22대) 발언 자동 추출",
+                       "processed": sorted(processed), "years": sorted(years), "stats": stats},
+                      f, ensure_ascii=False, indent=1)
+        return sum(v["n"] for v in stats.values()), len(years)
+
     new = 0
     for mt in sorted(minutes, key=lambda x: x["date"]):
         if mt["conf_id"] in processed:
@@ -176,44 +233,27 @@ def main():
         except Exception as e:
             print(f"{mt['date']} 실패: {e}")
             continue
+        def shard(y):
+            if y not in shards:
+                sp = os.path.join(DATA, f"mohw-qa-{y}.json")
+                shards[y] = json.load(open(sp, encoding="utf-8"))["items"] if os.path.exists(sp) else []
+            return shards[y]
+
+        # 이 회의록에서 전에 뽑아 둔 항목을 걷어내고 새로 넣는다(같은 회의록을 두 번 세지 않게)
+        for y in {g["year"] for g in got} | {int(mt["date"][:4])}:
+            shard(y)[:] = [i for i in shard(y) if i.get("minutes_url") != mt["url"]]
         for g in got:
             g["minutes_url"] = mt["url"]
-            y = g["year"]
-            if y not in shards:
-                p = os.path.join(DATA, f"mohw-qa-{y}.json")
-                shards[y] = json.load(open(p, encoding="utf-8"))["items"] if os.path.exists(p) else []
-            shards[y].append(g)
+            shard(g["year"]).append(g)
         processed.add(mt["conf_id"])
         new += 1
         print(f"{mt['date']}: {len(got)}건")
+        if new % 3 == 0:      # 회의록 한 건에 십수 분이 걸리는 날도 있어 자주 저장한다
+            save()
         time.sleep(1)
 
-    today = datetime.date.today().isoformat()
-    for y, items in shards.items():
-        items.sort(key=lambda x: (x["date"], x["member"]))
-        with open(os.path.join(DATA, f"mohw-qa-{y}.json"), "w", encoding="utf-8") as f:
-            json.dump({"updated": today, "year": y, "items": items}, f, ensure_ascii=False, indent=1)
-
-    # 인덱스(통계) 재계산: 모든 샤드 스캔
-    years, stats = [], {}
-    for fn in sorted(os.listdir(DATA)):
-        m = re.match(r"mohw-qa-(\d{4})\.json$", fn)
-        if not m:
-            continue
-        y = int(m.group(1))
-        items = json.load(open(os.path.join(DATA, fn), encoding="utf-8"))["items"]
-        years.append(y)
-        stats[str(y)] = {
-            "n": len(items),
-            "with_answer": sum(1 for i in items if i["a"]),
-            "members": len({i["member"] for i in items}),
-        }
-    with open(IDX, "w", encoding="utf-8") as f:
-        json.dump({"updated": today, "source": "보건복지위 국정감사 회의록(제21~22대) 발언 자동 추출",
-                   "processed": sorted(processed), "years": sorted(years), "stats": stats},
-                  f, ensure_ascii=False, indent=1)
-    total = sum(s["n"] for s in stats.values())
-    print(f"완료: 회의록 {new}건 신규 처리, Q&A 누적 {total}건 (연도 {len(years)}개)")
+    total, nyears = save()
+    print(f"완료: 회의록 {new}건 신규 처리, Q&A 누적 {total}건 (연도 {nyears}개)")
     return 0
 
 
