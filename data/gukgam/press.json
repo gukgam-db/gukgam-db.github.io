@@ -1,15 +1,35 @@
 {
  "updated": "2026-09-07",
- "updated_at": "2026-09-07 07:12",
+ "updated_at": "2026-09-07 23:46",
  "window": "14d",
  "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. 기관·위원 분류는 제목 키워드 자동.",
- "count": 16,
+ "count": 18,
  "items": [
+  {
+   "title": "[기획] 페이백·의료공백·필수약 대란… 보건복지 현안, 국감 도마",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9XRjVqZkpETWloaEZyU0JTRk1UUGpMX0t1Y2t1QzJ2VW5CV18wRmVMd3J4QjFmVUdFQ01HVlJUMm43NXU4UGFWdm5QQlVEbGhzbVJKWVVmbmVaNVJTbXVJQnA2WdIBaEFVX3lxTE1RdW9rQU9ZdW5TS1ZwTDI2WDNiYk5TR05KM2JidnladGZkeXRSNklHREtKUWNZRFVCdUx5Z2pYQklyZVl0MDY3RHJ1dG1TanBMY3ZaNnY0N3h3X3V3U1FaTW80ZWMyVXNl?oc=5",
+   "date": "2026-09-07",
+   "source": "매일일보",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-09-07"
+  },
+  {
+   "title": "[펜앤현장] 野, 용혜인·김승원 청문회 뒤엔 김현지 국정감사 예고",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE83Q2JOVm1IM0d3Q3JfYU9wbzVCX2NVZURHSzVTOGxILW5GMFJNcFRUa2RPdXJqRjJ2WkFXenkzRExzbXcwdlo4M2hYZTNpUUNNLXBxOEMtTGNrMksxcWVPc19hZ2dHOUItSS000gFvQVVfeXFMTlBseGNKdUdXRVV1ZmxNWXh6aU9OMkYtTlB5SEJ3blFjTldmN2EyQzZmeWNKTHJCQ2w0X1pzdEpUU0xwdXJabkZEeEZTUTY1TWlhbkVBWVcxY29RSzBsMkhQaGdCenFZOGgwWGtzRzdN?oc=5",
+   "date": "2026-09-07",
+   "source": "펜앤마이크",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-09-07"
+  },
   {
    "title": "주진우 \"靑인사 라인=김현지…국감 출석 불가피\"",
    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1WRURJakpxekFFcHNqZDhaNDZ5dTdmal96eHlQUnBIb1ZqZDVETFVRMkczRjNlYk9UOWVQY0tpdHZ6VFBwbXQyS19xOXFnb1M1Z2Z2T2l4YmVGVDkxZzVZekFHQU9hYktsZGpv?oc=5",
    "date": "2026-09-05",
-   "source": "thepublic.kr",
+   "source": "더퍼블릭",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -19,7 +39,7 @@
    "title": "복지위 국감 화두는 '비급여·소아응급'…관리급여 실효성 따진다",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1jNTBPYW83NEk5RUVkTnpBZjRhSTAtdmk5anJsRm1QRkhMc3NkSTRRcXZRT05vRlRnX1dBTHlPTjJKdjBqWUNTWTBVN0UxMGpGcGJKb2pYR0pSd1hNV19CZUJNR0ZDc3JKSUlGTQ?oc=5",
    "date": "2026-09-04",
-   "source": "mdtoday.co.kr",
+   "source": "메디컬투데이",
    "score": 2,
    "agencies": [],
    "members": [],
