@@ -1,10 +1,20 @@
 {
  "updated": "2026-09-09",
- "updated_at": "2026-09-09 08:04",
+ "updated_at": "2026-09-09 22:24",
  "window": "14d",
  "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. 기관·위원 분류는 제목 키워드 자동.",
- "count": 22,
+ "count": 24,
  "items": [
+  {
+   "title": "[국감 Re체크③] 단속 강화해도 끊이질 않는 '의약품 둔갑' 화장품 광고",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBCdjJ2aE1tdWlaelZEb1RlMUhqR09NS3YzM1VyWXNhN0ZvUEtUcTBFdmhPbnFLTllOZk4yLUdHUmQ2T1B4aW11WXJwZGd1UmJXYW5obnRfUVhBVUE1bWdoOHJsakh3a2prNEo0cDZR0gFuQVVfeXFMUEJ2MnZoTW11aVp6VkRvVGUxSGpHT01LdjMzVXJZc2E3Rm9QS1RxMEV2aE9ucUtOWU5mTjItR0dSZDZPUHhpbXVZcnBkZ3VSYldhbmhudF9RWEFVQTVtZ2g4cmxqSHdrams0SjRwNlE?oc=5",
+   "date": "2026-09-09",
+   "source": "newsdream.kr",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-09-09"
+  },
   {
    "title": "스타트업얼라이언스, 국감 앞두고 정책과제 제언",
    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBnSl9CUTc4WnR4bE9LT1FlUEZJc3hoWVJJdHJjcTdFeXRsNlRYWURpWDFQNzJPTW5EZUsxcFZYSXdLS1FmUGUtcHhEaV80clhyanfSAVNBVV95cUxQR2w4Mkw4X0JLQWJmQ29RLTI2VkJJNGM3QWR0UjBlWEFmeXJLX2xRZEFXaVVPU3NkQXBiR0tORlhlX20yRUE0bzRZZGxoT1dIUUktVQ?oc=5",
@@ -50,6 +60,16 @@
    "first_seen": "2026-09-09"
   },
   {
+   "title": "입법·국정감사로 제기한 청년 당뇨 지원 사각지대 개선 김예지·국민의힘, 소아·청소년·청년 끊김없는 지원 필요 - auto-today.co.kr",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9rMTlfMUFLYXlrODRXT2tLcWE0SkFXeC1sNHBuYmNKNE1jTk9vZkhEUGtxVkR4T0JaMmdjU1ZWd1VsZldqMVlEOFo1MDAwTE0teHZjaWRwbVh2WGhnSlFIbVp3UU9aXzl3LWhmejE1NA?oc=5",
+   "date": "2026-09-08",
+   "source": "auto-today.co.kr",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-09-09"
+  },
+  {
    "title": "[기획] 페이백·의료공백·필수약 대란… 보건복지 현안, 국감 도마",
    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9PbHYtNGhYZEdaanBaaEpXY2hBd25yZko3NnJ0T1ZJdThsaHkxcUFqM1ZNUkFSc1VZSnlRV1cwVDFzY05JSU5KRkF5Vi1NYUxqWUJDXzlQQ244Q3REOGkxWnh2UXXSAWhBVV95cUxNUXVva0FPWXVuU0tWcEwyNlgzYmJOU0dOSjNiYnZ5WnRmZHl0UjZJR0RLSlFjWURVQnVMeWdqWEJJcmVZdDA2N0RydXRtU2pwTGN2WjZ2NDd4d191d1NRWk1vNGVjMlVzZQ?oc=5",
    "date": "2026-09-07",
@@ -73,7 +93,7 @@
    "title": "주진우 \"靑인사 라인=김현지…국감 출석 불가피\"",
    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1WRURJakpxekFFcHNqZDhaNDZ5dTdmal96eHlQUnBIb1ZqZDVETFVRMkczRjNlYk9UOWVQY0tpdHZ6VFBwbXQyS19xOXFnb1M1Z2Z2T2l4YmVGVDkxZzVZekFHQU9hYktsZGpv?oc=5",
    "date": "2026-09-05",
-   "source": "더퍼블릭",
+   "source": "thepublic.kr",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -123,7 +143,7 @@
   },
   {
    "title": "국감 앞두고 '6호처분' 주목... 경계선지능 아동 지원도 과제",
-   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE4weGdEamx1RFY1Tzl0eVFVZ24wYm9GX2lkbFdnSlBFcTJWRkNYdVQ3SFRqaVREUnNNbHJhTHBJNmhRc3VObjBYS3c0SQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE50U3dTRGtJNkozcVRXYVpEdm9OcFNvR09BOGFHc1VfNjZud1pESWNLV0VRcm0wVTZuT0FNQ0N5cTFmVGhTX3c?oc=5",
    "date": "2026-09-01",
    "source": "v.daum.net",
    "score": 2,
