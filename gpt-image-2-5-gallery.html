@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="GPT Image 2.5로 다시 생성한 529개의 한국어 프롬프트 시트" />
+<title>GPT Image 2.5 한국어 프롬프트 시트</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root { font-family: 'Noto Sans KR', sans-serif; color: #171713; background: #f4f5ef; font-synthesis: none; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: #f4f5ef; }
+button, input, select { font: inherit; }
+button { cursor: pointer; }
+.modalOpen { overflow: hidden; }
+.appShell { min-height: 100vh; }
+.topbar { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; height: 68px; padding: 0 max(24px, calc((100vw - 1440px) / 2)); border-bottom: 1px solid #d8dacf; background: rgba(244,245,239,.92); backdrop-filter: blur(18px); }
+.brand { display: flex; align-items: center; gap: 11px; color: #111; text-decoration: none; font: 600 15px 'DM Sans','Noto Sans KR',sans-serif; }
+.brand b { color: #74766e; font-weight: 500; }
+.brandMark { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; color: #171713; background: #c8ff38; }
+.headerMeta { display: flex; align-items: center; gap: 10px; color: #666960; font-size: 12px; font-weight: 700; }
+.modelBadge { display: grid; place-items: center; min-width: 38px; height: 26px; border-radius: 999px; color: #10110e; background: #c8ff38; font: 700 12px 'DM Sans',sans-serif; }
+main { width: min(1440px, calc(100% - 48px)); margin: 0 auto; padding-bottom: 84px; }
+.hero { display: grid; grid-template-columns: minmax(0,1fr) 320px; gap: 60px; align-items: end; padding: 74px 0 58px; border-bottom: 1px solid #d8dacf; }
+.eyebrow { margin: 0 0 18px; color: #61651e; font: 700 11px 'DM Sans',sans-serif; letter-spacing: .2em; }
+.hero h1 { max-width: 930px; margin: 0; font-size: clamp(42px,5.5vw,80px); line-height: 1.07; letter-spacing: -.055em; font-weight: 600; }
+.hero h1 em { color: #777b70; font-style: normal; }
+.heroCopy { max-width: 670px; margin: 26px 0 0; color: #65685f; font-size: 16px; line-height: 1.75; }
+.progressPanel { padding: 22px; border: 1px solid #d3d6ca; border-radius: 5px; background: #fff; }
+.progressTop { display: flex; justify-content: space-between; color: #5f625b; font-size: 12px; }
+.progressTop strong { color: #171713; font: 700 24px 'DM Sans',sans-serif; }
+.progressTrack { height: 8px; margin: 18px 0 13px; overflow: hidden; border-radius: 999px; background: #e8eadf; }
+.progressTrack span { display: block; height: 100%; border-radius: inherit; background: #b5ef20; transition: width .5s ease; }
+.progressPanel p { margin: 0; color: #777a71; font-size: 12px; }
+.progressPanel b { color: #22231f; }
+.toolbar { position: sticky; top: 68px; z-index: 15; display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 17px 0; border-bottom: 1px solid #d8dacf; background: rgba(244,245,239,.94); backdrop-filter: blur(18px); }
+.searchBox { display: flex; align-items: center; gap: 10px; width: min(430px,38vw); height: 44px; padding: 0 14px; border: 1px solid #c9ccc0; border-radius: 4px; background: #fff; color: #777a72; }
+.searchBox:focus-within { border-color: #20211e; box-shadow: 0 0 0 1px #20211e; }
+.searchBox input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: #171713; }
+.searchBox button { display: grid; place-items: center; padding: 4px; border: 0; background: none; color: #74776e; }
+.searchBox button[hidden] { display: none; }
+.controls, .segmented { display: flex; align-items: center; gap: 7px; }
+.segmented { padding: 4px; border: 1px solid #c9ccc0; border-radius: 4px; background: #e9ebe3; }
+.segmented button { display: flex; align-items: center; gap: 6px; height: 34px; padding: 0 11px; border: 0; border-radius: 3px; color: #676a62; background: transparent; font-size: 12px; font-weight: 700; }
+.segmented button.active { color: #151610; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+.statusFilter button.active { background: #c8ff38; }
+.controls select { height: 44px; padding: 0 28px 0 12px; border: 1px solid #c9ccc0; border-radius: 4px; background: #fff; color: #171713; }
+.controls select[hidden] { display: none; }
+.resultMeta { display: flex; justify-content: space-between; padding: 20px 0 14px; color: #777a71; font-size: 12px; }
+.resultMeta strong { color: #171713; }
+.sheetList { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+.sheetCard { display: grid; grid-template-columns: minmax(210px,42%) 1fr; min-height: 265px; overflow: hidden; border: 1px solid #d3d6ca; border-radius: 5px; background: #fbfcf8; transition: border-color .2s, transform .2s; cursor: pointer; }
+.sheetCard:hover { border-color: #9da194; transform: translateY(-1px); }
+.cardImage { position: relative; min-height: 265px; background: #e2e4dc; }
+.cardImage img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.statusBadge { position: absolute; left: 12px; bottom: 12px; padding: 7px 9px; border-radius: 999px; color: #55584f; background: rgba(255,255,255,.91); font-size: 10px; font-weight: 700; backdrop-filter: blur(10px); }
+.statusBadge.done { color: #1c2700; background: rgba(200,255,56,.92); }
+.cardBody { display: flex; flex-direction: column; min-width: 0; padding: 22px 22px 18px; }
+.caseLine { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: #62661b; font: 700 10px 'DM Sans','Noto Sans KR',sans-serif; letter-spacing: .12em; }
+.caseLine span:last-child { color: #96998f; letter-spacing: .02em; }
+.referenceNote { align-self: flex-start; margin-top: 11px; padding: 5px 8px; border: 1px solid #d8dbc9; border-radius: 999px; color: #6c704f; background: #f4f6e9; font-size: 10px; font-weight: 700; }
+.cardBody p { display: -webkit-box; overflow: hidden; margin: 15px 0 20px; color: #383a34; font-size: 14px; line-height: 1.8; -webkit-line-clamp: 5; -webkit-box-orient: vertical; }
+.cardFooter { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 13px; border-top: 1px solid #e1e3da; }
+.textButton { padding: 0; border: 0; background: none; color: #191a16; font-size: 12px; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+.copyButton { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 47px; padding: 0 17px; border: 0; border-radius: 4px; color: #11120f; background: #c8ff38; font-size: 13px; font-weight: 700; }
+.copyButton.compact { min-height: 34px; padding: 0 10px; border: 1px solid #cdd0c5; background: #fff; font-size: 11px; }
+.imageGrid { display: grid; grid-template-columns: repeat(var(--columns),minmax(0,1fr)); gap: 11px; }
+.imageTile { position: relative; overflow: hidden; aspect-ratio: 1/1; padding: 0; border: 0; border-radius: 4px; background: #e1e3db; }
+.imageTile img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.imageTile:hover img { transform: scale(1.035); }
+.imageTile::after { content: ''; position: absolute; inset: 55% 0 0; background: linear-gradient(transparent,rgba(0,0,0,.58)); }
+.tileNumber { position: absolute; z-index: 2; left: 12px; bottom: 11px; color: #fff; font: 700 10px 'DM Sans',sans-serif; letter-spacing: .08em; }
+.dot { position: absolute; z-index: 2; right: 12px; bottom: 12px; width: 8px; height: 8px; border: 1px solid rgba(255,255,255,.7); border-radius: 50%; background: #777; }
+.dot.done { border-color: #c8ff38; background: #c8ff38; box-shadow: 0 0 0 3px rgba(200,255,56,.18); }
+.loadMore { display: flex; align-items: center; justify-content: center; gap: 9px; width: 240px; height: 50px; margin: 38px auto 0; border: 0; border-radius: 4px; color: #11120f; background: #c8ff38; font-weight: 700; }
+.loadMore span { color: #62661b; font-size: 11px; font-weight: 600; }
+.loadMore[hidden] { display: none; }
+.empty { display: grid; place-items: center; min-height: 340px; color: #777a71; }
+.modalBackdrop { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 28px; background: rgba(16,17,14,.76); backdrop-filter: blur(8px); }
+.modalBackdrop[hidden] { display: none; }
+.modal { position: relative; display: grid; grid-template-columns: minmax(320px,.9fr) minmax(430px,1.1fr); width: min(1200px,100%); max-height: calc(100vh - 56px); overflow: hidden; border-radius: 7px; background: #f8f9f4; box-shadow: 0 30px 100px rgba(0,0,0,.42); }
+.modalClose { position: absolute; z-index: 3; top: 14px; right: 14px; display: grid; place-items: center; width: 38px; height: 38px; border: 0; border-radius: 50%; background: rgba(255,255,255,.92); }
+.modalVisual { position: relative; min-height: 590px; background: #e1e3db; }
+.modalVisual img { width: 100%; height: 100%; object-fit: contain; }
+.modalContent { display: flex; flex-direction: column; min-height: 0; padding: 42px 42px 34px; }
+.modalContent h2 { margin: 12px 0 19px; font-size: 29px; letter-spacing: -.04em; }
+.fullPrompt { flex: 1; overflow: auto; padding: 20px; border: 1px solid #d7d9d0; border-radius: 4px; background: #fff; color: #30322c; font-size: 14px; line-height: 1.82; white-space: pre-wrap; }
+.modalContent > .copyButton { margin-top: 15px; }
+svg { flex: none; }
+@media (max-width: 1120px) {
+  .sheetList { grid-template-columns: 1fr; }
+  .controls { flex-wrap: wrap; justify-content: flex-end; }
+}
+@media (max-width: 850px) {
+  main { width: min(100% - 28px,1440px); }
+  .hero { grid-template-columns: 1fr; gap: 30px; padding: 52px 0 42px; }
+  .progressPanel { max-width: 420px; }
+  .toolbar { align-items: stretch; flex-direction: column; }
+  .searchBox { width: 100%; }
+  .controls { justify-content: space-between; }
+  .imageGrid { grid-template-columns: repeat(min(var(--columns),3),minmax(0,1fr)); }
+  .modal { grid-template-columns: 1fr; overflow: auto; }
+  .modalVisual { min-height: 280px; max-height: 44vh; }
+  .modalContent { min-height: 50vh; padding: 28px; }
+}
+@media (max-width: 600px) {
+  .topbar { padding: 0 14px; }
+  .brand b, .headerMeta > span:last-child { display: none; }
+  .hero h1 { font-size: 40px; }
+  .controls { align-items: stretch; flex-direction: column; }
+  .segmented button { flex: 1; justify-content: center; }
+  .sheetCard { grid-template-columns: 1fr; }
+  .cardImage { height: 310px; }
+  .imageGrid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 7px; }
+  .modalBackdrop { padding: 9px; }
+  .modalContent { padding: 24px 18px 18px; }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/><path d="M14 4h7"/><path d="M14 9h7"/><path d="M14 15h7"/><path d="M14 20h7"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 12h18"/><path d="M12 3v18"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  </defs>
+</svg>
+<div class="appShell">
+  <header class="topbar">
+    <a class="brand" href="gpt-image-2-5-gallery.html">
+      <span class="brandMark"><svg width="18" height="18"><use href="#i-sparkles"/></svg></span>
+      <span>GPT Image 2.5 <b>한국어 프롬프트 시트</b></span>
+    </a>
+    <div class="headerMeta">
+      <span class="modelBadge">2.5</span>
+      <span id="headerCount">—/— 생성</span>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">KOREAN PROMPT SHEET · GPT IMAGE 2.5</p>
+        <h1>같은 한국어 프롬프트,<br /><em>새 이미지 모델의 결과.</em></h1>
+        <p class="heroCopy">검증된 한국어 프롬프트 529개를 GPT Image 2.5로 다시 생성합니다. 이미지와 원문 프롬프트를 나란히 보고 바로 복사할 수 있습니다.</p>
+      </div>
+      <aside class="progressPanel" aria-label="생성 진행률">
+        <div class="progressTop"><span>생성 진행률</span><strong id="percent">0%</strong></div>
+        <div class="progressTrack"><span id="progressBar" style="width:0%"></span></div>
+        <p><b id="doneCount">0</b>개 완료 · <b id="pendingCount">0</b>개 대기</p>
+      </aside>
+    </section>
+    <section class="toolbar" aria-label="갤러리 도구">
+      <label class="searchBox">
+        <svg width="18" height="18"><use href="#i-search"/></svg>
+        <input id="query" placeholder="프롬프트 내용 또는 번호 검색" />
+        <button id="clearQuery" aria-label="검색 지우기" hidden><svg width="16" height="16"><use href="#i-x"/></svg></button>
+      </label>
+      <div class="controls">
+        <div class="segmented statusFilter" id="statusFilter">
+          <button data-status="all" class="active">전체</button>
+          <button data-status="done">2.5 완료</button>
+          <button data-status="pending">생성 대기</button>
+        </div>
+        <div class="segmented" id="modeFilter">
+          <button data-mode="sheet" class="active"><svg width="16" height="16"><use href="#i-list"/></svg> 시트</button>
+          <button data-mode="grid"><svg width="16" height="16"><use href="#i-grid"/></svg> 이미지</button>
+        </div>
+        <select id="columns" aria-label="열 개수" hidden>
+          <option value="2">2열</option><option value="3">3열</option><option value="4" selected>4열</option><option value="5">5열</option><option value="6">6열</option>
+        </select>
+      </div>
+    </section>
+    <div class="resultMeta"><strong id="resultCount">0개</strong><span id="resultLabel">이미지 + 한국어 프롬프트</span></div>
+    <div id="list" class="sheetList"></div>
+    <button id="loadMore" class="loadMore" hidden>더 보기 <span id="remain"></span></button>
+  </main>
+  <div id="modalBackdrop" class="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true">
+      <button id="modalClose" class="modalClose" aria-label="닫기"><svg width="20" height="20"><use href="#i-x"/></svg></button>
+      <div class="modalVisual">
+        <img id="modalImg" alt="" />
+        <span id="modalBadge" class="statusBadge"></span>
+      </div>
+      <div class="modalContent">
+        <div class="caseLine"><span id="modalCase"></span><span>한국어 프롬프트</span></div>
+        <span id="modalRef" class="referenceNote" hidden>기존 결과 이미지를 시각 참조로 함께 사용</span>
+        <h2>이미지 생성 지시문</h2>
+        <div id="modalPrompt" class="fullPrompt"></div>
+        <button id="modalCopy" class="copyButton"><svg width="15" height="15"><use href="#i-copy"/></svg> 한국어 프롬프트 복사</button>
+      </div>
+    </section>
+  </div>
+</div>
+<script>
+(function () {
+  var PAGE_SIZE = 40;
+  var DATA_URL = 'gpt-image-2-5/cases.json';
+  var BASE = 'gpt-image-2-5/';
+  var library = { cases: [], count: 0, generatedCount: 0 };
+  var state = { query: '', status: 'all', mode: 'sheet', columns: 4, page: 1, selected: null };
+  var $ = function (id) { return document.getElementById(id); };
+  var els = {
+    list: $('list'), loadMore: $('loadMore'), remain: $('remain'), query: $('query'), clear: $('clearQuery'),
+    columns: $('columns'), resultCount: $('resultCount'), resultLabel: $('resultLabel'),
+    backdrop: $('modalBackdrop'), modalImg: $('modalImg'), modalBadge: $('modalBadge'), modalCase: $('modalCase'),
+    modalRef: $('modalRef'), modalPrompt: $('modalPrompt'), modalCopy: $('modalCopy')
+  };
+  var byId = {};
+
+  function pad(id) { return String(id).padStart(3, '0'); }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function icon(name, size) { return '<svg width="' + size + '" height="' + size + '"><use href="#i-' + name + '"/></svg>'; }
+
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text).then(function () { return true; }, function () { return fallback(); });
+    }
+    return Promise.resolve(fallback());
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.style.position = 'fixed'; ta.style.left = '-9999px';
+      document.body.appendChild(ta); ta.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+      ta.remove();
+      return ok;
+    }
+  }
+  function flashCopied(btn, compact) {
+    var original = btn.innerHTML;
+    copyText(btn.dataset.prompt || (state.selected && state.selected.prompt) || '').then(function (ok) {
+      btn.innerHTML = (ok ? icon('check', 15) : icon('copy', 15)) + ' ' + (ok ? '복사됨' : (compact ? '복사' : '한국어 프롬프트 복사'));
+      setTimeout(function () { btn.innerHTML = original; }, 1400);
+    });
+  }
+
+  function filtered() {
+    var kw = state.query.trim().toLocaleLowerCase('ko');
+    return library.cases.filter(function (item) {
+      var statusMatch = state.status === 'all' || (state.status === 'done' ? item.generated : !item.generated);
+      var queryMatch = !kw || (item.id + ' ' + item.prompt).toLocaleLowerCase('ko').indexOf(kw) !== -1;
+      return statusMatch && queryMatch;
+    });
+  }
+
+  function sheetCard(item) {
+    return '<article class="sheetCard" data-id="' + item.id + '">' +
+      '<div class="cardImage"><img src="' + BASE + item.image + '" alt="CASE ' + item.id + ' 생성 결과" loading="lazy" />' +
+      '<span class="statusBadge' + (item.generated ? ' done' : ' pending') + '">' + (item.generated ? 'GPT Image 2.5' : '기존 결과 · 생성 대기') + '</span></div>' +
+      '<div class="cardBody"><div class="caseLine"><span>CASE ' + pad(item.id) + '</span><span>한국어</span></div>' +
+      (item.requiresReference ? '<span class="referenceNote">참조 이미지 기반 프롬프트</span>' : '') +
+      '<p>' + esc(item.preview) + (item.prompt.length > item.preview.length ? '…' : '') + '</p>' +
+      '<div class="cardFooter"><button class="textButton" data-open="' + item.id + '">전체 보기</button>' +
+      '<button class="copyButton compact" data-copy="' + item.id + '">' + icon('copy', 15) + ' 복사</button></div></div></article>';
+  }
+  function imageTile(item) {
+    return '<button class="imageTile" data-id="' + item.id + '"><img src="' + BASE + item.image + '" alt="CASE ' + item.id + ' 생성 결과" loading="lazy" />' +
+      '<span class="tileNumber">#' + pad(item.id) + '</span><span class="dot' + (item.generated ? ' done' : '') + '"></span></button>';
+  }
+
+  function render() {
+    var items = filtered();
+    var visible = items.slice(0, state.page * PAGE_SIZE);
+    els.resultCount.textContent = items.length + '개';
+    els.resultLabel.textContent = state.mode === 'sheet' ? '이미지 + 한국어 프롬프트' : state.columns + '열 이미지 보기';
+    els.list.className = state.mode === 'sheet' ? 'sheetList' : 'imageGrid';
+    els.list.style.setProperty('--columns', state.columns);
+    if (library.failed) { els.list.className = 'empty'; els.list.textContent = '프롬프트 데이터를 불러오지 못했습니다.'; els.loadMore.hidden = true; return; }
+    els.list.innerHTML = visible.map(state.mode === 'sheet' ? sheetCard : imageTile).join('');
+    els.loadMore.hidden = visible.length >= items.length;
+    els.remain.textContent = (items.length - visible.length) + '개 남음';
+  }
+
+  function openModal(item) {
+    state.selected = item;
+    els.modalImg.src = BASE + item.image;
+    els.modalImg.alt = 'CASE ' + item.id + ' 생성 결과';
+    els.modalBadge.className = 'statusBadge ' + (item.generated ? 'done' : 'pending');
+    els.modalBadge.textContent = item.generated ? 'GPT Image 2.5 결과' : '기존 결과 · 생성 대기';
+    els.modalCase.textContent = 'CASE ' + pad(item.id);
+    els.modalRef.hidden = !item.requiresReference;
+    els.modalPrompt.textContent = item.prompt;
+    els.backdrop.hidden = false;
+    document.body.classList.add('modalOpen');
+  }
+  function closeModal() { state.selected = null; els.backdrop.hidden = true; document.body.classList.remove('modalOpen'); }
+
+  els.list.addEventListener('click', function (e) {
+    var copy = e.target.closest('[data-copy]');
+    if (copy) { e.stopPropagation(); copy.dataset.prompt = byId[copy.dataset.copy].prompt; flashCopied(copy, true); return; }
+    var open = e.target.closest('[data-open]');
+    if (open) { e.stopPropagation(); openModal(byId[open.dataset.open]); return; }
+    var card = e.target.closest('[data-id]');
+    if (card) openModal(byId[card.dataset.id]);
+  });
+  els.loadMore.addEventListener('click', function () { state.page += 1; render(); });
+  els.query.addEventListener('input', function () { state.query = els.query.value; els.clear.hidden = !state.query; state.page = 1; render(); });
+  els.clear.addEventListener('click', function () { els.query.value = ''; state.query = ''; els.clear.hidden = true; state.page = 1; render(); });
+  $('statusFilter').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    state.status = b.dataset.status; state.page = 1;
+    Array.prototype.forEach.call(this.children, function (c) { c.classList.toggle('active', c === b); });
+    render();
+  });
+  $('modeFilter').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    state.mode = b.dataset.mode; state.page = 1;
+    Array.prototype.forEach.call(this.children, function (c) { c.classList.toggle('active', c === b); });
+    els.columns.hidden = state.mode !== 'grid';
+    render();
+  });
+  els.columns.addEventListener('change', function () { state.columns = Number(els.columns.value); state.page = 1; render(); });
+  els.backdrop.addEventListener('mousedown', function (e) { if (e.target === els.backdrop) closeModal(); });
+  $('modalClose').addEventListener('click', closeModal);
+  els.modalCopy.addEventListener('click', function () { flashCopied(els.modalCopy, false); });
+  window.addEventListener('keydown', function (e) { if (e.key === 'Escape' && state.selected) closeModal(); });
+
+  fetch(DATA_URL).then(function (r) { return r.json(); }).then(function (data) {
+    library = data;
+    library.cases.forEach(function (c) { byId[c.id] = c; });
+    var percent = library.count ? Number((library.generatedCount / library.count * 100).toFixed(1)) : 0;
+    $('headerCount').textContent = library.generatedCount + '/' + (library.count || '—') + ' 생성';
+    $('percent').textContent = percent + '%';
+    $('progressBar').style.width = percent + '%';
+    $('doneCount').textContent = library.generatedCount;
+    $('pendingCount').textContent = Math.max(0, library.count - library.generatedCount);
+    render();
+  }).catch(function () { library = { cases: [], count: 0, generatedCount: 0, failed: true }; render(); });
+})();
+</script>
+</body>
+</html>

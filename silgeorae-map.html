@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>구리 아파트 실거래가 (단지별) | 갈매역삼성부동산</title>
+<meta name="description" content="국토교통부 실거래가 공개시스템 기반, 구리시 아파트 단지별 최근 1년 매매 실거래가. 위치 조작 없이 정확한 단지별 시세만 제공합니다.">
+<meta property="og:site_name" content="갈매역삼성부동산">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="구리 아파트 실거래가 (단지별) | 갈매역삼성부동산">
+<meta property="og:description" content="국토교통부 실거래가 공개시스템 기반, 구리시 아파트 단지별 최근 1년 매매 실거래가. 위치 조작 없이 정확한 단지별 시세만 제공합니다.">
+<meta property="og:url" content="https://galmae-budongsan.com/silgeorae-map.html">
+<meta property="og:image" content="https://galmae-budongsan.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="구리 아파트 실거래가 (단지별) | 갈매역삼성부동산">
+<meta name="twitter:description" content="국토교통부 실거래가 공개시스템 기반, 구리시 아파트 단지별 최근 1년 매매 실거래가. 위치 조작 없이 정확한 단지별 시세만 제공합니다.">
+<meta name="twitter:image" content="https://galmae-budongsan.com/assets/og-image.png">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .tools{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:12px 0; }
+  .tools select,.tools input{ font:inherit; padding:9px 12px; border:1px solid var(--line); border-radius:8px; background:#fff; }
+  .tools input{ min-width:180px; }
+  .tools .count{ margin-left:auto; color:var(--muted); font-size:.9rem; }
+  .tbl-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:12px; }
+  table.sise{ border-collapse:collapse; width:100%; min-width:720px; font-size:.93rem; }
+  table.sise th,table.sise td{ border-bottom:1px solid var(--line); padding:10px 12px; text-align:left; white-space:nowrap; }
+  table.sise thead th{ background:var(--blue-soft); color:var(--navy); position:sticky; top:0; }
+  table.sise tbody tr:hover{ background:#f7faff; }
+  table.sise .price{ font-weight:800; color:var(--warn); }
+  table.sise .dong{ display:inline-block; background:#eef4fb; color:var(--navy); border-radius:12px; padding:1px 9px; font-size:.82rem; }
+  .askbtn{ background:var(--blue); color:#fff; border:none; padding:5px 10px; border-radius:6px; font-size:.82rem; text-decoration:none; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="budongsan.html">🏢 갈매동 부동산 <span class="tag">갈매역삼성부동산</span></a>
+    <nav class="site-nav">
+      <a href="jido-search.html" data-nav="guri">구리·갈매</a>
+      <a href="jido-search.html?region=by" data-nav="by">남양주 별내</a>
+      <a href="silgeorae-lab.html" class="active">실거래가 분석 <span class="nav-badge">매일 업데이트</span></a>
+      <a href="news.html">뉴스·정책 <span class="nav-badge">매일 업데이트</span></a>
+      <a href="store.html">매물</a>
+      <a href="jaryo.html">자료실</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="breadcrumb"><a href="budongsan.html">홈</a> › 구리 아파트 실거래가(단지별)</div>
+  <div class="page-head">
+    <h1>📊 구리 아파트 실거래가 <span style="font-size:1rem;color:var(--muted)">단지별</span></h1>
+    <p class="lead">국토교통부 <strong>공식 실거래가</strong>(최근 1년, 매매) 기준. 단지별 정확한 시세만 표시합니다.</p>
+  </div>
+
+  <div class="callout law">
+    <span class="t">🔬 회복률·신고가로 분석해서 보고 싶다면</span>
+    같은 데이터를 <strong>전고점 회복률·신고가·거래량 랭킹</strong>으로 보려면 <a href="silgeorae-lab.html"><strong>구리 실거래가 분석</strong></a> 페이지를 이용하세요. 이 표는 전체 단지를 한 줄씩 훑어보기 좋습니다.
+  </div>
+
+  <div class="callout tip">
+    <span class="t">🗺️ 지도 위치가 필요하시면</span>
+    각 단지의 <strong>정확한 지도 위치</strong>는 <a href="https://rt.molit.go.kr" target="_blank" rel="noopener">국토부 실거래가 공개시스템</a>에서 확인하세요. 이 표는 <strong>위치를 임의로 찍지 않고</strong> 단지명·시세만 정확히 보여드립니다. 갈매동 요약은 <a href="galmae.html">갈매동 단지 안내</a>에서.
+  </div>
+
+  <div class="tools">
+    <select id="dongF"><option value="">전체 동</option></select>
+    <input id="q" type="search" placeholder="단지명 검색 (예: 스타힐스)">
+    <select id="sortF">
+      <option value="cnt">거래 많은순</option>
+      <option value="recent">최근 거래순</option>
+      <option value="high">시세 높은순</option>
+      <option value="low">시세 낮은순</option>
+    </select>
+    <span class="count" id="count"></span>
+  </div>
+
+  <div class="tbl-wrap">
+    <table class="sise">
+      <thead><tr>
+        <th>동</th><th>단지</th><th>준공</th><th>전용(㎡)</th>
+        <th>최근1년<br>매매</th><th>시세범위</th><th>최근 거래</th><th></th>
+      </tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+
+  <div class="callout law" style="margin-top:18px">
+    <span class="t">🙋 이 단지 매물·시세 상담</span>
+    갈매역삼성부동산이 <strong>등기·시세 확인부터 안전한 계약</strong>까지 도와드립니다. ☎ <strong>031-575-4944</strong>
+  </div>
+
+  <div class="disclaimer">
+    ⚖️ 실거래가는 신고 기반으로 해제·특수관계 거래·신고지연(최대 30일)이 있을 수 있습니다(최근 1년, 매매 기준). 출처: 국토교통부 실거래가 공개시스템. 데이터 기준일: 2026-08-09.
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h4>🏢 갈매역삼성부동산</h4>
+    <div class="footer-note">출처: 국토교통부 실거래가 공개시스템 (구리시 아파트 매매, 최근 1년). 위치는 임의 표시하지 않습니다. © 2026 갈매역삼성부동산.</div>
+  </div>
+</footer>
+
+<script src="data/guri-complexes.js"></script>
+<script>
+function eok(m){ m=Math.round(m||0); const e=Math.floor(m/10000), r=m%10000; return (e?e+"억":"")+(r?(e?" ":"")+r.toLocaleString()+"만":"")||"0"; }
+function eokS(m){ return (m/10000).toFixed(1)+"억"; }
+const TEL="0315754944";
+const data = (typeof GURI!=='undefined')?GURI:[];
+const dongF=document.getElementById('dongF'), q=document.getElementById('q'), sortF=document.getElementById('sortF');
+const rowsEl=document.getElementById('rows'), countEl=document.getElementById('count');
+
+[...new Set(data.map(d=>d.dong))].sort().forEach(dg=>{
+  const o=document.createElement('option'); o.value=dg; o.textContent=dg; dongF.appendChild(o);
+});
+
+function render(){
+  let rows=data.filter(d=> (!dongF.value||d.dong===dongF.value) && (!q.value||d.name.includes(q.value.trim())) );
+  const s=sortF.value;
+  rows.sort((a,b)=> s==='cnt'? b.count-a.count : s==='recent'? (b.latest.date||'').localeCompare(a.latest.date||'') : s==='high'? b.max-a.max : a.min-b.min);
+  rowsEl.innerHTML = rows.map(d=>{
+    const la=d.latest||{}; const areas=(d.areas||[]).join(', ');
+    return `<tr>
+      <td><span class="dong">${d.dong}</span></td>
+      <td><b>${d.name}</b></td>
+      <td>${d.buildYear||'-'}</td>
+      <td>${areas}</td>
+      <td style="text-align:center">${d.count}건</td>
+      <td class="price">${eokS(d.min)}~${eokS(d.max)}</td>
+      <td>${la.area||''}㎡·${la.floor||''}층·<b>${eok(la.price)}</b> <span style="color:#888">(${la.date||''})</span></td>
+      <td><a class="askbtn" href="tel:${TEL}">문의</a></td>
+    </tr>`;
+  }).join('');
+  countEl.textContent = `${rows.length}개 단지`;
+}
+dongF.addEventListener('change',render); q.addEventListener('input',render); sortF.addEventListener('change',render);
+render();
+</script>
+<script src="assets/js/a11y.js" defer></script>
+</body>
+</html>

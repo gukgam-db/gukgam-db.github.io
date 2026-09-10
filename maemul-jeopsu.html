@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>매물 접수 · 블로그/카톡 글 만들기 | 대한민국 부동산 종합정보</title>
+<meta name="description" content="칸만 채우면 사이트 등록용 데이터, 네이버 블로그 글, 카카오톡 오픈채팅용 글이 자동으로 완성됩니다. 복사해서 바로 올리세요.">
+<meta property="og:site_name" content="갈매역삼성부동산">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="매물 접수 · 블로그/카톡 글 만들기 | 대한민국 부동산 종합정보">
+<meta property="og:description" content="칸만 채우면 사이트 등록용 데이터, 네이버 블로그 글, 카카오톡 오픈채팅용 글이 자동으로 완성됩니다. 복사해서 바로 올리세요.">
+<meta property="og:url" content="https://galmae-budongsan.com/maemul-jeopsu.html">
+<meta property="og:image" content="https://galmae-budongsan.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="매물 접수 · 블로그/카톡 글 만들기 | 대한민국 부동산 종합정보">
+<meta name="twitter:description" content="칸만 채우면 사이트 등록용 데이터, 네이버 블로그 글, 카카오톡 오픈채팅용 글이 자동으로 완성됩니다. 복사해서 바로 올리세요.">
+<meta name="twitter:image" content="https://galmae-budongsan.com/assets/og-image.png">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:640px){ .form-grid { grid-template-columns:1fr; } }
+  .f label { display:block; font-weight:700; color:var(--navy-dark); margin-bottom:4px; font-size:.92rem; }
+  .f input, .f select, .f textarea { width:100%; padding:10px 12px; border:1px solid var(--line); border-radius:8px; font:inherit; }
+  .f textarea { min-height:64px; resize:vertical; }
+  .full { grid-column:1 / -1; }
+  .genbtn { background:var(--accent); color:#fff; border:none; padding:13px 28px; border-radius:9px; font-weight:800; font-size:1.06rem; cursor:pointer; margin-top:16px; }
+  .genbtn:hover{opacity:.93}
+  .outputs { margin-top:24px; display:none; }
+  .outputs.show { display:block; }
+  .obox { background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin:14px 0; box-shadow:var(--shadow); }
+  .obox h3 { margin:0 0 8px; color:var(--navy); display:flex; align-items:center; gap:8px; }
+  .obox textarea { width:100%; min-height:150px; padding:12px; border:1px solid var(--line); border-radius:8px; font:inherit; line-height:1.65; background:#fafbfc; }
+  .obox .copybtn { margin-top:8px; background:var(--blue); color:#fff; border:none; padding:9px 18px; border-radius:8px; font-weight:700; cursor:pointer; }
+  .obox .copybtn:hover{opacity:.92}
+  .ok { color:var(--accent); font-weight:700; margin-left:8px; display:none; }
+  .req { color:#c0392b; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="budongsan.html">🏢 갈매동 부동산 <span class="tag">갈매역삼성부동산</span></a>
+    <nav class="site-nav">
+      <a href="store.html">우리동네 매물</a>
+      <a href="maemul-jeopsu.html" class="active">매물 접수·글쓰기</a>
+      <a href="hongbo.html">홍보 소재</a>
+      <a href="silgeorae-map.html">실거래가 지도</a>
+      <a href="jaryo.html">자료실</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="breadcrumb"><a href="budongsan.html">홈</a> › 매물 접수 · 글 만들기</div>
+  <div class="page-head">
+    <h1>📝 매물 접수 · 블로그/카톡 글 만들기</h1>
+    <p class="lead">칸만 채우고 버튼을 누르면 <strong>블로그 글</strong>과 <strong>카카오톡용 글</strong>, <strong>사이트 등록 데이터</strong>가 자동으로 만들어집니다. 복사해서 그대로 올리세요.</p>
+  </div>
+
+  <div class="callout tip">
+    <span class="t">💡 이렇게 쓰세요 (컴퓨터 몰라도 OK)</span>
+    아래 칸을 채우고 <strong>「글 만들기」</strong>를 누르세요 → 나온 글의 <strong>「복사」</strong>를 누르고 → 네이버 블로그나 카카오톡에 <strong>붙여넣기(길게 눌러 붙여넣기)</strong> → 사진만 직접 첨부하면 끝!
+  </div>
+
+  <section class="section">
+    <h2>매물 정보 입력</h2>
+    <div class="form-grid">
+      <div class="f"><label>거래유형 <span class="req">*</span></label>
+        <select id="type"><option>전세</option><option>월세</option><option>매매</option></select></div>
+      <div class="f"><label>종류</label>
+        <select id="cat"><option>아파트</option><option>오피스텔</option><option>빌라</option><option>원룸</option><option>상가</option><option>주택</option></select></div>
+
+      <div class="f full"><label>단지/건물명 + 동네 <span class="req">*</span></label>
+        <input id="addr" placeholder="예: 갈매동 갈매스타힐스"></div>
+
+      <div class="f"><label>보증금/매매가 (만원) <span class="req">*</span></label>
+        <input id="price" type="number" placeholder="예: 38000 (=3억8천)"></div>
+      <div class="f"><label>월세 (만원) <span style="font-weight:400;color:#888">— 월세일 때만</span></label>
+        <input id="rent" type="number" placeholder="예: 55"></div>
+
+      <div class="f"><label>관리비 (만원)</label>
+        <input id="maint" type="number" placeholder="예: 12"></div>
+      <div class="f"><label>전용면적 (㎡)</label>
+        <input id="area" type="number" placeholder="예: 84"></div>
+
+      <div class="f"><label>층 / 총층</label>
+        <div style="display:flex;gap:6px"><input id="floor" type="number" placeholder="11"><span style="align-self:center">/</span><input id="tfloor" type="number" placeholder="20"></div></div>
+      <div class="f"><label>방 / 욕실 개수</label>
+        <div style="display:flex;gap:6px"><input id="rooms" type="number" placeholder="3"><span style="align-self:center">방</span><input id="baths" type="number" placeholder="2"><span style="align-self:center">욕</span></div></div>
+
+      <div class="f"><label>방향</label>
+        <input id="dir" placeholder="예: 남향"></div>
+      <div class="f"><label>입주 가능일</label>
+        <input id="avail" placeholder="예: 즉시입주 / 2026-10-01 / 협의"></div>
+
+      <div class="f full"><label>자랑 포인트 (쉼표로 구분)</label>
+        <input id="opts" placeholder="예: 갈매역 도보권, 올수리, 대단지, 채광 좋음"></div>
+      <div class="f full"><label>한줄 설명</label>
+        <textarea id="desc" placeholder="예: 채광 좋은 남향 로열층. 갈매역 도보 7분, 초등학교 인접."></textarea></div>
+    </div>
+    <button class="genbtn" id="genBtn" type="button">✨ 글 만들기</button>
+  </section>
+
+  <div class="outputs" id="outputs">
+    <div class="obox">
+      <h3>📝 블로그용 글 <button class="copybtn" onclick="cp('oBlog','okBlog')">복사</button><span class="ok" id="okBlog">복사됨!</span></h3>
+      <textarea id="oBlog" readonly></textarea>
+    </div>
+    <div class="obox">
+      <h3>💬 카카오톡 / 오픈채팅용 글 <button class="copybtn" onclick="cp('oKakao','okKakao')">복사</button><span class="ok" id="okKakao">복사됨!</span></h3>
+      <textarea id="oKakao" readonly style="min-height:120px"></textarea>
+    </div>
+    <div class="obox">
+      <h3>🗂️ 사이트 등록용 데이터 <button class="copybtn" onclick="cp('oData','okData')">복사</button><span class="ok" id="okData">복사됨!</span></h3>
+      <p style="color:var(--muted);font-size:.86rem;margin:0 0 6px">이 데이터를 관리자에게 전달하면 사이트 매물 목록에 올려드립니다. (지도 좌표는 관리자가 자동 처리)</p>
+      <textarea id="oData" readonly style="min-height:120px;font-family:monospace;font-size:.85rem"></textarea>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    ⚖️ 매물 광고 시 <strong>중개사무소 명칭·등록번호·소재지·연락처</strong> 표기와 <strong>허위매물 금지</strong>(공인중개사법)를 지켜주세요. 매물주·세입자 동의 후 사진을 올리고, 개인정보(문패·차량번호)는 가리세요.
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h4>🏢 갈매역삼성부동산 · 갈매동 부동산</h4>
+    <div class="footer-note">
+      <a href="budongsan.html" style="color:#9fc0ea">홈</a> ·
+      <a href="store.html" style="color:#9fc0ea">우리동네 매물</a> ·
+      <a href="maemul-jeopsu.html" style="color:#9fc0ea">매물 접수·글쓰기</a> ·
+      <a href="hongbo.html" style="color:#9fc0ea">홍보 소재</a><br>
+      © 2026 대한민국 부동산 종합정보.
+    </div>
+  </div>
+</footer>
+
+<script src="data/listings.js"></script>
+<script>
+function won(m){ m=Math.round(m||0); if(!m) return "0"; const e=Math.floor(m/10000), r=m%10000; return (e?e+"억":"")+(r?(e?" ":"")+r.toLocaleString()+"만":"")||"0"; }
+function val(id){ return (document.getElementById(id).value||"").trim(); }
+function numv(id){ const v=parseFloat(document.getElementById(id).value); return isNaN(v)?0:v; }
+const AG = (typeof AGENCY!=='undefined') ? AGENCY : {name:"우리 부동산", telView:"", tel:""};
+
+function priceLine(type, price, rent){
+  if(type==="월세") return `보증금 ${won(price)} / 월 ${(rent||0).toLocaleString()}만원`;
+  if(type==="전세") return `전세 ${won(price)}`;
+  return `매매 ${won(price)}`;
+}
+
+document.getElementById('genBtn').addEventListener('click', ()=>{
+  const type=val('type'), cat=val('cat'), addr=val('addr');
+  const price=numv('price'), rent=numv('rent'), maint=numv('maint');
+  const area=numv('area'), floor=numv('floor'), tfloor=numv('tfloor');
+  const rooms=numv('rooms'), baths=numv('baths'), dir=val('dir'), avail=val('avail');
+  const opts=val('opts'), desc=val('desc');
+  if(!addr || !price){ alert("단지/동네와 가격은 꼭 입력해 주세요."); return; }
+
+  const py = area ? (area/3.3058).toFixed(1) : "";
+  const priceTxt = priceLine(type, price, rent);
+  const optArr = opts ? opts.split(',').map(s=>s.trim()).filter(Boolean) : [];
+  const floorTxt = floor ? `${floor}${tfloor?'/'+tfloor:''}층` : "";
+  const roomTxt = (rooms||baths) ? `방 ${rooms||'-'} / 욕실 ${baths||'-'}` : "";
+  const areaTxt = area ? `전용 ${area}㎡${py?` (약 ${py}평)`:''}` : "";
+  const contact = AG.telView ? `☎ ${AG.telView}` : "";
+
+  /* ---- 블로그 글 ---- */
+  const title = `[${addr.split(' ')[0]||''} ${type}] ${addr} ${areaTxt||''} ${dir||''}`.replace(/\s+/g,' ').trim();
+  let blog = `📌 ${title}\n\n안녕하세요, ${AG.name}입니다 😊\n오늘 소개해 드릴 좋은 매물이 나왔습니다!\n\n`;
+  blog += `━━━━━━━━━━━━━━\n📋 매물 정보\n━━━━━━━━━━━━━━\n`;
+  blog += `· 거래: ${priceTxt}\n`;
+  if(maint) blog += `· 관리비: ${maint}만원\n`;
+  blog += `· 위치: ${addr}\n`;
+  if(areaTxt) blog += `· 면적: ${areaTxt}\n`;
+  if(floorTxt||dir) blog += `· 층/향: ${floorTxt}${dir?' · '+dir:''}\n`;
+  if(roomTxt) blog += `· 구조: ${roomTxt}\n`;
+  if(avail) blog += `· 입주: ${avail}\n`;
+  if(optArr.length){ blog += `\n✨ 이런 점이 좋아요\n` + optArr.map(o=>`  ✔ ${o}`).join('\n') + `\n`; }
+  if(desc) blog += `\n${desc}\n`;
+  blog += `\n━━━━━━━━━━━━━━\n📞 문의: ${AG.name}\n${contact}\n${AG.addr||''}\n━━━━━━━━━━━━━━\n`;
+  blog += `\n#${(addr.split(' ')[0]||'우리동네')}부동산 #${(addr.split(' ')[0]||'')}${type} #${cat} #부동산매물 #집구하기 #${AG.name.replace(/\s/g,'')}`;
+  blog += `\n\n※ 사진은 글 올릴 때 직접 첨부해 주세요.`;
+
+  /* ---- 카카오톡용 글(짧게) ---- */
+  let kakao = `🏠 [${type}] ${addr}\n`;
+  kakao += `💰 ${priceTxt}${maint?` (관리비 ${maint}만)`:''}\n`;
+  const line3 = [areaTxt, floorTxt, dir, roomTxt].filter(Boolean).join(' · ');
+  if(line3) kakao += `📐 ${line3}\n`;
+  if(avail) kakao += `🗓️ 입주 ${avail}\n`;
+  if(optArr.length) kakao += `✨ ${optArr.join(' · ')}\n`;
+  kakao += `\n문의 ${contact}  (${AG.name})`;
+
+  /* ---- 사이트 등록용 데이터 ---- */
+  const dataObj =
+`{ id:__번호__, type:"${type}", category:"${cat}", title:"${(desc.split('.')[0]||addr).slice(0,30)}",
+  addr:"${addr}", price:${price||0}, rent:${rent||0}, maintFee:${maint||0}, areaM2:${area||0}, py:${py||0},
+  floor:${floor||0}, totalFloor:${tfloor||0}, rooms:${rooms||0}, baths:${baths||0}, direction:"${dir}", avail:"${avail}",
+  options:[${optArr.map(o=>`"${o}"`).join(',')}], lat:0, lng:0,
+  photo:"", desc:"${desc.replace(/"/g,'\\"')}", regDate:"오늘날짜" },`;
+
+  document.getElementById('oBlog').value = blog;
+  document.getElementById('oKakao').value = kakao;
+  document.getElementById('oData').value = dataObj;
+  document.getElementById('outputs').classList.add('show');
+  document.getElementById('outputs').scrollIntoView({behavior:'smooth'});
+});
+
+function cp(id, okId){
+  const el=document.getElementById(id); el.select(); el.setSelectionRange(0,99999);
+  navigator.clipboard.writeText(el.value).then(()=>{ const k=document.getElementById(okId); k.style.display='inline'; setTimeout(()=>k.style.display='none',1500); });
+}
+</script>
+<script src="assets/js/a11y.js" defer></script>
+</body>
+</html>

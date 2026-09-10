@@ -111,6 +111,34 @@
   .basis{ font-size:.78rem; color:var(--muted); line-height:1.6; margin-top:14px; border-top:1px dashed var(--line); padding-top:8px; }
   .empty{ color:var(--muted); font-size:.86rem; padding:14px 4px; }
 
+  /* 재료(과거 질의·답변)를 크게, 빈칸은 접어서 아래로 */
+  .evi.mat{ background:#f7fbfd; border:1.5px solid #cfe0ea; border-radius:12px; padding:12px 14px; margin:10px 0 8px; }
+  .evi.mat > summary{ font-size:1rem; }
+  .evibar{ margin:8px 0 4px; }
+  .fillbar{ display:flex; gap:9px; align-items:center; flex-wrap:wrap; margin:10px 0 6px;
+            border-top:1px dashed var(--line); padding-top:10px; }
+  .fillbar .fillhint{ font-size:.78rem; color:var(--muted); }
+  .fill.closed{ display:none; }
+  .savedAt{ font-size:.78rem; color:#1f6f4a; align-self:center; }
+  .toolhint{ font-size:.8rem; color:var(--muted); line-height:1.6; margin:-4px 2px 12px; }
+  .toolhint b{ color:var(--navy); }
+  .toolhint span{ color:#9e3a20; }
+  .btn.ghost{ background:transparent; border-color:#dfe6ee; color:#7b8794; font-weight:700; }
+  /* 여러 건을 담는 메모 */
+  .item{ margin-bottom:16px; position:relative; }
+  .itemhd{ display:flex; align-items:center; gap:8px; margin:-6px 0 10px; flex-wrap:wrap; }
+  .itemhd .ino{ background:var(--brown); color:#fff; font-weight:900; font-size:.78rem; border-radius:7px; padding:3px 10px; white-space:nowrap; }
+  .btn.mini{ padding:5px 10px; font-size:.78rem; border-radius:8px; white-space:nowrap; }
+  .btn.mini.del{ color:#a03030; border-color:#e6c9c9; margin-left:auto; }
+  @media (max-width:640px){ .btn.mini.del{ margin-left:0; } }
+  .btn.mini.apply{ background:#fff1e8; border-color:#e0b8a4; color:#9e3a20; }
+  .btn.mini:disabled{ background:#f4f6f8; border-color:#e3e9f0; color:#aab4c0; cursor:default; }
+  /* 최근 보도 칸 */
+  .press-panel{ margin-top:12px; }
+  .prrow{ border-top:1px dashed var(--line); padding:9px 0; }
+  .prrow:first-child{ border-top:0; }
+  .prrow .pt{ font-size:.9rem; font-weight:700; line-height:1.5; color:#1c2b3a; }
+  .prrow .pm{ font-size:.78rem; color:var(--muted); margin-top:5px; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
   /* ── 휴대전화 가독성 ── 글자가 작고 빽빽해 화면을 줄여야 보였다 */
   @media (max-width:640px){
     .wrap{ padding:14px 12px 50px; }
@@ -147,6 +175,9 @@
     .top, .wrap > .warn, .panel.left, .tools, .basis, .noprint{ display:none !important; }
     .cols{ display:block; }
     .sheet{ border:0; box-shadow:none; padding:0; width:auto; margin:0; }
+    .item + .item{ page-break-before:always; }
+    .itemhd{ display:none !important; }
+    .fill.closed{ display:block !important; }   /* 접어 둔 채로 인쇄해도 내용이 빠지지 않게 */
     .sheet [contenteditable]:focus{ background:none; box-shadow:none; }
     .sheet [data-ph]:empty:before{ content:''; }
     .sheet [contenteditable]:empty{ border-bottom:0; }
@@ -182,15 +213,15 @@
   </div>
 
   <div class="howto">
-    <div class="ht"><span class="n">1</span><div><b>후보를 고릅니다</b><span>아래 목록에서 올해 나올 만한 질의를 누릅니다. 제목·출처가 채워지고, <b>그동안 오간 질의와 당시 답변</b>이 함께 나옵니다.</span></div></div>
-    <div class="ht"><span class="n">2</span><div><b>과거 답변을 반영합니다</b><span><b>↩ 과거 답변 반영</b>을 누르면 그때 한 답변이 출처와 함께 메모에 들어갑니다. 나머지 <b class="ph-demo">회색 글씨</b>는 눌러서 직접 씁니다.</span></div></div>
-    <div class="ht"><span class="n">3</span><div><b>인쇄하거나 복사합니다</b><span><b>인쇄</b>로 종이에 뽑거나, <b>한글 붙여넣기용 텍스트 복사</b>로 문서에 옮깁니다.</span></div></div>
+    <div class="ht"><span class="n">1</span><div><b>후보를 고릅니다</b><span>목록에 뜨는 것은 <b>실제로 나왔던 질의 문장</b>입니다. 누르면 오른쪽에 담기고 제목·출처가 채워집니다.</span></div></div>
+    <div class="ht"><span class="n">2</span><div><b>재료부터 읽습니다</b><span>담자마자 <b>그동안 오간 질의와 당시 답변</b>이 펼쳐집니다. <b>↩ 옮기기</b>를 누르면 당시 답변이 출처와 함께 메모로 들어갑니다.</span></div></div>
+    <div class="ht"><span class="n">3</span><div><b>복사해서 마무리합니다</b><span><b>텍스트 복사</b>로 한글 문서에 붙여 넣고 수치를 채웁니다. 쓰던 내용은 <b>이 기기에 자동 저장</b>되어 새로고침해도 남습니다.</span></div></div>
   </div>
 
   <div class="cols">
     <!-- ── 왼쪽: 후보 ── -->
     <section class="panel left">
-      <h2><span class="step">1</span>예상 질의 후보 <span style="font-size:.78rem;font-weight:500;color:var(--muted);">— 눌러서 고르세요</span></h2>
+      <h2><span class="step">1</span>예상 질의 후보 <span style="font-size:.78rem;font-weight:500;color:var(--muted);">— 여러 개 눌러 담을 수 있습니다(최대 5건)</span></h2>
       <div class="picker">
         <select id="pAgency">
           <option value="kdca">질병관리청</option>
@@ -208,50 +239,28 @@
       <div id="cands"><div class="empty">자료를 불러오는 중입니다…</div></div>
     </section>
 
-    <!-- ── 오른쪽: 답변 메모 초안 ── -->
+    <details class="panel evi press-panel" id="prBox" style="grid-column:1;">
+      <summary>📰 최근 보도 <span class="cnt"></span></summary>
+      <div id="prList"></div>
+    </details>
+
+    <!-- ── 오른쪽: 답변 메모(여러 건) ── -->
     <section>
-      <details class="panel evi noprint" id="eviBox" hidden>
-        <summary id="eviSum">📌 이 주제로 그동안 오간 질의와 답변 <span class="cnt"></span></summary>
-        <div id="eviList"></div>
-      </details>
-
-      <h2 style="font-size:1rem;color:var(--navy);margin:0 0 10px;"><span class="step">2</span>답변 메모 초안 <span style="font-size:.78rem;font-weight:500;color:var(--muted);">— 회색 글씨를 눌러 입력하세요</span></h2>
+      <h2 style="font-size:1rem;color:var(--navy);margin:0 0 10px;"><span class="step">2</span>답변 메모 초안
+        <span style="font-size:.78rem;font-weight:500;color:var(--muted);">— 후보를 고를 때마다 1-1, 1-2… 로 쌓입니다</span></h2>
       <div class="tools noprint">
-        <button class="btn primary" onclick="window.print()">🖨️ 인쇄</button>
-        <button class="btn accent" id="btnApply" disabled>↩ 과거 답변 반영</button>
-        <button class="btn" id="btnCopy">📋 한글 붙여넣기용 텍스트 복사</button>
-        <button class="btn" id="btnClear">↺ 비우기</button>
+        <button class="btn primary" id="btnCopy" title="담은 항목 전부를 글자로 복사해 한글·워드에 붙여 넣습니다">📋 텍스트 복사</button>
+        <button class="btn" id="btnBlank" title="후보 없이 직접 쓸 빈 항목을 하나 더 만듭니다">＋ 빈 항목</button>
+        <button class="btn ghost" onclick="window.print()" title="담은 항목을 한 건씩 새 쪽에 인쇄합니다">🖨️ 종이로 인쇄</button>
+        <button class="btn ghost" id="btnClear" title="담은 항목과 자동 저장된 내용을 모두 지웁니다">↺ 전부 비우기</button>
+        <span id="itemCnt" style="font-size:.82rem;color:var(--muted);align-self:center;"></span>
+        <span class="savedAt" id="savedAt"></span>
       </div>
-
-      <div class="sheet" id="sheet">
-        <div class="hd noprint-hint" style="font-size:9.5pt;color:#5f6e80;font-weight:600;">답변 메모 초안 · 작성 <span contenteditable data-ph="담당자">담당자</span></div>
-
-        <div class="ttl"><span id="fNo" contenteditable>1-1.</span>
-          <span id="fTitle" contenteditable data-ph="예상 질의 요지 — 왼쪽에서 후보를 고르면 채워집니다"></span></div>
-        <div class="src">※ (출처) <span id="fSrc" contenteditable data-ph="질의 날짜·의원·형태 또는 보도 일자 — 후보를 고르면 채워집니다"></span></div>
-
-        <p class="key">◈ <span id="fKey" contenteditable data-ph="결론 한 문장 — 직접 작성"></span></p>
-
-        <div class="sec">◈ 근거와 향후 계획</div>
-        <p class="lv1">○ <span contenteditable data-ph="답변 핵심 내용 — 직접 작성"></span></p>
-        <p class="lv2">- <span contenteditable data-ph="위 핵심내용에 대한 부연 — 직접 작성"></span></p>
-        <p class="lv3">* <span contenteditable data-ph="통계 — 확정 자료로 기재(기준일·단위·출처 포함)"></span></p>
-        <p class="lv1">○ <span contenteditable data-ph="답변 핵심 내용 — 직접 작성"></span></p>
-        <p class="lv2">- <span contenteditable data-ph="부연 — 직접 작성"></span></p>
-        <p class="lv1">○ <span contenteditable data-ph="관계 부처·기관과 협의 등 향후 계획 — 직접 작성"></span></p>
-
-        <div class="sec" style="font-size:11.5pt;">참고자료</div>
-        <p class="refs">ㅇ <span contenteditable data-ph="붙일 자료의 주요 통계 요약 — 직접 작성"></span></p>
-        <p class="refs">ㅇ <span contenteditable data-ph="붙일 자료의 주요 통계 요약 — 직접 작성"></span></p>
-
-        <div class="sec" style="font-size:11.5pt;">이어질 만한 질문</div>
-        <table class="qa-tbl">
-          <thead><tr><th>질 문 사 항</th><th>답 변</th></tr></thead>
-          <tbody id="fQna"></tbody>
-        </table>
-        <div class="note-in">※ 이어질 질문은 앞의 주요 질의와 연결되게 몇 개만 추립니다. 답변은 한 문장 요지로 씁니다.</div>
-      </div>
-
+      <p class="toolhint noprint">
+        <b>텍스트 복사</b> 한글 문서에 붙여넣기(주로 쓰는 단추) · <b>＋ 빈 항목</b> 직접 쓸 칸 추가 · <b>종이로 인쇄</b> 한 건씩 새 쪽에 · <b>전부 비우기</b> 처음부터 다시<br>
+        <span>※ 쓰던 내용은 이 기기(브라우저)에만 자동 저장됩니다 — 서버로 보내지 않으며, 다른 기기에서는 보이지 않습니다.</span>
+      </p>
+      <div id="items"></div>
       <p class="basis" id="basis"></p>
     </section>
   </div>
@@ -269,70 +278,254 @@
            mfds:{name:'식품의약품안전처', qa:'mfds-qa.json', kw:['식품의약품안전처','식약처','의약품','마약','식품','의료기기','화장품']},
            mohw:{name:'보건복지부', qa:null, kw:['보건복지부','복지부','건강보험','연금','의료','돌봄','저출생','장애인']} };
 
-  var QA=[], PRESS=[], FIND=null, AGENDA=[], CUR='kdca', CANDS=[], SEL=null;
-  // 답변에서 '무엇을 하겠다'는 문장을 찾는 표현 — 인용할 값어치가 있는 답변만 고른다
-  var PROMISE=/(검토하겠|추진하겠|마련하겠|협의하겠|노력하겠|개선하겠|확대하겠|보완하겠|살펴보겠|점검하겠|반영하겠|챙기겠|시행하겠|지원하겠|강화하겠|제출하겠|보고드리겠|확인하겠|하겠습니다|추진 중|준비하고 있|검토 중)/;
-  // 인용할 값어치가 있는 답변: 무엇을 하겠다는 말이 있거나, 사실을 설명한 긴 답변
-  function quotable(r){
-    if(!r.a) return false;
-    var n=r.a.replace(/\s/g,'').length;
-    return (PROMISE.test(r.a) && n>=12) || n>=40;
+  var QA=[], PRESS=[], FIND=null, AGENDA=[], CUR='kdca', CANDS=[], ITEMS=[];
+
+  // ── 자동 저장 ── 새로고침해도 쓰던 내용이 남게 한다. 이 기기의 브라우저에만 보관하고 서버로 보내지 않는다.
+  var SKEY='gukgam-qaform-v1', RESTORING=false, PENDING=null, _svt=null;
+  function stamp(at){
+    var e=document.getElementById('savedAt'); if(!e) return;
+    var d=new Date(at||Date.now());
+    e.textContent='자동 저장됨 · '+d.getHours()+':'+('0'+d.getMinutes()).slice(-2);
+  }
+  function save(){
+    if(RESTORING) return;
+    try{
+      var d={ v:1, at:Date.now(), ag:CUR, items:ITEMS.map(function(it){
+        var c=it.cand;
+        return { cand: c ? {kind:c.kind, topic:c.topic, agtext:c.agtext, title:c.title, src:c.src,
+                            y0:c.y0, y1:c.y1, n:c.n, link:c.link, badges:c.badges} : null,
+                 open: !it.el.querySelector('.fill').classList.contains('closed'),
+                 who:  (it.el.querySelector('.hd span[contenteditable]')||{}).textContent||'',
+                 ttl:  it.el.querySelector('.ttlx').textContent||'',
+                 srcx: it.el.querySelector('.srcx').textContent||'',
+                 html: it.el.querySelector('.fill').innerHTML };
+      })};
+      localStorage.setItem(SKEY, JSON.stringify(d));
+      stamp(d.at);
+    }catch(e){}   /* 사생활 보호 모드 등 저장이 막힌 브라우저에서는 조용히 넘어간다 */
+  }
+  function queueSave(){ clearTimeout(_svt); _svt=setTimeout(save, 500); }
+  function drop(){ try{ localStorage.removeItem(SKEY); }catch(e){}
+    var e2=document.getElementById('savedAt'); if(e2) e2.textContent=''; }
+  function readSaved(){
+    var raw; try{ raw=localStorage.getItem(SKEY); }catch(e){ return null; }
+    if(!raw) return null;
+    var d; try{ d=JSON.parse(raw); }catch(e){ return null; }
+    if(!d || d.v!==1 || !d.items || !d.items.length) return null;
+    return d;
+  }
+  // 되살릴 때 붙여넣기로 섞여 들어갔을 수 있는 태그를 걷어낸다
+  function sanitize(html){
+    var d=document.createElement('div'); d.innerHTML=html||'';
+    var all=d.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var e=all[i]; if(!e.parentNode) continue;
+      var tn=e.tagName.toLowerCase();
+      if(tn==='script'||tn==='iframe'||tn==='object'||tn==='embed'||tn==='link'||tn==='style'){ e.parentNode.removeChild(e); continue; }
+      for(var j=e.attributes.length-1;j>=0;j--){
+        var a=e.attributes[j].name, v=e.getAttribute(a)||'';
+        if(/^on/i.test(a) || ((a==='href'||a==='src') && /^\s*javascript:/i.test(v))) e.removeAttribute(a);
+      }
+    }
+    return d.innerHTML;
+  }
+  function applyRestore(d){
+    RESTORING=true;
+    document.getElementById('items').innerHTML=''; ITEMS=[];
+    d.items.forEach(function(sv){
+      var el=document.createElement('article');
+      el.className='sheet item';
+      el.innerHTML=itemHTML('1-'+(ITEMS.length+1));
+      document.getElementById('items').appendChild(el);
+      var it={el:el, cand:sv.cand||null, rows:[]};
+      ITEMS.push(it);
+      var who=el.querySelector('.hd span[contenteditable]');
+      if(who) who.textContent=sv.who||'';
+      el.querySelector('.ttlx').textContent=sv.ttl||'';
+      el.querySelector('.srcx').textContent=sv.srcx||'';
+      if(sv.html) el.querySelector('.fill').innerHTML=sanitize(sv.html);
+      bindItem(it);
+      if(it.cand){
+        it.rows=relatedQA(it.cand);
+        renderEvi(it);
+        if(el.querySelector('[data-added]')) el.querySelector('.apply').disabled=true;
+      }else{
+        el.querySelector('.evi').hidden=true;
+        el.querySelector('.fillbar').hidden=true;
+      }
+      setFill(it, it.cand ? !!sv.open : true);
+    });
+    renumber(); renderCands();
+    RESTORING=false;
+    stamp(d.at);
   }
 
-  // ── 예상 질의 후보 만들기 ─────────────────────────────
-  // 지어내지 않는다. 1) 최근 3년 반복된 주제 2) 최근 공개 보도 3) 지난해 결과보고서 지적사항
+  // 답변에서 '무엇을 하겠다'는 문장을 찾는 표현 — 인용할 값어치가 있는 답변만 고른다
+  var PROMISE=/(검토하겠|추진하겠|마련하겠|협의하겠|노력하겠|개선하겠|확대하겠|보완하겠|살펴보겠|점검하겠|반영하겠|챙기겠|시행하겠|지원하겠|강화하겠|제출하겠|보고드리겠|확인하겠|하겠습니다|추진 중|준비하고 있|검토 중)/;
+  function quotable(r){
+    if(!r.a) return false;
+    var body=r.a.replace(/^\s*(예|네|아)\s*[,.]?\s*/,'');      // 앞의 '예,' '네,'는 내용이 아니다
+    var n=body.replace(/\s/g,'').length;
+    if(/^(예|네)[\s,.]*(알겠습니다|그렇습니다|맞습니다)?[\s.]*$/.test(r.a.trim())) return false;
+    return (PROMISE.test(body) && n>=22) || n>=45;
+  }
+  function promiseLine(a){
+    var t=(a||'').replace(/\s+/g,' ').trim().replace(/^\s*(예|네|아)\s*[,.]\s*/,'');
+    var parts=t.split(/(?:(?<=다\.)|(?<=[.?!]))\s+/);
+    for(var i=parts.length-1;i>=0;i--){
+      var x=(parts[i]||'').trim();
+      if(x.length>=8 && PROMISE.test(x)) return x.length>110 ? x.slice(0,110)+'…' : x;
+    }
+    return t.length>110 ? t.slice(0,110)+'…' : t;
+  }
+  function cut(t,n){ t=(t||'').replace(/^[\s,.、·…?!:;)\]]+/,''); return t.length>n ? t.slice(0,n)+'…' : t; }
+
+  // 질의 원문에서 '무엇을 묻는 문장'을 골라낸다 — 주제 이름 대신 실제 질의를 후보 제목으로 쓴다.
+  // 회의록 원문은 줄바꿈·쪽번호 때문에 앞머리가 잘리거나 띄어쓰기가 붙어 있는 곳이 있어, 성한 문장만 고른다.
+  var ASK=/(습니까|합니까|입니까|겠습니까|까\?)/;
+  var WANT=/(계획|대책|대안|방안|개선|이유|입장|현황|점검|보완|마련|검토|필요)/;
+  var JUNK=/(영상자료|자료화면|보시는|화면을|존경하는|위원장님|의사진행|말씀드리겠|답변하겠|이상입니다|감사합니다)/;
+  var GLUE=/[가-힣]{9,}/;                       // 띄어쓰기가 통째로 뭉개진 자리
+  var STUCK=/[가-힣]{4,}(입니까|습니까|합니까|하십니까|됩니까|입니다|습니다)/;   // 종결어미가 앞말에 붙어 버린 자리
+  var RHET=/(않습니까|아니겠습니까|아닙니까|않겠습니까)\s*[.?…]*$/;             // 밑자락을 까는 되물음
+  // 회의록 원문은 두 단 편집이라 줄 끝에서 낱말이 갈라진다. 낱말 첫머리에 올 수 없는 조각은 앞말에 붙여 읽는다.
+  // 홀로 설 수 없는 조각(닫힌 목록만 쓴다 — '의약품'·'가족'처럼 같은 글자로 시작하는 낱말을 건드리지 않기 위해서다)
+  var TAILW=/^(니까|니다|습니|겠습|십니|읍니|답니|됩니|입니|으로|에서|까지|부터|다고|라고|는데|시겠|느냐|냐라|습니까|습니다|입니까|입니다|십니까|십니다|겠습니|하겠습|니다만|과에서|에서는|으로는|이라고|냐라고|겠느냐|하는데|되는데|라는데|이라는|들이|들은|들을|들의|들도|들과)$/;
+  var PART=/^(이|가|을|를|은|는|의|에|도|과|와|로|서|라|며)$/;   // 홀로 놓일 수 없는 조사
+  var HEADNO=/^[는니다습서을를이가의에도과와로게요죠며면자러려든던까네씩째냐]/;
+  var ONE={};   // 한 글자로도 홀로 쓰이는 낱말 — 이것들은 붙이지 않는다
+  '좀 더 안 못 잘 저 제 그 이 등 및 약 또 즉 왜 참 첫 두 세 네 몇 각 전 총 매 말 법 돈 일 것 수 때 점 뭐 다 꼭 새 온 늘 막 딱 물 몸 힘 삶 값 곳 밥 글 뜻 위 밖 앞 뒤 옆 년 월 명 개 건 억 천 백 조 배 쪽 편'
+    .split(' ').forEach(function(w){ ONE[w]=1; });
+  function core(w){ return (w||'').replace(/[^가-힣]/g,''); }
+  function mend(t){
+    var w=(t||'').split(' '), out=[], i, c;
+    for(i=0;i<w.length;i++){
+      c=core(w[i]);
+      if(c.length===1 && !ONE[c] && (out.length || i+1<w.length)){
+        if(i+1<w.length && HEADNO.test(core(w[i+1]))){ out.push(w[i]+w[i+1]); i++; continue; }
+        if(out.length){ out[out.length-1]+=w[i]; continue; }
+      }
+      if(c.length>=2 && TAILW.test(c) && out.length){ out[out.length-1]+=w[i]; continue; }
+      out.push(w[i]);
+    }
+    return out.join(' ');
+  }
+  function orphan(t){
+    var w=(t||'').split(' ');
+    for(var i=0;i<w.length;i++){
+      var c=core(w[i]);
+      if(!c) continue;
+      if(c.length===1 && !ONE[c]) return true;
+      if(c.length>=2 && TAILW.test(c)) return true;
+      if(c.length>=8 && STUCK.test(c)) return true;
+      if(i>0 && PART.test(c)) return true;                 // 문장 중간에 조사만 떨어져 있으면 낱말이 갈라진 자리다
+      if(c.length>=3 && /\d/.test(w[i])) return true;      // '지금2차'·'10조가넘고'처럼 숫자와 뒤엉킨 자리
+    }
+    return false;
+  }
+  // 쪽머리(‘2025년도국감-보건복지(2025년10월30일) 133’)가 문장 사이에 섞여 들어와 있다
+  function clean(q){
+    return (q||'').replace(/\d{4}\s*년도\s*국감[^()]*\([^)]*\)\s*\d*/g,' ').replace(/\s+/g,' ').trim();
+  }
+  // 마침표 뒤에 빈칸이 없는 곳도 문장 경계로 본다(회의록 원문에 흔하다)
+  function sentences(q){
+    return clean(q).split(/(?<=[.?!])\s*/).filter(function(x){ return x && x.trim(); });
+  }
+  // 주제 이름에서 실제로 문장에 나타날 만한 낱말만 남긴다
+  var GENERIC={'대응':1,'대비':1,'협력':1,'관리':1,'안전':1,'지원':1,'정책':1,'제도':1,'사업':1,'기타':1};
+  function topicKeys(t){
+    return (t||'').split(/[·,\/\s]+/).filter(function(w){ return w.length>=2 && !GENERIC[w]; });
+  }
+  // 성한 물음 한 문장을 골라 낸다. 고르지 못하면 아무것도 돌려주지 않는다(주제 이름을 쓴다).
+  function pickQ(x, idx, keys, strict){
+    var t=(x||'').trim(), i, hit=false;
+    if(idx<1) return null;                        // 앞 문장이 끊긴 자리는 첫 글자가 잘려 있을 수 있다
+    if(t.length<20 || t.length>95) return null;
+    if(JUNK.test(t) || /국감|\d{3,}\s/.test(t)) return null;
+    if(!ASK.test(t) || RHET.test(t)) return null; // 실제로 묻는 문장만
+    for(i=0;i<keys.length;i++){ if(t.indexOf(keys[i])>=0){ hit=true; break; } }
+    if(!hit) return null;                         // 그 주제를 실제로 묻는 문장이어야 한다
+    t=mend(t);
+    if(t.length<20 || t.length>82) return null;   // 잘라 쓰지 않아도 되는 길이만
+    if(GLUE.test(t) || orphan(t)) return null;    // 붙여 읽어도 성하지 않으면 버린다
+    if(strict && !WANT.test(t)) return null;      // 1차에서는 '대책·계획·이유'를 묻는 문장만
+    return t;
+  }
+  function bestQuestion(rows, topic){
+    var keys=topicKeys(topic); if(!keys.length) return null;
+    for(var pass=0; pass<2; pass++){
+      var best=null, bs=0;
+      for(var i=0;i<rows.length;i++){
+        var ps=sentences(rows[i].q);
+        for(var j=0;j<ps.length && j<12;j++){
+          var q=pickQ(ps[j], j, keys, pass===0);
+          if(!q) continue;
+          var sc=60+(WANT.test(q)?30:0)+(q.length>=28?10:0)+Math.max(0,8-i);
+          if(sc>bs){ bs=sc; best={q:q, row:rows[i]}; }
+        }
+      }
+      if(best) return best;
+    }
+    return null;
+  }
+
+
+  // ── 예상 질의 후보 ─────────────────────────────────────
   function buildCands(member){
     var out=[], now=new Date().getFullYear();
     var rows=QA.filter(function(r){ return r.year>=now-4 && !junkName(r.member); });
     if(member) rows=rows.filter(function(r){ return r.member===member; });
 
-    // 1) 반복 질의 — 주제별 연도 수와 건수
+    rows=rows.slice().sort(function(a,b){ return (b.date||'').localeCompare(a.date||''); });
     var byTopic={};
     rows.forEach(function(r){
       (r.topics||[]).forEach(function(t){
-        if(!byTopic[t]) byTopic[t]={n:0, years:{}, ex:[]};
+        if(!byTopic[t]) byTopic[t]={n:0, years:{}, ex:[], rows:[]};
         byTopic[t].n++; byTopic[t].years[r.year]=1;
-        byTopic[t].ex.push(r); if(byTopic[t].ex.length>2) byTopic[t].ex.shift();   // 가장 최근 두 건만 남긴다
+        if(byTopic[t].ex.length<3) byTopic[t].ex.push(r);   // 최근 것부터 3건
+        if(byTopic[t].rows.length<400) byTopic[t].rows.push(r);
       });
     });
+    var reps=[];
     Object.keys(byTopic).forEach(function(t){
       var b=byTopic[t], ys=Object.keys(b.years).sort();
-      if(ys.length<2 || b.n<4) return;      // 두 해 이상, 4건 이상만 후보로
-      var last=b.ex[b.ex.length-1];
-      out.push({ kind:'repeat', topic:t, y0:ys[0], y1:ys[ys.length-1], n:b.n,
-        title:'「'+t+'」 관련 반복 질의 — 올해 대응 방향',
-        src:'최근 '+ys.length+'개 연도 국정감사 「'+t+'」 관련 질의 '+b.n+'건 (최근: '+ymd(last.date)+' '+last.member+' 위원 구두질의)',
-        badges:[['rp', ys[0]+'~'+ys[ys.length-1]+' 반복'],['','질의 '+b.n+'건']],
-        ex:b.ex });
+      if(ys.length<2 || b.n<4) return;
+      var pick=bestQuestion(b.rows, t), head=pick?pick.row:b.ex[0], ttl, sub;
+      if(pick){
+        ttl=pick.q;
+        sub=ymd(head.date)+' '+head.member+' 위원 구두질의 · 「'+t+'」 관련 질의는 '+ys[0]+'~'+ys[ys.length-1]+'년 '+b.n+'건';
+      }else{
+        ttl='「'+t+'」 관련 반복 질의 — '+ys[0]+'~'+ys[ys.length-1]+'년 '+b.n+'건';
+        sub='최근 '+ys.length+'개 연도 국정감사 「'+t+'」 관련 질의 '+b.n+'건 (최근: '+ymd(head.date)+' '+head.member+' 위원 구두질의)';
+      }
+      reps.push({ kind:'repeat', topic:t, agtext:t, y0:ys[0], y1:ys[ys.length-1], n:b.n, verbatim:!!pick,
+        title:ttl, src:sub,
+        badges:[['','「'+t+'」'],['rp', ys[0]+'~'+ys[ys.length-1]+' 반복'],['','질의 '+b.n+'건']]
+          .concat(pick?[['','실제 질의 문장']]:[]),
+        ex:b.ex.filter(function(e){ return e!==head; }).slice(0,2) });
+    });
+    reps.sort(function(a,b){ return b.n-a.n; });
+    var seen={};
+    reps.forEach(function(c){
+      if(seen[c.title]){ c.title='「'+c.topic+'」 관련 반복 질의 — '+c.y0+'~'+c.y1+'년 '+c.n+'건'; c.verbatim=false;
+        c.badges=c.badges.filter(function(b){ return b[1]!=='실제 질의 문장'; }); }
+      seen[c.title]=1;
+      out.push(c);
     });
 
-    // 2) 최근 보도 — 기관 관련 기사만
-    PRESS.forEach(function(p){
-      var t=(p.title||'');
-      var hit=AG[CUR].kw.some(function(k){ return t.indexOf(k)>=0; });
-      if(!hit) return;
-      out.push({ kind:'press',
-        title:t.replace(/\s*-\s*[a-z0-9.-]+$/i,'')+' 관련 대응 방향',
-        src:md(p.date)+' 언론보도('+(p.source||'')+', 「'+t.slice(0,40)+'」)',
-        badges:[['pr','최근 보도'],['',md(p.date)]],
-        link:p.link||p.url||'' , ex:[] });
-    });
+    pressOf().forEach(function(p){ out.push(pressCand(p)); });
 
-    // 3) 지난해 지적사항
     if(FIND && FIND.items){
       var mine=FIND.items.filter(function(i){ return (i.group===AG[CUR].name) || ((i.agency||'').indexOf(AG[CUR].name)>=0); });
       mine.slice(0,12).forEach(function(i){
         out.push({ kind:'finding',
-          title:(i.text||'').slice(0,60)+((i.text||'').length>60?'…':'')+' 이행 현황',
+          title:cut(i.text,60)+' 이행 현황',
           src:(FIND.year||'')+'년 국정감사 결과보고서 시정·처리요구',
-          badges:[['fd','지난해 지적'],['',(FIND.year||'')+'년']],
-          pdf:FIND.source_pdf||'', ex:[] });
+          badges:[['fd','지난해 지적'],['',(FIND.year||'')+'년']], ex:[] });
       });
     }
-
-    // 국정과제 연결 표시
     out.forEach(function(c){
-      var flat=c.title.replace(/\s+/g,'');   // 후보 제목만 본다 — 예시 발언까지 넣으면 엉뚱한 과제가 붙는다
+      var flat=(c.agtext||c.title).replace(/\s+/g,'');
       for(var i=0;i<AGENDA.length;i++){
         var a=AGENDA[i], hit=(a.strong||[]).filter(function(k){ return flat.indexOf(k.replace(/\s+/g,''))>=0; });
         if(hit.length){ c.badges.push(['ag','국정과제 '+a.no]); c.agenda=a; break; }
@@ -340,32 +533,22 @@
     });
     return out;
   }
-
-  var CSHOWN=6;
-  function renderCands(){
-    var kind=document.getElementById('pKind').value;
-    var list=CANDS.filter(function(c){ return !kind || c.kind===kind; });
-    var box=document.getElementById('cands');
-    if(!list.length){ box.innerHTML='<div class="empty">조건에 맞는 후보가 없습니다.</div>'; return; }
-    var more=list.length-CSHOWN;
-    box.innerHTML=list.slice(0,CSHOWN).map(function(c,i){
-      return '<div class="cand'+(SEL===c?' on':'')+'" data-i="'+i+'">'+
-        '<div class="t">'+esc(c.title)+'</div>'+
-        '<div class="m">'+c.badges.map(function(b){ return '<span class="bdg '+b[0]+'">'+esc(b[1])+'</span>'; }).join('')+'</div>'+
-        (c.ex && c.ex.length ? '<div class="ex">'+c.ex.map(function(e){
-            return '· '+esc(e.date)+' '+esc(e.member)+' 위원 — '+esc((e.q||'').slice(0,70))+'… '+
-                   (e.minutes_url?'<a href="'+esc(e.minutes_url)+'" target="_blank" rel="noopener">원문 ↗</a>':'');
-          }).join('<br>')+'</div>' : '')+
-        '</div>';
-    }).join('')+(more>0?'<button class="btn" id="moreCand" style="width:100%;margin-top:4px;">후보 '+more+'개 더 보기</button>':'');
-    box.querySelectorAll('.cand').forEach(function(el){
-      el.addEventListener('click', function(){ fill(list[+this.dataset.i]); });
+  var PRESS_ALL=false;
+  function pressOf(){
+    var mine=PRESS.filter(function(p){
+      var t=(p.title||''); return AG[CUR].kw.some(function(k){ return t.indexOf(k)>=0; });
     });
-    var mb=document.getElementById('moreCand');
-    if(mb) mb.addEventListener('click', function(){ CSHOWN+=12; renderCands(); });
+    PRESS_ALL = mine.length===0;
+    return PRESS_ALL ? PRESS.slice(0,12) : mine;   // 기관 낱말이 안 걸리면 국감 보도 전체를 보인다
+  }
+  function pressCand(p){
+    var t=(p.title||'').replace(/\s*-\s*[a-z0-9.-]+$/i,'');
+    return { kind:'press', title:t+' 관련 대응 방향',
+             src:md(p.date)+' 언론보도('+(p.source||'')+', 「'+t.slice(0,40)+'」)',
+             badges:[['pr','최근 보도'],['',md(p.date)]], link:p.link||p.url||'', ex:[] };
   }
 
-  // 후보와 관련된 과거 질의·답변을 찾는다 — 주제가 같거나, 제목의 낱말이 겹치는 것
+  // ── 관련 과거 질의·답변 ────────────────────────────────
   var STOP={'이행':1,'현황':1,'관련':1,'대응':1,'방향':1,'올해':1,'반복':1,'질의':1,'대책':1,'마련':1,'검토':1,'개선':1,'것':1,'등':1,'및':1};
   function tokens(t){
     var out=[], m=(t||'').match(/[가-힣]{2,}/g)||[];
@@ -380,34 +563,167 @@
       var ks=tokens(c.title);
       rows=QA.filter(function(r){
         var t=(r.q||'')+' '+(r.a||''), n=0, long=false;
-        for(var i=0;i<ks.length;i++){
-          if(t.indexOf(ks[i])>=0){ n++; if(ks[i].length>=3) long=true; }
-        }
-        return n>=2 && long;      // 두 낱말 이상 겹치고, 그중 하나는 세 글자 이상
+        for(var i=0;i<ks.length;i++){ if(t.indexOf(ks[i])>=0){ n++; if(ks[i].length>=3) long=true; } }
+        return n>=2 && long;
       });
     }
     rows=rows.filter(function(r){ return !junkName(r.member); })
              .sort(function(a,b){ return (b.date||'').localeCompare(a.date||''); });
-    var withA=rows.filter(function(r){ return r.a; });      // 답변이 붙은 것을 먼저
+    var withA=rows.filter(function(r){ return r.a; });
     return withA.concat(rows.filter(function(r){ return !r.a; })).slice(0,8);
   }
-  function renderEvi(c){
-    var box=document.getElementById('eviBox'), list=document.getElementById('eviList');
-    var rows=relatedQA(c);
-    box.hidden=false; box.open=false;
-    var nA0=rows.filter(function(r){ return r.a; }).length;
-    document.querySelector('#eviSum .cnt').textContent =
-      rows.length ? '— 질의 '+rows.length+'건, 그중 답변이 남은 것 '+nA0+'건 · 눌러서 펼치기'
-                  : '— 이어지는 과거 질의를 찾지 못했습니다';
-    var usable=rows.filter(quotable).length;
-    document.getElementById('btnApply').disabled = !usable;
-    document.getElementById('btnApply').textContent = usable ? '↩ 과거 답변 반영 ('+usable+'건)' : '↩ 과거 답변 반영';
-    LASTROWS = rows;
+
+  // ── 후보 목록 ─────────────────────────────────────────
+  // 제목이 이미 실제 질의 문장이면 날짜·위원만 한 줄로, 주제 이름을 쓴 후보만 질의 예시를 보인다
+  function exLine(c){
+    if(!c.ex || !c.ex.length) return '';
+    var e=c.ex[0], lnk=e.minutes_url?' <a href="'+esc(e.minutes_url)+'" target="_blank" rel="noopener">원문 ↗</a>':'';
+    if(c.verbatim) return '<div class="ex">· 이 주제의 가장 최근 질의 '+esc(ymd(e.date))+' '+esc(e.member)+' 위원'+lnk+'</div>';
+    return '<div class="ex">· '+esc(ymd(e.date))+' '+esc(e.member)+' 위원 — '+esc(cut(e.q,70))+lnk+'</div>';
+  }
+  var CSHOWN=6;
+  function renderCands(){
+    var kind=document.getElementById('pKind').value;
+    var list=CANDS.filter(function(c){ return !kind || c.kind===kind; });
+    var box=document.getElementById('cands');
+    if(!list.length){ box.innerHTML='<div class="empty">조건에 맞는 후보가 없습니다.</div>'; return; }
+    var more=list.length-CSHOWN;
+    box.innerHTML=list.slice(0,CSHOWN).map(function(c,i){
+      var used=ITEMS.some(function(it){ return it.cand && it.cand.title===c.title; });
+      return '<div class="cand'+(used?' on':'')+'" data-i="'+i+'">'+
+        '<div class="t">'+esc(c.title)+'</div>'+
+        '<div class="m">'+c.badges.map(function(b){ return '<span class="bdg '+b[0]+'">'+esc(b[1])+'</span>'; }).join('')+
+          (used?'<span class="bdg" style="background:#e9f3ea;color:#1f6f4a;">담음</span>':'')+'</div>'+
+        exLine(c)+
+        '</div>';
+    }).join('')+(more>0?'<button class="btn" id="moreCand" style="width:100%;margin-top:4px;">후보 '+more+'개 더 보기</button>':'');
+    box.querySelectorAll('.cand').forEach(function(el){
+      el.addEventListener('click', function(){ addItem(list[+this.dataset.i]); });
+    });
+    var mb=document.getElementById('moreCand');
+    if(mb) mb.addEventListener('click', function(){ CSHOWN+=12; renderCands(); });
+  }
+
+  // ── 최근 보도 칸 ───────────────────────────────────────
+  function renderPress(){
+    var rows=pressOf(), box=document.getElementById('prBox'), list=document.getElementById('prList');
+    box.querySelector('.cnt').textContent = PRESS_ALL
+      ? '— '+AG[CUR].name+' 이름이 들어간 기사는 없어 국감 관련 보도 '+rows.length+'건을 보입니다 · 눌러서 펼치기'
+      : '— '+AG[CUR].name+' 관련 '+rows.length+'건 · 눌러서 펼치기';
+    if(!rows.length){ list.innerHTML='<div class="none">이 기관 관련 최근 보도가 없습니다.</div>'; return; }
+    list.innerHTML=rows.slice(0,12).map(function(p,i){
+      return '<div class="prrow"><div class="pt">'+esc(p.title)+'</div>'+
+        '<div class="pm">'+esc(md(p.date))+' · '+esc(p.source||'')+
+        ' <button class="btn mini" data-p="'+i+'">이 보도로 예상 질의 만들기</button></div></div>';
+    }).join('');
+    list.querySelectorAll('button[data-p]').forEach(function(b){
+      b.addEventListener('click', function(e){ e.stopPropagation(); addItem(pressCand(rows[+this.dataset.p])); });
+    });
+  }
+
+  // ── 메모 항목 ─────────────────────────────────────────
+  function itemHTML(no){
+    return ''+
+    '<div class="itemhd noprint"><span class="ino">'+no+'</span>'+
+      '<button class="btn mini del">✕ 삭제</button></div>'+
+    '<div class="hd">답변 메모 초안 · 작성 <span contenteditable data-ph="담당자"></span></div>'+
+    '<div class="ttl"><span class="no">'+no+'.</span> <span class="ttlx" contenteditable data-ph="예상 질의 요지 — 왼쪽에서 후보를 고르면 채워집니다"></span></div>'+
+    '<div class="src">※ (출처) <span class="srcx" contenteditable data-ph="질의 날짜·위원·형태 또는 보도 일자"></span></div>'+
+    '<details class="evi mat noprint" open><summary>📌 그동안 오간 질의와 당시 답변 <span class="cnt"></span></summary>'+
+      '<div class="evibar"><button class="btn mini apply">↩ 과거 답변을 아래 메모로 옮기기</button></div>'+
+      '<div class="evilist"></div></details>'+
+    '<div class="fillbar noprint"><button class="btn mini fillt">✍ 답변 메모 칸 펼치기</button>'+
+      '<span class="fillhint">결론·근거·참고자료·이어질 질문을 직접 씁니다</span></div>'+
+    '<div class="fill closed">'+
+      '<p class="key">◈ <span contenteditable data-ph="결론 한 문장 — 직접 작성"></span></p>'+
+      '<div class="sec">◈ 근거와 향후 계획</div>'+
+      '<div class="bodyx">'+
+        '<p class="lv1">○ <span contenteditable data-ph="답변 핵심 내용 — 직접 작성"></span></p>'+
+        '<p class="lv2">- <span contenteditable data-ph="부연 — 직접 작성"></span></p>'+
+        '<p class="lv3">* <span contenteditable data-ph="통계 — 확정 자료로 기재(기준일·단위·출처 포함)"></span></p>'+
+        '<p class="lv1">○ <span contenteditable data-ph="관계 부처·기관과 협의 등 향후 계획 — 직접 작성"></span></p>'+
+      '</div>'+
+      '<div class="sec" style="font-size:11.5pt;">참고자료</div>'+
+      '<p class="refs">ㅇ <span contenteditable data-ph="붙일 자료의 주요 통계 요약 — 직접 작성"></span></p>'+
+      '<div class="sec" style="font-size:11.5pt;">이어질 만한 질문</div>'+
+      '<table class="qa-tbl"><thead><tr><th>질 문 사 항</th><th>답 변</th></tr></thead><tbody>'+
+        '<tr><td>◦ <span contenteditable data-ph="이어질 만한 질문 — 직접 작성"></span></td><td>◦ <span contenteditable data-ph="한 문장 요지 — 직접 작성"></span></td></tr>'+
+        '<tr><td>◦ <span contenteditable data-ph="이어질 만한 질문 — 직접 작성"></span></td><td>◦ <span contenteditable data-ph="한 문장 요지 — 직접 작성"></span></td></tr>'+
+      '</tbody></table>'+
+    '</div>';
+  }
+
+  function renumber(){
+    ITEMS.forEach(function(it,i){
+      var no='1-'+(i+1);
+      it.el.querySelector('.ino').textContent=no;
+      it.el.querySelector('.ttl .no').textContent=no+'.';
+    });
+    document.getElementById('itemCnt').textContent = ITEMS.length ? '담은 질의 '+ITEMS.length+'건' : '';
+  }
+
+  function setFill(it, open){
+    var f=it.el.querySelector('.fill'), b=it.el.querySelector('.fillt');
+    if(open) f.classList.remove('closed'); else f.classList.add('closed');
+    b.textContent = open ? '▾ 답변 메모 칸 접기' : '✍ 답변 메모 칸 펼치기';
+  }
+
+  function bindItem(it){
+    var el=it.el;
+    el.querySelector('.del').addEventListener('click', function(){
+      ITEMS=ITEMS.filter(function(x){ return x!==it; }); el.remove(); renumber(); renderCands(); save();
+    });
+    el.querySelector('.apply').addEventListener('click', function(){ applyPast(it); });
+    el.querySelector('.fillt').addEventListener('click', function(){
+      setFill(it, it.el.querySelector('.fill').classList.contains('closed')); save();
+    });
+    el.addEventListener('input', queueSave);
+  }
+
+  function addItem(cand){
+    if(cand && ITEMS.some(function(it){ return it.cand && it.cand.title===cand.title; })){
+      alert('이미 담은 질의입니다.'); return;
+    }
+    if(cand && ITEMS.length===1 && !ITEMS[0].cand && !ITEMS[0].el.querySelector('.ttlx').textContent.trim()){
+      ITEMS[0].el.remove(); ITEMS=[];      // 비어 있는 첫 항목은 치우고 그 자리에 담는다
+    }
+    if(ITEMS.length>=5){ alert('한 번에 5건까지 담을 수 있습니다.'); return; }
+    var el=document.createElement('article');
+    el.className='sheet item';
+    el.innerHTML=itemHTML('1-'+(ITEMS.length+1));
+    document.getElementById('items').appendChild(el);
+    var it={el:el, cand:cand||null, rows:[]};
+    ITEMS.push(it);
+
+    bindItem(it);
+    if(cand){
+      el.querySelector('.ttlx').textContent=cand.title;
+      el.querySelector('.srcx').textContent=cand.src;
+      it.rows=relatedQA(cand);
+      renderEvi(it);
+      setFill(it, !it.rows.filter(quotable).length);   // 옮겨 올 답변이 없으면 바로 쓰게 펼친다
+    }else{
+      el.querySelector('.evi').hidden=true;
+      el.querySelector('.fillbar').hidden=true;
+      setFill(it, true);
+    }
+    renumber(); renderCands(); save();
+    el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+
+  function renderEvi(it){
+    var box=it.el.querySelector('.evi'), list=it.el.querySelector('.evilist'), rows=it.rows;
+    var nA=rows.filter(function(r){ return r.a; }).length, usable=rows.filter(quotable).length;
+    box.hidden=false; box.open=true;
+    box.querySelector('.cnt').textContent = rows.length
+      ? '— 질의 '+rows.length+'건, 답변이 남은 것 '+nA+'건 · 눌러서 펼치기'
+      : '— 이어지는 과거 질의를 찾지 못했습니다';
+    var ap=it.el.querySelector('.apply');
+    ap.disabled=!usable;
+    ap.textContent = usable ? '↩ 이 답변들을 아래 메모로 옮기기 ('+usable+'건)' : '↩ 옮겨 올 만한 답변이 없습니다';
     if(!rows.length){ list.innerHTML='<div class="none">이 후보와 이어지는 과거 질의를 찾지 못했습니다. 새로 제기된 사안일 수 있습니다.</div>'; return; }
-    var nA=rows.filter(function(r){ return r.a; }).length;
-    function cut(t,n){ t=(t||'').replace(/^[\s,.\u3001\u00b7\u2026?!:;)\]]+/,''); return t.length>n ? t.slice(0,n)+'…' : t; }
-    list.innerHTML='<div class="none" style="padding:0 2px 8px;">최근 것부터 '+rows.length+'건 · 이 가운데 답변이 남아 있는 것 '+nA+'건'+
-      (c.kind==='repeat'?'':' · 제목의 낱말이 겹치는 질의를 찾은 것이라 주제가 다를 수 있습니다')+'</div>'+
+    list.innerHTML='<div class="none" style="padding:0 2px 8px;">최근 것부터 '+rows.length+'건'+
+        (it.cand.kind==='repeat'?'':' · 제목의 낱말이 겹치는 질의를 찾은 것이라 주제가 다를 수 있습니다')+'</div>'+
       rows.map(function(r){
         return '<div class="evirow">'+
           '<div class="meta">'+esc(r.date)+' · '+esc(r.member)+' 위원'+
@@ -417,103 +733,68 @@
         '</div>';
       }).join('');
   }
-  // ── 과거 답변을 메모에 옮겨 넣기 ───────────────────────
-  // 지어내지 않는다. 회의록에 남은 답변 문장을 그대로 인용하고 출처를 붙인다.
-  var LASTROWS=[];
-  // (선언 위치: renderEvi 에서도 쓴다)
-  function promiseLine(a){
-    var t=(a||'').replace(/\s+/g,' ').trim();
-    var parts=t.split(/(?<=다\.)\s*|(?<=[.?!])\s+/);
-    for(var i=parts.length-1;i>=0;i--){
-      var x=(parts[i]||'').trim();
-      if(x.length>=8 && PROMISE.test(x)) return x.length>110 ? x.slice(0,110)+'…' : x;
-    }
-    return t.length>110 ? t.slice(0,110)+'…' : t;
-  }
-  function ymdDot(d){ var p=(d||'').split('-'); return p.length===3 ? (p[0]+'. '+(+p[1])+'. '+(+p[2])+'.') : (d||''); }
-  function applyPast(){
-    if(!SEL) return;
-    var sheet=document.getElementById('sheet');
-    var sec=sheet.querySelector('.sec');                 // '◈ 근거와 향후 계획'
-    var anchor=sec.nextElementSibling;                   // 첫 ○ 줄
-    var rows=LASTROWS.filter(quotable);
-    function score(r){ var n=Math.min((r.a||'').replace(/\s/g,'').length,300); return (PROMISE.test(r.a)?1000:0)+n; }
-    rows.sort(function(a,b){ return score(b)-score(a); });   // '하겠다'가 있는 답변을 먼저, 그중 내용이 있는 것부터
-    rows=rows.slice(0,3);
-    if(!rows.length){ alert('이 주제의 과거 답변에서 옮겨 올 만한 문장을 찾지 못했습니다.\n펼쳐서 직접 확인해 주십시오.'); return; }
 
+  // 과거 답변을 메모에 옮겨 넣기 — 지어내지 않고 그대로 인용하고 출처를 붙인다
+  function applyPast(it){
+    var c=it.cand; if(!c) return;
+    var rows=it.rows.filter(quotable);
+    function score(r){ var n=Math.min((r.a||'').replace(/\s/g,'').length,300); return (PROMISE.test(r.a)?1000:0)+n; }
+    rows.sort(function(a,b){ return score(b)-score(a); });
+    rows=rows.slice(0,3);
+    if(!rows.length){ alert('이 주제의 과거 답변에서 옮겨 올 만한 문장을 찾지 못했습니다.'); return; }
+
+    var body=it.el.querySelector('.bodyx');
     function mk(cls, html){ var p=document.createElement('p'); p.className=cls; p.dataset.added='1'; p.innerHTML=html; return p; }
     var frag=document.createDocumentFragment();
-
-    // (1) 사실 — 몇 해에 걸쳐 몇 건
-    if(SEL.kind==='repeat'){
-      frag.appendChild(mk('lv1','○ 「'+esc(SEL.topic)+'」 관련 질의는 '+esc(SEL.y0)+'년부터 '+esc(SEL.y1)+
-        '년까지 국정감사에서 '+SEL.n+'건 제기되었습니다.'));
+    if(c.kind==='repeat'){
+      frag.appendChild(mk('lv1','○ 「'+esc(c.topic)+'」 관련 질의는 '+esc(c.y0)+'년부터 '+esc(c.y1)+'년까지 국정감사에서 '+c.n+'건 제기되었습니다.'));
     }else{
-      frag.appendChild(mk('lv1','○ 이 사안은 '+esc(SEL.src)+'에서 제기되었습니다.'));
+      frag.appendChild(mk('lv1','○ 이 사안은 '+esc(c.src)+'에서 제기되었습니다.'));
     }
-    // (2) 과거 답변 인용 — 출처 포함
     rows.forEach(function(r){
-      frag.appendChild(mk('lv2','- '+esc(ymdDot(r.date))+' '+esc(r.member)+' 위원 질의에 <span class="quo">“'+
-        esc(promiseLine(r.a))+'”</span>라고 답변했습니다.'));
+      frag.appendChild(mk('lv2','- '+esc(ymd(r.date))+' '+esc(r.member)+' 위원 질의에 <span class="quo">“'+esc(promiseLine(r.a))+'”</span>라고 답변했습니다.'));
     });
-    // (3) 담당자가 채울 자리
     frag.appendChild(mk('lv2','- <span contenteditable data-ph="위 답변 이후 무엇을 했는지 — 직접 작성"></span>'));
     frag.appendChild(mk('lv3','* <span contenteditable data-ph="추진 실적 수치 — 확정 자료로 기재(기준일·단위·출처)"></span>'));
-
-    sec.parentNode.insertBefore(frag, anchor);
-    // 참고자료 칸에도 한 줄 제안
-    var refs=sheet.querySelectorAll('.refs span[contenteditable]');
-    if(refs.length && !refs[0].textContent) refs[0].textContent='위 답변 이후 추진 실적(연도별)';
-    document.getElementById('sheet').scrollIntoView({behavior:'smooth', block:'start'});
+    body.insertBefore(frag, body.firstChild);
+    var ref=it.el.querySelector('.refs span[contenteditable]');
+    if(ref && !ref.textContent) ref.textContent='위 답변 이후 추진 실적(연도별)';
+    it.el.querySelector('.apply').disabled=true;
+    setFill(it, true);          // 옮겨 넣은 내용이 바로 보이도록 메모 칸을 펼친다
+    save();
+    it.el.querySelector('.fill').scrollIntoView({behavior:'smooth', block:'start'});
   }
 
-  function fill(c){
-    SEL=c;
-    document.getElementById('fTitle').textContent=c.title;
-    document.getElementById('fSrc').textContent=c.src;
-    renderCands();
-    renderEvi(c);
-    document.getElementById('eviBox').scrollIntoView({behavior:'smooth', block:'start'});
-  }
-
-  function qnaRows(n){
-    var tb=document.getElementById('fQna'); tb.innerHTML='';
-    for(var i=0;i<n;i++){
-      var tr=document.createElement('tr');
-      tr.innerHTML='<td>◦ <span contenteditable data-ph="이어질 만한 질문 — 직접 작성"></span></td>'+
-                   '<td>◦ <span contenteditable data-ph="한 문장 요지로 답변 — 직접 작성"></span></td>';
-      tb.appendChild(tr);
-    }
-  }
-
+  // ── 텍스트로 복사 ─────────────────────────────────────
   function sheetText(){
-    var s=document.getElementById('sheet'), out=[];
-    function t(el){ return (el.textContent||'').replace(/\s+/g,' ').trim(); }
-    out.push(t(s.querySelector('.hd')));
-    out.push('');
-    out.push(t(s.querySelector('.ttl')));
-    out.push('※ (출처) '+t(document.getElementById('fSrc')));
-    out.push('');
-    out.push('◈ '+t(document.getElementById('fKey')));
-    out.push('');
-    out.push('◈ 핵심 논거 또는 개선 방향 및 향후 계획');
-    s.querySelectorAll('.lv1,.lv2,.lv3').forEach(function(p){ var v=t(p); if(v.length>2) out.push(v); });
-    out.push('');
-    out.push('참고자료');
-    s.querySelectorAll('.refs').forEach(function(p){ var v=t(p); if(v.length>2) out.push(v); });
-    out.push('');
-    out.push('<추가 일문일답>');
-    s.querySelectorAll('#fQna tr').forEach(function(tr){
-      var a=t(tr.children[0]), b=t(tr.children[1]);
-      if(a.length>2 || b.length>2) out.push(a+'\t'+b);
+    var out=[];
+    ITEMS.forEach(function(it,idx){
+      var el=it.el, t=function(x){ return x ? (x.textContent||'').replace(/\s+/g,' ').trim() : ''; };
+      if(idx) out.push('', '─────────────', '');
+      out.push(t(el.querySelector('.hd')));
+      out.push(t(el.querySelector('.ttl')));
+      out.push('※ (출처) '+t(el.querySelector('.srcx')));
+      out.push('');
+      out.push('◈ '+t(el.querySelector('.key')).replace(/^◈\s*/,''));
+      out.push('');
+      out.push('◈ 근거와 향후 계획');
+      el.querySelectorAll('.bodyx p').forEach(function(p){ var v=t(p); if(v.length>2) out.push(v); });
+      out.push('');
+      out.push('참고자료');
+      el.querySelectorAll('.refs').forEach(function(p){ var v=t(p); if(v.length>2) out.push(v); });
+      out.push('');
+      out.push('<이어질 만한 질문>');
+      el.querySelectorAll('.qa-tbl tbody tr').forEach(function(tr){
+        var a=t(tr.children[0]), b=t(tr.children[1]);
+        if(a.length>2 || b.length>2) out.push(a+'\t'+b);
+      });
     });
     return out.join('\n');
   }
 
-  // ── 불러오기 ─────────────────────────────
+  // ── 불러오기 ─────────────────────────────────────────
   function load(agency){
-    CUR=agency; SEL=null;
+    CUR=agency; CSHOWN=6;
     document.getElementById('cands').innerHTML='<div class="empty">자료를 불러오는 중입니다…</div>';
     var qaP;
     if(AG[agency].qa){
@@ -529,40 +810,46 @@
     Promise.all([qaP, J('press.json',{items:[]}), J('findings-2025.json',null), J('agenda.json',{items:[]})])
     .then(function(r){
       QA=r[0]; PRESS=(r[1].items||[]); FIND=r[2]; AGENDA=(r[3].items||[]);
-      // 위원 선택지
       var c={}; QA.forEach(function(x){ if(!junkName(x.member)) c[x.member]=(c[x.member]||0)+1; });
       var names=Object.keys(c).sort(function(a,b){ return c[b]-c[a]; }).slice(0,40);
-      var sel=document.getElementById('pMember');
-      sel.innerHTML='<option value="">위원 전체</option>'+names.map(function(n){ return '<option value="'+esc(n)+'">'+esc(n)+' ('+c[n]+')</option>'; }).join('');
+      document.getElementById('pMember').innerHTML='<option value="">위원 전체</option>'+
+        names.map(function(n){ return '<option value="'+esc(n)+'">'+esc(n)+' ('+c[n]+')</option>'; }).join('');
       CANDS=buildCands('');
-      renderCands();
+      renderCands(); renderPress();
       document.getElementById('basis').innerHTML=
         '<b>산출 근거</b> — 후보는 세 가지 공개 자료에서만 만듭니다. ① <b>반복 질의</b>: 최근 5개 연도 '+esc(AG[CUR].name)+
         ' 질의 '+QA.length+'건을 주제별로 세어, 두 해 이상·네 건 이상 나온 주제. ② <b>최근 보도</b>: 공개된 국감 관련 기사 중 이 기관 관련 제목. '+
         '③ <b>지난해 지적사항</b>: 국정감사 결과보고서의 시정·처리요구 중 이 기관 소관. '+
-        '제목과 출처만 자동으로 채우고 <b>답변 내용과 수치는 채우지 않습니다</b>. 국정과제 배지는 공개된 123대 국정과제와 낱말이 겹칠 때 참고로 붙인 것이며 이행 평가가 아닙니다.';
+        '후보 제목은 그 주제를 실제로 묻는 <b>회의록 속 질의 한 문장</b>입니다(배지 「실제 질의 문장」). '+
+        '회의록 원문은 두 단 편집이라 줄 끝에서 낱말이 갈라진 곳이 있어, <b>갈라진 조각만 붙여</b> 보이고 성치 않은 문장은 쓰지 않았습니다. '+
+        '그래도 원문 표기가 그대로 남아 띄어쓰기가 어색한 곳이 있을 수 있으니 <b>회의록 원문 링크로 확인</b>하십시오. 고르지 못한 주제는 주제 이름과 건수로 적었습니다. '+
+        '제목·출처와 <b>과거 답변 인용</b>만 자동으로 채우고 <b>답변 내용과 수치는 채우지 않습니다</b>. '+
+        '국정과제 배지는 공개된 123대 국정과제와 낱말이 겹칠 때 참고로 붙인 것이며 이행 평가가 아닙니다.';
+      if(PENDING){ applyRestore(PENDING); PENDING=null; }
+      else if(!ITEMS.length) addItem(null);
+      else { ITEMS.forEach(function(it){ if(it.cand){ it.rows=relatedQA(it.cand); renderEvi(it);
+               if(it.el.querySelector('[data-added]')) it.el.querySelector('.apply').disabled=true; } }); }
     });
   }
 
   document.getElementById('pAgency').addEventListener('change', function(){ load(this.value); });
   document.getElementById('pMember').addEventListener('change', function(){ CANDS=buildCands(this.value); CSHOWN=6; renderCands(); });
   document.getElementById('pKind').addEventListener('change', function(){ CSHOWN=6; renderCands(); });
-  document.getElementById('btnApply').addEventListener('click', applyPast);
+  document.getElementById('btnBlank').addEventListener('click', function(){ addItem(null); });
+  document.getElementById('btnClear').addEventListener('click', function(){
+    if(!confirm('담은 항목과 자동 저장된 내용을 모두 지웁니다. 계속할까요?')) return;
+    ITEMS=[]; document.getElementById('items').innerHTML=''; drop(); addItem(null); renderCands();
+  });
   document.getElementById('btnCopy').addEventListener('click', function(){
     var txt=sheetText();
     navigator.clipboard.writeText(txt).then(function(){ alert('복사했습니다. 쓰시는 문서에 붙여 넣고 서식만 맞추십시오.'); },
       function(){ window.prompt('아래 내용을 복사하십시오', txt); });
   });
-  document.getElementById('btnClear').addEventListener('click', function(){
-    document.querySelectorAll('#sheet [data-added]').forEach(function(el){ el.remove(); });
-    document.querySelectorAll('#sheet [contenteditable]').forEach(function(el){ el.textContent=''; });
-    document.getElementById('fNo').textContent='1-1.';
-    qnaRows(3); SEL=null; LASTROWS=[]; document.getElementById('eviBox').hidden=true;
-    document.getElementById('btnApply').disabled=true; renderCands();
-  });
 
-  qnaRows(3);
-  load('kdca');
+  PENDING=readSaved();
+  if(PENDING && AG[PENDING.ag]) document.getElementById('pAgency').value=PENDING.ag;
+  load(PENDING && AG[PENDING.ag] ? PENDING.ag : 'kdca');
+  window.addEventListener('beforeunload', function(){ clearTimeout(_svt); save(); });
 })();
 </script>
 <footer class="site-credit" style="max-width:1180px;margin:6px auto 30px;padding:0 18px;font-size:.76rem;color:#5f6e80;text-align:right;">ⓒ <b>지음웍스닷컴</b> · 2026년 9월</footer>

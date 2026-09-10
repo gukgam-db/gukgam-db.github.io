@@ -1,0 +1,6 @@
+# Jekyll 빌드 설정
+# korea-now/는 React(Vite) 앱 소스라 Jekyll이 그대로 복사하지 않게 제외한다.
+# 빌드 결과물은 워크플로에서 _site/korea-now/ 에 따로 넣는다.
+exclude:
+  - korea-now
+  - supabase

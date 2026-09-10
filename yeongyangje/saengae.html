@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>생애주기별 | 근거영양</title>
+<meta name="description" content="영아·어린이·임신·갱년기·고령자·성인 남성. 나이와 상황에 따라 꼭 필요한 영양제와 오히려 피해야 할 것. 2025 한국인 영양소 섭취기준과 국내외 지침 근거.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main class="wrap">
+  <div class="page-head">
+    <h1>생애주기별 — 지금 내 나이에 필요한 것</h1>
+    <p>같은 영양제도 <b>0세, 15세, 임신 중, 55세, 75세</b>에 따라 답이 완전히 달라집니다. 각 시기에 근거가 확실한 것과 오히려 피해야 할 것을 나눴습니다. 용량은 2025 한국인 영양소 섭취기준(2025년 12월 개정)입니다.</p>
+  </div>
+  <div class="stage-nav" id="stage-nav"></div>
+  <div id="stages"></div>
+  <div class="callout tip"><span class="t">공통 원칙</span>
+    어느 시기든 <b>결핍이 확인된 것을 채우는 보충</b>만 근거가 분명합니다. "혹시 몰라서" 먹는 것은 대부분 효과가 없고, 임신·항암·고령 다약제 상황에서는 위험이 이득보다 큽니다.
+  </div>
+  <div class="disclaimer">출처: 보건복지부·한국영양학회 「2025 한국인 영양소 섭취기준」, 대한소아청소년과학회, 대한골대사학회, 미국소아과학회(AAP), 미국산부인과학회(ACOG), USPSTF, WHO, 코크란, ESPEN, 식약처, 국민건강영양조사, PubMed 원문. 본 정보는 일반 정보이며 진료를 대신하지 않습니다.</div>
+</main>
+<div id="site-footer"></div>
+<script src="data/glossary.js"></script>
+<script src="assets/app.js"></script>
+<script src="data/ingredients.js"></script>
+<script src="data/lifestage.js"></script>
+<script>
+(function(){
+  var L=window.EBN_LIFESTAGE, I=window.EBN_INGREDIENTS, esc=EBN.esc;
+  var VL={rec:'근거 확실',cond:'조건부 근거',opt:'근거 약함',no:'효과 없음',avoid:'유해 근거'};
+  document.getElementById('stage-nav').innerHTML=L.map(function(s){ return '<a href="#'+s.id+'">'+s.icon+' '+esc(s.name)+'</a>'; }).join('');
+  document.getElementById('stages').innerHTML=L.map(function(s){
+    return '<section class="section stage" id="'+esc(s.id)+'"><h2 style="margin-top:0"><span>'+s.icon+'</span> '+esc(s.name)+'</h2>'+
+      '<div class="lead">'+esc(s.lead)+'</div>'+
+      s.items.map(function(i){
+        return '<div class="ls-item '+i.v+'"><div class="ih"><span class="verdict '+EBN.verdictClass[i.v]+'">'+esc(VL[i.v])+'</span><h4>'+esc(i.title)+'</h4></div>'+
+          '<p>'+esc(i.why)+'</p>'+(i.note?'<div class="note">'+esc(i.note)+'</div>':'')+
+          '<p class="small">'+(i.ing?'<a href="seongbun.html#'+esc(i.ing)+'">성분 카드</a> · ':'')+(i.src||[]).map(function(u,n){return '<a href="'+esc(u)+'" target="_blank" rel="noopener">근거'+(i.src.length>1?(n+1):'')+' ↗</a>';}).join(' ')+'</p></div>';
+      }).join('')+
+      (s.krdi&&s.krdi.length?'<div class="krdi">'+s.krdi.map(function(k){return '<span><b>'+esc(k[0])+'</b> '+esc(k[1])+'</span>';}).join('')+'</div>':'')+
+      '</section>';
+  }).join('');
+  function mark(){ var h=location.hash; document.querySelectorAll('.stage-nav a').forEach(function(a){ a.classList.toggle('on', a.getAttribute('href')===h); }); }
+  window.addEventListener('hashchange', mark); mark();
+})();
+</script>
+</body>
+</html>

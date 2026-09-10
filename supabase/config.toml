@@ -1,0 +1,14 @@
+# Supabase CLI 로컬 설정 (supabase start 시 사용)
+project_id = "korea-now"
+
+[functions.seoul-congestion]
+verify_jwt = false
+
+[functions.fx-rate]
+verify_jwt = false
+
+[functions.tour-search]
+verify_jwt = false
+
+[functions.tour-congestion]
+verify_jwt = false

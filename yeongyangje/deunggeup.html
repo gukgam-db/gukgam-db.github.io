@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>허가 등급 | 근거영양</title>
+<meta name="description" content="전문의약품·일반의약품·의약외품·건강기능식품(고시형·개별인정형)·일반식품·해외직구. 같은 성분이라도 등급에 따라 누가 심사했는지, 효능을 어디까지 말할 수 있는지, 어디서 사는지가 다릅니다. 식약처 기준으로 쉽게.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main class="wrap">
+  <div class="page-head">
+    <h1>허가 등급 — 같은 성분, 다른 규칙</h1>
+    <p>비타민 D는 처방약으로도, 약국 약으로도, 건강기능식품으로도 팔립니다. 무엇이 다른지 모르면 "효과 있다"는 말의 무게를 잴 수 없습니다. 아래 7가지만 알면 성분 카드의 <span class="stat-badge st-hff">건강기능식품(고시형)</span> 같은 표시를 읽을 수 있습니다.</p>
+  </div>
+  <div class="reg-grid" id="reg-grid"></div>
+  <div class="section" id="reg-extra"></div>
+  <div class="section">
+    <h2 style="margin-top:0">성분별 국내 지위 한눈에</h2>
+    <p class="small">성분 카드에도 같은 표시가 있습니다. 한 성분이 여러 등급에 걸치면 모두 표시합니다.</p>
+    <div class="table-scroll" id="status-table"></div>
+  </div>
+  <div class="disclaimer">출처: 약사법, 건강기능식품에 관한 법률, 식품위생법, 수입식품안전관리 특별법, 식약처 의약품통합정보시스템·식품안전나라·건강기능식품공전. 제도는 바뀌므로 구매 전 식약처 사이트에서 최신 내용을 확인하세요.</div>
+</main>
+<div id="site-footer"></div>
+<script src="data/glossary.js"></script>
+<script src="assets/app.js"></script>
+<script src="data/ingredients.js"></script>
+<script src="data/reg.js"></script>
+<script>
+(function(){
+  var R=window.EBN_REG||{cats:[],extra:''}, I=window.EBN_INGREDIENTS, esc=EBN.esc;
+  var STL={rx:'전문의약품',otc:'일반의약품',qd:'의약외품',hff:'건강기능식품(고시형)',hffi:'건강기능식품(개별인정)',food:'일반식품',none:'국내 미허가',import:'해외직구'};
+  document.getElementById('reg-grid').innerHTML=(R.cats||[]).map(function(c){ return '<div class="reg" style="border-top-color:'+esc(c.color||'#999')+'"><h3><span class="stat-badge st-'+esc(c.k)+'">'+esc(STL[c.k]||c.name)+'</span></h3><p style="margin:0">'+esc(c.one)+'</p><dl>'+
+    '<dt>근거 법령</dt><dd>'+esc(c.law)+'</dd><dt>누가 심사</dt><dd>'+esc(c.who)+'</dd><dt>사전 승인</dt><dd>'+esc(c.pre)+'</dd><dt>효능 표시</dt><dd>'+esc(c.claim)+'</dd><dt>어디서</dt><dd>'+esc(c.where)+'</dd><dt>확인 표시</dt><dd>'+esc(c.mark)+'</dd></dl>'+
+    '<div class="ex"><b>예</b> '+esc(c.ex)+'</div>'+((c.src||[]).length?'<p class="small" style="margin:8px 0 0">'+c.src.map(function(u,i){return '<a href="'+esc(u)+'" target="_blank" rel="noopener">근거'+(c.src.length>1?(i+1):'')+' ↗</a>';}).join(' ')+'</p>':'')+'</div>'; }).join('');
+  document.getElementById('reg-extra').innerHTML=R.extra||'';
+  var rows=Object.keys(I).filter(function(k){return I[k].status&&I[k].status.length;}).sort(function(a,b){return I[a].name.localeCompare(I[b].name,'ko');});
+  document.getElementById('status-table').innerHTML='<table><tr><th>성분</th><th>국내 지위</th><th>나누는 기준</th></tr>'+rows.map(function(k){ var g=I[k]; return '<tr><td><a href="seongbun.html#'+k+'">'+esc(g.name)+'</a></td><td>'+g.status.map(function(s){return '<span class="stat-badge st-'+esc(s.k)+'">'+esc(STL[s.k])+'</span>';}).join(' ')+'</td><td>'+esc(g.statusNote||g.status.map(function(s){return s.t;}).filter(Boolean).join(' · '))+((g.statusSrc)?' <a href="'+esc(g.statusSrc)+'" target="_blank" rel="noopener">근거↗</a>':'')+'</td></tr>'; }).join('')+'</table>';
+})();
+</script>
+</body>
+</html>

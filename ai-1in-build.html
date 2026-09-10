@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>2강 교재 · 배포 · 데이터베이스 · 결제로 글로벌 서비스 완성 | AI City Builders</title>
+<meta name="description" content="배포 → 데이터베이스(Firebase) → 결제(PayPal). 템플릿으로 빠르게 만들고, 영상으로 더 깊이 배우는 시즌2 2강 실습 교재.">
+<style>
+  :root{
+    --bg:#ffffff; --panel:#f7f8fa; --panel2:#eef1f5; --line:#e7ebf0;
+    --txt:#141922; --muted:#5b6470; --dim:#9aa3b0;
+    --accent:#2563eb; --accent2:#7c3aed; --green:#0f9d6b; --amber:#d97706;
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--bg); color:var(--txt); line-height:1.6; -webkit-font-smoothing:antialiased;
+    font-family:'Pretendard','Apple SD Gothic Neo',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+  a{color:var(--accent); text-decoration:none}
+  .wrap{max-width:940px; margin:0 auto; padding:0 22px}
+
+  /* scroll progress */
+  .progress{position:fixed; top:0; left:0; height:3px; width:0; z-index:100;
+    background:linear-gradient(90deg,var(--accent),var(--accent2)); transition:width .12s ease-out}
+
+  /* HERO */
+  header.hero{position:relative; overflow:hidden; border-bottom:1px solid var(--line); padding:96px 0 70px; text-align:center;
+    background:radial-gradient(1100px 480px at 78% -12%, rgba(124,58,237,.18), transparent 60%),
+              radial-gradient(900px 480px at 12% -4%, rgba(37,99,235,.16), transparent 58%), var(--bg)}
+  .orb{position:absolute; border-radius:50%; filter:blur(60px); opacity:.5; z-index:0; animation:float 9s ease-in-out infinite}
+  .orb.a{width:280px; height:280px; background:rgba(124,58,237,.25); top:-60px; right:8%}
+  .orb.b{width:240px; height:240px; background:rgba(37,99,235,.22); bottom:-80px; left:4%; animation-delay:-4s}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(22px)}}
+  .hero .wrap{position:relative; z-index:1}
+  .brand{display:inline-flex; align-items:center; gap:8px; font-weight:700; color:var(--muted); font-size:13px;
+    border:1px solid var(--line); padding:7px 15px; border-radius:999px; background:rgba(255,255,255,.7); backdrop-filter:blur(8px)}
+  .brand b{color:var(--accent)}
+  h1.title{font-size:clamp(30px,5.6vw,56px); line-height:1.1; margin:24px auto 16px; font-weight:800; letter-spacing:-.8px; max-width:780px}
+  h1.title .hl{background:linear-gradient(90deg,var(--accent),var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent}
+  .sub{color:var(--muted); font-size:18px; max-width:640px; margin:0 auto}
+  .flow{display:flex; flex-wrap:wrap; gap:8px; margin-top:30px; justify-content:center}
+  .flow .f{display:inline-flex; align-items:center; gap:7px; font-size:14px; font-weight:700; color:var(--txt);
+    background:rgba(255,255,255,.8); border:1px solid var(--line); padding:10px 16px; border-radius:999px; backdrop-filter:blur(6px)}
+  .flow .arr{color:var(--dim); align-self:center; font-weight:800}
+  .scrolldown{margin-top:38px; color:var(--dim); font-size:13px; font-weight:600; letter-spacing:1px; animation:bob 1.8s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+
+  /* NAV */
+  nav.toc{position:sticky; top:0; z-index:60; background:rgba(255,255,255,.85); backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line); padding:10px 0}
+  nav.toc .wrap{display:flex; gap:5px; flex-wrap:wrap; align-items:center; justify-content:center}
+  nav.toc a{color:var(--muted); font-size:13.5px; padding:7px 13px; border-radius:9px; white-space:nowrap; font-weight:700; transition:.2s}
+  nav.toc a:hover{background:var(--panel); color:var(--txt)}
+  nav.toc a.active{background:linear-gradient(135deg,var(--accent),var(--accent2)); color:#fff}
+
+  section{padding:64px 0; border-bottom:1px solid var(--line)}
+  .eyebrow{color:var(--accent); font-weight:800; font-size:12px; letter-spacing:1.8px; text-transform:uppercase}
+  h2.sec{font-size:clamp(24px,3.8vw,36px); margin:12px 0 8px; font-weight:800; letter-spacing:-.5px; display:flex; align-items:center; gap:14px}
+  .sec-num{display:inline-flex; align-items:center; justify-content:center; width:46px; height:46px; border-radius:13px; flex:none;
+    background:linear-gradient(135deg,var(--accent),var(--accent2)); color:#fff; font-weight:800; font-size:22px;
+    box-shadow:0 8px 24px rgba(124,58,237,.28)}
+  .sec-desc{color:var(--muted); font-size:16.5px; margin:0 0 30px; padding-left:60px}
+  @media(max-width:560px){.sec-desc{padding-left:0}}
+  .done{margin-top:14px; display:inline-flex; align-items:center; gap:9px; background:rgba(15,157,107,.09);
+    border:1px solid rgba(15,157,107,.3); color:#0b7a52; font-weight:800; font-size:14.5px; padding:12px 18px; border-radius:13px}
+
+  /* VIDEO CARD */
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:22px; margin-top:20px;
+    box-shadow:0 1px 0 rgba(0,0,0,.02); transition:transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s, border-color .3s}
+  .card:hover{transform:translateY(-4px); box-shadow:0 18px 44px rgba(20,30,60,.10); border-color:#d9def0}
+  .card .step{display:inline-block; font-size:12px; font-weight:800; letter-spacing:.5px; color:var(--accent2);
+    background:rgba(124,58,237,.09); border:1px solid rgba(124,58,237,.22); padding:5px 12px; border-radius:999px}
+  .card h3{font-size:20px; font-weight:800; margin:13px 0 6px; letter-spacing:-.3px}
+  .card p.d{color:var(--muted); font-size:15px; margin:0 0 18px}
+  .vid{position:relative; padding-top:56.25%; border-radius:14px; overflow:hidden; background:#000; border:1px solid var(--line)}
+  .vid iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+  /* 썸네일 → YouTube 링크 (임베드 비허용 영상 대응) */
+  .vthumb{position:relative; display:block; padding-top:56.25%; border-radius:14px; overflow:hidden; background:#000; border:1px solid var(--line)}
+  .vthumb img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.9; transition:.35s}
+  .vthumb:hover img{opacity:1; transform:scale(1.04)}
+  .vthumb:hover{text-decoration:none}
+  .vthumb .play{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:74px; height:52px; border-radius:14px;
+    background:rgba(220,38,38,.94); color:#fff; display:flex; align-items:center; justify-content:center; font-size:24px; box-shadow:0 8px 24px rgba(0,0,0,.4); transition:.3s}
+  .vthumb:hover .play{transform:translate(-50%,-50%) scale(1.1)}
+  .vthumb .yt{position:absolute; bottom:11px; right:13px; font-size:12px; font-weight:700; color:#fff; background:rgba(0,0,0,.62); padding:6px 11px; border-radius:9px}
+  .mat{display:inline-flex; align-items:center; gap:10px; margin-top:16px; padding:13px 17px; background:#fff;
+    border:1px solid var(--line); border-radius:12px; font-size:14px; font-weight:700; color:var(--txt); transition:.2s}
+  .mat:hover{border-color:var(--accent2); transform:translateY(-2px)}
+  .mat .tag{font-size:11px; font-weight:800; color:#fff; background:linear-gradient(135deg,var(--amber),#b45309); padding:3px 9px; border-radius:7px}
+
+  /* reveal animation */
+  .reveal{opacity:0; transform:translateY(36px); transition:opacity .7s ease, transform .8s cubic-bezier(.2,.8,.2,1)}
+  .reveal.in{opacity:1; transform:none}
+
+  /* OUTRO */
+  .outro{text-align:center; padding:80px 0}
+  .outro .eyebrow{display:block; margin-bottom:10px}
+  .outro h2{font-size:clamp(26px,4.4vw,42px); font-weight:800; letter-spacing:-.6px; margin:0 0 16px; display:block}
+  .outro p{color:var(--muted); font-size:17px; max-width:620px; margin:0 auto}
+  .outro .cta{display:inline-block; margin-top:30px; background:linear-gradient(135deg,var(--accent),var(--accent2)); color:#fff;
+    font-weight:800; padding:17px 44px; border-radius:15px; font-size:17px; box-shadow:0 12px 30px rgba(124,58,237,.3); transition:.25s}
+  .outro .cta:hover{transform:translateY(-3px); box-shadow:0 18px 40px rgba(124,58,237,.4)}
+  footer{padding:44px 0; text-align:center; color:var(--dim); font-size:13px}
+  footer b{color:var(--muted)}
+  @media(max-width:600px){ .flow .arr{display:none} .sec-num{width:40px;height:40px;font-size:19px} }
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important}.orb{animation:none}}
+
+  /* ===== 코드 다운로드 / 설명서 ===== */
+  .dlbox{background:linear-gradient(135deg,#0f1530,#1a1140); color:#fff; border-radius:24px; padding:44px 38px; margin-top:8px;
+    position:relative; overflow:hidden; border:1px solid rgba(255,255,255,.08)}
+  .dlbox::after{content:""; position:absolute; width:320px; height:320px; border-radius:50%; filter:blur(70px);
+    background:rgba(124,58,237,.4); top:-120px; right:-60px; opacity:.6}
+  .dlbox .in2{position:relative; z-index:1}
+  .dlbox .tagline{font-size:clamp(20px,3vw,28px); font-weight:800; line-height:1.4; letter-spacing:-.3px; margin:0 0 14px}
+  .dlbox .tagline .y{background:linear-gradient(90deg,#a78bfa,#60a5fa); -webkit-background-clip:text; background-clip:text; color:transparent}
+  .dlbox p.lead{color:#c7cbe0; font-size:15.5px; margin:0 0 26px; max-width:680px}
+  .dlbtn{display:inline-flex; align-items:center; gap:11px; background:#fff; color:#15182a; font-weight:800; font-size:17px;
+    padding:17px 36px; border-radius:14px; box-shadow:0 14px 34px rgba(124,58,237,.4); transition:.25s}
+  .dlbtn:hover{transform:translateY(-3px); text-decoration:none; box-shadow:0 20px 46px rgba(124,58,237,.55)}
+  .btnrow{display:flex; flex-wrap:wrap; gap:13px; align-items:center}
+  .dlbtn.alt{background:rgba(255,255,255,.06); color:#fff; border:1.5px solid rgba(167,139,250,.55);
+    box-shadow:0 0 0 rgba(0,0,0,0); backdrop-filter:blur(6px)}
+  .dlbtn.alt .ic{background:linear-gradient(135deg,#a78bfa,#60a5fa); -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:900}
+  .dlbtn.alt:hover{background:rgba(167,139,250,.16); border-color:rgba(167,139,250,.9); box-shadow:0 16px 40px rgba(96,165,250,.35)}
+  .dl-sub{color:#9aa0c0; font-size:13px; margin-top:14px}
+  .savebar{display:flex; flex-wrap:wrap; gap:10px; margin-top:24px}
+  .savebar .s{background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12); border-radius:12px; padding:12px 18px; font-size:14px}
+  .savebar .s b{color:#a78bfa}
+
+  /* code block */
+  .code{background:#0f1320; color:#e6e9f2; border-radius:13px; padding:18px 20px; overflow-x:auto; font-size:13.5px; line-height:1.7;
+    font-family:'SF Mono',Menlo,Consolas,'Liberation Mono',monospace; border:1px solid #1d2336; margin:14px 0}
+  .code .c{color:#7d8aa8} /* comment */
+  .code .k{color:#a78bfa} /* keyword */
+  .code .s{color:#7ee0a8} /* string */
+  .code .label{display:inline-block; font-size:11px; font-weight:700; color:var(--dim); margin-bottom:8px; letter-spacing:.5px; text-transform:uppercase}
+
+  /* table */
+  .tbl{width:100%; border-collapse:collapse; font-size:14.5px; margin:14px 0}
+  .tbl th{text-align:left; background:var(--panel2); color:var(--muted); font-weight:700; font-size:12.5px; text-transform:uppercase;
+    letter-spacing:.4px; padding:12px 15px; border:1px solid var(--line)}
+  .tbl td{padding:12px 15px; border:1px solid var(--line); vertical-align:top}
+  .tbl td code, p code, li code{background:var(--panel2); padding:2px 7px; border-radius:6px; font-size:13px;
+    font-family:'SF Mono',Menlo,Consolas,monospace; color:var(--accent2)}
+  .tbl tr:nth-child(even) td{background:var(--panel)}
+
+  /* category cards */
+  .cats{display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:8px}
+  @media(max-width:720px){.cats{grid-template-columns:1fr}}
+  .cat{background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:22px; transition:.3s}
+  .cat:hover{transform:translateY(-4px); box-shadow:0 16px 38px rgba(20,30,60,.09); border-color:#d9def0}
+  .cat .ct{font-size:18px; font-weight:800; margin:0 0 6px}
+  .cat .cq{color:var(--accent2); font-size:14px; font-style:italic; margin:0 0 12px; padding-left:12px; border-left:3px solid var(--accent2)}
+  .cat ul{margin:0; padding-left:18px; color:var(--muted); font-size:14px; line-height:1.85}
+  .cat .best{margin-top:12px; font-size:13.5px; color:var(--green); font-weight:700}
+
+  .note{display:flex; gap:11px; align-items:flex-start; background:rgba(217,119,6,.07); border:1px solid rgba(217,119,6,.25);
+    border-radius:13px; padding:15px 18px; margin:16px 0; font-size:14.5px; color:#7c4a06}
+  .note b{color:#92400e}
+  ul.steps{margin:14px 0; padding-left:20px; line-height:1.95; color:var(--txt); font-size:15px}
+  ul.steps li{margin-bottom:4px}
+  h3.sub2{font-size:18px; font-weight:800; margin:26px 0 4px; letter-spacing:-.2px}
+
+  /* section divider banner (영상 강의 시작) */
+  .divider{text-align:center; padding:70px 0 10px}
+  .divider .eyebrow{display:block; margin-bottom:12px}
+  .divider h2{font-size:clamp(24px,4vw,38px); font-weight:800; letter-spacing:-.5px; margin:0 0 12px}
+  .divider p{color:var(--muted); font-size:16.5px; max-width:600px; margin:0 auto}
+
+  /* 미션 섹션 */
+  .mission-bg{background:linear-gradient(180deg, rgba(124,58,237,.06), rgba(37,99,235,.04))}
+  .picks{display:grid; grid-template-columns:repeat(3,1fr); gap:13px; margin-top:8px}
+  @media(max-width:720px){.picks{grid-template-columns:1fr 1fr}}
+  @media(max-width:460px){.picks{grid-template-columns:1fr}}
+  .pick{background:#fff; border:1px solid var(--line); border-radius:15px; padding:18px; transition:.25s; position:relative}
+  .pick:hover{transform:translateY(-4px); border-color:var(--accent2); box-shadow:0 14px 32px rgba(124,58,237,.12)}
+  .pick .pi{font-size:26px; line-height:1}
+  .pick .pn{font-weight:800; font-size:16px; margin:10px 0 4px; letter-spacing:-.2px}
+  .pick .pe{color:var(--dim); font-size:12.5px; line-height:1.5}
+  .pick .win{position:absolute; top:14px; right:14px; font-size:10.5px; font-weight:800; color:#0b7a52;
+    background:rgba(15,157,107,.1); border:1px solid rgba(15,157,107,.28); padding:3px 8px; border-radius:999px}
+  .speed{display:flex; gap:12px; align-items:center; background:linear-gradient(135deg,#0f1530,#2a1140); color:#fff;
+    border-radius:16px; padding:20px 24px; margin-top:22px; font-size:16px; font-weight:700}
+  .speed .em{font-size:30px}
+  .speed b{background:linear-gradient(90deg,#a78bfa,#60a5fa); -webkit-background-clip:text; background-clip:text; color:transparent}
+
+  /* 안티그래비티 에이전트 명령(프롬프트) */
+  .prompt{background:#f0f5ff; border:1px solid #cdddff; border-left:4px solid var(--accent); border-radius:12px;
+    padding:15px 18px; margin:12px 0; font-size:15px; color:#1e293b; line-height:1.7}
+  .prompt .pl{display:flex; align-items:center; gap:7px; font-size:11.5px; font-weight:800; color:var(--accent);
+    letter-spacing:.5px; text-transform:uppercase; margin-bottom:8px}
+  .prompt .q{display:block}
+  .prompt .q::before{content:"“"; color:var(--accent); font-weight:800}
+  .prompt .q::after{content:"”"; color:var(--accent); font-weight:800}
+  .wayrow{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:14px 0}
+  @media(max-width:680px){.wayrow{grid-template-columns:1fr}}
+  .way{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:18px}
+  .way .wt{font-weight:800; font-size:14.5px; margin:0 0 4px; display:flex; align-items:center; gap:7px}
+  .way .ws{color:var(--dim); font-size:12.5px; margin:0 0 10px}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<header class="hero">
+  <div class="orb a"></div><div class="orb b"></div>
+  <div class="wrap">
+    <span class="brand">🚀 AI City Builders · <b>SEASON 2</b></span>
+    <h1 class="title"><span class="hl">시즌 2 · 2강</span><br>결제·데이터베이스 실습 교재</h1>
+    <p class="sub"><b>시즌 2의 목표</b> — 거의 <b>0원</b>으로 서비스 하나를 만들고, <b>홍보 콘텐츠</b>까지 만들어 세상에 <b>런칭</b>하는 것. 완벽함보다 <b>속도</b>입니다. 제가 드리는 템플릿으로 빠르게 시작하세요.</p>
+    <div class="flow">
+      <span class="f">📥 코드 다운로드</span><span class="arr">→</span>
+      <span class="f">✏️ 텍스트·영상 교체</span><span class="arr">→</span>
+      <span class="f">💳 결제 연동</span><span class="arr">→</span>
+      <span class="f">🚀 배포</span>
+    </div>
+    <div class="scrolldown">스크롤해서 시작 ↓</div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="wrap">
+    <a href="#download">📥 다운로드</a>
+    <a href="#mission">🎯 미션</a>
+    <a href="#start">첫 실행</a>
+    <a href="#usecases">활용</a>
+    <a href="#customize">수정법</a>
+    <a href="#payment">결제</a>
+    <a href="#firebase">Firebase</a>
+    <a href="#lessons">🎬 영상강의</a>
+  </div>
+</nav>
+
+<div class="wrap" style="padding-top:18px">
+  <div style="background:#fffbeb; border:1px solid #fde68a; color:#92400e; border-radius:14px; padding:12px 16px; font-size:14px">
+    📗 개인 학습용 정리(미러) 페이지입니다 · 원문 출처:
+    <a href="https://www.aicitybuilders.com/buildservice" target="_blank" rel="noopener">Connect AI LAB · AI City Builders — 2강 교재</a>
+  </div>
+</div>
+
+<!-- 📥 다운로드 -->
+<section id="download">
+  <div class="wrap">
+    <div class="dlbox reveal">
+      <div class="in2">
+        <p class="tagline">이 템플릿 하나로, <span class="y">결제가 되고 데이터가 연결되는</span> 프리미엄 웹사이트를 직접 만들 수 있습니다.</p>
+        <p class="lead">코드를 받은 후 무엇을 해야 하는지, 어디에 활용할 수 있는지, 그다음엔 뭘 해야 하는지까지 전부 이 페이지 하나에 담았습니다. 이 방법으로 하면 <b style="color:#fff">시간 효율이 올라가고, 토큰 사용량이 현저히 줄어듭니다.</b></p>
+        <div class="btnrow">
+          <a class="dlbtn" href="https://drive.google.com/file/d/1-g9TGr1hozU-Vo41hW-lLux6omLjj-eW/view?usp=sharing" target="_blank" rel="noopener">📥 템플릿 코드 다운로드</a>
+          <a class="dlbtn alt" href="https://antigravity.google/product/antigravity-ide" target="_blank" rel="noopener"><span class="ic">⚡</span> 안티그래비티 IDE 설치</a>
+        </div>
+        <div class="dl-sub">Google Drive · ZIP 파일 · React + Vite + Firebase + PayPal + 토스페이먼츠 내장 &nbsp;|&nbsp; IDE는 구글 안티그래비티 권장</div>
+        <div class="savebar">
+          <span class="s"><b>⏱ 약 1시간</b> 이면 내 사이트 완성</span>
+          <span class="s"><b>💳 결제</b> PayPal + 토스 내장</span>
+          <span class="s"><b>🔥 데이터</b> Firebase 연결</span>
+          <span class="s"><b>🎬 영상</b> 풀스크린 배경 포함</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🎯 미션 -->
+<section id="mission" class="mission-bg">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">🎯 이번 강의의 목표</div>
+    <h2 class="sec"><span class="sec-num">🎯</span>템플릿으로 "하나"를 빠르게 만들어라</h2>
+    <p class="sec-desc">제가 드린 템플릿으로 <b>1강의 '돈 되는 카테고리'</b> 중 하나를 골라 거의 <b>0원</b>으로 빠르게 만들고, <b>홍보 콘텐츠까지 만들어 런칭</b>하는 게 목표입니다. 아래 영상은 더 깊이 배우고 싶을 때 보는 자료 — 핵심은 <b>완벽함이 아니라 속도,</b> 일단 세상에 내보내는 것.</p></div>
+
+    <div class="picks reveal">
+      <div class="pick"><span class="win">잘 버는</span><div class="pi">📸</div><div class="pn">AI 사진·이미지</div><div class="pe">셀카·헤드샷·프로필 (Photo AI · HeadshotPro)</div></div>
+      <div class="pick"><span class="win">잘 버는</span><div class="pi">🤖</div><div class="pn">AI 생산성 도구</div><div class="pe">챗봇·SEO·글쓰기 B2B 반복결제</div></div>
+      <div class="pick"><span class="win">잘 버는</span><div class="pi">📚</div><div class="pn">정보·교육·뉴스레터</div><div class="pe">강의·전자책·스폰서십, 원가 거의 0</div></div>
+      <div class="pick"><span class="win">잘 버는</span><div class="pi">📺</div><div class="pn">페이스리스 콘텐츠</div><div class="pe">자동 영상 채널, 초저비용·고마진</div></div>
+      <div class="pick"><span class="win">잘 버는</span><div class="pi">🎮</div><div class="pn">바이럴 게임·노벨티</div><div class="pe">한 방 화제성으로 광고 수익</div></div>
+      <div class="pick"><span class="win">잘 버는</span><div class="pi">🛒</div><div class="pn">노코드 커머스·예약</div><div class="pe">틈새 자동화, 작지만 꾸준한 구독</div></div>
+    </div>
+
+    <div class="speed reveal"><span class="em">⚡</span><div><b>속도 &gt; 완전함.</b> 100% 완벽한 하나를 오래 붙잡기보다, 빠르게 만들어 배포한 하나가 훨씬 낫습니다. 부족한 부분은 그다음에 채우세요.</div></div>
+
+    <div class="reveal"><a class="mat" href="https://www.aicitybuilders.com/casestudy#category" target="_blank" rel="noopener"><span class="tag">1강</span> 카테고리 지도 다시 보기 (돈 되는 / 망하는 카테고리)</a></div>
+  </div>
+</section>
+
+<!-- Part 1. 첫 실행 -->
+<section id="start">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">PART 1 · 다운로드 후 첫 실행</div>
+    <h2 class="sec"><span class="sec-num">📥</span>압축 해제 → 설치 → 실행</h2>
+    <p class="sec-desc">3단계면 데모 사이트가 그대로 켜집니다.</p></div>
+
+    <div class="reveal">
+      <h3 class="sub2">Step 1. 준비물</h3>
+      <table class="tbl">
+        <tr><th>준비물</th><th>설치 방법</th><th>확인 명령어</th></tr>
+        <tr><td><b>Node.js</b> (v18 이상)</td><td>nodejs.org 에서 LTS 다운로드</td><td><code>node -v</code></td></tr>
+        <tr><td><b>⚡ 안티그래비티 IDE</b><br><span style="color:var(--dim);font-size:13px">구글의 AI 에이전트 코드 에디터</span></td><td><a href="https://antigravity.google/product/antigravity-ide" target="_blank" rel="noopener">antigravity.google 에서 다운로드 ↗</a></td><td>—</td></tr>
+      </table>
+
+      <h3 class="sub2">Step 2. 안티그래비티에서 폴더 열기</h3>
+      <ul class="steps">
+        <li>안티그래비티 IDE 실행 → <b>File → Open Folder</b></li>
+        <li>압축을 푼 <b>템플릿 폴더</b>를 선택해서 엽니다</li>
+        <li>상단 메뉴 <b>Terminal → New Terminal</b> 로 터미널을 엽니다</li>
+      </ul>
+
+      <h3 class="sub2">Step 3. 설치 &amp; 실행 (둘 중 아무거나)</h3>
+      <div class="wayrow">
+        <div class="way">
+          <p class="wt">⌨️ 방법 A · 터미널에 직접 입력</p>
+          <p class="ws">아래 두 줄을 차례로 실행</p>
+          <div class="code"><span class="c"># 패키지 설치 (최초 1회)</span>
+npm install
+
+<span class="c"># 개발 서버 실행</span>
+npm run dev</div>
+        </div>
+        <div class="way">
+          <p class="wt">💬 방법 B · 에이전트에게 시키기</p>
+          <p class="ws">안티그래비티 채팅창에 그대로 복사</p>
+          <div class="prompt"><span class="pl">💬 안티그래비티 에이전트에게</span>
+            <span class="q">이 프로젝트에 필요한 패키지를 설치하고(npm install), 개발 서버를 실행해줘(npm run dev). 실행되면 주소를 알려줘.</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="sub2">Step 4. 브라우저에서 확인</h3>
+      <div class="code"><span class="c">VITE v5.4  ready in 400 ms</span>
+  ➜  Local:   <span class="s">http://localhost:5173/</span></div>
+      <p style="color:var(--muted); font-size:15px"><code>http://localhost:5173</code> 을 열면 웹사이트가 보입니다! 🎉</p>
+      <div class="note">💡 <span><b>아무것도 수정하지 않아도 데모 사이트가 바로 작동합니다.</b> 영상·텍스트·애니메이션이 전부 포함되어 있어요.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Part 2. 활용 -->
+<section id="usecases">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">PART 2 · 이걸로 무엇을 만들 수 있나</div>
+    <h2 class="sec"><span class="sec-num">🎯</span>활용 카테고리</h2>
+    <p class="sec-desc">영상과 텍스트만 교체하면 완전히 다른 사이트가 됩니다.</p></div>
+
+    <div class="cats reveal">
+      <div class="cat">
+        <p class="ct">🚀 SaaS / AI 서비스 랜딩</p>
+        <p class="cq">"서비스를 보여주고 바로 결제받고 싶다"</p>
+        <ul><li>AI 도구 소개 사이트</li><li>자동화 서비스 홍보</li><li>API 제품 랜딩</li><li>챗봇·번역 서비스 판매</li></ul>
+        <p class="best">★ 이 템플릿과 가장 잘 맞는 카테고리</p>
+      </div>
+      <div class="cat">
+        <p class="ct">🛒 디지털 상품 판매</p>
+        <p class="cq">"만든 것을 온라인으로 팔고 싶다"</p>
+        <ul><li>이북(E-book) 판매</li><li>온라인 강의·코스</li><li>디자인 에셋(아이콘·템플릿)</li><li>프롬프트 팩 판매</li></ul>
+        <p class="best">★ PayPal·토스 내장 → 상품 정보만 수정하면 판매 시작</p>
+      </div>
+      <div class="cat">
+        <p class="ct">🎓 교육 / 아카데미</p>
+        <p class="cq">"강의나 멘토링을 팔고 싶다"</p>
+        <ul><li>온라인 아카데미 메인</li><li>부트캠프 모집</li><li>1:1 코칭 예약</li><li>워크샵 등록</li></ul>
+        <p class="best">★ 3단 가격표 → 입문/심화/VIP 구조로 바로 활용</p>
+      </div>
+      <div class="cat">
+        <p class="ct">🎮 게임 / 앱 랜딩</p>
+        <p class="cq">"앱·게임을 소개하고 다운로드 유도"</p>
+        <ul><li>모바일 게임 소개</li><li>데스크톱 앱 다운로드</li><li>크롬 확장 홍보</li><li>웹 전용 게임</li></ul>
+      </div>
+      <div class="cat">
+        <p class="ct">🎨 포트폴리오 / 크리에이터</p>
+        <p class="cq">"내 작업물을 고급스럽게 보여주고 싶다"</p>
+        <ul><li>영상 크리에이터 포트폴리오</li><li>사진작가 갤러리</li><li>음악가·DJ 프로모션</li><li>3D 아티스트 쇼릴</li></ul>
+        <p class="best">★ 배경 영상에 본인 작업물을 넣으면 그 자체가 포트폴리오</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Part 3. 수정법 -->
+<section id="customize">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">PART 3 · 내 사이트로 바꾸기</div>
+    <h2 class="sec"><span class="sec-num">✏️</span>이 3개 파일만 수정하면 됩니다</h2>
+    <p class="sec-desc">텍스트, 영상, API 키 — 딱 세 곳.</p></div>
+
+    <div class="reveal">
+      <table class="tbl">
+        <tr><th>순서</th><th>파일</th><th>뭘 바꾸나요?</th></tr>
+        <tr><td>1️⃣</td><td><code>src/config/content.ts</code></td><td>모든 텍스트 (브랜드명·설명·지표·기능)</td></tr>
+        <tr><td>2️⃣</td><td><code>src/config/videos.ts</code></td><td>배경 영상 5개의 URL</td></tr>
+        <tr><td>3️⃣</td><td><code>.env</code></td><td>Firebase·PayPal·토스 API 키</td></tr>
+      </table>
+      <div class="note">⚡ <span><b>안티그래비티에서는 두 가지 방법이 있어요.</b> 코드를 직접 고쳐도 되고, <b>에이전트에게 말로 시켜도</b> 됩니다. 아래 각 파일마다 <b>그대로 복사해서 쓰는 명령</b>을 넣어뒀어요.</span></div>
+
+      <h3 class="sub2">1️⃣ 텍스트 변경 — <code>content.ts</code></h3>
+      <div class="code">export const SITE_CONFIG = {
+  brandName: <span class="s">'내 브랜드 이름'</span>,        <span class="c">// ← 여기 수정</span>
+  hero: {
+    titleLeft: [<span class="s">'나만의'</span>, <span class="s">'제목'</span>],   <span class="c">// 히어로 큰 글씨</span>
+    description: <span class="s">'서비스 소개문...'</span>,   <span class="c">// 설명글</span>
+  },
+  metrics: { items: [
+    { value: <span class="s">'10만+'</span>, label: <span class="s">'사용자'</span> },  <span class="c">// 성과 지표</span>
+  ]},
+};</div>
+      <div class="prompt"><span class="pl">💬 안티그래비티 에이전트에게</span>
+        <span class="q">src/config/content.ts 파일을 열어서, brandName을 '○○○'로 바꾸고 hero 제목과 description을 내 서비스 소개에 맞게 고쳐줘. metrics 지표 숫자도 [원하는 값]으로 바꿔줘.</span>
+      </div>
+
+      <h3 class="sub2">2️⃣ 영상 변경 — <code>videos.ts</code></h3>
+      <div class="code">export const VIDEO_URLS = {
+  hero: <span class="s">'/my-hero.mp4'</span>,      <span class="c">// public/ 폴더에 MP4 넣기</span>
+  technology: <span class="s">''</span>,             <span class="c">// 빈 문자열 = 검정 배경</span>
+};</div>
+      <p style="color:var(--muted); font-size:14.5px">MP4를 <code>public/</code> 폴더에 복사 → 경로 지정. 무료 영상: <b>Pexels, Pixabay</b></p>
+      <div class="prompt"><span class="pl">💬 안티그래비티 에이전트에게</span>
+        <span class="q">내가 public 폴더에 넣은 영상 파일들을 src/config/videos.ts의 hero·section2·metrics·footer 항목에 연결해줘. 사용하지 않을 영상은 빈 문자열('')로 둬.</span>
+      </div>
+
+      <h3 class="sub2">3️⃣ API 키 — <code>.env</code></h3>
+      <div class="code"><span class="c"># 먼저 예시 파일 복사</span>
+cp .env.example .env
+
+VITE_FIREBASE_API_KEY=<span class="s">AIzaSy...</span>      <span class="c"># 회원 인증 + DB</span>
+VITE_PAYPAL_CLIENT_ID=<span class="s">AdUXe...</span>      <span class="c"># 해외 결제</span>
+VITE_TOSS_CLIENT_KEY=<span class="s">test_ck_...</span>    <span class="c"># 국내 결제</span></div>
+      <div class="prompt"><span class="pl">💬 안티그래비티 에이전트에게</span>
+        <span class="q">.env.example을 복사해서 .env 파일을 만들고(cp .env.example .env), 내가 알려주는 Firebase·PayPal·토스 키를 각 항목에 채워줘. 키는 지금 채팅에 붙여넣을게.</span>
+      </div>
+      <div class="note">💡 <span><b>처음엔 안 넣어도 됩니다!</b> 사이트는 키 없이도 작동하고, 결제·로그인을 켤 때만 넣으면 됩니다.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Part 4. 결제 -->
+<section id="payment">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">PART 4 · 결제 연동</div>
+    <h2 class="sec"><span class="sec-num">💳</span>PayPal + 토스페이먼츠</h2>
+    <p class="sec-desc">해외는 달러(PayPal), 국내는 원화(토스). 필요한 것만 쓰세요.</p></div>
+
+    <div class="reveal">
+      <h3 class="sub2">💵 PayPal (해외 — 달러)</h3>
+      <ul class="steps">
+        <li>developer.paypal.com 가입</li>
+        <li><b>Apps &amp; Credentials</b> → <b>Create App</b> → Client ID 복사</li>
+        <li><code>.env</code>에 <code>VITE_PAYPAL_CLIENT_ID</code> 입력</li>
+        <li><code>src/lib/paypal.ts</code>에서 상품 이름·가격 수정</li>
+      </ul>
+      <h3 class="sub2">🇰🇷 토스페이먼츠 (국내 — 원화)</h3>
+      <ul class="steps">
+        <li>developers.tosspayments.com 가입</li>
+        <li><b>내 개발정보</b> → 클라이언트 키 복사</li>
+        <li><code>.env</code>에 <code>VITE_TOSS_CLIENT_KEY</code> 입력</li>
+        <li><code>src/lib/toss.ts</code>에서 상품 이름·가격 수정</li>
+      </ul>
+      <h3 class="sub2">상품 가격 수정 예시</h3>
+      <div class="code"><span class="c">// src/lib/paypal.ts</span>
+export const PRODUCTS = [{
+  name: <span class="s">'AI 활용 가이드북'</span>, price: <span class="s">'19.99'</span>, currency: <span class="s">'USD'</span>,
+}];
+
+<span class="c">// src/lib/toss.ts</span>
+export const TOSS_PRODUCTS = [{
+  name: <span class="s">'AI 활용 가이드북'</span>, price: 19900, currency: <span class="s">'KRW'</span>,
+}];</div>
+    </div>
+  </div>
+</section>
+
+<!-- Part 5. Firebase + 기술스택 + 폴더 + FAQ -->
+<section id="firebase">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">PART 5 · 회원 관리 + 데이터 저장</div>
+    <h2 class="sec"><span class="sec-num">🔥</span>Firebase 연동하기</h2>
+    <p class="sec-desc">회원가입·로그인, 결제 기록, 사용자 프로필, 구독 상태까지.</p></div>
+
+    <div class="reveal">
+      <table class="tbl">
+        <tr><th>기능</th><th>설명</th></tr>
+        <tr><td>회원 가입/로그인</td><td>Google·Apple·이메일 로그인</td></tr>
+        <tr><td>결제 기록 저장</td><td>누가 뭘 샀는지 자동 기록</td></tr>
+        <tr><td>사용자 프로필</td><td>회원 정보 관리</td></tr>
+        <tr><td>구독 상태 추적</td><td>구독 중인지 만료됐는지 확인</td></tr>
+      </table>
+      <h3 class="sub2">설정 순서 (약 10분, 무료 플랜으로 충분)</h3>
+      <ul class="steps">
+        <li>Firebase Console → 프로젝트 추가</li>
+        <li>웹 앱 등록 (<code>&lt;/&gt;</code> 아이콘)</li>
+        <li>설정값을 <code>.env</code>에 복사</li>
+        <li>Authentication → Google 로그인 활성화</li>
+        <li>Firestore Database → 데이터베이스 만들기</li>
+      </ul>
+
+      <h3 class="sub2">🛠️ 기술 스택</h3>
+      <table class="tbl">
+        <tr><th>기술</th><th>역할</th></tr>
+        <tr><td><b>React</b></td><td>화면을 만드는 핵심 프레임워크</td></tr>
+        <tr><td><b>TypeScript</b></td><td>타입을 추가해 오류 방지</td></tr>
+        <tr><td><b>Vite</b></td><td>초고속 개발 서버 &amp; 빌드</td></tr>
+        <tr><td><b>Tailwind CSS</b></td><td>클래스 기반 스타일링</td></tr>
+        <tr><td><b>Framer Motion</b></td><td>애니메이션 라이브러리</td></tr>
+        <tr><td><b>Firebase</b></td><td>회원 인증 + NoSQL DB(Firestore)</td></tr>
+        <tr><td><b>PayPal / 토스</b></td><td>해외(달러) / 국내(원화) 결제</td></tr>
+      </table>
+
+      <h3 class="sub2">📂 폴더 구조 (⭐ config 폴더만 수정하면 됩니다)</h3>
+      <div class="code">📦 ConnectAI-LAB-Template/
+├── 📄 .env.example       <span class="c">← 복사해서 .env로</span>
+├── 📁 public/            <span class="c">← 🎬 영상·이미지 넣기</span>
+└── 📁 src/
+    ├── 📁 config/        <span class="c">← ⭐ 이 폴더만 수정!</span>
+    │   ├── content.ts    <span class="c">← ✏️ 모든 텍스트</span>
+    │   └── videos.ts     <span class="c">← 🎬 영상 URL</span>
+    ├── 📁 lib/           <span class="c">← 외부 서비스 연동</span>
+    │   ├── firebase.ts  firestore.ts
+    │   └── paypal.ts    toss.ts
+    ├── 📁 components/payment/  <span class="c">← 💰 결제 버튼</span>
+    └── 📄 App.tsx        <span class="c">← 메인 레이아웃</span></div>
+
+      <h3 class="sub2">❓ 자주 묻는 질문</h3>
+      <table class="tbl">
+        <tr><td><b>PayPal·토스 둘 다 써야?</b></td><td>아니요. 해외만이면 PayPal, 국내만이면 토스만.</td></tr>
+        <tr><td><b>모바일도 잘 보이나요?</b></td><td>네, 반응형으로 모바일·태블릿·데스크톱 자동 대응.</td></tr>
+        <tr><td><b>배포는 어떻게?</b></td><td><code>npm run build</code> 후 <code>dist/</code> 폴더를 Vercel·Netlify·Firebase Hosting에.</td></tr>
+        <tr><td><b>실제 결제를 받으려면?</b></td><td>테스트 키를 실서비스 키로 교체 (PayPal Live ID, 토스 <code>live_ck_</code>).</td></tr>
+      </table>
+
+      <h3 class="sub2">🎯 정리 — 총 1시간이면 완성</h3>
+      <table class="tbl">
+        <tr><th>단계</th><th>할 일</th><th>시간</th></tr>
+        <tr><td>1</td><td><code>npm install</code> → <code>npm run dev</code></td><td>1분</td></tr>
+        <tr><td>2</td><td><code>content.ts</code> 텍스트 수정</td><td>10분</td></tr>
+        <tr><td>3</td><td><code>videos.ts</code> 영상 교체</td><td>10분</td></tr>
+        <tr><td>4</td><td><code>.env</code> 설정 (Firebase + 결제)</td><td>30분</td></tr>
+        <tr><td>5</td><td>테스트 결제 확인</td><td>10분</td></tr>
+        <tr><td>6</td><td><code>npm run build</code> → 배포</td><td>10분</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 영상 강의 구분선 -->
+<section id="lessons" style="background:var(--panel)">
+  <div class="wrap">
+    <div class="divider reveal">
+      <span class="eyebrow">더 깊이 공부하고 싶다면</span>
+      <h2>🎬 영상으로 처음부터 직접 만들기</h2>
+      <p>템플릿이 "빠른 길"이라면, 아래 영상은 "제대로 이해하는 길"입니다. 배포 → 데이터베이스 → 결제까지 직접 따라 만들어 보세요.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 1. 배포 -->
+<section id="deploy">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">STEP 1 · 세상에 공개</div>
+    <h2 class="sec"><span class="sec-num">1</span>웹사이트 배포하기</h2>
+    <p class="sec-desc">디자인을 입혀 사이트를 띄우고, 내 도메인으로 전 세계에 공개합니다.</p></div>
+
+    <div class="card reveal">
+      <span class="step">1-1</span>
+      <h3>디자인 적용 + 최종 배포</h3>
+      <p class="d">Stitch로 만든 디자인을 가져와 배포한 뒤, 데스크탑과 스마트폰에서 직접 확인하며 기초 구성을 완료합니다.</p>
+      <a class="vthumb" href="https://www.youtube.com/watch?v=YwpT-f10bNM" target="_blank" rel="noopener" title="디자인 적용 + 최종 배포"><img src="https://img.youtube.com/vi/YwpT-f10bNM/hqdefault.jpg" loading="lazy" alt="디자인 적용 + 최종 배포"><span class="play">▶</span><span class="yt">YouTube에서 보기 ↗</span></a>
+      <a class="mat" href="https://jaijung.notion.site/2-19-Stitch-AI-UI-30cb0dd7632380b9bfabef68cf3974b4?source=copy_link" target="_blank" rel="noopener"><span class="tag">교재</span> Stitch 핵심 가이드: AI 기반 UI 디자인 자동화</a>
+    </div>
+
+    <div class="card reveal">
+      <span class="step">1-2</span>
+      <h3>브랜드 이름 정하고 도메인 구입하기</h3>
+      <p class="d">나만의 브랜드를 나타내는 고유한 독립 도메인을 검색하고 구입합니다.</p>
+      <a class="vthumb" href="https://www.youtube.com/watch?v=b2doQpuUVUA" target="_blank" rel="noopener" title="도메인 구입"><img src="https://img.youtube.com/vi/b2doQpuUVUA/hqdefault.jpg" loading="lazy" alt="도메인 구입"><span class="play">▶</span><span class="yt">YouTube에서 보기 ↗</span></a>
+    </div>
+
+    <div class="card reveal">
+      <span class="step">1-3</span>
+      <h3>도메인 ↔ Firebase 호스팅 연결 (DNS)</h3>
+      <p class="d">구입한 도메인을 Firebase 호스팅과 연결하여, 전 세계 어디서든 내 사이트로 접속할 수 있게 만듭니다.</p>
+      <a class="vthumb" href="https://www.youtube.com/watch?v=tIqRIjvhbQc" target="_blank" rel="noopener" title="도메인 Firebase 연결"><img src="https://img.youtube.com/vi/tIqRIjvhbQc/hqdefault.jpg" loading="lazy" alt="도메인 Firebase 연결"><span class="play">▶</span><span class="yt">YouTube에서 보기 ↗</span></a>
+    </div>
+
+    <div class="reveal"><div class="done">✅ 여기까지 하면 → 내 도메인으로 살아있는 글로벌 사이트 완성</div></div>
+  </div>
+</section>
+
+<!-- 2. 데이터베이스 -->
+<section id="database">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">STEP 2 · 데이터 저장</div>
+    <h2 class="sec"><span class="sec-num">2</span>데이터베이스 연결하기</h2>
+    <p class="sec-desc">회원·데이터를 저장할 백엔드(Firebase / Firestore)를 붙입니다.</p></div>
+
+    <div class="card reveal">
+      <span class="step">2-1</span>
+      <h3>Firebase 백엔드 이해하기</h3>
+      <p class="d">웹 서비스의 든든한 백엔드 Firebase가 무엇인지, 그리고 왜 필요한지 소개합니다.</p>
+      <a class="vthumb" href="https://www.youtube.com/watch?v=fvPBomNlyg4" target="_blank" rel="noopener" title="Firebase 백엔드 이해"><img src="https://img.youtube.com/vi/fvPBomNlyg4/hqdefault.jpg" loading="lazy" alt="Firebase 백엔드 이해"><span class="play">▶</span><span class="yt">YouTube에서 보기 ↗</span></a>
+    </div>
+
+    <div class="card reveal">
+      <span class="step">2-2</span>
+      <h3>Firebase 연결하기</h3>
+      <p class="d">내 프로젝트에 Firebase를 실제로 연결하고, 데이터를 읽고 쓸 수 있도록 세팅합니다.</p>
+      <a class="vthumb" href="https://www.youtube.com/watch?v=O4Gd5kOQJbM" target="_blank" rel="noopener" title="Firebase 연결"><img src="https://img.youtube.com/vi/O4Gd5kOQJbM/hqdefault.jpg" loading="lazy" alt="Firebase 연결"><span class="play">▶</span><span class="yt">YouTube에서 보기 ↗</span></a>
+    </div>
+
+    <div class="card reveal">
+      <span class="step">2-3</span>
+      <h3>데이터 실제 저장하기 (Firestore 연동)</h3>
+      <p class="d">이미지를 생성하고 파이어스토어(Firestore)와 연동하여, 데이터를 저장하고 관리하는 방법을 배웁니다.</p>
+      <a class="vthumb" href="https://www.youtube.com/watch?v=xCM3Li0GGkk" target="_blank" rel="noopener" title="Firestore 연동"><img src="https://img.youtube.com/vi/xCM3Li0GGkk/hqdefault.jpg" loading="lazy" alt="Firestore 연동"><span class="play">▶</span><span class="yt">YouTube에서 보기 ↗</span></a>
+    </div>
+
+    <div class="reveal"><div class="done">✅ 여기까지 하면 → 데이터가 저장되는 사이트 완성</div></div>
+  </div>
+</section>
+
+<!-- 3. 페이팔 -->
+<section id="paypal">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">STEP 3 · 결제</div>
+    <h2 class="sec"><span class="sec-num">3</span>페이팔(PayPal) 결제 연결하기</h2>
+    <p class="sec-desc">전 세계 200+ 국가에서 돈을 받을 수 있게 결제를 붙입니다.</p></div>
+
+    <div class="card reveal">
+      <span class="step">3-1</span>
+      <h3>PayPal 결제 연동이란?</h3>
+      <p class="d">상품 등록부터 주문 생성, 결제 캡처까지 — 글로벌 결제 시스템이 어떻게 작동하는지 개념을 잡습니다.</p>
+      <a class="vthumb" href="https://www.youtube.com/watch?v=tuXR2TTSxxI" target="_blank" rel="noopener" title="PayPal 결제 연동이란?"><img src="https://img.youtube.com/vi/tuXR2TTSxxI/hqdefault.jpg" loading="lazy" alt="PayPal 결제 연동이란?"><span class="play">▶</span><span class="yt">YouTube에서 보기 ↗</span></a>
+    </div>
+
+    <div class="card reveal">
+      <span class="step">3-2</span>
+      <h3>페이팔 비즈니스 계정 등록하기</h3>
+      <p class="d">글로벌 결제를 받기 위한 필수 단계! 페이팔 비즈니스 계정 생성·가입 절차를 차근차근 진행합니다.</p>
+      <a class="vthumb" href="https://www.youtube.com/watch?v=mCnGYhcdnjk" target="_blank" rel="noopener" title="페이팔 비즈니스 등록"><img src="https://img.youtube.com/vi/mCnGYhcdnjk/hqdefault.jpg" loading="lazy" alt="페이팔 비즈니스 등록"><span class="play">▶</span><span class="yt">YouTube에서 보기 ↗</span></a>
+    </div>
+
+    <div class="card reveal">
+      <span class="step">3-3</span>
+      <h3>Secret Key 발급받기</h3>
+      <p class="d">PayPal 연동의 핵심! Client ID와 Secret Key를 발급받고 관리하는 방법을 배웁니다.</p>
+      <a class="vthumb" href="https://www.youtube.com/watch?v=35igKhOCjLA" target="_blank" rel="noopener" title="PayPal Secret Key"><img src="https://img.youtube.com/vi/35igKhOCjLA/hqdefault.jpg" loading="lazy" alt="PayPal Secret Key"><span class="play">▶</span><span class="yt">YouTube에서 보기 ↗</span></a>
+    </div>
+
+    <div class="card reveal">
+      <span class="step">3-4</span>
+      <h3>결제 연동 + 테스트 결제까지 개발하기</h3>
+      <p class="d">실제로 결제를 연동하고 내 웹사이트에 결제 버튼을 달아, 테스트 결제까지 진행하는 전 과정을 실습합니다.</p>
+      <a class="vthumb" href="https://www.youtube.com/watch?v=wF8mE2q2wl8" target="_blank" rel="noopener" title="테스트 결제 개발"><img src="https://img.youtube.com/vi/wF8mE2q2wl8/hqdefault.jpg" loading="lazy" alt="테스트 결제 개발"><span class="play">▶</span><span class="yt">YouTube에서 보기 ↗</span></a>
+    </div>
+
+    <div class="reveal"><div class="done">✅ 여기까지 하면 → 실제 결제되는 사이트 완성</div></div>
+  </div>
+</section>
+
+<!-- 캡스톤 -->
+<section id="capstone">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">참고 자료 · 영상 예시 (최종 프로젝트 아님)</div>
+    <h2 class="sec"><span class="sec-num">📎</span>[참고] 이렇게 합쳐집니다 — 종합 예시</h2>
+    <p class="sec-desc">이건 <b>최종 프로젝트가 아니라 참고용 예시</b>예요. 배포·데이터베이스·결제가 하나로 어떻게 합쳐지는지 감만 잡으세요. 여러분의 진짜 목표는 <b>위 템플릿으로 카테고리 하나를 빠르게 만드는 것</b>입니다.</p></div>
+
+    <div class="card reveal">
+      <span class="step">참고용</span>
+      <h3>🎮 종합 프로젝트 예시 (게임)</h3>
+      <p class="d">배포·데이터베이스·결제가 하나의 프로젝트로 합쳐지는 흐름을 보여주는 참고 영상입니다.</p>
+      <a class="vthumb" href="https://www.youtube.com/watch?v=UaztDdgJ11g" target="_blank" rel="noopener" title="종합 프로젝트 예시"><img src="https://img.youtube.com/vi/UaztDdgJ11g/hqdefault.jpg" loading="lazy" alt="종합 프로젝트 예시"><span class="play">▶</span><span class="yt">YouTube에서 보기 ↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 전체 흐름 -->
+<section id="done" style="border-bottom:none">
+  <div class="wrap outro reveal">
+    <span class="eyebrow">전체 흐름 정리</span>
+    <h2>배포 → 데이터베이스 → 결제</h2>
+    <p>이 순서대로 따라 하면 사이트를 세상에 공개하고, 데이터를 저장하고, 결제까지 직접 연결할 수 있습니다. 다시 강조하지만 핵심은 완벽함이 아니라 <b>속도</b> — 일단 만들어 내보내고, 부족한 부분은 그다음에 채워 나가세요.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">AI City Builders · 시즌 2 · 2강 실습 교재</div>
+</footer>
+
+<script>
+(function(){
+  // scroll progress
+  var bar=document.getElementById('progress');
+  function onScroll(){
+    var h=document.documentElement;
+    var p=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;
+    bar.style.width=p+'%';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  // reveal on scroll (staggered per section)
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    [].forEach.call(document.querySelectorAll('.reveal'),function(el,i){
+      el.style.transitionDelay=((i%4)*0.07)+'s';
+      io.observe(el);
+    });
+  } else { [].forEach.call(document.querySelectorAll('.reveal'),function(el){el.classList.add('in');}); }
+
+  // scrollspy nav highlight
+  var links=[].slice.call(document.querySelectorAll('nav.toc a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+  function spy(){
+    var y=window.scrollY+140, idx=0;
+    secs.forEach(function(s,i){ if(s && s.offsetTop<=y) idx=i; });
+    links.forEach(function(a,i){ a.classList.toggle('active',i===idx); });
+  }
+  window.addEventListener('scroll',spy,{passive:true}); spy();
+})();
+</script>
+
+<script src="assets/js/a11y.js" defer></script>
+</body>
+</html>
