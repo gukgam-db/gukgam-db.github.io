@@ -8,7 +8,8 @@
 <style>
   :root{ --navy:#12365f; --line:#e3e9f0; --muted:#5f6e80; --bg:#f5f7fa; --brown:#5c3310; --chip:#eef3f8; --sig:#c2603a; }
   *{ box-sizing:border-box; }
-  body{ margin:0; font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif; background:var(--bg); color:#22303e; line-height:1.6; }
+  body{ margin:0; font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif; background:var(--bg); color:#22303e; line-height:1.6;
+        -webkit-text-size-adjust:100%; text-size-adjust:100%; }   /* 휴대전화 브라우저가 글자를 임의로 키우지 않게 */
   a{ color:inherit; }
   .top{ background:var(--brown); color:#fff; padding:26px 18px 22px; }
   .top-inner{ max-width:1180px; margin:0 auto; }
@@ -139,34 +140,59 @@
   .prrow:first-child{ border-top:0; }
   .prrow .pt{ font-size:.9rem; font-weight:700; line-height:1.5; color:#1c2b3a; }
   .prrow .pm{ font-size:.78rem; color:var(--muted); margin-top:5px; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
-  /* ── 휴대전화 가독성 ── 글자가 작고 빽빽해 화면을 줄여야 보였다 */
+  /* ── 휴대전화 ── 한 화면에 되도록 많이 들어오도록 촘촘하게. 크게 키웠더니 제목 한 줄이 화면을 다 먹었다. */
   @media (max-width:640px){
-    .wrap{ padding:14px 12px 50px; }
-    .top{ padding:18px 14px 16px; }
-    .top h1{ font-size:1.32rem; }
-    .top p{ font-size:.88rem; }
-    .top-nav{ gap:6px; margin-top:10px; }
-    .top-nav a{ font-size:.8rem; padding:5px 11px; }
-    .panel{ padding:13px 13px; }
-    .warn{ font-size:.88rem; padding:12px 14px; line-height:1.65; }
-    .picker{ display:grid; grid-template-columns:1fr 1fr; gap:8px; }
-    .picker select{ width:100%; font-size:.92rem; padding:9px 8px; }
+    .wrap{ padding:12px 10px 44px; }
+    .top{ padding:16px 12px 14px; }
+    .top h1{ font-size:1.2rem; }
+    .top p{ font-size:.8rem; }
+    .top-nav{ gap:5px; margin-top:9px; }
+    .top-nav a{ font-size:.74rem; padding:4px 9px; }
+    .panel{ padding:11px 11px; }
+    .warn{ font-size:.8rem; padding:10px 12px; line-height:1.55; }
+    .howto{ gap:7px; margin-bottom:12px; }
+    .ht{ padding:9px 11px; gap:8px; }
+    .ht .n{ width:22px; height:22px; font-size:.76rem; }
+    .ht b{ font-size:.86rem; }
+    .ht span{ font-size:.79rem; line-height:1.5; }
+    .picker{ display:grid; grid-template-columns:1fr 1fr; gap:7px; }
+    .picker select{ width:100%; font-size:.84rem; padding:7px 7px; }
     .picker select:last-child{ grid-column:1 / -1; }
-    .cand{ padding:13px 13px; }
-    .cand .t{ font-size:1rem; line-height:1.5; }
-    .cand .m{ font-size:.76rem; gap:6px; margin-top:7px; }
-    .bdg{ padding:2px 9px; }
-    .cand .ex{ font-size:.84rem; line-height:1.65; padding-top:8px; }
-    .ht b{ font-size:.98rem; }
-    .ht span{ font-size:.88rem; line-height:1.6; }
-    .evirow .meta{ font-size:.8rem; }
-    .evirow .eq{ font-size:.92rem; line-height:1.65; }
-    .evirow .ea{ font-size:.9rem; line-height:1.65; padding:8px 11px; }
-    .btn{ font-size:.9rem; padding:10px 15px; }
-    .basis{ font-size:.82rem; line-height:1.7; }
-    .ttl{ font-size:13.5pt; }
-    .key{ font-size:12.5pt; }
-    .lv1,.lv2{ font-size:11.5pt; }
+    .cand{ padding:10px 11px; margin-bottom:7px; }
+    .cand .t{ font-size:.88rem; line-height:1.45; }
+    .cand .m{ font-size:.7rem; gap:5px; margin-top:6px; }
+    .bdg{ padding:1px 7px; }
+    .cand .ex{ font-size:.76rem; line-height:1.5; padding-top:6px; }
+    .btn{ font-size:.82rem; padding:8px 12px; }
+    .btn.mini{ font-size:.74rem; padding:5px 9px; }
+    .toolhint{ font-size:.74rem; line-height:1.5; }
+    .basis{ font-size:.74rem; line-height:1.6; }
+
+    /* 메모 한 건 */
+    .sheet{ padding:14px 12px; }
+    .itemhd{ margin:-2px 0 8px; gap:6px; }
+    .itemhd .ino{ font-size:.72rem; padding:2px 8px; }
+    .hd{ display:none; }                 /* 화면에서는 자리만 차지한다 — 인쇄에는 그대로 나온다 */
+    .ttl{ font-size:11.5pt; line-height:1.4; }
+    .src{ font-size:8.5pt; line-height:1.45; margin-bottom:9px; }
+    .evi.mat{ padding:9px 10px; margin:8px 0 6px; }
+    .evi > summary{ font-size:.88rem; line-height:1.45; }
+    .evi > summary .cnt{ font-size:.76rem; }
+    .evirow{ padding:8px 0; }
+    .evirow .meta{ font-size:.72rem; }
+    .evirow .eq{ font-size:.82rem; line-height:1.55; }
+    .evirow .ea{ font-size:.8rem; line-height:1.55; padding:6px 9px; }
+    .evi .none{ font-size:.76rem; }
+    .fillbar{ margin:8px 0 5px; padding-top:8px; }
+    .fillbar .fillhint{ font-size:.72rem; }
+    .key{ font-size:11pt; line-height:1.45; }
+    .sec{ font-size:10.5pt; margin:10px 0 5px; }
+    .lv1,.lv2{ font-size:10.5pt; }
+    .lv3{ font-size:9.5pt; }
+    .refs{ font-size:9.5pt; }
+    .qa-tbl th, .qa-tbl td{ font-size:9pt; padding:5px 6px; }
+    .prrow .pt{ font-size:.82rem; line-height:1.45; }
+    .prrow .pm{ font-size:.72rem; }
   }
 
   @media print{
@@ -178,6 +204,7 @@
     .item + .item{ page-break-before:always; }
     .itemhd{ display:none !important; }
     .fill.closed{ display:block !important; }   /* 접어 둔 채로 인쇄해도 내용이 빠지지 않게 */
+    .hd{ display:block !important; }            /* 휴대전화 화면에서는 감췄던 머리글 */
     .sheet [contenteditable]:focus{ background:none; box-shadow:none; }
     .sheet [data-ph]:empty:before{ content:''; }
     .sheet [contenteditable]:empty{ border-bottom:0; }
@@ -370,12 +397,14 @@
     return (PROMISE.test(body) && n>=22) || n>=45;
   }
   function promiseLine(a){
-    var t=(a||'').replace(/\s+/g,' ').trim().replace(/^\s*(예|네|아)\s*[,.]\s*/,'');
+    var t=clean(a).replace(/^\s*(예|네|아)\s*[,.]\s*/,'');
     var parts=t.split(/(?:(?<=다\.)|(?<=[.?!]))\s+/);
+    parts=parts.map(function(x){ return mend(x); });
     for(var i=parts.length-1;i>=0;i--){
       var x=(parts[i]||'').trim();
       if(x.length>=8 && PROMISE.test(x)) return x.length>110 ? x.slice(0,110)+'…' : x;
     }
+    t=parts.join(' ');
     return t.length>110 ? t.slice(0,110)+'…' : t;
   }
   function cut(t,n){ t=(t||'').replace(/^[\s,.、·…?!:;)\]]+/,''); return t.length>n ? t.slice(0,n)+'…' : t; }
@@ -425,7 +454,13 @@
   }
   // 쪽머리(‘2025년도국감-보건복지(2025년10월30일) 133’)가 문장 사이에 섞여 들어와 있다
   function clean(q){
-    return (q||'').replace(/\d{4}\s*년도\s*국감[^()]*\([^)]*\)\s*\d*/g,' ').replace(/\s+/g,' ').trim();
+    return (q||'').replace(/\s*\d{1,4}\s*\d{4}\s*년도\s*국감[^()]*\([^)]*\)\s*\d*/g,' ')
+                  .replace(/\d{4}\s*년도\s*국감[^()]*\([^)]*\)\s*\d*/g,' ')
+                  .replace(/\s+/g,' ').trim();
+  }
+  // 화면에 보일 때도 쪽머리를 걷고 줄 끝에서 갈라진 낱말을 붙여 읽는다
+  function disp(t){
+    return mend(clean(t));
   }
   // 마침표 뒤에 빈칸이 없는 곳도 문장 경계로 본다(회의록 원문에 흔하다)
   function sentences(q){
@@ -579,7 +614,7 @@
     if(!c.ex || !c.ex.length) return '';
     var e=c.ex[0], lnk=e.minutes_url?' <a href="'+esc(e.minutes_url)+'" target="_blank" rel="noopener">원문 ↗</a>':'';
     if(c.verbatim) return '<div class="ex">· 이 주제의 가장 최근 질의 '+esc(ymd(e.date))+' '+esc(e.member)+' 위원'+lnk+'</div>';
-    return '<div class="ex">· '+esc(ymd(e.date))+' '+esc(e.member)+' 위원 — '+esc(cut(e.q,70))+lnk+'</div>';
+    return '<div class="ex">· '+esc(ymd(e.date))+' '+esc(e.member)+' 위원 — '+esc(cut(disp(e.q),70))+lnk+'</div>';
   }
   var CSHOWN=6;
   function renderCands(){
@@ -722,16 +757,24 @@
     ap.disabled=!usable;
     ap.textContent = usable ? '↩ 이 답변들을 아래 메모로 옮기기 ('+usable+'건)' : '↩ 옮겨 올 만한 답변이 없습니다';
     if(!rows.length){ list.innerHTML='<div class="none">이 후보와 이어지는 과거 질의를 찾지 못했습니다. 새로 제기된 사안일 수 있습니다.</div>'; return; }
+    function row(r){
+      return '<div class="evirow">'+
+        '<div class="meta">'+esc(ymd(r.date))+' · '+esc(r.member)+' 위원'+
+          (r.minutes_url?'<a href="'+esc(r.minutes_url)+'" target="_blank" rel="noopener">회의록 원문 ↗</a>':'')+'</div>'+
+        '<div class="eq"><b>질의</b> '+esc(cut(disp(r.q),150))+'</div>'+
+        (r.a?'<div class="ea"><b>당시 답변</b> '+esc(cut(disp(r.a),170))+'</div>':'')+
+      '</div>';
+    }
+    var SHOW=3, rest=rows.length-SHOW;
     list.innerHTML='<div class="none" style="padding:0 2px 8px;">최근 것부터 '+rows.length+'건'+
         (it.cand.kind==='repeat'?'':' · 제목의 낱말이 겹치는 질의를 찾은 것이라 주제가 다를 수 있습니다')+'</div>'+
-      rows.map(function(r){
-        return '<div class="evirow">'+
-          '<div class="meta">'+esc(r.date)+' · '+esc(r.member)+' 위원'+
-            (r.minutes_url?'<a href="'+esc(r.minutes_url)+'" target="_blank" rel="noopener">회의록 원문 ↗</a>':'')+'</div>'+
-          '<div class="eq"><b>질의</b> '+esc(cut(r.q,200))+'</div>'+
-          (r.a?'<div class="ea"><b>당시 답변</b> '+esc(cut(r.a,220))+'</div>':'')+
-        '</div>';
-      }).join('');
+      rows.slice(0,SHOW).map(row).join('')+
+      (rest>0 ? '<div class="evimore" hidden>'+rows.slice(SHOW).map(row).join('')+'</div>'+
+                '<button class="btn mini evimoreb">나머지 '+rest+'건 더 보기</button>' : '');
+    var mb=list.querySelector('.evimoreb');
+    if(mb) mb.addEventListener('click', function(){
+      var d=list.querySelector('.evimore'); d.hidden=false; this.remove();
+    });
   }
 
   // 과거 답변을 메모에 옮겨 넣기 — 지어내지 않고 그대로 인용하고 출처를 붙인다
@@ -821,7 +864,8 @@
         ' 질의 '+QA.length+'건을 주제별로 세어, 두 해 이상·네 건 이상 나온 주제. ② <b>최근 보도</b>: 공개된 국감 관련 기사 중 이 기관 관련 제목. '+
         '③ <b>지난해 지적사항</b>: 국정감사 결과보고서의 시정·처리요구 중 이 기관 소관. '+
         '후보 제목은 그 주제를 실제로 묻는 <b>회의록 속 질의 한 문장</b>입니다(배지 「실제 질의 문장」). '+
-        '회의록 원문은 두 단 편집이라 줄 끝에서 낱말이 갈라진 곳이 있어, <b>갈라진 조각만 붙여</b> 보이고 성치 않은 문장은 쓰지 않았습니다. '+
+        '회의록 원문은 두 단 편집이라 줄 끝에서 낱말이 갈라지고 쪽머리가 섞여 들어간 곳이 있어, 후보 제목과 아래 근거 목록 모두 <b>쪽머리를 걷고 갈라진 조각을 붙여</b> 보입니다. '+
+        '제목으로는 그렇게 해도 성치 않은 문장은 쓰지 않았습니다. '+
         '그래도 원문 표기가 그대로 남아 띄어쓰기가 어색한 곳이 있을 수 있으니 <b>회의록 원문 링크로 확인</b>하십시오. 고르지 못한 주제는 주제 이름과 건수로 적었습니다. '+
         '제목·출처와 <b>과거 답변 인용</b>만 자동으로 채우고 <b>답변 내용과 수치는 채우지 않습니다</b>. '+
         '국정과제 배지는 공개된 123대 국정과제와 낱말이 겹칠 때 참고로 붙인 것이며 이행 평가가 아닙니다.';
