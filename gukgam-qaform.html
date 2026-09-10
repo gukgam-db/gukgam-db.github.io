@@ -23,9 +23,24 @@
          padding:12px 16px; font-size:.86rem; margin-bottom:16px; }
   .warn b{ color:#9e3a20; }
 
+  .howto{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:10px; margin-bottom:16px; }
+  .ht{ background:#fff; border:1.5px solid #cbd8e6; border-radius:12px; padding:12px 14px; display:flex; gap:10px; align-items:flex-start; }
+  .ht .n{ flex:0 0 auto; width:26px; height:26px; border-radius:50%; background:var(--brown); color:#fff;
+          font-weight:900; font-size:.85rem; display:flex; align-items:center; justify-content:center; }
+  .ht b{ display:block; color:var(--navy); font-size:.92rem; margin-bottom:3px; }
+  .ht span{ font-size:.82rem; color:var(--muted); line-height:1.5; }
+  .ht span b{ display:inline; color:var(--navy); font-size:inherit; margin:0; }   /* 문장 중간의 굵은 글씨가 줄을 바꾸지 않게 */
+  .ht .ph-demo{ display:inline; color:#b9c2cd; font-weight:700; }
+  .step{ display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%;
+         background:var(--brown); color:#fff; font-size:.75rem; font-weight:900; margin-right:6px; }
   .cols{ display:grid; grid-template-columns:minmax(320px,420px) 1fr; gap:16px; align-items:start; }
-  @media (max-width:960px){ .cols{ grid-template-columns:1fr; } }
-
+  .cols > *{ min-width:0; }   /* 그리드 칸이 내용 폭에 밀려 화면 밖으로 나가지 않게 */
+  @media (max-width:960px){
+    .cols{ grid-template-columns:1fr; }
+    .sheet{ width:100%; padding:16px 14px; }   /* 휴대전화에서 A4 폭(210mm)을 그대로 쓰면 가로 스크롤이 생긴다 */
+    .qa-tbl th, .qa-tbl td{ font-size:9.5pt; padding:6px 7px; }
+    .sheet [contenteditable]:empty{ min-width:60px; }   /* 좁은 화면에서 안내 글이 줄을 넘기지 않게 */
+  }
   .panel{ background:#fff; border:1.5px solid #cbd8e6; border-radius:14px; padding:14px 16px; box-shadow:0 1px 3px rgba(18,54,95,.06); }
   .panel h2{ font-size:1rem; color:var(--navy); margin:0 0 10px; }
   .picker{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
@@ -55,6 +70,8 @@
   .sheet [contenteditable]{ outline:0; }
   .sheet [contenteditable]:focus{ background:#fffdf5; box-shadow:0 0 0 2px #f0dcc4; border-radius:4px; }
   .sheet [data-ph]:empty:before{ content:attr(data-ph); color:#b9c2cd; }
+  .sheet [contenteditable]:empty{ border-bottom:1px dashed #cbd3dd; min-width:120px; display:inline-block; cursor:text; }
+  .sheet [contenteditable]:empty:hover{ background:#fffdf5; border-bottom-color:#d2603a; }
   .hd{ text-align:right; font-size:11pt; font-weight:700; margin-bottom:8px; }
   .ttl{ font-size:14pt; font-weight:800; line-height:1.45; margin-bottom:4px; }
   .src{ font-size:9.5pt; color:var(--muted); margin-bottom:12px; }
@@ -70,8 +87,50 @@
   .qa-tbl td:first-child{ width:45%; }
   .note-in{ font-size:9pt; color:var(--muted); margin-top:8px; }
 
+  .evi{ margin-bottom:12px; }
+  .evi h2 .sub{ font-size:.78rem; font-weight:500; color:var(--muted); }
+  .evirow{ border-top:1px dashed var(--line); padding:10px 0; }
+  .evirow:first-child{ border-top:0; }
+  .evirow .meta{ font-size:.76rem; color:var(--muted); font-weight:800; margin-bottom:4px; }
+  .evirow .meta a{ color:#2a4d7d; text-decoration:none; font-weight:800; margin-left:6px; }
+  .evirow .eq{ font-size:.86rem; line-height:1.55; }
+  .evirow .eq b{ color:#7b2d43; }
+  .evirow .ea{ font-size:.84rem; line-height:1.55; color:#1f4e46; background:#f2f8f6; border-left:3px solid #9dc7bb;
+                border-radius:0 8px 8px 0; padding:6px 10px; margin-top:5px; }
+  .evirow .ea b{ color:#14615a; }
+  .evi .none{ font-size:.84rem; color:var(--muted); padding:8px 2px; }
   .basis{ font-size:.78rem; color:var(--muted); line-height:1.6; margin-top:14px; border-top:1px dashed var(--line); padding-top:8px; }
   .empty{ color:var(--muted); font-size:.86rem; padding:14px 4px; }
+
+  /* ── 휴대전화 가독성 ── 글자가 작고 빽빽해 화면을 줄여야 보였다 */
+  @media (max-width:640px){
+    .wrap{ padding:14px 12px 50px; }
+    .top{ padding:18px 14px 16px; }
+    .top h1{ font-size:1.32rem; }
+    .top p{ font-size:.88rem; }
+    .top-nav{ gap:6px; margin-top:10px; }
+    .top-nav a{ font-size:.8rem; padding:5px 11px; }
+    .panel{ padding:13px 13px; }
+    .warn{ font-size:.88rem; padding:12px 14px; line-height:1.65; }
+    .picker{ display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+    .picker select{ width:100%; font-size:.92rem; padding:9px 8px; }
+    .picker select:last-child{ grid-column:1 / -1; }
+    .cand{ padding:13px 13px; }
+    .cand .t{ font-size:1rem; line-height:1.5; }
+    .cand .m{ font-size:.76rem; gap:6px; margin-top:7px; }
+    .bdg{ padding:2px 9px; }
+    .cand .ex{ font-size:.84rem; line-height:1.65; padding-top:8px; }
+    .ht b{ font-size:.98rem; }
+    .ht span{ font-size:.88rem; line-height:1.6; }
+    .evirow .meta{ font-size:.8rem; }
+    .evirow .eq{ font-size:.92rem; line-height:1.65; }
+    .evirow .ea{ font-size:.9rem; line-height:1.65; padding:8px 11px; }
+    .btn{ font-size:.9rem; padding:10px 15px; }
+    .basis{ font-size:.82rem; line-height:1.7; }
+    .ttl{ font-size:13.5pt; }
+    .key{ font-size:12.5pt; }
+    .lv1,.lv2{ font-size:11.5pt; }
+  }
 
   @media print{
     @page{ size:A4; margin:20mm; }   /* A4 기본 여백 */
@@ -81,6 +140,7 @@
     .sheet{ border:0; box-shadow:none; padding:0; width:auto; margin:0; }
     .sheet [contenteditable]:focus{ background:none; box-shadow:none; }
     .sheet [data-ph]:empty:before{ content:''; }
+    .sheet [contenteditable]:empty{ border-bottom:0; }
     .lv3{ color:#333; }
   }
 </style>
@@ -112,10 +172,16 @@
     <b>답변 내용과 통계는 비워 둡니다.</b> 확인되지 않은 숫자를 채우지 않기 위해서입니다. 아래 메모는 초안 정리용이며, 기관의 공식 서식은 각 기관 내부 지침을 따르십시오.
   </div>
 
+  <div class="howto">
+    <div class="ht"><span class="n">1</span><div><b>후보를 고릅니다</b><span>아래 목록에서 올해 나올 만한 질의를 누릅니다. 제목·출처가 채워지고, <b>그동안 오간 질의와 당시 답변</b>이 함께 나옵니다.</span></div></div>
+    <div class="ht"><span class="n">2</span><div><b>빈칸을 채웁니다</b><span>메모의 <b class="ph-demo">회색 글씨 부분을 눌러</b> 직접 입력합니다. 답변·통계는 담당자가 씁니다.</span></div></div>
+    <div class="ht"><span class="n">3</span><div><b>인쇄하거나 복사합니다</b><span><b>인쇄</b>로 종이에 뽑거나, <b>한글 붙여넣기용 텍스트 복사</b>로 문서에 옮깁니다.</span></div></div>
+  </div>
+
   <div class="cols">
     <!-- ── 왼쪽: 후보 ── -->
     <section class="panel left">
-      <h2>예상 질의 후보</h2>
+      <h2><span class="step">1</span>예상 질의 후보 <span style="font-size:.78rem;font-weight:500;color:var(--muted);">— 눌러서 고르세요</span></h2>
       <div class="picker">
         <select id="pAgency">
           <option value="kdca">질병관리청</option>
@@ -135,6 +201,13 @@
 
     <!-- ── 오른쪽: 답변 메모 초안 ── -->
     <section>
+      <section class="panel evi noprint" id="eviBox" hidden>
+        <h2 style="font-size:1rem;color:var(--navy);margin:0 0 8px;">📌 이 주제로 그동안 오간 질의와 답변
+          <span class="sub">— 그때 우리가 어떻게 답했는지 보고 초안을 잡으세요</span></h2>
+        <div id="eviList"></div>
+      </section>
+
+      <h2 style="font-size:1rem;color:var(--navy);margin:0 0 10px;"><span class="step">2</span>답변 메모 초안 <span style="font-size:.78rem;font-weight:500;color:var(--muted);">— 회색 글씨를 눌러 입력하세요</span></h2>
       <div class="tools noprint">
         <button class="btn primary" onclick="window.print()">🖨️ 인쇄</button>
         <button class="btn" id="btnCopy">📋 한글 붙여넣기용 텍스트 복사</button>
@@ -251,12 +324,14 @@
     return out;
   }
 
+  var CSHOWN=6;
   function renderCands(){
     var kind=document.getElementById('pKind').value;
     var list=CANDS.filter(function(c){ return !kind || c.kind===kind; });
     var box=document.getElementById('cands');
     if(!list.length){ box.innerHTML='<div class="empty">조건에 맞는 후보가 없습니다.</div>'; return; }
-    box.innerHTML=list.map(function(c,i){
+    var more=list.length-CSHOWN;
+    box.innerHTML=list.slice(0,CSHOWN).map(function(c,i){
       return '<div class="cand'+(SEL===c?' on':'')+'" data-i="'+i+'">'+
         '<div class="t">'+esc(c.title)+'</div>'+
         '<div class="m">'+c.badges.map(function(b){ return '<span class="bdg '+b[0]+'">'+esc(b[1])+'</span>'; }).join('')+'</div>'+
@@ -265,18 +340,65 @@
                    (e.minutes_url?'<a href="'+esc(e.minutes_url)+'" target="_blank" rel="noopener">원문 ↗</a>':'');
           }).join('<br>')+'</div>' : '')+
         '</div>';
-    }).join('');
+    }).join('')+(more>0?'<button class="btn" id="moreCand" style="width:100%;margin-top:4px;">후보 '+more+'개 더 보기</button>':'');
     box.querySelectorAll('.cand').forEach(function(el){
       el.addEventListener('click', function(){ fill(list[+this.dataset.i]); });
     });
+    var mb=document.getElementById('moreCand');
+    if(mb) mb.addEventListener('click', function(){ CSHOWN+=12; renderCands(); });
   }
 
+  // 후보와 관련된 과거 질의·답변을 찾는다 — 주제가 같거나, 제목의 낱말이 겹치는 것
+  var STOP={'이행':1,'현황':1,'관련':1,'대응':1,'방향':1,'올해':1,'반복':1,'질의':1,'대책':1,'마련':1,'검토':1,'개선':1,'것':1,'등':1,'및':1};
+  function tokens(t){
+    var out=[], m=(t||'').match(/[가-힣]{2,}/g)||[];
+    m.forEach(function(w){ if(!STOP[w] && w.length>=2 && out.indexOf(w)<0) out.push(w); });
+    return out.slice(0,10);
+  }
+  function relatedQA(c){
+    var rows;
+    if(c.kind==='repeat'){
+      rows=QA.filter(function(r){ return (r.topics||[]).indexOf(c.topic)>=0; });
+    }else{
+      var ks=tokens(c.title);
+      rows=QA.filter(function(r){
+        var t=(r.q||'')+' '+(r.a||''), n=0, long=false;
+        for(var i=0;i<ks.length;i++){
+          if(t.indexOf(ks[i])>=0){ n++; if(ks[i].length>=3) long=true; }
+        }
+        return n>=2 && long;      // 두 낱말 이상 겹치고, 그중 하나는 세 글자 이상
+      });
+    }
+    rows=rows.filter(function(r){ return !junkName(r.member); })
+             .sort(function(a,b){ return (b.date||'').localeCompare(a.date||''); });
+    var withA=rows.filter(function(r){ return r.a; });      // 답변이 붙은 것을 먼저
+    return withA.concat(rows.filter(function(r){ return !r.a; })).slice(0,8);
+  }
+  function renderEvi(c){
+    var box=document.getElementById('eviBox'), list=document.getElementById('eviList');
+    var rows=relatedQA(c);
+    box.hidden=false;
+    if(!rows.length){ list.innerHTML='<div class="none">이 후보와 이어지는 과거 질의를 찾지 못했습니다. 새로 제기된 사안일 수 있습니다.</div>'; return; }
+    var nA=rows.filter(function(r){ return r.a; }).length;
+    function cut(t,n){ t=(t||'').replace(/^[\s,.\u3001\u00b7\u2026?!:;)\]]+/,''); return t.length>n ? t.slice(0,n)+'…' : t; }
+    list.innerHTML='<div class="none" style="padding:0 2px 8px;">최근 것부터 '+rows.length+'건 · 이 가운데 답변이 남아 있는 것 '+nA+'건'+
+      (c.kind==='repeat'?'':' · 제목의 낱말이 겹치는 질의를 찾은 것이라 주제가 다를 수 있습니다')+'</div>'+
+      rows.map(function(r){
+        return '<div class="evirow">'+
+          '<div class="meta">'+esc(r.date)+' · '+esc(r.member)+' 위원'+
+            (r.minutes_url?'<a href="'+esc(r.minutes_url)+'" target="_blank" rel="noopener">회의록 원문 ↗</a>':'')+'</div>'+
+          '<div class="eq"><b>질의</b> '+esc(cut(r.q,200))+'</div>'+
+          (r.a?'<div class="ea"><b>당시 답변</b> '+esc(cut(r.a,220))+'</div>':'')+
+        '</div>';
+      }).join('');
+  }
   function fill(c){
     SEL=c;
     document.getElementById('fTitle').textContent=c.title;
     document.getElementById('fSrc').textContent=c.src;
     renderCands();
-    document.getElementById('sheet').scrollIntoView({behavior:'smooth', block:'start'});
+    renderEvi(c);
+    document.getElementById('eviBox').scrollIntoView({behavior:'smooth', block:'start'});
   }
 
   function qnaRows(n){
@@ -347,8 +469,8 @@
   }
 
   document.getElementById('pAgency').addEventListener('change', function(){ load(this.value); });
-  document.getElementById('pMember').addEventListener('change', function(){ CANDS=buildCands(this.value); renderCands(); });
-  document.getElementById('pKind').addEventListener('change', renderCands);
+  document.getElementById('pMember').addEventListener('change', function(){ CANDS=buildCands(this.value); CSHOWN=6; renderCands(); });
+  document.getElementById('pKind').addEventListener('change', function(){ CSHOWN=6; renderCands(); });
   document.getElementById('btnCopy').addEventListener('click', function(){
     var txt=sheetText();
     navigator.clipboard.writeText(txt).then(function(){ alert('복사했습니다. 쓰시는 문서에 붙여 넣고 서식만 맞추십시오.'); },
@@ -357,7 +479,7 @@
   document.getElementById('btnClear').addEventListener('click', function(){
     document.querySelectorAll('#sheet [contenteditable]').forEach(function(el){ el.textContent=''; });
     document.getElementById('fNo').textContent='1-1.';
-    qnaRows(3); SEL=null; renderCands();
+    qnaRows(3); SEL=null; document.getElementById('eviBox').hidden=true; renderCands();
   });
 
   qnaRows(3);
