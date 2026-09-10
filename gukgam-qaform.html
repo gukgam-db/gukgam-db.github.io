@@ -88,6 +88,15 @@
   .note-in{ font-size:9pt; color:var(--muted); margin-top:8px; }
 
   .evi{ margin-bottom:12px; }
+  .evi > summary{ cursor:pointer; font-size:.95rem; font-weight:800; color:var(--navy); list-style:none; }
+  .evi > summary::-webkit-details-marker{ display:none; }
+  .evi > summary:before{ content:'▸ '; color:var(--sig); font-weight:900; }
+  .evi[open] > summary:before{ content:'▾ '; }
+  .evi > summary .cnt{ font-weight:600; color:var(--muted); font-size:.85rem; }
+  .evi[open] > summary{ padding-bottom:8px; border-bottom:1px solid var(--line); margin-bottom:6px; }
+  .btn.accent{ background:#fff1e8; border-color:#e0b8a4; color:#9e3a20; }
+  .btn.accent:disabled{ background:#f4f6f8; border-color:#e3e9f0; color:#aab4c0; cursor:default; }
+  .quo{ background:#f6f8fa; border-left:3px solid #b9c9da; border-radius:0 6px 6px 0; padding:2px 8px; }
   .evi h2 .sub{ font-size:.78rem; font-weight:500; color:var(--muted); }
   .evirow{ border-top:1px dashed var(--line); padding:10px 0; }
   .evirow:first-child{ border-top:0; }
@@ -174,7 +183,7 @@
 
   <div class="howto">
     <div class="ht"><span class="n">1</span><div><b>후보를 고릅니다</b><span>아래 목록에서 올해 나올 만한 질의를 누릅니다. 제목·출처가 채워지고, <b>그동안 오간 질의와 당시 답변</b>이 함께 나옵니다.</span></div></div>
-    <div class="ht"><span class="n">2</span><div><b>빈칸을 채웁니다</b><span>메모의 <b class="ph-demo">회색 글씨 부분을 눌러</b> 직접 입력합니다. 답변·통계는 담당자가 씁니다.</span></div></div>
+    <div class="ht"><span class="n">2</span><div><b>과거 답변을 반영합니다</b><span><b>↩ 과거 답변 반영</b>을 누르면 그때 한 답변이 출처와 함께 메모에 들어갑니다. 나머지 <b class="ph-demo">회색 글씨</b>는 눌러서 직접 씁니다.</span></div></div>
     <div class="ht"><span class="n">3</span><div><b>인쇄하거나 복사합니다</b><span><b>인쇄</b>로 종이에 뽑거나, <b>한글 붙여넣기용 텍스트 복사</b>로 문서에 옮깁니다.</span></div></div>
   </div>
 
@@ -201,15 +210,15 @@
 
     <!-- ── 오른쪽: 답변 메모 초안 ── -->
     <section>
-      <section class="panel evi noprint" id="eviBox" hidden>
-        <h2 style="font-size:1rem;color:var(--navy);margin:0 0 8px;">📌 이 주제로 그동안 오간 질의와 답변
-          <span class="sub">— 그때 우리가 어떻게 답했는지 보고 초안을 잡으세요</span></h2>
+      <details class="panel evi noprint" id="eviBox" hidden>
+        <summary id="eviSum">📌 이 주제로 그동안 오간 질의와 답변 <span class="cnt"></span></summary>
         <div id="eviList"></div>
-      </section>
+      </details>
 
       <h2 style="font-size:1rem;color:var(--navy);margin:0 0 10px;"><span class="step">2</span>답변 메모 초안 <span style="font-size:.78rem;font-weight:500;color:var(--muted);">— 회색 글씨를 눌러 입력하세요</span></h2>
       <div class="tools noprint">
         <button class="btn primary" onclick="window.print()">🖨️ 인쇄</button>
+        <button class="btn accent" id="btnApply" disabled>↩ 과거 답변 반영</button>
         <button class="btn" id="btnCopy">📋 한글 붙여넣기용 텍스트 복사</button>
         <button class="btn" id="btnClear">↺ 비우기</button>
       </div>
@@ -261,6 +270,14 @@
            mohw:{name:'보건복지부', qa:null, kw:['보건복지부','복지부','건강보험','연금','의료','돌봄','저출생','장애인']} };
 
   var QA=[], PRESS=[], FIND=null, AGENDA=[], CUR='kdca', CANDS=[], SEL=null;
+  // 답변에서 '무엇을 하겠다'는 문장을 찾는 표현 — 인용할 값어치가 있는 답변만 고른다
+  var PROMISE=/(검토하겠|추진하겠|마련하겠|협의하겠|노력하겠|개선하겠|확대하겠|보완하겠|살펴보겠|점검하겠|반영하겠|챙기겠|시행하겠|지원하겠|강화하겠|제출하겠|보고드리겠|확인하겠|하겠습니다|추진 중|준비하고 있|검토 중)/;
+  // 인용할 값어치가 있는 답변: 무엇을 하겠다는 말이 있거나, 사실을 설명한 긴 답변
+  function quotable(r){
+    if(!r.a) return false;
+    var n=r.a.replace(/\s/g,'').length;
+    return (PROMISE.test(r.a) && n>=12) || n>=40;
+  }
 
   // ── 예상 질의 후보 만들기 ─────────────────────────────
   // 지어내지 않는다. 1) 최근 3년 반복된 주제 2) 최근 공개 보도 3) 지난해 결과보고서 지적사항
@@ -282,7 +299,7 @@
       var b=byTopic[t], ys=Object.keys(b.years).sort();
       if(ys.length<2 || b.n<4) return;      // 두 해 이상, 4건 이상만 후보로
       var last=b.ex[b.ex.length-1];
-      out.push({ kind:'repeat', topic:t,
+      out.push({ kind:'repeat', topic:t, y0:ys[0], y1:ys[ys.length-1], n:b.n,
         title:'「'+t+'」 관련 반복 질의 — 올해 대응 방향',
         src:'최근 '+ys.length+'개 연도 국정감사 「'+t+'」 관련 질의 '+b.n+'건 (최근: '+ymd(last.date)+' '+last.member+' 위원 구두질의)',
         badges:[['rp', ys[0]+'~'+ys[ys.length-1]+' 반복'],['','질의 '+b.n+'건']],
@@ -377,7 +394,15 @@
   function renderEvi(c){
     var box=document.getElementById('eviBox'), list=document.getElementById('eviList');
     var rows=relatedQA(c);
-    box.hidden=false;
+    box.hidden=false; box.open=false;
+    var nA0=rows.filter(function(r){ return r.a; }).length;
+    document.querySelector('#eviSum .cnt').textContent =
+      rows.length ? '— 질의 '+rows.length+'건, 그중 답변이 남은 것 '+nA0+'건 · 눌러서 펼치기'
+                  : '— 이어지는 과거 질의를 찾지 못했습니다';
+    var usable=rows.filter(quotable).length;
+    document.getElementById('btnApply').disabled = !usable;
+    document.getElementById('btnApply').textContent = usable ? '↩ 과거 답변 반영 ('+usable+'건)' : '↩ 과거 답변 반영';
+    LASTROWS = rows;
     if(!rows.length){ list.innerHTML='<div class="none">이 후보와 이어지는 과거 질의를 찾지 못했습니다. 새로 제기된 사안일 수 있습니다.</div>'; return; }
     var nA=rows.filter(function(r){ return r.a; }).length;
     function cut(t,n){ t=(t||'').replace(/^[\s,.\u3001\u00b7\u2026?!:;)\]]+/,''); return t.length>n ? t.slice(0,n)+'…' : t; }
@@ -392,6 +417,57 @@
         '</div>';
       }).join('');
   }
+  // ── 과거 답변을 메모에 옮겨 넣기 ───────────────────────
+  // 지어내지 않는다. 회의록에 남은 답변 문장을 그대로 인용하고 출처를 붙인다.
+  var LASTROWS=[];
+  // (선언 위치: renderEvi 에서도 쓴다)
+  function promiseLine(a){
+    var t=(a||'').replace(/\s+/g,' ').trim();
+    var parts=t.split(/(?<=다\.)\s*|(?<=[.?!])\s+/);
+    for(var i=parts.length-1;i>=0;i--){
+      var x=(parts[i]||'').trim();
+      if(x.length>=8 && PROMISE.test(x)) return x.length>110 ? x.slice(0,110)+'…' : x;
+    }
+    return t.length>110 ? t.slice(0,110)+'…' : t;
+  }
+  function ymdDot(d){ var p=(d||'').split('-'); return p.length===3 ? (p[0]+'. '+(+p[1])+'. '+(+p[2])+'.') : (d||''); }
+  function applyPast(){
+    if(!SEL) return;
+    var sheet=document.getElementById('sheet');
+    var sec=sheet.querySelector('.sec');                 // '◈ 근거와 향후 계획'
+    var anchor=sec.nextElementSibling;                   // 첫 ○ 줄
+    var rows=LASTROWS.filter(quotable);
+    function score(r){ var n=Math.min((r.a||'').replace(/\s/g,'').length,300); return (PROMISE.test(r.a)?1000:0)+n; }
+    rows.sort(function(a,b){ return score(b)-score(a); });   // '하겠다'가 있는 답변을 먼저, 그중 내용이 있는 것부터
+    rows=rows.slice(0,3);
+    if(!rows.length){ alert('이 주제의 과거 답변에서 옮겨 올 만한 문장을 찾지 못했습니다.\n펼쳐서 직접 확인해 주십시오.'); return; }
+
+    function mk(cls, html){ var p=document.createElement('p'); p.className=cls; p.dataset.added='1'; p.innerHTML=html; return p; }
+    var frag=document.createDocumentFragment();
+
+    // (1) 사실 — 몇 해에 걸쳐 몇 건
+    if(SEL.kind==='repeat'){
+      frag.appendChild(mk('lv1','○ 「'+esc(SEL.topic)+'」 관련 질의는 '+esc(SEL.y0)+'년부터 '+esc(SEL.y1)+
+        '년까지 국정감사에서 '+SEL.n+'건 제기되었습니다.'));
+    }else{
+      frag.appendChild(mk('lv1','○ 이 사안은 '+esc(SEL.src)+'에서 제기되었습니다.'));
+    }
+    // (2) 과거 답변 인용 — 출처 포함
+    rows.forEach(function(r){
+      frag.appendChild(mk('lv2','- '+esc(ymdDot(r.date))+' '+esc(r.member)+' 위원 질의에 <span class="quo">“'+
+        esc(promiseLine(r.a))+'”</span>라고 답변했습니다.'));
+    });
+    // (3) 담당자가 채울 자리
+    frag.appendChild(mk('lv2','- <span contenteditable data-ph="위 답변 이후 무엇을 했는지 — 직접 작성"></span>'));
+    frag.appendChild(mk('lv3','* <span contenteditable data-ph="추진 실적 수치 — 확정 자료로 기재(기준일·단위·출처)"></span>'));
+
+    sec.parentNode.insertBefore(frag, anchor);
+    // 참고자료 칸에도 한 줄 제안
+    var refs=sheet.querySelectorAll('.refs span[contenteditable]');
+    if(refs.length && !refs[0].textContent) refs[0].textContent='위 답변 이후 추진 실적(연도별)';
+    document.getElementById('sheet').scrollIntoView({behavior:'smooth', block:'start'});
+  }
+
   function fill(c){
     SEL=c;
     document.getElementById('fTitle').textContent=c.title;
@@ -471,15 +547,18 @@
   document.getElementById('pAgency').addEventListener('change', function(){ load(this.value); });
   document.getElementById('pMember').addEventListener('change', function(){ CANDS=buildCands(this.value); CSHOWN=6; renderCands(); });
   document.getElementById('pKind').addEventListener('change', function(){ CSHOWN=6; renderCands(); });
+  document.getElementById('btnApply').addEventListener('click', applyPast);
   document.getElementById('btnCopy').addEventListener('click', function(){
     var txt=sheetText();
     navigator.clipboard.writeText(txt).then(function(){ alert('복사했습니다. 쓰시는 문서에 붙여 넣고 서식만 맞추십시오.'); },
       function(){ window.prompt('아래 내용을 복사하십시오', txt); });
   });
   document.getElementById('btnClear').addEventListener('click', function(){
+    document.querySelectorAll('#sheet [data-added]').forEach(function(el){ el.remove(); });
     document.querySelectorAll('#sheet [contenteditable]').forEach(function(el){ el.textContent=''; });
     document.getElementById('fNo').textContent='1-1.';
-    qnaRows(3); SEL=null; document.getElementById('eviBox').hidden=true; renderCands();
+    qnaRows(3); SEL=null; LASTROWS=[]; document.getElementById('eviBox').hidden=true;
+    document.getElementById('btnApply').disabled=true; renderCands();
   });
 
   qnaRows(3);
