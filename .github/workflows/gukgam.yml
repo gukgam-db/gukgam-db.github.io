@@ -1,0 +1,193 @@
+name: 국정감사 자료 DB 자동 갱신
+
+# 열린국회정보 Open API에서 국정감사 결과보고서·시정처리결과·회의록 메타데이터를 수집합니다.
+# ASSEMBLY_API_KEY 시크릿(https://open.assembly.go.kr 무료 발급)이 있으면 전체 수집,
+# 없으면 샘플 모드로 동작하되 기존 full 데이터는 덮어쓰지 않습니다.
+on:
+  schedule:
+    - cron: '10 20 * * 0'      # 평시: 매주 월요일 KST 05:10
+    - cron: '40 20 * 9-12 1-6' # 국감 시즌(9~12월): 화~일 매일 KST 05:40 추가
+    - cron: '0 9 * 9-12 *'     # 국감 시즌: 매일 KST 18:00 한 번 더 (의원실 보도자료가 낮에 쏟아진다)
+  workflow_dispatch:
+    inputs:
+      plan_url:
+        description: '국정감사계획서 PDF 주소 (연 1회 — 입력하면 확정 일정 plan-연도.json 생성)'
+        required: false
+        type: string
+      scan_year:
+        description: '조사용: 이 연도 전 상임위 국감 회의록을 훑어 지정 위원·키워드 발언을 찾는다 (예: 2019)'
+        required: false
+        type: string
+      scan_members:
+        description: '조사용: 찾을 위원 이름(쉼표 구분, 예: 조경태)'
+        required: false
+        type: string
+      scan_keys:
+        description: '조사용: 찾을 키워드(쉼표 구분, 기본 SFTS,중증열성,진드기)'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+env:
+  PYTHONUNBUFFERED: "1"   # 진행 로그가 실시간으로 보이게 (버퍼링되면 6시간 뒤 취소돼도 어디서 멈췄는지 모른다)
+  TZ: Asia/Seoul          # 러너는 UTC라 KST 새벽에 돌면 '오늘'이 전날로 찍힌다 → 화면 날짜가 하루 늦어 보였다
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      # 회의록 PDF에서 뽑은 본문을 실행 간에 보관한다. 국회 PDF 서버가 느린 날
+      # 한 파일에 십수 분씩 잡아먹던 재추출이, 한 번 받아 두면 몇 분이면 끝난다.
+      - name: 회의록 본문 캐시 복원·보관
+        uses: actions/cache@v4
+        with:
+          path: /tmp/gukgam-textcache
+          key: gukgam-textcache-${{ github.run_id }}
+          restore-keys: |
+            gukgam-textcache-
+
+      - name: 국정감사 자료 수집 → data/gukgam/
+        timeout-minutes: 25
+        continue-on-error: true   # 국회 API가 죽은 날에도 뒷단계는 기존 자료로 돈다
+        env:
+          ASSEMBLY_API_KEY: ${{ secrets.ASSEMBLY_API_KEY }}
+        run: python3 scripts/gukgam/fetch_assembly.py
+
+      - name: 국회 주요 일정 수집
+        timeout-minutes: 15
+        continue-on-error: true   # 국회 API가 죽은 날에도 뒷단계는 기존 자료로 돈다
+        env:
+          ASSEMBLY_API_KEY: ${{ secrets.ASSEMBLY_API_KEY }}
+        run: python3 scripts/gukgam/fetch_schedule.py
+
+      - name: 보건복지위 위원 프로필 수집
+        timeout-minutes: 15
+        continue-on-error: true   # 국회 API가 죽은 날에도 뒷단계는 기존 자료로 돈다
+        env:
+          ASSEMBLY_API_KEY: ${{ secrets.ASSEMBLY_API_KEY }}
+        run: python3 scripts/gukgam/fetch_members.py
+
+      - name: likms 위원회 게시판 최신 자료 수집 (키 불필요, 누적)
+        timeout-minutes: 15
+        continue-on-error: true   # 국회 API가 죽은 날에도 뒷단계는 기존 자료로 돈다
+        run: python3 scripts/gukgam/fetch_likms.py
+
+      - name: 보건복지 트랙 기관 게시판 수집 (키 불필요, 누적)
+        timeout-minutes: 20
+        continue-on-error: true   # 국회 API가 죽은 날에도 뒷단계는 기존 자료로 돈다
+        run: python3 scripts/gukgam/fetch_health.py
+
+      - name: 국감 관련 최근 보도 수집 (구글 뉴스 RSS, 키 불필요, 60일 누적)
+        timeout-minutes: 10
+        continue-on-error: true
+        run: python3 scripts/gukgam/fetch_press.py
+
+      - name: 문서 요약 추출 (보건복지위 회의록·결과보고서, 증분)
+        run: |
+          pip install --quiet pypdf
+          python3 scripts/gukgam/build_summaries.py
+
+      - name: 의원별 관심 분야 분석 (국감 회의록 발언, 증분)
+        run: python3 scripts/gukgam/build_member_topics.py
+
+      - name: 질병관리청 Q&A 추출 (국감 회의록, 증분)
+        timeout-minutes: 100      # 국회 PDF 서버가 느린 날 6시간을 통째로 잃지 않게 — 빌더는 끝에서만 파일을 쓰므로 중단돼도 기존 데이터는 그대로
+        continue-on-error: true
+        run: python3 scripts/gukgam/build_kdca_qa.py
+
+      - name: 위원 발언 전체 색인 (답변 미연결 발언 포함, 증분)
+        timeout-minutes: 100      # 국회 PDF 서버가 멎은 날 6시간을 통째로 잃지 않게 — 빌더는 끝에서만 파일을 쓰므로 중단돼도 기존 색인은 그대로
+        continue-on-error: true
+        run: python3 scripts/gukgam/build_remarks.py
+
+      - name: 역대 보건복지위 위원 명단 (국감 연도별, 회의록 발언 기준)
+        run: python3 scripts/gukgam/build_rosters.py
+
+      - name: 통합 검색 연관어 사전 (발언 색인 단어·위원·주제·기관)
+        run: python3 scripts/gukgam/build_suggest.py
+
+      - name: 코로나19 5년 기록 집계 (질병청 Q&A·지적사항)
+        run: python3 scripts/gukgam/build_covid.py
+
+      - name: 보건복지부 Q&A 추출 (국감 회의록, 증분)
+        timeout-minutes: 100      # 국회 PDF 서버가 느린 날 6시간을 통째로 잃지 않게 — 빌더는 끝에서만 파일을 쓰므로 중단돼도 기존 데이터는 그대로
+        continue-on-error: true
+        run: python3 scripts/gukgam/build_mohw_qa.py
+
+      - name: 식품의약품안전처 Q&A 추출 (국감 회의록, 증분)
+        timeout-minutes: 100      # 국회 PDF 서버가 느린 날 6시간을 통째로 잃지 않게 — 빌더는 끝에서만 파일을 쓰므로 중단돼도 기존 데이터는 그대로
+        continue-on-error: true
+        run: python3 scripts/gukgam/build_mfds_qa.py
+
+      - name: 하이라이트·의원별 가이드북 생성
+        run: |
+          python3 scripts/gukgam/build_highlights.py
+          python3 scripts/gukgam/build_guides.py
+          python3 scripts/gukgam/build_extra_records.py
+
+      - name: 기관별 국감 브리핑 집계
+        run: python3 scripts/gukgam/build_briefing.py
+
+      - name: 이슈 연대기 집계 (질병청·복지부)
+        timeout-minutes: 30       # 위원별 정당 조회가 국회 API 지연에 묶이면 기존 연대기 파일을 그대로 둔다
+        continue-on-error: true
+        env:
+          ASSEMBLY_API_KEY: ${{ secrets.ASSEMBLY_API_KEY }}
+        run: |
+          python3 scripts/gukgam/build_timeline.py
+          GUKGAM_TL_AGENCY=mohw python3 scripts/gukgam/build_timeline.py
+          GUKGAM_TL_AGENCY=mfds python3 scripts/gukgam/build_timeline.py
+
+      - name: 국정감사계획서 자동 탐지 (복지위 게시판 새 계획서 게시글의 PDF 첨부를 파싱 — HWP만 있으면 수동)
+        timeout-minutes: 10
+        continue-on-error: true
+        run: |
+          pip install --quiet pypdf
+          python3 scripts/gukgam/auto_plan.py
+
+      - name: 국정감사계획서 파싱 (plan_url 입력 시 — 자동 탐지가 못 잡은 경우의 수동 경로)
+        if: ${{ inputs.plan_url != '' && inputs.plan_url != null }}
+        env:
+          GUKGAM_PLAN_URL: ${{ inputs.plan_url }}
+        run: |
+          pip install --quiet pypdf
+          python3 scripts/gukgam/build_plan.py
+
+      - name: 조사용 — 지정 연도 전 상임위 회의록 훑기 (scan_year 입력 시에만)
+        if: ${{ inputs.scan_year != '' && inputs.scan_year != null }}
+        timeout-minutes: 120
+        continue-on-error: true
+        env:
+          GUKGAM_SCAN_YEAR: ${{ inputs.scan_year }}
+          GUKGAM_SCAN_MEMBERS: ${{ inputs.scan_members }}
+          GUKGAM_SCAN_KEYS: ${{ inputs.scan_keys || 'SFTS,중증열성,진드기' }}
+        run: |
+          pip install --quiet pypdf
+          python3 scripts/gukgam/scan_year.py
+
+      - name: 데이터 자가 점검 (경고는 로그와 healthcheck.json에 남는다)
+        run: python3 scripts/gukgam/healthcheck.py
+
+      - name: 점검 시각 기록 (새 자료가 없어도 '마지막 점검'이 화면에 보이게)
+        run: python3 scripts/gukgam/write_last_run.py workflow
+
+      - name: 변경 시 커밋
+        run: |
+          if git diff --quiet -- data/gukgam; then
+            echo "변경 없음"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add data/gukgam
+            git commit -m "국정감사 자료 DB 자동 갱신"
+            # 실행 중(20분+) 다른 커밋이 main에 들어오면 push가 거절된다 → 리베이스 후 재시도 (봇은 data/gukgam만 만진다)
+            for i in 1 2 3 4; do
+              git pull --rebase origin main && git push && break
+              echo "push 재시도 $i"; sleep 10
+            done
+            git log --oneline -1 origin/main | grep -q "국정감사 자료 DB 자동 갱신" || { echo "::error::push 실패"; exit 1; }
+          fi
