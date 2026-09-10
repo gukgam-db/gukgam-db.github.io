@@ -1,10 +1,22 @@
 {
  "updated": "2026-09-10",
- "updated_at": "2026-09-10 07:51",
+ "updated_at": "2026-09-10 07:49",
  "window": "14d",
  "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. 기관·위원 분류는 제목 키워드 자동.",
- "count": 24,
+ "count": 26,
  "items": [
+  {
+   "title": "이만희 보건복지위원장, 농어촌 의료·돌봄 해법 토론회 개최",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFA1TGxBSHhRM1RBUEFubXRMYVhLZHhNdXE3OUdnRmV1eVhmeTQ1a0FGVmtXcjY5TFh6NlF1bGRtaU1CQTNYX2dnLTFDam1QMExmanFXcEMyZnFKWFk5TXRZRHpWMGdPSHI3T0VR?oc=5",
+   "date": "2026-09-09",
+   "source": "헬스경향",
+   "score": 3,
+   "agencies": [],
+   "members": [
+    "이만희"
+   ],
+   "first_seen": "2026-09-09"
+  },
   {
    "title": "[국감 Re체크③] 단속 강화해도 끊이질 않는 '의약품 둔갑' 화장품 광고",
    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBCdjJ2aE1tdWlaelZEb1RlMUhqR09NS3YzM1VyWXNhN0ZvUEtUcTBFdmhPbnFLTllOZk4yLUdHUmQ2T1B4aW11WXJwZGd1UmJXYW5obnRfUVhBVUE1bWdoOHJsakh3a2prNEo0cDZR0gFuQVVfeXFMUEJ2MnZoTW11aVp6VkRvVGUxSGpHT01LdjMzVXJZc2E3Rm9QS1RxMEV2aE9ucUtOWU5mTjItR0dSZDZPUHhpbXVZcnBkZ3VSYldhbmhudF9RWEFVQTVtZ2g4cmxqSHdrams0SjRwNlE?oc=5",
@@ -43,27 +55,27 @@
    "title": "입법·국정감사로 제기한 ‘청년 당뇨 지원 사각지대’ 개선",
    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9Cb3dOM21TbHRVSG81bEhoX0RmZHA5XzMydFFaZnlqSFlMVHJtNDI4c2lGb3ZTellNZEgxbVpJU0ExZzJ2OXlPUEZudmVPbmtxTTlMTUJrLUdpbDdyejZJTk94d2ZsN2tDOUVyV2s0RQ?oc=5",
    "date": "2026-09-08",
-   "source": "웰페어뉴스",
+   "source": "welfarenews.net",
    "score": 2,
    "agencies": [],
    "members": [],
    "first_seen": "2026-09-08"
   },
   {
-   "title": "입법·국정감사로 제기한 청년 당뇨 지원 사각지대 개선 김예지·국민의힘, 소아·청소년·청년 끊김없는 지원 필요",
+   "title": "입법·국정감사로 제기한 청년 당뇨 지원 사각지대 개선 김예지·국민의힘, 소아·청소년·청년 끊김없는 지원 필요 - auto-today.co.kr",
    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9rMTlfMUFLYXlrODRXT2tLcWE0SkFXeC1sNHBuYmNKNE1jTk9vZkhEUGtxVkR4T0JaMmdjU1ZWd1VsZldqMVlEOFo1MDAwTE0teHZjaWRwbVh2WGhnSlFIbVp3UU9aXzl3LWhmejE1NA?oc=5",
    "date": "2026-09-08",
-   "source": "오토투데이",
+   "source": "auto-today.co.kr",
    "score": 2,
    "agencies": [],
    "members": [],
    "first_seen": "2026-09-09"
   },
   {
-   "title": "입법·국정감사로 제기한 청년 당뇨 지원 사각지대 개선 김예지·국민의힘, 소아·청소년·청년 끊김없는 지원 필요 - auto-today.co.kr",
+   "title": "입법·국정감사로 제기한 청년 당뇨 지원 사각지대 개선 김예지·국민의힘, 소아·청소년·청년 끊김없는 지원 필요",
    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9rMTlfMUFLYXlrODRXT2tLcWE0SkFXeC1sNHBuYmNKNE1jTk9vZkhEUGtxVkR4T0JaMmdjU1ZWd1VsZldqMVlEOFo1MDAwTE0teHZjaWRwbVh2WGhnSlFIbVp3UU9aXzl3LWhmejE1NA?oc=5",
    "date": "2026-09-08",
-   "source": "auto-today.co.kr",
+   "source": "오토투데이",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -90,6 +102,16 @@
    "first_seen": "2026-09-07"
   },
   {
+   "title": "[기획] 페이백·의료공백·필수약 대란… 보건복지 현안, 국감 도마 - m-i.kr",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9XRjVqZkpETWloaEZyU0JTRk1UUGpMX0t1Y2t1QzJ2VW5CV18wRmVMd3J4QjFmVUdFQ01HVlJUMm43NXU4UGFWdm5QQlVEbGhzbVJKWVVmbmVaNVJTbXVJQnA2WdIBaEFVX3lxTE1RdW9rQU9ZdW5TS1ZwTDI2WDNiYk5TR05KM2JidnladGZkeXRSNklHREtKUWNZRFVCdUx5Z2pYQklyZVl0MDY3RHJ1dG1TanBMY3ZaNnY0N3h3X3V3U1FaTW80ZWMyVXNl?oc=5",
+   "date": "2026-09-07",
+   "source": "m-i.kr",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-09-08"
+  },
+  {
    "title": "주진우 \"靑인사 라인=김현지…국감 출석 불가피\"",
    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1WRURJakpxekFFcHNqZDhaNDZ5dTdmal96eHlQUnBIb1ZqZDVETFVRMkczRjNlYk9UOWVQY0tpdHZ6VFBwbXQyS19xOXFnb1M1Z2Z2T2l4YmVGVDkxZzVZekFHQU9hYktsZGpv?oc=5",
    "date": "2026-09-05",
@@ -103,7 +125,7 @@
    "title": "복지위 국감 화두는 '비급여·소아응급'…관리급여 실효성 따진다",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1jNTBPYW83NEk5RUVkTnpBZjRhSTAtdmk5anJsRm1QRkhMc3NkSTRRcXZRT05vRlRnX1dBTHlPTjJKdjBqWUNTWTBVN0UxMGpGcGJKb2pYR0pSd1hNV19CZUJNR0ZDc3JKSUlGTQ?oc=5",
    "date": "2026-09-04",
-   "source": "메디컬투데이",
+   "source": "mdtoday.co.kr",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -207,7 +229,7 @@
    "title": "22조원 비급여, 관리급여로 잡을 수 있나…국감서 실효성 점검",
    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE96YTFKd01ub1lSODVnUjdoYUZidFBXWEptYkk3VTJfZkREb0lxcUtmN0JXODh6Y21qZlpTYkozazdBenRoVjA3VUtGRHl2dnFuUldpd0NCT3doRGVxczFrN3ZGUF9VdUxrZ25FLWE2UdIBc0FVX3lxTE9lVzExMjNKYWtCeGIyRm9La1dMSkNJSjBtTi1sczQ1b3NtSkFvMGFPUFRMN0M0clNhSHgxanlDeEUtM2pYZkRoNXlweVBWU2tmY3hnSkJsSXZQSnRWcV9PVlNCOEtoVGlwRTA2NDFJTG1QVjg?oc=5",
    "date": "2026-08-27",
-   "source": "docdocdoc.co.kr",
+   "source": "청년의사",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -227,7 +249,7 @@
    "title": "작년 국정감사 재평가 거론 약제, 희귀약 지정 해제 기로",
    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9YaUYtT25OS2RPTEM0Nmotc0VoalVrd3k2MndPZF9oT1JheVNvcmNJSThra2ZaYjAxMllkNjlsR3RUTWphTkVvcnczM3RaNWhQaVk3UjBn?oc=5",
    "date": "2026-08-26",
-   "source": "dailypharm.com",
+   "source": "데일리팜",
    "score": 2,
    "agencies": [],
    "members": [],

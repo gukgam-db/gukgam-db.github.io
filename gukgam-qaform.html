@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>예상 질의 — 후보와 답변 메모</title>
+<meta name="description" content="국회 공개 회의록의 과거 질의 이력과 공개된 언론보도에서 예상 질의 후보를 뽑아, 예상질의답변서 양식에 맞춰 채워 주는 도구. 수치와 정책 내용은 담당자가 직접 작성합니다.">
+<style>
+  :root{ --navy:#12365f; --line:#e3e9f0; --muted:#5f6e80; --bg:#f5f7fa; --brown:#5c3310; --chip:#eef3f8; --sig:#c2603a; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif; background:var(--bg); color:#22303e; line-height:1.6; }
+  a{ color:inherit; }
+  .top{ background:var(--brown); color:#fff; padding:26px 18px 22px; }
+  .top-inner{ max-width:1180px; margin:0 auto; }
+  .top h1{ margin:0 0 6px; font-size:1.5rem; }
+  .top p{ margin:0; font-size:.92rem; opacity:.9; }
+  .top-nav{ margin-top:12px; display:flex; gap:8px; flex-wrap:wrap; }
+  .top-nav a{ color:#fff; text-decoration:none; font-size:.85rem; font-weight:700; background:rgba(255,255,255,.16); border-radius:20px; padding:6px 14px; }
+  .top-nav a.on, .top-nav a:hover{ background:rgba(255,255,255,.3); }
+  .wrap{ max-width:1180px; margin:0 auto; padding:18px 18px 60px; }
+
+  .warn{ background:#fffaf6; border:2px solid var(--sig); border-left:6px solid var(--sig); border-radius:12px;
+         padding:12px 16px; font-size:.86rem; margin-bottom:16px; }
+  .warn b{ color:#9e3a20; }
+
+  .cols{ display:grid; grid-template-columns:minmax(320px,420px) 1fr; gap:16px; align-items:start; }
+  @media (max-width:960px){ .cols{ grid-template-columns:1fr; } }
+
+  .panel{ background:#fff; border:1.5px solid #cbd8e6; border-radius:14px; padding:14px 16px; box-shadow:0 1px 3px rgba(18,54,95,.06); }
+  .panel h2{ font-size:1rem; color:var(--navy); margin:0 0 10px; }
+  .picker{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
+  .picker select{ border:1px solid var(--line); border-radius:8px; padding:7px 9px; font-size:.86rem; background:#fff; }
+
+  .cand{ border:1px solid var(--line); border-radius:11px; padding:11px 12px; margin-bottom:9px; cursor:pointer; background:#fff; }
+  .cand:hover{ border-color:#9db6d4; background:#fbfdff; }
+  .cand.on{ border-color:var(--sig); background:#fffaf6; }
+  .cand .t{ font-weight:800; font-size:.92rem; color:#1c2b3a; line-height:1.45; }
+  .cand .m{ margin-top:6px; display:flex; gap:5px; flex-wrap:wrap; font-size:.72rem; }
+  .bdg{ border-radius:8px; padding:1px 8px; font-weight:800; background:var(--chip); color:#3d4f63; }
+  .bdg.rp{ background:#f7ecef; color:#7b2d43; }
+  .bdg.pr{ background:#fff1e8; color:#a1471f; }
+  .bdg.fd{ background:#eef6f0; color:#1f6f4a; }
+  .bdg.ag{ background:#fff1e8; color:#a1471f; border:1px solid #f0d3c1; }
+  .cand .ex{ margin-top:7px; font-size:.78rem; color:var(--muted); line-height:1.5; border-top:1px dashed var(--line); padding-top:6px; }
+  .cand .ex a{ color:#2a4d7d; font-weight:700; text-decoration:none; }
+
+  .tools{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
+  .btn{ border:1px solid #cbd8e6; background:#fff; border-radius:9px; padding:8px 14px; font-size:.85rem; font-weight:800; cursor:pointer; color:#2a4d7d; }
+  .btn.primary{ background:var(--brown); color:#fff; border-color:var(--brown); }
+  .btn:hover{ background:#f3f7fb; } .btn.primary:hover{ background:#734017; }
+
+  /* ── 양식 (A4) ─────────────────────────────── */
+  .sheet{ background:#fff; border:1.5px solid #cbd8e6; border-radius:6px; padding:20mm; width:210mm; max-width:100%;
+          margin:0 auto; box-shadow:0 2px 10px rgba(18,54,95,.08); }
+  .sheet [contenteditable]{ outline:0; }
+  .sheet [contenteditable]:focus{ background:#fffdf5; box-shadow:0 0 0 2px #f0dcc4; border-radius:4px; }
+  .sheet [data-ph]:empty:before{ content:attr(data-ph); color:#b9c2cd; }
+  .hd{ text-align:right; font-size:11pt; font-weight:700; margin-bottom:8px; }
+  .ttl{ font-size:14pt; font-weight:800; line-height:1.45; margin-bottom:4px; }
+  .src{ font-size:9.5pt; color:var(--muted); margin-bottom:12px; }
+  .key{ font-size:13pt; font-weight:800; line-height:1.5; margin:0 0 10px; }
+  .sec{ font-size:12pt; font-weight:800; margin:14px 0 6px; }
+  .lv1{ font-size:12pt; margin:0 0 4px; }
+  .lv2{ font-size:12pt; margin:0 0 4px; padding-left:14px; }
+  .lv3{ font-size:10.5pt; color:#a8442a; margin:0 0 8px; padding-left:26px; }
+  .refs{ font-size:10.5pt; margin:0 0 4px; padding-left:6px; }
+  .qa-tbl{ width:100%; border-collapse:collapse; margin-top:6px; }
+  .qa-tbl th, .qa-tbl td{ border:1px solid #b9c2cd; padding:6px 8px; font-size:10pt; vertical-align:top; }
+  .qa-tbl th{ background:#eef1f5; text-align:center; font-size:10pt; }
+  .qa-tbl td:first-child{ width:45%; }
+  .note-in{ font-size:9pt; color:var(--muted); margin-top:8px; }
+
+  .basis{ font-size:.78rem; color:var(--muted); line-height:1.6; margin-top:14px; border-top:1px dashed var(--line); padding-top:8px; }
+  .empty{ color:var(--muted); font-size:.86rem; padding:14px 4px; }
+
+  @media print{
+    @page{ size:A4; margin:20mm; }   /* A4 기본 여백 */
+    body{ background:#fff; }
+    .top, .wrap > .warn, .panel.left, .tools, .basis, .noprint{ display:none !important; }
+    .cols{ display:block; }
+    .sheet{ border:0; box-shadow:none; padding:0; width:auto; margin:0; }
+    .sheet [contenteditable]:focus{ background:none; box-shadow:none; }
+    .sheet [data-ph]:empty:before{ content:''; }
+    .lv3{ color:#333; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="top-inner">
+    <h1>📝 예상 질의</h1>
+    <p>공개 회의록의 <strong>과거 질의 이력</strong>과 공개된 <strong>언론보도</strong>, 지난해 <strong>지적사항</strong>에서 올해 나올 만한 질의 후보를 뽑습니다. 근거는 모두 원문으로 이어집니다.</p>
+    <div class="top-nav">
+      <a href="gukgam.html">홈</a>
+      <a href="gukgam-year.html">최근 국감</a>
+      <a href="gukgam-mohw.html">복지부</a>
+      <a href="gukgam-kdca.html">질병청</a>
+      <a href="gukgam-mfds.html">식약처</a>
+      <a href="gukgam-guide.html">의원별 가이드북</a>
+      <a href="gukgam-prep.html">답변 대비 워크북</a>
+      <a href="gukgam-all.html">전체 자료·도구</a>
+    </div>
+    <div style="font-size:.74rem;color:rgba(255,255,255,.82);margin:8px 2px 0;">질병관리청 인공지능놀이터 연구회에서 만든 <b>비공식 참고자료</b>입니다 — 어떤 기관의 공식 사이트도 아니며, 모든 자료의 원 출처는 대한민국 국회(열린국회정보·회의록·결과보고서)와 공개된 언론보도입니다.</div>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="warn">
+    <b>이 도구가 채우는 것과 채우지 않는 것</b><br>
+    자동으로 채우는 것은 <b>공개 자료에서 확인되는 것뿐</b>입니다 — 질의 제목(요지), 출처(질의 날짜·위원·형태 또는 보도 일자·매체), 과거 질의 예시와 회의록 원문 링크.
+    <b>답변 내용과 통계는 비워 둡니다.</b> 확인되지 않은 숫자를 채우지 않기 위해서입니다. 아래 메모는 초안 정리용이며, 기관의 공식 서식은 각 기관 내부 지침을 따르십시오.
+  </div>
+
+  <div class="cols">
+    <!-- ── 왼쪽: 후보 ── -->
+    <section class="panel left">
+      <h2>예상 질의 후보</h2>
+      <div class="picker">
+        <select id="pAgency">
+          <option value="kdca">질병관리청</option>
+          <option value="mohw">보건복지부</option>
+          <option value="mfds">식품의약품안전처</option>
+        </select>
+        <select id="pMember"><option value="">위원 전체</option></select>
+        <select id="pKind">
+          <option value="">근거 전체</option>
+          <option value="repeat">반복 질의</option>
+          <option value="press">최근 보도</option>
+          <option value="finding">지난해 지적사항</option>
+        </select>
+      </div>
+      <div id="cands"><div class="empty">자료를 불러오는 중입니다…</div></div>
+    </section>
+
+    <!-- ── 오른쪽: 답변 메모 초안 ── -->
+    <section>
+      <div class="tools noprint">
+        <button class="btn primary" onclick="window.print()">🖨️ 인쇄</button>
+        <button class="btn" id="btnCopy">📋 한글 붙여넣기용 텍스트 복사</button>
+        <button class="btn" id="btnClear">↺ 비우기</button>
+      </div>
+
+      <div class="sheet" id="sheet">
+        <div class="hd noprint-hint" style="font-size:9.5pt;color:#5f6e80;font-weight:600;">답변 메모 초안 · 작성 <span contenteditable data-ph="담당자">담당자</span></div>
+
+        <div class="ttl"><span id="fNo" contenteditable>1-1.</span>
+          <span id="fTitle" contenteditable data-ph="예상 질의 요지 — 왼쪽에서 후보를 고르면 채워집니다"></span></div>
+        <div class="src">※ (출처) <span id="fSrc" contenteditable data-ph="질의 날짜·의원·형태 또는 보도 일자 — 후보를 고르면 채워집니다"></span></div>
+
+        <p class="key">◈ <span id="fKey" contenteditable data-ph="결론 한 문장 — 직접 작성"></span></p>
+
+        <div class="sec">◈ 근거와 향후 계획</div>
+        <p class="lv1">○ <span contenteditable data-ph="답변 핵심 내용 — 직접 작성"></span></p>
+        <p class="lv2">- <span contenteditable data-ph="위 핵심내용에 대한 부연 — 직접 작성"></span></p>
+        <p class="lv3">* <span contenteditable data-ph="통계 — 확정 자료로 기재(기준일·단위·출처 포함)"></span></p>
+        <p class="lv1">○ <span contenteditable data-ph="답변 핵심 내용 — 직접 작성"></span></p>
+        <p class="lv2">- <span contenteditable data-ph="부연 — 직접 작성"></span></p>
+        <p class="lv1">○ <span contenteditable data-ph="관계 부처·기관과 협의 등 향후 계획 — 직접 작성"></span></p>
+
+        <div class="sec" style="font-size:11.5pt;">참고자료</div>
+        <p class="refs">ㅇ <span contenteditable data-ph="붙일 자료의 주요 통계 요약 — 직접 작성"></span></p>
+        <p class="refs">ㅇ <span contenteditable data-ph="붙일 자료의 주요 통계 요약 — 직접 작성"></span></p>
+
+        <div class="sec" style="font-size:11.5pt;">이어질 만한 질문</div>
+        <table class="qa-tbl">
+          <thead><tr><th>질 문 사 항</th><th>답 변</th></tr></thead>
+          <tbody id="fQna"></tbody>
+        </table>
+        <div class="note-in">※ 이어질 질문은 앞의 주요 질의와 연결되게 몇 개만 추립니다. 답변은 한 문장 요지로 씁니다.</div>
+      </div>
+
+      <p class="basis" id="basis"></p>
+    </section>
+  </div>
+</main>
+
+<script>
+(function(){
+  var esc=function(s){ return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); };
+  function J(n,f){ return fetch('data/gukgam/'+n+'?_='+Date.now()).then(function(r){ if(!r.ok) throw 0; return r.json(); }).catch(function(){ return f; }); }
+  function junkName(n){ return /^(대리|직무대리|출석전문|참고인|증인|위원장|위원)$|^(참고인|증인|출석)/.test(n||''); }
+  function ymd(d){ var p=(d||'').split('-'); return p.length===3 ? (p[0]+'. '+(+p[1])+'. '+(+p[2])+'.') : (d||''); }
+  function md(d){ var p=(d||'').split('-'); return p.length===3 ? ((+p[1])+'. '+(+p[2])+'.') : (d||''); }
+
+  var AG={ kdca:{name:'질병관리청', qa:'kdca-qa.json', kw:['질병관리청','질병청','감염병','예방접종','방역','검역','만성질환','결핵']},
+           mfds:{name:'식품의약품안전처', qa:'mfds-qa.json', kw:['식품의약품안전처','식약처','의약품','마약','식품','의료기기','화장품']},
+           mohw:{name:'보건복지부', qa:null, kw:['보건복지부','복지부','건강보험','연금','의료','돌봄','저출생','장애인']} };
+
+  var QA=[], PRESS=[], FIND=null, AGENDA=[], CUR='kdca', CANDS=[], SEL=null;
+
+  // ── 예상 질의 후보 만들기 ─────────────────────────────
+  // 지어내지 않는다. 1) 최근 3년 반복된 주제 2) 최근 공개 보도 3) 지난해 결과보고서 지적사항
+  function buildCands(member){
+    var out=[], now=new Date().getFullYear();
+    var rows=QA.filter(function(r){ return r.year>=now-4 && !junkName(r.member); });
+    if(member) rows=rows.filter(function(r){ return r.member===member; });
+
+    // 1) 반복 질의 — 주제별 연도 수와 건수
+    var byTopic={};
+    rows.forEach(function(r){
+      (r.topics||[]).forEach(function(t){
+        if(!byTopic[t]) byTopic[t]={n:0, years:{}, ex:[]};
+        byTopic[t].n++; byTopic[t].years[r.year]=1;
+        byTopic[t].ex.push(r); if(byTopic[t].ex.length>2) byTopic[t].ex.shift();   // 가장 최근 두 건만 남긴다
+      });
+    });
+    Object.keys(byTopic).forEach(function(t){
+      var b=byTopic[t], ys=Object.keys(b.years).sort();
+      if(ys.length<2 || b.n<4) return;      // 두 해 이상, 4건 이상만 후보로
+      var last=b.ex[b.ex.length-1];
+      out.push({ kind:'repeat', topic:t,
+        title:'「'+t+'」 관련 반복 질의 — 올해 대응 방향',
+        src:'최근 '+ys.length+'개 연도 국정감사 「'+t+'」 관련 질의 '+b.n+'건 (최근: '+ymd(last.date)+' '+last.member+' 위원 구두질의)',
+        badges:[['rp', ys[0]+'~'+ys[ys.length-1]+' 반복'],['','질의 '+b.n+'건']],
+        ex:b.ex });
+    });
+
+    // 2) 최근 보도 — 기관 관련 기사만
+    PRESS.forEach(function(p){
+      var t=(p.title||'');
+      var hit=AG[CUR].kw.some(function(k){ return t.indexOf(k)>=0; });
+      if(!hit) return;
+      out.push({ kind:'press',
+        title:t.replace(/\s*-\s*[a-z0-9.-]+$/i,'')+' 관련 대응 방향',
+        src:md(p.date)+' 언론보도('+(p.source||'')+', 「'+t.slice(0,40)+'」)',
+        badges:[['pr','최근 보도'],['',md(p.date)]],
+        link:p.link||p.url||'' , ex:[] });
+    });
+
+    // 3) 지난해 지적사항
+    if(FIND && FIND.items){
+      var mine=FIND.items.filter(function(i){ return (i.group===AG[CUR].name) || ((i.agency||'').indexOf(AG[CUR].name)>=0); });
+      mine.slice(0,12).forEach(function(i){
+        out.push({ kind:'finding',
+          title:(i.text||'').slice(0,60)+((i.text||'').length>60?'…':'')+' 이행 현황',
+          src:(FIND.year||'')+'년 국정감사 결과보고서 시정·처리요구',
+          badges:[['fd','지난해 지적'],['',(FIND.year||'')+'년']],
+          pdf:FIND.source_pdf||'', ex:[] });
+      });
+    }
+
+    // 국정과제 연결 표시
+    out.forEach(function(c){
+      var flat=c.title.replace(/\s+/g,'');   // 후보 제목만 본다 — 예시 발언까지 넣으면 엉뚱한 과제가 붙는다
+      for(var i=0;i<AGENDA.length;i++){
+        var a=AGENDA[i], hit=(a.strong||[]).filter(function(k){ return flat.indexOf(k.replace(/\s+/g,''))>=0; });
+        if(hit.length){ c.badges.push(['ag','국정과제 '+a.no]); c.agenda=a; break; }
+      }
+    });
+    return out;
+  }
+
+  function renderCands(){
+    var kind=document.getElementById('pKind').value;
+    var list=CANDS.filter(function(c){ return !kind || c.kind===kind; });
+    var box=document.getElementById('cands');
+    if(!list.length){ box.innerHTML='<div class="empty">조건에 맞는 후보가 없습니다.</div>'; return; }
+    box.innerHTML=list.map(function(c,i){
+      return '<div class="cand'+(SEL===c?' on':'')+'" data-i="'+i+'">'+
+        '<div class="t">'+esc(c.title)+'</div>'+
+        '<div class="m">'+c.badges.map(function(b){ return '<span class="bdg '+b[0]+'">'+esc(b[1])+'</span>'; }).join('')+'</div>'+
+        (c.ex && c.ex.length ? '<div class="ex">'+c.ex.map(function(e){
+            return '· '+esc(e.date)+' '+esc(e.member)+' 위원 — '+esc((e.q||'').slice(0,70))+'… '+
+                   (e.minutes_url?'<a href="'+esc(e.minutes_url)+'" target="_blank" rel="noopener">원문 ↗</a>':'');
+          }).join('<br>')+'</div>' : '')+
+        '</div>';
+    }).join('');
+    box.querySelectorAll('.cand').forEach(function(el){
+      el.addEventListener('click', function(){ fill(list[+this.dataset.i]); });
+    });
+  }
+
+  function fill(c){
+    SEL=c;
+    document.getElementById('fTitle').textContent=c.title;
+    document.getElementById('fSrc').textContent=c.src;
+    renderCands();
+    document.getElementById('sheet').scrollIntoView({behavior:'smooth', block:'start'});
+  }
+
+  function qnaRows(n){
+    var tb=document.getElementById('fQna'); tb.innerHTML='';
+    for(var i=0;i<n;i++){
+      var tr=document.createElement('tr');
+      tr.innerHTML='<td>◦ <span contenteditable data-ph="이어질 만한 질문 — 직접 작성"></span></td>'+
+                   '<td>◦ <span contenteditable data-ph="한 문장 요지로 답변 — 직접 작성"></span></td>';
+      tb.appendChild(tr);
+    }
+  }
+
+  function sheetText(){
+    var s=document.getElementById('sheet'), out=[];
+    function t(el){ return (el.textContent||'').replace(/\s+/g,' ').trim(); }
+    out.push(t(s.querySelector('.hd')));
+    out.push('');
+    out.push(t(s.querySelector('.ttl')));
+    out.push('※ (출처) '+t(document.getElementById('fSrc')));
+    out.push('');
+    out.push('◈ '+t(document.getElementById('fKey')));
+    out.push('');
+    out.push('◈ 핵심 논거 또는 개선 방향 및 향후 계획');
+    s.querySelectorAll('.lv1,.lv2,.lv3').forEach(function(p){ var v=t(p); if(v.length>2) out.push(v); });
+    out.push('');
+    out.push('참고자료');
+    s.querySelectorAll('.refs').forEach(function(p){ var v=t(p); if(v.length>2) out.push(v); });
+    out.push('');
+    out.push('<추가 일문일답>');
+    s.querySelectorAll('#fQna tr').forEach(function(tr){
+      var a=t(tr.children[0]), b=t(tr.children[1]);
+      if(a.length>2 || b.length>2) out.push(a+'\t'+b);
+    });
+    return out.join('\n');
+  }
+
+  // ── 불러오기 ─────────────────────────────
+  function load(agency){
+    CUR=agency; SEL=null;
+    document.getElementById('cands').innerHTML='<div class="empty">자료를 불러오는 중입니다…</div>';
+    var qaP;
+    if(AG[agency].qa){
+      qaP=J(AG[agency].qa,{items:[]}).then(function(d){ return d.items||[]; });
+    }else{
+      qaP=J('mohw-qa-index.json',{years:[]}).then(function(idx){
+        var ys=(idx.years||[]).slice().sort().reverse().slice(0,4);
+        return Promise.all(ys.map(function(y){ return J('mohw-qa-'+y+'.json',{items:[]}).then(function(d){
+          return (d.items||[]).map(function(r){ if(!r.year) r.year=y; return r; }); }); }))
+        .then(function(a){ var all=[]; a.forEach(function(x){ all=all.concat(x); }); return all; });
+      });
+    }
+    Promise.all([qaP, J('press.json',{items:[]}), J('findings-2025.json',null), J('agenda.json',{items:[]})])
+    .then(function(r){
+      QA=r[0]; PRESS=(r[1].items||[]); FIND=r[2]; AGENDA=(r[3].items||[]);
+      // 위원 선택지
+      var c={}; QA.forEach(function(x){ if(!junkName(x.member)) c[x.member]=(c[x.member]||0)+1; });
+      var names=Object.keys(c).sort(function(a,b){ return c[b]-c[a]; }).slice(0,40);
+      var sel=document.getElementById('pMember');
+      sel.innerHTML='<option value="">위원 전체</option>'+names.map(function(n){ return '<option value="'+esc(n)+'">'+esc(n)+' ('+c[n]+')</option>'; }).join('');
+      CANDS=buildCands('');
+      renderCands();
+      document.getElementById('basis').innerHTML=
+        '<b>산출 근거</b> — 후보는 세 가지 공개 자료에서만 만듭니다. ① <b>반복 질의</b>: 최근 5개 연도 '+esc(AG[CUR].name)+
+        ' 질의 '+QA.length+'건을 주제별로 세어, 두 해 이상·네 건 이상 나온 주제. ② <b>최근 보도</b>: 공개된 국감 관련 기사 중 이 기관 관련 제목. '+
+        '③ <b>지난해 지적사항</b>: 국정감사 결과보고서의 시정·처리요구 중 이 기관 소관. '+
+        '제목과 출처만 자동으로 채우고 <b>답변 내용과 수치는 채우지 않습니다</b>. 국정과제 배지는 공개된 123대 국정과제와 낱말이 겹칠 때 참고로 붙인 것이며 이행 평가가 아닙니다.';
+    });
+  }
+
+  document.getElementById('pAgency').addEventListener('change', function(){ load(this.value); });
+  document.getElementById('pMember').addEventListener('change', function(){ CANDS=buildCands(this.value); renderCands(); });
+  document.getElementById('pKind').addEventListener('change', renderCands);
+  document.getElementById('btnCopy').addEventListener('click', function(){
+    var txt=sheetText();
+    navigator.clipboard.writeText(txt).then(function(){ alert('복사했습니다. 쓰시는 문서에 붙여 넣고 서식만 맞추십시오.'); },
+      function(){ window.prompt('아래 내용을 복사하십시오', txt); });
+  });
+  document.getElementById('btnClear').addEventListener('click', function(){
+    document.querySelectorAll('#sheet [contenteditable]').forEach(function(el){ el.textContent=''; });
+    document.getElementById('fNo').textContent='1-1.';
+    qnaRows(3); SEL=null; renderCands();
+  });
+
+  qnaRows(3);
+  load('kdca');
+})();
+</script>
+<footer class="site-credit" style="max-width:1180px;margin:6px auto 30px;padding:0 18px;font-size:.76rem;color:#5f6e80;text-align:right;">ⓒ <b>지음웍스닷컴</b> · 2026년 9월</footer>
+</body>
+</html>

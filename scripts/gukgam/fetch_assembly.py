@@ -183,6 +183,19 @@ def main():
     save("reports.json", {"updated": updated, "mode": MODE, "items": reports})
     save("minutes.json", {"updated": updated, "mode": MODE, "items": minutes})
 
+    # 통계는 '이번에 받아온 것'이 아니라 '실제로 저장된 파일'에서 센다.
+    # API가 죽은 날 save()가 기존 파일을 지켜도, 통계만 0으로 덮여 화면에 0건이 뜨던 문제(9/7).
+    def saved(name, fallback):
+        path = os.path.join(OUT_DIR, name)
+        try:
+            with open(path, encoding="utf-8") as f:
+                return json.load(f).get("items", [])
+        except Exception:
+            return fallback
+
+    reports = saved("reports.json", reports)
+    minutes = saved("minutes.json", minutes)
+
     idx = {
         "updated": updated,
         "mode": MODE,

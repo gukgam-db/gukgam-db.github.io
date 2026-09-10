@@ -37,6 +37,7 @@
   .badge.pty{ background:#f1f5fa; }
   .badge.bs{ background:#f1f3f6; color:#6b7684; font-weight:700; }
   .badge.tp{ background:#f7ecef; color:#7b2d43; }
+  .badge.ag{ background:#fff1e8; color:#a1471f; border:1px solid #f0d3c1; cursor:help; }
   .qa .q{ font-size:.92rem; }
   .qa .q b, .qa .a b{ flex:0 0 auto; }
   .qa .q::before{ content:"Q. "; font-weight:900; color:#a03030; }
@@ -103,6 +104,7 @@
       <a href="gukgam-kdca.html">질병청</a>
       <a href="gukgam-mfds.html" class="on">식약처</a>
       <a href="gukgam-covid.html">코로나19</a>
+      <a href="gukgam-qaform.html">예상 질의</a>
       <a href="gukgam-guide.html">의원별 가이드북</a>
       <a href="gukgam-all.html">전체 자료·도구</a>
     </div>
@@ -113,7 +115,7 @@
 
 <main class="wrap">
   <div class="stats" id="stats"></div>
-  <p class="basis" id="basisNote" style="font-size:.76rem;color:var(--muted);margin:-8px 2px 14px;line-height:1.5;border-top:1px dashed var(--line);padding-top:6px;"><b>산출 근거</b> — 국감장에서 질의 상대는 호칭으로 갈립니다(장관님=복지부, 청장님=질병청, 처장님=식약처). 그래서 ① 처장 답변이 바로 이어졌거나 ② 질의문이 <b>처장님</b>을 부른 발언만 이 기관 질의로 봅니다. 다른 기관 호칭만 있으면 기관명이 나와도 제외하고, 호칭·답변 없이 기관명만 나온 발언은 <span class="badge bs">간접 언급</span>으로 표시합니다. · 답변 포함 = 처장 답변이 바로 붙은 질의 수 · 주제는 키워드 자동 분류(한 질의에 여러 주제 가능) · 발췌는 소관 근거(호칭·기관명)가 보이는 대목을 중심으로 자르며, 앞뒤의 <b>…</b>는 생략된 부분이 있다는 표시 · 개회·산회 선포 같은 의사진행 발언은 제외 · 회의록 원문에서 기계 추출한 것이라 발언 맥락이 잘린 경우가 있음 <span id="basisUpd"></span></p>
+  <p class="basis" id="basisNote" style="font-size:.76rem;color:var(--muted);margin:-8px 2px 14px;line-height:1.5;border-top:1px dashed var(--line);padding-top:6px;"><b>산출 근거</b> — 국감장에서 질의 상대는 호칭으로 갈립니다(장관님=복지부, 청장님=질병청, 처장님=식약처). 그래서 ① 처장 답변이 바로 이어졌거나 ② 질의문이 <b>처장님</b>을 부른 발언만 이 기관 질의로 봅니다. 다른 기관 호칭만 있으면 기관명이 나와도 제외하고, 호칭·답변 없이 기관명만 나온 발언은 <span class="badge bs">간접 언급</span>으로 표시합니다. · 답변 포함 = 처장 답변이 바로 붙은 질의 수 · 주제는 키워드 자동 분류(한 질의에 여러 주제 가능) · 발췌는 소관 근거(호칭·기관명)가 보이는 대목을 중심으로 자르며, 앞뒤의 <b>…</b>는 생략된 부분이 있다는 표시 · 개회·산회 선포 같은 의사진행 발언은 제외 · 회의록 원문에서 기계 추출한 것이라 발언 맥락이 잘린 경우가 있음 · <span class="badge ag">국정과제</span> 배지는 정책브리핑에 공개된 <b>123대 국정과제</b> 가운데 질의문에 나온 낱말로 이은 것입니다(배지에 마우스를 올리면 과제명과 걸린 낱말이 보입니다). 국정과제는 2025년에 확정된 것이라 그 이전 연도 질의는 <b>같은 주제</b>로 이은 것이며, <b>이행 여부에 대한 평가가 아닙니다</b>. <span id="basisUpd"></span></p>
 
   <h2>연도별 · 위원별 · 주제별 질의</h2>
   <div class="yeartabs" id="yearTabs"></div>
@@ -121,6 +123,7 @@
   <div class="filters">
     <select id="fTopic" aria-label="주제 필터"><option value="">전체 주제</option></select>
     <select id="fAns" aria-label="답변 유무 필터"><option value="">답변 유무 전체</option><option value="y">처장 답변 있는 질의만</option></select>
+    <select id="fAgenda" aria-label="국정과제 필터"><option value="">국정과제 전체</option><option value="y">국정과제와 연결된 질의만</option></select>
     <input id="fQuery" aria-label="키워드 검색" type="search" placeholder="키워드 검색 (예: 마약, 식중독, 임상시험)">
     <span id="cnt" style="font-size:.82rem;color:var(--muted);"></span>
   </div>
@@ -164,7 +167,37 @@
 (function(){
   var esc=function(s){ return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); };
   var QA=[], MEMBERS={}, SHOWN=30;
-  var state={year:'', member:'', topic:'', ans:'', q:''};
+  var state={year:'', member:'', topic:'', ans:'', q:'', agenda:''};
+
+  // ── 국정과제 연결 ─────────────────────────────────────────
+  // 사전(agenda.json)에 담긴 낱말로 판정한다. 단독 낱말 하나면 연결,
+  // 보조 낱말은 둘 이상 모여야 연결로 본다. 걸린 낱말은 배지에 함께 보인다.
+  var AGENDA=[];
+  function agendaOf(r){
+    if(!AGENDA.length) return [];
+    if(r.__agv===AGENDA.length) return r.__ag;                // 한 번 판정하면 기억해 둔다
+    var t=(r.q||'')+' '+(r.a||'');
+    var flat=t.replace(/\s+/g,'');           // PDF에서 낱말 사이가 벌어지는 일이 잦다
+    var out=[];
+    AGENDA.forEach(function(a){
+      var hit=[];
+      (a.strong||[]).forEach(function(k){ if(flat.indexOf(k.replace(/\s+/g,''))>=0) hit.push(k); });
+      if(!hit.length){
+        var w=[];
+        (a.weak||[]).forEach(function(k){ if(flat.indexOf(k.replace(/\s+/g,''))>=0) w.push(k); });
+        if(w.length>=2) hit=w;
+      }
+      if(hit.length) out.push({no:a.no, title:a.title, ministry:a.ministry, hits:hit});
+    });
+    r.__ag=out.slice(0,2); r.__agv=AGENDA.length;   // 화면이 배지로 뒤덮이지 않게 둘까지
+    return r.__ag;
+  }
+  function updateAgStat(){
+    var el=document.getElementById('agN'); if(!el) return;
+    if(!AGENDA.length){ el.textContent='–'; return; }
+    var n=0; QA.forEach(function(r){ if(agendaOf(r).length) n++; });
+    el.textContent=n;
+  }
 
 function junkName(n){ return /^(대리|직무대리|출석전문|참고인|증인|위원장|위원)$|^(참고인|증인|출석)/.test(n||''); }
   function counts(rows, key){
@@ -176,6 +209,7 @@ function junkName(n){ return /^(대리|직무대리|출석전문|참고인|증�
       if(state.member && r.member!==state.member) return false;
       if(state.topic && (r.topics||[]).indexOf(state.topic)<0) return false;
       if(state.ans==='y' && !r.a) return false;
+      if(state.agenda==='y' && !agendaOf(r).length) return false;
       if(state.q){ var t=(r.q+' '+r.a).toLowerCase().replace(/\s+/g,''); if(t.indexOf(state.q.toLowerCase().replace(/\s+/g,''))<0) return false; }  // 공백 무시(PDF 추출 낱말 끊김 대비)
       return true;
     });
@@ -208,6 +242,7 @@ function junkName(n){ return /^(대리|직무대리|출석전문|참고인|증�
         (m.party?'<span class="badge pty">'+esc(m.party)+'</span>':'')+
         '<span class="badge">'+esc(r.date)+'</span>'+
         (r.topics||[]).map(function(t){ return '<span class="badge tp">'+esc(t)+'</span>'; }).join('')+
+        agendaOf(r).map(function(a){ return '<span class="badge ag" title="국정과제 '+a.no+'. '+esc(a.title)+' (소관 '+esc(a.ministry)+') — 걸린 낱말: '+esc(a.hits.join(', '))+'">국정과제 '+a.no+'</span>'; }).join('')+
         (r.basis==='mention'?'<span class="badge bs" title="이 기관을 호칭으로 부르지도, 이 기관이 답하지도 않았지만 기관명이 나온 발언">간접 언급</span>':'')+
         '</div>'+
         '<div class="q">'+esc((r.q||'').replace(/^[\s,.\u3001\u00b7\u2026?!:;)\]]+/,''))+'</div>'+
@@ -217,7 +252,12 @@ function junkName(n){ return /^(대리|직무대리|출석전문|참고인|증�
     }).join('');
     document.getElementById('moreBtn').hidden=rows.length<=SHOWN;
   }
-  function renderAll(){ renderChips(); render(); }
+  function renderAll(){ renderChips(); render(); updateAgStat(); }
+
+  // 국정과제 사전 — 사전이 비어 있으면 배지도 필터도 뜨지 않는다
+  fetch('data/gukgam/agenda.json?_='+Date.now()).then(function(r){return r.json();})
+    .then(function(d){ AGENDA=d.items||[]; updateAgStat(); if(typeof renderAll==='function') renderAll(); })
+    .catch(function(){});
 
   Promise.all([
     fetch('data/gukgam/mfds-qa.json?_='+Date.now()).then(function(r){return r.json();}),
@@ -234,7 +274,7 @@ function junkName(n){ return /^(대리|직무대리|출석전문|참고인|증�
       '<div class="stat"><div class="n">'+QA.length+'</div><div class="l">추출된 질의</div></div>'+
       '<div class="stat"><div class="n">'+withA+'</div><div class="l">처장 답변 포함</div></div>'+
       '<div class="stat"><div class="n">'+Object.keys(mems).length+'</div><div class="l">질의 위원 수</div></div>'+
-      '<div class="stat"><div class="n">'+Object.keys(years).length+'</div><div class="l">연도 수</div></div>';
+      '<div class="stat"><div class="n">'+Object.keys(years).length+'</div><div class="l">연도 수</div></div>'+'<div class="stat"><div class="n" id="agN">–</div><div class="l">국정과제 연결</div></div>';
 
     // 연도 탭
     var yl=Object.keys(years).sort().reverse();
@@ -284,6 +324,7 @@ function junkName(n){ return /^(대리|직무대리|출석전문|참고인|증�
   });
   document.getElementById('fTopic').addEventListener('change', function(){ state.topic=this.value; SHOWN=30; render(); });
   document.getElementById('fAns').addEventListener('change', function(){ state.ans=this.value; SHOWN=30; render(); });
+  document.getElementById('fAgenda').addEventListener('change', function(){ state.agenda=this.value; SHOWN=30; render(); });
   document.getElementById('fQuery').addEventListener('input', function(){ state.q=this.value.trim(); SHOWN=30; render(); });
   document.getElementById('moreBtn').addEventListener('click', function(){ SHOWN+=30; render(); });
 })();

@@ -258,11 +258,21 @@
   .sub-links a{ color:#2a4d7d; font-weight:800; text-decoration:none; border:1px solid var(--line); background:#fff; border-radius:20px; padding:6px 13px; }
   .upd{ font-size:.76rem; color:var(--muted); margin:-8px 2px 12px; }
   .ins-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px; }
-  .ins{ background:#fff; border:1px solid var(--line); border-radius:14px; padding:14px 16px; }
+  /* 카드 경계가 배경에 묻혀 어디까지가 한 카드인지 잘 안 보였다 — 테두리를 한 단계 진하게 + 옅은 그림자 */
+  .ins{ background:#fff; border:1.5px solid #cbd8e6; border-radius:14px; padding:14px 16px;
+        box-shadow:0 1px 3px rgba(18,54,95,.06); }
+  /* 보도 카드 — 오늘 새로 들어온 것이라 가장 먼저 눈에 들어와야 한다 */
+  .ins.press{ background:#fffaf6; border:2px solid #d2603a; border-left:6px solid #d2603a;
+              box-shadow:0 2px 10px rgba(210,96,58,.14); }
+  .ins.press h3{ color:#9e3a20; }
+  .ins.press li{ border-bottom-color:#f0dbcf; }
+  .ins.press .why{ color:#8a6b5d; }
   .ins h3{ margin:0 0 8px; font-size:.9rem; color:var(--navy); display:flex; justify-content:space-between; align-items:center; gap:8px; }
   .ins h3 a{ font-size:.74rem; font-weight:800; color:#2a4d7d; text-decoration:none; }
   .ins ul{ margin:0; padding-left:0; list-style:none; font-size:.85rem; line-height:1.55; }
-  .ins li{ padding:4px 0; border-bottom:1px dashed var(--line); display:flex; justify-content:space-between; gap:10px; align-items:baseline; }
+  .ins li{ padding:4px 0; border-bottom:1px dashed var(--line); display:flex; justify-content:space-between; gap:10px; align-items:baseline;
+           word-break:keep-all; }   /* 낱말 중간에서 줄이 끊기지 않게 — '미공개'가 '미/공개'로 잘리던 문제 */
+  .ins li > span:first-child{ min-width:0; }
   .ins li:last-child{ border-bottom:0; }
   .ins li .ag{ font-size:.72rem; font-weight:800; color:var(--muted); flex:0 0 auto; }
   .ins .why{ font-size:.73rem; color:var(--muted); margin-top:8px; line-height:1.45; }
@@ -292,6 +302,7 @@
       <a href="gukgam-kdca.html">질병청</a>
       <a href="gukgam-mfds.html">식약처</a>
       <a href="gukgam-covid.html">코로나19</a>
+      <a href="gukgam-qaform.html">예상 질의</a>
       <a href="gukgam-guide.html">의원별 가이드북</a>
       <a href="gukgam-all.html">전체 자료·도구</a>
     </div>
@@ -318,6 +329,7 @@
     <a class="tile" href="gukgam-covid.html"><span class="go">→</span><div class="tk">😷</div><div class="tt">코로나19 5년</div><div class="ts" id="tsCovid">…</div></a>
   </section>
   <div class="sub-links">
+    <a href="gukgam-qaform.html" style="border-color:#d2603a;background:#fffaf6;color:#9e3a20;font-weight:900;">📝 예상 질의 — 올해 나올 만한 질문과 근거</a>
     <a href="gukgam-all.html">📂 전체 자료·도구 (결과보고서·회의록·연대기·브리핑)</a>
     <a href="gukgam-guide.html">🧑‍⚖️ 의원별 가이드북</a>
     <a href="gukgam-prep.html">📝 답변 대비 워크북</a>
@@ -427,7 +439,7 @@
       function row(a){ var tags=(a.agencies||[]).map(function(g){return '<i class="pt ag">'+esc(short[g]||g)+'</i>';}).concat((a.members||[]).map(function(n){return '<i class="pt mb">'+esc(n)+'</i>';})).join('');
         return '<li style="display:block;"><a href="'+esc(a.url)+'" target="_blank" rel="noopener" style="color:#1f3b5a;font-weight:700;text-decoration:none;">'+esc(a.title)+'</a><div style="font-size:.73rem;color:var(--muted);margin-top:2px;">'+esc((a.date||'').slice(5).replace('-','.'))+' · '+esc(a.source||'')+' '+tags+'</div></li>'; }
       var first=pit.slice(0,6), rest=pit.slice(6);
-      cards.unshift('<div class="ins" style="grid-column:1 / -1;"><h3>📰 국감 관련 최근 보도 <span style="font-size:.74rem;font-weight:600;color:var(--muted);">'+pit.length+'건 · 최근 '+esc((PR.window||'14d').replace('d','일'))+' · 갱신 '+esc(PR.updated_at||PR.updated||'')+'</span></h3>'+
+      cards.unshift('<div class="ins press" style="grid-column:1 / -1;"><h3>📰 국감 관련 최근 보도 <span style="font-size:.74rem;font-weight:600;color:var(--muted);">'+pit.length+'건 · 최근 '+esc((PR.window||'14d').replace('d','일'))+' · 갱신 '+esc(PR.updated_at||PR.updated||'')+'</span></h3>'+
         '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:4px 18px;"><ul style="margin:0;">'+first.slice(0,3).map(row).join('')+'</ul><ul style="margin:0;">'+first.slice(3,6).map(row).join('')+'</ul></div>'+
         (rest.length?'<details style="margin-top:6px;"><summary style="cursor:pointer;font-size:.8rem;font-weight:800;color:#2a4d7d;">나머지 '+rest.length+'건 보기</summary><ul style="margin:6px 0 0;">'+rest.map(row).join('')+'</ul></details>':'')+
         '<div class="why">구글 뉴스에서 현 보건복지위 위원 27명 이름·기관명과 "국정감사"를 매일 검색해 제목에 국감이 들어간 기사만 모은 것. <b>언론 보도 기준이며 의원실 보도자료 원문이 아닙니다.</b> 기관·위원 표식은 제목 키워드 자동 분류. 국감 시즌(9~12월)엔 매일 갱신.</div></div>');
