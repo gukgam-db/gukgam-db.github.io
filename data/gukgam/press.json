@@ -1,10 +1,22 @@
 {
  "updated": "2026-09-12",
- "updated_at": "2026-09-12 07:51",
+ "updated_at": "2026-09-12 21:32",
  "window": "14d",
  "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. 기관·위원 분류는 제목 키워드 자동.",
- "count": 57,
+ "count": 58,
  "items": [
+  {
+   "title": "서울시약사회, 서영석 국회 복지위 간사와 정책간담회 개최",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1TU1hZT3hEbDMyeXRoQjlXLW0wcUxCdmJEUTY3aEpCS3lwTWdKbnBqZF82WG5WTGVDcDJMdWh4eHlBdUp3RUEwSnpYVkJobkZFY0ZwWkVyRXEyc0txUzZHa2plOVVkcVpmNHpXUQ?oc=5",
+   "date": "2026-09-12",
+   "source": "팜뉴스",
+   "score": 3,
+   "agencies": [],
+   "members": [
+    "서영석"
+   ],
+   "first_seen": "2026-09-12"
+  },
   {
    "title": "野 “김승원, 2021년 국감중 식약처 청탁”… 金측 “통화 시간 5분 정도에 불과” 인정",
    "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5tUHVzY3hoSTBGWm00enJWYWoxeHdBbG16WTJCTUNIOWx1d0dFMHprQ182bFJwSWtKX1oyQ0NKS2xHY0ZKcjdtaWUzZmQxQ28?oc=5",
@@ -38,20 +50,8 @@
    "first_seen": "2026-09-11"
   },
   {
-   "title": "“김승원, 브로커·식약처 청탁 전화…국감 중 들락날락”",
-   "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1Bc3JNVkhXOU5OVTBjSTVIQ2RaYW9sdmptV2pQU1g3TUIxYkZ3d1Vwb0N3UzVTYUZwb0JrZHdPUzgxMWt2RUE?oc=5",
-   "date": "2026-09-11",
-   "source": "v.daum.net",
-   "score": 3,
-   "agencies": [
-    "식품의약품안전처"
-   ],
-   "members": [],
-   "first_seen": "2026-09-10"
-  },
-  {
    "title": "복지위, 김승원 신약 청탁 의혹에…與 \"정쟁 안돼\" VS 野 \"왜 뚫렸나\" - 머니투데이",
-   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA1S2xjelE0TGFqbDhMQkg2ZlRpcmJMVHJ1UWhoU09uSDV4UTNTdlN5NmFyNU1vTFdMZURPT1NVd1FPQnBFcjcwV290eFJ5WFEyX0g5MDQ2Y01PeGNCOHVKSDRBNVBHZHNjNWUzTjhEWnpSUdIBckFVX3lxTFA1S2xjelE0TGFqbDhMQkg2ZlRpcmJMVHJ1UWhoU09uSDV4UTNTdlN5NmFyNU1vTFdMZURPT1NVd1FPQnBFcjcwV290eFJ5WFEyX0g5MDQ2Y01PeGNCOHVKSDRBNVBHZHNjNWUzTjhEWnpSUQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBlLWlGMkM4eEtpTThIQl8wOGFUeUZoODJkY2F0YkZOdDhXWTlvX2JPTHhDNUJlRl9uNDZmbVhPSmJHMWFXYTFTWjRoMVZva1UyQVQ3bVVDa1NqM2d0b0VvWnJ3eGRjV3E5MV82T9IBckFVX3lxTFA1S2xjelE0TGFqbDhMQkg2ZlRpcmJMVHJ1UWhoU09uSDV4UTNTdlN5NmFyNU1vTFdMZURPT1NVd1FPQnBFcjcwV290eFJ5WFEyX0g5MDQ2Y01PeGNCOHVKSDRBNVBHZHNjNWUzTjhEWnpSUQ?oc=5",
    "date": "2026-09-11",
    "source": "머니투데이",
    "score": 2,
@@ -126,10 +126,22 @@
    "first_seen": "2026-09-11"
   },
   {
+   "title": "“김승원, 브로커·식약처 청탁 전화…국감 중 들락날락”",
+   "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE41M001RVZ4NXp6amFkM1RYVGlnbVZIVUdLMGRLdDVhZHNpa2VaQlFRTUFUSF9feld3N1UyX3hBMktCQ1kteEE?oc=5",
+   "date": "2026-09-10",
+   "source": "v.daum.net",
+   "score": 3,
+   "agencies": [
+    "식품의약품안전처"
+   ],
+   "members": [],
+   "first_seen": "2026-09-10"
+  },
+  {
    "title": "국감 다가오는데 결론 못 내린 면역증강주사 희귀약 해제",
    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE04MnFMUmNXVXhsczdMNEJwQTRUajVpZHFGMmxYWXg0aVpEWko5RnFYZ1BNZ251UFBzUlZxM2NjRkxETHVRNzYyckdZdHJPdlNB?oc=5",
    "date": "2026-09-10",
-   "source": "dailypharm.com",
+   "source": "데일리팜",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -189,9 +201,9 @@
   },
   {
    "title": "안철수 \"김승원 의원 자격 없다..., 국감 중 식약처에 제넨셀 청탁\" |",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE42VEpHdGlhYWNfSW5aZGcwSzNOamR0ajc3eC1QMVljZlVURFhEenZ0ck1BSHJqSkxuWVNaZXFaR2xlRUJ5VkVybm1lcDNOQVVoekxlTWN6a2RHbkxaLUxuOUxnZm9mcTdMRjIyZkNBVQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9BSHU2WjRCVG5QaXJ5dzVtRVMzTk41ZFNBT1poNl9xWGlCcG5iUVB0NkZDdWlwbE5NVXlzQ0V3VXlfVWlIdUlfSGtMV0w3RUUzcXM4V3JkTGJpTERDZWZDakpUalBpaWJNWThr?oc=5",
    "date": "2026-09-10",
-   "source": "thepublic.kr",
+   "source": "더퍼블릭",
    "score": 3,
    "agencies": [
     "식품의약품안전처"
@@ -211,9 +223,9 @@
   },
   {
    "title": "“김승원 국감 중 식약처 청탁... 브로커에 휘둘려 들락날락”",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNQ0hTcEM5bG0xUVZqYUtfMWdsM2pTQVhWR0lGSVJwM2I0QWsyVU11MUJzNVFrT2dLclZHUTg5X2lHNDc5U2RhS2FZTldBT1lrNWlLRWFtNXZBNXBKY2dGZGdHVG5VOEQ3SUFKZHBXbXhDMGQxeDY0QnJDd1RuNGN5YUpMcmFoUQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE50YktfaEt5S1NiWTlWZEtOdTF2R0lyUHNGMlVUbGZCbHp5QldnYkFISExQaks3NHk3dTZTa2NEc00tWUJPaGc?oc=5",
    "date": "2026-09-10",
-   "source": "조선일보",
+   "source": "v.daum.net",
    "score": 3,
    "agencies": [
     "식품의약품안전처"
@@ -295,7 +307,7 @@
    "title": "국정감사 끝나면 ‘2차 추가 개각’ 가능성있다?...복지·교육·외교부 주목",
    "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE82SEJYVWstZzhoT0JPUVdiVXVQSnFHTzgxOGRKbmM0aG04cG5NbEY5UWx1a3dZMlhPQnlsTURIQjJ0WDdyenN3?oc=5",
    "date": "2026-09-10",
-   "source": "신문고뉴스",
+   "source": "shinmoongo.net",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -349,7 +361,7 @@
    "title": "[국감 Re체크③] 단속 강화해도 끊이질 않는 '의약품 둔갑' 화장품 광고",
    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBCdjJ2aE1tdWlaelZEb1RlMUhqR09NS3YzM1VyWXNhN0ZvUEtUcTBFdmhPbnFLTllOZk4yLUdHUmQ2T1B4aW11WXJwZGd1UmJXYW5obnRfUVhBVUE1bWdoOHJsakh3a2prNEo0cDZR0gFuQVVfeXFMUEJ2MnZoTW11aVp6VkRvVGUxSGpHT01LdjMzVXJZc2E3Rm9QS1RxMEV2aE9ucUtOWU5mTjItR0dSZDZPUHhpbXVZcnBkZ3VSYldhbmhudF9RWEFVQTVtZ2g4cmxqSHdrams0SjRwNlE?oc=5",
    "date": "2026-09-09",
-   "source": "newsdream.kr",
+   "source": "뉴스드림",
    "score": 2,
    "agencies": [],
    "members": [],
