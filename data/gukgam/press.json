@@ -1,6 +1,6 @@
 {
- "updated": "2026-09-12",
- "updated_at": "2026-09-12 21:32",
+ "updated": "2026-09-13",
+ "updated_at": "2026-09-13 07:55",
  "window": "14d",
  "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. 기관·위원 분류는 제목 키워드 자동.",
  "count": 58,
@@ -41,9 +41,9 @@
   },
   {
    "title": "\"김승원, 브로커에 휘둘려 국감 들락날락하며 청탁\"",
-   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE0zRVc5LUo2dkt0S1FYdU9YcTlWY2tfRDgzbHhkMXFEZjkydFJJVk1EYlg4ZXFGQ3ZNSXdJUUhhZnFvX21wMWZuc3FJZmF6UEpjTE5V?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNSkIzT295SVU3RVdrYVRfLXR5ZG9zcVdWU1JLbUQ2Q0N6WnlvWGhKd1NTU3czMmFkWVlXMEh1Qm5vUlJUX2VlRDhKUGRtWGQ1d1ZkUDMtd0EtN29Vb1VSMGpjbWVmczdfak9NRjUtTjBsTVVKOXBrVjI0ZmMzMXhlbEFUNUtBN1BVY3NjRzFJXzI?oc=5",
    "date": "2026-09-11",
-   "source": "네이트",
+   "source": "조선일보",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -223,9 +223,9 @@
   },
   {
    "title": "“김승원 국감 중 식약처 청탁... 브로커에 휘둘려 들락날락”",
-   "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE50YktfaEt5S1NiWTlWZEtOdTF2R0lyUHNGMlVUbGZCbHp5QldnYkFISExQaks3NHk3dTZTa2NEc00tWUJPaGc?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNQ0hTcEM5bG0xUVZqYUtfMWdsM2pTQVhWR0lGSVJwM2I0QWsyVU11MUJzNVFrT2dLclZHUTg5X2lHNDc5U2RhS2FZTldBT1lrNWlLRWFtNXZBNXBKY2dGZGdHVG5VOEQ3SUFKZHBXbXhDMGQxeDY0QnJDd1RuNGN5YUpMcmFoUQ?oc=5",
    "date": "2026-09-10",
-   "source": "v.daum.net",
+   "source": "조선일보",
    "score": 3,
    "agencies": [
     "식품의약품안전처"
@@ -359,7 +359,7 @@
   },
   {
    "title": "[국감 Re체크③] 단속 강화해도 끊이질 않는 '의약품 둔갑' 화장품 광고",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBCdjJ2aE1tdWlaelZEb1RlMUhqR09NS3YzM1VyWXNhN0ZvUEtUcTBFdmhPbnFLTllOZk4yLUdHUmQ2T1B4aW11WXJwZGd1UmJXYW5obnRfUVhBVUE1bWdoOHJsakh3a2prNEo0cDZR0gFuQVVfeXFMUEJ2MnZoTW11aVp6VkRvVGUxSGpHT01LdjMzVXJZc2E3Rm9QS1RxMEV2aE9ucUtOWU5mTjItR0dSZDZPUHhpbXVZcnBkZ3VSYldhbmhudF9RWEFVQTVtZ2g4cmxqSHdrams0SjRwNlE?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBULTZvS1dIaFE5NDNzbmtWNHRKZVB4d3E2c3hjQkFQUWkzX2ctVlhKaXg1WWRmSlJXd3kxZ2ZlcUo2azAtNkVGUFkwbEp0aG5ZQmVkVENDQlR3X2NDZXpEWEVkMldVUjV3SVp30gFuQVVfeXFMUEJ2MnZoTW11aVp6VkRvVGUxSGpHT01LdjMzVXJZc2E3Rm9QS1RxMEV2aE9ucUtOWU5mTjItR0dSZDZPUHhpbXVZcnBkZ3VSYldhbmhudF9RWEFVQTVtZ2g4cmxqSHdrams0SjRwNlE?oc=5",
    "date": "2026-09-09",
    "source": "뉴스드림",
    "score": 2,
@@ -497,7 +497,7 @@
    "title": "입법조사처가 주목한 국감 현안은? '비급여·소아응급'",
    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE15cHRuN3R1Z0hzMTBKVGNaVjlhTFVwTVBoNGxRYXY2dUVEeUZaeldhSUlQRGdsZDdXQmp0YmdLUWNNVVBxNGF6U0hDaE5KbDM0Qm9wVjJFdlItWUZ1RmNCQUtDdnB0ZkQtQjZQcUlIcGg3QQ?oc=5",
    "date": "2026-09-02",
-   "source": "doctorsnews.co.kr",
+   "source": "의협신문",
    "score": 2,
    "agencies": [],
    "members": [],
