@@ -1,0 +1,14 @@
+{
+  "name": "모심 — 대한민국 돌봄 종합 포털",
+  "short_name": "모심",
+  "description": "가족처럼, 정성껏 모십니다. 돌봄 검색·구직·통합돌봄 안내.",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b7d72",
+  "theme_color": "#0b7d72",
+  "icons": [
+    { "src": "assets/png/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/png/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

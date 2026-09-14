@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R&D·제품 효과 연구 | 근거영양</title>
+<meta name="description" content="건강 수준별 영양제 효과를 자체 검증하는 R&D 설계. 데이터 인프라 → 실사용 관찰 → n-of-1·실용 RCT → 외부 검증(IRB·식약처 인체적용시험)까지 4단계 로드맵.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main class="wrap">
+  <div class="page-head">
+    <h1>R&amp;D · 제품 효과 연구</h1>
+    <p>"우리 제품이 효과 있다"는 말을 광고가 아니라 <b>사전등록된 연구</b>로 증명하는 구조. 판매와 연구를 처음부터 한 데이터베이스 위에 올립니다.</p>
+  </div>
+
+  <div class="toc"><b>차례</b><ol>
+    <li><a href="#why">왜 자체 연구인가</a></li><li><a href="#design">연구 4단계 설계</a></li><li><a href="#markers">건강 수준 지표·바이오마커</a></li>
+    <li><a href="#schema">데이터 구조</a></li><li><a href="#reg">규제·윤리 체크리스트</a></li><li><a href="#roadmap">12개월 로드맵</a></li><li><a href="#budget">비용·인력 추정</a></li>
+  </ol></div>
+
+  <div class="section" id="why">
+    <h2>1. 왜 자체 연구인가</h2>
+    <p>대규모 연구(COSMOS·VITAL 등)는 "성분"의 평균 효과를 알려주지만, <b>어떤 사람(건강 수준)에게 어떤 제품(제형·용량·조합)이 실제로 어떤 변화를 만들었는지</b>는 답하지 못합니다. 그 빈 자리를 판매 데이터와 연결된 연구로 채우는 것이 이 사업의 차별점이자 방어벽입니다.</p>
+    <div class="how-grid">
+      <div class="how"><div class="num">1</div><h4>신뢰 자산</h4><p>"연구 결과 그대로 공개"가 브랜드. 부정 결과도 공개.</p></div>
+      <div class="how"><div class="num">2</div><h4>제품 개선 루프</h4><p>효과 없는 제품은 빼고, 효과 있는 조합만 남김.</p></div>
+      <div class="how"><div class="num">3</div><h4>규제 대응</h4><p>식약처 개별인정형 원료·기능성 표시에 필요한 인체적용시험 데이터 축적.</p></div>
+      <div class="how"><div class="num">4</div><h4>데이터 자산</h4><p>건강 수준 × 복용 × 결과 데이터 자체가 B2B(약국·병원·보험) 가치.</p></div>
+    </div>
+  </div>
+
+  <div class="section" id="design">
+    <h2>2. 연구 4단계 설계</h2>
+    <div class="table-scroll"><table>
+      <tr><th>단계</th><th>이름</th><th>무엇을</th><th>근거 수준</th><th>규제·윤리</th><th>시기</th></tr>
+      <tr><td>0</td><td>데이터 인프라</td><td>회원 가입 시 건강 수준 설문(아래 3절) + 복용 기록 + 자가 결과(수면·피로·통증 0~10점) 앱/웹 입력. 동의서·개인정보 처리방침.</td><td>—</td><td>개인정보보호법(민감정보 별도 동의), 동의 철회·삭제 기능</td><td>1~3개월</td></tr>
+      <tr><td>1</td><td>실사용 관찰 (Real-World)</td><td>복용군 vs 미복용군의 자가 결과·검진 수치 변화 추적. 교란요인(나이·운동·식사) 보정.</td><td>C (관찰)</td><td>공용 IRB 심의(관찰연구, 최소위험) 권장</td><td>3~6개월</td></tr>
+      <tr><td>2</td><td>n-of-1 · 실용 RCT</td><td>① n-of-1: 한 사람이 "제품 2주 → 위약 2주"를 3회 반복(블라인드). 개인별 효과 판정. ② 실용 RCT: 특정 건강 수준군 100~300명, 위약 대조, 12주, 사전등록.</td><td>B</td><td>IRB 필수, CRIS(임상연구정보서비스) 사전등록, 위약 제조·라벨 블라인딩</td><td>6~12개월</td></tr>
+      <tr><td>3</td><td>외부 검증</td><td>대학병원·연구기관 공동 인체적용시험(식약처 가이드라인 준수). 결과를 학술지 투고.</td><td>A/B</td><td>식약처 「건강기능식품 인체적용시험 가이드」, GCP 준수 기관</td><td>12개월~</td></tr>
+    </table></div>
+    <div class="callout tip"><span class="t">n-of-1이 이 사업에 딱 맞는 이유</span>
+    "나한테 효과가 있나?"가 고객의 진짜 질문입니다. n-of-1 설계는 그 질문에 개인 단위로 답하고, 수십 명의 n-of-1을 합치면 집단 근거(메타분석)가 됩니다. 비용이 낮고, 고객 참여 자체가 상품(개인 맞춤 리포트)이 됩니다.</div>
+    <div class="callout warn"><span class="t">사전등록(pre-registration) 원칙</span>
+    연구 시작 전에 가설·대상 수·주요 결과지표·분석 방법을 이 페이지와 CRIS에 공개합니다. 결과가 나쁘게 나와도 바꾸지 않습니다. 이것이 판매자가 하는 연구가 신뢰받는 유일한 방법입니다.</div>
+  </div>
+
+  <div class="section" id="markers">
+    <h2>3. 건강 수준 지표 · 바이오마커</h2>
+    <p>추천 엔진(<a href="chucheon.html">내게 맞는 영양제</a>)과 연구가 같은 분류를 씁니다. 그래야 "추천 → 구매 → 결과"가 한 줄로 이어집니다.</p>
+    <h3>3-1. 건강 수준 4단계 (설문으로 분류)</h3>
+    <div class="table-scroll"><table>
+      <tr><th>수준</th><th>정의</th><th>대표 대상</th><th>연구 주요 결과지표</th></tr>
+      <tr><td><span class="pill green">L1 건강</span></td><td>진단 질환 없음, 결핍 없음, 균형 식사</td><td>20~50대 직장인</td><td>자가 피로·수면·집중 점수, 결핍 여부 유지</td></tr>
+      <tr><td><span class="pill blue">L2 위험군</span></td><td>결핍 위험(햇빛 부족·채식·임신·수유·60세 이상·위장질환·메트포르민 등 약물)</td><td>실내 근무자, 65세+, 임산부</td><td>25(OH)D, 페리틴, B12, 엽산 수치 정상화율</td></tr>
+      <tr><td><span class="pill amber">L3 만성질환</span></td><td>고혈압·당뇨·이상지질혈증·골다공증·황반변성 등 진단</td><td>50대 이상</td><td>혈압, HbA1c, LDL/중성지방, 골밀도(T-score), AMD 진행</td></tr>
+      <tr><td><span class="pill red">L4 주의·금기</span></td><td>항응고제·항암치료·신장질환·흡연자(고용량 베타카로틴 금기) 등</td><td>—</td><td>연구 대상에서 제외 또는 별도 안전성 연구</td></tr>
+    </table></div>
+    <h3>3-2. 측정 지표</h3>
+    <div class="table-scroll"><table>
+      <tr><th>영역</th><th>지표</th><th>측정 방법·비용(대략)</th><th>연결 성분</th></tr>
+      <tr><td>비타민 D</td><td>혈중 25(OH)D</td><td>건강검진 추가 항목, 약 1~3만 원</td><td>비타민 D3</td></tr>
+      <tr><td>철</td><td>페리틴, 헤모글로빈</td><td>기본 혈액검사</td><td>철분</td></tr>
+      <tr><td>B12·엽산</td><td>혈청 B12, 엽산, 호모시스테인</td><td>추가 혈액검사</td><td>B12, 엽산</td></tr>
+      <tr><td>오메가-3</td><td>오메가-3 지수(적혈구 EPA+DHA %)</td><td>건조혈액반점 검사, 5~8만 원</td><td>오메가-3</td></tr>
+      <tr><td>대사</td><td>혈압, HbA1c, 지질</td><td>국가검진 활용(무료)</td><td>마그네슘, 오메가-3</td></tr>
+      <tr><td>뼈</td><td>골밀도 DXA</td><td>국가검진(여성 54·66세) 또는 병원</td><td>칼슘, D, K2</td></tr>
+      <tr><td>인지</td><td>MoCA-K 또는 온라인 인지검사</td><td>무료·저비용</td><td>종합비타민(COSMOS 결과 재현)</td></tr>
+      <tr><td>자가 결과(PRO)</td><td>피로·수면·통증·기분 0~10점, 주 1회</td><td>앱 입력, 무료</td><td>전체</td></tr>
+    </table></div>
+  </div>
+
+  <div class="section" id="schema">
+    <h2>4. 데이터 구조 (판매·연구 공용)</h2>
+    <p>Supabase(PostgreSQL) 기준. 판매 시스템과 연구 시스템이 같은 <code>participant_id</code>를 씁니다.</p>
+<pre style="background:#f3f6f5;border:1px solid var(--line);border-radius:10px;padding:14px;overflow-x:auto;font-size:.85rem;line-height:1.5">participants   (id, created_at, consent_version, consent_research bool, birth_year, sex, withdrawn_at)
+health_profiles(id, participant_id, surveyed_at, level L1~L4, conditions[], meds[], diet_type, sun_exposure, pregnancy, smoker)
+regimens       (id, participant_id, product_id, ingredient, dose, unit, started_at, stopped_at, adherence_pct)
+outcomes_pro   (id, participant_id, recorded_at, fatigue, sleep, pain, mood, focus)   -- 0~10, 주 1회
+labs           (id, participant_id, drawn_at, marker, value, unit, source)             -- 25OHD, ferritin, b12, omega3_index ...
+studies        (id, title, design n1|rct|obs, preregistered_at, cris_id, hypothesis, primary_outcome, n_target, status)
+study_arms     (id, study_id, participant_id, arm placebo|active, period_no, blinded bool)
+products       (id, brand, name, ingredient_ids[], dose_per_serving, form, certifications[], lot_tests[])
+</pre>
+    <ul>
+      <li><b>분리 보관</b>: 개인 식별정보(이름·연락처)는 판매 DB에만, 연구 DB에는 가명 ID만.</li>
+      <li><b>동의 버전 관리</b>: 동의서가 바뀌면 재동의. 연구 동의 없는 회원 데이터는 연구 테이블에 넣지 않음.</li>
+      <li><b>철회</b>: 철회 즉시 outcomes/labs 삭제(법정 보관 의무 있는 구매 기록은 제외).</li>
+    </ul>
+  </div>
+
+  <div class="section" id="reg">
+    <h2>5. 규제 · 윤리 체크리스트 (한국)</h2>
+    <div class="table-scroll"><table>
+      <tr><th>항목</th><th>근거 법령·기관</th><th>해야 할 것</th></tr>
+      <tr><td>연구 윤리</td><td>생명윤리법, 공용기관생명윤리위원회(공용 IRB)</td><td>1단계부터 IRB 심의(관찰연구는 신속심의 가능). 2단계 RCT는 정식심의.</td></tr>
+      <tr><td>사전등록</td><td>CRIS(질병관리청 임상연구정보서비스)</td><td>RCT는 첫 참가자 등록 전 CRIS 등록.</td></tr>
+      <tr><td>개인정보</td><td>개인정보보호법(건강정보=민감정보)</td><td>별도 동의, 가명처리, 접근권한 분리, 처리방침 공개.</td></tr>
+      <tr><td>표시·광고</td><td>건강기능식품법, 표시광고법, 식약처 「건강기능식품 표시·광고 가이드」</td><td>"치료·예방" 표현 금지. 기능성 표시는 식약처 인정 문구 그대로. 자체 연구 결과 인용 광고는 사전심의 대상.</td></tr>
+      <tr><td>의료법</td><td>의료법 27조(무면허 의료행위)</td><td>추천 엔진은 "정보 제공"으로 한정. 진단·처방 표현 금지, 의사·약사 상담 안내 필수.</td></tr>
+      <tr><td>기능성 인정</td><td>식약처 「건강기능식품 기능성 원료 인정 가이드」, 「인체적용시험 가이드」</td><td>개별인정형 원료 신청 시 GCP 기관 인체적용시험 필요. 3단계에서 준비.</td></tr>
+      <tr><td>제품 품질</td><td>GMP, 식약처 자가품질검사</td><td>OEM 시 GMP 인증 제조사만. 로트별 시험성적서(함량·중금속·미생물) 공개.</td></tr>
+    </table></div>
+  </div>
+
+  <div class="section" id="roadmap">
+    <h2>6. 12개월 로드맵</h2>
+    <ul class="roadmap">
+      <li><span class="when">M1~M2</span><h4>근거 플랫폼 공개 + 회원·설문 인프라</h4><p>이 사이트 공개, 건강 수준 설문·복용 기록 폼(Supabase), 개인정보 처리방침·연구 동의서 초안, 공용 IRB 사전 문의.</p></li>
+      <li><span class="when">M2~M3</span><h4>제품 선정 · 큐레이션 판매 시작</h4><p>근거 A/B 성분 4~6종(비타민 D3, 오메가-3, B12, 엽산, 철, 종합비타민)을 기준 충족 제품으로 큐레이션. 제3자 시험성적서 확보. 이해상충 고지 갱신.</p></li>
+      <li><span class="when">M3~M6</span><h4>1단계 실사용 관찰 연구</h4><p>목표 300명. 12주 PRO + 가능한 사람은 25(OH)D·페리틴 전후 검사. 중간 결과 공개.</p></li>
+      <li><span class="when">M6~M9</span><h4>2단계 n-of-1 프로그램 (유료 상품화)</h4><p>"내게 효과 있는지 6주 안에 확인" 패키지: 제품+위약 블라인드 키트, 주간 설문, 개인 리포트. 목표 50명 → 합산 분석.</p></li>
+      <li><span class="when">M9~M12</span><h4>실용 RCT 1건 사전등록·착수</h4><p>가설 예: "L2 실내 근무자에게 비타민 D3 2,000 IU 12주 → 25(OH)D 30 ng/mL 도달률 + 피로 점수". CRIS 등록, IRB 승인, 결과 공개 약속.</p></li>
+      <li><span class="when">M12+</span><h4>외부 검증 · 개별인정형 준비</h4><p>대학·연구기관 공동, 학술지 투고. 자체 조합 원료가 있다면 식약처 인체적용시험 설계.</p></li>
+    </ul>
+  </div>
+
+  <div class="section" id="budget">
+    <h2>7. 비용·인력 추정 (보수적)</h2>
+    <div class="table-scroll"><table>
+      <tr><th>항목</th><th>1단계(관찰)</th><th>2단계(n-of-1 50명)</th><th>2단계(실용 RCT 200명)</th></tr>
+      <tr><td>IRB 심의비</td><td>30~50만 원</td><td>50~100만 원</td><td>100~200만 원</td></tr>
+      <tr><td>검사비(참가자 부담 또는 지원)</td><td>25(OH)D 2회 × 2만 원 × 100명 = 400만 원</td><td>포함(제품 키트)</td><td>2회 × 3만 원 × 200명 = 1,200만 원</td></tr>
+      <tr><td>위약 제조·블라인딩</td><td>—</td><td>100~300만 원</td><td>300~800만 원</td></tr>
+      <tr><td>참가 사례비</td><td>0~1만 원/인</td><td>상품으로 대체</td><td>3~5만 원/인 = 600~1,000만 원</td></tr>
+      <tr><td>통계·연구설계 자문</td><td>100만 원</td><td>200만 원</td><td>500만 원~</td></tr>
+      <tr><td><b>합계(대략)</b></td><td><b>600만 원 내외</b></td><td><b>500만 원 내외(매출로 상쇄)</b></td><td><b>2,500~4,000만 원</b></td></tr>
+    </table></div>
+    <p class="small">인력: 기획·데이터 1인(대표) + 통계 자문(파트) + 약사·의사 자문 1인(감수·안전). 3단계부터 CRO 또는 대학 연구실 협력.</p>
+  </div>
+
+  <div class="cta-band">
+    <h2>연구 참여 등록 (준비 중)</h2>
+    <p>1단계 관찰 연구 참가자 모집은 IRB 승인 후 이 페이지에서 시작합니다. 결과는 참가 여부와 관계없이 전부 공개합니다.</p>
+    <a class="btn btn-light" href="about.html">운영 원칙 보기</a>
+  </div>
+
+  <div class="disclaimer">본 페이지의 연구 계획은 사전 설계안이며 IRB 승인·CRIS 등록 전에는 어떤 연구도 시작하지 않습니다. 비용은 2026년 국내 기준 추정치입니다.</div>
+</main>
+<div id="site-footer"></div>
+<script src="data/glossary.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

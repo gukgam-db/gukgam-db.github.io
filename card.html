@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오늘의 실거래 카드 만들기 | 갈매역삼성부동산</title>
+<meta name="description" content="갈매·별내·구리 아파트 실거래가를 카톡·밴드·인스타에 올리기 좋은 카드 이미지로 자동 생성. 신고가·평당가·거래일 포함. 갈매역삼성부동산.">
+<meta property="og:site_name" content="갈매역삼성부동산">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="오늘의 실거래 카드 만들기 | 갈매역삼성부동산">
+<meta property="og:description" content="갈매·별내·구리 아파트 실거래가를 카톡·밴드·인스타에 올리기 좋은 카드 이미지로 자동 생성. 신고가·평당가·거래일 포함. 갈매역삼성부동산.">
+<meta property="og:url" content="https://galmae-budongsan.com/card.html">
+<meta property="og:image" content="https://galmae-budongsan.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="오늘의 실거래 카드 만들기 | 갈매역삼성부동산">
+<meta name="twitter:description" content="갈매·별내·구리 아파트 실거래가를 카톡·밴드·인스타에 올리기 좋은 카드 이미지로 자동 생성. 신고가·평당가·거래일 포함. 갈매역삼성부동산.">
+<meta name="twitter:image" content="https://galmae-budongsan.com/assets/og-image.png">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .maker{ display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:start; }
+  @media(max-width:900px){ .maker{ grid-template-columns:1fr; } }
+  .ctrl{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; box-shadow:var(--shadow); }
+  .ctrl label{ display:block; font-weight:700; color:#33475b; font-size:.9rem; margin:10px 0 5px; }
+  .ctrl select{ width:100%; padding:9px 11px; border:1px solid var(--line); border-radius:9px; font-size:.95rem; }
+  .seg{ display:flex; border:1px solid var(--line); border-radius:20px; overflow:hidden; }
+  .seg button{ flex:1; border:0; background:#fff; padding:8px 6px; font-weight:700; cursor:pointer; color:#4a5a6b; font-size:.86rem; }
+  .seg button.on{ background:#c0392b; color:#fff; }
+  .btn-save{ width:100%; margin-top:14px; border:0; background:#123a6b; color:#fff; font-weight:800; border-radius:10px; padding:13px; font-size:1rem; cursor:pointer; }
+  .hint{ font-size:.82rem; color:var(--muted); margin-top:10px; line-height:1.5; }
+  .stage{ overflow:auto; }
+
+  /* ===== 카드 ===== */
+  #card{ width:760px; background:#fff; border-radius:0; font-family:'Malgun Gothic','맑은 고딕',sans-serif; color:#1c2733; position:relative; overflow:hidden; box-sizing:border-box; }
+  #card *{ box-sizing:border-box; }
+  .c-hero-p{ position:relative; overflow:hidden; background:radial-gradient(130% 150% at 18% -10%, #1d55a0 0%, #0f2f57 46%, #071528 100%); color:#fff; padding:22px 28px 28px; }
+  .c-hero-p .sky{ position:absolute; left:-2%; right:-2%; bottom:-1px; width:104%; height:60%; opacity:.20; filter:blur(1.1px); }
+  .c-hero-p .top{ position:relative; display:flex; align-items:center; gap:9px; }
+  .c-hero-p .top .ico{ font-size:1.55rem; }
+  .c-hero-p .top .t{ font-size:1.28rem; font-weight:900; color:#ffd85e; letter-spacing:-.01em; }
+  .c-hero-p .nm{ position:relative; margin-top:14px; font-size:2.35rem; font-weight:900; color:#fff; line-height:1.12; letter-spacing:-.03em; word-break:keep-all; text-shadow:0 2px 12px rgba(0,0,0,.4); }
+  .c-hero-p .price{ position:relative; margin-top:4px; font-size:4.4rem; font-weight:900; color:#ffe259; line-height:1; letter-spacing:-.03em;
+    text-shadow:0 0 24px rgba(255,224,89,.8), 0 0 8px rgba(255,224,89,.95), 0 3px 4px rgba(0,0,0,.35); }
+  .c-hero-p .price small{ font-size:1.75rem; color:#fff; font-weight:900; text-shadow:0 2px 8px rgba(0,0,0,.4); }
+  .c-hero-p .sub{ position:relative; margin-top:9px; font-size:1.02rem; color:#cfe0f5; font-weight:700; }
+  .c-body{ padding:8px 26px 0; display:flex; gap:14px; }
+  .c-info{ flex:1; min-width:0; }
+  .c-tag{ display:inline-block; background:#20272e; color:#fff; font-weight:800; border-radius:8px; padding:5px 12px; font-size:1.05rem; margin-bottom:8px; }
+  .c-dong{ display:inline-block; background:#c0392b; color:#fff; font-weight:800; border-radius:7px; padding:3px 11px; font-size:.95rem; margin-left:6px; }
+  .c-info ul{ list-style:none; margin:8px 0 0; padding:0; }
+  .c-info li{ font-size:1.12rem; font-weight:700; color:#2b3742; padding:3px 0; }
+  .c-info li b{ color:#c0392b; }
+  .c-badges{ margin:14px 0 0; }
+  .c-badge{ display:inline-block; background:#c0392b; color:#fff; font-weight:900; border-radius:10px; padding:9px 18px; font-size:1.4rem; margin:0 8px 8px 0; }
+  .c-badge.dark{ background:#20272e; }
+  .c-illus{ flex:0 0 210px; align-self:flex-end; }
+  .c-shdr{ background:#c0392b; color:#fff; font-weight:900; font-size:1.35rem; border-radius:9px; padding:8px 16px; display:inline-block; margin:16px 26px 0; }
+  .c-tbl{ margin:10px 26px 0; border-collapse:collapse; width:708px; table-layout:fixed; }
+  .c-tbl col.w1{ width:20%; } .c-tbl col.w2{ width:18%; } .c-tbl col.w3{ width:35%; } .c-tbl col.w4{ width:27%; }
+  .c-tbl th{ background:#20272e; color:#fff; font-weight:800; padding:11px 4px; font-size:1.02rem; }
+  .c-tbl th.hi{ background:#c0392b; }
+  .c-tbl td{ background:#fff; border:1px solid #e2e7ec; text-align:center; padding:12px 6px; font-size:1.15rem; font-weight:800; color:#20272e; }
+  .c-tbl td.hi{ color:#c0392b; }
+  .c-foot{ margin-top:18px; background:#123a6b; color:#fff; padding:16px 26px; display:flex; justify-content:space-between; align-items:center; }
+  .c-foot .l .b{ font-size:1.35rem; font-weight:900; }
+  .c-foot .l .s{ font-size:.95rem; color:#cfe0f5; margin-top:3px; }
+  .c-foot .r{ text-align:right; }
+  .c-foot .r .p{ font-size:1.5rem; font-weight:900; color:#ffd85e; }
+  .c-foot .r .u{ font-size:.9rem; color:#cfe0f5; }
+  .c-src{ background:#f1f3f5; color:#7a8794; font-size:.82rem; padding:7px 26px; }
+
+  #out{ margin-top:14px; }
+  #out img{ max-width:100%; border:1px solid var(--line); border-radius:8px; display:block; }
+  #out .save-hint{ background:#fff8e6; border:1px solid #efd98a; border-radius:10px; padding:11px 14px; font-size:.9rem; color:#5c4a17; margin-bottom:8px; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="budongsan.html">🏢 갈매동 부동산 <span class="tag">갈매역삼성부동산</span></a>
+    <nav class="site-nav">
+      <a href="jido-search.html" data-nav="guri">구리·갈매</a>
+      <a href="jido-search.html?region=by" data-nav="by">남양주 별내</a>
+      <a href="silgeorae-lab.html">실거래가 분석 <span class="nav-badge">매일 업데이트</span></a>
+      <a href="news.html">뉴스·정책 <span class="nav-badge">매일 업데이트</span></a>
+      <a href="store.html">매물</a>
+      <a href="jaryo.html">자료실</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="breadcrumb"><a href="budongsan.html">홈</a> › <a href="silgeorae-lab.html">실거래가 분석</a> › 공유 카드</div>
+  <div class="page-head">
+    <h1>🖼️ 오늘의 실거래 카드 만들기</h1>
+    <p class="lead">우리 실거래 데이터로 <strong>카톡·밴드·인스타에 올리기 좋은 카드</strong>를 자동으로 만듭니다. 단지를 고르고 <strong>이미지로 저장</strong>해서 바로 공유하세요.</p>
+  </div>
+
+  <div class="maker">
+    <div>
+      <div class="ctrl">
+        <label>지역</label>
+        <span class="seg" id="regionSeg">
+          <button data-r="galmae" class="on">갈매동</button>
+          <button data-r="by">남양주 별내</button>
+          <button data-r="guri">구리 전체</button>
+        </span>
+        <label>정렬 기준</label>
+        <select id="sortSel">
+          <option value="recent">최근 거래순</option>
+          <option value="high">신고가·회복률순</option>
+          <option value="price">시세 높은순</option>
+        </select>
+        <label>단지 선택</label>
+        <select id="cxSel"></select>
+        <button class="btn-save" id="makeBtn">🖼️ 카드 이미지 만들기</button>
+        <div class="hint">
+          💡 <b>저장 방법</b> — 이미지가 만들어지면 <b>모바일은 그 이미지를 꾹 눌러</b> "이미지 저장", <b>PC는 아래 저장 버튼</b>을 누르세요.<br>
+          · 실거래가는 국토부 공개 데이터입니다. 평당가는 공급면적 기준 참고치예요.
+        </div>
+        <div id="out"></div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div id="card"></div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h4>🏢 갈매역삼성부동산 · 갈매동 부동산</h4>
+    <div class="footer-links">
+      <a href="budongsan.html">홈</a>
+      <a href="silgeorae-lab.html">실거래가 분석</a>
+      <a href="ipji.html">상가 입지분석</a>
+      <a href="news.html">뉴스·정책</a>
+      <a href="jaryo.html">자료실</a>
+    </div>
+    <div class="footer-note">출처: 국토교통부 실거래가 공개시스템. 참고용 정보이며 법적 효력은 없습니다. © 2026 갈매역삼성부동산.</div>
+  </div>
+</footer>
+
+<script src="data/complexes.js"></script>
+<script src="data/guri-complexes.js"></script>
+<script src="data/byeollae-complexes.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+(function(){
+  var region='galmae', sortKey='recent', list=[], cur=null;
+  var cardEl=document.getElementById('card'), outEl=document.getElementById('out');
+
+  function eok(man){ return (Math.round((man||0)/100)/100).toFixed(2).replace(/0$/,'')+'억'; }
+  function eok1(man){ return (Math.round((man||0)/1000)/10).toFixed(1)+'억'; }
+  function pyeong(ar){ return Math.max(1, Math.round((ar||0)/2.48)); } // 공급면적 환산 평형
+  function esc(s){ return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function nowY(){ return 2026; }
+  function skyline(){
+    var bx=[{x:5,w:38,h:92},{x:48,w:30,h:66},{x:82,w:44,h:112},{x:130,w:28,h:58},{x:162,w:40,h:98},{x:206,w:34,h:78},{x:244,w:48,h:118},{x:296,w:30,h:64},{x:330,w:42,h:104},{x:376,w:22,h:52}];
+    var s='<svg class="sky" viewBox="0 0 400 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">';
+    bx.forEach(function(b){
+      s+='<rect x="'+b.x+'" y="'+(120-b.h)+'" width="'+b.w+'" height="'+b.h+'" rx="1.5" fill="#cfe0f5"/>';
+      for(var yy=120-b.h+6; yy<116; yy+=10){ for(var xx=b.x+4; xx<b.x+b.w-4; xx+=8){ s+='<rect x="'+xx+'" y="'+yy+'" width="4" height="5" fill="#0f2f57" opacity="0.55"/>'; } }
+    });
+    return s+'</svg>';
+  }
+
+  function dataOf(reg){
+    if(reg==='by')     return (typeof BYEOLLAE!=='undefined'?BYEOLLAE:[]).map(function(c){return Object.assign({dong:c.dong||'별내동',region:'by'},c);});
+    if(reg==='guri')   return (typeof GURI!=='undefined'?GURI:[]).map(function(c){return Object.assign({region:'guri'},c);});
+    return (typeof COMPLEXES!=='undefined'?COMPLEXES:[]).map(function(c){return Object.assign({dong:c.dong||'갈매동',region:'galmae'},c);});
+  }
+  function score(c){
+    var lp=(c.latest&&c.latest.price)||0, mx=c.max||0;
+    if(sortKey==='high') return (c.highPct||0)*1000000 + lp;             // 회복률 우선
+    if(sortKey==='price') return mx;
+    var d=(c.latest&&c.latest.date)||'0'; return Date.parse(d)||0;        // 최근
+  }
+  function rebuild(){
+    list=dataOf(region).filter(function(c){ return c.latest && c.latest.price; });
+    list.sort(function(a,b){ return score(b)-score(a); });
+    var sel=document.getElementById('cxSel');
+    sel.innerHTML=list.map(function(c,i){ return '<option value="'+i+'">'+esc(c.name)+' ('+eok1(c.latest.price)+')</option>'; }).join('');
+    cur=list[0]||null; sel.value='0';
+    render();
+  }
+  // 신고가 판정은 '최근 거래된 평형'의 최고가(latHi) 기준. 구버전 데이터는 단지 최고가로 폴백.
+  function isHigh(c){ var hi=(c&&c.latHi!=null)?c.latHi:(c&&c.max); return !!(c&&c.latest&&hi&&c.latest.price>=hi*0.999); }
+
+  function render(){
+    if(!cur){ cardEl.innerHTML='<div style="padding:40px;text-align:center;color:#888">데이터가 없습니다.</div>'; return; }
+    var c=cur, L=c.latest, py=pyeong(L.area), pd=Math.round(L.price/py), high=isHigh(c) || (c.highPct>=99);
+    var yr = c.buildYear ? (nowY()-parseInt(c.buildYear,10)+1) : null;
+
+    // 평형 구성 (rich: byArea 거래건수 / degraded: areas 목록)
+    var comp='';
+    if(c.byArea && c.byArea.length){
+      var agg={};                                   // 같은 공급평형끼리 거래건수 합산(중복 제거)
+      c.byArea.forEach(function(a){ var p=pyeong(a.area); agg[p]=(agg[p]||0)+(a.n||0); });
+      comp = Object.keys(agg).map(function(p){return {p:+p,n:agg[p]};})
+        .sort(function(a,b){return b.n-a.n;}).slice(0,4).map(function(a){
+          return '<li>· '+a.p+'평 <b>'+a.n+'건</b> 거래</li>';
+        }).join('');
+    } else if(c.areas && c.areas.length){
+      var ps=c.areas.map(pyeong).filter(function(v,i,arr){return arr.indexOf(v)===i;});
+      comp = '<li>· 평형 '+ps.map(function(p){return p+'평';}).join(' · ')+'</li>';
+    }
+
+    cardEl.innerHTML =
+      '<div class="c-hero-p">'+skyline()
+      + '<div class="top"><span class="ico">🏆</span><span class="t">주목할 만한 오늘의 실거래</span></div>'
+      + '<div class="nm">'+esc(c.name)+'</div>'
+      + '<div class="price"><small>'+py+'평</small> '+eok1(L.price)+'</div>'
+      + '<div class="sub">'+esc((c.region==='by'?'남양주시 별내 · ':(c.region==='guri'?'구리시 · ':'구리시 갈매동 · '))+(c.dong||''))+' 실거래</div>'
+      + '</div>'
+      + '<div class="c-body"><div class="c-info">'
+      +   '<span class="c-tag">'+esc(c.name)+'</span><span class="c-dong">'+esc(c.dong||'')+'</span>'
+      +   '<ul>'
+      +     (yr?('<li>· 입주 <b>'+yr+'년차</b> (준공 '+esc(c.buildYear)+')</li>'):'')
+      +     (c.count?('<li>· 최근 1년 거래 <b>'+c.count+'건</b></li>'):'')
+      +     comp
+      +   '</ul>'
+      +   '<div class="c-badges">'
+      +     (high?'<span class="c-badge">신고가</span>':'')
+      +     '<span class="c-badge dark">평당 '+eok(pd)+'</span>'
+      +   '</div>'
+      + '</div></div>'
+      + '<div class="c-shdr">'+(high?'🔥 최근 1년 내 최고가':'최근 실거래')+'</div>'
+      + '<table class="c-tbl"><colgroup><col class="w1"><col class="w2"><col class="w3"><col class="w4"></colgroup><thead><tr><th>평형</th><th>층수</th><th class="hi">실거래가</th><th>거래일자</th></tr></thead>'
+      +   '<tbody><tr><td>'+py+'평</td><td>'+(L.floor||'-')+'층</td><td class="hi">'+eok1(L.price)+' 원</td><td>'+esc((L.date||'').replace(/-/g,'.'))+'</td></tr></tbody></table>'
+      + '<div class="c-foot"><div class="l"><div class="b">🏢 갈매역삼성부동산</div><div class="s">매일 최신 시세는 galmae-budongsan.com</div></div>'
+      +   '<div class="r"><div class="p">031-575-4944</div><div class="u">전화·카톡 문의</div></div></div>'
+      + '<div class="c-src">📄 출처: 국토교통부 실거래가 공개시스템 · 최근 1년 매매 기준 · 평당가는 공급면적 환산 참고치</div>';
+  }
+  function gridWin(x,y,w,cols,rows,color){
+    var s='',gap=w/cols;
+    for(var r=0;r<rows;r++)for(var i=0;i<cols;i++){
+      s+='<rect x="'+(x+i*gap+1)+'" y="'+(y+r*13+4)+'" width="'+(gap-3)+'" height="8" fill="'+color+'"/>';
+    }
+    return s;
+  }
+
+  function makeImage(){
+    outEl.innerHTML='<div class="save-hint">이미지 만드는 중…</div>';
+    html2canvas(cardEl,{scale:2,backgroundColor:'#ffffff',useCORS:true}).then(function(cv){
+      var url=cv.toDataURL('image/png');
+      outEl.innerHTML='<div class="save-hint">✅ 완성! <b>모바일은 아래 이미지를 꾹 눌러</b> "이미지 저장", PC는 <b>저장 버튼</b>을 누르세요.</div>'
+        +'<a id="dl" download="갈매실거래_'+(cur?cur.name:'card')+'.png">💾 이미지 저장(PC)</a>'
+        +'<img src="'+url+'" alt="실거래 카드">';
+      var a=document.getElementById('dl'); a.href=url;
+      a.style.cssText='display:inline-block;background:#123a6b;color:#fff;font-weight:800;border-radius:9px;padding:9px 15px;text-decoration:none;margin-bottom:10px';
+    }).catch(function(e){
+      outEl.innerHTML='<div class="save-hint">이미지 생성에 실패했습니다. 다시 시도해 주세요.</div>';
+    });
+  }
+
+  document.querySelectorAll('#regionSeg button').forEach(function(b){
+    b.onclick=function(){ region=b.getAttribute('data-r');
+      document.querySelectorAll('#regionSeg button').forEach(function(x){x.classList.remove('on');}); b.classList.add('on');
+      rebuild(); };
+  });
+  document.getElementById('sortSel').onchange=function(e){ sortKey=e.target.value; rebuild(); };
+  document.getElementById('cxSel').onchange=function(e){ cur=list[+e.target.value]||null; render(); };
+  document.getElementById('makeBtn').onclick=makeImage;
+  rebuild();
+})();
+</script>
+<script src="assets/js/a11y.js" defer></script>
+</body>
+</html>

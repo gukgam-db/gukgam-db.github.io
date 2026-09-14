@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="모심 심볼(대안)">
+  <defs>
+    <linearGradient id="ag" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16c0af"/>
+      <stop offset="1" stop-color="#0b7d72"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="112" height="112" rx="30" fill="url(#ag)"/>
+  <!-- 보호자(큰 사람) -->
+  <circle cx="46" cy="43" r="13" fill="#ffffff"/>
+  <path d="M24 98 C24 71 68 71 68 98 Z" fill="#ffffff"/>
+  <!-- 어르신(작고 살짝 굽은 사람) -->
+  <circle cx="80" cy="52" r="10.5" fill="#ffffff" opacity="0.92"/>
+  <path d="M64 98 C64 77 96 77 96 98 Z" fill="#ffffff" opacity="0.92"/>
+  <!-- 마음(하트) -->
+  <path d="M62 26 C59 21 51 22 51 28.5 C51 33 59 37 62 40 C65 37 73 33 73 28.5 C73 22 65 21 62 26 Z" fill="#ffd7a8"/>
+</svg>

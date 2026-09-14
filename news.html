@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>부동산 뉴스·정책 | 갈매역삼성부동산</title>
+<meta name="description" content="대출·세금·공급·청약 등 부동산 정책·제도 관련 최신 뉴스 헤드라인을 매일 자동으로 모았습니다. 국토부·정책브리핑·청약홈 등 공식 정책 사이트 바로가기 제공. 갈매역삼성부동산.">
+<meta property="og:site_name" content="갈매역삼성부동산">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="부동산 뉴스·정책 | 갈매역삼성부동산">
+<meta property="og:description" content="대출·세금·공급·청약 등 부동산 정책·제도 관련 최신 뉴스 헤드라인을 매일 자동으로 모았습니다. 국토부·정책브리핑·청약홈 등 공식 정책 사이트 바로가기 제공. 갈매역삼성부동산.">
+<meta property="og:url" content="https://galmae-budongsan.com/news.html">
+<meta property="og:image" content="https://galmae-budongsan.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="부동산 뉴스·정책 | 갈매역삼성부동산">
+<meta name="twitter:description" content="대출·세금·공급·청약 등 부동산 정책·제도 관련 최신 뉴스 헤드라인을 매일 자동으로 모았습니다. 국토부·정책브리핑·청약홈 등 공식 정책 사이트 바로가기 제공. 갈매역삼성부동산.">
+<meta name="twitter:image" content="https://galmae-budongsan.com/assets/og-image.png">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .news-feed{ list-style:none; padding:0; margin:0; }
+  .news-item{ display:flex; gap:14px; align-items:flex-start; padding:16px 4px; border-bottom:1px solid var(--line); }
+  .news-item:last-child{ border-bottom:0; }
+  .news-num{ flex:0 0 auto; width:26px; height:26px; border-radius:50%; background:#eef3f8; color:#123a6b; font-weight:800; font-size:.82rem; display:flex; align-items:center; justify-content:center; margin-top:2px; }
+  .news-body{ min-width:0; flex:1; }
+  .news-title{ font-size:1.02rem; font-weight:700; color:var(--navy); line-height:1.45; text-decoration:none; display:block; }
+  .news-title:hover{ text-decoration:underline; }
+  .news-meta{ margin-top:4px; font-size:.8rem; color:var(--muted); display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+  .news-src{ background:#f1f5fa; border:1px solid var(--line); border-radius:10px; padding:1px 8px; font-weight:700; color:#4a5a6b; }
+  .news-empty{ text-align:center; padding:34px 16px; color:var(--muted); }
+  .news-empty .big{ font-size:2rem; margin-bottom:8px; }
+  .updated-chip{ font-size:.78rem; color:var(--muted); font-weight:600; }
+  .gov-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:12px; }
+  .gov-card{ display:block; border:1px solid var(--line); border-radius:12px; padding:14px 16px; text-decoration:none; background:#fff; transition:box-shadow .15s,border-color .15s; }
+  .gov-card:hover{ box-shadow:var(--shadow); border-color:#c3d3e6; text-decoration:none; }
+  .gov-card .gc-t{ font-weight:800; color:var(--navy); font-size:.98rem; }
+  .gov-card .gc-d{ font-size:.82rem; color:var(--muted); margin-top:3px; line-height:1.4; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="budongsan.html">🏢 갈매동 부동산 <span class="tag">갈매역삼성부동산</span></a>
+    <nav class="site-nav">
+      <a href="jido-search.html" data-nav="guri">구리·갈매</a>
+      <a href="jido-search.html?region=by" data-nav="by">남양주 별내</a>
+      <a href="silgeorae-lab.html">실거래가 분석 <span class="nav-badge">매일 업데이트</span></a>
+      <a href="news.html" class="active">뉴스·정책 <span class="nav-badge">매일 업데이트</span></a>
+      <a href="store.html">매물</a>
+      <a href="jaryo.html">자료실</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="breadcrumb"><a href="budongsan.html">홈</a> › 부동산 뉴스·정책</div>
+  <div class="page-head">
+    <h1>📰 부동산 뉴스·정책</h1>
+    <p class="lead">대출·세금·공급·청약 등 <strong>내 집 마련에 영향을 주는 정책·제도 소식</strong>을 매일 자동으로 모았습니다. 제목을 누르면 원문 기사로 이동합니다.</p>
+  </div>
+
+  <section class="section" id="feed">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:6px;">
+      <h2 style="margin:0;">🗞️ 오늘의 정책 헤드라인</h2>
+      <span class="updated-chip" id="updated"></span>
+    </div>
+    <ol class="news-feed" id="newsList">
+      <li class="news-empty" id="emptyBox">
+        <div class="big">🗞️</div>
+        <div>헤드라인을 불러오는 중입니다…</div>
+      </li>
+    </ol>
+    <p style="font-size:.78rem;color:var(--muted);margin:14px 2px 0;">
+      · 제목·출처·원문 링크만 제공합니다(기사 본문은 저장하지 않습니다). 자세한 내용은 각 언론사 원문에서 확인하세요.
+    </p>
+  </section>
+
+  <section class="section" id="official">
+    <h2>🏛️ 공식 정책 사이트 바로가기</h2>
+    <p style="color:var(--muted);margin:-4px 0 16px;font-size:.95rem;">뉴스보다 정확한 <strong>1차 정보</strong>는 정부·공공기관 발표가 기준입니다. 청약·세금·대출 규제는 아래에서 원문으로 확인하세요.</p>
+    <div class="gov-grid">
+      <a class="gov-card" href="https://www.molit.go.kr" target="_blank" rel="noopener">
+        <div class="gc-t">국토교통부</div><div class="gc-d">주택·부동산 정책, 보도자료·대책 발표</div></a>
+      <a class="gov-card" href="https://www.korea.kr" target="_blank" rel="noopener">
+        <div class="gc-t">대한민국 정책브리핑</div><div class="gc-d">정부 부처 공식 발표·정책 자료 모음</div></a>
+      <a class="gov-card" href="https://www.applyhome.co.kr" target="_blank" rel="noopener">
+        <div class="gc-t">청약홈 (한국부동산원)</div><div class="gc-d">아파트 청약 일정·자격·경쟁률 조회</div></a>
+      <a class="gov-card" href="https://www.realtyprice.kr" target="_blank" rel="noopener">
+        <div class="gc-t">부동산공시가격 알리미</div><div class="gc-d">공동주택·개별주택 공시가격 열람</div></a>
+      <a class="gov-card" href="https://rt.molit.go.kr" target="_blank" rel="noopener">
+        <div class="gc-t">국토부 실거래가 공개시스템</div><div class="gc-d">아파트·오피스텔 실거래가 원문 조회</div></a>
+      <a class="gov-card" href="https://www.reb.or.kr" target="_blank" rel="noopener">
+        <div class="gc-t">한국부동산원</div><div class="gc-d">주간·월간 시세 동향, 청약 통계</div></a>
+      <a class="gov-card" href="https://www.hf.go.kr" target="_blank" rel="noopener">
+        <div class="gc-t">한국주택금융공사(HF)</div><div class="gc-d">보금자리론·디딤돌 등 정책 대출 안내</div></a>
+      <a class="gov-card" href="https://www.hometax.go.kr" target="_blank" rel="noopener">
+        <div class="gc-t">국세청 홈택스</div><div class="gc-d">양도·취득·종부세 등 세금 조회·신고</div></a>
+    </div>
+  </section>
+
+  <div class="disclaimer">
+    ⚖️ 뉴스 헤드라인은 공개된 뉴스 검색 결과를 자동 수집한 것으로, 각 기사의 저작권은 해당 언론사에 있습니다. 정책은 발표·시행 시점에 따라 달라지므로, 실제 적용은 위 <strong>공식 사이트</strong>와 전문가 상담으로 확인하세요.
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h4>🏢 갈매역삼성부동산 · 갈매동 부동산</h4>
+    <div class="footer-links">
+      <a href="budongsan.html">홈</a>
+      <a href="silgeorae-lab.html">실거래가 분석</a>
+      <a href="news.html">뉴스·정책</a>
+      <a href="jutaek-imdaecha.html">주택임대차</a>
+      <a href="cheongyak.html">주택청약</a>
+      <a href="sege.html">부동산 세금</a>
+      <a href="sangga.html">상가임대차</a>
+      <a href="jaryo.html">자료실</a>
+    </div>
+    <div class="footer-note">뉴스 출처: 각 언론사(제목·링크만 제공). 정책 출처: 국토교통부·대한민국 정책브리핑 등. 참고용 정보이며 법적 효력은 없습니다. © 2026 갈매역삼성부동산.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var listEl = document.getElementById('newsList');
+  var emptyEl = document.getElementById('emptyBox');
+  var updEl = document.getElementById('updated');
+  function esc(s){ return (s||'').replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function showEmpty(msg){
+    emptyEl.innerHTML = '<div class="big">🗞️</div><div>'+msg+'</div>'+
+      '<div style="margin-top:10px;font-size:.85rem;">아래 <a href="#official">공식 정책 사이트</a>에서 최신 발표를 확인하실 수 있어요.</div>';
+  }
+  fetch('data/news.json?_=' + Date.now()).then(function(r){ return r.json(); }).then(function(d){
+    var items = (d && d.items) || [];
+    if(d && d.updated){ updEl.textContent = '최근 갱신 ' + d.updated; }
+    if(!items.length){ showEmpty('아직 수집된 헤드라인이 없습니다.'); return; }
+    listEl.innerHTML = items.map(function(it, i){
+      var meta = [];
+      if(it.source){ meta.push('<span class="news-src">'+esc(it.source)+'</span>'); }
+      if(it.date){ meta.push('<span>'+esc(it.date)+'</span>'); }
+      return '<li class="news-item">'+
+        '<span class="news-num">'+(i+1)+'</span>'+
+        '<div class="news-body">'+
+          '<a class="news-title" href="'+esc(it.link)+'" target="_blank" rel="noopener">'+esc(it.title)+'</a>'+
+          '<div class="news-meta">'+meta.join('')+'</div>'+
+        '</div></li>';
+    }).join('');
+  }).catch(function(){
+    showEmpty('헤드라인을 불러오지 못했습니다.');
+  });
+})();
+</script>
+<script src="assets/js/a11y.js" defer></script>
+</body>
+</html>

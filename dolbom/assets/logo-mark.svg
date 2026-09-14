@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="모심 심볼">
+  <defs>
+    <linearGradient id="mg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16c0af"/>
+      <stop offset="1" stop-color="#0b7d72"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="112" height="112" rx="30" fill="url(#mg)"/>
+  <!-- 하트: 사랑·돌봄 -->
+  <path d="M60 44 C53 33.5 36.5 36 36.5 50 C36.5 61 51 68.5 60 75 C69 68.5 83.5 61 83.5 50 C83.5 36 67 33.5 60 44 Z" fill="#ffffff"/>
+  <!-- 감싸 받쳐 드는 두 손 -->
+  <path d="M26 66 C26 86 43 94 60 94 C77 94 94 86 94 66 C94 78 82 84.5 60 84.5 C38 84.5 26 78 26 66 Z" fill="#ffffff"/>
+</svg>

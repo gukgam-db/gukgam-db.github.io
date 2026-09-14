@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="고마움 상조">
+  <circle cx="32" cy="26" r="12.4" fill="#FAFBF8" stroke="#2E5A4E" stroke-width="3.2"/>
+  <path d="M6 36c0 10.5 8.5 19 19 19" stroke="#2E5A4E" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M58 36c0 10.5-8.5 19-19 19" stroke="#2E5A4E" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M25 55h14" stroke="#B08C3A" stroke-width="3.2" stroke-linecap="round"/>
+</svg>

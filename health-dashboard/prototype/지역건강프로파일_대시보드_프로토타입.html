@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>지역 건강프로파일 대시보드 — 프로토타입</title>
+<style>
+  :root { color-scheme: light dark; }
+  .viz-root {
+    color-scheme: light;
+    --page:          #f9f9f7;
+    --surface-1:     #fcfcfb;
+    --text-primary:  #0b0b0b;
+    --text-secondary:#52514e;
+    --muted:         #898781;
+    --grid:          #e1e0d9;
+    --baseline:      #c3c2b7;
+    --border:        rgba(11,11,11,0.10);
+    --series-1:      #2a78d6;  /* 선택지역 */
+    --series-2:      #eb6834;  /* 전국 */
+    --band:          rgba(42,120,214,0.10);
+    --seq-100:#cde2fb; --seq-200:#9ec5f4; --seq-300:#6da7ec; --seq-400:#3987e5; --seq-500:#256abf; --seq-600:#184f95; --seq-700:#0d366b;
+    --good-text:     #006300;
+    --bad-text:      #b03030;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) .viz-root {
+      color-scheme: dark;
+      --page:#0d0d0d; --surface-1:#1a1a19; --text-primary:#ffffff; --text-secondary:#c3c2b7;
+      --muted:#898781; --grid:#2c2c2a; --baseline:#383835; --border:rgba(255,255,255,0.10);
+      --series-1:#3987e5; --series-2:#d95926; --band:rgba(57,135,229,0.16);
+      --good-text:#0ca30c; --bad-text:#e66767;
+    }
+  }
+  :root[data-theme="dark"] .viz-root {
+    color-scheme: dark;
+    --page:#0d0d0d; --surface-1:#1a1a19; --text-primary:#ffffff; --text-secondary:#c3c2b7;
+    --muted:#898781; --grid:#2c2c2a; --baseline:#383835; --border:rgba(255,255,255,0.10);
+    --series-1:#3987e5; --series-2:#d95926; --band:rgba(57,135,229,0.16);
+    --good-text:#0ca30c; --bad-text:#e66767;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { font-family: system-ui, -apple-system, "Segoe UI", "Malgun Gothic", sans-serif; }
+  .viz-root { background: var(--page); color: var(--text-primary); min-height: 100vh; padding: 16px; }
+  .wrap { max-width: 1180px; margin: 0 auto; }
+
+  header.top { display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:4px; }
+  .title { font-size: 20px; font-weight: 700; letter-spacing: -0.2px; }
+  .subtitle { font-size: 12.5px; color: var(--text-secondary); margin-top:2px; }
+  .badge { font-size: 11px; color: var(--muted); border:1px solid var(--border); border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
+  .themebtn { border:1px solid var(--border); background:var(--surface-1); color:var(--text-secondary); border-radius:8px; padding:5px 10px; font-size:12px; cursor:pointer; }
+
+  .controls { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:14px 0 16px; }
+  .controls label { font-size:11.5px; color:var(--muted); display:block; margin-bottom:3px; }
+  .ctrl { background:var(--surface-1); border:1px solid var(--border); border-radius:10px; padding:8px 10px; }
+  select { border:none; background:transparent; color:var(--text-primary); font-size:14px; font-weight:600; outline:none; max-width:180px; }
+  .yearctrl { flex:1 1 220px; min-width:200px; }
+  .yearrow { display:flex; align-items:center; gap:10px; }
+  input[type=range]{ flex:1; accent-color: var(--series-1); }
+  .yearval { font-weight:700; font-size:14px; font-variant-numeric: tabular-nums; }
+
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-bottom:12px; }
+  .kpi { background:var(--surface-1); border:1px solid var(--border); border-radius:14px; padding:14px 16px; }
+  .kpi .k-label { font-size:12px; color:var(--text-secondary); }
+  .kpi .k-value { font-size:30px; font-weight:700; letter-spacing:-0.5px; margin-top:4px; }
+  .kpi .k-value small { font-size:15px; font-weight:600; color:var(--text-secondary); }
+  .kpi .k-sub { font-size:11.5px; color:var(--muted); margin-top:4px; }
+  .k-delta-up { color: var(--bad-text); } .k-delta-down { color: var(--good-text); }
+
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media (max-width: 820px){ .grid2 { grid-template-columns:1fr; } }
+  .card { background:var(--surface-1); border:1px solid var(--border); border-radius:14px; padding:16px; margin-bottom:12px; }
+  .card h3 { font-size:14px; font-weight:700; }
+  .card .desc { font-size:11.5px; color:var(--muted); margin:2px 0 10px; }
+  .legend { display:flex; gap:14px; font-size:12px; color:var(--text-secondary); margin-bottom:6px; flex-wrap:wrap; }
+  .legend span { display:inline-flex; align-items:center; gap:6px; }
+  .sw { width:14px; height:3px; border-radius:2px; display:inline-block; }
+
+  svg text { font-family: inherit; }
+  .axis { font-size:10.5px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+
+  /* tile map */
+  .tile { cursor:pointer; transition: opacity .15s; }
+  .tile:hover rect { stroke: var(--text-primary); }
+  .tname { font-size: 11px; font-weight:600; pointer-events:none; }
+  .tval  { font-size: 10px; pointer-events:none; font-variant-numeric: tabular-nums; }
+
+  /* ranking bars */
+  .rank { display:flex; flex-direction:column; gap:5px; }
+  .rrow { display:grid; grid-template-columns: 30px 52px 1fr 44px; align-items:center; gap:8px; font-size:12px; }
+  .rrow .rn { color:var(--muted); font-variant-numeric:tabular-nums; text-align:right; }
+  .rrow .rl { color:var(--text-secondary); font-weight:600; }
+  .rrow .bar-track { height:14px; position:relative; }
+  .rrow .bar { position:absolute; left:0; top:0; bottom:0; border-radius:0 4px 4px 0; background: var(--baseline); }
+  .rrow.sel .bar { background: var(--series-1); }
+  .rrow.sel .rl, .rrow.sel .rn { color: var(--text-primary); font-weight:700; }
+  .rrow .rv { color:var(--text-secondary); font-variant-numeric:tabular-nums; text-align:right; }
+  .rrow.sel .rv { color:var(--text-primary); font-weight:700; }
+
+  /* table view */
+  details.tbl summary { font-size:12.5px; color:var(--text-secondary); cursor:pointer; margin-top:4px; }
+  table { width:100%; border-collapse:collapse; font-size:12.5px; margin-top:8px; }
+  th, td { text-align:right; padding:5px 8px; border-bottom:1px solid var(--grid); font-variant-numeric:tabular-nums; }
+  th:first-child, td:first-child { text-align:left; }
+  th { color:var(--muted); font-weight:600; }
+
+  .tooltip { position:fixed; pointer-events:none; background:var(--surface-1); border:1px solid var(--border);
+    border-radius:10px; padding:8px 12px; font-size:12px; box-shadow:0 4px 16px rgba(0,0,0,.14);
+    z-index:50; display:none; min-width:120px; }
+  .tooltip .tt-t { font-weight:700; margin-bottom:3px; }
+  .tooltip .tt-r { display:flex; justify-content:space-between; gap:12px; color:var(--text-secondary); }
+  .tooltip .tt-r b { color:var(--text-primary); font-variant-numeric:tabular-nums; }
+
+  footer { font-size:11.5px; color:var(--muted); margin:18px 0 8px; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="viz-root" id="root">
+<div class="wrap">
+
+  <header class="top">
+    <div>
+      <div class="title">지역 건강프로파일 대시보드</div>
+      <div class="subtitle">지역사회건강조사 지표 · 시도/시군구 비교 분석 — 1단계 프로토타입</div>
+    </div>
+    <div style="display:flex; gap:8px; align-items:center;">
+      <span class="badge">샘플 데이터 (KOSIS API 연동 전)</span>
+      <button class="themebtn" id="themeBtn">☾ 다크</button>
+    </div>
+  </header>
+
+  <div class="controls">
+    <div class="ctrl"><label>지표 선택</label><select id="selInd"></select></div>
+    <div class="ctrl"><label>지역 선택</label><select id="selRegion"></select></div>
+    <div class="ctrl yearctrl"><label>연도</label>
+      <div class="yearrow"><input type="range" id="selYear"><span class="yearval" id="yearVal"></span></div>
+    </div>
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3 id="trendTitle">연도별 추이</h3>
+      <div class="desc">선택 지역과 전국 중앙값 비교 (2008–2024)</div>
+      <div class="legend">
+        <span><i class="sw" style="background:var(--series-1)"></i><span id="lgRegion"></span></span>
+        <span><i class="sw" style="background:var(--series-2)"></i>전국</span>
+      </div>
+      <svg id="trendSvg" viewBox="0 0 560 260" width="100%" role="img" aria-label="연도별 추이 선 그래프"></svg>
+    </div>
+
+    <div class="card">
+      <h3>시도 분포 지도</h3>
+      <div class="desc" id="mapDesc">타일을 누르면 지역이 선택됩니다</div>
+      <svg id="mapSvg" viewBox="0 0 560 300" width="100%" role="img" aria-label="시도별 단계구분 타일맵"></svg>
+    </div>
+
+    <div class="card">
+      <h3>시도 순위</h3>
+      <div class="desc" id="rankDesc"></div>
+      <div class="rank" id="rank"></div>
+    </div>
+
+    <div class="card">
+      <h3>지역 간 격차 추이</h3>
+      <div class="desc">연도별 시도 최솟값–최댓값 범위와 전국 중앙값</div>
+      <div class="legend">
+        <span><i class="sw" style="background:var(--band); height:10px;"></i>시도 범위(최소–최대)</span>
+        <span><i class="sw" style="background:var(--series-2)"></i>전국 중앙값</span>
+      </div>
+      <svg id="gapSvg" viewBox="0 0 560 240" width="100%" role="img" aria-label="지역 간 격차 범위 그래프"></svg>
+    </div>
+  </div>
+
+  <div class="card">
+    <details class="tbl">
+      <summary>표로 보기 (선택 연도 · 전체 시도)</summary>
+      <div id="tblWrap"></div>
+    </details>
+  </div>
+
+  <footer>
+    ※ 본 화면은 UI/UX 프로토타입으로, 표시된 수치는 실제 통계가 아닌 <b>추세를 모사한 샘플 데이터</b>입니다.<br>
+    실서비스 시 자료원: 질병관리청 지역사회건강조사(KOSIS openAPI), e-지방지표 — CIAT(수도권질병대응센터) 구조 참조.
+  </footer>
+</div>
+</div>
+<div class="tooltip" id="tt"></div>
+
+<script>
+const DATA = {"years": [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024], "sido": ["서울", "부산", "대구", "인천", "광주", "대전", "울산", "세종", "경기", "강원", "충북", "충남", "전북", "전남", "경북", "경남", "제주"], "indicators": {"현재흡연율": {"unit": "%", "bad": true, "national": [27.0, 26.1, 25.5, 25.2, 24.9, 24.3, 23.2, 21.8, 22.8, 21.1, 21.0, 20.1, 18.8, 19.5, 19.2, 18.3, 17.6], "sido": {"서울": [26.9, 26.1, 25.4, 25.2, 24.8, 24.3, 22.8, 21.6, 21.6, 20.2, 20.1, 19.6, 18.8, 19.1, 18.6, 17.9, 16.6], "부산": [29.1, 27.3, 26.9, 25.5, 26.5, 24.9, 24.9, 24.5, 23.7, 22.5, 22.3, 22.4, 21.1, 19.8, 19.4, 19.2, 18.1], "대구": [23.5, 22.1, 20.8, 20.7, 20.3, 20.6, 19.4, 17.5, 17.3, 16.8, 15.9, 16.3, 15.7, 14.4, 14.0, 14.7, 12.9], "인천": [27.5, 26.3, 26.9, 26.5, 25.9, 24.6, 24.8, 24.4, 23.3, 23.1, 22.5, 20.7, 20.8, 20.4, 20.1, 18.8, 18.5], "광주": [27.4, 26.1, 26.7, 26.0, 24.9, 24.6, 23.7, 23.5, 23.2, 21.1, 21.4, 21.1, 19.1, 19.8, 19.3, 19.0, 17.6], "대전": [24.7, 22.8, 24.2, 23.4, 23.4, 21.7, 20.9, 20.8, 20.8, 18.1, 18.5, 17.5, 17.6, 17.2, 16.0, 15.9, 15.0], "울산": [24.4, 22.3, 21.6, 21.6, 22.0, 20.4, 20.2, 19.9, 19.1, 17.7, 17.5, 16.5, 15.5, 15.4, 15.8, 14.4, 13.4], "세종": [29.6, 27.5, 28.5, 27.7, 26.3, 26.0, 26.4, 24.0, 23.7, 24.0, 23.0, 22.6, 22.0, 21.6, 20.5, 19.6, 19.2], "경기": [25.0, 24.1, 23.8, 23.7, 22.1, 22.0, 21.6, 21.0, 19.8, 18.6, 18.7, 18.5, 17.1, 16.7, 17.8, 16.3, 16.1], "강원": [22.5, 22.9, 22.4, 22.0, 22.0, 21.2, 19.7, 18.7, 18.1, 17.4, 16.4, 16.8, 16.8, 15.1, 16.0, 14.7, 13.7], "충북": [24.2, 22.2, 22.2, 20.6, 21.0, 21.6, 20.6, 19.1, 19.3, 17.1, 17.7, 17.4, 16.9, 15.4, 16.8, 14.6, 13.9], "충남": [28.9, 26.8, 26.4, 27.1, 26.0, 26.0, 25.8, 23.9, 24.1, 22.9, 23.3, 21.8, 21.6, 20.4, 20.7, 20.5, 18.9], "전북": [27.3, 24.8, 25.2, 25.6, 25.6, 23.3, 23.2, 21.8, 22.8, 21.7, 21.3, 20.1, 18.6, 19.5, 19.2, 18.3, 18.0], "전남": [27.4, 27.6, 26.4, 26.5, 27.0, 25.0, 24.6, 23.1, 23.8, 22.2, 22.5, 22.5, 20.4, 20.9, 20.2, 19.9, 19.7], "경북": [27.0, 26.4, 25.9, 24.8, 26.2, 25.4, 24.4, 23.8, 23.3, 22.1, 21.0, 21.0, 21.3, 21.0, 20.4, 20.2, 18.9], "경남": [25.8, 24.7, 25.5, 24.7, 24.8, 24.2, 22.7, 21.2, 20.7, 20.9, 20.7, 19.6, 18.8, 17.6, 18.9, 18.1, 17.3], "제주": [30.2, 27.3, 28.4, 27.1, 28.2, 27.4, 27.2, 25.6, 24.5, 24.4, 22.9, 24.1, 22.9, 21.5, 22.5, 21.2, 20.0]}}, "고위험음주율": {"unit": "%", "bad": true, "national": [18.9, 18.3, 17.3, 17.3, 16.8, 17.2, 17.0, 16.1, 15.2, 14.8, 14.8, 14.1, 14.8, 13.1, 13.3, 12.7, 12.8], "sido": {"서울": [16.8, 16.8, 15.5, 15.3, 16.1, 16.1, 15.1, 13.9, 14.1, 13.4, 13.5, 12.3, 12.9, 12.5, 12.7, 11.7, 11.8], "부산": [16.7, 14.7, 14.6, 14.6, 14.7, 15.1, 14.5, 13.2, 12.8, 12.6, 13.7, 12.6, 11.5, 10.0, 11.4, 10.3, 10.3], "대구": [18.9, 17.8, 16.4, 16.2, 15.7, 16.4, 16.6, 16.1, 14.7, 14.7, 15.4, 13.8, 14.8, 13.1, 13.3, 12.8, 12.2], "인천": [20.6, 18.4, 18.4, 17.8, 19.0, 18.5, 17.4, 16.6, 17.7, 16.4, 17.4, 16.2, 16.9, 14.9, 16.2, 14.8, 14.9], "광주": [17.8, 17.4, 16.3, 16.7, 16.3, 16.1, 15.4, 14.2, 15.0, 14.6, 14.5, 13.8, 13.3, 11.6, 12.6, 11.3, 12.0], "대전": [18.8, 17.9, 18.1, 18.0, 16.6, 17.5, 17.5, 16.1, 15.8, 15.5, 16.7, 15.2, 15.5, 14.4, 14.9, 12.9, 12.8], "울산": [19.4, 18.5, 18.0, 16.9, 17.3, 17.1, 17.0, 15.1, 15.1, 14.8, 14.4, 14.1, 14.8, 12.9, 13.1, 12.3, 12.3], "세종": [17.4, 17.0, 16.7, 15.5, 16.4, 15.8, 16.2, 14.2, 14.9, 13.9, 14.5, 14.4, 13.8, 13.1, 13.9, 11.5, 11.8], "경기": [19.4, 19.1, 17.3, 17.6, 17.6, 17.6, 17.5, 16.6, 15.2, 14.2, 14.7, 13.8, 14.8, 13.2, 13.2, 12.7, 13.3], "강원": [17.7, 16.8, 15.1, 16.1, 16.2, 14.9, 14.4, 13.7, 14.4, 14.2, 13.5, 13.1, 12.1, 11.8, 12.3, 10.0, 11.7], "충북": [20.2, 18.3, 19.3, 18.8, 17.8, 18.2, 17.9, 17.0, 16.8, 17.1, 17.4, 15.2, 16.9, 14.9, 16.0, 14.5, 14.6], "충남": [16.9, 14.6, 15.0, 14.3, 14.0, 14.2, 14.5, 12.5, 13.7, 13.0, 12.0, 12.5, 11.5, 10.6, 11.5, 9.8, 9.7], "전북": [20.7, 19.7, 20.2, 19.2, 20.0, 19.9, 19.0, 17.3, 19.1, 16.9, 18.4, 17.1, 17.7, 16.3, 16.9, 15.3, 16.4], "전남": [18.6, 18.3, 17.0, 17.3, 16.8, 17.2, 16.7, 16.0, 15.3, 15.3, 14.8, 13.8, 13.7, 12.4, 12.9, 12.3, 13.2], "경북": [19.6, 19.0, 18.8, 19.0, 18.0, 17.8, 17.2, 16.1, 16.2, 15.4, 15.4, 15.4, 15.0, 14.9, 14.8, 13.7, 13.2], "경남": [20.2, 19.9, 18.7, 18.4, 18.2, 18.0, 17.5, 18.0, 17.2, 17.2, 16.8, 15.3, 16.5, 14.1, 15.0, 14.4, 14.5], "제주": [19.1, 19.3, 18.4, 18.6, 17.4, 18.3, 17.9, 16.7, 17.6, 17.2, 16.3, 16.0, 16.2, 15.1, 16.1, 13.5, 14.1]}}, "걷기실천율": {"unit": "%", "bad": false, "national": [41.8, 41.1, 41.3, 42.4, 42.4, 44.2, 43.5, 44.8, 44.6, 45.5, 45.9, 46.3, 47.1, 47.2, 48.2, 47.9, 49.1], "sido": {"서울": [46.4, 46.2, 47.4, 47.5, 47.8, 48.5, 50.7, 50.6, 50.5, 52.2, 52.8, 52.3, 52.4, 52.7, 54.3, 54.1, 54.9], "부산": [38.4, 39.0, 39.7, 39.8, 39.5, 41.0, 41.6, 42.4, 43.1, 43.3, 44.4, 43.9, 45.9, 46.4, 46.3, 46.4, 46.7], "대구": [41.8, 40.6, 41.3, 42.4, 42.2, 43.0, 43.4, 43.1, 43.8, 45.5, 45.7, 46.1, 45.9, 47.2, 48.2, 47.6, 48.5], "인천": [43.4, 42.6, 42.4, 42.6, 43.6, 44.6, 44.4, 46.1, 46.3, 46.5, 46.3, 47.7, 47.8, 49.0, 48.9, 48.7, 50.2], "광주": [46.3, 46.7, 46.9, 48.3, 48.0, 49.7, 50.3, 49.4, 50.8, 51.2, 52.6, 52.1, 53.4, 53.2, 53.6, 54.4, 55.7], "대전": [44.8, 45.4, 45.5, 46.2, 46.6, 47.4, 47.8, 47.7, 49.0, 49.8, 49.7, 50.8, 50.2, 52.3, 52.5, 53.0, 52.7], "울산": [33.9, 34.1, 33.7, 33.2, 34.5, 35.7, 36.8, 36.9, 36.6, 37.8, 38.1, 38.8, 39.0, 40.2, 39.6, 40.5, 41.9], "세종": [35.2, 35.0, 35.8, 36.1, 36.5, 36.7, 37.2, 38.0, 38.4, 39.7, 38.6, 38.8, 40.6, 41.8, 42.3, 42.1, 42.0], "경기": [37.4, 37.6, 37.3, 38.1, 38.8, 38.2, 40.2, 39.4, 39.9, 40.5, 41.6, 41.8, 42.9, 42.5, 42.6, 44.3, 44.3], "강원": [44.9, 43.4, 44.4, 44.4, 44.7, 45.3, 47.3, 47.6, 47.6, 47.6, 48.6, 48.6, 49.7, 50.6, 50.5, 50.4, 52.0], "충북": [41.1, 41.1, 41.1, 42.1, 42.4, 44.2, 43.5, 44.8, 44.6, 45.0, 45.9, 46.3, 47.1, 46.6, 47.9, 47.9, 49.1], "충남": [37.3, 36.9, 36.9, 37.7, 38.0, 39.1, 39.8, 39.8, 40.5, 41.2, 42.1, 41.8, 41.9, 42.9, 43.4, 44.0, 43.3], "전북": [34.6, 33.4, 33.8, 34.9, 36.1, 36.2, 37.6, 37.5, 36.8, 38.9, 38.7, 39.5, 40.1, 40.1, 40.0, 41.8, 40.8], "전남": [43.9, 43.5, 44.5, 44.9, 45.0, 45.2, 46.7, 45.4, 46.8, 47.7, 48.6, 48.8, 49.5, 50.7, 51.2, 50.1, 50.8], "경북": [44.1, 43.3, 44.4, 43.5, 43.5, 45.9, 46.6, 45.6, 46.2, 46.7, 48.6, 47.5, 48.6, 48.6, 50.3, 49.2, 50.2], "경남": [47.7, 48.0, 47.5, 48.5, 47.8, 49.3, 49.4, 50.2, 50.5, 52.5, 51.3, 52.1, 53.0, 54.7, 54.8, 53.7, 55.3], "제주": [41.1, 39.8, 40.4, 40.4, 40.6, 42.9, 42.9, 43.4, 43.7, 44.7, 44.1, 45.7, 45.4, 46.0, 47.1, 46.5, 48.2]}}, "비만율(자가보고)": {"unit": "%", "bad": true, "national": [20.8, 22.0, 23.1, 24.1, 24.4, 25.8, 25.1, 27.2, 27.1, 28.1, 29.2, 29.7, 31.1, 31.6, 31.7, 33.7, 33.4], "sido": {"서울": [18.9, 20.5, 21.9, 22.6, 22.8, 25.2, 23.4, 25.3, 26.2, 25.9, 27.3, 28.6, 29.8, 29.4, 31.4, 32.3, 32.3], "부산": [17.8, 19.7, 21.5, 21.2, 22.0, 23.6, 22.3, 24.5, 24.0, 25.0, 26.1, 26.7, 27.5, 28.1, 29.2, 30.4, 30.1], "대구": [16.8, 19.0, 19.2, 19.3, 21.1, 22.9, 22.1, 24.0, 23.9, 24.2, 24.8, 25.9, 27.8, 28.0, 29.0, 30.4, 31.0], "인천": [22.8, 24.0, 24.9, 25.8, 25.5, 27.0, 28.0, 28.9, 29.5, 29.9, 31.3, 32.0, 33.6, 33.3, 33.7, 35.4, 34.4], "광주": [22.0, 21.7, 23.1, 24.2, 24.1, 25.8, 24.9, 28.3, 27.7, 28.1, 28.6, 30.2, 30.5, 31.8, 31.6, 33.7, 33.7], "대전": [23.5, 24.4, 25.5, 24.7, 25.2, 27.0, 27.5, 29.4, 28.5, 30.0, 30.5, 31.1, 32.1, 33.0, 32.5, 34.8, 34.6], "울산": [20.9, 22.0, 22.5, 23.2, 24.1, 24.7, 24.9, 26.6, 26.3, 27.3, 28.3, 28.4, 31.1, 30.1, 31.2, 33.5, 33.2], "세종": [23.9, 23.4, 26.4, 25.0, 25.5, 28.8, 28.4, 29.7, 29.6, 30.6, 31.0, 31.2, 32.4, 32.9, 34.6, 35.9, 36.4], "경기": [20.5, 22.7, 23.2, 23.9, 24.4, 25.8, 25.4, 27.2, 27.1, 27.6, 29.2, 29.1, 31.2, 32.0, 31.7, 34.1, 34.4], "강원": [17.5, 18.2, 19.8, 20.7, 21.5, 23.0, 21.8, 24.7, 24.1, 25.4, 26.3, 26.4, 28.6, 28.0, 28.9, 30.6, 31.1], "충북": [20.6, 21.2, 23.4, 23.3, 23.7, 25.0, 25.5, 26.9, 27.1, 27.1, 29.4, 28.7, 31.5, 31.5, 31.8, 33.3, 33.3], "충남": [25.2, 26.2, 26.9, 27.7, 27.9, 29.0, 28.9, 30.1, 29.9, 30.7, 33.0, 32.7, 34.7, 34.3, 34.5, 36.3, 36.7], "전북": [17.5, 17.6, 19.6, 19.5, 20.2, 21.8, 21.9, 24.0, 23.6, 23.3, 24.3, 26.0, 26.6, 27.4, 28.0, 30.1, 30.1], "전남": [23.6, 23.5, 25.4, 26.6, 26.6, 27.7, 27.8, 30.1, 28.9, 29.7, 31.4, 32.0, 33.1, 33.4, 33.9, 35.5, 35.3], "경북": [23.9, 24.6, 26.2, 25.9, 26.5, 29.5, 28.4, 29.7, 29.5, 30.1, 32.4, 31.7, 34.3, 34.4, 35.2, 35.4, 36.0], "경남": [20.7, 21.9, 23.0, 24.4, 24.8, 26.6, 25.1, 27.4, 27.3, 28.5, 28.6, 29.7, 30.7, 31.6, 31.8, 33.7, 33.4], "제주": [20.8, 22.2, 22.9, 24.1, 24.7, 25.4, 24.8, 26.8, 27.0, 28.5, 29.2, 29.8, 30.0, 30.2, 31.7, 33.8, 33.3]}}, "우울감경험률": {"unit": "%", "bad": true, "national": [4.6, 5.5, 5.8, 5.3, 5.6, 6.0, 6.4, 5.5, 6.1, 7.0, 6.1, 6.4, 6.4, 6.5, 6.9, 6.9, 7.1], "sido": {"서울": [6.2, 7.6, 7.5, 6.2, 7.3, 7.0, 7.5, 7.4, 8.7, 8.9, 7.6, 9.5, 9.0, 7.8, 8.9, 9.1, 8.9], "부산": [4.3, 4.7, 5.2, 5.1, 4.8, 6.0, 5.3, 5.4, 5.9, 7.5, 6.1, 6.2, 6.4, 6.5, 7.3, 6.7, 6.1], "대구": [2.7, 4.5, 4.5, 4.3, 5.0, 3.9, 4.3, 4.5, 5.6, 5.2, 5.6, 5.5, 6.0, 5.7, 6.3, 5.7, 6.8], "인천": [5.5, 6.1, 6.6, 5.8, 8.2, 7.0, 8.8, 7.2, 7.2, 8.9, 7.2, 8.0, 8.8, 8.7, 7.9, 8.3, 8.6], "광주": [6.0, 7.4, 6.7, 7.3, 7.2, 6.8, 8.6, 7.1, 8.2, 8.9, 7.1, 8.5, 9.0, 8.3, 8.1, 8.4, 9.4], "대전": [5.2, 5.9, 6.6, 5.4, 5.6, 6.7, 6.7, 7.1, 6.3, 8.3, 7.5, 6.4, 7.5, 6.7, 7.7, 8.2, 8.5], "울산": [5.6, 7.0, 5.8, 5.3, 7.3, 6.2, 7.1, 6.7, 7.2, 8.1, 7.9, 7.3, 8.0, 7.4, 7.5, 7.9, 8.2], "세종": [2.7, 4.8, 4.6, 3.8, 4.9, 3.9, 4.8, 4.4, 5.9, 5.4, 5.8, 5.5, 4.8, 5.9, 5.4, 6.9, 5.9], "경기": [4.2, 5.5, 4.7, 4.2, 4.4, 4.8, 6.4, 5.5, 5.8, 6.9, 5.7, 6.4, 5.9, 4.9, 5.2, 5.8, 6.8], "강원": [5.7, 6.4, 7.3, 6.3, 7.1, 5.7, 7.0, 7.5, 7.5, 7.9, 7.6, 8.1, 6.8, 8.1, 7.7, 8.0, 8.3], "충북": [5.8, 6.7, 6.6, 5.3, 7.4, 6.0, 7.8, 5.5, 6.2, 7.0, 6.3, 7.0, 7.8, 6.9, 8.2, 8.8, 8.5], "충남": [3.6, 4.5, 3.9, 3.7, 4.8, 4.4, 4.7, 5.3, 4.4, 6.1, 5.5, 5.7, 6.1, 5.4, 6.1, 5.3, 5.2], "전북": [5.3, 6.5, 6.9, 5.8, 7.0, 6.3, 7.5, 6.2, 7.9, 7.8, 7.7, 8.0, 7.3, 6.7, 6.9, 8.3, 8.3], "전남": [4.6, 5.1, 6.0, 5.5, 6.4, 6.2, 5.6, 5.2, 6.1, 6.4, 6.0, 6.0, 6.0, 5.5, 6.0, 6.9, 7.1], "경북": [3.6, 3.4, 3.8, 3.8, 4.0, 4.4, 4.8, 4.1, 4.6, 5.0, 3.8, 5.9, 5.1, 5.7, 4.5, 5.5, 4.8], "경남": [3.9, 4.5, 4.4, 4.0, 5.3, 4.1, 5.9, 4.9, 5.5, 5.5, 4.9, 5.6, 5.0, 5.5, 4.8, 6.3, 6.6], "제주": [4.6, 5.1, 4.3, 5.3, 5.0, 5.3, 5.4, 5.7, 5.9, 5.6, 5.5, 5.9, 5.1, 5.0, 5.6, 6.5, 6.3]}}}};
+
+const $ = id => document.getElementById(id);
+const YEARS = DATA.years, SIDO = DATA.sido;
+let ind = Object.keys(DATA.indicators)[0];
+let region = "서울";
+let year = YEARS[YEARS.length-1];
+
+/* ---------- theme ---------- */
+const rootEl = document.documentElement;
+$("themeBtn").onclick = () => {
+  const cur = rootEl.getAttribute("data-theme");
+  const next = cur === "dark" ? "light" : "dark";
+  rootEl.setAttribute("data-theme", next);
+  $("themeBtn").textContent = next === "dark" ? "☀ 라이트" : "☾ 다크";
+  renderAll();
+};
+
+/* ---------- controls ---------- */
+const selInd = $("selInd"), selRegion = $("selRegion"), selYear = $("selYear");
+Object.keys(DATA.indicators).forEach(k => selInd.add(new Option(k, k)));
+SIDO.forEach(s => selRegion.add(new Option(s, s)));
+selRegion.value = region;
+selYear.min = 0; selYear.max = YEARS.length-1; selYear.value = YEARS.length-1;
+selInd.onchange = () => { ind = selInd.value; renderAll(); };
+selRegion.onchange = () => { region = selRegion.value; renderAll(); };
+selYear.oninput = () => { year = YEARS[+selYear.value]; renderAll(); };
+
+/* ---------- helpers ---------- */
+const D = () => DATA.indicators[ind];
+const yi = () => YEARS.indexOf(year);
+const css = v => getComputedStyle($("root")).getPropertyValue(v).trim();
+const fmt = v => v == null ? "–" : v.toFixed(1);
+const tt = $("tt");
+function showTT(html, x, y){ tt.innerHTML = html; tt.style.display="block";
+  const w = tt.offsetWidth, h = tt.offsetHeight;
+  tt.style.left = Math.min(x+14, innerWidth - w - 8) + "px";
+  tt.style.top  = Math.max(8, y - h - 12) + "px"; }
+function hideTT(){ tt.style.display = "none"; }
+
+const SEQ = ["--seq-100","--seq-200","--seq-300","--seq-400","--seq-500","--seq-600","--seq-700"];
+function seqColor(v, min, max){
+  const t = max === min ? 0.5 : (v - min) / (max - min);
+  return css(SEQ[Math.min(6, Math.floor(t * 7))]);
+}
+
+/* ---------- KPI ---------- */
+function renderKPI(){
+  const d = D(), i = yi();
+  const rv = d.sido[region][i], nv = d.national[i];
+  const prev = i > 0 ? d.sido[region][i-1] : null;
+  const delta = prev == null ? null : rv - prev;
+  const sorted = SIDO.map(s => [s, d.sido[s][i]]).sort((a,b) => d.bad ? a[1]-b[1] : b[1]-a[1]);
+  const rankPos = sorted.findIndex(x => x[0] === region) + 1;
+  const goodDown = d.bad;
+  const dCls = delta == null ? "" : (delta > 0 ? (goodDown ? "k-delta-up" : "k-delta-down")
+                                               : (goodDown ? "k-delta-down" : "k-delta-up"));
+  const dArrow = delta == null ? "" : (delta > 0 ? "▲" : "▼");
+  $("kpis").innerHTML = `
+    <div class="kpi"><div class="k-label">${region} · ${ind}</div>
+      <div class="k-value">${fmt(rv)}<small> ${d.unit}</small></div>
+      <div class="k-sub ${dCls}">${delta==null?"":dArrow+" 전년 대비 "+fmt(Math.abs(delta))+"%p"}</div></div>
+    <div class="kpi"><div class="k-label">전국 중앙값 (${year})</div>
+      <div class="k-value">${fmt(nv)}<small> ${d.unit}</small></div>
+      <div class="k-sub">${region}과의 차이 ${fmt(rv-nv)}%p</div></div>
+    <div class="kpi"><div class="k-label">전국 순위 (양호한 순)</div>
+      <div class="k-value">${rankPos}<small> / 17</small></div>
+      <div class="k-sub">${d.bad ? "낮을수록 양호" : "높을수록 양호"}</div></div>
+    <div class="kpi"><div class="k-label">17개 시도 격차 (${year})</div>
+      <div class="k-value">${fmt(sorted[sorted.length-1][1]-sorted[0][1])}<small> %p</small></div>
+      <div class="k-sub">${sorted[0][0]} ↔ ${sorted[sorted.length-1][0]}</div></div>`;
+}
+
+/* ---------- trend line chart ---------- */
+function renderTrend(){
+  const d = D();
+  const svg = $("trendSvg");
+  const W = 560, H = 260, L = 40, R = 16, T = 14, B = 28;
+  const rSeries = d.sido[region], nSeries = d.national;
+  const all = rSeries.concat(nSeries);
+  const min = Math.floor(Math.min(...all) - 1), max = Math.ceil(Math.max(...all) + 1);
+  const x = i => L + (W-L-R) * i / (YEARS.length-1);
+  const y = v => T + (H-T-B) * (1 - (v-min)/(max-min));
+  const path = arr => arr.map((v,i) => (i?"L":"M") + x(i).toFixed(1) + " " + y(v).toFixed(1)).join(" ");
+  const ticks = 4; let g = "";
+  for (let k = 0; k <= ticks; k++){
+    const v = min + (max-min)*k/ticks, yy = y(v);
+    g += `<line x1="${L}" x2="${W-R}" y1="${yy}" y2="${yy}" stroke="${css('--grid')}" stroke-width="1"/>
+          <text class="axis" x="${L-6}" y="${yy+3.5}" text-anchor="end">${v.toFixed(0)}</text>`;
+  }
+  let xt = "";
+  for (let i = 0; i < YEARS.length; i += 4)
+    xt += `<text class="axis" x="${x(i)}" y="${H-8}" text-anchor="middle">${YEARS[i]}</text>`;
+  const cy = x(yi());
+  svg.innerHTML = g + xt +
+    `<line x1="${cy}" x2="${cy}" y1="${T}" y2="${H-B}" stroke="${css('--baseline')}" stroke-width="1" stroke-dasharray="3 3"/>` +
+    `<path d="${path(nSeries)}" fill="none" stroke="${css('--series-2')}" stroke-width="2" stroke-linejoin="round"/>` +
+    `<path d="${path(rSeries)}" fill="none" stroke="${css('--series-1')}" stroke-width="2" stroke-linejoin="round"/>` +
+    `<circle cx="${cy}" cy="${y(rSeries[yi()])}" r="4" fill="${css('--series-1')}" stroke="${css('--surface-1')}" stroke-width="2"/>` +
+    `<circle cx="${cy}" cy="${y(nSeries[yi()])}" r="4" fill="${css('--series-2')}" stroke="${css('--surface-1')}" stroke-width="2"/>` +
+    `<rect id="trendHit" x="${L}" y="${T}" width="${W-L-R}" height="${H-T-B}" fill="transparent"/>`;
+  $("lgRegion").textContent = region;
+  $("trendTitle").textContent = `${ind} 추이`;
+  const hit = $("trendHit");
+  hit.onmousemove = hit.ontouchmove = ev => {
+    const pt = ev.touches ? ev.touches[0] : ev;
+    const box = svg.getBoundingClientRect();
+    const px = (pt.clientX - box.left) / box.width * W;
+    const i = Math.max(0, Math.min(YEARS.length-1, Math.round((px - L)/(W-L-R)*(YEARS.length-1))));
+    showTT(`<div class="tt-t">${YEARS[i]}년</div>
+      <div class="tt-r"><span>${region}</span><b>${fmt(rSeries[i])}${d.unit}</b></div>
+      <div class="tt-r"><span>전국</span><b>${fmt(nSeries[i])}${d.unit}</b></div>`, pt.clientX, pt.clientY);
+  };
+  hit.onmouseleave = hit.ontouchend = hideTT;
+}
+
+/* ---------- tile map ---------- */
+const TILE_POS = { "서울":[1,0], "강원":[3,0], "인천":[0,1], "경기":[1,1], "충북":[2,1], "경북":[3,1],
+  "충남":[0,2], "세종":[1,2], "대전":[2,2], "대구":[3,2], "울산":[4,2],
+  "전북":[1,3], "경남":[2,3], "부산":[3,3], "광주":[0,4], "전남":[1,4], "제주":[0,5] };
+function renderMap(){
+  const d = D(), i = yi();
+  const vals = SIDO.map(s => d.sido[s][i]);
+  const min = Math.min(...vals), max = Math.max(...vals);
+  const cell = 86, gap = 6, ox = 30, oy = 6;
+  let out = "";
+  SIDO.forEach(s => {
+    const [cx, cyy] = TILE_POS[s];
+    const v = d.sido[s][i];
+    const fill = seqColor(v, min, max);
+    const t = max===min ? .5 : (v-min)/(max-min);
+    const dark = t > 0.45;
+    const sel = s === region;
+    out += `<g class="tile" data-s="${s}" transform="translate(${ox+cx*(cell+gap)},${oy+cyy*(42+gap)})">
+      <rect width="${cell}" height="42" rx="8" fill="${fill}"
+        stroke="${sel ? css('--text-primary') : css('--border')}" stroke-width="${sel?2:1}"/>
+      <text class="tname" x="8" y="17" fill="${dark?'#fff':css('--text-primary')}">${s}</text>
+      <text class="tval" x="8" y="32" fill="${dark?'rgba(255,255,255,.85)':css('--text-secondary')}">${fmt(v)}</text>
+    </g>`;
+  });
+  const legend = SEQ.map((c,k) => `<rect x="${512}" y="${40+k*24}" width="14" height="22" rx="3" fill="${css(c)}"/>`).join("");
+  $("mapSvg").innerHTML = out + legend +
+    `<text class="axis" x="534" y="52">낮음</text><text class="axis" x="534" y="${40+6*24+14}">높음</text>`;
+  $("mapDesc").textContent = `${year}년 ${ind} — 타일을 누르면 지역이 선택됩니다`;
+  document.querySelectorAll(".tile").forEach(el => {
+    el.onclick = () => { region = el.dataset.s; selRegion.value = region; renderAll(); };
+    el.onmousemove = ev => { const s = el.dataset.s;
+      showTT(`<div class="tt-t">${s}</div><div class="tt-r"><span>${ind}</span><b>${fmt(d.sido[s][i])}${d.unit}</b></div>`, ev.clientX, ev.clientY); };
+    el.onmouseleave = hideTT;
+  });
+}
+
+/* ---------- ranking ---------- */
+function renderRank(){
+  const d = D(), i = yi();
+  const sorted = SIDO.map(s => [s, d.sido[s][i]]).sort((a,b) => d.bad ? a[1]-b[1] : b[1]-a[1]);
+  const max = Math.max(...sorted.map(x => x[1]));
+  $("rankDesc").textContent = `${year}년 · 양호한 순 (${d.bad ? "낮을수록" : "높을수록"} 양호)`;
+  $("rank").innerHTML = sorted.map(([s,v],k) => `
+    <div class="rrow ${s===region?"sel":""}" data-s="${s}">
+      <div class="rn">${k+1}</div><div class="rl">${s}</div>
+      <div class="bar-track"><div class="bar" style="width:${(v/max*100).toFixed(1)}%"></div></div>
+      <div class="rv">${fmt(v)}</div>
+    </div>`).join("");
+  document.querySelectorAll(".rrow").forEach(el => {
+    el.onclick = () => { region = el.dataset.s; selRegion.value = region; renderAll(); };
+  });
+}
+
+/* ---------- gap band ---------- */
+function renderGap(){
+  const d = D();
+  const svg = $("gapSvg");
+  const W = 560, H = 240, L = 40, R = 16, T = 14, B = 28;
+  const mins = YEARS.map((_,i) => Math.min(...SIDO.map(s => d.sido[s][i])));
+  const maxs = YEARS.map((_,i) => Math.max(...SIDO.map(s => d.sido[s][i])));
+  const lo = Math.floor(Math.min(...mins)-1), hi = Math.ceil(Math.max(...maxs)+1);
+  const x = i => L + (W-L-R)*i/(YEARS.length-1);
+  const y = v => T + (H-T-B)*(1-(v-lo)/(hi-lo));
+  let band = "M" + x(0) + " " + y(maxs[0]);
+  maxs.forEach((v,i) => band += ` L${x(i).toFixed(1)} ${y(v).toFixed(1)}`);
+  for (let i = YEARS.length-1; i >= 0; i--) band += ` L${x(i).toFixed(1)} ${y(mins[i]).toFixed(1)}`;
+  band += " Z";
+  const med = d.national.map((v,i) => (i?"L":"M") + x(i).toFixed(1) + " " + y(v).toFixed(1)).join(" ");
+  let g = "";
+  for (let k = 0; k <= 4; k++){ const v = lo+(hi-lo)*k/4, yy = y(v);
+    g += `<line x1="${L}" x2="${W-R}" y1="${yy}" y2="${yy}" stroke="${css('--grid')}"/>
+          <text class="axis" x="${L-6}" y="${yy+3.5}" text-anchor="end">${v.toFixed(0)}</text>`; }
+  let xt = "";
+  for (let i = 0; i < YEARS.length; i += 4)
+    xt += `<text class="axis" x="${x(i)}" y="${H-8}" text-anchor="middle">${YEARS[i]}</text>`;
+  svg.innerHTML = g + xt +
+    `<path d="${band}" fill="${css('--band')}"/>` +
+    `<path d="${med}" fill="none" stroke="${css('--series-2')}" stroke-width="2"/>` +
+    `<rect id="gapHit" x="${L}" y="${T}" width="${W-L-R}" height="${H-T-B}" fill="transparent"/>`;
+  const hit = $("gapHit");
+  hit.onmousemove = hit.ontouchmove = ev => {
+    const pt = ev.touches ? ev.touches[0] : ev;
+    const box = svg.getBoundingClientRect();
+    const px = (pt.clientX - box.left)/box.width*W;
+    const i = Math.max(0, Math.min(YEARS.length-1, Math.round((px-L)/(W-L-R)*(YEARS.length-1))));
+    showTT(`<div class="tt-t">${YEARS[i]}년</div>
+      <div class="tt-r"><span>최대</span><b>${fmt(maxs[i])}${d.unit}</b></div>
+      <div class="tt-r"><span>중앙값</span><b>${fmt(d.national[i])}${d.unit}</b></div>
+      <div class="tt-r"><span>최소</span><b>${fmt(mins[i])}${d.unit}</b></div>
+      <div class="tt-r"><span>격차</span><b>${fmt(maxs[i]-mins[i])}%p</b></div>`, pt.clientX, pt.clientY);
+  };
+  hit.onmouseleave = hit.ontouchend = hideTT;
+}
+
+/* ---------- table ---------- */
+function renderTable(){
+  const d = D(), i = yi();
+  const sorted = SIDO.map(s => [s, d.sido[s][i]]).sort((a,b) => d.bad ? a[1]-b[1] : b[1]-a[1]);
+  $("tblWrap").innerHTML = `<table>
+    <thead><tr><th>지역</th><th>순위</th><th>${year}년 (${d.unit})</th><th>전국 중앙값 대비</th></tr></thead>
+    <tbody>${sorted.map(([s,v],k) =>
+      `<tr><td>${s}</td><td>${k+1}</td><td>${fmt(v)}</td><td>${fmt(v-d.national[i])}%p</td></tr>`).join("")}
+    </tbody></table>`;
+}
+
+function renderAll(){
+  $("yearVal").textContent = year + "년";
+  renderKPI(); renderTrend(); renderMap(); renderRank(); renderGap(); renderTable();
+}
+renderAll();
+</script>
+</body>
+</html>

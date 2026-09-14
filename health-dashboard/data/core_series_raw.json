@@ -1,0 +1,37 @@
+{
+  "현재흡연율": {
+    "tbl": "DT_1YL21001E",
+    "item": "흡연율",
+    "rows_fetched": 4380,
+    "years": "2008–2025",
+    "cells": 302
+  },
+  "고위험음주율": {
+    "tbl": "DT_1YL20291E",
+    "item": "고위험음주율",
+    "rows_fetched": 4380,
+    "years": "2008–2025",
+    "cells": 302
+  },
+  "걷기실천율": {
+    "tbl": "DT_H_EX_WALK",
+    "item": "조율",
+    "rows_fetched": 25760,
+    "years": "2008–2025",
+    "cells": 302
+  },
+  "비만율(자가보고)": {
+    "tbl": "DT_H_OBE_OBE",
+    "item": "조율",
+    "rows_fetched": 24325,
+    "years": "2008–2025",
+    "cells": 285
+  },
+  "우울감경험률": {
+    "tbl": "DT_117075_H_MENTAL_DEPRESS_SYM",
+    "item": "조율",
+    "rows_fetched": 12995,
+    "years": "2017–2025",
+    "cells": 153
+  }
+}

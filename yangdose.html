@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>양도소득세 간이 계산기 | 대한민국 부동산 종합정보</title>
+<meta name="description" content="집을 팔 때 내는 양도소득세를 간단히 추정해 보는 계산기. 양도차익·장기보유특별공제·1세대1주택 비과세를 반영한 개략 계산.">
+<meta property="og:site_name" content="갈매역삼성부동산">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="양도소득세 간이 계산기 | 대한민국 부동산 종합정보">
+<meta property="og:description" content="집을 팔 때 내는 양도소득세를 간단히 추정해 보는 계산기. 양도차익·장기보유특별공제·1세대1주택 비과세를 반영한 개략 계산.">
+<meta property="og:url" content="https://galmae-budongsan.com/yangdose.html">
+<meta property="og:image" content="https://galmae-budongsan.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="양도소득세 간이 계산기 | 대한민국 부동산 종합정보">
+<meta name="twitter:description" content="집을 팔 때 내는 양도소득세를 간단히 추정해 보는 계산기. 양도차익·장기보유특별공제·1세대1주택 비과세를 반영한 개략 계산.">
+<meta name="twitter:image" content="https://galmae-budongsan.com/assets/og-image.png">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .calc { background:#fff; border:1px solid var(--line); border-radius:12px; padding:22px; box-shadow:var(--shadow); }
+  .field { margin:12px 0; }
+  .field label { display:block; font-weight:700; color:var(--navy-dark); margin-bottom:4px; }
+  .field .hint { font-weight:400; color:var(--muted); font-size:.85rem; }
+  .field input[type=number], .field select { width:100%; max-width:340px; padding:10px 12px; border:1px solid var(--line); border-radius:8px; font:inherit; }
+  .field .unit { margin-left:6px; color:var(--muted); }
+  .row2 { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+  .chk { display:inline-flex; align-items:center; gap:6px; font-weight:700; color:var(--navy-dark); }
+  .calcbtn { background:var(--blue); color:#fff; border:none; padding:12px 26px; border-radius:9px; font-weight:800; font-size:1.05rem; cursor:pointer; margin-top:8px; }
+  .calcbtn:hover{opacity:.93}
+  .result { margin-top:18px; border-top:2px dashed var(--line); padding-top:16px; display:none; }
+  .result.show { display:block; }
+  .result .big { font-size:1.8rem; font-weight:800; color:var(--warn); }
+  .rtable { width:100%; border-collapse:collapse; margin-top:12px; font-size:.92rem; }
+  .rtable th,.rtable td { border:1px solid var(--line); padding:8px 10px; text-align:right; }
+  .rtable th { background:var(--blue-soft); color:var(--navy); text-align:left; width:56%; }
+  .adslot { border:1.5px dashed #c9d4e2; border-radius:12px; background:#f7f9fc; color:#8a99ad; text-align:center; padding:22px; margin:24px 0; font-size:.9rem; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="budongsan.html">🏢 갈매동 부동산 <span class="tag">갈매역삼성부동산</span></a>
+    <nav class="site-nav">
+      <a href="store.html">우리동네 매물</a>
+      <a href="sege.html">부동산 세금</a>
+      <a href="yangdose.html" class="active">양도세 계산기</a>
+      <a href="maemae.html">부동산 매매</a>
+      <a href="jaryo.html">자료실</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="breadcrumb"><a href="budongsan.html">홈</a> › <a href="sege.html">부동산 세금</a> › 양도세 계산기</div>
+  <div class="page-head">
+    <h1>🧮 양도소득세 간이 계산기</h1>
+    <p class="lead">집을 팔 때 내는 세금을 <strong>대략</strong> 추정해 봅니다. 실제 신고 전에는 반드시 국세청 홈택스·세무사로 확인하세요.</p>
+  </div>
+
+  <div class="callout warn">
+    <span class="t">⚠️ 꼭 읽어주세요 — 개략 추정입니다</span>
+    이 계산기는 <strong>1주택 기본 구조</strong>만 반영합니다. <strong>다주택 중과, 감면·특례, 일시적 2주택, 상속·증여, 분양권</strong> 등은 반영하지 않습니다. 결과는 참고용 추정치이며 실제 세액과 다를 수 있습니다.
+  </div>
+
+  <section class="calc">
+    <div class="field">
+      <label>취득가액 <span class="hint">(살 때 가격)</span></label>
+      <input type="number" id="buy" min="0" step="100"> <span class="unit">만원</span>
+    </div>
+    <div class="field">
+      <label>양도가액 <span class="hint">(팔 때 가격)</span></label>
+      <input type="number" id="sell" min="0" step="100"> <span class="unit">만원</span>
+    </div>
+    <div class="field">
+      <label>필요경비 <span class="hint">(취득세·중개보수·자본적지출 등)</span></label>
+      <input type="number" id="cost" min="0" step="10" value="0"> <span class="unit">만원</span>
+    </div>
+    <div class="row2">
+      <div class="field" style="flex:1;min-width:150px">
+        <label>보유기간</label>
+        <input type="number" id="hold" min="0" step="1" value="0"> <span class="unit">년</span>
+      </div>
+      <div class="field" style="flex:1;min-width:150px">
+        <label>거주기간 <span class="hint">(1주택 공제용)</span></label>
+        <input type="number" id="live" min="0" step="1" value="0"> <span class="unit">년</span>
+      </div>
+    </div>
+    <div class="field">
+      <label class="chk"><input type="checkbox" id="one"> 1세대 1주택입니다</label>
+      <div class="hint">체크 시, 양도가 12억 이하·보유(거주)요건 충족이면 비과세로 계산합니다.</div>
+    </div>
+    <div class="field">
+      <label class="chk"><input type="checkbox" id="adj"> 취득 당시 조정대상지역이었습니다</label>
+      <div class="hint">조정지역이면 1주택 비과세에 '2년 거주' 요건이 추가됩니다.</div>
+    </div>
+    <button class="calcbtn" id="calcBtn" type="button">세금 계산하기</button>
+
+    <div class="result" id="result"></div>
+  </section>
+
+  <!-- 광고 영역(준비): 승인 후 실제 광고가 노출됩니다 -->
+  <div class="adslot">📢 광고 영역 (준비 중) — 향후 이 자리에 광고 또는 제휴 배너가 표시됩니다</div>
+
+  <section class="section">
+    <h2>계산에 쓰인 기준 (2026년)</h2>
+    <ul>
+      <li><strong>양도차익</strong> = 양도가액 − 취득가액 − 필요경비</li>
+      <li><strong>1세대 1주택 비과세</strong>: 양도가 12억 이하 + 2년 보유(조정지역은 2년 거주). 12억 초과분은 안분 과세.</li>
+      <li><strong>장기보유특별공제</strong>: 일반 3년↑ 연 2%(최대 30%). 1세대1주택(2년 거주)만 보유 연4%+거주 연4%(최대 80%).</li>
+      <li><strong>기본공제</strong> 250만원 적용 후 <strong>누진세율 6~45%</strong>, <strong>지방소득세</strong>는 산출세액의 10% 별도.</li>
+    </ul>
+    <p>세율·공제는 개정될 수 있습니다. 정확한 계산은 <a href="https://www.hometax.go.kr" target="_blank" rel="noopener">국세청 홈택스</a> '양도소득세 미리계산' 또는 세무사를 이용하세요. 세금 개념은 <a href="sege.html">부동산 세금</a> 참고.</p>
+  </section>
+
+  <div class="disclaimer">
+    ⚖️ 본 계산기는 일반적 정보 제공용 추정 도구이며 세무 자문이 아닙니다. 실제 신고·납부 시 발생하는 결과에 대한 책임은 이용자 본인에게 있습니다.
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <h4>🏢 갈매역삼성부동산 · 갈매동 부동산</h4>
+    <div class="footer-note">
+      <a href="budongsan.html" style="color:#9fc0ea">홈</a> ·
+      <a href="sege.html" style="color:#9fc0ea">부동산 세금</a> ·
+      <a href="yangdose.html" style="color:#9fc0ea">양도세 계산기</a> ·
+      <a href="jaryo.html" style="color:#9fc0ea">자료실</a><br>
+      세율·기준은 개정될 수 있습니다. 실제 신고는 홈택스·세무사로 확인하세요. © 2026 대한민국 부동산 종합정보.
+    </div>
+  </div>
+</footer>
+
+<script>
+/* 2026년 종합소득 기본세율(양도세 기본세율 동일) — [상한(만원), 세율, 누진공제(만원)] */
+const BRACKETS = [
+  [1400, 0.06, 0], [5000, 0.15, 126], [8800, 0.24, 576], [15000, 0.35, 1544],
+  [30000, 0.38, 1994], [50000, 0.40, 2594], [100000, 0.42, 3594], [Infinity, 0.45, 6594]
+];
+function progressiveTax(base){ // base: 만원 → 산출세액(만원)
+  if(base<=0) return 0;
+  for(const [cap,rate,ded] of BRACKETS){ if(base<=cap) return base*rate - ded; }
+  return 0;
+}
+function manwon(v){ // 만원 → "N억 N,NNN만원"
+  v=Math.round(v); const e=Math.floor(v/10000), r=v%10000;
+  return (e?e+"억 ":"") + (r?r.toLocaleString()+"만원":(e?"0원":"0원"));
+}
+function num(id){ const v=parseFloat(document.getElementById(id).value); return isNaN(v)?0:v; }
+
+document.getElementById('calcBtn').addEventListener('click', ()=>{
+  const buy=num('buy'), sell=num('sell'), cost=num('cost');
+  const hold=num('hold'), live=num('live');
+  const one=document.getElementById('one').checked, adj=document.getElementById('adj').checked;
+  const box=document.getElementById('result');
+
+  if(sell<=0){ box.className='result show'; box.innerHTML='<p style="color:#c0392b">양도가액을 입력해 주세요.</p>'; return; }
+
+  const gainTotal = sell - buy - cost; // 전체 양도차익
+  let msg = [];
+
+  // 1세대1주택 비과세 판정
+  let taxableGain = gainTotal;
+  let nontax = false, partial = false;
+  if(one){
+    const holdOk = hold>=2;
+    const liveOk = !adj || live>=2;
+    if(holdOk && liveOk){
+      if(sell<=120000){ nontax=true; }
+      else { partial=true; taxableGain = gainTotal * (sell-120000)/sell; } // 12억 초과분 안분
+    } else {
+      msg.push(adj&&!liveOk ? "※ 조정지역 1주택은 '2년 거주'가 필요해 비과세 요건 미충족으로 계산했습니다."
+                            : "※ 보유 2년 미만이라 비과세 요건 미충족으로 계산했습니다.");
+    }
+  }
+
+  if(gainTotal<=0){
+    box.className='result show';
+    box.innerHTML = `<div class="big">양도차익 없음 (손실/0)</div><p>양도차익이 0 이하이면 납부할 양도세가 없습니다.</p>`;
+    return;
+  }
+  if(nontax){
+    box.className='result show';
+    box.innerHTML = `<div class="big">예상 양도세 0원 (비과세)</div>
+      <p>1세대 1주택 + 양도가 12억 이하 + 보유·거주요건 충족 → <strong>비과세</strong>로 추정됩니다.</p>
+      <p style="color:#888;font-size:.85rem">※ 다주택·특례 미반영. 실제는 홈택스·세무사 확인 필요.</p>`;
+    return;
+  }
+
+  // 장기보유특별공제율
+  let ltRate = 0;
+  if(one && hold>=3 && (!adj || live>=2)){ // 1세대1주택 표(보유4%+거주4%)
+    ltRate = Math.min(hold,10)*0.04 + Math.min(live,10)*0.04;
+    ltRate = Math.min(ltRate, 0.80);
+  } else if(hold>=3){ // 일반(연2%, 최대30%)
+    ltRate = Math.min(Math.min(hold,15)*0.02, 0.30);
+  }
+  const ltDeduction = taxableGain * ltRate;
+  const afterLT = taxableGain - ltDeduction;
+  const base = Math.max(0, afterLT - 250); // 기본공제 250만
+  const income = progressiveTax(base);
+  const local = income*0.10;
+  const total = income + local;
+
+  box.className='result show';
+  box.innerHTML = `
+    <div>예상 총 납부세액 (양도세+지방소득세)</div>
+    <div class="big">${manwon(total)}</div>
+    <table class="rtable">
+      <tr><th>전체 양도차익</th><td>${manwon(gainTotal)}</td></tr>
+      ${partial?`<tr><th>과세대상 양도차익<br><span style="font-weight:400;color:#888">(12억 초과분 안분)</span></th><td>${manwon(taxableGain)}</td></tr>`:``}
+      <tr><th>장기보유특별공제 (${Math.round(ltRate*100)}%)</th><td>− ${manwon(ltDeduction)}</td></tr>
+      <tr><th>기본공제</th><td>− 250만원</td></tr>
+      <tr><th>과세표준</th><td>${manwon(base)}</td></tr>
+      <tr><th>산출세액 (양도소득세)</th><td>${manwon(income)}</td></tr>
+      <tr><th>지방소득세 (10%)</th><td>${manwon(local)}</td></tr>
+      <tr><th style="background:#fdecec;color:#c0392b">합계</th><td style="font-weight:800;color:#c0392b">${manwon(total)}</td></tr>
+    </table>
+    ${msg.length?`<p style="color:#b5651d;font-size:.88rem;margin-top:8px">${msg.join('<br>')}</p>`:``}
+    <p style="color:#888;font-size:.85rem;margin-top:8px">※ 다주택 중과·감면·특례 미반영. 참고용 추정치입니다.</p>`;
+});
+</script>
+<script src="assets/js/a11y.js" defer></script>
+</body>
+</html>

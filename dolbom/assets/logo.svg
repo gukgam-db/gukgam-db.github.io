@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120" width="360" height="120" role="img" aria-label="모심 로고">
+  <defs>
+    <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16c0af"/>
+      <stop offset="1" stop-color="#0b7d72"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="112" height="112" rx="30" fill="url(#lg)"/>
+  <path d="M60 44 C53 33.5 36.5 36 36.5 50 C36.5 61 51 68.5 60 75 C69 68.5 83.5 61 83.5 50 C83.5 36 67 33.5 60 44 Z" fill="#ffffff"/>
+  <path d="M26 66 C26 86 43 94 60 94 C77 94 94 86 94 66 C94 78 82 84.5 60 84.5 C38 84.5 26 78 26 66 Z" fill="#ffffff"/>
+  <text x="140" y="62" font-family="Pretendard, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif" font-size="52" font-weight="800" fill="#075e56" letter-spacing="-1">모심</text>
+  <text x="141" y="94" font-family="Pretendard, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif" font-size="17.5" font-weight="600" fill="#536463">가족처럼, 정성껏 모십니다</text>
+</svg>

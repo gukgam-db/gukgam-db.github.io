@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>사이트 운영 매뉴얼 · 갈매역삼성부동산</title>
+<meta property="og:site_name" content="갈매역삼성부동산">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="사이트 운영 매뉴얼 · 갈매역삼성부동산">
+<meta property="og:description" content="사이트 운영 매뉴얼 · 갈매역삼성부동산">
+<meta property="og:url" content="https://galmae-budongsan.com/unyeong-guide.html">
+<meta property="og:image" content="https://galmae-budongsan.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="사이트 운영 매뉴얼 · 갈매역삼성부동산">
+<meta name="twitter:description" content="사이트 운영 매뉴얼 · 갈매역삼성부동산">
+<meta name="twitter:image" content="https://galmae-budongsan.com/assets/og-image.png">
+<style>
+  :root{ --navy:#123a6b; --green:#0e8a6b; --ink:#222; --muted:#5b6b7b; --line:#e2e8f0; --warn:#c0392b; }
+  *{box-sizing:border-box;}
+  body{ font-family:"NanumSquareRound","NanumGothic","Malgun Gothic",sans-serif; color:var(--ink); line-height:1.7; margin:0; background:#f5f7fa; word-break:keep-all; }
+  .doc{ max-width:860px; margin:0 auto; background:#fff; padding:0 0 40px; }
+  .cover{ background:linear-gradient(120deg,#123a6b,#0e8a6b); color:#fff; padding:38px 44px; }
+  .cover h1{ margin:0 0 6px; font-size:1.85rem; }
+  .cover p{ margin:2px 0; color:#e6eefa; }
+  .body{ padding:22px 44px; }
+  h2{ color:var(--navy); border-left:6px solid var(--green); padding-left:12px; margin:28px 0 8px; font-size:1.3rem; }
+  h3{ color:#0d2c53; margin:16px 0 6px; font-size:1.06rem; }
+  p{ margin:8px 0; } ul,ol{ padding-left:22px; margin:8px 0; } li{ margin:5px 0; }
+  table{ border-collapse:collapse; width:100%; margin:12px 0; font-size:.92rem; }
+  th,td{ border:1px solid var(--line); padding:9px 11px; text-align:left; vertical-align:top; } th{ background:#eaf2fb; color:var(--navy); }
+  .auto{ color:#0e8a6b; font-weight:800; } .manual{ color:#c0392b; font-weight:800; } .live{ color:#1f6fd1; font-weight:800; }
+  .box{ border:1px solid var(--line); border-radius:10px; padding:14px 16px; margin:12px 0; background:#f7faf9; }
+  .box .t{ font-weight:800; color:var(--green); display:block; margin-bottom:4px; }
+  .box.warn{ background:#fdecec; border-color:#f3c2bd; } .box.warn .t{ color:var(--warn); }
+  .box.navy{ background:#eef4fb; border-color:#cfe0f5; } .box.navy .t{ color:var(--navy); }
+  .box.gold{ background:#fbf6e9; border-color:#ecd9a6; } .box.gold .t{ color:#8a6d3b; }
+  .step{ counter-reset:s; list-style:none; padding:0; }
+  .step li{ position:relative; padding:11px 13px 11px 46px; margin:9px 0; background:#f8fafc; border:1px solid var(--line); border-radius:8px; }
+  .step li::before{ counter-increment:s; content:counter(s); position:absolute; left:11px; top:11px; width:26px; height:26px; background:var(--green); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:.9rem; }
+  .big{ font-size:1.05rem; }
+  .foot{ margin-top:26px; padding-top:14px; border-top:1px solid var(--line); color:var(--muted); font-size:.86rem; }
+  .no-print{ text-align:center; padding:14px; } .no-print button{ background:var(--navy); color:#fff; border:none; padding:10px 20px; border-radius:8px; font-weight:700; cursor:pointer; font-size:1rem; }
+  a{ color:#1f6fd1; }
+  @media print{ body{background:#fff;} .no-print{display:none;} .doc{max-width:none;} h2{break-after:avoid;} .box,.step li,table{break-inside:avoid;} }
+</style>
+</head>
+<body>
+<div class="doc">
+  <div class="cover">
+    <h1>📖 사이트 운영 매뉴얼</h1>
+    <p>갈매역삼성부동산 홈페이지 — 무엇이 자동이고, 무엇을 언제 해야 하는지</p>
+    <p style="font-size:.9rem">기준일 2026년 8월 · 운영자용</p>
+  </div>
+  <div class="no-print"><button onclick="window.print()">🖨️ 인쇄 / PDF로 저장</button></div>
+  <div class="body">
+
+  <h2>1. 한눈에 보기 — 자동 vs 사람이 할 일</h2>
+  <table>
+    <tr><th>항목</th><th>어떻게 되나</th><th>누가 · 언제</th></tr>
+    <tr><td><b>매물</b> (전세·월세·매매)</td><td class="live">실시간 자동</td><td>유진 님이 <b>구글시트</b>에 입력 → 사이트 즉시 반영 (코드 X)</td></tr>
+    <tr><td><b>홍보 글</b> (블로그·카톡·당근)</td><td class="auto">셀프 생성</td><td>유진 님이 <b>시세 소식 생성기</b>에서 버튼 → 복사 → 게시</td></tr>
+    <tr><td><b>사이트 배포</b></td><td class="auto">자동</td><td>변경사항을 올리면(push) 1~2분 뒤 자동 반영</td></tr>
+    <tr><td><b>실거래가 시세</b> (갈매동 카드·구리 표)</td><td class="manual">수동 갱신</td><td>담당자(대표님/Claude)가 <b>월 1회</b> 데이터 새로 반영</td></tr>
+    <tr><td><b>문구·색·디자인</b></td><td class="manual">요청 시</td><td>필요할 때 담당자에게 요청 (또는 LM Studio 무료 수정)</td></tr>
+    <tr><td><b>도메인 주소</b></td><td>1회 설정</td><td>유진 님이 도메인 구매 → 담당자가 연결 (한 번만)</td></tr>
+  </table>
+  <div class="box gold"><span class="t">핵심 한 줄</span>
+    <b class="big">유진 님이 평소에 하는 일은 딱 2가지 — ① 매물 올리기(구글시트) ② 홍보 글 올리기(생성기).</b> 나머지는 자동이거나 담당자 몫입니다.
+  </div>
+
+  <h2>2. 관리 주기 (달력)</h2>
+  <table>
+    <tr><th>주기</th><th>할 일</th><th>담당</th></tr>
+    <tr><td><b>수시</b></td><td>새 매물 나오면 시트에 추가 / 나간 매물은 '거래완료' 표시나 삭제</td><td>유진 님</td></tr>
+    <tr><td><b>주 3회</b> (월·수·금)</td><td>홍보 글 1개씩 생성해서 블로그·당근·카톡에 게시 (각 3분)</td><td>유진 님</td></tr>
+    <tr><td><b>월 1회</b></td><td>실거래가 시세 데이터 갱신 (갈매동 카드·구리 표 최신화)</td><td>담당자</td></tr>
+    <tr><td><b>분기 1회</b></td><td>전화번호·상호·소개 문구 등 기본 정보 점검, 매물 사진 정리</td><td>유진 님 + 담당자</td></tr>
+    <tr><td><b>연 1회</b></td><td>도메인 자동갱신 결제 확인 (구매한 경우)</td><td>유진 님</td></tr>
+  </table>
+
+  <h2>3. 유진 님이 하는 일 — 방법</h2>
+
+  <h3>① 매물 올리기·내리기 (구글시트) <span class="live">실시간</span></h3>
+  <ol class="step">
+    <li>운영자 홈에서 <b>매물 시트</b> 열기 (즐겨찾기 해두면 편함)</li>
+    <li>한 줄에 매물 하나씩 입력: 거래유형·단지·보증금/월세·면적·층·특징 등</li>
+    <li>저장 → <a href="store.html">우리동네 매물</a> 페이지에 <b>바로 반영</b> (새로고침)</li>
+    <li>거래 끝난 매물은 그 줄을 <b>지우거나</b> 상태를 '거래완료'로</li>
+  </ol>
+  <div class="box navy"><span class="t">📝 글까지 자동으로</span>
+    매물 홍보 문구가 필요하면 <a href="maemul-jeopsu.html">매물 글쓰기</a>에서 칸만 채우면 블로그·카톡 글이 완성됩니다.
+  </div>
+
+  <h3>② 홍보 글 올리기 (시세 소식 생성기) <span class="auto">셀프</span></h3>
+  <ol class="step">
+    <li><a href="sise-sosik.html">시세 소식 자동 글</a> 열기</li>
+    <li>주제 고르고 <b>「글 만들기」</b> → <b>「복사」</b></li>
+    <li>네이버 블로그·당근·카톡에 <b>붙여넣기</b> → 사진 1~2장 추가 → 게시</li>
+  </ol>
+  <div class="box"><span class="t">🗓️ 주 3회 루틴</span>
+    <b>월</b> = 블로그(이번 주 시세 소식) · <b>수</b> = 당근(거래 많은 단지 or 새 매물) · <b>금</b> = 카톡(단지 하나 소개). 글마다 <b>이달의 부동산 캘린더</b>(세금·이사철)가 자동으로 들어갑니다.
+  </div>
+
+  <h2>4. 담당자가 하는 일 — 실거래가 시세 갱신 (월 1회)</h2>
+  <div class="box warn"><span class="t">⚠️ 지금 상태 (솔직하게)</span>
+    갈매동 카드와 구리 실거래가 표의 시세는 <b>고정 데이터</b>라 저절로 바뀌지 않습니다. 최신 시세로 보이려면 <b>월 1회 데이터 갱신</b>이 필요합니다.
+  </div>
+  <p><b>갱신 방법 (담당자용):</b></p>
+  <ol class="step">
+    <li>국토교통부 <a href="https://rt.molit.go.kr" target="_blank" rel="noopener">실거래가 공개시스템</a>에서 구리시 아파트 매매(최근 1년) 자료 확보</li>
+    <li>담당자(Claude)에게 전달 → <code>data/complexes.js</code>(갈매동)·<code>data/guri-complexes.js</code>(구리 전체) 재생성</li>
+    <li>올리면(push) 자동 배포 → 카드·표·홍보 글에 최신 시세 반영</li>
+  </ol>
+  <div class="box gold"><span class="t">💡 완전 자동으로 만들려면 (선택)</span>
+    공공데이터포털(<a href="https://www.data.go.kr" target="_blank" rel="noopener">data.go.kr</a>)에서 <b>무료 서비스키</b>를 발급받아 GitHub 비밀값 <code>DATA_GO_KR_KEY</code>로 등록하면, 매주 자동 수집 워크플로를 <b>카드·표까지 자동 갱신</b>하도록 담당자가 연결할 수 있습니다. (지금은 원자료만 받고 화면 데이터는 수동입니다.)
+  </div>
+
+  <h2>5. 문구·디자인 바꾸기</h2>
+  <ul>
+    <li><b>간단한 것</b>(전화번호·문구·색): 담당자에게 요청, 또는 <a href="lmstudio-guide.html">LM Studio 무료 수정</a></li>
+    <li><b>새 페이지·기능</b>: 담당자(Claude)에게 요청 (가끔·필요 시)</li>
+  </ul>
+
+  <h2>6. 문제가 생기면</h2>
+  <ul>
+    <li><b>사이트가 이상해졌다</b> → 모든 변경은 기록(git)이 남아 <b>언제든 되돌릴 수 있습니다.</b> 담당자에게 "이전으로 돌려줘"</li>
+    <li><b>매물이 안 보인다</b> → 구글시트 저장 확인 → 페이지 새로고침 → 그래도면 담당자</li>
+    <li><b>주소가 안 열린다</b> → 잠시 후 재시도, 지속되면 담당자</li>
+  </ul>
+
+  <h2>7. 운영자(대표님) 월간 체크리스트</h2>
+  <ul>
+    <li>☐ 실거래가 시세 갱신 반영 (월 1회)</li>
+    <li>☐ 매물 시트에 오래된/거래완료 매물 정리됐는지</li>
+    <li>☐ 유진 님 홍보 루틴(주 3회) 잘 돌아가는지 확인</li>
+    <li>☐ (도메인 구매 시) 자동갱신·만료일 확인</li>
+    <li>☐ 상호·등록번호·연락처 표기 정확한지 (광고 법정 표기)</li>
+  </ul>
+
+  <div class="box navy"><span class="t">🔗 자주 쓰는 링크</span>
+    <a href="admin.html">운영자 홈</a> · <a href="store.html">매물</a> · <a href="maemul-jeopsu.html">매물 글쓰기</a> · <a href="sise-sosik.html">시세 소식 글</a> · <a href="hongbo-guide.html">홍보 전략</a> · <a href="domain-guide.html">도메인 만들기</a>
+  </div>
+
+  <div class="foot">
+    이 매뉴얼은 2026년 8월 기준 실제 사이트 구조를 반영합니다. 자동/수동 여부는 개선(예: 실거래가 완전 자동화) 시 업데이트됩니다.<br>
+    갈매역삼성부동산 사이트 운영 자료 · © 2026
+  </div>
+  </div>
+</div>
+<script src="assets/js/a11y.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>곁애 — 검증된 돌봄·의료 전문가를 직접 잇다</title>
+<meta name="description" content="간호사·간호조무사·요양보호사·간병사 등 의료·돌봄 전문인력과 가정·기관을 직접 잇는 검증 기반 매칭 플랫폼 곁애. 사전등록(대기명단)을 받습니다. 모심 자매 서비스.">
+<meta name="theme-color" content="#184a48">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/png/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/png/icon-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="canonical" href="https://soonryu74.github.io/gyeotae/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="곁애">
+<meta property="og:title" content="곁애 — 검증된 돌봄·의료 전문가를 직접 잇다">
+<meta property="og:description" content="간호사·요양보호사·간병사 등 의료·돌봄 전문인력과 가정·기관을 자격 검증 기반으로 잇는 매칭 플랫폼. 사전등록 접수 중. 모심 자매 서비스.">
+<meta property="og:url" content="https://soonryu74.github.io/gyeotae/">
+<meta property="og:image" content="https://soonryu74.github.io/gyeotae/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="곁애 — 검증된 돌봄·의료 전문가를 직접 잇다">
+<meta name="twitter:description" content="자격 검증 기반 돌봄·의료 전문인력 매칭. 중개수수료 없음. 사전등록 접수 중.">
+<meta name="twitter:image" content="https://soonryu74.github.io/gyeotae/assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.min.css">
+<style>
+:root{
+  --ground:#eaf0ef; --card:#ffffff; --card-2:#f4f7f6;
+  --ink:#152428; --body:#33454a; --muted:#61757a;
+  --line:#d5e0dd; --line-soft:#e4ecea;
+  --primary:#23625f; --primary-deep:#184a48; --primary-soft:#d7e7e3;
+  --gold:#c58a4a; --gold-soft:#f0e2cf; --warn:#b3701f;
+  --shadow:0 1px 2px rgba(21,36,40,.05),0 10px 30px rgba(21,36,40,.08);
+  --radius:16px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--body);
+  font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;
+  font-size:17px;line-height:1.72;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:0 22px}
+h1,h2,h3,h4{color:var(--ink);line-height:1.28;text-wrap:balance;letter-spacing:-.02em;margin:0}
+strong,b{color:var(--ink);font-weight:700}
+a{color:var(--primary);text-underline-offset:3px}
+.btn{display:inline-block;font-weight:700;border-radius:12px;padding:14px 24px;text-decoration:none;
+  border:1.5px solid transparent;cursor:pointer;font-size:1rem;transition:transform .12s ease,box-shadow .12s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--gold);color:#3a2a12;box-shadow:0 6px 18px rgba(197,138,74,.35)}
+.btn-ghost{background:transparent;color:#eaf6f3;border-color:rgba(255,255,255,.55)}
+.btn-ghost.dark{color:var(--primary);border-color:var(--primary)}
+.btn-block{display:block;width:100%;text-align:center}
+.btn-sm{padding:9px 15px;font-size:.9rem;border-radius:10px}
+
+/* top bar */
+.topbar{background:var(--primary-deep);color:#eaf6f3}
+.topbar .in{max-width:960px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.topbar .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.topbar .brand .blogo{width:32px;height:32px;border-radius:9px;display:block}
+.topbar .brand .m{font-size:1.5rem;font-weight:800;color:#fff;letter-spacing:-.03em}
+.topbar .brand .s{font-size:.82rem;color:#bcd6d1}
+.topbar .back{font-size:.84rem;color:#cfe3df;text-decoration:none;white-space:nowrap}
+.topbar .back:hover{color:#fff}
+
+/* hero */
+.hero{background:
+    radial-gradient(120% 90% at 100% -10%, rgba(197,138,74,.14), transparent 55%),
+    linear-gradient(160deg,var(--primary-deep),var(--primary) 75%);
+  color:#eef6f4;padding:64px 0 60px;position:relative;overflow:hidden}
+.hero .eyebrow{font-size:.78rem;letter-spacing:.26em;text-transform:uppercase;color:#e7c99a;font-weight:700;margin-bottom:18px}
+.hero h1{color:#fff;font-size:2.7rem;font-weight:800;letter-spacing:-.03em;max-width:16ch;line-height:1.2}
+.hero p.sub{font-size:1.16rem;color:#d3e5e1;margin:20px 0 0;max-width:46ch}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.hero .trust{display:flex;gap:22px;flex-wrap:wrap;margin-top:34px;border-top:1px solid rgba(255,255,255,.16);padding-top:20px;font-size:.88rem;color:#bcd6d1}
+.hero .trust b{color:#fff;display:block;font-size:.98rem}
+.hero .ring{position:absolute;right:-60px;top:40px;width:280px;height:280px;border-radius:50%;border:1.5px solid rgba(255,255,255,.10)}
+.hero .ring::after{content:"";position:absolute;inset:40px;border-radius:50%;border:1.5px solid rgba(197,138,74,.28)}
+
+section{padding:52px 0}
+.sec-eyebrow{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:800;margin-bottom:8px}
+h2.title{font-size:1.8rem;margin-bottom:8px}
+.sec-lead{color:var(--muted);max-width:52ch;margin:0 0 26px}
+
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.vs .col{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.vs .col.a{border-top:4px solid var(--primary)}
+.vs .col.b{border-top:4px solid var(--gold)}
+.vs .col h3{font-size:1.2rem}
+.vs .col .role{font-size:.82rem;color:var(--muted);margin:4px 0 14px}
+.vs .col ul{margin:0;padding-left:18px}
+.vs .col li{margin:8px 0;font-size:.98rem}
+
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.step .n{width:34px;height:34px;border-radius:10px;background:var(--primary-soft);color:var(--primary);font-weight:800;display:grid;place-items:center;margin-bottom:12px}
+.step h4{font-size:1.05rem;margin-bottom:5px}
+.step p{margin:0;color:var(--muted);font-size:.93rem}
+
+.badge-note{display:flex;gap:14px;align-items:flex-start;background:var(--gold-soft);border:1px solid #e6d3b4;
+  border-radius:14px;padding:18px 20px;margin-top:22px;color:#5a4321}
+.badge-note b{color:#3a2a12}
+.badge-note .ic{flex:0 0 auto;width:40px;height:40px;border-radius:11px;background:var(--gold);color:#3a2a12;display:grid;place-items:center;font-weight:800}
+
+/* waitlist */
+.signup{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px;box-shadow:var(--shadow)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+label{font-size:.86rem;font-weight:700;color:var(--ink)}
+input,select,textarea{font:inherit;font-size:.98rem;padding:12px 13px;border:1.5px solid var(--line);border-radius:11px;background:var(--card-2);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--primary);background:#fff}
+textarea{min-height:88px;resize:vertical}
+#out{margin-top:16px}
+.callout{background:var(--card-2);border:1px solid var(--line);border-left:4px solid var(--primary);border-radius:12px;padding:16px 18px}
+.callout .t{display:block;font-weight:800;color:var(--ink);margin-bottom:6px}
+
+.tie{background:var(--primary-deep);color:#dcebe7}
+.tie .in{display:flex;gap:20px;align-items:center;flex-wrap:wrap;justify-content:space-between;padding:34px 0}
+.tie h3{color:#fff;font-size:1.3rem}
+.tie p{margin:6px 0 0;color:#bcd6d1;max-width:52ch}
+
+footer.foot{background:#0f1b1d;color:#93a8a4;padding:34px 0;font-size:.86rem}
+footer.foot b{color:#dcebe7}
+.disclaimer{margin-top:12px;font-size:.8rem;color:#7c918d;line-height:1.7}
+
+@media(max-width:640px){
+  .hero h1{font-size:2.1rem}
+  .vs{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+  body{font-size:16px}
+}
+
+/* dark theme */
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0e1719;--card:#152225;--card-2:#1a2a2d;--ink:#eaf2f0;--body:#c3d2cf;--muted:#8ba09d;
+    --line:#294044;--line-soft:#22383b;--primary:#5fb0a9;--primary-deep:#123330;--primary-soft:#1d3b39;
+    --gold:#d9a763;--gold-soft:#2c2416;--warn:#dca85a;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.45);
+  }
+  :root:not([data-theme="light"]) .btn-primary{color:#1a1206}
+  :root:not([data-theme="light"]) .badge-note{background:#2c2416;border-color:#4a3a20;color:#e5cfa6}
+  :root:not([data-theme="light"]) .badge-note b{color:#f0dcb6}
+  :root:not([data-theme="light"]) .badge-note .ic{color:#1a1206}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="in">
+    <a class="brand" href="index.html"><img class="blogo" src="assets/logo-mark.svg" alt="곁애 로고"><span class="m">곁애</span> <span class="s">돌봄·의료 전문가 매칭</span></a>
+    <a class="back" href="../dolbom/index.html">← 모심(어르신 돌봄 포털)</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">사전등록 · 곧 만나요</div>
+    <h1>곁에 있는, 검증된 돌봄 전문가를 직접 잇다</h1>
+    <p class="sub">간호사·간호조무사·요양보호사·간병사와 가정·기관을 <strong style="color:#fff">자격 검증</strong> 기반으로 잇습니다. 소개소를 거치지 않고, 서로의 조건으로 직접.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#signup">사전등록 신청</a>
+      <a class="btn btn-ghost" href="#how">어떻게 작동하나요</a>
+    </div>
+    <div class="trust">
+      <div>검증<b>자격증·면허 확인 뱃지</b></div>
+      <div>수수료<b>이용자 중개수수료 없음</b></div>
+      <div>연계<b>모심 자매 서비스</b></div>
+    </div>
+    <div class="ring" aria-hidden="true"></div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-eyebrow">누구를 위한 서비스</div>
+    <h2 class="title">전문가도, 가정도 — 중간 소개소 없이</h2>
+    <p class="sec-lead">출처 불명 소개소 대신, 검증된 정보를 서로 투명하게 보고 당사자끼리 연결됩니다.</p>
+    <div class="vs">
+      <div class="col a">
+        <h3>돌봄·의료 전문가</h3>
+        <div class="role">간호사 · 간호조무사 · 요양보호사 · 간병사 · 물리치료사</div>
+        <ul>
+          <li>병원·기관 안 거치고 <b>내 조건으로 직접</b> 일합니다</li>
+          <li>자격 <b>검증 뱃지</b>로 신뢰를 얻고 단가 협상력이 올라갑니다</li>
+          <li>일한 이력·후기가 <b>내 자산</b>으로 쌓입니다</li>
+        </ul>
+      </div>
+      <div class="col b">
+        <h3>가정 · 기관</h3>
+        <div class="role">환자 보호자 · 요양원 · 병원</div>
+        <ul>
+          <li>출처 불명 소개소 대신 <b>자격 검증된</b> 사람을 직접 고릅니다</li>
+          <li>이력·후기·가능 시간이 <b>투명</b>하게 보입니다</li>
+          <li>표준계약서 가이드로 <b>분쟁 위험을 줄입니다</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" style="background:var(--card-2)">
+  <div class="wrap">
+    <div class="sec-eyebrow">작동 방식</div>
+    <h2 class="title">검증 뱃지가 신뢰의 축입니다</h2>
+    <p class="sec-lead">곁애는 <b>검증된 정보를 보여줄 뿐</b>, 선택·연락·계약은 당사자가 직접 합니다.</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h4>전문가 등록</h4><p>직종·경력·자격증·가능 지역/시간·희망 단가를 등록합니다.</p></div>
+      <div class="step"><div class="n">2</div><h4>자격 검증</h4><p>면허·자격증을 확인해 ‘검증 완료’ 뱃지를 부여합니다.</p></div>
+      <div class="step"><div class="n">3</div><h4>가정이 탐색</h4><p>지역·직종·자격·단가로 검색하고 요청서를 올립니다.</p></div>
+      <div class="step"><div class="n">4</div><h4>직접 연결</h4><p>당사자끼리 연락·상담·계약. 곁애는 중개수수료를 받지 않습니다.</p></div>
+    </div>
+    <div class="badge-note">
+      <div class="ic">✓</div>
+      <div><b>왜 ‘검증’인가</b> — 돌봄·의료는 자격이 곧 안전입니다. 곁애는 자격이 확인된 전문가만 뱃지로 구분해, 가정이 안심하고 고를 수 있게 합니다. 미검증자는 노출되지 않습니다.</div>
+    </div>
+  </div>
+</section>
+
+<section id="signup">
+  <div class="wrap">
+    <div class="sec-eyebrow">사전등록 · 대기명단</div>
+    <h2 class="title">가장 먼저 초대해 드릴게요</h2>
+    <p class="sec-lead">정식 오픈 전, 사전등록하신 분께 먼저 안내드립니다. 전문가는 초기 무료 등록, 가정은 우선 매칭 혜택을 드립니다.</p>
+    <div class="signup">
+      <div class="form-grid">
+        <div class="field"><label>어떤 분이신가요?</label>
+          <select id="w-role">
+            <option value="전문가">돌봄·의료 전문가 (일을 찾습니다)</option>
+            <option value="가정·기관">가정·기관 (사람을 찾습니다)</option>
+          </select></div>
+        <div class="field"><label>직종 / 필요 서비스</label>
+          <input id="w-job" placeholder="예: 간병사 / 요양보호사 구함"></div>
+        <div class="field"><label>이름 또는 기관명</label><input id="w-name" placeholder="성함 또는 기관명"></div>
+        <div class="field"><label>지역</label><input id="w-area" placeholder="예: 서울 노원구"></div>
+        <div class="field full"><label>연락처</label><input id="w-contact" placeholder="전화 또는 이메일 (오픈 안내를 받을 곳)"></div>
+        <div class="field full"><label>남기실 말 (선택)</label><textarea id="w-msg" placeholder="필요하신 내용이나 궁금한 점을 적어주세요."></textarea></div>
+      </div>
+      <p style="margin:18px 0 0"><button class="btn btn-primary" id="w-gen">사전등록 신청서 만들기</button></p>
+      <div id="out"></div>
+      <p style="font-size:.8rem;color:var(--muted);margin:14px 0 0">신청 내용은 오픈 안내 목적에 한해 사용되며, 제3자에게 제공하지 않습니다. 정식 서비스는 「직업안정법」상 <b>직업정보제공사업 신고</b>를 마친 뒤 운영됩니다.</p>
+    </div>
+  </div>
+</section>
+
+<div class="tie">
+  <div class="wrap in">
+    <div>
+      <h3>어르신 돌봄 정보는 ‘모심’에서</h3>
+      <p>기관 평가등급 검색, 지역 돌봄 프로그램, 장기요양 안내는 자매 서비스 모심에서 확인하세요.</p>
+    </div>
+    <a class="btn btn-ghost" href="../dolbom/index.html">모심 바로가기 →</a>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="wrap">
+    <b>곁애</b> — 돌봄·의료 전문인력 검증 매칭 플랫폼 · 모심 자매 서비스
+    <div class="disclaimer">
+      곁애는 구인·구직 정보를 제공하는 플랫폼으로, 고용의 당사자가 아니며 당사자 간 계약을 보증하지 않습니다. 전문가의 자격·경력은 검증하나 이용자는 계약 전 자격·등록 여부를 직접 확인하시기 바랍니다. 본 페이지는 정식 오픈 전 사전등록 안내이며, 서비스 범위·요금 구조는 관련 법령 및 전문가 자문에 따라 확정됩니다. © 2026 곁애.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SB_URL='https://gancotctztwqsuupektl.supabase.co';
+const SB_KEY='sb_publishable_SJHf3habT8mpWmF9vedxuw_g1e3pLkT';
+let sb=null; try{ if(window.supabase) sb=window.supabase.createClient(SB_URL,SB_KEY); }catch(e){}
+function esc(s){ return (s||'').replace(/[<>&]/g,m=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[m])); }
+
+const btn=document.getElementById('w-gen'), out=document.getElementById('out');
+
+function fallbackBox(role,v){
+  const t=`[곁애 사전등록 신청]\n`+
+    `· 구분: ${role}\n`+
+    `· 직종/필요 서비스: ${v('w-job')||'-'}\n`+
+    `· 이름/기관명: ${v('w-name')||'-'}\n`+
+    `· 지역: ${v('w-area')||'-'}\n`+
+    `· 연락처: ${v('w-contact')}\n`+
+    `· 남길 말: ${v('w-msg')||'-'}\n`;
+  out.innerHTML=
+    `<div class="callout" style="margin-top:16px"><span class="t">잠시 연결이 어려워요 — 아래 내용을 복사해 이메일로 보내주시면 접수됩니다</span>
+      <textarea id="w-txt" rows="8" style="width:100%;margin-top:8px">${esc(t)}</textarea>
+      <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary btn-sm" id="w-copy">복사하기</button>
+        <a class="btn btn-ghost dark btn-sm" href="mailto:soonryu74@gmail.com?subject=곁애 사전등록 신청">메일 앱 열기</a>
+      </div></div>`;
+  const cb=document.getElementById('w-copy');
+  cb.addEventListener('click',()=>{ const ta=document.getElementById('w-txt'); ta.select(); navigator.clipboard&&navigator.clipboard.writeText(ta.value); cb.textContent='복사됨'; });
+  out.scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+function successBox(role){
+  out.innerHTML=
+    `<div class="callout" style="margin-top:16px;border-left-color:var(--gold)">
+      <span class="t">사전등록이 완료되었습니다 ✓</span>
+      <b>${esc(role)}</b>(으)로 접수했어요. 정식 오픈 시 남겨주신 연락처로 가장 먼저 안내드리겠습니다. 감사합니다.
+      <div style="margin-top:10px"><a class="btn btn-ghost dark btn-sm" href="../dolbom/index.html">모심 둘러보기 →</a></div>
+    </div>`;
+  out.scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+btn.addEventListener('click', async ()=>{
+  const v=id=>document.getElementById(id).value.trim();
+  const role=document.getElementById('w-role').value;
+  if(!v('w-contact')){ alert('오픈 안내를 받으실 연락처를 입력해 주세요.'); document.getElementById('w-contact').focus(); return; }
+  const row={ role, job:v('w-job')||null, name:v('w-name')||null, area:v('w-area')||null, contact:v('w-contact'), msg:v('w-msg')||null, source:'gyeotae' };
+  // 로컬 백업(선택)
+  try{ const k='gyeotae_waitlist'; const a=JSON.parse(localStorage.getItem(k)||'[]'); a.push(row); localStorage.setItem(k,JSON.stringify(a)); }catch(e){}
+  if(!sb){ fallbackBox(role,v); return; }
+  const old=btn.textContent; btn.disabled=true; btn.textContent='접수 중…';
+  try{
+    const { error } = await sb.from('waitlist').insert(row);
+    if(error){ fallbackBox(role,v); } else { successBox(role); }
+  }catch(e){ fallbackBox(role,v); }
+  btn.disabled=false; btn.textContent=old;
+});
+</script>
+</body>
+</html>

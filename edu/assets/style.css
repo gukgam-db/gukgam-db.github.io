@@ -1,0 +1,253 @@
+/* 한국통합돌봄사이버교육원 — 공통 스타일
+   교육기관 사이트. 50~70대 수강생과 실무자가 함께 보므로 본문 17px, 대비를 강하게. */
+:root{
+  --ground:#FBFAF7;
+  --surface:#FFFFFF;
+  --sub:#F4F2ED;
+  --ink:#1A1F23;
+  --ink-2:#565E64;
+  --line:#E3E0D8;
+  --line-2:#CFCBC0;
+  --accent:#14524B;
+  --accent-2:#1D7168;
+  --accent-soft:#E4EDEA;
+  --accent-ink:#0B3833;
+  --cta:#A8571F;
+  --cta-soft:#F7ECE2;
+  --wrap:1120px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#14171A; --surface:#1C2023; --sub:#202528; --ink:#E9EBE8; --ink-2:#A3AAA7;
+    --line:#2E3438; --line-2:#3D4448; --accent:#6FB5AA; --accent-2:#8CC9BF;
+    --accent-soft:#18332F; --accent-ink:#BFE3DB; --cta:#D89258; --cta-soft:#31241A;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#14171A; --surface:#1C2023; --sub:#202528; --ink:#E9EBE8; --ink-2:#A3AAA7;
+  --line:#2E3438; --line-2:#3D4448; --accent:#6FB5AA; --accent-2:#8CC9BF;
+  --accent-soft:#18332F; --accent-ink:#BFE3DB; --cta:#D89258; --cta-soft:#31241A;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--ground);color:var(--ink);overflow-wrap:break-word;
+  font-family:"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  font-size:17px;line-height:1.8;word-break:keep-all;
+}
+img{max-width:100%;height:auto}
+a{color:var(--accent-ink)}
+:focus-visible{outline:3px solid var(--cta);outline-offset:2px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;z-index:200;background:var(--accent);color:#fff;padding:10px 16px}
+
+/* ── 상단 유틸리티 바 ── */
+.utility{background:var(--accent);color:#fff;font-size:13.5px}
+.utility-inner{max-width:var(--wrap);margin:0 auto;padding:7px 20px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.utility a{color:#fff;text-decoration:none;opacity:.92}
+.utility a:hover{opacity:1;text-decoration:underline}
+.utility .status{margin-left:auto;background:rgba(255,255,255,.16);padding:2px 10px;border-radius:2px;font-weight:500}
+
+/* ── 헤더 ── */
+.site-header{background:var(--surface);border-bottom:1px solid var(--line-2);position:sticky;top:0;z-index:60}
+.header-inner{max-width:var(--wrap);margin:0 auto;padding:16px 20px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.brand{display:flex;align-items:baseline;gap:10px;text-decoration:none;color:var(--ink)}
+.brand .mark{font-family:"Noto Serif KR",serif;font-weight:700;font-size:21px;letter-spacing:-.025em;white-space:nowrap}
+.brand .tag{font-size:12.5px;color:var(--ink-2);white-space:nowrap}
+.gnb{margin-left:auto;display:flex;gap:2px;flex-wrap:wrap}
+.gnb a{
+  text-decoration:none;color:var(--ink);font-size:16px;font-weight:500;
+  padding:9px 15px;border-bottom:3px solid transparent;
+}
+.gnb a:hover{color:var(--accent-ink);border-bottom-color:var(--line-2)}
+.gnb a[aria-current="page"]{color:var(--accent-ink);font-weight:700;border-bottom-color:var(--accent)}
+
+/* ── 히어로 (대문) ── */
+.hero{background:var(--surface);border-bottom:1px solid var(--line)}
+.hero-inner{max-width:var(--wrap);margin:0 auto;padding:64px 20px 60px}
+.kicker{font-size:13.5px;letter-spacing:.08em;color:var(--accent);font-weight:700;margin:0 0 16px}
+.hero h1{
+  font-family:"Noto Serif KR",serif;font-weight:700;
+  font-size:clamp(31px,4.4vw,45px);line-height:1.32;margin:0 0 20px;
+  letter-spacing:-.025em;text-wrap:balance;max-width:22ch;
+}
+.hero .lead{font-size:19px;color:var(--ink-2);max-width:58ch;margin:0}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:14px 28px;
+  font-weight:700;font-size:16.5px;text-decoration:none;border:2px solid transparent;border-radius:2px;
+}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.primary:hover{background:var(--accent-ink)}
+.btn.ghost{background:transparent;color:var(--accent-ink);border-color:var(--accent)}
+.btn.ghost:hover{background:var(--accent-soft)}
+
+/* ── 내부 페이지 머리 ── */
+.page-head{background:var(--sub);border-bottom:1px solid var(--line)}
+.page-head-inner{max-width:var(--wrap);margin:0 auto;padding:40px 20px 38px}
+.crumb{font-size:14px;color:var(--ink-2);margin:0 0 12px}
+.crumb a{color:var(--ink-2);text-decoration:none}
+.crumb a:hover{text-decoration:underline}
+.page-head h1{
+  font-family:"Noto Serif KR",serif;font-weight:700;font-size:clamp(27px,3.6vw,36px);
+  margin:0 0 12px;letter-spacing:-.02em;line-height:1.32;text-wrap:balance;
+}
+.page-head p{font-size:17.5px;color:var(--ink-2);margin:0;max-width:60ch}
+
+/* ── 본문 ── */
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+main section{padding:54px 0;border-bottom:1px solid var(--line)}
+main section:last-of-type{border-bottom:0}
+h2{font-family:"Noto Serif KR",serif;font-weight:700;font-size:27px;margin:0 0 10px;letter-spacing:-.02em;text-wrap:balance}
+h3{font-family:"Noto Serif KR",serif;font-weight:700;font-size:20px;margin:34px 0 12px}
+h4{font-size:17px;font-weight:700;margin:22px 0 8px}
+.sec-lead{color:var(--ink-2);margin:0 0 28px;max-width:62ch}
+p{max-width:66ch}
+ul.plain{padding-left:20px;margin:0 0 20px}
+ul.plain li{margin-bottom:7px}
+
+/* ── 빠른 링크 ── */
+.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:0 0 8px}
+.quick a{
+  background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--accent);
+  padding:22px 20px;text-decoration:none;color:var(--ink);display:block;
+}
+.quick a:hover{border-color:var(--accent);background:var(--accent-soft)}
+.quick b{display:block;font-family:"Noto Serif KR",serif;font-size:18px;margin-bottom:5px}
+.quick span{color:var(--ink-2);font-size:15px;line-height:1.65;display:block}
+
+/* ── 과정 카드 ── */
+.courses{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:0 0 8px}
+.course{background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--accent);padding:26px 28px;display:flex;flex-direction:column}
+.course.alt{border-top-color:var(--cta)}
+.course .who{font-size:13px;font-weight:700;color:var(--accent);letter-spacing:.04em;margin-bottom:8px}
+.course.alt .who{color:var(--cta)}
+.course h3{margin:0 0 10px;font-size:22px}
+.course p{margin:0 0 16px;color:var(--ink-2);font-size:16px;flex:1}
+.course dl{margin:0 0 18px;display:grid;grid-template-columns:74px 1fr;gap:6px 14px;font-size:15.5px}
+.course dt{color:var(--ink-2);font-size:13.5px;padding-top:2px}
+.course dd{margin:0;font-weight:500}
+.course .go{align-self:flex-start;text-decoration:none;font-weight:700;color:var(--accent-ink);border-bottom:2px solid var(--accent);padding-bottom:2px;font-size:16px}
+
+/* ── 표 ── */
+.tw{overflow-x:auto;margin:0 0 26px}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:16px;background:var(--surface)}
+caption{text-align:left;font-size:14px;color:var(--ink-2);padding-bottom:10px}
+th{text-align:left;font-weight:700;font-size:14px;color:var(--ink-2);padding:12px;border-bottom:2px solid var(--ink);vertical-align:bottom;background:var(--sub)}
+td{padding:13px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+td.t{font-weight:600;min-width:110px}
+td.n{font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--ink-2)}
+tbody tr:last-child td{border-bottom:0}
+
+/* ── 회차 커리큘럼 ── */
+.mod{margin-bottom:30px}
+.mod-head{display:flex;align-items:baseline;gap:12px;padding-left:14px;border-left:5px solid var(--accent);margin-bottom:12px}
+.mod-head h3{margin:0;font-size:19px}
+.mod-head .hours{font-size:14px;color:var(--ink-2);white-space:nowrap}
+.mod > p{margin:0 0 12px;color:var(--ink-2);font-size:16px}
+
+/* ── 강조 상자 ── */
+.note,.warn,.plain-box{padding:19px 23px;margin:0 0 26px;font-size:16.5px}
+.note{background:var(--accent-soft);color:var(--accent-ink)}
+.warn{background:var(--cta-soft);color:var(--cta)}
+.plain-box{background:var(--surface);border:1px solid var(--line)}
+.note p,.warn p,.plain-box p{max-width:none;margin:0}
+.note b,.warn b{font-weight:700}
+
+/* ── 3분할 ── */
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:0 0 26px}
+.three > div{border-top:4px solid var(--accent);padding:16px 2px 0}
+.three b{display:block;font-family:"Noto Serif KR",serif;font-size:19px;margin-bottom:6px}
+.three span{color:var(--ink-2);font-size:16px}
+
+/* ── 단계 ── */
+.steps{list-style:none;counter-reset:s;padding:0;margin:0 0 26px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:16px;padding:17px 0;border-bottom:1px solid var(--line)}
+.steps li:last-child{border-bottom:0}
+.steps li::before{content:counter(s);font-weight:700;font-size:15px;color:#fff;background:var(--accent);width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:50%}
+.steps b{grid-column:2;display:block;font-size:17.5px;margin-bottom:2px}
+.steps span{grid-column:2;color:var(--ink-2);font-size:16px}
+
+/* ── 공지 ── */
+.notices{list-style:none;padding:0;margin:0 0 8px;border-top:2px solid var(--ink)}
+.notices li{display:grid;grid-template-columns:1fr 108px;gap:16px;padding:16px 2px;border-bottom:1px solid var(--line);align-items:baseline}
+.notices b{font-weight:600;font-size:17px}
+.notices .date{color:var(--ink-2);font-size:14.5px;font-variant-numeric:tabular-nums;text-align:right}
+.notices .body{display:block;color:var(--ink-2);font-size:15.5px;margin-top:3px}
+
+/* ── FAQ ── */
+.faq{margin:0 0 26px;border-top:2px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{padding:17px 2px;cursor:pointer;font-weight:600;font-size:17px;list-style:none;display:flex;gap:12px;align-items:baseline}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q";font-family:"Noto Serif KR",serif;color:var(--accent);font-weight:700;flex:none}
+.faq summary:hover{color:var(--accent-ink)}
+.faq details[open] summary{color:var(--accent-ink)}
+.faq .a{padding:0 2px 20px 26px;color:var(--ink-2);font-size:16.5px}
+.faq .a p{max-width:none;margin:0 0 10px}
+.faq .a p:last-child{margin-bottom:0}
+
+/* ── 정의형 목록 ── */
+.deflist{margin:0 0 26px;border-top:1px solid var(--line)}
+.deflist > div{display:grid;grid-template-columns:180px 1fr;gap:18px;padding:15px 0;border-bottom:1px solid var(--line)}
+.deflist dt{font-weight:700;font-size:16.5px}
+.deflist dd{margin:0;color:var(--ink-2);font-size:16.5px}
+
+/* ── 문의 ── */
+.contact{background:var(--surface);border:1px solid var(--line);padding:28px 30px}
+.contact dl{margin:0;display:grid;grid-template-columns:130px 1fr;gap:11px 20px;font-size:16.5px}
+.contact dt{color:var(--ink-2);font-size:14.5px;padding-top:3px}
+.contact dd{margin:0}
+
+/* ── 푸터 ── */
+.site-footer{background:var(--sub);border-top:2px solid var(--line-2)}
+.foot-inner{max-width:var(--wrap);margin:0 auto;padding:36px 20px 44px}
+.foot-nav{display:flex;gap:20px;flex-wrap:wrap;margin:0 0 20px;padding:0 0 18px;border-bottom:1px solid var(--line);list-style:none}
+.foot-nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:15.5px}
+.foot-nav a:hover{text-decoration:underline}
+.foot-org{font-family:"Noto Serif KR",serif;font-weight:700;font-size:17px;margin:0 0 10px}
+.legal{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.75;max-width:none}
+.pending{display:inline-block;background:var(--cta-soft);color:var(--cta);font-size:13px;font-weight:700;padding:1px 8px;border-radius:2px}
+
+@media (max-width:900px){ .quick{grid-template-columns:1fr 1fr} }
+@media (max-width:760px){
+  .courses,.three{grid-template-columns:1fr}
+  .hero-inner{padding:44px 20px 40px}
+  main section{padding:42px 0}
+  .contact dl,.deflist > div{grid-template-columns:1fr;gap:3px 0}
+  .contact dt,.deflist dt{margin-top:12px}
+  .notices li{grid-template-columns:1fr}
+  .notices .date{text-align:left}
+  .gnb a{padding:8px 11px;font-size:15px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ── 제목 옆 시간 표기 ── */
+h2 .hours{
+  font-family:'Noto Sans KR',sans-serif;font-weight:500;font-size:15px;
+  color:var(--accent-ink);background:var(--accent-soft);
+  padding:4px 11px;border-radius:3px;margin-left:10px;
+  vertical-align:middle;white-space:nowrap;
+}
+main section[id]{scroll-margin-top:20px}
+
+/* ── 과정 단독 랜딩 머리 ── */
+.course-head{background:var(--surface);border-bottom:1px solid var(--line)}
+.course-head .badge{
+  display:inline-block;margin:0 0 14px;padding:6px 13px;
+  font-family:'Noto Sans KR',sans-serif;font-size:14.5px;font-weight:700;
+  color:#fff;background:var(--cta);border-radius:3px;letter-spacing:-.01em;
+}
+.course-head h1{font-size:44px;line-height:1.2;margin:0 0 12px}
+.course-head > .page-head-inner > p:not(.crumb):not(.badge){
+  font-size:18px;color:var(--ink-2);max-width:640px;margin:0 0 26px}
+.specs{margin:0 0 28px;border-top:2px solid var(--ink);max-width:760px}
+.specs > div{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:13px 0;border-bottom:1px solid var(--line)}
+.specs dt{font-weight:700;font-size:16px}
+.specs dd{margin:0;color:var(--ink-2);font-size:16.5px}
+.course-head .cta-row{margin:0}
+@media (max-width:760px){
+  .course-head h1{font-size:32px}
+  .specs > div{grid-template-columns:1fr;gap:3px;padding:12px 0}
+  .specs dd{font-size:16px}
+}

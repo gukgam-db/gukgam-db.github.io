@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>연구 DB | 근거영양</title>
+<meta name="description" content="하버드 COSMOS·VITAL·PHS II, NIH 39만 명 20년 추적, USPSTF, 코크란 등 영양제 대규모 임상연구를 성분·결과·설계별로 검색. 원문 링크와 효과 크기(HR·RR) 그대로.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main class="wrap">
+  <div class="page-head">
+    <h1>연구 DB</h1>
+    <p>대규모 무작위 대조시험(RCT)·메타분석·장기 코호트만 수록. 수치는 원문 초록에서 옮겼고, 확인 안 된 값은 "미확인"으로 표시했습니다.</p>
+  </div>
+
+  <div class="stat-strip" id="stats"></div>
+
+  <div class="filter-bar">
+    <input type="search" id="q" placeholder="연구명·기관·성분·키워드 검색 (예: 하버드, 폐암, 골절)">
+    <select id="f-ing"><option value="">성분 전체</option></select>
+    <select id="f-out"><option value="">결과 전체</option></select>
+    <select id="f-design"><option value="">설계 전체</option>
+      <option value="RCT">무작위 대조시험(RCT)</option><option value="META">메타분석·코크란</option><option value="COHORT">코호트(관찰)</option><option value="REVIEW">종합 리뷰</option><option value="GUIDE">공식 권고</option></select>
+    <select id="f-grade"><option value="">등급 전체</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="X">X</option></select>
+    <select id="f-sort"><option value="year">최신순</option><option value="n">규모순</option><option value="grade">등급순</option></select>
+    <button class="btn btn-ghost btn-sm" id="reset">초기화</button>
+  </div>
+  <div class="count-line" id="count"></div>
+  <div id="list"></div>
+
+  <div class="callout info"><span class="t">읽는 법</span>
+    <b>HR/RR 0.92</b> = 위약군보다 위험이 8% 낮음. <b>(0.86–0.998)</b> = 95% 신뢰구간. 구간이 1을 포함하면 "차이 없음"으로 봅니다. <b>SU</b> = 표준화 단위(표준편차). 0.07 SU는 통계적으로는 유의해도 개인이 체감하기 어려운 크기입니다.
+  </div>
+  <div class="disclaimer">연구 수치는 원문 기준이며 요약·번역 오류 가능성이 있습니다. 반드시 원문 링크로 확인하세요. 본 DB는 정보 제공 목적이며 진단·처방이 아닙니다.</div>
+</main>
+<div id="site-footer"></div>
+<script src="data/glossary.js"></script>
+<script src="assets/app.js"></script>
+<script src="data/ingredients.js"></script>
+<script src="data/studies.js"></script>
+<script>
+(function(){
+  var S = window.EBN_STUDIES || [], I = window.EBN_INGREDIENTS || {}, esc = EBN.esc;
+  var OUT = { cancer:'암', cvd:'심혈관', mortality:'사망률', cognition:'인지·치매', bone:'뼈·골절', eye:'눈', immune:'면역·감염', metabolic:'대사·당뇨', mood:'기분·우울', pregnancy:'임신', safety:'안전성', aging:'노화', deficiency:'결핍 실태', muscle:'근육', sleep:'수면', gut:'장', skin:'피부', joint:'관절', lipid:'지질', bp:'혈압', pain:'통증' };
+  var DES = { RCT:'RCT', META:'메타분석', COHORT:'코호트', REVIEW:'리뷰', GUIDE:'권고' };
+  var ingName = function(id){ return (I[id] && I[id].name) || id; };
+
+  var ingSel = document.getElementById('f-ing'), outSel = document.getElementById('f-out');
+  var ings = {}, outs = {};
+  S.forEach(function(s){ (s.ing||[]).forEach(function(i){ ings[i]=1; }); (s.outcome||[]).forEach(function(o){ outs[o]=1; }); });
+  Object.keys(ings).sort(function(a,b){ return ingName(a).localeCompare(ingName(b),'ko'); }).forEach(function(i){ ingSel.insertAdjacentHTML('beforeend','<option value="'+i+'">'+esc(ingName(i))+'</option>'); });
+  Object.keys(outs).forEach(function(o){ outSel.insertAdjacentHTML('beforeend','<option value="'+o+'">'+esc(OUT[o]||o)+'</option>'); });
+
+  var q = new URLSearchParams(location.search);
+  if (q.get('ing')) ingSel.value = q.get('ing');
+  if (q.get('outcome')) outSel.value = q.get('outcome');
+
+  var ALIAS={'PHS II':"Physicians' Health Study II",'COSMOS-Mind':'COSMOS','COSMOS-Web':'COSMOS','VITAL-DEP':'VITAL','WHI 칼슘 + 비타민 D':'WHI'}; var seen={}, totalN=0; S.filter(function(s){return s.design==='RCT';}).forEach(function(s){ var k=s.name.split(' — ')[0].replace(/\(.*?\)/g,'').trim(); k=ALIAS[k]||k; if(!seen[k]){seen[k]=1; totalN+=(s.n||0);} });
+  document.getElementById('stats').innerHTML =
+    '<div class="stat"><div class="n">'+S.length+'</div><div class="l">수록 연구</div></div>'+
+    '<div class="stat"><div class="n">'+S.filter(function(s){return s.design==='RCT';}).length+'</div><div class="l">무작위 대조시험</div></div>'+
+    '<div class="stat"><div class="n">'+Math.floor(totalN/10000)+'만+</div><div class="l">RCT 참가자 합계(중복 제외)</div></div>'+
+    '<div class="stat"><div class="n">'+Object.keys(ings).length+'</div><div class="l">성분</div></div>';
+
+  function render(){
+    var kw = (document.getElementById('q').value||'').trim().toLowerCase();
+    var fi = ingSel.value, fo = outSel.value, fd = document.getElementById('f-design').value, fg = document.getElementById('f-grade').value, so = document.getElementById('f-sort').value;
+    var gradeRank = {A:0,B:1,C:2,D:3,X:4};
+    var list = S.filter(function(s){
+      if (fi && (s.ing||[]).indexOf(fi)<0) return false;
+      if (fo && (s.outcome||[]).indexOf(fo)<0) return false;
+      if (fd && s.design!==fd) return false;
+      if (fg && s.grade!==fg) return false;
+      if (kw){ var hay = [s.name,s.inst,s.journal,s.population,s.intervention,s.finding,s.caveat,(s.ing||[]).map(ingName).join(' '),(s.effect||[]).join(' ')].join(' ').toLowerCase(); if (hay.indexOf(kw)<0) return false; }
+      return true;
+    });
+    list.sort(function(a,b){ if (so==='n') return (b.n||0)-(a.n||0); if (so==='grade') return gradeRank[a.grade]-gradeRank[b.grade]; return b.year-a.year; });
+    document.getElementById('count').textContent = list.length+'건';
+    document.getElementById('list').innerHTML = list.map(function(s){
+      return '<article class="study" id="'+esc(s.id)+'">'+
+        '<div class="sh"><span class="grade '+esc(s.grade)+'" title="'+esc(EBN.gradeLabel[s.grade])+'">'+esc(s.grade)+'</span><h3>'+esc(s.name)+'</h3><span class="pill">'+esc(DES[s.design]||s.design)+'</span></div>'+
+        '<div class="meta"><span><b>'+esc(s.inst)+'</b></span><span>'+esc(s.journal)+' · '+esc(s.year)+'</span>'+(s.n?'<span>n = '+Number(s.n).toLocaleString()+'</span>':'')+'<span>'+esc(s.followup)+'</span></div>'+
+        '<div class="meta"><span>대상: '+esc(s.population)+'</span><span>중재: '+esc(s.intervention)+'</span></div>'+
+        '<div class="finding">'+esc(s.finding)+'</div>'+
+        '<div>'+(s.effect||[]).map(function(e){return '<span class="effect">'+esc(e)+'</span>';}).join('')+'</div>'+
+        (s.caveat?'<div class="caveat">한계: '+esc(s.caveat)+'</div>':'')+
+        '<div class="meta" style="margin-top:8px"><span>성분: '+(s.ing||[]).map(function(i){return '<a href="seongbun.html#'+esc(i)+'">'+esc(ingName(i))+'</a>';}).join(', ')+'</span><span>결과: '+(s.outcome||[]).map(function(o){return esc(OUT[o]||o);}).join(', ')+'</span><span>갱신 '+esc(s.updated)+'</span></div>'+
+        '<div class="src">'+(s.urls||[]).map(function(u){return '<a href="'+esc(u)+'" target="_blank" rel="noopener">원문 ↗</a>';}).join('')+'</div>'+
+      '</article>';
+    }).join('') || '<p class="count-line">조건에 맞는 연구가 없습니다.</p>';
+  }
+  ['q','f-ing','f-out','f-design','f-grade','f-sort'].forEach(function(id){ document.getElementById(id).addEventListener('input', render); document.getElementById(id).addEventListener('change', render); });
+  document.getElementById('reset').addEventListener('click', function(){ ['q','f-ing','f-out','f-design','f-grade'].forEach(function(id){ document.getElementById(id).value=''; }); render(); });
+  render();
+  if (location.hash) { var el = document.querySelector(location.hash); if (el) el.scrollIntoView(); }
+})();
+</script>
+</body>
+</html>
