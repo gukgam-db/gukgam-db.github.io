@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-14",
+ "updated": "2026-09-15",
  "source": "likms.assembly.go.kr/inspections",
  "items": [
   {
@@ -17,6 +17,24 @@
     {
      "name": "2026년도 국방위원회 국정감사계획서.pdf",
      "url": "https://defense.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=27e3a715445a4620b51cf3d6d9423e74&fileSn=2"
+    }
+   ]
+  },
+  {
+   "article_no": 3077856,
+   "year": 2025,
+   "committee": "교육위원회",
+   "doc_type": "plan",
+   "title": "2025년도 국정감사계획서",
+   "posted": "2025-09-23",
+   "files": [
+    {
+     "name": "(의결본)_2025년도 국정감사계획서(2025. 9. 23.의결).hwp",
+     "url": "https://edu.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=02873e571a4f493e8480c87e7e9cf635&fileSn=1"
+    },
+    {
+     "name": "(의결본)_2025년도 국정감사계획서(2025. 9. 23.의결).pdf",
+     "url": "https://edu.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=02873e571a4f493e8480c87e7e9cf635&fileSn=2"
     }
    ]
   },
@@ -459,6 +477,24 @@
    ]
   },
   {
+   "article_no": 3002276,
+   "year": 2024,
+   "committee": "교육위원회",
+   "doc_type": "plan",
+   "title": "2024년도 국정감사계획서",
+   "posted": "2024-09-24",
+   "files": [
+    {
+     "name": "1.2024년도 국정감사계획서(2024.09.24. 의결).hwp",
+     "url": "https://edu.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=lbbectvvh9cxupmezz6a19ndopqiqdf6&fileSn=1"
+    },
+    {
+     "name": "1.2024년도 국정감사계획서(2024.09.24. 의결).pdf",
+     "url": "https://edu.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=lbbectvvh9cxupmezz6a19ndopqiqdf6&fileSn=2"
+    }
+   ]
+  },
+  {
    "article_no": 3077870,
    "year": 2024,
    "committee": "국방위원회",
@@ -649,6 +685,56 @@
    ]
   },
   {
+   "article_no": 3002269,
+   "year": 2023,
+   "committee": "교육위원회",
+   "doc_type": "plan",
+   "title": "2023년도 국정감사계획서(재변경)",
+   "posted": "2023-10-11",
+   "files": [
+    {
+     "name": "2023년도 국정감사계획서(재변경).hwp",
+     "url": "https://edu.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=xpgjhinxty3cxzc7hjtvayyszd4n6g3r&fileSn=1"
+    }
+   ]
+  },
+  {
+   "article_no": 3002272,
+   "year": 2023,
+   "committee": "교육위원회",
+   "doc_type": "plan",
+   "title": "2023년도 국정감사계획서(변경)",
+   "posted": "2023-09-26",
+   "files": [
+    {
+     "name": "2023년도 국정감사계획서 변경.hwp",
+     "url": "https://edu.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=dyj3ugkzduh0oh81gtd2m8gmkkm7ie09&fileSn=1"
+    },
+    {
+     "name": "2023년도 국정감사계획서 변경.pdf",
+     "url": "https://edu.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=dyj3ugkzduh0oh81gtd2m8gmkkm7ie09&fileSn=2"
+    }
+   ]
+  },
+  {
+   "article_no": 3002291,
+   "year": 2023,
+   "committee": "교육위원회",
+   "doc_type": "plan",
+   "title": "2023년도 국정감사계획서",
+   "posted": "2023-09-20",
+   "files": [
+    {
+     "name": "(의결용)_2023년도 국정감사계획서.hwp",
+     "url": "https://edu.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=muigl73h0thzab9qadzft4tl0x6l8tul&fileSn=1"
+    },
+    {
+     "name": "(의결용)_2023년도 국정감사계획서.pdf",
+     "url": "https://edu.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=muigl73h0thzab9qadzft4tl0x6l8tul&fileSn=2"
+    }
+   ]
+  },
+  {
    "article_no": 3078414,
    "year": 2023,
    "committee": "기후에너지환경노동위원회",
@@ -659,6 +745,92 @@
     {
      "name": "000629208.PDF",
      "url": "https://likms.assembly.go.kr/inspection/conduct//2023/pdf/000629208.PDF"
+    }
+   ]
+  },
+  {
+   "article_no": 3002202,
+   "year": 2022,
+   "committee": "교육위원회",
+   "doc_type": "plan",
+   "title": "2022년도 국정감사계획서(변경)",
+   "posted": "2022-10-07",
+   "files": [
+    {
+     "name": "2022년도 국정감사계획서(변경).hwp",
+     "url": "https://edu.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=nv1ul9ebdhbcw1ndu9hh72cwuiyfok6t&fileSn=1"
+    }
+   ]
+  },
+  {
+   "article_no": 3001762,
+   "year": 2022,
+   "committee": "교육위원회",
+   "doc_type": "plan",
+   "title": "2022년도 국정감사계획서",
+   "posted": "2022-09-21",
+   "files": [
+    {
+     "name": "2022년_국정감사계획(9.21.).hwp",
+     "url": "https://edu.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=k410u4vkkpkw6o92ns7h20pzko3ry7me&fileSn=1"
+    },
+    {
+     "name": "2022년_국정감사계획(9.21.).pdf",
+     "url": "https://edu.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=k410u4vkkpkw6o92ns7h20pzko3ry7me&fileSn=2"
+    }
+   ]
+  },
+  {
+   "article_no": 3002118,
+   "year": 2021,
+   "committee": "교육위원회",
+   "doc_type": "plan",
+   "title": "2021년도 국정감사계획서",
+   "posted": "2021-09-14",
+   "files": [
+    {
+     "name": "(교육위) 2021년 국정감사계획.hwp",
+     "url": "https://edu.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=94dij8a6keyrud52mjpjm7mb6nxh5k29&fileSn=1"
+    },
+    {
+     "name": "(교육위) 2021년 국정감사계획.pdf",
+     "url": "https://edu.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=94dij8a6keyrud52mjpjm7mb6nxh5k29&fileSn=2"
+    }
+   ]
+  },
+  {
+   "article_no": 3002031,
+   "year": 2020,
+   "committee": "교육위원회",
+   "doc_type": "plan",
+   "title": "2020년도 국정감사 계획서",
+   "posted": "2020-10-05",
+   "files": [
+    {
+     "name": "2020년_국정감사계획서.hwp",
+     "url": "https://edu.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=jksijfgmr0j0udxk98uxked51t7b22jj&fileSn=1"
+    },
+    {
+     "name": "2020년_국정감사계획서.pdf",
+     "url": "https://edu.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=jksijfgmr0j0udxk98uxked51t7b22jj&fileSn=2"
+    }
+   ]
+  },
+  {
+   "article_no": 3002016,
+   "year": 2018,
+   "committee": "교육위원회",
+   "doc_type": "result_report",
+   "title": "2018년도 국정감사 결과보고서",
+   "posted": "2019-10-18",
+   "files": [
+    {
+     "name": "2018년도 국정감사 결과보고서.hwp",
+     "url": "https://edu.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000031&atchFileId=qfge4ux1cxnsszihoru8yfeu47a6ogul&fileSn=1"
+    },
+    {
+     "name": "2018년도 국정감사 결과보고서.pdf",
+     "url": "https://edu.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000031&atchFileId=qfge4ux1cxnsszihoru8yfeu47a6ogul&fileSn=2"
     }
    ]
   },
