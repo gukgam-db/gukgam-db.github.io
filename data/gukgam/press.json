@@ -1,6 +1,6 @@
 {
- "updated": "2026-09-15",
- "updated_at": "2026-09-15 23:40",
+ "updated": "2026-09-16",
+ "updated_at": "2026-09-16 08:14",
  "window": "14d",
  "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. 기관·위원 분류는 제목 키워드 자동.",
  "count": 62,
@@ -95,7 +95,7 @@
    "title": "복지위, 김승원 '식약처 청탁 의혹' 공방…여 \"정쟁 용납 안돼\" 야 \"왜 뚫렸나 따져야\"",
    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE93Rldtc0RFWXQ5Y24yV1hvdGkxZ2t0aERtN2NzR0IzLXEwanYyQXBmYTVGSTdES3QycjZXQzUzV3d5UzBHRzctemFDZUZ4Q3pwZkoxdFo4RDBZMGI0X2N2QnpwdEk5MV9aTmpIWEF3?oc=5",
    "date": "2026-09-11",
-   "source": "네이트",
+   "source": "Nate News",
    "score": 3,
    "agencies": [
     "식품의약품안전처"
@@ -107,7 +107,7 @@
    "title": "법무부 장관 후보자 '식약처 청탁 의혹' 복지위까지…여야 정면 충돌",
    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5UVV8xM1pHaktveVZiZWxkb2lCNkx3M1NiV19XejNIMnFuQk91ZmUzdVFaUmNqRXNxbzhEdldMSjhNWlZ4YVZDOWpoV3hON2ZWZzhjcVRoUW5uWk13M0lISU52Z0ZjSWZaaUdtMVpNa9IBc0FVX3lxTE9EYV84dHZKZVUtRklxeERkSHhlRmVKQlkwdVpVYVhoWENiek9fNlhWYm9IdUdyN3o4NUUtckwyLW1QQUhfbjh0U3ZrUmZzLU1XNXl1ODlyY29VbU9pc0swRXdtTHNxbi1wRERIZ25QVHRiMDQ?oc=5",
    "date": "2026-09-11",
-   "source": "청년의사",
+   "source": "docdocdoc.co.kr",
    "score": 3,
    "agencies": [
     "식품의약품안전처"
@@ -141,7 +141,7 @@
    "title": "복지위, 김승원 신약 청탁 의혹에…與 \"정쟁 안돼\" VS 野 \"왜 뚫렸나\"",
    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9TUWFzRlVVUEpBQ2h6LTRZTDEzTm5rRUVYRXc2WkRUTW83WWlraVBWVDB1N0JWYUNDb1VSS1E4RkVHS1ZuNEdUcmpYd21ic2ZlVFg4WUl1ckZpQ1YwZ3pqdA?oc=5",
    "date": "2026-09-11",
-   "source": "네이트",
+   "source": "Nate News",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -149,7 +149,7 @@
   },
   {
    "title": "“김승원, 브로커·식약처 청탁 전화…국감 중 들락날락”",
-   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBmVVlwTVlUM1ljaWZqaDltdXU2WmRtYnA0SDVDRkxxZm50SlpFdUpBc3dHWUNjVlByZDF3T01pekxBUVk2WDdLRHlFeWRXOUFVSXQ0eQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBKTXVWWVVqMlBRZmFZNkVHbnpHblpSSURFRjk5eHZUSzdyemFqYnI4b0pjWHZsSVRGa1VEMzdZWU5zUnVmbnc?oc=5",
    "date": "2026-09-11",
    "source": "v.daum.net",
    "score": 3,
@@ -215,7 +215,7 @@
    "title": "김승원, 국정감사 중 제넨셀 임상 승인 요청 의혹…안철수 “의원 자격도 없다”",
    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBCeVVqc0JTM05aU3ZrZnZGYXVBMFQwUkNxMHl4VW8tSHpVWFdkZU1wR2VDQjBoWDZQVm51OGc1Vzh4dmZIZ2VGNlA0WWNTQQ?oc=5",
    "date": "2026-09-10",
-   "source": "뉴스21일간",
+   "source": "krnews21.co.kr",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -371,7 +371,7 @@
    "title": "교육·보육 종사자 아동학대 5년간 6087명… 하루 3.6명 검거 [2026 국감]",
    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFA1U0xoZjBKbUt1cGFpTnJ1Y0xib3lxZWk5V2p0SWdCLUFWd0ZVUjlqMWI4eHgzRXFrOW4tS21HQ3lxUUhqSTlzOUY4NmpQTzNGZ0M5RG1oN2gtWnIyWXBITjJLUkpudw?oc=5",
    "date": "2026-09-10",
-   "source": "news.unn.net",
+   "source": "한국대학신문",
    "score": 2,
    "agencies": [],
    "members": [],
