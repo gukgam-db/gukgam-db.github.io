@@ -3,187 +3,654 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="naver-site-verification" content="1090b80ddb4d001e46ee84fa6a551f7a87932734" />
-<title>갈매동 부동산 | 갈매역삼성부동산 — 시세·매물·안심 계약</title>
-<meta name="description" content="구리 갈매동 아파트 실거래가·시세, 전세·월세·매매 매물, 안전한 계약 가이드까지. 갈매지구 터줏대감 갈매역삼성부동산(031-575-4944)이 운영하는 우리 동네 부동산 사이트.">
-<link rel="canonical" href="https://galmae-budongsan.com/">
-<meta property="og:site_name" content="갈매역삼성부동산">
-<meta property="og:locale" content="ko_KR">
-<meta property="og:title" content="갈매동 부동산 · 갈매역삼성부동산">
-<meta property="og:description" content="갈매동 단지별 진짜 실거래가와 매물, 안심 계약 가이드. 상담 031-575-4944.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://galmae-budongsan.com/">
-<meta property="og:image" content="https://galmae-budongsan.com/assets/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="갈매동 부동산 · 갈매역삼성부동산">
-<meta name="twitter:description" content="갈매동 단지별 진짜 실거래가와 매물, 안심 계약 가이드. 상담 031-575-4944.">
-<meta name="twitter:image" content="https://galmae-budongsan.com/assets/og-image.png">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "RealEstateAgent",
-  "name": "갈매역삼성부동산",
-  "image": "https://galmae-budongsan.com/assets/og-image.png",
-  "url": "https://galmae-budongsan.com/",
-  "telephone": "+82-31-575-4944",
-  "priceRange": "₩₩",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "갈매순환로 202 로터스타워 104호",
-    "addressLocality": "구리시",
-    "addressRegion": "경기도",
-    "addressCountry": "KR"
-  },
-  "areaServed": ["구리시 갈매동", "남양주 별내", "남양주 다산", "구리시"],
-  "description": "구리 갈매동 아파트 실거래가·시세·매물·안심 계약. 갈매지구 터줏대감 공인중개사(등록 41310-2025-00034).",
-  "knowsLanguage": "ko"
-}
-</script>
-<link rel="stylesheet" href="assets/css/style.css">
+<title>국정감사 자료 DB</title>
+<meta name="description" content="국정감사 결과보고서·시정처리 결과·회의록을 한곳에서 검색하는 통합 DB. 보건복지부·질병관리청·심평원 등 보건복지위원회 소관기관은 전용 페이지로 제공합니다.">
 <style>
-  .home-hero { background:linear-gradient(120deg,#0e8a6b 0%,#123a6b 100%); color:#fff; padding:52px 18px 56px; text-align:center; }
-  .home-hero h1 { font-size:2.05rem; margin:0 0 10px; letter-spacing:-.03em; line-height:1.3; }
-  .home-hero p { font-size:1.05rem; max-width:640px; margin:6px auto; color:#e9f4ef; }
-  .home-hero .cta-row { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:20px; }
-  .home-hero .cta { display:inline-flex; align-items:center; gap:8px; padding:12px 22px; border-radius:30px; font-weight:800; text-decoration:none; }
-  .home-hero .cta.tel { background:#fff; color:#123a6b; }
-  .home-hero .cta.ghost { background:rgba(255,255,255,.15); color:#fff; border:1px solid rgba(255,255,255,.5); }
-  .home-hero .cta:hover{opacity:.92;text-decoration:none}
-  .home-hero .biz { margin-top:14px; font-size:.86rem; color:#cfe7dd; }
-  .sec-label { color:var(--muted); font-size:.9rem; margin:2px 0 -6px; }
+  [hidden]{ display:none !important; }
+  :root{ --navy:#12365f; --line:#e3e9f0; --muted:#5f6e80; --bg:#f5f7fa; --accent:#1f6f5c; --chip:#eef3f8; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif; background:var(--bg); color:#22303e; line-height:1.55; }
+  a{ color:inherit; }
+  .top{ background:var(--navy); color:#fff; padding:26px 18px 22px; }
+  .top-inner{ max-width:1060px; margin:0 auto; }
+  .top h1{ margin:0 0 6px; font-size:1.5rem; }
+  .top p{ margin:0; font-size:.92rem; opacity:.85; }
+  .top-nav{ margin-top:12px; display:flex; gap:8px; flex-wrap:wrap; }
+  .top-nav a{ color:#fff; text-decoration:none; font-size:.85rem; font-weight:700; background:rgba(255,255,255,.14); border-radius:20px; padding:6px 14px; }
+  .top-nav a.on, .top-nav a:hover{ background:rgba(255,255,255,.28); }
+  .wrap{ max-width:1060px; margin:0 auto; padding:20px 18px 60px; }
+  .notice{ background:#fff8e6; border:1px solid #f0dfae; border-radius:10px; padding:10px 14px; font-size:.85rem; margin:14px 0 0; color:#5c4a15; }
+  .stats{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:18px 0; }
+  .stat{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  .stat .n{ font-size:1.5rem; font-weight:800; color:var(--navy); }
+  .stat .l{ font-size:.8rem; color:var(--muted); margin-top:2px; }
+  .stat.health .n{ color:var(--accent); }
+  .filters{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px 16px; display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+  .filters select,.filters input{ border:1px solid var(--line); border-radius:8px; padding:8px 10px; font-size:.9rem; background:#fff; }
+  .filters input{ flex:1; min-width:180px; }
+  .typebtns{ display:flex; gap:6px; flex-wrap:wrap; }
+  .typebtns button{ border:1px solid var(--line); background:#fff; border-radius:20px; padding:7px 14px; font-size:.84rem; font-weight:700; color:#4a5a6b; cursor:pointer; }
+  .typebtns button.on{ background:var(--navy); border-color:var(--navy); color:#fff; }
+  .list{ margin-top:16px; }
+  .row{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:13px 16px; margin-bottom:10px; display:flex; gap:12px; align-items:flex-start; flex-wrap:wrap; }
+  .row .main{ flex:1; min-width:230px; }
+  .row .title{ font-weight:700; color:var(--navy); font-size:.98rem; }
+  .row .meta{ margin-top:4px; font-size:.79rem; color:var(--muted); display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+  .badge{ display:inline-block; border-radius:9px; padding:1px 9px; font-size:.74rem; font-weight:800; background:var(--chip); color:#3d4f63; }
+  .badge.result{ background:#e8f0fb; color:#1c4f9c; }
+  .badge.follow{ background:#f3ecfb; color:#6b3fa0; }
+  .badge.minutes{ background:#e9f6ef; color:#1f6f5c; }
+  .badge.health{ background:#dff2ec; color:#136350; }
+  .links{ display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+  .links a{ text-decoration:none; font-size:.8rem; font-weight:800; border:1px solid var(--line); border-radius:8px; padding:5px 11px; background:#fafcfe; color:#2a4d7d; }
+  .links a:hover{ border-color:#b9cbe0; }
+  .empty{ text-align:center; color:var(--muted); padding:40px 0; }
+  .sum{ margin-top:7px; font-size:.8rem; color:#3d5a4e; background:#f0f7f3; border:1px solid #dcebe2; border-radius:8px; padding:6px 10px; line-height:1.5; }
+  h2{ font-size:1.1rem; color:var(--navy); margin:24px 0 12px; }
+  .mem-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:10px; }
+  .mem{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 14px; display:flex; gap:12px; align-items:flex-start; position:relative; }
+  .mtag{ position:absolute; top:-9px; right:10px; font-size:.7rem; font-weight:900; border-radius:9px; padding:2px 9px; border:1px solid; background:#fff; }
+  .mtag.chair{ color:#fff; border-color:#c0392b; background:#c0392b; }
+  .mtags{ position:absolute; top:-10px; right:10px; display:flex; gap:4px; } .mtags .mtag{ position:static; }
+  .mem.chair{ border:2px solid #c0392b; box-shadow:0 0 0 3px rgba(192,57,43,.12); }
+  .mem.whip{ border:2px solid #e2a04a; }
+  .rtable .rk.c{ color:#fff; border:1px solid #c0392b; background:#c0392b; }
+  .mtag.whip{ color:#a35b1e; border-color:#eecb9e; background:#fdf3e7; }
+  .mtag.new{ color:#1c4f9c; border-color:#b9cfec; background:#eef4fc; }
+  .mtag.hot{ color:#a03030; border-color:#e8b6b6; background:#fdeaea; }
+  .mtag.data{ color:#136350; border-color:#b5ddd0; background:#e9f6f0; }
+  .mtag.ppt{ color:#3d3a7c; border-color:#c5c2e8; background:#efeefa; }
+  .mtag.ddl{ color:#7a4a12; border-color:#e0c9a8; background:#faf2e6; }
+  .mtag.field{ color:#4a5a6b; border-color:#c9d4df; background:#f1f5fa; }
+  .mem img{ width:56px; height:72px; object-fit:cover; border-radius:8px; background:#eef1f5; flex:0 0 auto; }
+  .mem .mn{ font-weight:800; color:var(--navy); font-size:.96rem; }
+  .mem .mn small{ font-weight:400; color:var(--muted); }
+  .mem .mp{ font-size:.76rem; margin-top:2px; }
+  .mem .md{ font-size:.76rem; color:var(--muted); margin-top:2px; line-height:1.45; }
+  .mem details{ margin-top:6px; }
+  .mem summary{ font-size:.75rem; font-weight:800; color:#2a4d7d; cursor:pointer; }
+  .mem .brf{ font-size:.75rem; color:#3d4f63; white-space:pre-line; margin-top:5px; max-height:180px; overflow-y:auto; line-height:1.5; }
+  .pty{ display:inline-block; border-radius:8px; padding:1px 8px; font-size:.72rem; font-weight:800; background:var(--chip); color:#3d4f63; }
+  .rtabs{ display:flex; gap:6px; flex-wrap:wrap; margin:0 0 10px; }
+  .rtabs button{ border:1px solid var(--line); background:#fff; border-radius:20px; padding:6px 13px; font-size:.82rem; font-weight:800; color:#4a5a6b; cursor:pointer; }
+  .rtabs button.on{ background:var(--navy); color:#fff; border-color:var(--navy); }
+  .rwrap{ overflow-x:auto; background:#fff; border:1px solid var(--line); border-radius:12px; }
+  .rtable{ width:100%; border-collapse:collapse; font-size:.86rem; min-width:560px; }
+  .rtable th,.rtable td{ padding:7px 10px; border-bottom:1px solid var(--line); text-align:left; white-space:nowrap; }
+  .rtable th{ background:#f4f7fa; font-size:.75rem; color:var(--muted); font-weight:800; }
+  .rtable tr:last-child td{ border-bottom:0; }
+  .rtable td.num{ text-align:right; font-variant-numeric:tabular-nums; }
+  .rtable .rn{ font-weight:800; color:var(--navy); }
+  .rtable .rk{ font-size:.7rem; font-weight:900; border-radius:8px; padding:1px 7px; margin-left:5px; vertical-align:1px; }
+  .rtable .rk.c{ color:#8a5a00; border:1px solid #e2c56b; background:#fff8e2; }
+  .rtable .rk.a{ color:#4a5a6b; border:1px solid #c9d4df; background:#f1f5fa; }
+  .rtable a.rs{ font-size:.76rem; font-weight:800; color:#2a4d7d; text-decoration:none; border:1px solid var(--line); border-radius:8px; padding:2px 8px; background:#fafcfe; }
+  .rnote{ font-size:.78rem; color:var(--muted); margin:0 2px 10px; line-height:1.5; }
+  .mem-toggle{ border:1px solid var(--line); background:#fff; border-radius:10px; padding:8px 16px; font-size:.86rem; font-weight:800; cursor:pointer; color:#2a4d7d; margin-bottom:10px; }
+  .tchips{ display:flex; gap:4px; flex-wrap:wrap; margin-top:6px; }
+  .tchip{ font-size:.7rem; font-weight:800; background:#eef8f3; color:#136350; border:1px solid #d5ebdf; border-radius:8px; padding:1px 7px; }
+  .tchip.turns{ background:#f1f5fa; color:#3d4f63; border-color:var(--line); }
+  .mlinks{ display:flex; gap:6px; flex-wrap:wrap; margin-top:7px; }
+  .mlinks a{ font-size:.72rem; font-weight:800; text-decoration:none; border:1px solid var(--line); border-radius:8px; padding:3px 9px; background:#fafcfe; color:#2a4d7d; }
+  .sched-day{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 16px; margin-bottom:8px; }
+  .sched-day .sd{ font-weight:800; color:var(--navy); font-size:.9rem; margin-bottom:6px; }
+  .sched-item{ display:flex; gap:8px; align-items:baseline; font-size:.88rem; padding:3px 0; flex-wrap:wrap; }
+  .sched-item .tm{ color:var(--muted); font-size:.8rem; flex:0 0 auto; min-width:80px; }
+  .scat{ border-radius:8px; padding:1px 8px; font-size:.72rem; font-weight:800; }
+  .scat.k1{ background:#fbeaea; color:#a03030; }
+  .scat.k2{ background:#dff2ec; color:#136350; }
+  .scat.k3{ background:#e8f0fb; color:#1c4f9c; }
+  .scat.k4{ background:#f3ecfb; color:#6b3fa0; }
+  .scat.k5{ background:#fdeee3; color:#a35b1e; }
+  .scat.k6{ background:#f1f3f5; color:#5a6673; }
+  .sched-h{ font-size:.86rem; font-weight:800; color:var(--navy); margin:2px 2px 8px;
+            display:flex; align-items:center; gap:7px; }
+  .sched-h::before{ content:""; width:4px; height:14px; border-radius:2px; background:#a03030; }
+  .sched-h .cnt{ font-weight:700; color:var(--muted); font-size:.78rem; }
+  .sched-other{ margin-top:12px; }
+  .sched-other summary{ cursor:pointer; font-size:.84rem; font-weight:700; color:#2a4d7d;
+                        padding:8px 12px; background:#fff; border:1px solid var(--line); border-radius:10px; }
+  .sched-other summary .cnt{ font-weight:600; color:var(--muted); }
+  .sched-other[open] summary{ margin-bottom:8px; }
+  .dday{ font-size:.7rem; font-weight:800; color:#a03030; background:#fbeaea;
+         border-radius:6px; padding:1px 6px; flex:0 0 auto; }
+  .dday.far{ color:#5a6673; background:#f1f3f5; }
+  .scat.g1{ background:#fbeaea; color:#a03030; }
+  .scat.g2{ background:#fdeee3; color:#a35b1e; }
+  .scat.g3{ background:#dcefe6; color:#0f5b46; }
+  .scat.g4{ background:#e6efdc; color:#4a6414; }
+  .scat.g5{ background:#eaf4ef; color:#3d6b58; }
+  .scat.g6{ background:#dff2ec; color:#136350; }
+  .scat.g7{ background:#e8f0fb; color:#1c4f9c; }
+  .scat.g8{ background:#f1f3f5; color:#5a6673; }
+  .sched-empty{ background:#fff; border:1px dashed var(--line); border-radius:12px; padding:14px 16px; font-size:.86rem; color:var(--muted); }
+  .gsearch{ margin:2px 0 18px; }
+  .gs-bar{ display:flex; gap:8px; }
+  .gs-bar input{ flex:1; border:2px solid var(--navy); border-radius:12px; padding:13px 16px; font-size:1rem; background:#fff; }
+  .gs-bar button{ border:0; background:var(--navy); color:#fff; border-radius:12px; padding:0 26px; font-size:.95rem; font-weight:800; cursor:pointer; }
+  #gsOut{ margin-top:12px; background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  .gs-group{ margin-bottom:14px; }
+  .gs-group:last-child{ margin-bottom:0; }
+  .gs-group h4{ margin:0 0 7px; font-size:.85rem; color:var(--navy); }
+  .gs-group h4 a{ font-weight:800; color:#2a4d7d; font-size:.78rem; margin-left:6px; }
+  .gs-item{ padding:7px 0; border-bottom:1px dashed var(--line); font-size:.87rem; line-height:1.55; }
+  .gs-item:last-child{ border-bottom:0; }
+  .gs-item .gm{ font-size:.74rem; color:var(--muted); display:flex; gap:8px; flex-wrap:wrap; margin-top:2px; }
+  .gs-item mark{ background:#ffe9a8; padding:0 1px; }
+  .gs-sug{ position:relative; }
+  .gs-sug .list{ position:absolute; left:0; right:0; top:4px; z-index:20; background:#fff; border:1px solid var(--line); border-radius:12px; box-shadow:0 10px 26px rgba(18,54,95,.14); overflow:hidden; }
+  .gs-sug button{ display:flex; width:100%; justify-content:space-between; align-items:center; gap:10px; border:0; background:#fff; padding:9px 14px; font-size:.92rem; cursor:pointer; text-align:left; border-bottom:1px solid #f0f3f7; }
+  .gs-sug button:last-child{ border-bottom:0; }
+  .gs-sug button:hover, .gs-sug button.on{ background:#f3f7fb; }
+  .gs-sug button b{ color:var(--navy); }
+  .gs-sug button .k{ font-size:.72rem; color:var(--muted); white-space:nowrap; }
+  .gs-sug button .k i{ font-style:normal; font-weight:800; border-radius:7px; padding:1px 6px; margin-right:6px; }
+  .gs-sug button .k i.m{ background:#e8f0fb; color:#1c4f9c; } .gs-sug button .k i.t{ background:#eef8f3; color:#136350; } .gs-sug button .k i.a{ background:#f3ecfb; color:#6b3fa0; }
+  .gs-loading{ color:var(--muted); font-size:.88rem; }
+  .hl-scroll{ display:flex; gap:12px; overflow-x:auto; padding:4px 2px 10px; scroll-snap-type:x mandatory; }
+  .hl-card{ flex:0 0 250px; scroll-snap-align:start; border-radius:14px; overflow:hidden; background:#fff; border:1px solid var(--line); text-decoration:none; display:block; transition:transform .12s; }
+  .hl-card:hover{ transform:translateY(-3px); }
+  .hl-thumb{ position:relative; height:130px; background:linear-gradient(135deg,#12365f,#1c5a6b); color:#fff; padding:12px 14px; display:flex; flex-direction:column; justify-content:flex-end; }
+  .hl-thumb .ht{ font-size:1.18rem; font-weight:900; line-height:1.25; letter-spacing:-.02em; text-shadow:0 1px 3px rgba(0,0,0,.4); }
+  .hl-thumb .hn{ position:absolute; top:10px; left:12px; background:#c0392b; color:#fff; font-size:.72rem; font-weight:900; border-radius:6px; padding:2px 8px; }
+  .hl-thumb img{ position:absolute; right:10px; top:10px; width:44px; height:56px; object-fit:cover; border-radius:7px; border:2px solid rgba(255,255,255,.85); }
+  .hl-body{ padding:10px 13px 12px; }
+  .hl-body .hd{ font-size:.76rem; font-weight:800; color:#12365f; }
+  .hl-body .hg{ font-size:.73rem; color:var(--muted); margin-top:2px; line-height:1.45; }
+  .hl-body .hq{ font-size:.75rem; color:#3d4f63; margin-top:6px; line-height:1.5; border-left:3px solid #e3e9f0; padding-left:8px; }
+  .tl-wrap{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+  .tl-legend{ display:flex; gap:16px; flex-wrap:wrap; align-items:center; font-size:.8rem; color:#3d4f63; font-weight:700; margin-bottom:6px; }
+  .tl-legend svg{ vertical-align:-2px; margin-right:3px; }
+  #tlSvg text{ font-family:inherit; }
+  .more{ display:block; margin:14px auto 0; border:1px solid var(--line); background:#fff; border-radius:10px; padding:10px 26px; font-size:.9rem; font-weight:700; cursor:pointer; color:#2a4d7d; }
+  /* 국감 브리핑 */
+  .br-pick{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin:0 2px 12px; }
+  .br-pick label{ font-size:.82rem; font-weight:800; color:var(--navy); }
+  .br-pick select{ font-size:.9rem; padding:6px 10px; border:1px solid var(--line);
+                   border-radius:9px; background:#fff; color:#22303e; }
+  .br-hint{ font-size:.78rem; color:var(--muted); }
+  .br-sec{ font-size:.8rem; font-weight:800; color:var(--navy); margin:14px 2px 8px;
+           display:flex; align-items:center; gap:7px; }
+  .br-sec::before{ content:""; width:4px; height:13px; border-radius:2px; background:#12365f; }
+  .kpi{ display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:8px; }
+  .kpi .t{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 14px; }
+  .kpi .lb{ font-size:.76rem; color:var(--muted); margin-bottom:4px; }
+  .kpi .vl{ font-size:1.7rem; font-weight:700; color:var(--navy); line-height:1.1; }
+  .kpi .vl small{ font-size:.9rem; font-weight:700; color:var(--muted); margin-left:2px; }
+  .kpi .dl{ font-size:.78rem; font-weight:800; margin-top:3px; }
+  .kpi .dl.bad{ color:#a03030; }   /* 지적이 늘어난 것은 나쁜 방향 */
+  .kpi .dl.good{ color:#136350; }
+  .kpi .dl.flat{ color:var(--muted); }
+  .kpi .sub{ font-size:.74rem; color:var(--muted); margin-top:3px; }
+  .aud{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 14px; }
+  .aud .r{ display:flex; gap:10px; align-items:baseline; font-size:.86rem; padding:3px 0; }
+  .aud .y{ font-weight:800; color:var(--navy); flex:0 0 auto; min-width:52px; }
+  .aud .dd{ color:#22303e; }
+  .aud .lastr{ color:#a03030; font-weight:700; }
+  .aud .concl{ font-size:.8rem; color:var(--muted); margin-top:8px; padding-top:8px;
+               border-top:1px solid #eef2f6; line-height:1.6; }
+  .trend-tb{ width:100%; min-width:520px; border-collapse:collapse; background:#fff; border:1px solid var(--line);
+             border-radius:12px; overflow:hidden; font-size:.84rem; }
+  .trend-tb th{ text-align:left; font-size:.74rem; color:var(--muted); font-weight:700;
+                padding:8px 12px; border-bottom:1px solid var(--line); }
+  .trend-tb td{ padding:7px 12px; border-bottom:1px solid #eef2f6; vertical-align:middle; }
+  .trend-tb tr:last-child td{ border-bottom:0; }
+  .trend-tb .num{ text-align:right; font-variant-numeric:tabular-nums; color:var(--muted); }
+  .dir{ font-size:.72rem; font-weight:800; border-radius:6px; padding:1px 7px; white-space:nowrap; }
+  .dir.up{ background:#fbeaea; color:#a03030; }
+  .dir.down{ background:#eaf4f0; color:#136350; }
+  .dir.flat{ background:#f1f3f5; color:#5a6673; }  /* 변화 없음 — 빈칸으로 두면 누락으로 읽힌다 */
+  .dup{ font-size:.7rem; font-weight:800; border-radius:6px; padding:1px 7px;
+        background:#fdf0e3; color:#8a5a17; white-space:nowrap; }  /* 전년 중복 — 증감 표시와 구분 */
+  .br-fold{ margin-top:8px; }
+  .br-fold summary{ cursor:pointer; font-size:.84rem; font-weight:700; color:#2a4d7d;
+                    padding:9px 13px; background:#fff; border:1px solid var(--line); border-radius:10px; }
+  .br-fold summary .cnt{ font-weight:600; color:var(--muted); }
+  .br-fold[open] summary{ margin-bottom:8px; }
+  .rep{ background:#fff; border:1px solid var(--line); border-left:4px solid #c8d2dc;
+        border-radius:10px; padding:10px 14px; margin-bottom:7px; font-size:.86rem; }
+  .rep.same{ border-left-color:#a03030; }
+  .rep.near{ border-left-color:#c9853f; }
+  .rep .yr{ font-size:.72rem; font-weight:800; color:var(--muted); margin-right:6px; }
+  .rep .ln{ line-height:1.55; margin:2px 0; }
+  .rep .tag{ font-size:.71rem; font-weight:800; border-radius:6px; padding:1px 7px; margin-right:5px; }
+  .rep .tag.same{ background:#fbeaea; color:#a03030; }
+  .rep .tag.near{ background:#fdf0e3; color:#8a5a17; }
+  .rep .tag.like{ background:#f1f3f5; color:#5a6673; }
+  .barrow{ display:flex; align-items:center; gap:8px; font-size:.84rem; padding:4px 0; }
+  .barrow .nm{ flex:0 0 auto; min-width:180px; color:#22303e; }
+  .barrow .bar{ flex:1; height:8px; background:#eef2f6; border-radius:4px; overflow:hidden; }
+  .barrow .bar i{ display:block; height:100%; background:#12365f; border-radius:4px; }
+  .barrow .n{ flex:0 0 auto; font-variant-numeric:tabular-nums; color:var(--muted); font-size:.8rem; }
+  @media (max-width:560px){
+    /* 분류명이 길어(예: 의료관련감염·항생제내성) 막대가 몇 픽셀로 눌리던 것을 막는다 */
+    .barrow{ flex-wrap:wrap; row-gap:2px; }
+    .barrow .nm{ min-width:0; flex:1 1 100%; }
+    .barrow .bar{ flex:1 1 auto; }
+    .kpi .vl{ font-size:1.5rem; }
+  }
+  .doc-fold{ margin-top:20px; }
+  .doc-fold summary{ cursor:pointer; font-size:.95rem; font-weight:800; color:var(--navy);
+                     padding:11px 14px; background:#fff; border:1px solid var(--line); border-radius:11px; }
+  .doc-fold summary .cnt{ font-weight:600; color:var(--muted); font-size:.8rem; }
+  .doc-fold[open] summary{ margin-bottom:12px; }
+  .scope-note{ font-size:.8rem; color:var(--muted); margin:-4px 2px 10px; }
+  .scope-note b{ color:#12365f; }
+  .scope-note button{ border:1px solid var(--line); background:#fff; border-radius:8px;
+                      padding:2px 10px; margin-left:8px; font-size:.78rem; font-weight:700;
+                      color:#2a4d7d; cursor:pointer; }
+  .foot{ font-size:.78rem; color:var(--muted); margin-top:26px; }
+
+  .menu{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin:14px 0 8px; }
+  .tile{ display:block; background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px 18px 16px; text-decoration:none; color:inherit; position:relative; transition:transform .12s, box-shadow .12s; min-height:118px; }
+  .tile:hover{ transform:translateY(-3px); box-shadow:0 8px 22px rgba(18,54,95,.12); }
+  .tile .tk{ font-size:1.5rem; line-height:1; }
+  .tile .tt{ font-size:1.12rem; font-weight:900; color:var(--navy); margin-top:8px; letter-spacing:-.01em; }
+  .tile .ts{ font-size:.78rem; color:var(--muted); margin-top:6px; line-height:1.5; }
+  .tile .ts b{ color:#1f3b5a; }
+  .tile.big{ grid-column:1 / -1; background:linear-gradient(135deg,#12365f,#1c5a6b); color:#fff; border:0; }
+  .tile.big .tt{ color:#fff; font-size:1.3rem; }
+  .tile.big .ts{ color:rgba(255,255,255,.85); } .tile.big .ts b{ color:#fff; }
+  .tile .go{ position:absolute; right:14px; top:14px; font-size:.78rem; font-weight:800; color:#2a4d7d; background:#eef3f8; border-radius:8px; padding:3px 9px; }
+  .tile.big .go{ background:rgba(255,255,255,.18); color:#fff; }
+  @media(min-width:760px){ .menu{ grid-template-columns:repeat(4,1fr); } }
+  .sub-links{ display:flex; gap:8px; flex-wrap:wrap; margin:6px 0 18px; font-size:.82rem; }
+  .sub-links a{ color:#2a4d7d; font-weight:800; text-decoration:none; border:1px solid var(--line); background:#fff; border-radius:20px; padding:6px 13px; }
+  .upd{ font-size:.76rem; color:var(--muted); margin:-8px 2px 12px; }
+  .ins-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px; }
+  /* 카드 경계가 배경에 묻혀 어디까지가 한 카드인지 잘 안 보였다 — 테두리를 한 단계 진하게 + 옅은 그림자 */
+  .ins{ background:#fff; border:1.5px solid #cbd8e6; border-radius:14px; padding:14px 16px;
+        box-shadow:0 1px 3px rgba(18,54,95,.06); }
+  /* 보도 카드 — 오늘 새로 들어온 것이라 가장 먼저 눈에 들어와야 한다 */
+  .ins.press{ background:#fffaf6; border:2px solid #d2603a; border-left:6px solid #d2603a;
+              box-shadow:0 2px 10px rgba(210,96,58,.14); }
+  .ins.press h3{ color:#9e3a20; }
+  .ins.press li{ border-bottom-color:#f0dbcf; }
+  .ins.press .why{ color:#8a6b5d; }
+  .ins h3{ margin:0 0 8px; font-size:.9rem; color:var(--navy); display:flex; justify-content:space-between; align-items:center; gap:8px; }
+  .ins h3 a{ font-size:.74rem; font-weight:800; color:#2a4d7d; text-decoration:none; }
+  .ins ul{ margin:0; padding-left:0; list-style:none; font-size:.85rem; line-height:1.55; }
+  .ins li{ padding:4px 0; border-bottom:1px dashed var(--line); display:flex; justify-content:space-between; gap:10px; align-items:baseline;
+           word-break:keep-all; }   /* 낱말 중간에서 줄이 끊기지 않게 — '미공개'가 '미/공개'로 잘리던 문제 */
+  .ins li > span:first-child{ min-width:0; }
+  .ins li:last-child{ border-bottom:0; }
+  .ins li .ag{ font-size:.72rem; font-weight:800; color:var(--muted); flex:0 0 auto; }
+  .ins .why{ font-size:.73rem; color:var(--muted); margin-top:8px; line-height:1.45; }
+  .dir{ font-size:.74rem; font-weight:800; border-radius:8px; padding:1px 8px; white-space:nowrap; }
+  .dir.up{ background:#fdeaea; color:#a03030; } .dir.down{ background:#e9f6ef; color:#1f6f5c; } .dir.flat{ background:var(--chip); color:#3d4f63; }
+  .ins.hot{ background:#fffbea; border-color:#ecd89a; border-left:5px solid #e2a04a; }   /* 눈에 띄되 경고색은 아니게 — 크림빛 배경 + 호박색 띠 */
+  .ins.hot h3{ color:#7a4a12; }
+  .ins .pt{ font-style:normal; font-size:.68rem; font-weight:800; border-radius:7px; padding:1px 6px; margin-left:4px; vertical-align:1px; }
+  .ins .pt.ag{ background:#e8f0fb; color:#1c4f9c; } .ins .pt.mb{ background:#fdeaea; color:#a03030; }
+  .fold{ background:#fff; border:1px solid var(--line); border-radius:14px; padding:12px 16px; margin-top:16px; }
+  .fold > summary{ cursor:pointer; font-size:.95rem; font-weight:800; color:var(--navy); }
+  .fold > summary .cnt{ font-weight:600; color:var(--muted); font-size:.8rem; margin-left:6px; }
+  .basis{ font-size:.8rem; color:#3d4f63; line-height:1.6; }
+  .basis b{ color:var(--navy); }
 </style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="nav-inner">
-    <a class="brand" href="budongsan.html">🏢 갈매동 부동산 <span class="tag">갈매역삼성부동산</span></a>
-    <nav class="site-nav">
-      <a href="jido-search.html" data-nav="guri">구리·갈매</a>
-      <a href="jido-search.html?region=by" data-nav="by">남양주 별내</a>
-      <a href="silgeorae-lab.html">실거래가 분석 <span class="nav-badge">매일 업데이트</span></a>
-      <a href="news.html">뉴스·정책 <span class="nav-badge">매일 업데이트</span></a>
-      <a href="store.html">매물</a>
-      <a href="jaryo.html">자료실</a>
-    </nav>
+<div class="top">
+  <div class="top-inner">
+    <h1>🏛️ 국정감사 자료 DB</h1>
+    <p>보건복지위원회 국정감사 6년치(2020~2025)를 기관별로 정리했습니다. 검색 한 번, 메뉴 한 번이면 됩니다.</p>
+    <div class="top-nav">
+      <a href="gukgam.html" class="on">홈</a>
+      <a href="gukgam-year.html">최근 국감</a>
+      <a href="gukgam-mohw.html">복지부</a>
+      <a href="gukgam-kdca.html">질병청</a>
+      <a href="gukgam-mfds.html">식약처</a>
+      <a href="gukgam-covid.html">코로나19</a>
+      <a href="gukgam-qaform.html">예상 질의</a>
+      <a href="gukgam-guide.html">의원별 가이드북</a>
+      <a href="gukgam-all.html">전체 자료·도구</a>
+    </div>
+    <div class="unofficial-note" style="font-size:.74rem;color:rgba(255,255,255,.82);margin:8px 2px 0;">질병관리청 인공지능놀이터 연구회에서 만든 <b>비공식 참고자료</b>입니다 — 국회·보건복지부·질병관리청·식품의약품안전처 등 어떤 기관의 공식 사이트도 아니며, 모든 자료의 원 출처는 대한민국 국회(열린국회정보·회의록·결과보고서)입니다.</div>
   </div>
-</header>
-
-<section class="home-hero">
-  <h1>갈매동 집, 시세부터 안전한 계약까지</h1>
-  <p>구리 갈매지구 아파트 <strong>진짜 실거래가</strong>와 매물, 안심 계약 정보를 한곳에.</p>
-  <p>갈매지구 시작부터 <strong>한라비발디 후문</strong>을 지켜온 동네 부동산이 함께합니다.</p>
-  <div class="cta-row">
-    <a class="cta tel" href="tel:0315754944">📞 031-575-4944 상담</a>
-    <a class="cta ghost" href="jido-search.html">🗺️ 구리·갈매 시세</a>
-    <a class="cta ghost" href="jido-search.html?region=by">🟣 남양주 별내 시세</a>
-  </div>
-  <div class="biz">갈매역삼성부동산 · 대표 변유진 · 경기 구리시 갈매순환로 202 로터스타워 104호</div>
-</section>
+</div>
 
 <main class="wrap">
+  <section class="gsearch">
+    <div class="gs-bar">
+      <input id="gsInput" aria-label="통합 검색" type="search" placeholder="🔍 통합 검색 — 보건복지위 국감 2020~2025의 위원 발언·질의·답변·지적사항·자료 (예: 백신 폐기, 남인순, 장기요양)">
+      <button id="gsBtn">검색</button>
+    </div>
+    <div class="gs-sug"><div class="list" id="gsSug" hidden></div></div>
+    <div id="gsOut" hidden></div>
+  </section>
+  <div class="upd" id="updBadge"></div>
 
-  <p class="sec-label" style="margin-top:30px">우리 동네</p>
-  <h2>📍 우리 동네, 바로 지금</h2>
-  <div class="card-grid">
-    <a class="card" href="jido-search.html" style="border-color:var(--accent)">
-      <div class="ico">🗺️</div>
-      <h3>구리·갈매</h3>
-      <p>지도에서 바로 찾는 구리·갈매 아파트 시세. 가격대·평형으로 좁히고 핀을 누르면 <strong>최근 실거래가</strong>가. (갈매동 이야기 포함)</p>
-    </a>
-    <a class="card" href="jido-search.html?region=by" style="border-color:#6b3fa0">
-      <div class="ico">🟣</div>
-      <h3>남양주 별내</h3>
-      <p>별내 아파트 실거래가를 지도에서. 별내동·청학리 <strong>33개 단지</strong>, 국토부 실거래가로 정확하게.</p>
-    </a>
-    <a class="card" href="silgeorae-lab.html" style="border-color:var(--accent)">
-      <div class="ico">🔬</div>
-      <h3>실거래가 분석 <span style="font-size:.7rem;background:#fdecec;color:#d63031;padding:1px 7px;border-radius:10px;vertical-align:middle">매일 업데이트</span></h3>
-      <p>갈매동·구리·별내 <strong>전고점 회복률·신고가·거래량</strong>과 최근 실거래·이달의 캘린더까지 한 페이지에.</p>
-    </a>
-    <a class="card" href="news.html" style="border-color:var(--accent)">
-      <div class="ico">📰</div>
-      <h3>뉴스·정책 <span style="font-size:.7rem;background:#fdecec;color:#d63031;padding:1px 7px;border-radius:10px;vertical-align:middle">매일 업데이트</span></h3>
-      <p>대출·세금·공급·청약 등 <strong>내 집 마련에 영향 주는 정책 소식</strong>을 매일 자동으로. 국토부·청약홈 공식 사이트 바로가기까지.</p>
-    </a>
-    <a class="card" href="card.html" style="border-color:var(--accent)">
-      <div class="ico">🖼️</div>
-      <h3>실거래 카드 만들기</h3>
-      <p>갈매·별내·구리 아파트 실거래가를 <strong>카톡·밴드·인스타에 올리기 좋은 카드 이미지</strong>로 자동 생성. 저장해서 바로 공유.</p>
-    </a>
-    <a class="card" href="jehyu.html" style="border-color:var(--accent)">
-      <div class="ico">🤝</div>
-      <h3>생활 제휴 업체</h3>
-      <p>이사·입주청소·인테리어·도배·법무사 등 <strong>믿을 만한 생활업체</strong> 소개. 업체 사장님은 광고 제휴도 문의하세요.</p>
-    </a>
-    <a class="card" href="store.html" style="border-color:var(--accent)">
-      <div class="ico">🏪</div>
-      <h3>매물</h3>
-      <p>전세·월세·매매 매물을 사진·지도와 함께. 마음에 드는 집은 전화·카톡으로 바로 문의.</p>
-    </a>
+  <section class="menu" id="menu">
+    <a class="tile big" href="gukgam-year.html"><span class="go">일정·하이라이트·지적사항·위원 →</span><div class="tk">📅</div><div class="tt">2025년 국정감사</div><div class="ts" id="ts2025">불러오는 중…</div></a>
+    <a class="tile" href="gukgam-mohw.html"><span class="go">→</span><div class="tk">🏥</div><div class="tt">보건복지부</div><div class="ts" id="tsMohw">…</div></a>
+    <a class="tile" href="gukgam-kdca.html"><span class="go">→</span><div class="tk">🦠</div><div class="tt">질병관리청</div><div class="ts" id="tsKdca">…</div></a>
+    <a class="tile" href="gukgam-mfds.html"><span class="go">→</span><div class="tk">💊</div><div class="tt">식품의약품안전처</div><div class="ts" id="tsMfds">…</div></a>
+    <a class="tile" href="gukgam-covid.html"><span class="go">→</span><div class="tk">😷</div><div class="tt">코로나19 5년</div><div class="ts" id="tsCovid">…</div></a>
+  </section>
+  <div class="sub-links">
+    <a href="gukgam-qaform.html" style="border-color:#d2603a;background:#fffaf6;color:#9e3a20;font-weight:900;">📝 예상 질의 — 올해 나올 만한 질문과 근거</a>
+    <a href="gukgam-all.html">📂 전체 자료·도구 (결과보고서·회의록·연대기·브리핑)</a>
+    <a href="gukgam-guide.html">🧑‍⚖️ 의원별 가이드북</a>
+    <a href="gukgam-prep.html">📝 답변 대비 워크북</a>
+    <a href="gukgam-health.html">🩺 보건복지 트랙</a>
   </div>
 
-  <div class="callout tip">
-    <span class="t">🏢 갈매역삼성부동산이 도와드립니다</span>
-    아파트·상가·오피스텔·주택·토지까지, 갈매지구를 가장 잘 아는 부동산이 <strong>등기·시세 확인부터 안전한 계약</strong>까지 함께합니다. 편하게 전화 주세요 → <strong>031-575-4944</strong>
-  </div>
+  <section id="insights">
+    <h2>💡 지금 봐야 할 것 <span style="font-size:.75rem;color:var(--muted);font-weight:400;">자료에서 자동 도출 · 근거는 각 카드 아래</span></h2>
+    <div class="ins-grid" id="insGrid"></div>
+  </section>
 
-  <p class="sec-label" style="margin-top:34px">계약 전 꼭 읽어보세요</p>
-  <h2 id="guide">🛡️ 안심 계약 가이드 <span style="font-size:.9rem;color:var(--muted)">(전국 공통 · 참고자료)</span></h2>
-  <p style="color:var(--muted);margin-top:0">전세·매매 계약이 처음이라 불안하다면, 아래 정보로 <strong>실수와 사기를 예방</strong>하세요. 국토교통부·법제처·국세청 공식 자료 기반입니다.</p>
-  <div class="card-grid">
-    <a class="card" href="jutaek-imdaecha.html"><div class="ico">🔑</div><h3>주택임대차 (전세·월세)</h3><p>대항력·우선변제권·확정일자, 계약갱신청구권, 임대차 3법.</p></a>
-    <a class="card" href="jeonse-sagi.html"><div class="ico">🛡️</div><h3>전세사기 예방</h3><p>계약 전 체크리스트, 안심전세앱, 반환보증, 임차권등기명령.</p></a>
-    <a class="card" href="maemae.html"><div class="ico">🏘️</div><h3>부동산 매매</h3><p>계약금·중도금·잔금, 이전등기, 하자담보책임.</p></a>
-    <a class="card" href="deungi-daejang.html"><div class="ico">📑</div><h3>등기부·대장 확인법</h3><p>등기부 갑구·을구, 건축물대장, 함정 체크.</p></a>
-    <a class="card" href="sege.html"><div class="ico">🧾</div><h3>부동산 세금</h3><p>취득·재산·종부·양도·임대소득세. 양도세 계산기 포함.</p></a>
-    <a class="card" href="junggae.html"><div class="ico">🤝</div><h3>중개보수</h3><p>매매·임대차 요율표와 계산법.</p></a>
-    <a class="card" href="gwanribi.html"><div class="ico">🧮</div><h3>관리비 바로 알기</h3><p>장기수선충당금 환급, 깜깜이 관리비 대응.</p></a>
-    <a class="card" href="isa.html"><div class="ico">🚚</div><h3>이사·전입신고</h3><p>전입신고·확정일자, 관리비 정산.</p></a>
-    <a class="card" href="cheongyak.html"><div class="ico">🎯</div><h3>주택청약</h3><p>청약통장, 가점제, 특별공급.</p></a>
-    <a class="card" href="sangga.html"><div class="ico">🏪</div><h3>상가건물임대차</h3><p>환산보증금, 갱신요구권(10년), 권리금.</p></a>
-    <a class="card" href="silgeorae.html"><div class="ico">📈</div><h3>실거래가 확인·활용</h3><p>시세·공시가격과 구분해 해석하기.</p></a>
-    <a class="card" href="jaryo.html"><div class="ico">🔗</div><h3>자료실</h3><p>국토부·법제처·국세청 공식 사이트 모음.</p></a>
-  </div>
+  <section id="hlSection" hidden style="margin-top:18px;">
+    <h2>🎬 최근 하이라이트 <span style="font-size:.75rem;color:var(--muted);font-weight:400;">감사일별 자동 요약 · <a href="gukgam-year.html" style="color:#2a4d7d;font-weight:800;">최근 국감 전체 →</a></span></h2>
+    <div class="hl-scroll" id="hlCards"></div>
+    <div style="font-size:.74rem;color:var(--muted);margin:2px 2px 0;line-height:1.5;">감사일마다 회의록에서 자동으로 뽑은 요약 카드 — 큰 글씨는 그날 가장 많이 언급된 주제, 사진은 그날 질의 횟수 상위 위원, 인용은 답변이 붙은 질의 중 가장 긴 것의 앞부분, 발언 수는 짝지은 질의·답변 건수. 영상 캡처가 아니며 편집자의 선정이 아닙니다.</div>
+  </section>
 
-  <div class="callout law">
-    <span class="t">✅ 갈매동에서 전세, 이것만은 꼭</span>
-    <ul style="margin:6px 0 0">
-      <li>계약 전 <strong>등기부·건축물대장</strong> 확인 (소유자·근저당) → <a href="deungi-daejang.html">보는 법</a></li>
-      <li>이사 당일 <strong>전입신고 + 확정일자</strong> → 보증금 보호 → <a href="jutaek-imdaecha.html">자세히</a></li>
-      <li>보증금이 걱정되면 <strong>전세보증금 반환보증</strong> → <a href="jeonse-sagi.html">자세히</a></li>
-      <li>애매하면 <strong>갈매역삼성부동산에 전화</strong> → 031-575-4944</li>
-    </ul>
-  </div>
+  <details class="fold" id="memFold">
+    <summary>🧑‍⚖️ 보건복지위원회 위원 <span class="cnt" id="memCnt"></span> <a href="gukgam-members-print.html" style="float:right;font-size:.78rem;font-weight:800;color:#2a4d7d;text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:2px 9px;background:#fafcfe;">🖨️ 27명 약력 한꺼번에 인쇄</a></summary>
+    <div class="rtabs" id="memTabs" style="margin-top:10px;"></div>
+    <p id="memHint" style="font-size:.78rem;color:var(--muted);margin:0 2px 10px;"></p>
+    <div class="mem-grid" id="members"></div>
+    <div id="rosterBox" hidden></div>
+  </details>
 
-  <div class="disclaimer">
-    ⚖️ 갈매동 단지 시세·실거래가는 국토교통부 공식 데이터 기반이며 신고 특성상 오차·지연이 있을 수 있습니다. 계약 가이드는 일반 정보 제공용으로 법률·세무 자문이 아닙니다. 현재 매물·조건과 개별 상담은 갈매역삼성부동산으로 문의하세요.
-  </div>
-
+  <details class="fold">
+    <summary>📊 이 사이트의 숫자는 어떻게 나오나 (산출 근거와 한계)</summary>
+    <div class="basis" style="margin-top:8px;">
+      <b>자료 출처</b> — 국회 열린국회정보 공개 API의 국정감사 결과보고서·시정 및 처리결과·회의록(PDF). 원문 링크는 모두 국회 공식 시스템입니다.<br>
+      <b>질의·답변(Q&amp;A)</b> — 회의록에서 위원 발언과 기관장 답변을 자동으로 짝지은 것. 기관명이 없거나 답변이 바로 붙지 않은 발언은 '위원 발언 전체' 색인에 따로 들어갑니다.<br>
+      <b>비중·추세</b> — 비중 = 그해 그 기관 Q&amp;A 중 해당 주제 건수 ÷ 그해 그 기관 Q&amp;A 전체(100%). 추세는 가장 최근 국감의 비중을 이전 연도 평균 비중과 비교한 상대 변화입니다.<br>
+      <b>지적사항</b> — 결과보고서 '시정 및 처리요구' 항목을 기관·부서별로 나눈 것. 주제 분류는 키워드 자동 분류이며 확실/추정/미분류를 구분해 표시합니다.<br>
+      <b>위원 명단</b> — 현재 위원은 열린국회정보 기준, 역대 연도별 명단은 국감 회의록에 발언이 기록된 위원 기준(발언하지 않은 위원은 빠질 수 있음).<br>
+      <b>한계</b> — 공식 통계가 아닙니다. 자동 추출·분류 오차가 있으며, 확인이 필요한 수치는 원문 링크로 검증하세요.
+    </div>
+  </details>
 </main>
+<footer class="site-credit" style="max-width:1100px;margin:6px auto 30px;padding:0 18px;font-size:.76rem;color:#5f6e80;text-align:right;">ⓒ <b>지음웍스닷컴</b> · 2026년 9월</footer>
+<script>
+(function(){
+  function esc(s){ return (s||'').replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function J(u,d){ return fetch('data/gukgam/'+u+'?_='+Date.now()).then(function(r){ if(!r.ok) throw 0; return r.json(); }).catch(function(){ return d; }); }
+  function num(n){ return (n||0).toLocaleString(); }
+  function pct(x){ return Math.round((x||0)*100)+'%'; }
+  var today=new Date(); var tz=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().slice(0,10);
+  Promise.all([
+    J('briefing.json',null), J('highlights.json',null), J('covid.json',null), J('index.json',null), J('last-run.json',null),
+    J('schedule.json',null), J('rosters.json',null).then(function(ro){ var ly0=((ro&&ro.years)||[]).map(function(y){return y.year;}).sort(function(a,b){return b-a;})[0]||(new Date().getFullYear()-1); return Promise.all([J('plan-'+ly0+'.json',null), ro, J('findings-'+ly0+'.json',null), J('plan-'+(ly0+1)+'.json',null)]); }), null, J('members.json',null), null,
+    null, J('member-topics.json',{members:{}}), J('guides.json',{items:[]}), J('remarks-index.json',null), J('press.json',null)
+  ]).then(function(r){
+    var BR=r[0], HL=r[1], CV=r[2], IDX=r[3], LR=r[4], SC=r[5], PL=r[6][0], RO=r[6][1], MEM=r[8], FD=r[6][2], PL26=r[6][3], MT=(r[11]||{}).members||{}, GD=r[12], RI=r[13];
+    var A=(BR&&BR.agencies)||{}; var cy=(BR&&BR.cur_year)||new Date().getFullYear()-1;
+    var ly=((RO&&RO.years)||[]).map(function(y){return y.year;}).sort(function(a,b){return b-a;})[0]||cy;   // 자료에 있는 가장 최근 국감 연도
+    // 갱신 배지
+    var up=[]; if(IDX&&IDX.updated) up.push('자료 갱신 '+IDX.updated); if(LR&&LR.checked_kst) up.push('마지막 점검 '+LR.checked_kst);
+    if(RI&&RI.years){ var tot=0; for(var k in RI.years) tot+=RI.years[k]; up.push('위원 발언 색인 '+num(tot)+'건'); }
+    document.getElementById('updBadge').textContent=up.join(' · ');
+    // 타일 요약
+    function agStat(name){
+      var a=A[name]; if(!a) return '자료 준비 중';
+      var upT=(a.topics||[]).filter(function(t){return t.dir==='up';}).sort(function(x,y){return (y.share_delta||0)-(x.share_delta||0);})[0];
+      var c=a.count||{};
+      return '질의·답변 <b>'+num(a.qa_total)+'건</b> · '+cy+'년 지적 <b>'+num(c[cy])+'건</b>'+(a.repeats&&a.repeats.length?' · 반복 지적 '+a.repeats.length+'건':'')+
+        (upT?'<br>늘고 있는 주제: <b>'+esc(upT.topic)+'</b>':'');
+    }
+    document.getElementById('tsMohw').innerHTML=agStat('보건복지부');
+    document.getElementById('tsKdca').innerHTML=agStat('질병관리청');
+    document.getElementById('tsMfds').innerHTML=agStat('식품의약품안전처');
+    if(CV&&CV.kpi){ var k=CV.kpi; document.getElementById('tsCovid').innerHTML='질병청 질의 중 코로나 비중 정점 <b>'+(k.peak_year||'')+'년 '+pct(k.peak_share)+'</b> → '+(k.latest_year||'')+'년 <b>'+pct(k.latest_share)+'</b><br>관련 질의 <b>'+num(k.qa_n)+'건</b> / 전체 '+num(k.qa_all)+'건 (확실 '+num(k.qa_high)+')'; }
+    else document.getElementById('tsCovid').textContent='질병청 국감에서 코로나가 어떻게 줄어들었나';
+    var y25=(RO&&RO.years||[]).filter(function(y){return y.year===ly;})[0];
+    var tile=document.querySelector('.tile.big'); tile.href='gukgam-year.html?y='+ly; tile.querySelector('.tt').textContent=ly+'년 국정감사';
+    var s25=[]; if(PL&&PL.period) s25.push('<b>'+PL.period.start.slice(5).replace('-','.')+'~'+PL.period.end.slice(5).replace('-','.')+'</b> ('+PL.period.days+'일)');
+    if(PL&&PL.targets&&PL.targets.total) s25.push('대상기관 <b>'+PL.targets.total+'곳</b>');
+    if(FD&&FD.items) s25.push('지적사항 <b>'+num(FD.items.length)+'건</b>');
+    if(y25) s25.push('발언 위원 <b>'+y25.count+'명</b>'+(y25.dates?' · 감사 '+y25.dates.length+'일':''));
+    document.getElementById('ts2025').innerHTML=s25.join(' · ')||(ly+'년 보건복지위원회 국정감사');
+    // 인사이트 카드
+    var cards=[];
+    // 1) 늘고 있는 주제 (3개 기관, 비중 증가율 상위)
+    var ups=[]; ['보건복지부','질병관리청','식품의약품안전처'].forEach(function(n){ var a=A[n]; if(!a) return; (a.topics||[]).forEach(function(t){ if(t.dir==='up') ups.push({ag:n,t:t}); }); });
+    ups.sort(function(x,y){return (y.t.share_delta||0)-(x.t.share_delta||0);});
+    if(ups.length) cards.push('<div class="ins"><h3>📈 늘고 있는 질의 주제 <a href="gukgam-all.html">브리핑 →</a></h3><ul>'+ups.slice(0,5).map(function(u){
+      return '<li><span>'+esc(u.t.topic)+' <span class="ag">'+esc(u.ag.replace('식품의약품안전처','식약처').replace('보건복지부','복지부').replace('질병관리청','질병청'))+'</span></span><span class="dir up">▲ +'+Math.round((u.t.share_delta||0)*100)+'%</span></li>'; }).join('')+
+      '</ul><div class="why">'+cy+'년 국감 질의 비중이 이전 연도 평균보다 얼마나 늘었나(상대 변화). 비중 = 해당 주제 ÷ 그해 그 기관 질의 전체.</div></div>');
+    var downs=[]; ['보건복지부','질병관리청','식품의약품안전처'].forEach(function(n){ var a=A[n]; if(!a) return; (a.topics||[]).forEach(function(t){ if(t.dir==='down') downs.push({ag:n,t:t}); }); });
+    downs.sort(function(x,y){return (x.t.share_delta||0)-(y.t.share_delta||0);});
+    if(downs.length) cards.push('<div class="ins"><h3>📉 줄고 있는 질의 주제</h3><ul>'+downs.slice(0,5).map(function(u){
+      return '<li><span>'+esc(u.t.topic)+' <span class="ag">'+esc(u.ag.replace('식품의약품안전처','식약처').replace('보건복지부','복지부').replace('질병관리청','질병청'))+'</span></span><span class="dir down">▼ '+Math.round((u.t.share_delta||0)*100)+'%</span></li>'; }).join('')+
+      '</ul><div class="why">줄었다고 안 묻는 건 아닙니다 — 코로나처럼 정점 뒤 꾸준히 남는 주제가 있습니다.</div></div>');
+    // 2) 반복 지적
+    var reps=['보건복지부','질병관리청','식품의약품안전처','국민연금공단','국민건강보험공단'].map(function(n){ var a=A[n]; if(!a) return null; return {n:n,r:(a.repeats||[]).length,c:(a.count||{})[cy]||0}; }).filter(Boolean).filter(function(x){return x.c;});
+    if(reps.length) cards.push('<div class="ins"><h3>🔁 '+cy+'년 지적사항과 반복 <a href="gukgam-prep.html">워크북 →</a></h3><ul>'+reps.map(function(x){
+      return '<li><span>'+esc(x.n)+'</span><span><b>'+num(x.c)+'건</b> <span class="ag">'+(x.r?'전년과 같거나 유사 '+x.r+'건':'반복 없음')+'</span></span></li>'; }).join('')+
+      '</ul><div class="why">결과보고서 시정·처리요구 건수. 반복은 전년 지적과 문장이 같거나(같음) 매우 비슷한(유사) 것만 셉니다.</div></div>');
+    // 3) 다음 일정
+    var sc=((SC&&SC.items)||[]).filter(function(i){ return i.date>=tz && (/보건복지/.test(i.committee||'')||/국정감사/.test(i.content||'')); }).slice(0,4);
+    var scH='';
+    if(PL26&&PL26.period) scH+='<li><span><b>2026 국정감사 확정</b> '+esc(PL26.period.start)+' ~ '+esc(PL26.period.end)+'</span><span class="ag">계획서</span></li>';
+    else scH+='<li><span>'+(ly+1)+'년 국정감사계획서 <b>아직 미공개</b> — 통상 9월 말 채택, 10월 중순 시작</span><span class="ag">'+(PL&&PL.period?ly+'년은 '+PL.period.start.slice(5).replace('-','.')+'~'+PL.period.end.slice(5).replace('-','.'):'')+'</span></li>';
+    scH+=sc.map(function(i){ return '<li><span>'+esc(i.date.slice(5).replace('-','.'))+' '+esc(i.time||'')+' '+esc(i.content||'')+'</span><span class="ag">'+esc((i.committee||'').replace('위원회',''))+'</span></li>'; }).join('');
+    cards.push('<div class="ins hot"><h3>📅 다음 일정 <a href="gukgam-all.html">국회 일정 →</a></h3><ul>'+scH+'</ul><div class="why">열린국회정보 일정 API(향후 '+((SC&&SC.horizon_days)||35)+'일) 중 보건복지위·국정감사 관련만. 갱신 '+esc((SC&&SC.updated)||'')+'</div></div>');
+    // 5) 국감 관련 최근 보도 (구글 뉴스 검색 기반 — 의원실 보도자료 원문이 아님)
+    var PR=r[14]; var pit=(PR&&PR.items)||[];
+    if(pit.length){
+      var short={'질병관리청':'질병청','보건복지부':'복지부','식품의약품안전처':'식약처','국민건강보험공단':'건보공단','국민연금공단':'연금공단','건강보험심사평가원':'심평원'};
+      function row(a){ var tags=(a.agencies||[]).map(function(g){return '<i class="pt ag">'+esc(short[g]||g)+'</i>';}).concat((a.members||[]).map(function(n){return '<i class="pt mb">'+esc(n)+'</i>';})).join('');
+        return '<li style="display:block;"><a href="'+esc(a.url)+'" target="_blank" rel="noopener" style="color:#1f3b5a;font-weight:700;text-decoration:none;">'+esc(a.title)+'</a><div style="font-size:.73rem;color:var(--muted);margin-top:2px;">'+esc((a.date||'').slice(5).replace('-','.'))+' · '+esc(a.source||'')+' '+tags+'</div></li>'; }
+      var first=pit.slice(0,6), rest=pit.slice(6);
+      cards.unshift('<div class="ins press" style="grid-column:1 / -1;"><h3>📰 국감 관련 최근 보도 <span style="font-size:.74rem;font-weight:600;color:var(--muted);">'+pit.length+'건 · 최근 '+esc((PR.window||'14d').replace('d','일'))+' · 갱신 '+esc(PR.updated_at||PR.updated||'')+'</span></h3>'+
+        '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:4px 18px;"><ul style="margin:0;">'+first.slice(0,3).map(row).join('')+'</ul><ul style="margin:0;">'+first.slice(3,6).map(row).join('')+'</ul></div>'+
+        (rest.length?'<details style="margin-top:6px;"><summary style="cursor:pointer;font-size:.8rem;font-weight:800;color:#2a4d7d;">나머지 '+rest.length+'건 보기</summary><ul style="margin:6px 0 0;">'+rest.map(row).join('')+'</ul></details>':'')+
+        '<div class="why">구글 뉴스에서 현 보건복지위 위원 27명 이름·기관명과 "국정감사"를 매일 검색해 제목에 국감이 들어간 기사만 모은 것. <b>언론 보도 기준이며 의원실 보도자료 원문이 아닙니다.</b> 기관·위원 표식은 제목 키워드 자동 분류. 국감 시즌(9~12월)엔 매일 갱신.</div></div>');
+    }
+    document.getElementById('insGrid').innerHTML=cards.join('');
+    // 하이라이트 최신 4장
+    if(HL&&(HL.items||[]).length){
+      var items=HL.items.slice().sort(function(a,b){return b.date<a.date?-1:1;}).slice(0,4);
+      document.getElementById('hlSection').hidden=false;
+      document.getElementById('hlCards').innerHTML=items.map(function(c){
+        return '<a class="hl-card" href="gukgam-year.html"><div class="hl-thumb"><span class="hn">'+esc(String(c.date||'').slice(0,4))+' 국감</span>'+(c.photo?'<img src="'+esc(c.photo)+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">':'')+'<div class="ht">'+esc(c.top_topic||'')+'</div></div>'+
+          '<div class="hl-body"><div class="hd">'+esc(c.date||'')+' · 발언 '+num(c.n)+'회</div><div class="hg">'+esc((c.targets||[]).join(', '))+'</div>'+(c.quote?'<div class="hq">“'+esc(c.quote.slice(0,90))+'…”</div>':'')+'</div></a>';
+      }).join('');
+    }
+    // 위원 — 현재(공식) + 역대 국감 연도 탭
+    var TAGS={}, TAGL={}; (GD.items||[]).forEach(function(g){ if(g.tag) TAGS[g.name]=g.tag; if(g.tags) TAGL[g.name]=g.tags; });
+    var years=(RO&&RO.years)||[]; var hasCur=!!(MEM&&(MEM.items||[]).length);
+    document.getElementById('memCnt').textContent=(hasCur?'현재 '+MEM.items.length+'명':'')+(years.length?' · 역대 국감 '+years[years.length-1].year+'~'+years[0].year:'');
+    var tabs=document.getElementById('memTabs'), grid=document.getElementById('members'), box=document.getElementById('rosterBox'), hint=document.getElementById('memHint');
+    function showCur(){
+      grid.hidden=false; box.hidden=true;
+      hint.textContent=(MEM.note||'')+' · 갱신 '+(MEM.updated||'');
+      grid.innerHTML=MEM.items.map(function(m){
+        var tg=TAGS[m.name]; var t=MT[m.name];
+        var isChair=/위원장/.test(m.duty||''), isWhip=/간사/.test(m.duty||'');   // 올해 위원장은 붉은 테두리 + 위원장 표식, 신규 표식은 옆에 나란히
+        var extra=(TAGL[m.name]||(tg?[tg]:[])).filter(function(x){ return x.cls!=='chair'&&x.cls!=='whip'; });
+        var tags=(isChair?'<span class="mtag chair">위원장</span>':(isWhip?'<span class="mtag whip">간사</span>':''))+extra.map(function(x){ return '<span class="mtag '+esc(x.cls)+'">'+esc(x.label)+'</span>'; }).join('');
+        return '<div class="mem'+(isChair?' chair':(isWhip?' whip':''))+'">'+(tags?'<span class="mtags">'+tags+'</span>':'')+
+          (m.photo?'<img src="'+esc(m.photo)+'" alt="'+esc(m.name)+'" loading="lazy" onerror="this.style.display=\'none\'">':'')+
+          '<div style="min-width:0;flex:1;"><div class="mn">'+esc(m.name)+(m.hanja?' <small>'+esc(m.hanja)+'</small>':'')+'</div>'+
+          '<div class="mp"><span class="pty">'+esc(m.party||'-')+'</span>'+(m.duty?' <span class="pty">'+esc(m.duty)+'</span>':'')+'</div>'+
+          '<div class="md">'+esc([m.rlct,m.elecd].filter(Boolean).join(' · '))+'</div>'+
+          (t?'<div class="tchips"><span class="tchip turns">국감 발언 '+t.turns+'회 · '+t.days+'일</span>'+(t.topics||[]).slice(0,3).map(function(x){return '<span class="tchip">'+esc(x.t)+'</span>';}).join('')+'</div>':'')+
+          '<div class="mlinks"><a href="gukgam-guide.html?m='+encodeURIComponent(m.name)+'">가이드북 · 의원실</a><a href="#gsInput" class="rs" data-n="'+esc(m.name)+'">발언 보기</a></div></div></div>';
+      }).join('');
+    }
+    function showYear(y){
+      grid.hidden=true; box.hidden=false; var d=y.dates||[];
+      hint.textContent=y.year+'년 국정감사 '+d.length+'일('+(d[0]||'')+' ~ '+(d[d.length-1]||'')+') 회의록에 발언이 기록된 위원 '+y.count+'명. 발언하지 않은 위원은 빠질 수 있음 · 정당·지역구는 열린국회정보 기준(확인 '+y.party_known+'/'+y.count+'명)';
+      box.innerHTML='<div class="rwrap"><table class="rtable"><thead><tr><th>위원</th><th>정당</th><th>선수 · 지역구</th><th style="text-align:right">국감 발언</th><th style="text-align:right">발언일</th><th></th></tr></thead><tbody>'+y.members.map(function(m){
+        return '<tr><td><span class="rn">'+esc(m.name)+'</span>'+(m.chair?'<span class="rk c">위원장</span>':'')+(m.acting?'<span class="rk a">직무대리</span>':'')+'</td>'+
+          '<td>'+(m.party?'<span class="pty">'+esc(m.party)+'</span>':'<span style="color:var(--muted)">확인 중</span>')+'</td><td style="color:var(--muted)">'+esc([m.rlct,m.elecd].filter(Boolean).join(' · '))+'</td>'+
+          '<td class="num">'+m.turns+'</td><td class="num">'+m.days+'</td><td><a href="#gsInput" class="rs" data-n="'+esc(m.name)+'">발언 보기</a>'+(CURSET[m.name]?' <a class="rs" href="gukgam-guide.html?m='+encodeURIComponent(m.name)+'">가이드북</a>':'')+'</td></tr>'; }).join('')+'</tbody></table></div>';
+    }
+    var CURSET={}; if(hasCur) MEM.items.forEach(function(m){ CURSET[m.name]=1; });
+    var th=''; if(hasCur) th+='<button type="button" data-t="cur" class="on">'+esc(MEM.era||'제22대')+' 현재 <small>'+MEM.items.length+'명</small></button>';
+    years.forEach(function(y,i){ th+='<button type="button" data-t="'+i+'"'+(!hasCur&&i===0?' class="on"':'')+'>'+y.year+' 국감 <small>'+y.count+'명</small></button>'; });
+    tabs.innerHTML=th;
+    tabs.addEventListener('click', function(e){ var b=e.target; while(b&&b!==tabs&&b.tagName!=='BUTTON') b=b.parentNode; if(!b||b===tabs) return;
+      var bs=tabs.querySelectorAll('button'); for(var i=0;i<bs.length;i++) bs[i].className=''; b.className='on';
+      var t=b.getAttribute('data-t'); if(t==='cur') showCur(); else showYear(years[parseInt(t,10)]); });
+    function searchName(n){ var inp=document.getElementById('gsInput'); if(!inp) return; inp.value=n; var ev=document.createEvent('Event'); ev.initEvent('input',true,true); inp.dispatchEvent(ev); inp.scrollIntoView({behavior:'smooth',block:'center'}); inp.focus(); }
+    document.getElementById('memFold').addEventListener('click', function(e){ var a=e.target; while(a&&a.getAttribute&&!a.getAttribute('data-n')&&a.id!=='memFold') a=a.parentNode; if(a&&a.getAttribute&&a.getAttribute('data-n')){ e.preventDefault(); searchName(a.getAttribute('data-n')); } });
+    if(hasCur) showCur(); else if(years.length) showYear(years[0]);
+    // 검색의 '자료' 그룹용 문서 목록 (필요할 때만)
+    window.__DOCS = [];
+    window.__loadDocs = function(){ return Promise.all([J('reports.json',{items:[]}), J('minutes.json',{items:[]})]).then(function(x){
+      window.__DOCS=(x[0].items||[]).concat((x[1].items||[]).map(function(m){ m.doc_type='minutes'; m.year=m.date?parseInt(m.date.slice(0,4),10):null; m.title=(m.era||'')+' 국정감사 회의록 — '+m.committee+' ('+(m.date||'')+')'; return m; })); }); };
+  });
+})();
+(function(){
+  var esc=function(s){ return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); };
+  var SDATA=null, loading=false;
+  var out=document.getElementById('gsOut');
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <h4>🏢 갈매역삼성부동산</h4>
-    <div class="footer-links">
-      <a href="galmae.html">갈매동 시세</a>
-      <a href="silgeorae-map.html">실거래가 지도</a>
-      <a href="store.html">매물</a>
-      <a href="jutaek-imdaecha.html">주택임대차</a>
-      <a href="sege.html">부동산 세금</a>
-      <a href="jaryo.html">자료실</a>
-      <a href="about.html">소개</a>
-    </div>
-    <div class="footer-note">
-      갈매역삼성부동산 · 대표 변유진 · 경기 구리시 갈매순환로 202 로터스타워 104호 · ☎ 031-575-4944<br>
-      단지 시세·계약 정보는 참고용이며, 최종 판단과 책임은 이용자 본인에게 있습니다. 출처: 국토교통부·법제처·국세청 등. © 2026 갈매역삼성부동산.
-    </div>
-    <div class="footer-credit" style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.12);font-size:.8rem;color:#8ea6c4;letter-spacing:.02em">기획·제작 — 지음 JIEUM</div>
-  </div>
-</footer>
+  function ensureData(){
+    if(SDATA) return Promise.resolve(SDATA);
+    var jobs=[
+      fetch('data/gukgam/members.json').then(function(r){return r.json();}).catch(function(){return {items:[]};}),
+      fetch('data/gukgam/kdca-qa.json').then(function(r){return r.json();}).catch(function(){return {items:[]};}),
+      fetch('data/gukgam/mohw-qa-index.json').then(function(r){return r.json();}).catch(function(){return null;}),
+      fetch('data/gukgam/findings-2025.json').then(function(r){return r.json();}).catch(function(){return null;}),
+      fetch('data/gukgam/findings-2024.json').then(function(r){return r.json();}).catch(function(){return null;}),
+      fetch('data/gukgam/remarks-index.json').then(function(r){return r.json();}).catch(function(){return null;}),
+      (window.__loadDocs?window.__loadDocs():Promise.resolve(null))
+    ];
+    return Promise.all(jobs).then(function(res){
+      var qa=(res[1].items||[]).map(function(i){ i._src='질병청'; i._page='gukgam-kdca.html'; return i; });
+      var years=(res[2]&&res[2].years)||[];
+      return Promise.all(years.map(function(y){
+        return fetch('data/gukgam/mohw-qa-'+y+'.json').then(function(r){return r.json();}).catch(function(){return {items:[]};});
+      })).then(function(shards){
+        shards.forEach(function(s){ (s.items||[]).forEach(function(i){ i._src='복지부'; i._page='gukgam-mohw.html'; qa.push(i); }); });
+        var fnd=[];
+        [res[3],res[4]].forEach(function(f){ if(f) (f.items||[]).forEach(function(i){ i._year=f.year; fnd.push(i); }); });
+        // 위원 발언 전체 색인(답변이 안 붙은 '지나간 발언' 포함) — 연도별 파일, 있으면 얹는다
+        var ryAll=Object.keys((res[5]&&res[5].years)||{}).sort();
+        window.__RY=ryAll;
+        var ry=window.__ALLYEARS?ryAll:ryAll.slice(-6);   // 기본은 최근 6개년(용량), 옛 국감은 '옛 국감까지 검색'을 누르면 내려받는다
+        window.__RYLOADED=ry;
+        return Promise.all(ry.map(function(y){ return fetch('data/gukgam/remarks-'+y+'.json').then(function(r){return r.json();}).catch(function(){return {items:[]};}); }))
+        .then(function(rs){ var rem=[]; rs.forEach(function(s){ var u=s.urls||{}; (s.items||[]).forEach(function(i){ if(!i.minutes_url) i.minutes_url=u[i.date]||''; rem.push(i); }); });
+          SDATA={ members:res[0].items||[], qa:qa, findings:fnd, remarks:rem };
+          return SDATA; });
+      });
+    });
+  }
+  function yearsLabel(){ var L=window.__RYLOADED||[]; return L.length?(L[0]+'~'+L[L.length-1]):'2020~2025'; }
+  function oldLink(){ var A=window.__RY||[], L=window.__RYLOADED||[]; if(!A.length||A.length<=L.length) return ''; return ' <a href="#" class="gs-old" style="font-size:.78rem;font-weight:800;color:#2a4d7d;">옛 국감('+A[0]+'~'+(A[A.length-L.length-1])+')까지 검색 →</a>'; }
+  document.addEventListener('click', function(e){ var a=e.target; while(a&&a!==document&&!(a.className&&String(a.className).indexOf('gs-old')>=0)) a=a.parentNode; if(a&&a!==document){ e.preventDefault(); window.__ALLYEARS=true; SDATA=null; run(); } });
+  function hl(text, q, ctx){
+    var i=text.toLowerCase().indexOf(q.toLowerCase());
+    if(i<0) return esc(text.slice(0, ctx*2));
+    var s=Math.max(0, i-ctx), e=Math.min(text.length, i+q.length+ctx);
+    return (s>0?'…':'')+esc(text.slice(s,i))+'<mark>'+esc(text.slice(i,i+q.length))+'</mark>'+esc(text.slice(i+q.length,e))+(e<text.length?'…':'');
+  }
+  function run(){
+    var q=document.getElementById('gsInput').value.trim();
+    if(q.length<2){ out.hidden=false; out.innerHTML='<div class="gs-loading">두 글자 이상 입력해 주세요.</div>'; return; }
+    out.hidden=false;
+    if(!SDATA && !loading){ loading=true; out.innerHTML='<div class="gs-loading">전체 데이터를 불러오는 중입니다… (최초 1회, 몇 초 소요)</div>'; }
+    ensureData().then(function(d){
+      loading=false;
+      // 회의록 PDF 추출 텍스트는 '중증열성 혈소판감소증후군'처럼 낱말 중간에 공백이 끼므로, 공백을 지운 뒤 비교한다
+      var terms=q.toLowerCase().split(/\s+/).filter(Boolean);
+      var hit=function(text){ var t=String(text).toLowerCase().replace(/\s+/g,''); return terms.every(function(w){ return t.indexOf(w.replace(/\s+/g,''))>=0; }); };
+      var q1=terms[0]||q; // 하이라이트는 첫 단어 기준
+      var ql=q.toLowerCase();
+      var html='';
+      // 위원
+      var mems=d.members.filter(function(m){ return hit(m.name+' '+m.party+' '+m.elecd+' '+(m.brf||'')); });
+      if(mems.length){
+        html+='<div class="gs-group"><h4>🧑‍⚖️ 위원 '+mems.length+'명 <a href="gukgam-guide.html">가이드북 →</a></h4>'+
+          mems.slice(0,4).map(function(m){ return '<div class="gs-item"><b>'+esc(m.name)+'</b> · '+esc(m.party)+' · '+esc(m.elecd)+(m.duty?' · '+esc(m.duty):'')+'</div>'; }).join('')+'</div>';
+      }
+      // Q&A
+      var qa=d.qa.filter(function(i){ return hit(i.q+' '+(i.a||'')+' '+i.member); });
+      if(qa.length){
+        // 위원 이름으로 찾으면 그 위원 본인의 질의를 먼저, 그 다음 최신순 (본문에 이름만 언급된 건이 위로 오지 않게)
+        qa.sort(function(a,b){ var am=((a.member||'').toLowerCase()===ql)?0:1, bm=((b.member||'').toLowerCase()===ql)?0:1; if(am!==bm) return am-bm; return b.date<a.date?-1:1; });
+        html+='<div class="gs-group"><h4>💬 질의·답변 '+qa.length+'건 <a href="gukgam-mohw.html">복지부 →</a><a href="gukgam-kdca.html">질병청 →</a></h4>'+
+          qa.slice(0,8).map(function(i){
+            return '<div class="gs-item">'+hl(i.q+' '+(i.a||''), q1, 55)+
+              '<div class="gm"><span>'+esc(i.member)+' 위원</span><span>'+esc(i.date)+'</span><span>'+i._src+' 국감</span>'+
+              '<a href="'+i._page+'" style="font-weight:800;color:#2a4d7d;">해당 페이지 →</a></div></div>';
+          }).join('')+'</div>';
+      }
+      // 지적사항
+      var fnd=d.findings.filter(function(i){ return hit(i.text+' '+(i.agency||'')); });
+      if(fnd.length){
+        html+='<div class="gs-group"><h4>📋 시정·처리요구(지적사항) '+fnd.length+'건 <a href="gukgam-prep.html">워크북 →</a></h4>'+
+          fnd.slice(0,6).map(function(i){
+            return '<div class="gs-item">'+hl(i.text, q1, 55)+'<div class="gm"><span>'+i._year+'년</span>'+(i.agency?'<span>'+esc(i.agency)+'</span>':'')+'</div></div>';
+          }).join('')+'</div>';
+      }
+      // 위원 발언 전체 — Q&A로 안 잡힌 발언까지. 이름으로 찾으면 본인 발언 우선, 그 다음 최신순
+      var rem=(d.remarks||[]).filter(function(i){ return hit(i.text+' '+(i.member||'')); });
+      if(rem.length){
+        rem.sort(function(a,b){ var am=((a.member||'').toLowerCase()===ql)?0:1, bm=((b.member||'').toLowerCase()===ql)?0:1; if(am!==bm) return am-bm; return b.date<a.date?-1:1; });
+        html+='<div class="gs-group"><h4>🗣 위원 발언 전체 '+rem.length+'건 <span style="font-weight:400;color:var(--muted);font-size:.78rem;">답변이 안 붙은 발언 포함 · '+yearsLabel()+'</span>'+oldLink()+'</h4>'+
+          rem.slice(0,8).map(function(i){
+            return '<div class="gs-item">'+hl(i.text, q1, 55)+'<div class="gm"><span>'+esc(i.member)+' '+esc(i.role||'위원')+'</span><span>'+esc(i.date)+'</span>'+
+              (i.answered_by?'<span>답변: '+esc(i.answered_by)+'</span>':'<span>답변 없이 지나감</span>')+
+              (i.minutes_url?'<a href="'+esc(i.minutes_url)+'" target="_blank" rel="noopener" style="font-weight:800;color:#2a4d7d;">회의록 원문 →</a>':'')+'</div></div>';
+          }).join('')+'</div>';
+      }
+      // 자료 (제목)
+      var docs=(window.__DOCS||[]).filter(function(dcc){ return hit((dcc.title||'')+' '+(dcc.committee||'')); });
+      if(docs.length){
+        html+='<div class="gs-group"><h4>📄 자료 '+docs.length+'건</h4>'+
+          docs.slice(0,6).map(function(dcc){
+            var link=dcc.pdf||dcc.url||((dcc.files||[])[0]||{}).url||'';
+            return '<div class="gs-item">'+hl(dcc.title||'', q1, 60)+'<div class="gm"><span>'+(dcc.year||'')+'</span><span>'+esc(dcc.committee||'')+'</span>'+
+              (link?'<a href="'+esc(link)+'" target="_blank" rel="noopener" style="font-weight:800;color:#2a4d7d;">원문 →</a>':'')+'</div></div>';
+          }).join('')+'</div>';
+      }
+      out.innerHTML = html || '<div class="gs-loading">"'+esc(q)+'"에 대한 결과가 없습니다.'+oldLink()+'<div style="font-size:.8rem;margin-top:6px;line-height:1.55;color:#3d4f63;">이 검색은 <b>보건복지위원회 국정감사 회의록('+yearsLabel()+')</b>의 위원 발언·질의·답변·지적사항·자료 제목에서만 찾습니다. 위원 이름이라면 이 기간 보건복지위 소속이 아니었거나 국감에서 발언하지 않은 경우입니다. 다른 상임위 발언은 <a href="https://record.assembly.go.kr" target="_blank" rel="noopener" style="color:#2a4d7d;font-weight:800;">국회 회의록시스템</a>, 관련 보도는 <a href="https://search.naver.com/search.naver?where=news&query='+encodeURIComponent(q+' 국정감사')+'" target="_blank" rel="noopener" style="color:#2a4d7d;font-weight:800;">뉴스 검색</a>에서 확인하세요.</div></div>';
+    });
+  }
+  document.getElementById('gsBtn').addEventListener('click', run);
+  document.getElementById('gsInput').addEventListener('keydown', function(e){ if(e.key==='Enter') run(); });
+  // 휴대폰 자판은 Enter 대신 '검색' 키를 누르거나 아예 안 누르는 경우가 많다 → 타자 중 자동 검색(0.4초 디바운스) + search 이벤트
+  var gsTimer=null;
+  document.getElementById('gsInput').addEventListener('input', function(){ clearTimeout(gsTimer); var v=this.value.trim(); if(v.length<2){ return; } gsTimer=setTimeout(run, 400); });
+  document.getElementById('gsInput').addEventListener('search', run);
+  // 다른 페이지에서 ?q=이름 으로 넘어오면 바로 검색 (2025 국감 페이지 '발언 보기')
+  (function(){ var m=/[?&]q=([^&#]+)/.exec(location.search||''); if(!m) return; var v=decodeURIComponent(m[1].replace(/\+/g,' ')); var inp=document.getElementById('gsInput'); inp.value=v; run(); setTimeout(function(){ inp.scrollIntoView({block:'center'}); }, 300); })();
+})();
 
-<script src="assets/js/a11y.js" defer></script>
+// 연관어 자동완성 — 색인에 실제로 있는 온전한 단어만 보여준다 (없는 말은 안 뜬다 = 이 자료에 없다는 신호)
+(function(){
+  var inp=document.getElementById('gsInput'), box=document.getElementById('gsSug'); if(!inp||!box) return;
+  var TERMS=null, timer=null, sel=-1, skip=false;
+  function esc(s){ return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function norm(s){ return (s||'').toLowerCase().replace(/\s+/g,''); }
+  function load(){ if(TERMS) return Promise.resolve(TERMS); return fetch('data/gukgam/suggest.json').then(function(r){return r.json();}).then(function(d){ TERMS=(d.terms||[]).map(function(r){ return {t:r[0],n:r[1],k:r[2],z:norm(r[0])}; }); return TERMS; }).catch(function(){ TERMS=[]; return TERMS; }); }
+  function hide(){ box.hidden=true; box.innerHTML=''; sel=-1; }
+  function pick(t){ inp.value=t; hide(); skip=true; var ev=document.createEvent('Event'); ev.initEvent('input',true,true); inp.dispatchEvent(ev); }
+  function show(){
+    var q=norm(inp.value); if(q.length<1){ hide(); return; }
+    load().then(function(T){
+      if(norm(inp.value)!==q) return;
+      var pre=[], sub=[];
+      for(var i=0;i<T.length&&(pre.length+sub.length)<400;i++){ var z=T[i].z; if(z===q) continue; var p=z.indexOf(q); if(p===0) pre.push(T[i]); else if(p>0) sub.push(T[i]); }
+      var KIND={m:'위원',t:'주제',a:'기관'};
+      var list=pre.concat(sub).slice(0,8);
+      if(!list.length){ hide(); return; }
+      box.innerHTML=list.map(function(x){ return '<button type="button" data-t="'+esc(x.t)+'"><b>'+esc(x.t)+'</b><span class="k">'+(KIND[x.k]?'<i class="'+x.k+'">'+KIND[x.k]+'</i>':'')+x.n.toLocaleString()+(x.k==='m'?'회 발언':'건')+'</span></button>'; }).join('');
+      box.hidden=false; sel=-1;
+    });
+  }
+  inp.addEventListener('input', function(){ clearTimeout(timer); if(skip){ skip=false; return; } timer=setTimeout(show,120); });
+  inp.addEventListener('keydown', function(e){
+    if(box.hidden) return; var bs=box.querySelectorAll('button'); if(!bs.length) return;
+    if(e.key==='ArrowDown'){ e.preventDefault(); sel=(sel+1)%bs.length; } else if(e.key==='ArrowUp'){ e.preventDefault(); sel=(sel-1+bs.length)%bs.length; }
+    else if(e.key==='Enter'&&sel>=0){ e.preventDefault(); pick(bs[sel].getAttribute('data-t')); return; } else if(e.key==='Escape'){ hide(); return; } else return;
+    for(var i=0;i<bs.length;i++) bs[i].className=(i===sel?'on':'');
+  });
+  box.addEventListener('mousedown', function(e){ var b=e.target; while(b&&b!==box&&b.tagName!=='BUTTON') b=b.parentNode; if(b&&b!==box){ e.preventDefault(); pick(b.getAttribute('data-t')); } });
+  document.addEventListener('click', function(e){ if(e.target!==inp && !box.contains(e.target)) hide(); });
+})();
+</script>
 </body>
 </html>

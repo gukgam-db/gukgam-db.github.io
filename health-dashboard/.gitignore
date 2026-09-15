@@ -1,7 +1,0 @@
-.env
-node_modules/
-data/raw/
-__pycache__/
-app/dist/
-data/raw_hle/
-data/kdh/
