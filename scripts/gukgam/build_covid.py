@@ -11,6 +11,13 @@
 판별은 키워드다. '코로나·COVID'가 직접 나오면 확실, '팬데믹·거리두기·격리'
 같은 주변어만 있으면 추정으로 표시한다(사이트 공통 원칙: 근거 강도를 숨기지 않는다).
 
+낱말만으로는 놓치는 자리가 하나 있다. 접종 피해보상은 해가 갈수록 국회에서
+'코로나 백신 피해보상'이 아니라 그냥 '예방접종 피해보상'으로 불린다. 그래서
+5년째 살아 있는 쟁점이 2025년에는 질의가 끊긴 것처럼 보였다(실제로는 3건 있었다).
+주제 분류가 '피해보상'인 2021년 이후 건은 코로나 백신 피해보상으로 보고 넣되,
+근거가 낱말이 아니라 주제이므로 '주제 기준'으로 따로 표시한다. 코로나 백신 접종은
+2021년 2월에 시작했으므로 2020년은 넣지 않는다 — 그해 피해보상 질의는 독감백신이다.
+
 실행: python3 scripts/gukgam/build_covid.py
 출력: data/gukgam/covid.json
 """
@@ -20,6 +27,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 DATA = os.path.join(ROOT, "data", "gukgam")
 
 STRONG = re.compile(r"코로나|COVID|코비드|Covid")
+VAX = re.compile(r"백신|접종|피해보상|인과성|이상반응|부작용|보상")   # 피해보상 주제를 코로나로 볼 때 쓰는 말
+FLU = re.compile(r"독감|인플루엔자")                                  # 독감백신 피해보상은 코로나가 아니다
+COVID_VAX_FROM = 2021                                                 # 코로나 백신 접종 시작 연도
 WEAK = re.compile(r"팬데믹|거리두기|확진자|자가격리|격리 해제|격리해제|PCR|재택치료|방역패스|자가진단키트|자가검사키트|mRNA|감염병 대유행|대유행 대비|신종감염병 대유행")
 
 # 코로나 안에서의 세부 주제 — 앞쪽이 우선(동률이면 앞이 이김). 병명이 아니라 '무엇을 묻는가'다.
@@ -70,11 +80,19 @@ def theme_of(text):
     return best or "방역·대응 종합"
 
 
-def covid_conf(text):
+def covid_conf(text, topics=(), year=None):
     if STRONG.search(text):
         return "high"
     if WEAK.search(text):
         return "low"
+    # 낱말에는 안 걸리지만 주제가 접종 피해보상인 건 — 2021년부터, 독감백신 건은 뺀다
+    try:
+        y = int(str(year)[:4])
+    except Exception:
+        y = 0
+    if ("피해보상" in (topics or []) and y >= COVID_VAX_FROM
+            and VAX.search(text) and not FLU.search(text)):
+        return "topic"
     return None
 
 
@@ -104,7 +122,7 @@ def main():
             continue
         total_by_year[y] += 1
         text = (q.get("q") or "") + " " + (q.get("a") or "")
-        conf = covid_conf(text)
+        conf = covid_conf(text, topics_of(q), y)
         if not conf:
             continue
         items.append({
@@ -172,7 +190,7 @@ def main():
         for i in (load("findings-%d.json" % y) or {}).get("items", []):
             if "질병관리청" not in (i.get("agency") or ""):
                 continue
-            conf = covid_conf(i["text"])
+            conf = covid_conf(i["text"])          # 지적사항에는 주제 분류가 없어 낱말로만 본다
             if not conf:
                 continue
             live.append({"id": i.get("id"), "year": y, "text": i["text"], "act": i.get("act"),
@@ -198,6 +216,7 @@ def main():
         "updated": datetime.date.today().isoformat(),
         "note": "질병관리청 국감 회의록 Q&A와 결과보고서 지적사항 중 코로나19 관련 건. "
                 "'코로나·COVID'가 직접 나오면 확실, 팬데믹·거리두기·격리 등 주변어만 있으면 추정으로 표시. "
+                "접종 피해보상은 국회에서 '코로나'를 빼고 부르는 일이 많아 주제 분류가 피해보상인 2021년 이후 건도 넣고 '주제 기준'으로 따로 표시. "
                 "세부 주제는 키워드 기반 자동 분류.",
         "kpi": {
             "qa_n": len(items), "qa_all": sum(total_by_year.values()),
