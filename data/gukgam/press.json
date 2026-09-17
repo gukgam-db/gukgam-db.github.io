@@ -1,15 +1,108 @@
 {
  "updated": "2026-09-17",
- "updated_at": "2026-09-17 08:38",
+ "updated_at": "2026-09-17 23:19",
  "window": "14d",
  "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사, 그리고 본회의 대정부질문) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. 기관·위원 분류와 국정감사/대정부질문 구분(track)은 제목 키워드 자동.",
- "count": 82,
+ "count": 91,
  "items": [
+  {
+   "title": "[포토] 국회 농해수위, 2026년 국감 10월 7일 시작",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFB3blMtVVFYenVUYlFGclFtQ20tS2FyODZQS3UteEJIVE5NNXQtalpVU0R4ajJ2RU1mQUhJT0NSSXphYUhDTzJlQ21EU0tzMUxERzlaWXFhd3VnRDl5QWd0NTJkV0FNdw?oc=5",
+   "date": "2026-09-17",
+   "source": "푸드투데이",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-17"
+  },
+  {
+   "title": "이소희 \"국민은 실험쥐 아냐\"…식약처에 김승원 청탁 의혹 자료 촉구",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE15dVZnd19YX1BWYlo4QW5CWU5VY2hXY3l5bFZQdWVzdmJFUmxkREZHa1VVQ281Z01jRHp0eFBJb0pHcUJwMHItNllZM2ZsbV9nejV6WGlrWVdDbWpVaHU4UQ?oc=5",
+   "date": "2026-09-17",
+   "source": "뉴스토마토",
+   "score": 2,
+   "agencies": [
+    "식품의약품안전처"
+   ],
+   "members": [
+    "이소희"
+   ],
+   "track": "",
+   "first_seen": "2026-09-17"
+  },
+  {
+   "title": "이소희 \"제넨셀 투약 93명 건강 확인해야…식약처 자료 제출\"",
+   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5meFRoT053QmtfVmRQcjlLVXllVkJyQ1BXQW0tb0hHNjVTcDg1VGFqX1U4UGtGX1dHVzk1bmxiUi1DTEUyazRzVTBjRDRGS1BkTk54MXRQOGZJdjhj0gFiQVVfeXFMTWdMdk52dTJnZEFCLWVHTV8yVDFRei1sb0ZWQ1Fkc0hxTk5VVUJORktPWTRPem55a0JKRmxGbFl1X3dmaDBrcUpDQWgyOXppRk1WbmdETWVRcHhUcWloMGhOX3c?oc=5",
+   "date": "2026-09-17",
+   "source": "뉴스1",
+   "score": 2,
+   "agencies": [
+    "식품의약품안전처"
+   ],
+   "members": [
+    "이소희"
+   ],
+   "track": "",
+   "first_seen": "2026-09-17"
+  },
+  {
+   "title": "이소희 의원, 식약처에 자료 촉구…\"실험쥐 죽었는데 93명에 투약\"",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5RdHRfOE5NdkVsaFAwMTZKV2lYYUpvM2Zuc3pOTWdPRTZobUF2d25HbWZsejV4SjRJdXEyZkZCcjdDSHpoQjJhNFQ3WWF0U3dSeHpkdncwdW5UT25uZEt6aW9ROVI2Zmc?oc=5",
+   "date": "2026-09-17",
+   "source": "문화저널21",
+   "score": 2,
+   "agencies": [
+    "식품의약품안전처"
+   ],
+   "members": [
+    "이소희"
+   ],
+   "track": "",
+   "first_seen": "2026-09-17"
+  },
+  {
+   "title": "이소희 의원 \"식약처, 김승원 '제넨셀 청탁 의혹' 자료 왜 숨기나\"",
+   "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxOUkg5S0prd1ZqUm9LTWhaM21nZ2lQQ2NCaE9LcVgwOUxXU01MZ3NVcU1CR0k0R24taW9VXzNlWEZid1FPT3RhY0NLRm5remVJMlhsNVgxeTBfMWx1QjZZOEJEWFBHQURTLUxtZWp2SDNMTzFhS3dyLTY2MTJJQnNmZ2hYX1E4LXplcFpTOHVwUlZJa2xoUkhCbXpDdmw2RFRDc2dMLVdYekNKRk52UHRzcVFGR1ltRUFUenB1NDNkb09La3BSbDlDSFNhekNseHdJaWg5enFUVEZuWkFFb3JNVXBMenNRS0lweU96bE44NTdVS1VPMGxDLWF5SHZFbWtzMjhvNkRnTW5iQkd2bDkwcFdnRFAwNzd3?oc=5",
+   "date": "2026-09-17",
+   "source": "데일리안",
+   "score": 2,
+   "agencies": [
+    "식품의약품안전처"
+   ],
+   "members": [
+    "이소희"
+   ],
+   "track": "",
+   "first_seen": "2026-09-17"
+  },
+  {
+   "title": "[미리보는 국감] 5·18에 ‘탱크데이’ 연 스타벅스…정용진 두 번 사과에도 남은 건 ‘이행 자료’",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9URS1UZjZFYzlIb0czWkpObk55cjdwYlgyY2NveWRON0Y4cjFKWk11VWFTMzgzVzV0LUhWOHJxcWcyTW01WmI0SlZGdGUwLTBsQTJFWnJBNWVrM29vOVBPSHQ5MW8wSURS0gFrQVVfeXFMTTc4QnlfX1pxbmNaOG9VSVFTVFBORjdKSHVnMjZqWG00dVRMalV6bmlKS1R4Q1BNY3VBOXItZW9XY1ZhM1c4V2JxRW5vYWdrV2tqV3puVFFCc1I2Q2dldC00MlVVRFZQOGduNkU?oc=5",
+   "date": "2026-09-17",
+   "source": "SR타임스",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-17"
+  },
+  {
+   "title": "조원태 한진그룹 회장‧우기홍 대한항공 사장 국감 증인 명단에…국회, 대한항공 ‘기내식 국산 농수산물’ 따진다",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFByT3B0djRPREJqRVEwbGE1MXlpNURjcWxNeDRVRzNaaXB1UHFqREg2cnVCN2NiTFZ2SUl0ZUtKZV95QjFtaGtIRGluWG4tdXg1bnd5dV9fNUtYT2dBamJhTnhtclVCMXcwaXgw0gFvQVVfeXFMTlhOTTFhbTV0NDA3Sm0xTzQwTTlDYVZUNTEtODR5TFFaSWhpYWtrV1lOeEd2SlBKZVJSenkxM3ZvVGZSa3dva0pIZm9mNHVHTXp2UEpFMFBBMkZDVkRTTGJSMEl6ZWRJVlk1NlNmemJJ?oc=5",
+   "date": "2026-09-17",
+   "source": "더퍼블릭",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-17"
+  },
   {
    "title": "[국감, 핀셋] “장애인 돌봄인데 장애인은 빠졌다”…인천·경기 통합돌봄 ‘참여 공백’",
    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9WWUx0eWlXRnBENlRhZTZ6bE5iTkFnMGZKR3FqRmxmbHVnUkFsZlJiaTZyMmptRXZqLVhJOWh3RDlzeUNOWG5ZeGV3Zm5BT1E1b1VvLWd0STJTWS10eGgtcWoxWlV6eWMyMndYdGstb3g?oc=5",
    "date": "2026-09-16",
-   "source": "인천일보",
+   "source": "incheonilbo.com",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -52,10 +145,23 @@
    "first_seen": "2026-09-16"
   },
   {
+   "title": "[국정감사] 남인순 의원 “블록버스터 신약 탄생 청신호”... 제약바이오 선진국으로 도약 의미",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1zRFpqOW80d1ZDdTJ6NkF3blkxWXBrRkFBa05ZSmZBaUNEUktnM0NkZVR3X3NSSnFpT2lEeVRZa01OLTVSY1pCMjI2NjRhUi04SGJEMlZEU01SeXFmQ2paSkloeDVDOGPSAWtBVV95cUxNc3RTREREOXZjSHlBcDZxYTQySDl6aGZUaV9FN0ZvWWMyWHN5UE5nYmZzNkxzb3ptYy1pMVJJMDRra3FaRHJKV1dDTjZyLWpYUVRTY2pUNnVBejZ5SktHaTRtSnlXSTROSkVvWQ?oc=5",
+   "date": "2026-09-16",
+   "source": "icouncil.kr",
+   "score": 3,
+   "agencies": [],
+   "members": [
+    "남인순"
+   ],
+   "track": "국정감사",
+   "first_seen": "2026-09-17"
+  },
+  {
    "title": "[국감, 핀셋] 건설현장 벌점 절반 이상 ‘품질관리’인데…인천은 왜 0건?",
    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE00UEoxM3l1SUlSZVgxVjZ6bzRScHJ2bmxxdlNURzVEMkNFTE1VMGYta3pjTnZNd2RvWXQyXzRvZ1FjOWtpeGdyeHp2d05QVkF2Q1RUVG5zaWlRRlo5QjdKVzA2T2Nxem16UDVBbFhDLXM?oc=5",
    "date": "2026-09-15",
-   "source": "인천일보",
+   "source": "incheonilbo.com",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -110,7 +216,7 @@
   },
   {
    "title": "서울시약, 국감 앞두고 서영석 의원에 약배송·상비약 확대 우려 전달",
-   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5vWkx1TnRDWWp2cEI2R0tlaW5MNmxCY3VXVTA1WXVwVVVza3lpV1B2eEhLd244OVl2eTBPRXU5aWZHSExrYzhwVG13TU5zczd0UDVZTmRR?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBla3FWc3lEMWQwbFh5dWNCLUFkMng1SzZnVmVleldXOV8tYVN5TnV5TENmLTJ0WmpWa21kSXJJRnBFdDd3NENjNXJxbjlFZFdoWGRV?oc=5",
    "date": "2026-09-13",
    "source": "데일리팜",
    "score": 3,
@@ -191,9 +297,9 @@
   },
   {
    "title": "복지위, 김승원 '식약처 청탁 의혹' 공방…여 \"정쟁 용납 안돼\" 야 \"왜 뚫렸나 따져야\"",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBvandRQVYyTUc4RWJJR2ZUTFNqeWEwMmdEQ3RMV3lQclRobW51T3hlczJ4MUkxUVFEekVvdE9CTm9aRGt3dXI3bklCalV6QzY5dnl2SzB6Rk1KZmFaeGxBYtIBeEFVX3lxTE1BYjg5NFpFS0l3RUJaVzZJVUdMcFE5eDRGaVhrM3NkMTJrNjluQnJlaFp6ZU5ZWk1ic0ItcTJhcC1OSHNFdjBjTHhOeVlnd0xlanVBSnpQZC03Zjh3RFRoQ1g0ZmluM01POTZacmVWQUw1c3N1Tk1LWA?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE93Rldtc0RFWXQ5Y24yV1hvdGkxZ2t0aERtN2NzR0IzLXEwanYyQXBmYTVGSTdES3QycjZXQzUzV3d5UzBHRzctemFDZUZ4Q3pwZkoxdFo4RDBZMGI0X2N2QnpwdEk5MV9aTmpIWEF3?oc=5",
    "date": "2026-09-11",
-   "source": "newsis.com",
+   "source": "네이트",
    "score": 3,
    "agencies": [
     "식품의약품안전처"
@@ -379,7 +485,7 @@
    "title": "“김승원, 브로커·식약처 청탁 전화…국감 중 들락날락”",
    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1NMlpGcVFmNmNVZHYwR244TUxKZDJydTN0SGZDN2NCRWZybVV5MjJjUWdOcHJ1MjBBWV9Uc3QxWUQ0S3VHa08tMEdNSV90SlUyVmFmTzBXZ3ZfZWs?oc=5",
    "date": "2026-09-10",
-   "source": "KBS 뉴스",
+   "source": "news.kbs.co.kr",
    "score": 3,
    "agencies": [
     "식품의약품안전처"
@@ -422,9 +528,9 @@
   },
   {
    "title": "“김승원, 국감중 식약처 청탁…양씨 등과 전화-문자하려 들락날락”",
-   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5rS19HQnFGcng1eThCVzZDN05sTUZFOUFQYUpsSV9TLXdHZUVMdjVsTWZ3OGhWQ3M2SWx4bGFwa0JBQWQ2V3ZEWUhCVkxhMWRaeUdzaQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOYUE5U1FSaHgxUVlTY3NmWGlUdFJCYVJxMmgtYXlvREk2NW0wekgzVlNsVVRzMDJhWmYwU2pHWVNTMXZEZ0EtU2RCVkxpQjFpenpjVkVYWVJxQmVGOUZ5ZU9KVnFjQ3BRZFlmX1VZSTRnUm8xNFZBNFVvTFRiS0JwQ3BwZnBxQjRRMGN3V24wS24yVGNsVWJNWkVRSUNidWZXS3ZzaUFuRGZ4d9IBZkFVX3lxTFBFbkpITkxlbWRoSnhXYVM5Ym9wTEFZdDR3bkVJTXZBckcxekdfT1o4VVJ4M1Y0dGJWLTlYY211OWM0NGxqM1pxS2dhd19vNmJHbWJzc2R5VnNHajJ5OVRYM053N2J0dw?oc=5",
    "date": "2026-09-10",
-   "source": "v.daum.net",
+   "source": "동아일보",
    "score": 3,
    "agencies": [
     "식품의약품안전처"
@@ -481,9 +587,9 @@
   },
   {
    "title": "“김승원 국감 중 식약처 청탁... 브로커에 휘둘려 들락날락”",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNQ0hTcEM5bG0xUVZqYUtfMWdsM2pTQVhWR0lGSVJwM2I0QWsyVU11MUJzNVFrT2dLclZHUTg5X2lHNDc5U2RhS2FZTldBT1lrNWlLRWFtNXZBNXBKY2dGZGdHVG5VOEQ3SUFKZHBXbXhDMGQxeDY0QnJDd1RuNGN5YUpMcmFoUQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9tN1ZaaDNiOGk4WkpKQ0dsbXZrTklNVl9odHRuWDloUzNPalNnNVkxdlp0ckVWV2VrbWRPSWMtVGpWY09tcEhuVG9sRkFKTGQySWdMdw?oc=5",
    "date": "2026-09-10",
-   "source": "조선일보",
+   "source": "v.daum.net",
    "score": 3,
    "agencies": [
     "식품의약품안전처"
@@ -728,6 +834,17 @@
    "members": [],
    "first_seen": "2026-09-15",
    "track": "국정감사"
+  },
+  {
+   "title": "‘의대 심사’ 목포권 반발···내달 국감서 다뤄지나",
+   "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1vTVI3eXBfY2V5RFFzdW9Va3EyLUxtT0ZhVjJNUm1kRWhsOUttdW5HcXQ3Wldqc3YwYm5vTWt6SUVxTGJCNWc?oc=5",
+   "date": "2026-09-08",
+   "source": "v.daum.net",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-17"
   },
   {
    "title": "[기획] 페이백·의료공백·필수약 대란… 보건복지 현안, 국감 도마",
