@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-17",
+ "updated": "2026-09-18",
  "source": "likms.assembly.go.kr/inspections",
  "items": [
   {
@@ -1457,6 +1457,42 @@
     {
      "name": "2006년도 국정감사 자료집.pdf",
      "url": "https://adminhom.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=i6d408qstxs9x29v08ezi68sb6epbnca&fileSn=4"
+    }
+   ]
+  },
+  {
+   "article_no": 3000367,
+   "year": 2002,
+   "committee": "기획재정위원회",
+   "doc_type": "written_answer",
+   "title": "2002년도 국정감사 서면답변서(조달청)",
+   "posted": "2002-11-01",
+   "files": [
+    {
+     "name": "02국감서면답변서종합-조달.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=6lb2erkkc7986uyc9b4dfpbzgp4i5v33&fileSn=1"
+    },
+    {
+     "name": "02국감서면답변서종합-조달.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=6lb2erkkc7986uyc9b4dfpbzgp4i5v33&fileSn=2"
+    }
+   ]
+  },
+  {
+   "article_no": 3000455,
+   "year": 2001,
+   "committee": "기획재정위원회",
+   "doc_type": "written_answer",
+   "title": "2002국정감사 서면답변서(통계청)",
+   "posted": "2002-11-01",
+   "files": [
+    {
+     "name": "통계청답변.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=w34w2lxyu725uupbgxz61zqp5efdwacm&fileSn=1"
+    },
+    {
+     "name": "통계청답변.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=w34w2lxyu725uupbgxz61zqp5efdwacm&fileSn=2"
     }
    ]
   }
