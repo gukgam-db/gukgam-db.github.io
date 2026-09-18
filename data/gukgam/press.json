@@ -1,15 +1,26 @@
 {
  "updated": "2026-09-18",
- "updated_at": "2026-09-18 08:08",
+ "updated_at": "2026-09-18 22:56",
  "window": "14d",
  "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사, 그리고 본회의 대정부질문) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. 기관·위원 분류와 국정감사/대정부질문 구분(track)은 제목 키워드 자동.",
- "count": 93,
+ "count": 96,
  "items": [
   {
    "title": "올해 보건복지위원회 국정감사 계획 확정 언제쯤?",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8zTXNiOTRuMXZCYUVGS2ZNWEVLbEkyVld2eXZUZ0JaN0ZiTURuSlZEbm1GN010b0phVWd2Yk9nNEZWNl9nT3ZYcjhvMGtIdWpfUUFLOEU2WEpFZDkyeG1aV3NYRGI1WkJPbl9EYg?oc=5",
    "date": "2026-09-18",
-   "source": "kpanews.co.kr",
+   "source": "약사공론",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-18"
+  },
+  {
+   "title": "[2026국감] 건강보험료 과오납 5년간 4조원 넘어…미반환도 455억원",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1nSzVZT0poQTBmRFBWR0dfZjhQRTV4NnVlWnFIVmYzVzJCeUNBdnA5R1VkZkgtaDVfY3Z2eENpQTZaWkYtQlFWTmlKb04yZG9oTG1xQXZ6bE5pVnNxSGhEVWhNU0RTY1h3V3ZNZlc0U0ozUU3SAXdBVV95cUxOYTZXUjREYmJrX3RSeW5YZWRaTHZwajI2ODZqMzE3S25IX1ZUR2FMekZCbXBKcTZacEhwTk1nY1o0ZWNpX1dWbEs3cWdQUjA2Ynd0Y1FVeFRfLWp0N2RHbGY5LXZyMS1zTUpqdkF5VHo4Zmc1bVlLdw?oc=5",
+   "date": "2026-09-18",
+   "source": "스트레이트뉴스",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -31,7 +42,7 @@
    "title": "이소희 \"국민은 실험쥐 아냐\"…식약처에 김승원 청탁 의혹 자료 촉구",
    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE15dVZnd19YX1BWYlo4QW5CWU5VY2hXY3l5bFZQdWVzdmJFUmxkREZHa1VVQ281Z01jRHp0eFBJb0pHcUJwMHItNllZM2ZsbV9nejV6WGlrWVdDbWpVaHU4UQ?oc=5",
    "date": "2026-09-17",
-   "source": "뉴스토마토",
+   "source": "newstomato.com",
    "score": 2,
    "agencies": [
     "식품의약품안전처"
@@ -121,10 +132,21 @@
    "first_seen": "2026-09-18"
   },
   {
+   "title": "보건복지위 17일 전체회의 갖고 법률안 88건 의결",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9iN2hjLXdQTW5Td2hDOXdxLW9rUzJrUkFvX1ZRdVZXSFE4V0hoaDRDSHRTY2RoNUNPODBBazF1OXl4UUFpSHVoZWJMZ3F2WVNOSC1BNTZrVzZFODBTcncyYXk2VDRhZDBxaDNHRQ?oc=5",
+   "date": "2026-09-17",
+   "source": "약사공론",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "",
+   "first_seen": "2026-09-18"
+  },
+  {
    "title": "[국감, 핀셋] “장애인 돌봄인데 장애인은 빠졌다”…인천·경기 통합돌봄 ‘참여 공백’",
    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9WWUx0eWlXRnBENlRhZTZ6bE5iTkFnMGZKR3FqRmxmbHVnUkFsZlJiaTZyMmptRXZqLVhJOWh3RDlzeUNOWG5ZeGV3Zm5BT1E1b1VvLWd0STJTWS10eGgtcWoxWlV6eWMyMndYdGstb3g?oc=5",
    "date": "2026-09-16",
-   "source": "인천일보",
+   "source": "incheonilbo.com",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -155,7 +177,7 @@
   },
   {
    "title": "남인순 \"최근 5년여간 주류광고 위반 1위 OB맥주…총 697건 적발\"",
-   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBGbE5EU2pMenllZ01kWmg0WkZFTXpXYm00aXhhLUVaeF93UVJoUWNNMUtmUVhKeVJ1X3BhNFphRXVxb1h0RHdxMXZVcS0wNUk?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9ERzMySDM1bkdwWUxEN1pnTWxfbGkyNXIxaTQ4Um1lUlJ3VzRRMXdRZ2xOdU9VMzhaOS1jZWtSYXZPcjczem1CUmVGUQ?oc=5",
    "date": "2026-09-16",
    "source": "v.daum.net",
    "score": 2,
@@ -183,12 +205,23 @@
    "title": "[국감, 핀셋] 건설현장 벌점 절반 이상 ‘품질관리’인데…인천은 왜 0건?",
    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE00UEoxM3l1SUlSZVgxVjZ6bzRScHJ2bmxxdlNURzVEMkNFTE1VMGYta3pjTnZNd2RvWXQyXzRvZ1FjOWtpeGdyeHp2d05QVkF2Q1RUVG5zaWlRRlo5QjdKVzA2T2Nxem16UDVBbFhDLXM?oc=5",
    "date": "2026-09-15",
-   "source": "인천일보",
+   "source": "incheonilbo.com",
    "score": 2,
    "agencies": [],
    "members": [],
    "track": "국정감사",
    "first_seen": "2026-09-17"
+  },
+  {
+   "title": "[국감, 핀셋] 학교급식 식중독 ‘경기’ 1703명 전국 최다…‘인천’ 5건에 350명",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE93UXlEdGZXdUJublR2cy1RdnpLZ3NxNnZaSHNzWnlNME9xMk5pb09Gb1czcTFTdW0wNF9nVzZ4Q2FfZF82R3JLRU5MREczWkxxUEZ6Y0t0U3R1VV9oR2tlc0IzUmNXQWhJU0FoUHpPN3E?oc=5",
+   "date": "2026-09-15",
+   "source": "incheonilbo.com",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-18"
   },
   {
    "title": "국감 단골, 국립대병원 장애인 의무고용 또 지적",
@@ -298,7 +331,7 @@
   },
   {
    "title": "복지위, 김승원 신약 청탁 의혹에…與 \"정쟁 안돼\" VS 野 \"왜 뚫렸나\" - 머니투데이",
-   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE0tcGw3cE5WaWVtVmxnYUtlYXllN0hYNFdKNXNEUmVWejMxaWlqSG52d3hyM0hkTnBCN0FQTEg0SUtrdEhNNDNmeEd5OE1NVkNzRHp5dklSXzdCNW91SU1sT3A4OTQyRG5zcTZJWkdwd0lvTzBsYlJVek130gF_QVVfeXFMT2xtRVBiTFhQVV85OHNKRktoNE11VXlqQWlEV1gzbnktaENWRU9qU0tHekFRQi1PTllHQ0hMaHNlbXFtUThjUHdoM1dzZU5URGJ6Y3BoWUdPdjEzNS1LVlI5ZFZESlpJWHJSa2ctSjlqdVBrcDVSQ0RvN3FFb0lYaw?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBlLWlGMkM4eEtpTThIQl8wOGFUeUZoODJkY2F0YkZOdDhXWTlvX2JPTHhDNUJlRl9uNDZmbVhPSmJHMWFXYTFTWjRoMVZva1UyQVQ3bVVDa1NqM2d0b0VvWnJ3eGRjV3E5MV82T9IBckFVX3lxTFA1S2xjelE0TGFqbDhMQkg2ZlRpcmJMVHJ1UWhoU09uSDV4UTNTdlN5NmFyNU1vTFdMZURPT1NVd1FPQnBFcjcwV290eFJ5WFEyX0g5MDQ2Y01PeGNCOHVKSDRBNVBHZHNjNWUzTjhEWnpSUQ?oc=5",
    "date": "2026-09-11",
    "source": "머니투데이",
    "score": 2,
@@ -437,7 +470,7 @@
    "title": "보건복지위원회 등장한 제넨셀",
    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5pMlVrdVh4eHZVY24xcnI5eEE2clhwOGUwTlRhQ0RYZGZYYnBhOG1xbVV0dG8wMUlETF9VTmhDd0VpUWJ4Q1pQUlJEQQ?oc=5",
    "date": "2026-09-11",
-   "source": "news1.kr",
+   "source": "뉴스1",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -550,7 +583,7 @@
   },
   {
    "title": "“김승원, 국감중 식약처 청탁…양씨 등과 전화-문자하려 들락날락”",
-   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOYUE5U1FSaHgxUVlTY3NmWGlUdFJCYVJxMmgtYXlvREk2NW0wekgzVlNsVVRzMDJhWmYwU2pHWVNTMXZEZ0EtU2RCVkxpQjFpenpjVkVYWVJxQmVGOUZ5ZU9KVnFjQ3BRZFlmX1VZSTRnUm8xNFZBNFVvTFRiS0JwQ3BwZnBxQjRRMGN3V24wS24yVGNsVWJNWkVRSUNidWZXS3ZzaUFuRGZ4d9IBZkFVX3lxTFBFbkpITkxlbWRoSnhXYVM5Ym9wTEFZdDR3bkVJTXZBckcxekdfT1o4VVJ4M1Y0dGJWLTlYY211OWM0NGxqM1pxS2dhd19vNmJHbWJzc2R5VnNHajJ5OVRYM053N2J0dw?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5wRWg5NGdMaUY2Q1JFQmlndUc4OXJuX0RrRUNHRFhNZ3NfXzJGQjdZTFVTdVI4MUxsRXF1aGo3SkFtaU5PT09ORTFKeVVPMWxnTDZ3Yms2dXJGSlJSY0F3U1VXMmZRaTVVRnhLRlVhWDkzS21TcjY40gFmQVVfeXFMUEVuSkhOTGVtZGhKeFdhUzlib3BMQVl0NHduRUlNdkFyRzF6R19PWjhVUngzVjR0YlYtOVhjbXU5YzQ0bGozWnFLZ2F3X282YkdtYnNzZHlWc0dqMnk5VFgzTnc3YnR3?oc=5",
    "date": "2026-09-10",
    "source": "동아일보",
    "score": 3,
@@ -781,7 +814,7 @@
    "title": "[국감 Re체크③] 단속 강화해도 끊이질 않는 '의약품 둔갑' 화장품 광고",
    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9qVXVCNW5rOURYNzNtbUFxZVhCLWQ1MTdpcHc0TTFLRDVGVTUzUFItUjFGcFZZazF3UElGQTJNSS02YW9SQ21TNEpjRGFhSDU4eUtaVE5ieDFTdmkxX3JYVEo5Y0pFX3RMN1HSAW5BVV95cUxQQnYydmhNbXVpWnpWRG9UZTFIakdPTUt2MzNVcllzYTdGb1BLVHEwRXZoT25xS05ZTmZOMi1HR1JkNk9QeGltdVlycGRndVJiV2FuaG50X1FYQVVBNW1naDhybGpId2tqazRKNHA2UQ?oc=5",
    "date": "2026-09-09",
-   "source": "뉴스드림",
+   "source": "newsdream.kr",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -801,7 +834,7 @@
   },
   {
    "title": "[인터뷰] 이만희 보건복지위원장 \"'식약처 청탁 의혹' 국감서 다룰 것…이미 결과 영향 예상했던 김승원, 공익 아냐\"",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9CcS1xMTZQTGpZQjhRMzN4SVhnNExXcjBqU3QxYnBwRlcwZ3F3dGNfRFZ6anhISFhDVC1Id0I1UXR3bF92OTVRMklESmRxUE5KZmhLMFMtbjVLYjA?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBZajNCQ0tGUER2Wm1TOGRST0U0T2pDbTZfQV9fTFZrYzhXRjBDcE1tSlJaZ04wLTNFeGRKRllwSUw3SzVKbldRc0lCYw?oc=5",
    "date": "2026-09-08",
    "source": "v.daum.net",
    "score": 4,
