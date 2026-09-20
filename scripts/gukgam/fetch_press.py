@@ -15,6 +15,7 @@
 """
 import os, io, re, json, time, datetime, email.utils, urllib.request, urllib.parse
 import xml.etree.ElementTree as ET
+from textclean import clean_deep   # 국회 자료에 섞여 오는 HTML 엔티티를 저장 전에 푼다
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA = os.path.join(ROOT, "data", "gukgam")
@@ -159,10 +160,10 @@ def main():
     for a in items:
         a.pop("queries", None); a.pop("_desc", None)
     with io.open(OUT, "w", encoding="utf-8") as f:
-        json.dump({"updated": today.isoformat(), "updated_at": now_kst.strftime("%Y-%m-%d %H:%M"), "window": WINDOW,
+        json.dump(clean_deep({"updated": today.isoformat(), "updated_at": now_kst.strftime("%Y-%m-%d %H:%M"), "window": WINDOW,
                    "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사, 그리고 본회의 대정부질문) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. "
                            "기관·위원 분류와 국정감사/대정부질문 구분(track)은 제목 키워드 자동.",
-                   "count": len(items), "items": items}, f, ensure_ascii=False, indent=1)
+                   "count": len(items), "items": items}), f, ensure_ascii=False, indent=1)
     by_ag = {}
     for a in items:
         for g in a["agencies"] or ["기타"]:

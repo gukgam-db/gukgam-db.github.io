@@ -12,6 +12,7 @@
 """
 import os, re, json, time, datetime
 import urllib.request
+from textclean import clean_deep   # 국회 자료에 섞여 오는 HTML 엔티티를 저장 전에 푼다
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT = os.path.join(ROOT, "data", "gukgam", "health-agency-docs.json")
@@ -205,7 +206,7 @@ def main():
         items.append(row)
     items.sort(key=lambda x: (-(x["year"] or 0), x["agency_id"] or "~"))
     with open(OUT, "w", encoding="utf-8") as f:
-        json.dump({"updated": datetime.date.today().isoformat(), "items": items}, f, ensure_ascii=False, indent=1)
+        json.dump(clean_deep({"updated": datetime.date.today().isoformat(), "items": items}), f, ensure_ascii=False, indent=1)
     print(f"완료: 신규 {len(items) - before}건, 누적 {len(items)}건")
     return 0
 

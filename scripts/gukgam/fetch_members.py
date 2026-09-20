@@ -11,6 +11,7 @@
 """
 import os, json, time, datetime
 import urllib.request, urllib.parse
+from textclean import clean_deep   # 국회 자료에 섞여 오는 HTML 엔티티를 저장 전에 푼다
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT = os.path.join(ROOT, "data", "gukgam", "members.json")
@@ -111,9 +112,9 @@ def main():
             print(f"역대 명단 보충 조회 {len(need)}명 중 {added}명 확보")
         allitems.sort(key=lambda x: x["name"])
         with open(allout, "w", encoding="utf-8") as f:
-            json.dump({"updated": datetime.date.today().isoformat(), "committee": COMMITTEE,
+            json.dump(clean_deep({"updated": datetime.date.today().isoformat(), "committee": COMMITTEE,
                        "note": f"{COMMITTEE} 소속 이력이 있는 역대 의원 — 열린국회정보 ALLNAMEMBER. 어느 대수에 소속이었는지는 API가 주지 않아 국감 회의록 발언으로 연도를 가른다.",
-                       "items": allitems}, f, ensure_ascii=False, indent=1)
+                       "items": allitems}), f, ensure_ascii=False, indent=1)
         print(f"members-all.json: {len(allitems)}명")
     items = []
     for r in cur:
@@ -153,7 +154,7 @@ def main():
         except Exception:
             pass
     with open(OUT, "w", encoding="utf-8") as f:
-        json.dump(out, f, ensure_ascii=False, indent=1)
+        json.dump(clean_deep(out), f, ensure_ascii=False, indent=1)
     print(f"완료: {ERA} {COMMITTEE} 위원 {len(items)}명 저장 (전체 조회 {len(rows)}명)")
     return 0
 

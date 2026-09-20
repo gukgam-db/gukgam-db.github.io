@@ -13,6 +13,7 @@
 """
 import os, re, json, time, datetime
 import urllib.request, urllib.parse
+from textclean import clean_deep   # 국회 자료에 섞여 오는 HTML 엔티티를 저장 전에 푼다
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT = os.path.join(ROOT, "data", "gukgam", "likms-bulletins.json")
@@ -109,7 +110,7 @@ def main():
     items.sort(key=lambda x: (-(x["year"] or 0), x["committee"]))
     out = {"updated": datetime.date.today().isoformat(), "source": "likms.assembly.go.kr/inspections", "items": items}
     with open(OUT, "w", encoding="utf-8") as f:
-        json.dump(out, f, ensure_ascii=False, indent=1)
+        json.dump(clean_deep(out), f, ensure_ascii=False, indent=1)
     hb = sum(1 for i in items if "보건복지" in i["committee"])
     print(f"완료: 신규 {len(items) - before}건 추가, 누적 {len(items)}건 (보건복지위 {hb}건)")
     return 0

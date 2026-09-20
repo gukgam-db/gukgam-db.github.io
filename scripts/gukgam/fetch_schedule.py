@@ -11,6 +11,7 @@
 """
 import os, json, time, datetime
 import urllib.request, urllib.parse
+from textclean import clean_deep   # 국회 자료에 섞여 오는 HTML 엔티티를 저장 전에 푼다
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT = os.path.join(ROOT, "data", "gukgam", "schedule.json")
@@ -98,7 +99,7 @@ def main():
         return 0
     items.sort(key=lambda x: (x["date"], x["time"]))
     with open(OUT, "w", encoding="utf-8") as f:
-        json.dump({"updated": today.isoformat(), "horizon_days": DAYS, "items": items}, f, ensure_ascii=False, indent=1)
+        json.dump(clean_deep({"updated": today.isoformat(), "horizon_days": DAYS, "items": items}), f, ensure_ascii=False, indent=1)
     print(f"완료: {DAYS}일 범위에서 관련 일정 {len(items)}건 저장")
     return 0
 
