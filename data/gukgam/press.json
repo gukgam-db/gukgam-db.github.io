@@ -1,10 +1,32 @@
 {
  "updated": "2026-09-20",
- "updated_at": "2026-09-20 07:34",
+ "updated_at": "2026-09-20 22:56",
  "window": "14d",
  "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사, 그리고 본회의 대정부질문) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. 기관·위원 분류와 국정감사/대정부질문 구분(track)은 제목 키워드 자동.",
- "count": 97,
+ "count": 99,
  "items": [
+  {
+   "title": "[2026 국감] 도수치료 막자 냉각치료 급증…실손보험 '풍선효과'",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9VUjBWeGc5RnJaVW9LX1c2Rnp4Z0d2U19DSjFmeDhTMU94cW5ZSTZpYnEwMzVhS1Zvc3k0ZVAzazBOWDJKZVN1Mjdmd2ZVMkl2bE1EellDMHBTSTd3MlNZd092eU1PUHpoVXdJV0VfdWU?oc=5",
+   "date": "2026-09-20",
+   "source": "신아일보",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-20"
+  },
+  {
+   "title": "김현지 정조준한 국민의힘 … \"인사 흑막\" \"국정감사 출석하라\"",
+   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5mLTRLYlpYY1R4U0loTllmcFJVcWNVOG1BUFNHNXJicWlHWTZrLURoWkhyWkkwN1V5bXN5SnhPcUpyaUpPdXh4b1I3LWJDeW53TDYtNHlVRTU4Um1DcFo4dEx5OXlBSkNYMFhsVHpQNTFacVRnUlo3bG80MNIBgAFBVV95cUxPOUJXU21Vd0FqTUJmdkxMOW4xOC1SamRwLTROM2lYNUEwRDFJRmFBT283TWI3dklIcnVncTJfRzAwbUZRanN2enA5clFfRkdYLS1VcTJTejFnOGwzREpwRk11SWt1dDhPS250amZ4RU1TSlREQkFpVXIzTlI3VFh2Vg?oc=5",
+   "date": "2026-09-20",
+   "source": "뉴데일리",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-20"
+  },
   {
    "title": "올해 보건복지위원회 국정감사 계획 확정 언제쯤?",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8zTXNiOTRuMXZCYUVGS2ZNWEVLbEkyVld2eXZUZ0JaN0ZiTURuSlZEbm1GN010b0phVWd2Yk9nNEZWNl9nT3ZYcjhvMGtIdWpfUUFLOEU2WEpFZDkyeG1aV3NYRGI1WkJPbl9EYg?oc=5",
@@ -87,7 +109,7 @@
    "title": "이소희 의원 \"식약처, 김승원 '제넨셀 청탁 의혹' 자료 왜 숨기나\"",
    "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxOUkg5S0prd1ZqUm9LTWhaM21nZ2lQQ2NCaE9LcVgwOUxXU01MZ3NVcU1CR0k0R24taW9VXzNlWEZid1FPT3RhY0NLRm5remVJMlhsNVgxeTBfMWx1QjZZOEJEWFBHQURTLUxtZWp2SDNMTzFhS3dyLTY2MTJJQnNmZ2hYX1E4LXplcFpTOHVwUlZJa2xoUkhCbXpDdmw2RFRDc2dMLVdYekNKRk52UHRzcVFGR1ltRUFUenB1NDNkb09La3BSbDlDSFNhekNseHdJaWg5enFUVEZuWkFFb3JNVXBMenNRS0lweU96bE44NTdVS1VPMGxDLWF5SHZFbWtzMjhvNkRnTW5iQkd2bDkwcFdnRFAwNzd3?oc=5",
    "date": "2026-09-17",
-   "source": "데일리안",
+   "source": "dailian.co.kr",
    "score": 2,
    "agencies": [
     "식품의약품안전처"
@@ -337,7 +359,7 @@
    "title": "\"김승원, 브로커에 휘둘려 국감 들락날락하며 청탁\"",
    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNSkIzT295SVU3RVdrYVRfLXR5ZG9zcVdWU1JLbUQ2Q0N6WnlvWGhKd1NTU3czMmFkWVlXMEh1Qm5vUlJUX2VlRDhKUGRtWGQ1d1ZkUDMtd0EtN29Vb1VSMGpjbWVmczdfak9NRjUtTjBsTVVKOXBrVjI0ZmMzMXhlbEFUNUtBN1BVY3NjRzFJXzI?oc=5",
    "date": "2026-09-11",
-   "source": "조선일보",
+   "source": "chosun.com",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -553,9 +575,9 @@
   },
   {
    "title": "“김승원, 브로커·식약처 청탁 전화…국감 중 들락날락”",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1NMlpGcVFmNmNVZHYwR244TUxKZDJydTN0SGZDN2NCRWZybVV5MjJjUWdOcHJ1MjBBWV9Uc3QxWUQ0S3VHa08tMEdNSV90SlUyVmFmTzBXZ3ZfZWs?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5sMnF5VVNlc3NPVEFMRDQzUDdRQWJpeWxqWmI5NkNTYXA5Q1lrRzNmR25DX3MyUmRJVkZBT1h5OWs3SXN4VVh0Zzd3eFRhbHM?oc=5",
    "date": "2026-09-10",
-   "source": "KBS 뉴스",
+   "source": "v.daum.net",
    "score": 3,
    "agencies": [
     "식품의약품안전처"
@@ -598,7 +620,7 @@
   },
   {
    "title": "“김승원, 국감중 식약처 청탁…양씨 등과 전화-문자하려 들락날락”",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5wRWg5NGdMaUY2Q1JFQmlndUc4OXJuX0RrRUNHRFhNZ3NfXzJGQjdZTFVTdVI4MUxsRXF1aGo3SkFtaU5PT09ORTFKeVVPMWxnTDZ3Yms2dXJGSlJSY0F3U1VXMmZRaTVVRnhLRlVhWDkzS21TcjY40gFmQVVfeXFMUEVuSkhOTGVtZGhKeFdhUzlib3BMQVl0NHduRUlNdkFyRzF6R19PWjhVUngzVjR0YlYtOVhjbXU5YzQ0bGozWnFLZ2F3X282YkdtYnNzZHlWc0dqMnk5VFgzTnc3YnR3?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOYUE5U1FSaHgxUVlTY3NmWGlUdFJCYVJxMmgtYXlvREk2NW0wekgzVlNsVVRzMDJhWmYwU2pHWVNTMXZEZ0EtU2RCVkxpQjFpenpjVkVYWVJxQmVGOUZ5ZU9KVnFjQ3BRZFlmX1VZSTRnUm8xNFZBNFVvTFRiS0JwQ3BwZnBxQjRRMGN3V24wS24yVGNsVWJNWkVRSUNidWZXS3ZzaUFuRGZ4d9IBZkFVX3lxTFBFbkpITkxlbWRoSnhXYVM5Ym9wTEFZdDR3bkVJTXZBckcxekdfT1o4VVJ4M1Y0dGJWLTlYY211OWM0NGxqM1pxS2dhd19vNmJHbWJzc2R5VnNHajJ5OVRYM053N2J0dw?oc=5",
    "date": "2026-09-10",
    "source": "동아일보",
    "score": 3,
@@ -659,7 +681,7 @@
    "title": "“김승원 국감 중 식약처 청탁... 브로커에 휘둘려 들락날락”",
    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNQ0hTcEM5bG0xUVZqYUtfMWdsM2pTQVhWR0lGSVJwM2I0QWsyVU11MUJzNVFrT2dLclZHUTg5X2lHNDc5U2RhS2FZTldBT1lrNWlLRWFtNXZBNXBKY2dGZGdHVG5VOEQ3SUFKZHBXbXhDMGQxeDY0QnJDd1RuNGN5YUpMcmFoUQ?oc=5",
    "date": "2026-09-10",
-   "source": "조선일보",
+   "source": "chosun.com",
    "score": 3,
    "agencies": [
     "식품의약품안전처"
@@ -829,7 +851,7 @@
    "title": "[국감 Re체크③] 단속 강화해도 끊이질 않는 '의약품 둔갑' 화장품 광고",
    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9qVXVCNW5rOURYNzNtbUFxZVhCLWQ1MTdpcHc0TTFLRDVGVTUzUFItUjFGcFZZazF3UElGQTJNSS02YW9SQ21TNEpjRGFhSDU4eUtaVE5ieDFTdmkxX3JYVEo5Y0pFX3RMN1HSAW5BVV95cUxQQnYydmhNbXVpWnpWRG9UZTFIakdPTUt2MzNVcllzYTdGb1BLVHEwRXZoT25xS05ZTmZOMi1HR1JkNk9QeGltdVlycGRndVJiV2FuaG50X1FYQVVBNW1naDhybGpId2tqazRKNHA2UQ?oc=5",
    "date": "2026-09-09",
-   "source": "newsdream.kr",
+   "source": "뉴스드림",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -940,7 +962,7 @@
   },
   {
    "title": "[기획] 페이백·의료공백·필수약 대란… 보건복지 현안, 국감 도마 - m-i.kr",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9XRjVqZkpETWloaEZyU0JTRk1UUGpMX0t1Y2t1QzJ2VW5CV18wRmVMd3J4QjFmVUdFQ01HVlJUMm43NXU4UGFWdm5QQlVEbGhzbVJKWVVmbmVaNVJTbXVJQnA2WdIBaEFVX3lxTE1RdW9rQU9ZdW5TS1ZwTDI2WDNiYk5TR05KM2JidnladGZkeXRSNklHREtKUWNZRFVCdUx5Z2pYQklyZVl0MDY3RHJ1dG1TanBMY3ZaNnY0N3h3X3V3U1FaTW80ZWMyVXNl?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9PbHYtNGhYZEdaanBaaEpXY2hBd25yZko3NnJ0T1ZJdThsaHkxcUFqM1ZNUkFSc1VZSnlRV1cwVDFzY05JSU5KRkF5Vi1NYUxqWUJDXzlQQ244Q3REOGkxWnh2UXXSAWhBVV95cUxNUXVva0FPWXVuU0tWcEwyNlgzYmJOU0dOSjNiYnZ5WnRmZHl0UjZJR0RLSlFjWURVQnVMeWdqWEJJcmVZdDA2N0RydXRtU2pwTGN2WjZ2NDd4d191d1NRWk1vNGVjMlVzZQ?oc=5",
    "date": "2026-09-07",
    "source": "m-i.kr",
    "score": 2,
