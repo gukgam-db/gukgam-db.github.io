@@ -1,10 +1,86 @@
 {
- "updated": "2026-09-21",
- "updated_at": "2026-09-21 07:29",
+ "updated": "2026-09-22",
+ "updated_at": "2026-09-22 00:53",
  "window": "14d",
  "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사, 그리고 본회의 대정부질문) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. 기관·위원 분류와 국정감사/대정부질문 구분(track)은 제목 키워드 자동.",
- "count": 99,
+ "count": 105,
  "items": [
+  {
+   "title": "국민의힘 복지위, 오늘 식약처 항의 방문…\"제넨셀 자료제출 소극적\"",
+   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1JQnpMYl82cmpIbzNQQ0FoSzJhLXdIanJWcEVmT1Y5OE4zZnVqdGF3Qkx6bFlJSEhtYWdPTGNOWTNNXzNqbHRhbno5V3ZQSnYzQ0ZYTDRJVG1GbWo5?oc=5",
+   "date": "2026-09-21",
+   "source": "뉴스핌",
+   "score": 3,
+   "agencies": [
+    "식품의약품안전처"
+   ],
+   "members": [],
+   "track": "",
+   "first_seen": "2026-09-22"
+  },
+  {
+   "title": "소병훈 의원 “의료기기 중대 이상사례 5년 새 2.2배 증가”",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9IZk85RjZ1cFpkZTFEcjdiYjNraWw0ajU4bnFvLUpBWEUyd3NpbjlLVURnR3cybE5hTFFNcXhtLUIwMnhpTk03d2RmYnZ5bEJiX1BIcUdlSVU5alExel9DeFR0ZlVqUQ?oc=5",
+   "date": "2026-09-21",
+   "source": "푸드투데이",
+   "score": 2,
+   "agencies": [],
+   "members": [
+    "소병훈"
+   ],
+   "track": "",
+   "first_seen": "2026-09-22"
+  },
+  {
+   "title": "소병훈 의원, 입원·기능저하·생명위협 및 사망 등 의료기기 ‘중대한 이상사례’ 보고 5년 새 약 2.2배 증가",
+   "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1PVlZfaWJ3OEVjaVd6R1JGSEp6NzkyVFFsdW93SHY2SzRQanFBZlhiQU9TalUwVEwxbDBLSExqVTY2TWJrdW04N3QxbG8?oc=5",
+   "date": "2026-09-21",
+   "source": "시사일보",
+   "score": 2,
+   "agencies": [],
+   "members": [
+    "소병훈"
+   ],
+   "track": "",
+   "first_seen": "2026-09-22"
+  },
+  {
+   "title": "남인순, \"난임 지원 확대 이후…주요 비급여 가격 최대 52.8%↑\"",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAzem5fbXZfQ3NnOTFITEZjTUFRUU90WmJnN25Mb0c5VGxKaDM5anFOSEExN1lzSUduX192SE5CQmNXNWF4MThNdjU4YkttajVPT3Vla0VCNmxPTXA5N2lsMl9KeDhTWnZCekFzVWxrSGM?oc=5",
+   "date": "2026-09-21",
+   "source": "데일리메디팜",
+   "score": 2,
+   "agencies": [],
+   "members": [
+    "남인순"
+   ],
+   "track": "",
+   "first_seen": "2026-09-22"
+  },
+  {
+   "title": "소병훈 의원 \"의료기기 '중대 이상사례' 보고 5년 새 2.2배 증가\"",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5wd0ZmVjFFV1JkdUVNMUcyTHQ5OWc2cFZqM3JWczF4UmtZTmhWcXFEaGdteWNCUUxGR29ZcS1tMHVTUndEZ2tTVWJrZlkyVklMTFBKbjE5ME45Nk02TW53YmFzVE9id2JGY1dN?oc=5",
+   "date": "2026-09-21",
+   "source": "히트뉴스",
+   "score": 2,
+   "agencies": [],
+   "members": [
+    "소병훈"
+   ],
+   "track": "",
+   "first_seen": "2026-09-22"
+  },
+  {
+   "title": "장동혁 \"김현지 제1부속실장, 이번 국감에 출석시켜야\" [뉴시스Pic]",
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBReUNvd1FTazR4R0ZfWU5fRVlmTjJPTXZPbmdzVGJZcDlnbGhFMGRsdExtQmVWRWVhRWRfWVRWSmdITUwyU0pIRDlDM043bnZaemFfb3draGRiemxqSS1TZGFoM1poQTU4MHM2b043Rk1YRk9PV0I0dNIBeEFVX3lxTFBReUNvd1FTazR4R0ZfWU5fRVlmTjJPTXZPbmdzVGJZcDlnbGhFMGRsdExtQmVWRWVhRWRfWVRWSmdITUwyU0pIRDlDM043bnZaemFfb3draGRiemxqSS1TZGFoM1poQTU4MHM2b043Rk1YRk9PV0I0dA?oc=5",
+   "date": "2026-09-21",
+   "source": "뉴시스",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-22"
+  },
   {
    "title": "[2026 국감] 도수치료 막자 냉각치료 급증…실손보험 '풍선효과'",
    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9VUjBWeGc5RnJaVW9LX1c2Rnp4Z0d2U19DSjFmeDhTMU94cW5ZSTZpYnEwMzVhS1Zvc3k0ZVAzazBOWDJKZVN1Mjdmd2ZVMkl2bE1EellDMHBTSTd3MlNZd092eU1PUHpoVXdJV0VfdWU?oc=5",
@@ -42,7 +118,7 @@
    "title": "[2026국감] 건강보험료 과오납 5년간 4조원 넘어…미반환도 455억원",
    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1nSzVZT0poQTBmRFBWR0dfZjhQRTV4NnVlWnFIVmYzVzJCeUNBdnA5R1VkZkgtaDVfY3Z2eENpQTZaWkYtQlFWTmlKb04yZG9oTG1xQXZ6bE5pVnNxSGhEVWhNU0RTY1h3V3ZNZlc0U0ozUU3SAXdBVV95cUxOYTZXUjREYmJrX3RSeW5YZWRaTHZwajI2ODZqMzE3S25IX1ZUR2FMekZCbXBKcTZacEhwTk1nY1o0ZWNpX1dWbEs3cWdQUjA2Ynd0Y1FVeFRfLWp0N2RHbGY5LXZyMS1zTUpqdkF5VHo4Zmc1bVlLdw?oc=5",
    "date": "2026-09-18",
-   "source": "straightnews.co.kr",
+   "source": "스트레이트뉴스",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -275,7 +351,7 @@
    "title": "국회, 오늘 교육·사회·문화 대정부질문…교권 보호·필수 의료 등 공방 전망",
    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1tOE54X1dmNU81Nkp0TEViV3kxQjAzTElybUFXNXpTeHFJMHlBcHo2QUJlNF9feS15bkFiaEIwb3h0MmxrUDM3M0RwRUhGalBoZHBVMWkwUk5FU1hK?oc=5",
    "date": "2026-09-14",
-   "source": "newspim.com",
+   "source": "뉴스핌",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -620,7 +696,7 @@
   },
   {
    "title": "“김승원, 국감중 식약처 청탁…양씨 등과 전화-문자하려 들락날락”",
-   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOYUE5U1FSaHgxUVlTY3NmWGlUdFJCYVJxMmgtYXlvREk2NW0wekgzVlNsVVRzMDJhWmYwU2pHWVNTMXZEZ0EtU2RCVkxpQjFpenpjVkVYWVJxQmVGOUZ5ZU9KVnFjQ3BRZFlmX1VZSTRnUm8xNFZBNFVvTFRiS0JwQ3BwZnBxQjRRMGN3V24wS24yVGNsVWJNWkVRSUNidWZXS3ZzaUFuRGZ4d9IBZkFVX3lxTFBFbkpITkxlbWRoSnhXYVM5Ym9wTEFZdDR3bkVJTXZBckcxekdfT1o4VVJ4M1Y0dGJWLTlYY211OWM0NGxqM1pxS2dhd19vNmJHbWJzc2R5VnNHajJ5OVRYM053N2J0dw?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5wRWg5NGdMaUY2Q1JFQmlndUc4OXJuX0RrRUNHRFhNZ3NfXzJGQjdZTFVTdVI4MUxsRXF1aGo3SkFtaU5PT09ORTFKeVVPMWxnTDZ3Yms2dXJGSlJSY0F3U1VXMmZRaTVVRnhLRlVhWDkzS21TcjY40gFmQVVfeXFMUEVuSkhOTGVtZGhKeFdhUzlib3BMQVl0NHduRUlNdkFyRzF6R19PWjhVUngzVjR0YlYtOVhjbXU5YzQ0bGozWnFLZ2F3X282YkdtYnNzZHlWc0dqMnk5VFgzTnc3YnR3?oc=5",
    "date": "2026-09-10",
    "source": "동아일보",
    "score": 3,
