@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-22",
+ "updated": "2026-09-23",
  "source": "likms.assembly.go.kr/inspections",
  "items": [
   {
@@ -143,6 +143,24 @@
     {
      "name": "2026년도 국정감사계획서.pdf",
      "url": "https://legislation.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=027d53b9396c4eb588e3efe30ba30f00&fileSn=2"
+    }
+   ]
+  },
+  {
+   "article_no": 3078718,
+   "year": 2026,
+   "committee": "산업통상자원중소벤처기업위원회",
+   "doc_type": "plan",
+   "title": "2026년도 국정감사계획서",
+   "posted": "2026-09-22",
+   "files": [
+    {
+     "name": "★2026년도 국정감사계획서 (09210842).hwp",
+     "url": "https://industry.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=2b2c026b58ba4f628da66d0d77dc8537&fileSn=1"
+    },
+    {
+     "name": "★2026년도 국정감사계획서 (09210842).pdf",
+     "url": "https://industry.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=2b2c026b58ba4f628da66d0d77dc8537&fileSn=2"
     }
    ]
   },
