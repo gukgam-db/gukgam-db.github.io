@@ -1,10 +1,21 @@
 {
  "updated": "2026-09-22",
- "updated_at": "2026-09-22 00:53",
+ "updated_at": "2026-09-22 08:58",
  "window": "14d",
  "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사, 그리고 본회의 대정부질문) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. 기관·위원 분류와 국정감사/대정부질문 구분(track)은 제목 키워드 자동.",
- "count": 105,
+ "count": 106,
  "items": [
+  {
+   "title": "野, 김승원·김현지부터 김용범까지... 국정감사서 '의혹 총공세'",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1zd3JURWZTeHhqU0JBQVBXams2MlU0MFZDUlhZdTcxa21Pb3dQbENrODVKNC1XWmJtWUZ0RTF1OFNwRW9rZFhPb2ZGLWpoR3NzaE90WmZSOENPb2lVbndYSmNBclYtUDVCSXVmYnEwTVF4aXfSAXNBVV95cUxNc3dyVEVmU3h4alNCQUFQV2prNjJVNDBWQ1JYWXU3MWttT293UGxDazg1SjQtV1pibVlGdEUxdThTcEVva2RYT29mRi1qaEdzc2hPdFpmUjhDT29pVW53WEpjQXJWLVA1Qkl1ZmJxME1ReGl3?oc=5",
+   "date": "2026-09-22",
+   "source": "hankookilbo.com",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-22"
+  },
   {
    "title": "국민의힘 복지위, 오늘 식약처 항의 방문…\"제넨셀 자료제출 소극적\"",
    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1JQnpMYl82cmpIbzNQQ0FoSzJhLXdIanJWcEVmT1Y5OE4zZnVqdGF3Qkx6bFlJSEhtYWdPTGNOWTNNXzNqbHRhbno5V3ZQSnYzQ0ZYTDRJVG1GbWo5?oc=5",
@@ -107,7 +118,7 @@
    "title": "올해 보건복지위원회 국정감사 계획 확정 언제쯤?",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8zTXNiOTRuMXZCYUVGS2ZNWEVLbEkyVld2eXZUZ0JaN0ZiTURuSlZEbm1GN010b0phVWd2Yk9nNEZWNl9nT3ZYcjhvMGtIdWpfUUFLOEU2WEpFZDkyeG1aV3NYRGI1WkJPbl9EYg?oc=5",
    "date": "2026-09-18",
-   "source": "약사공론",
+   "source": "kpanews.co.kr",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -185,7 +196,7 @@
    "title": "이소희 의원 \"식약처, 김승원 '제넨셀 청탁 의혹' 자료 왜 숨기나\"",
    "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxOUkg5S0prd1ZqUm9LTWhaM21nZ2lQQ2NCaE9LcVgwOUxXU01MZ3NVcU1CR0k0R24taW9VXzNlWEZid1FPT3RhY0NLRm5remVJMlhsNVgxeTBfMWx1QjZZOEJEWFBHQURTLUxtZWp2SDNMTzFhS3dyLTY2MTJJQnNmZ2hYX1E4LXplcFpTOHVwUlZJa2xoUkhCbXpDdmw2RFRDc2dMLVdYekNKRk52UHRzcVFGR1ltRUFUenB1NDNkb09La3BSbDlDSFNhekNseHdJaWg5enFUVEZuWkFFb3JNVXBMenNRS0lweU96bE44NTdVS1VPMGxDLWF5SHZFbWtzMjhvNkRnTW5iQkd2bDkwcFdnRFAwNzd3?oc=5",
    "date": "2026-09-17",
-   "source": "데일리안",
+   "source": "dailian.co.kr",
    "score": 2,
    "agencies": [
     "식품의약품안전처"
@@ -233,7 +244,7 @@
    "title": "보건복지위 17일 전체회의 갖고 법률안 88건 의결",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9iN2hjLXdQTW5Td2hDOXdxLW9rUzJrUkFvX1ZRdVZXSFE4V0hoaDRDSHRTY2RoNUNPODBBazF1OXl4UUFpSHVoZWJMZ3F2WVNOSC1BNTZrVzZFODBTcncyYXk2VDRhZDBxaDNHRQ?oc=5",
    "date": "2026-09-17",
-   "source": "약사공론",
+   "source": "kpanews.co.kr",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -677,7 +688,7 @@
    "title": "\"김승원, 국감 중 전화 돌리느라 들락날락\" 안철수, 시간대별 '청탁 정황' 직격",
    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA1Z2tkZGc2VVVVUHY0T0JQUWNzTWFNUGdaTVpKNlQ2SnpxeTN5YnpwZkhHWTh2RF9GU1UyVWthV09TcFJYakI3ajFtQS1DRkdDVU9KcGlqM1JxR3pPVEtsRk9jUDFoaUZ1NU5SMnVR0gFzQVVfeXFMTjFLa3l0b0lDSGZoVmdfb20zRWlhSTVsS3B2akJqczdzc3h6Tlo5ajFpa0Q5NzFyejRpYVZxUG1oUDhLM2FTSXcxWVpYRFZIbW5oSTEtMms0dDhpMWZKcEJPWXg5ZVM1bnNkV3kwMFJUSnNpcw?oc=5",
    "date": "2026-09-10",
-   "source": "한국일보",
+   "source": "hankookilbo.com",
    "score": 2,
    "agencies": [],
    "members": [],
