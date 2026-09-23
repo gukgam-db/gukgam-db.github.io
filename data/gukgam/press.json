@@ -1,15 +1,106 @@
 {
  "updated": "2026-09-23",
- "updated_at": "2026-09-23 08:21",
+ "updated_at": "2026-09-23 23:16",
  "window": "14d",
  "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사, 그리고 본회의 대정부질문) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. 기관·위원 분류와 국정감사/대정부질문 구분(track)은 제목 키워드 자동.",
- "count": 118,
+ "count": 126,
  "items": [
   {
    "title": "‘제넨셀’ 사건 관계자…국감 증인 채택 놓고 與野 줄다리기 - 조선비즈",
    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNcm9fdWQ3QkE0RWtGM3E5U29objFCSXZPcFh2d1FHTTU3QzU1VWdGOUZoUTctTXFNYUxzMmhfeWF1dGlIWGJfMWtrWTZlZFRub0FiRDFmSC1adDdMVEh4b3liTTZQMlFDMFVGYUp4MEdQUlR6dkRLTFNTTlM3b0o3M2tjTmlkQVHSAZsBQVVfeXFMTVI1WUNFYkxkWk9pXzhuaG8xTmFSM1J3Q3JQYlNIZXlBVjhJUWZ5WTd4REdHZ0syb1FBM29jcXBtU1ZIc1pwLTliR0hYX0gzS3VzemJSQWRFUkxtUXFDQlEySC1pY29LSXJEVk5URlJJdnRUeDhEd0R2Q1F3RTRTNHo3TmJFdEpMaWgzZjh3NTFWaTB2WXBSRDRCazg?oc=5",
    "date": "2026-09-23",
    "source": "Chosunbiz",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-23"
+  },
+  {
+   "title": "보건복지위 국감, 내달 7일 막 오른다…27일까지 보건의료·복지현안 점검",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5yR1RmdTlEUWxRQ2pXUE96ZkNXeHlwemtnaUtmQjBOaFlYSHZXSk5PdHFMbmtyX1Z6ZWxUSnVhaEFQQWRpY0ZGV3gydTBUdW9jSWMzcWFhUjRxN2o1MmQwcV9tZzJ0TXhYMGVB?oc=5",
+   "date": "2026-09-23",
+   "source": "헬스경향",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-23"
+  },
+  {
+   "title": "보건복지위원회 2026년도 국정감사, 10월 7-27일",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBrbkRiczJ2S2ExZW1DRlE5TU1FLUVPN08wNnpiTDZnODdHWHpPOFNHR3lpMXlGWGRxaUJGWnhvVmFIaU9BUHhMeGdtTHNQVzdTRTlYNEZQQzl2ZWZjcXpaaEpmMjhmMHV0RkN3?oc=5",
+   "date": "2026-09-23",
+   "source": "재활뉴스",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-23"
+  },
+  {
+   "title": "국회 복지위 국감, 10월 7일 시작...27일 종합감사",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1QeTNqaE5xNnBMS1RnQXZPcGMtYlZBaVB6bWRLcnVBdEhibzFPbUx0QkhhMkxaX0RyR0k0X05oVURmc05CSDhjNzZfQzFpTUNyd1FfS0NoUnRjREhReXh4NU02UnJnanlWN3c?oc=5",
+   "date": "2026-09-23",
+   "source": "bosa.co.kr",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-23"
+  },
+  {
+   "title": "복지위 국감 일정 윤곽…복지부 7일·식약처 13일",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE0yLUowVy1PaVNNdVVKM1U3TXpRbkZjNHhZY0V3N18zY19ocmlsSEZaVzEyc0NYeTBCMzkzRDJod3RNT3VuT1Q0YmxNRmg1Z0ZRMGhFNGVRYzNfdTE1X3doSlhKdndzX3JDSE1J?oc=5",
+   "date": "2026-09-23",
+   "source": "medipana.com",
+   "score": 3,
+   "agencies": [
+    "보건복지부",
+    "식품의약품안전처"
+   ],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-23"
+  },
+  {
+   "title": "의약 국감, 10월7일부터 20일간‥12개 국립대병원·제약사 증인 관심",
+   "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTE9nclpDVEJVdVdZOFpTOFBrdkwwU2cydWpmMTEzUEt3VGQxQ1hQTXpzNDZQaS1LRVN0SDFTdWxSd0UtZURl?oc=5",
+   "date": "2026-09-23",
+   "source": "뉴스맥",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-23"
+  },
+  {
+   "title": "내달 7일 막 오르는 복지위 국감…국립대병원, 소관부처 이관 후 첫 검증",
+   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9XUWFmVGJ1NGY4a25kYU5KRnFzMXZkOUp0ZS1pQlpKcTZYTEN6TW4xUWQ0TjFSSTFWWVFjc1FYbTA1V1JQMW9QRW9QWS10X2p5VnB0ay1DS294Y3Y5?oc=5",
+   "date": "2026-09-23",
+   "source": "뉴스핌",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-23"
+  },
+  {
+   "title": "복지위 국감 10월 7일 막 오른다…국립대병원 둘쨋날 전면 배치",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE51UXFXOUF1NHNTNS1fWnZQdVBDekFuU0RVSjVsNk1TM2VEZlZ1WVVNd3NKSURRckR6ZUIwbFNJcDVkOTNXdkw1dG8taU1iOS1ZTHM2VUlXXzFjZ1U5VlNOQ2gwYmp4bW9JWHJxT2xYcw?oc=5",
+   "date": "2026-09-23",
+   "source": "newsthevoice.com",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-23"
+  },
+  {
+   "title": "추석 지나면 국감 정국…관전 포인트는?",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9YcEs3QTAzRjBBZG9tMHhvMFJkOF8tUzNueVhmTnRGeFZzTnBhOFUwLTVla0dJRmJ2Sm5HanhVX2RqOC1WbFlmWmZ3OVlrVHFPMlp0eXBsQVEyZDloUXZ4TXloVEhNTGZoRlRz0gFrQVVfeXFMT1hwSzdBMDNGMEFkb20weG8wUmQ4Xy1TM255WGZOdEZ4VnNOcGE4VTAtNWVrR0lGYnZKbkdqeFVfZGo4LVZsWWZaZnc5WWtUcU8yWnR5cGxBUTJkOWhRdnhNeWhUSE1MZmhGVHM?oc=5",
+   "date": "2026-09-23",
+   "source": "민주신문",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -42,7 +133,7 @@
    "title": "복지위 국감 10월 7일 시작…식약처 13일·건보공단·심평원 16일",
    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBBc0syM191OHMtbEc4QnlWNFZGZktkcHVFVjctdGlOb0UyUEJsa19VMVg4alVRam9fMm9iZGliclpsQi1ZYUtMSFpVRVh2SHFkZzd0dlR6UG5GWDQtOS1FM1llY2NBQk5lZjNv?oc=5",
    "date": "2026-09-22",
-   "source": "히트뉴스",
+   "source": "hitnews.co.kr",
    "score": 3,
    "agencies": [
     "식품의약품안전처",
@@ -55,7 +146,7 @@
   },
   {
    "title": "복지위 국감 10월 7일 시작…복지부 이관 국립대병원 첫 감사대",
-   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBUNE54LVp0LVRxXzdQc1VrS3RzekpLb3poTlVfX3JmT1VHU0xURTE3anJMaVVqVElKSm16QThyOXFvREllQ3pJZUtlb1BJdVFvSUZvUkRMWQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5IeXF6R1QzbGJyZlFtQ3FLTmFfcENBeUZ4dGc1TlVpTDdCWDNweDBzQlFtRmRSMk5MT21YdDZJcHlhUGVGbU8zdGxUYXpxWUVhZWc?oc=5",
    "date": "2026-09-22",
    "source": "MEDI:GATE NEWS",
    "score": 3,
@@ -123,7 +214,7 @@
   },
   {
    "title": "조배숙, 식약처 방문 제넨셀 코로나19 치료제 임상 핵심 자료 확인",
-   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5SUEEzOHE2LWRYX002UUVmZUZzOTBYUk5VM04xb3haeEthV0NRN3NPRDdnalJWQ2lGUU4tcUxRQUV1Z180aWJHZkRkTGdIZFRUcXoxeTdQN2FqZUdYQU4yWFNwekh6dHJMLVVRSHBCbXNpd9IBdEFVX3lxTE1RZ1ZKdjhuSFdSRWJ0emEzZVpGVlp3Y1lhdGdtZmhnM25TRVp6Z0Rnd0hmeTVfWXpsckFudnhPM21acXdFYU1VNklkd19SWTl1TjBFVTRqVXZzMjFnc3BybXdqTmFUaGxCdkJGNmYtTTNldDE3?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1RZ1ZKdjhuSFdSRWJ0emEzZVpGVlp3Y1lhdGdtZmhnM25TRVp6Z0Rnd0hmeTVfWXpsckFudnhPM21acXdFYU1VNklkd19SWTl1TjBFVTRqVXZzMjFnc3BybXdqTmFUaGxCdkJGNmYtTTNldDE30gF0QVVfeXFMTVFnVkp2OG5IV1JFYnR6YTNlWkZWWndjWWF0Z21maGczblNFWnpnRGd3SGZ5NV9ZemxyQW52eE8zbVpxd0VhTVU2SWR3X1JZOXVOMEVVNGpVdnMyMWdzcHJtd2pOYVRobEJ2QkY2Zi1NM2V0MTc?oc=5",
    "date": "2026-09-22",
    "source": "시사연합신문",
    "score": 2,
@@ -203,7 +294,7 @@
    "title": "소병훈 의원 \"의료기기 '중대 이상사례' 보고 5년 새 2.2배 증가\"",
    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5wd0ZmVjFFV1JkdUVNMUcyTHQ5OWc2cFZqM3JWczF4UmtZTmhWcXFEaGdteWNCUUxGR29ZcS1tMHVTUndEZ2tTVWJrZlkyVklMTFBKbjE5ME45Nk02TW53YmFzVE9id2JGY1dN?oc=5",
    "date": "2026-09-21",
-   "source": "히트뉴스",
+   "source": "hitnews.co.kr",
    "score": 2,
    "agencies": [],
    "members": [
@@ -564,9 +655,9 @@
   },
   {
    "title": "野 “김승원, 2021년 국감중 식약처 청탁”… 金측 “통화 시간 5분 정도에 불과” 인정",
-   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9fZ0RyQzlkdl9nYVBVSHlicm9fQ01GRjlWWjNnVGRBdHVCVDNLSFZ4LUx6X0lzYkVsSko0TDN1bFlTS0U2SFVwT3JPWQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB3Q01JVEdMc3RuaXVrTk1HQUxwQ1BUcnkwaU93VkVILXNDaGlneDJXRjI5ZG4zQTlPMWdGamIzUGpteTgyaF9JUHpTek5LeDBWQnhnU2wzdHdKRERwenJVQnhuMFFvclhHTG1ZRjZDWGk5OG9iZnRZ0gFmQVVfeXFMUE9hTGRHWXhrNEU5MmkzckVSNlRySDNvcEF2czQyVmtTT2dlaHF0aWhuYUhpa2xSTWZDenBTWWFlT2pUSGJhLVczd2FwNFF5c2tkR3Y0RERhZW1FV2VkcFEyR0U0aWxR?oc=5",
    "date": "2026-09-11",
-   "source": "v.daum.net",
+   "source": "동아일보",
    "score": 3,
    "agencies": [
     "식품의약품안전처"
@@ -851,7 +942,7 @@
   },
   {
    "title": "“김승원, 국감중 식약처 청탁…양씨 등과 전화-문자하려 들락날락”",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5wRWg5NGdMaUY2Q1JFQmlndUc4OXJuX0RrRUNHRFhNZ3NfXzJGQjdZTFVTdVI4MUxsRXF1aGo3SkFtaU5PT09ORTFKeVVPMWxnTDZ3Yms2dXJGSlJSY0F3U1VXMmZRaTVVRnhLRlVhWDkzS21TcjY40gFmQVVfeXFMUEVuSkhOTGVtZGhKeFdhUzlib3BMQVl0NHduRUlNdkFyRzF6R19PWjhVUngzVjR0YlYtOVhjbXU5YzQ0bGozWnFLZ2F3X282YkdtYnNzZHlWc0dqMnk5VFgzTnc3YnR3?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNQ1FpQVVBWDU2NWZXbERlUEJpRWdNajhJU1dXLUNJeDhNc3l2aENDaklLNFlwLXdBaGNxczdpcE41OXNkQTJxcVZPSmZrUjFMMHNBaXpxdjhzcTRlN3FMMkFGUHJtdGZJMkc3U3hWazRXM1lVY3U2dVlMMjB4b2ZYQk4ySjZ4UC1lYllZbV8tRUVtU2xhTEJibG1iYUV6ZmFQSU5Rd0ZCVTFPQdIBZkFVX3lxTFBFbkpITkxlbWRoSnhXYVM5Ym9wTEFZdDR3bkVJTXZBckcxekdfT1o4VVJ4M1Y0dGJWLTlYY211OWM0NGxqM1pxS2dhd19vNmJHbWJzc2R5VnNHajJ5OVRYM053N2J0dw?oc=5",
    "date": "2026-09-10",
    "source": "동아일보",
    "score": 3,
@@ -910,9 +1001,9 @@
   },
   {
    "title": "“김승원 국감 중 식약처 청탁... 브로커에 휘둘려 들락날락”",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNQ0hTcEM5bG0xUVZqYUtfMWdsM2pTQVhWR0lGSVJwM2I0QWsyVU11MUJzNVFrT2dLclZHUTg5X2lHNDc5U2RhS2FZTldBT1lrNWlLRWFtNXZBNXBKY2dGZGdHVG5VOEQ3SUFKZHBXbXhDMGQxeDY0QnJDd1RuNGN5YUpMcmFoUQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9tN1ZaaDNiOGk4WkpKQ0dsbXZrTklNVl9odHRuWDloUzNPalNnNVkxdlp0ckVWV2VrbWRPSWMtVGpWY09tcEhuVG9sRkFKTGQySWdMdw?oc=5",
    "date": "2026-09-10",
-   "source": "조선일보",
+   "source": "v.daum.net",
    "score": 3,
    "agencies": [
     "식품의약품안전처"
