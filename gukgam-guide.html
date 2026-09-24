@@ -59,10 +59,19 @@
   .st{ background:#f7f9fb; border:1px solid var(--line); border-radius:10px; padding:10px 12px; }
   .st .n{ font-size:1.25rem; font-weight:800; color:#1c1c28; }
   .st .l{ font-size:.72rem; color:var(--muted); }
-  .tbar{ display:flex; align-items:center; gap:8px; margin:4px 0; font-size:.84rem; }
-  .tbar .tn{ flex:0 0 140px; font-weight:700; text-align:right; }
-  .tbar .bar{ height:14px; background:#1c1c28; border-radius:3px; }
-  .tbar .tc{ color:var(--muted); font-size:.76rem; }
+  /* 막대 길이를 300px 고정으로 잡았더니 폭이 좁은 화면에서는 전부 꽉 차 68건과 30건이 같아 보였다.
+     남은 폭을 쓰는 트랙을 두고 그 안을 비율만큼 채운다. */
+  .tbar{ display:flex; align-items:center; gap:10px; margin:5px 0; font-size:.84rem; }
+  .tbar .tn{ flex:0 0 132px; font-weight:700; text-align:right; }
+  .tbar .track{ flex:1 1 auto; min-width:0; height:14px; background:var(--line); border-radius:3px; overflow:hidden; }
+  .tbar .bar{ display:block; height:100%; background:#1c1c28; border-radius:3px; }
+  .tbar .tc{ flex:0 0 auto; color:var(--muted); font-size:.76rem; white-space:nowrap; }
+  @media (max-width:640px){
+    /* 이름이 가운데를 차지하면 막대가 설 자리가 없다. 이름을 위로 올리고 막대에 한 줄을 통째로 준다. */
+    .tbar{ flex-wrap:wrap; gap:6px 8px; margin:9px 0; }
+    .tbar .tn{ flex:0 0 100%; text-align:left; font-size:.86rem; }
+    .tbar .track{ height:12px; }
+  }
   .quote{ border:1px solid var(--line); border-radius:10px; padding:11px 14px; margin-bottom:10px; font-size:.88rem; }
   .quote .qm{ font-size:.74rem; color:var(--muted); margin-bottom:4px; display:flex; gap:8px; flex-wrap:wrap; }
   .quote .qq::before{ content:"Q. "; font-weight:900; color:#a03030; }
@@ -82,6 +91,7 @@
   .off-contact{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:9px; }
   .off-contact span{ font-size:.82rem; font-weight:800; background:#eef4fc; color:#1657b0; border-radius:8px; padding:3px 11px; }
   .print-btn{ border:1px solid var(--line); background:#fff; border-radius:9px; padding:7px 14px; font-size:.82rem; font-weight:800; color:#2a4d7d; cursor:pointer; margin-left:auto; }
+  .tbar .track{ border:1px solid var(--line); box-sizing:border-box; }
   .tbar .bar{ border:1px solid #1c1c28; box-sizing:border-box; }   /* 배경색을 안 찍는 프린터에서도 막대 윤곽은 남게 */
   @media print{
     *{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }   /* 막대·배지 배경색을 인쇄에도 그대로 */
@@ -160,7 +170,10 @@
       '</div></div>'+
       (g.top_topics.length?'<div class="sec"><h3>관심 분야 (질의 언급 횟수)</h3>'+
         g.top_topics.map(function(t){
-          return '<div class="tbar"><span class="tn">'+esc(t.t)+'</span><span class="bar" style="width:'+Math.max(6,Math.round(t.c/maxc*300))+'px"></span><span class="tc">'+t.c+'건</span></div>';
+          var pct=Math.max(4, Math.round(t.c/maxc*100));   // 가장 많은 것을 100%로 두고 견준다
+          return '<div class="tbar"><span class="tn">'+esc(t.t)+'</span>'+
+                 '<span class="track"><span class="bar" style="width:'+pct+'%"></span></span>'+
+                 '<span class="tc">'+t.c+'건</span></div>';
         }).join('')+'</div>':'')+
       (g.quotes.length?'<div class="sec"><h3>대표 질의 (회의록 원문 인용, 최근순)</h3>'+
         g.quotes.map(function(q){
