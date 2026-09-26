@@ -1,9 +1,9 @@
 {
- "updated": "2026-09-26",
- "updated_at": "2026-09-26 23:06",
+ "updated": "2026-09-27",
+ "updated_at": "2026-09-27 08:13",
  "window": "14d",
  "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사, 그리고 본회의 대정부질문) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. 기관·위원 분류와 국정감사/대정부질문 구분(track)은 제목 키워드 자동.",
- "count": 140,
+ "count": 141,
  "items": [
   {
    "title": "소병훈 의원 “사무장병원 수사 평균 11.9개월…환수율 10%대”",
@@ -248,7 +248,7 @@
    "title": "추석 지나면 국감 정국…관전 포인트는?",
    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9TY09Ia1hMZDdOTTdKMzdMMF9qSV9KTG80MTc5V2tTeFllRE1lc19TYnd6ZlZOZW9BWWNILTIzc25yMklVVWdNdmVXWEx3STRDenlYQ3BYY1VBZ2J5cm9xX3gzaW1PVUnSAWtBVV95cUxPWHBLN0EwM0YwQWRvbTB4bzBSZDhfLVMzbnlYZk50RnhWc05wYThVMC01ZWtHSUZidkpuR2p4VV9kajgtVmxZZlpmdzlZa1RxTzJadHlwbEFRMmQ5aFF2eE15aFRITUxmaEZUcw?oc=5",
    "date": "2026-09-23",
-   "source": "민주신문",
+   "source": "iminju.net",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -265,6 +265,21 @@
    "members": [],
    "track": "국정감사",
    "first_seen": "2026-09-25"
+  },
+  {
+   "title": "10월 7일부터 복지부 국감…13일 식약처, 16일 공단·심평원",
+   "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBvZ3E0QnJmOTB3emZFakFNNnp3LWlNbWljeHRTRS1nS0NRSlRMWXBPNDVwQXRZNDV0UnBiZmt2WmFrSjlJLXA2b25iQm5yV283?oc=5",
+   "date": "2026-09-23",
+   "source": "데일리팜",
+   "score": 3,
+   "agencies": [
+    "보건복지부",
+    "식품의약품안전처",
+    "건강보험심사평가원"
+   ],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-27"
   },
   {
    "title": "野, 김승원·김현지부터 김용범까지... 국정감사서 '의혹 총공세'",
@@ -292,7 +307,7 @@
    "title": "복지위 국감 10월 7일 시작…식약처 13일·건보공단·심평원 16일",
    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBBc0syM191OHMtbEc4QnlWNFZGZktkcHVFVjctdGlOb0UyUEJsa19VMVg4alVRam9fMm9iZGliclpsQi1ZYUtMSFpVRVh2SHFkZzd0dlR6UG5GWDQtOS1FM1llY2NBQk5lZjNv?oc=5",
    "date": "2026-09-22",
-   "source": "hitnews.co.kr",
+   "source": "히트뉴스",
    "score": 3,
    "agencies": [
     "식품의약품안전처",
@@ -364,7 +379,7 @@
    "title": "약사회, 국정감사 맞춰 국회로 비대위 약배송 전장 이동",
    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBibmNnX1hwY1RvN2hXaFdYQUs4SVVOQ0kxVTl3TlkzT3NiNTNLYmlKa09IUmlVVXJ4Wno3a2lQUFB5WVl5RzhCdXNzMnRVTk4yZ3M2aTRoblpxam5YMDN4UHBQb0ZlekU?oc=5",
    "date": "2026-09-22",
-   "source": "의약뉴스",
+   "source": "newsmp.com",
    "score": 2,
    "agencies": [],
    "members": [],
