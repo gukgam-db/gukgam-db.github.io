@@ -1,10 +1,76 @@
 {
  "updated": "2026-09-27",
- "updated_at": "2026-09-27 08:13",
+ "updated_at": "2026-09-27 23:44",
  "window": "14d",
  "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사, 그리고 본회의 대정부질문) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. 기관·위원 분류와 국정감사/대정부질문 구분(track)은 제목 키워드 자동.",
- "count": 141,
+ "count": 148,
  "items": [
+  {
+   "title": "[추석민심①] 與 “민생 올인” vs 野 “일촉즉발” … 10월 국감 격돌 예고",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9XSFBKWVQwX0RYU18yWEJGUXQtZk1UQmtKREtpVDFKRk40emlRX2NRQmxLcVQya0J5NENNaFRTYm1VT0FPYWdoVGptZllLbVhyOXZTSnN5NENwSXFfVk1zQWtSbUhOdXZ1RW4zX0xOZw?oc=5",
+   "date": "2026-09-27",
+   "source": "인천뉴스",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-27"
+  },
+  {
+   "title": "추석 후 ‘국감 정국’ 시작… 인사·안보 등 ‘여야 충돌’ 전망",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5EU1pQYkpNdS1pRXhPSXEwZXNLSy1nQXEtZnVFRW1Qbkl1UERMSjU3R3JOWTZIUFhSaERiSGRTVWQ4Q2ViTThJRjRSZW1uMEdEd3BfM3BOT0YyVUVaRHctQk5UdVhGMXEtNVFWdmFPRV9rOHJ2eE9j?oc=5",
+   "date": "2026-09-27",
+   "source": "부산일보",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-27"
+  },
+  {
+   "title": "대기업 총수 국감증인 채택 힘겨루기···“매년 수십명 채택했다 철회”",
+   "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE14bVhDSWptQXZGQWN3RTcteVBseFBmVlVMYVR4NUF0Y3NhNE1VRmRRaWhmdTFBb25qY3o1cjd6VFY3MUlSRFE?oc=5",
+   "date": "2026-09-27",
+   "source": "매일경제",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-27"
+  },
+  {
+   "title": "여야, 대법관 재제청·DMZ 폭발 공방 지속…국정감사 전초전",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9HOWZOTHh3eFlITURnbFlhRFpQM3FFNllJdm90WTlLMXhIaENTcUJ2TGxkSXhmWEMyV3NibDJpcThJN1JXeC1Mc1pYVEVLaW5EZEU3M0hocGRld9IBWEFVX3lxTE9tdFI3aFRqYzR6YnRMaXZtS194bjhvdnkzMFdJZE11cmp3aFB1aU83Wk5mT3RCbHAyVlZaQnYydlJyXzZFVkc1empxZ1gweXVyY0hUYmZERkE?oc=5",
+   "date": "2026-09-27",
+   "source": "아주경제",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-27"
+  },
+  {
+   "title": "민생 확인한 여야…與 성과 野 견제로 정기국회·국감 주도권 경쟁 본격화",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQT192QkMtclR4Z000SGNiMGlhVms0clQ3emh5b09NRGtJUG91eTRLbVR3VDYxclYzdTNzck41OVVVcDJKOHRCM01nRnd5UDJPQkdnV3NlSG5NVWswVUlQR3RLWC03VjZwazR0Ynk4ZVNIMzA5eEpOU2IxOFJyZzMwbg?oc=5",
+   "date": "2026-09-27",
+   "source": "edaily.co.kr",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-27"
+  },
+  {
+   "title": "與野, 국감 대격돌 예고…인사책임·검찰개혁·안보 전선 '첩첩산중' - 머니투데이",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5COFF2T19JYUVKSXhTMFNJMFVubHJrdzR1bThTeHlVNWttU2xIZDFER0hTQjdXSThHbkRYT2hxZGxGQTkzRlQ3QjdpbU40NlpXQzhsUG1venpJVHhaUVFMZHlTSjBiZVhoSlJWQy12Q0FId1hFLUpyT0d5RWtUelXSAX9BVV95cUxOQjhRdk9fSWFFSkl4UzBTSTBVbmxya3c0dW04U3h5VTVrbVNsSGQxREdIU0I3V0k4R25EWE9ocWRsRkE5M0ZUN0I3aW1ONDZaV0M4bFBtb3p6SVR4WlFRTGR5U0owYmVYaEpSVkMtdkNBSHdYRS1Kck9HeUVrVHpV?oc=5",
+   "date": "2026-09-27",
+   "source": "머니투데이",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-27"
+  },
   {
    "title": "소병훈 의원 “사무장병원 수사 평균 11.9개월…환수율 10%대”",
    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5wTmZpNS1Db29JTWloM3RJN0p5elg4blhZdjI4bmhnMW1sXzRHN0NCQWctTFd4aEdGRlBaSWUxdV9MMWlpRVpBck9sZ3R2TjN5bzU2dE13VHJVTUpBek1WYlZlU0dldw?oc=5",
@@ -41,6 +107,17 @@
    ],
    "track": "",
    "first_seen": "2026-09-25"
+  },
+  {
+   "title": "2026년 국정감사 상임위원회 명단을 정리해 봤습니다.",
+   "url": "https://news.google.com/rss/articles/CBMiP0FVX3lxTE9tVmcySmNqeFlUZ0RjYVFSSF9acWVoNS03NXVDOGVueXpDblRBUDd4OUY1c0RxMjlVcUdJOHpEMA?oc=5",
+   "date": "2026-09-25",
+   "source": "슬로우뉴스",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-27"
   },
   {
    "title": "기초연금 반쪽개편·지역의사제 첫 선발…정책 실효성 점검 [미리보는 국감-보건복지]",
@@ -248,7 +325,7 @@
    "title": "추석 지나면 국감 정국…관전 포인트는?",
    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9TY09Ia1hMZDdOTTdKMzdMMF9qSV9KTG80MTc5V2tTeFllRE1lc19TYnd6ZlZOZW9BWWNILTIzc25yMklVVWdNdmVXWEx3STRDenlYQ3BYY1VBZ2J5cm9xX3gzaW1PVUnSAWtBVV95cUxPWHBLN0EwM0YwQWRvbTB4bzBSZDhfLVMzbnlYZk50RnhWc05wYThVMC01ZWtHSUZidkpuR2p4VV9kajgtVmxZZlpmdzlZa1RxTzJadHlwbEFRMmQ5aFF2eE15aFRITUxmaEZUcw?oc=5",
    "date": "2026-09-23",
-   "source": "iminju.net",
+   "source": "민주신문",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -368,7 +445,7 @@
    "title": "2026 국감 미리 보기 (1)···의원실 자료의 재발견",
    "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1rNGVyWGNiX0RpaXczczVFRC1zNWtsSFBDX19iZ1NXb1JKUXd5Z2UzaE01SE5ZeDZTbHlhTVlCVXZVZURhTC05TjRR?oc=5",
    "date": "2026-09-22",
-   "source": "주간현대",
+   "source": "hyundaenews.com",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -379,7 +456,7 @@
    "title": "약사회, 국정감사 맞춰 국회로 비대위 약배송 전장 이동",
    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBibmNnX1hwY1RvN2hXaFdYQUs4SVVOQ0kxVTl3TlkzT3NiNTNLYmlKa09IUmlVVXJ4Wno3a2lQUFB5WVl5RzhCdXNzMnRVTk4yZ3M2aTRoblpxam5YMDN4UHBQb0ZlekU?oc=5",
    "date": "2026-09-22",
-   "source": "newsmp.com",
+   "source": "의약뉴스",
    "score": 2,
    "agencies": [],
    "members": [],
