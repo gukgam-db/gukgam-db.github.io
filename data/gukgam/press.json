@@ -1,10 +1,21 @@
 {
- "updated": "2026-09-27",
- "updated_at": "2026-09-27 23:44",
+ "updated": "2026-09-28",
+ "updated_at": "2026-09-28 08:05",
  "window": "14d",
  "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사, 그리고 본회의 대정부질문) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. 기관·위원 분류와 국정감사/대정부질문 구분(track)은 제목 키워드 자동.",
- "count": 148,
+ "count": 149,
  "items": [
+  {
+   "title": "與 \"발목잡기\" vs 野 \"민심 싸늘\"…인사·검찰·안보 '국감 전면전' - 머니투데이",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1GdkFlYkFXVE1feFllZHNxa2Rpc0NQVDdEVlRjb2JYRkRPLWUtdG5hVkVUckw1Uzh4SVB6WlFkSWQ3eHozOG1MSGZoN1BwS2Vsc0c2cmQwSl83enRkYVF1VTBlOEo5NnlPbGpweWx6YzFNWGhpTXp4QVo4bzlYWmfSAX9BVV95cUxNRnZBZWJBV1RNX3hZZWRzcWtkaXNDUFQ3RFZUY29iWEZETy1lLXRuYVZFVHJMNVM4eElQelpRZElkN3h6MzhtTEhmaDdQcEtlbHNHNnJkMEpfN3p0ZGFRdVUwZThKOTZ5T2xqcHlsemMxTVhoaU16eEFaOG85WFpn?oc=5",
+   "date": "2026-09-28",
+   "source": "머니투데이",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-28"
+  },
   {
    "title": "[추석민심①] 與 “민생 올인” vs 野 “일촉즉발” … 10월 국감 격돌 예고",
    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9XSFBKWVQwX0RYU18yWEJGUXQtZk1UQmtKREtpVDFKRk40emlRX2NRQmxLcVQya0J5NENNaFRTYm1VT0FPYWdoVGptZllLbVhyOXZTSnN5NENwSXFfVk1zQWtSbUhOdXZ1RW4zX0xOZw?oc=5",
@@ -18,7 +29,7 @@
   },
   {
    "title": "추석 후 ‘국감 정국’ 시작… 인사·안보 등 ‘여야 충돌’ 전망",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5EU1pQYkpNdS1pRXhPSXEwZXNLSy1nQXEtZnVFRW1Qbkl1UERMSjU3R3JOWTZIUFhSaERiSGRTVWQ4Q2ViTThJRjRSZW1uMEdEd3BfM3BOT0YyVUVaRHctQk5UdVhGMXEtNVFWdmFPRV9rOHJ2eE9j?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1PVF9hSzlGcVV5T0Eway16REVXdGVZRTU5dEUzQklXemI2T1Y4SDlrekJpdnQzRzVpdE1HVmRhZVppbFZ5dEtKS3E4d3BHYjlYUzhSdVpHMVAtSVFZNDV0QVZKNW1MQkdCSVo0LW1kVmZQRTNEQjYw?oc=5",
    "date": "2026-09-27",
    "source": "부산일보",
    "score": 2,
@@ -145,7 +156,7 @@
    "title": "일반식품 건기식 둔갑 광고 5년간 2만3324건… 식약처 국감 도마",
    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE10Z0RVOFdoNmp6ekVKQ1hwT0FvV3JIOF9FbUttZGhRT1Zpd3NTS3lkaGV5TkNlSVZhc3BPbUJpemptZDRtemFOajlINXhLUnJEUWZYcmhieHEtMk9UbVVwMUN5SmhCUF9D?oc=5",
    "date": "2026-09-24",
-   "source": "녹색경제신문",
+   "source": "greened.kr",
    "score": 3,
    "agencies": [
     "식품의약품안전처"
@@ -197,7 +208,7 @@
    "title": "‘건기식 둔갑’ 부당광고 역대 최대…남인순 \"식약처 단속 강화해야\"",
    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1WNkhOTkZCcElROURyclpvT3pLLXBZYmpiYktiWGVlMEEta3dXYkhWQkRIOXc2M2FFNnJNSUpqZ3BnLVRMT0xmTXhpVURMaFgwX2VfLVN5eWFNcmRmeWtSTmhOX1lhc3Rx?oc=5",
    "date": "2026-09-24",
-   "source": "AP신문",
+   "source": "apnews.kr",
    "score": 2,
    "agencies": [
     "식품의약품안전처"
@@ -314,7 +325,7 @@
    "title": "복지위 국감 10월 7일 막 오른다…국립대병원 둘쨋날 전면 배치",
    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE51UXFXOUF1NHNTNS1fWnZQdVBDekFuU0RVSjVsNk1TM2VEZlZ1WVVNd3NKSURRckR6ZUIwbFNJcDVkOTNXdkw1dG8taU1iOS1ZTHM2VUlXXzFjZ1U5VlNOQ2gwYmp4bW9JWHJxT2xYcw?oc=5",
    "date": "2026-09-23",
-   "source": "뉴스더보이스헬스케어",
+   "source": "newsthevoice.com",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -373,7 +384,7 @@
    "title": "국회 보건복지위, 10월 7일부터 2026년도 국정감사 돌입",
    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBmdDctZFE4NGRRQjE1V012Ukd4RERJX3VwS3hYM25kYkRyemdITkhHdjBhTUcwcmMtZmh0N1M4ZEdxcjJld3g2UHU2eFlnS2tCcWZqdmNhdzgxX3Y2RVh6Q1N6b3hiMVF0VE95RS1R?oc=5",
    "date": "2026-09-22",
-   "source": "간호사신문",
+   "source": "nursenews.co.kr",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -445,7 +456,7 @@
    "title": "2026 국감 미리 보기 (1)···의원실 자료의 재발견",
    "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1rNGVyWGNiX0RpaXczczVFRC1zNWtsSFBDX19iZ1NXb1JKUXd5Z2UzaE01SE5ZeDZTbHlhTVlCVXZVZURhTC05TjRR?oc=5",
    "date": "2026-09-22",
-   "source": "hyundaenews.com",
+   "source": "주간현대",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -534,7 +545,7 @@
    "title": "소병훈 의원, 입원·기능저하·생명위협 및 사망 등 의료기기 ‘중대한 이상사례’ 보고 5년 새 약 2.2배 증가",
    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1PVlZfaWJ3OEVjaVd6R1JGSEp6NzkyVFFsdW93SHY2SzRQanFBZlhiQU9TalUwVEwxbDBLSExqVTY2TWJrdW04N3QxbG8?oc=5",
    "date": "2026-09-21",
-   "source": "koreasisailbo.com",
+   "source": "시사일보",
    "score": 2,
    "agencies": [],
    "members": [
