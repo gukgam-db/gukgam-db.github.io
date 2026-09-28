@@ -1,20 +1,197 @@
 {
- "updated": "2026-09-28",
- "updated_at": "2026-09-28 08:05",
+ "updated": "2026-09-29",
+ "updated_at": "2026-09-29 02:56",
  "window": "14d",
  "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사, 그리고 본회의 대정부질문) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. 기관·위원 분류와 국정감사/대정부질문 구분(track)은 제목 키워드 자동.",
- "count": 149,
+ "count": 167,
  "items": [
   {
    "title": "與 \"발목잡기\" vs 野 \"민심 싸늘\"…인사·검찰·안보 '국감 전면전' - 머니투데이",
    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1GdkFlYkFXVE1feFllZHNxa2Rpc0NQVDdEVlRjb2JYRkRPLWUtdG5hVkVUckw1Uzh4SVB6WlFkSWQ3eHozOG1MSGZoN1BwS2Vsc0c2cmQwSl83enRkYVF1VTBlOEo5NnlPbGpweWx6YzFNWGhpTXp4QVo4bzlYWmfSAX9BVV95cUxNRnZBZWJBV1RNX3hZZWRzcWtkaXNDUFQ3RFZUY29iWEZETy1lLXRuYVZFVHJMNVM4eElQelpRZElkN3h6MzhtTEhmaDdQcEtlbHNHNnJkMEpfN3p0ZGFRdVUwZThKOTZ5T2xqcHlsemMxTVhoaU16eEFaOG85WFpn?oc=5",
    "date": "2026-09-28",
-   "source": "머니투데이",
+   "source": "mt.co.kr",
    "score": 2,
    "agencies": [],
    "members": [],
    "track": "국정감사",
    "first_seen": "2026-09-28"
+  },
+  {
+   "title": "복지위 국감 10월 7일 시작..비대면 진료 등 현안 산적",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBlbVR2M0VUREQ4MGxDRXpSY2V6REFCOTJmcHNoTF90Z2x4QWpaRHhmbEU0V2NKNXZ2SFo1OVM2aE51M3ZaYy12NExObEwxeVRLeFZrRWF6a1lDdFdwaElKODR0alZMNTFJUE5ZYllGd1g?oc=5",
+   "date": "2026-09-28",
+   "source": "위키리크스한국",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-29"
+  },
+  {
+   "title": "'김승원 신약 청탁' 제넨셀, 국감 뒤덮나…브로커 증인 채택 관건",
+   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1SaW00ZDREN01xZnIzbjFfaFU1eEdzU0NrVHZpc2doTlFvdjlFTlQ2VUlkaktoRm52QWJqQUhjZDBmWDRUZTV0azYzWQ?oc=5",
+   "date": "2026-09-28",
+   "source": "v.daum.net",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-29"
+  },
+  {
+   "title": "국감 D-7…전북 의원 10명, ‘현안 릴레이’로 정부 답변 끌어낼까",
+   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBDanVpdEZwS2o5RmtKdmF3ZlRIYXE5MUZueUZfUlJ1c1NRUHpVTi05bHVxdmhLODd0cWNjSzVRYmEwQ0g0Y1llZllPLXRXV2VyYmdlNDk2c0rSAVhBVV95cUxQQ2p1aXRGcEtqOUZrSnZhd2ZUSGFxOTFGbnlGX1JSdXNTUVB6VU4tOWx1cXZoSzg3dHFjY0s1UWJhMENINGNZZWZZTy10V1dlcmJnZTQ5NnNK?oc=5",
+   "date": "2026-09-28",
+   "source": "전북일보 인터넷신문",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-29"
+  },
+  {
+   "title": "[미리 보는 국감] 기업 M&A, 기내식 성분이 국감 이슈?…총수 망신주기 관행 여전",
+   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB1VzJ3UFpoWGdqNTZ1ZVc1MTgyUEVLb0Q1dTRIWDlsZnF6SGpnTURXNlgya0hSWVNYR1FxdDBBUi1RRzlhNVZpcDRqMVBGaVRYT0hFY21hd07SAVhBVV95cUxQdVcyd1BaaFhnajU2dWVXNTE4MlBFS29ENXU0SFg5bGZxekhqZ01EVzZYMmtIUllTWEdRcXQwQVItUUc5YTVWaXA0ajFQRmlUWE9IRWNtYXdO?oc=5",
+   "date": "2026-09-28",
+   "source": "아주경제",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-29"
+  },
+  {
+   "title": "담합·산재부터 ‘신약 접근성’까지…국감 앞둔 식품·제약바이오 '정조준'",
+   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE12Yk40amk0clhBSEF4QmtJVlUxamdvX19GX05WanhSSXd4VGhGUXg1aHVjMHc0TUw4SkVaNWhLWlFlazJ5ZDNYZlJnX1RrT3dBMjdyWk1DN2o?oc=5",
+   "date": "2026-09-28",
+   "source": "뷰어스",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-29"
+  },
+  {
+   "title": "소병훈 의원 “일반식품 부당광고 5만건 육박…차단까지 32일”",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBKMkxGbTJnbVVRZFhoZTBvX3dDd25VN292RFVzZHlMTjFyYXRWM1FBQko1TmFpS3pkOFFOQkN0X21zYzM4U09OSWhuN2swZW1fdGJFTnRjY2xHZGpTNVVnaENsT2J5QQ?oc=5",
+   "date": "2026-09-28",
+   "source": "푸드투데이",
+   "score": 2,
+   "agencies": [],
+   "members": [
+    "소병훈"
+   ],
+   "track": "",
+   "first_seen": "2026-09-29"
+  },
+  {
+   "title": "CJ·롯데·GS 경영진 줄줄이 국감행…유통·식품업계 ‘거래 관행’ 집중 점검",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9zYWMtYkQ4elg1RkNSMGY5NUxFVy1kZnBHWnd2LThXMl8tdUpIRG5yOFZDay1YUEZUckV3N1pWeFlxVzVyeVNzRkRsVlBsZE9DYmtVN2paMkw5Uk5sV2tmdw?oc=5",
+   "date": "2026-09-28",
+   "source": "마이데일리",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-29"
+  },
+  {
+   "title": "권칠승 의원 “ADHD 환자 5년 새 4배…30~50대 여성 10배↑”",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9WT2IwWFU0Z0hUWDM2NkswSGJCTFZUd1E1cnd3eFFMWWRHQ2NaVkEzckdBbTJvUDYyazdrQ2ctREZvN0hMdVIwTDR0MHRTT1JGMEtrOTFpQjhnUmZZQWNOWWFYZllfdw?oc=5",
+   "date": "2026-09-28",
+   "source": "푸드투데이",
+   "score": 2,
+   "agencies": [],
+   "members": [
+    "권칠승"
+   ],
+   "track": "",
+   "first_seen": "2026-09-29"
+  },
+  {
+   "title": "[국감] 식품이 감기 예방ㆍ혈당 관리 효과?…온라인 부당광고, 최근 5년 5만건 육박",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1UYnlnel9kcnJOa2tpdEt1SGRLQ21hbVF0emJOYWlNeU91OWExNDNlWWNoWGxRNE1HS2VEcE10OEZsRFVORVpwRWZGYTJUdTFHOFQxbGxIUE1Ic2UxWmxaOVF6NzhobGltRjByUElB?oc=5",
+   "date": "2026-09-28",
+   "source": "식품저널 foodnews",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-29"
+  },
+  {
+   "title": "[국감] 일반식품의 ‘건강기능식품 둔갑’ 부당광고 7000건 돌파",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAzX3ZSZGNXaVlDaElSeGlVZ2NqdDhWYlByc251cWN4ck5NdjhJTE1rN3dlVWxSdUNnMUhYSjZjM3B4bzRrMnNMVFA3R3Bja0Y3am5kbUQ0OVFwbThlNTdqTXpwaVNZYWlEYkg3ZQ?oc=5",
+   "date": "2026-09-28",
+   "source": "식품저널 foodnews",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-29"
+  },
+  {
+   "title": "소병훈 의원 “대응 강화해야” 일반식품 부당광고 5년간 5만 건 육박",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5pYWFrQnRLNmhHQklEV0VUaFZRb09JNkJfeDEtTnRGcTMyQ0wxZi13ZFlLZGw4bmRJMExqOVFodVQxRHF4UWVrUU5tNVFFd0pZMnk3VFliS3JUT0plLWd5Z012dEZmZV9EM0E?oc=5",
+   "date": "2026-09-28",
+   "source": "경기도민일보 미디어",
+   "score": 2,
+   "agencies": [],
+   "members": [
+    "소병훈"
+   ],
+   "track": "",
+   "first_seen": "2026-09-29"
+  },
+  {
+   "title": "[국감] 항바이러스제 566억원어치 폐기…국가 비축률 72.8% - e-의료정보",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5nbU54My1vcndWZE1kWUZQbkVvRDVRblhKcktFRVphRVJSa0w3RzRpWFItNkkzUmx0aVItTGc0U2lrYWM4UEdmVmFwSFc0QnRTMnZhWVZNalRpbkVZVWZaVEswODJsdXZtNkI2MVpnc9IBb0FVX3lxTE5nbU54My1vcndWZE1kWUZQbkVvRDVRblhKcktFRVphRVJSa0w3RzRpWFItNkkzUmx0aVItTGc0U2lrYWM4UEdmVmFwSFc0QnRTMnZhWVZNalRpbkVZVWZaVEswODJsdXZtNkI2MVpncw?oc=5",
+   "date": "2026-09-28",
+   "source": "e-의료정보",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-29"
+  },
+  {
+   "title": "서미화 의원 “건기식 이상사례 5년간 1만8693건…지난해 최다”",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9ERjBOV2pINGFpbVIxdlZZWDM4UnhMM1IyWnVVME5jZElTWE9kU1Y5aFRvQUxaYWdxemFkMGNQLUxLNFhSQWM4T2d2RlBYWVl0bTlXeDd6WUx1ODlRODV3Tm5VX3VZQQ?oc=5",
+   "date": "2026-09-28",
+   "source": "푸드투데이",
+   "score": 2,
+   "agencies": [],
+   "members": [
+    "서미화"
+   ],
+   "track": "",
+   "first_seen": "2026-09-29"
+  },
+  {
+   "title": "[단독]“신천지 이만희 외부 병원 가게 해달라”…올해만 서울구치소에 민원 1만2000건",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1qak9xcXNYY201RW42eG5sRUpRajVwc1VocXlzS3pxOVN5LUM1bTU3YncyU3BiLUNLZVFMSHMzSmdtZUViaGQ2UURiWE5PUmRoeG5JLQ?oc=5",
+   "date": "2026-09-28",
+   "source": "v.daum.net",
+   "score": 2,
+   "agencies": [],
+   "members": [
+    "이만희"
+   ],
+   "track": "",
+   "first_seen": "2026-09-29"
+  },
+  {
+   "title": "추경호 대구시장, \"다가오는 국정감사 지역 현안 해결 계기로 삼아야\"",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5qRXVDQWJkdjJ0ZTVtRVlteWVfbkNtVkk3X3NGc0p1WF8zeG5TWHFKZzlLVUJYTXg3NnBmOXc0ZHVFSUlDemxzOTBJZTRfU3BPTGJsbl9iYnBDcGFLMzlTVzh4RS1JX3JnVVow?oc=5",
+   "date": "2026-09-28",
+   "source": "BBS불교방송",
+   "score": 3,
+   "agencies": [],
+   "members": [
+    "추경호"
+   ],
+   "track": "국정감사",
+   "first_seen": "2026-09-29"
   },
   {
    "title": "[추석민심①] 與 “민생 올인” vs 野 “일촉즉발” … 10월 국감 격돌 예고",
@@ -75,7 +252,7 @@
    "title": "與野, 국감 대격돌 예고…인사책임·검찰개혁·안보 전선 '첩첩산중' - 머니투데이",
    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5COFF2T19JYUVKSXhTMFNJMFVubHJrdzR1bThTeHlVNWttU2xIZDFER0hTQjdXSThHbkRYT2hxZGxGQTkzRlQ3QjdpbU40NlpXQzhsUG1venpJVHhaUVFMZHlTSjBiZVhoSlJWQy12Q0FId1hFLUpyT0d5RWtUelXSAX9BVV95cUxOQjhRdk9fSWFFSkl4UzBTSTBVbmxya3c0dW04U3h5VTVrbVNsSGQxREdIU0I3V0k4R25EWE9ocWRsRkE5M0ZUN0I3aW1ONDZaV0M4bFBtb3p6SVR4WlFRTGR5U0owYmVYaEpSVkMtdkNBSHdYRS1Kck9HeUVrVHpV?oc=5",
    "date": "2026-09-27",
-   "source": "머니투데이",
+   "source": "mt.co.kr",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -131,6 +308,17 @@
    "first_seen": "2026-09-27"
   },
   {
+   "title": "역대 최대 규모 예산과 외교 안보 등 현안, 2026년 국정감사 일정은?",
+   "url": "https://news.google.com/rss/articles/CBMiP0FVX3lxTFBrZDNNcnJQR0FBZmNpekhOOXJHZDNuaHdDUm5wZUdDY2dUeFl4Q0FONTFNWTJwcXhVYlhSVlkwYw?oc=5",
+   "date": "2026-09-25",
+   "source": "슬로우뉴스",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-29"
+  },
+  {
    "title": "기초연금 반쪽개편·지역의사제 첫 선발…정책 실효성 점검 [미리보는 국감-보건복지]",
    "url": "https://news.google.com/rss/articles/CBMirgJBVV95cUxQOE5DdEU0ZFlLNUxBYXRNeUptRnFWVXMtMDJVNGt1cTN0UXlORFAyNnQyLU0taXJmNmg1LVR2dkx5Y3p4bXhERldaeW81SnlDMTEzWDJUMzBoZTNtUXVxSVVxdHY4T3VYdXdpZUNya2xqTzBCOXE5MmNmTHJPeHZOTF9xV0I1RUthMkxGLWJZZ00tVGIzaThvazRNS0lrM1N3VWhYd0ZUdjZGLXVISVRVRHBrbGRjYkU3UWZOdkh5bGJhVl9HT1E3YXlJRjJuQWp6YlhESGhxVFlpLTJfMHBldFpJRHo0aTRjQ3lzWW0yUGllWnk3bExrMnc0MDBlcVd5MGlDeDhVNkFvajZxSUNib2FOaWcxWXA1b3gzTzV1dDN2cE96dEZPZHo4WE45QQ?oc=5",
    "date": "2026-09-24",
@@ -156,7 +344,7 @@
    "title": "일반식품 건기식 둔갑 광고 5년간 2만3324건… 식약처 국감 도마",
    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE10Z0RVOFdoNmp6ekVKQ1hwT0FvV3JIOF9FbUttZGhRT1Zpd3NTS3lkaGV5TkNlSVZhc3BPbUJpemptZDRtemFOajlINXhLUnJEUWZYcmhieHEtMk9UbVVwMUN5SmhCUF9D?oc=5",
    "date": "2026-09-24",
-   "source": "greened.kr",
+   "source": "녹색경제신문",
    "score": 3,
    "agencies": [
     "식품의약품안전처"
@@ -208,7 +396,7 @@
    "title": "‘건기식 둔갑’ 부당광고 역대 최대…남인순 \"식약처 단속 강화해야\"",
    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1WNkhOTkZCcElROURyclpvT3pLLXBZYmpiYktiWGVlMEEta3dXYkhWQkRIOXc2M2FFNnJNSUpqZ3BnLVRMT0xmTXhpVURMaFgwX2VfLVN5eWFNcmRmeWtSTmhOX1lhc3Rx?oc=5",
    "date": "2026-09-24",
-   "source": "apnews.kr",
+   "source": "AP신문",
    "score": 2,
    "agencies": [
     "식품의약품안전처"
@@ -223,7 +411,7 @@
    "title": "[비례의원 추석나기] \"갈비 굽고 민심 듣고 국감 준비\"…지역 의원보다 '바쁘다 바빠'",
    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE0wbXY3MXpBbTJnTXVGd2FIcUZ5dFp5MnpXVTdBQk5saEFGeHNKZGFkU1IxVXNpT18ybGtta2k0ckE5NGRDVVlmcGEtNmltay1IWVlxdTJnNlVldVBD?oc=5",
    "date": "2026-09-24",
-   "source": "뉴스핌",
+   "source": "newspim.com",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -314,7 +502,7 @@
    "title": "내달 7일 막 오르는 복지위 국감…국립대병원, 소관부처 이관 후 첫 검증",
    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9XUWFmVGJ1NGY4a25kYU5KRnFzMXZkOUp0ZS1pQlpKcTZYTEN6TW4xUWQ0TjFSSTFWWVFjc1FYbTA1V1JQMW9QRW9QWS10X2p5VnB0ay1DS294Y3Y5?oc=5",
    "date": "2026-09-23",
-   "source": "뉴스핌",
+   "source": "newspim.com",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -325,7 +513,7 @@
    "title": "복지위 국감 10월 7일 막 오른다…국립대병원 둘쨋날 전면 배치",
    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE51UXFXOUF1NHNTNS1fWnZQdVBDekFuU0RVSjVsNk1TM2VEZlZ1WVVNd3NKSURRckR6ZUIwbFNJcDVkOTNXdkw1dG8taU1iOS1ZTHM2VUlXXzFjZ1U5VlNOQ2gwYmp4bW9JWHJxT2xYcw?oc=5",
    "date": "2026-09-23",
-   "source": "newsthevoice.com",
+   "source": "뉴스더보이스헬스케어",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -373,7 +561,7 @@
    "title": "野, 김승원·김현지부터 김용범까지... 국정감사서 '의혹 총공세'",
    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE85eV9jT2d0d1Z4SmFwWDNPTURUamJ2RXRQX0NzY2syMnlnbTdqRXAxbXlNZ29MbkQ1X0tvSmp4dkhPd25BMGU5ZEtoaktKcF9LOC1NUV9mUDQtUVFtWVlDN0VIT2R3eVFuTVRGekZR0gFzQVVfeXFMTXN3clRFZlN4eGpTQkFBUFdqazYyVTQwVkNSWFl1NzFrbU9vd1BsQ2s4NUo0LVdaYm1ZRnRFMXU4U3BFb2tkWE9vZkYtamhHc3NoT3RaZlI4Q09vaVVud1hKY0FyVi1QNUJJdWZicTBNUXhpdw?oc=5",
    "date": "2026-09-22",
-   "source": "한국일보",
+   "source": "hankookilbo.com",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -384,7 +572,7 @@
    "title": "국회 보건복지위, 10월 7일부터 2026년도 국정감사 돌입",
    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBmdDctZFE4NGRRQjE1V012Ukd4RERJX3VwS3hYM25kYkRyemdITkhHdjBhTUcwcmMtZmh0N1M4ZEdxcjJld3g2UHU2eFlnS2tCcWZqdmNhdzgxX3Y2RVh6Q1N6b3hiMVF0VE95RS1R?oc=5",
    "date": "2026-09-22",
-   "source": "nursenews.co.kr",
+   "source": "간호사신문",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -516,10 +704,23 @@
    "first_seen": "2026-09-24"
   },
   {
+   "title": "소병훈 의원,의료기기 '사망,생명위협'등 중대한 이상사례 보고 5년 새 약 2.2배 증가!",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1NMC0wX3kzZVNoVjNJQ05vaUdZeHhVMUNKd2pKMWVuTlBpRTViMExkVVRMUGR3WU9pVEVTdGI5SHdDenY0Y2tlb1QtU3dDLVFEeHpHck9YbG8yNkdPX0RwRWxSWDZvajB1Ri1xMzhQeFd4TzZq?oc=5",
+   "date": "2026-09-22",
+   "source": "경기종합뉴스",
+   "score": 2,
+   "agencies": [],
+   "members": [
+    "소병훈"
+   ],
+   "track": "",
+   "first_seen": "2026-09-29"
+  },
+  {
    "title": "국민의힘 복지위, 오늘 식약처 항의 방문…\"제넨셀 자료제출 소극적\"",
    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1JQnpMYl82cmpIbzNQQ0FoSzJhLXdIanJWcEVmT1Y5OE4zZnVqdGF3Qkx6bFlJSEhtYWdPTGNOWTNNXzNqbHRhbno5V3ZQSnYzQ0ZYTDRJVG1GbWo5?oc=5",
    "date": "2026-09-21",
-   "source": "뉴스핌",
+   "source": "newspim.com",
    "score": 3,
    "agencies": [
     "식품의약품안전처"
@@ -603,6 +804,17 @@
    ],
    "track": "",
    "first_seen": "2026-09-23"
+  },
+  {
+   "title": "국힘 \"김승원 사퇴로 끝날 일 아냐… 김현지 '인사농단' 국감 때 밝혀내야\"",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE93X19pdW5idml5XzRYMTFwVzZWbkZ4LTRqZmVVMHg2cGZycE1razkyT0dxTlZEZjk1STVmTnh5WG14TngyLXQ4ZU94TUwyeGc0YlV0UEQ0Rm9VRk5FclI1c016eXhUX2JNa2RWX0ZR0gFzQVVfeXFMTTJjNXlHajVtTjlxTDhpS1prako4T0psZVFhSHF2ZUo3M2ZVTS0yUWtUdkpGU05USEFRWDBjTjZVMFEzVW0ycXllX1gzT0FqOG51aHNIaGxmcUFuSFJ1ZnJ5TmJZU2o2b0FLbDZPZEQwd3d0QQ?oc=5",
+   "date": "2026-09-21",
+   "source": "hankookilbo.com",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-09-29"
   },
   {
    "title": "[2026 국감] 도수치료 막자 냉각치료 급증…실손보험 '풍선효과'",
@@ -813,7 +1025,7 @@
   },
   {
    "title": "남인순 \"최근 5년여간 주류광고 위반 1위 OB맥주…총 697건 적발\"",
-   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9ERzMySDM1bkdwWUxEN1pnTWxfbGkyNXIxaTQ4Um1lUlJ3VzRRMXdRZ2xOdU9VMzhaOS1jZWtSYXZPcjczem1CUmVGUQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBGbE5EU2pMenllZ01kWmg0WkZFTXpXYm00aXhhLUVaeF93UVJoUWNNMUtmUVhKeVJ1X3BhNFphRXVxb1h0RHdxMXZVcS0wNUk?oc=5",
    "date": "2026-09-16",
    "source": "v.daum.net",
    "score": 2,
