@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-30",
+ "updated": "2026-10-01",
  "source": "likms.assembly.go.kr/inspections",
  "items": [
   {
@@ -389,6 +389,42 @@
     {
      "name": "2026년도 국정감사계획서.pdf",
      "url": "https://policy.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=ed6a5b1bc1ba4fa6a19883e1b5a41a6d&fileSn=2"
+    }
+   ]
+  },
+  {
+   "article_no": 3078739,
+   "year": 2026,
+   "committee": "정보위원회",
+   "doc_type": "reference",
+   "title": "2026년도 국정감사 기관증인 명단",
+   "posted": "2026-09-30",
+   "files": [
+    {
+     "name": "2026년도 국정감사 기관증인 명단.hwp",
+     "url": "https://intelligence.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=37e67f05b57f461ea99783c18e7b5263&fileSn=1"
+    },
+    {
+     "name": "2026년도 국정감사 기관증인 명단.pdf",
+     "url": "https://intelligence.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=37e67f05b57f461ea99783c18e7b5263&fileSn=2"
+    }
+   ]
+  },
+  {
+   "article_no": 3078738,
+   "year": 2026,
+   "committee": "정보위원회",
+   "doc_type": "plan",
+   "title": "2026년도 국정감사 계획서",
+   "posted": "2026-09-30",
+   "files": [
+    {
+     "name": "2026년도 국정감사 계획서_의결.hwp",
+     "url": "https://intelligence.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=062df033a3b148f08d46a80fa265cea3&fileSn=1"
+    },
+    {
+     "name": "2026년도 국정감사 계획서_의결.pdf",
+     "url": "https://intelligence.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=062df033a3b148f08d46a80fa265cea3&fileSn=2"
     }
    ]
   },
