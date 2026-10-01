@@ -3,15 +3,16 @@
  "updated": "2026-10-01",
  "mode": "full",
  "counts": {
-  "reports": 347,
-  "followups": 941,
-  "minutes": 4813
+  "reports": 358,
+  "followups": 960,
+  "minutes": 4814
  },
  "health": {
-  "reports": 55,
+  "reports": 59,
   "minutes": 264
  },
  "years": [
+  2025,
   2024,
   2023,
   2022,

@@ -1,10 +1,21 @@
 {
  "updated": "2026-10-01",
- "updated_at": "2026-10-01 00:52",
+ "updated_at": "2026-10-01 09:15",
  "window": "14d",
  "note": "구글 뉴스 검색(위원 이름·기관명 + 국정감사, 그리고 본회의 대정부질문) 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. 기관·위원 분류와 국정감사/대정부질문 구분(track)은 제목 키워드 자동.",
- "count": 286,
+ "count": 288,
  "items": [
+  {
+   "title": "증인으로 계속되는 갈등... 野 \"핵심 증인 빠진 국감 의미 없어\"",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1PbUptdjJhT0tIcDlLb3FidkhYcE81X2ZTZUtxSmFxeUVxTnlaR09WdnJMTVh5aUZDcWJxdTA3aEQtRG1Kakh3QlI1X2pIX0FQSDh0RVBsTFVWdDZ1djZzVlNDNzcxYmcwanlaQWpB0gFzQVVfeXFMTnBPamNUNjhKclJVZjVhczdiS3Zoa09jaEpvNHhtS1FOcTZPQmNHcVh2Wms3ZDFhTUMtaTBZaFJuTkFRY2hQMThaamFwXzZuWUd3LTZJc19nSU9NeFNGaXlxRERCLUtvQ2dmRjNLbTZNNktOWQ?oc=5",
+   "date": "2026-10-01",
+   "source": "hankookilbo.com",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-10-01"
+  },
   {
    "title": "소병훈, 소아전공의 급감 지적…“국감서 대책 요구”",
    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE16U2FmT0xIamVDTG80ZkxzMXcyQnBWMzFNZElWRThWbF9RbTR5QURjMmRoSHNfWU1VOWdNMDg5Mkd5MXRtRjBVdWxfRGk2bzNFd3hYMW10a0I3UzFJYTd2bTVheExjZTg?oc=5",
@@ -103,7 +114,7 @@
    "title": "현대약품·휴메딕스 대표, 복지위 국감 참고인 채택…제넨셀은 빠져",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBaU0tCNkR6YzBPcU5sVE5UMXI2T2RBS1lKbW9Gems4MEx1QTVoazRVNzRrd2tSbF9mRHNrTmpNcFhYalp6T3o1T0FtNUdkNnVRdDNaQUlxMnRaOHFFMFA4S3AzTjlYckRqVE90UQ?oc=5",
    "date": "2026-09-30",
-   "source": "메디컬투데이",
+   "source": "mdtoday.co.kr",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -112,7 +123,7 @@
   },
   {
    "title": "내달 6일 국감 막 오른다…신공항·행정통합 등 TK 현안 시험대",
-   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5OS1lTTTMxZjl1WTJzSkpaeXA5N05GRGZZTmVPamZRYWdTbXJwQVo2bG10OHRBMmQ1d3N1OE9sNGMwRndWLS0wV2RiQ1RUV2s?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBJQlhzcjRlcWg2cUx0eE9zbDk1aVlobk9GN1A0REk4STR5WTFZNG5oWTVtQlZVT0FiajJGRm5jYzRCdVQxWFE?oc=5",
    "date": "2026-09-30",
    "source": "v.daum.net",
    "score": 2,
@@ -356,7 +367,7 @@
   },
   {
    "title": "박지원 \"조희대, 대통령 나오려고 작업하는 듯…국감서 맞짱 뜰 것\"",
-   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1SVGo1SUhnUUFJeU84WWJnbnFxLWtZRTJzRlJSNGYzM2hYVDU0ZkVYREpvcnFQT2NoSHo3MHpKUTJLV181Y2ViU19Fcw?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE4wa1Q2SmgwQ1A1X0V0eHBFUmR0RkZHT2tFSVNtYTNQaVVzU3dVdnp4ZTBPWVQwQ0pjR2RjWG5rYVVnQkZlT2hYZDlPUXgzS1p4X1dreA?oc=5",
    "date": "2026-09-30",
    "source": "v.daum.net",
    "score": 3,
@@ -520,7 +531,7 @@
    "title": "복지위 국감 증인 채택 공방... 野 \"제넨셀 불러야\" 與 \"오세훈 나와야\"",
    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPeTM0N2RUWUNvN3ZtTTQzQ3Q1TGV5RjRwYnJlMUpabktrMExqOXo4WGdNY2lLZ2loLW1UcnVzTFdZMzB4Sk1KV2ZGQ24zRGVsOFo0Nmhwc1d4dENDYU5FYXB5WlRJbjRsZW1QaWI2RkdhWFZaRmw5STFXM3lXdzRrMHFVV25WVUg2bk9HRk56VVI?oc=5",
    "date": "2026-09-29",
-   "source": "chosun.com",
+   "source": "조선일보",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -740,7 +751,7 @@
   },
   {
    "title": "비대면 약배송부터 미프진까지…복지위, 국감 증인·참고인 48명 채택",
-   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5YM2xvUXVOclZWWk5pQTA2aVpoZHFQMTVfbS0wRWs0dzFRQnp1RGw2SEFtR2Z1VHl4c25qNnpxYk0zb3lBUkprWk9PcjFydEpyTjlkUWx2UzRWNmRvd2dlczVwWUpUcjRpVk1QZUNLUHNfZ9IBdkFVX3lxTE84dHoxR0NreFpVYW9OQUJIOXg2VGZvVTVyR1VrWHVMaUtqaGRfTm0zdWZkWkNRVk1GYXBzajVUR2JDcTJCRjNjRXVaZ055ZGhWRVd3U2ZGVG9JRERySjhQbjZoWG41WTBQUmVEbnRPTmdZc0thdUE?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE84dHoxR0NreFpVYW9OQUJIOXg2VGZvVTVyR1VrWHVMaUtqaGRfTm0zdWZkWkNRVk1GYXBzajVUR2JDcTJCRjNjRXVaZ055ZGhWRVd3U2ZGVG9JRERySjhQbjZoWG41WTBQUmVEbnRPTmdZc0thdUHSAXZBVV95cUxPOHR6MUdDa3haVWFvTkFCSDl4NlRmb1U1ckdVa1h1TGlLamhkX05tM3VmZFpDUVZNRmFwc2o1VEdiQ3EyQkYzY0V1WmdOeWRoVkVXd1NmRlRvSUREcko4UG42aFhuNVkwUFJlRG50T05nWXNLYXVB?oc=5",
    "date": "2026-09-29",
    "source": "코리아헬스로그",
    "score": 2,
@@ -924,7 +935,7 @@
    "title": "제넨셀 브로커 복지위 증인 제외⋯미프진 '현대약품' 대표이사 소환",
    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE83c1QzNl9rSnZBZG9TZGJnTlpicXpkdE81NTg3cU1hTzJISmlzc1Q5bWhxb0NZbTRUMW5GVkZKNzdMUkFoSTVrU25pSQ?oc=5",
    "date": "2026-09-29",
-   "source": "inews24.com",
+   "source": "아이뉴스24",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -1003,7 +1014,7 @@
   },
   {
    "title": "국힘 복지위 \"김승원 사퇴했다고 의혹까지 사퇴한 것 아냐\"",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9vN1dyaG52TjNtWnRmUl9qdnlCbG5Sd194bEh5REJqQ0w3Yk91Wmo4N3p1Qk9Gcmh0aTBHenNKc0lNQmw4eWl1Ui1GanRaTGxpOS1lNlJjdHU1dzVPUERoRk5feDlqN0oyZF9mYjRTQQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1CM1Utc3RicktzcktZOHQya1Rnd3Znci01MFZ3MjJmRHJPT2VfQXltWHozc19TaFUxME9pc2lNc3pwV2NkMm9kSFlyWnRPbFBRYVlKcjNydmhWWHhNLTJEcmNaRVBsNFJPZEF0TFRGa0NHdDg?oc=5",
    "date": "2026-09-29",
    "source": "뉴스웍스",
    "score": 2,
@@ -1049,7 +1060,7 @@
    "title": "\"119 출동 22번·환자 2명 사망\"…강남 똑똑플란트치과 원장, 국감 증인 선다",
    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5hVzluVzhvaEtCX1B2cktySUp4Y05hc0NlTzdmSWpzNTBTLVV0dC1pSjQxUkJZS1ljOW1vNUFYMkJXWVktUFZOQWY2OGllUGVrU216eFBtQjlhTUJLc2xtSzl4dWJ6ZDg?oc=5",
    "date": "2026-09-29",
-   "source": "문화저널21",
+   "source": "mhj21.com",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -1104,7 +1115,7 @@
    "title": "비대면 약배송·창고형 약국·미프진, 복지위 국감 신문대 오른다",
    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1IaGNlVHg4Nms2YllnNTdPcEVmdlJCZlVaSFlXdkUtSEhnbjVVbnR3SW00Ukw2dVlNV1RlTVBzcHBmU0VDZmlzWFVwejVRU3ltUW55a21HMzNvTWxsOElHb21tc0ZYLTZ3ZDN4emNJbw?oc=5",
    "date": "2026-09-29",
-   "source": "뉴스더보이스헬스케어",
+   "source": "newsthevoice.com",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -1487,7 +1498,7 @@
    "title": "추경호 대구시장, \"다가오는 국정감사 지역 현안 해결 계기로 삼아야\"",
    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5qRXVDQWJkdjJ0ZTVtRVlteWVfbkNtVkk3X3NGc0p1WF8zeG5TWHFKZzlLVUJYTXg3NnBmOXc0ZHVFSUlDemxzOTBJZTRfU3BPTGJsbl9iYnBDcGFLMzlTVzh4RS1JX3JnVVow?oc=5",
    "date": "2026-09-28",
-   "source": "news.bbsi.co.kr",
+   "source": "BBS불교방송",
    "score": 3,
    "agencies": [],
    "members": [
@@ -1607,6 +1618,17 @@
    "first_seen": "2026-09-30"
   },
   {
+   "title": "與野, 국감 대격돌 예고…인사책임·검찰개혁·안보 전선 '첩첩산중'",
+   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1TeVdNMWZxeHpKck82V3ZzMzVHbnYxbmQtdXh1ZUVYOWRnWXk4ZXdnWlN3TGR6Y191M0xDdVFxU3cyV0dKUXlueUJSTlNYWjNPUGxjT3FtdTRTem1q?oc=5",
+   "date": "2026-09-27",
+   "source": "supple.kr",
+   "score": 2,
+   "agencies": [],
+   "members": [],
+   "track": "국정감사",
+   "first_seen": "2026-10-01"
+  },
+  {
    "title": "소병훈 의원 “사무장병원 수사 평균 11.9개월…환수율 10%대”",
    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5wTmZpNS1Db29JTWloM3RJN0p5elg4blhZdjI4bmhnMW1sXzRHN0NCQWctTFd4aEdGRlBaSWUxdV9MMWlpRVpBck9sZ3R2TjN5bzU2dE13VHJVTUpBek1WYlZlU0dldw?oc=5",
    "date": "2026-09-25",
@@ -1691,7 +1713,7 @@
    "title": "일반식품 건기식 둔갑 광고 5년간 2만3324건… 식약처 국감 도마",
    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE10Z0RVOFdoNmp6ekVKQ1hwT0FvV3JIOF9FbUttZGhRT1Zpd3NTS3lkaGV5TkNlSVZhc3BPbUJpemptZDRtemFOajlINXhLUnJEUWZYcmhieHEtMk9UbVVwMUN5SmhCUF9D?oc=5",
    "date": "2026-09-24",
-   "source": "greened.kr",
+   "source": "녹색경제신문",
    "score": 3,
    "agencies": [
     "식품의약품안전처"
@@ -1860,7 +1882,7 @@
    "title": "복지위 국감 10월 7일 막 오른다…국립대병원 둘쨋날 전면 배치",
    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE51UXFXOUF1NHNTNS1fWnZQdVBDekFuU0RVSjVsNk1TM2VEZlZ1WVVNd3NKSURRckR6ZUIwbFNJcDVkOTNXdkw1dG8taU1iOS1ZTHM2VUlXXzFjZ1U5VlNOQ2gwYmp4bW9JWHJxT2xYcw?oc=5",
    "date": "2026-09-23",
-   "source": "뉴스더보이스헬스케어",
+   "source": "newsthevoice.com",
    "score": 2,
    "agencies": [],
    "members": [],
@@ -2039,7 +2061,7 @@
    "title": "[이만희] \"열받아서 식약처 갔더니 이런 답변 하더라\"ㅣ9월 22일 (화) 정치시그널",
    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1GeUxQQVRCbnJ4bjBtZTFLSzJGMjMtVGlSd1E0aUlISVhpRnpheTdxZlVUQjZKR0ZXRjFBRnpBWl9yOFQyOGlraVUzMWwxQ3RrbDhRd3JBN0UyUUdRamdYWFNQOFZRTnhkUy1Xb2ZxUno?oc=5",
    "date": "2026-09-22",
-   "source": "채널A 뉴스",
+   "source": "ichannela.com",
    "score": 2,
    "agencies": [
     "식품의약품안전처"
@@ -2091,9 +2113,9 @@
   },
   {
    "title": "소병훈 의원, 입원·기능저하·생명위협 및 사망 등 의료기기 ‘중대한 이상사례’ 보고 5년 새 약 2.2배 증가",
-   "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1PVlZfaWJ3OEVjaVd6R1JGSEp6NzkyVFFsdW93SHY2SzRQanFBZlhiQU9TalUwVEwxbDBLSExqVTY2TWJrdW04N3QxbG8?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBZZDc5aV96WDdQaVl1aFpIcEhxVlE3OXNSZnExNmw3ZkZHb25tU2c2Z0M2Q0preFludm5JWXhvd2hxd3AtejhobjZySlhTdjFBalZVcExJT1Z6aWJaal9pNU81WlRpZw?oc=5",
    "date": "2026-09-21",
-   "source": "시사일보",
+   "source": "뉴미디어타임즈",
    "score": 2,
    "agencies": [],
    "members": [
