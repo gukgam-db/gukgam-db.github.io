@@ -13,8 +13,10 @@
 출력: data/gukgam/plan-{연도}.json
 의존성: pypdf
 """
-import os, re, io, json, datetime
+import os, re, io, json, time, datetime
 import urllib.request
+
+from textclean import clean_deep
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA = os.path.join(ROOT, "data", "gukgam")
@@ -28,13 +30,43 @@ def pdf_text():
     if path:
         buf, src = io.open(path, "rb").read(), os.path.basename(path)
     elif url:
+        # 국회 게시판은 연결을 중간에 끊는 일이 잦다 — 몇 번 다시 걸어본다
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (gukgam-db collector)"})
-        with urllib.request.urlopen(req, timeout=120) as r:
-            buf, src = r.read(), url
+        last = None
+        for i in range(6):
+            try:
+                with urllib.request.urlopen(req, timeout=120) as r:
+                    buf, src = r.read(), url
+                break
+            except Exception as e:
+                last, buf = e, None
+                time.sleep(2 * (i + 1))
+        if buf is None:
+            raise SystemExit("계획서 PDF 내려받기 실패: %s" % last)
     else:
         raise SystemExit("GUKGAM_PLAN_PDF(로컬 파일) 또는 GUKGAM_PLAN_URL 필요")
     reader = PdfReader(io.BytesIO(buf))
     return "\n".join((p.extract_text() or "") for p in reader.pages), src
+
+
+def despread(name):
+    """계획서 표는 칸폭을 맞추려고 글자 사이를 벌려 쓴다 — '국 립 암 센 터'.
+    그대로 두면 기관명이 검색·대조에 걸리지 않으므로, 한 글자 조각이 셋 이상
+    잇따르는 자리만 다시 붙인다. '부산대학교 치과병원'처럼 두 글자 이상
+    조각으로 된 이름은 건드리지 않는다."""
+    parts = name.split()
+    out, i = [], 0
+    while i < len(parts):
+        j = i
+        while j < len(parts) and len(parts[j]) == 1:
+            j += 1
+        if j - i >= 3:
+            out.append("".join(parts[i:j]))
+            i = j
+        else:
+            out.append(parts[i])
+            i += 1
+    return " ".join(out)
 
 
 def section(full, start, end):
@@ -75,7 +107,7 @@ def parse_targets(full):
                 groups.append(cur); cur = []
         elif n != prev_n + 1 or not cur:
             continue
-        cur.append(name); prev_n = n
+        cur.append(despread(name)); prev_n = n
     if cur:
         groups.append(cur)
     total = None
@@ -106,7 +138,7 @@ def parse_schedule(full, year):
             if len(toks) == 2 and len(toks[1]) <= 4 and "," not in toks[1] and "(" not in toks[1]:
                 raw, sess["place"] = toks[0], toks[1]
             sess["kind"] = "시찰" if "시찰" in raw else ("종합감사" if "종합감사" in raw else "감사")
-            sess["targets"] = [t.strip() for t in raw.split(",") if t.strip()]
+            sess["targets"] = [despread(t.strip()) for t in raw.split(",") if t.strip()]
         sess = None
 
     for line in sec.split("\n"):
@@ -147,6 +179,15 @@ def parse_schedule(full, year):
             else:
                 sess["_buf"].append(line)
     close_sess()
+    # 계획서 표의 '감사장소' 칸은 같은 날 여러 시각을 묶어 한 번만 적는다(세로 병합).
+    # 뒤 행의 장소를 비워 두면 '장소 미정'으로 읽히므로 같은 날 앞 행에서 물려받는다.
+    for d in days:
+        place = None
+        for sx in d["sessions"]:
+            if sx.get("place"):
+                place = sx["place"]
+            elif sx.get("kind") != "rest" and place:
+                sx["place"] = place
     if len(days) < 5:
         raise SystemExit("감사일정 파싱 실패(%d일) — 계획서 양식 확인 필요" % len(days))
     return days
@@ -177,7 +218,8 @@ def main():
         "updated": datetime.date.today().isoformat(),
         "year": year,
         "committee": "보건복지위원회",
-        "source": src,
+        "source": os.environ.get("GUKGAM_PLAN_LABEL") or (src if not src.startswith("http") else "국정감사계획서 PDF"),
+        "source_url": src if src.startswith("http") else None,   # 내려받은 자리 — 산출 근거를 되짚을 수 있게
         "source_post": int(os.environ["GUKGAM_PLAN_POST"]) if os.environ.get("GUKGAM_PLAN_POST") else None,   # 자동 탐지한 게시글 번호
         "period": period,
         "targets": targets,
@@ -185,7 +227,7 @@ def main():
     }
     path = os.path.join(DATA, "plan-%d.json" % year)
     with io.open(path, "w", encoding="utf-8") as f:
-        json.dump(out, f, ensure_ascii=False, indent=1)
+        json.dump(clean_deep(out), f, ensure_ascii=False, indent=1)
 
     print("완료: %d년 계획서 → %s" % (year, os.path.basename(path)))
     print("  감사기간 %s ~ %s (%d일간) · 대상기관 %d개 · 감사일 %d일"

@@ -635,7 +635,8 @@
           (past?' <span class="cnt">(지난 감사 · '+(thisY)+'년 계획서가 채택되면 자동 교체)</span>':'')+'</div>';
         h+='<div style="font-size:.8rem;color:var(--muted);margin:0 2px 6px;">감사기간 <strong>'+
            esc(d.period.start)+' ~ '+esc(d.period.end)+'</strong> ('+d.period.days+'일간) · 대상기관 '+
-           ((d.targets&&d.targets.total)||'-')+'개 · 출처: 보건복지위원회 국정감사계획서</div>';
+           ((d.targets&&d.targets.total)||'-')+'개 · 출처: '+
+           (d.source_url?'<a href="'+esc(d.source_url)+'" target="_blank" rel="noopener" style="color:#2a4d7d;font-weight:700;">보건복지위원회 국정감사계획서</a>':'보건복지위원회 국정감사계획서')+'</div>';
         (d.schedule||[]).forEach(function(day){
           var ss=(day.sessions||[]).filter(function(s){ return s.kind!=='rest'; });
           if(!ss.length) return;

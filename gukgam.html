@@ -435,10 +435,26 @@
     // 3) 다음 일정
     var sc=((SC&&SC.items)||[]).filter(function(i){ return i.date>=tz && (/보건복지/.test(i.committee||'')||/국정감사/.test(i.content||'')); }).slice(0,4);
     var scH='';
-    if(PL26&&PL26.period) scH+='<li><span><b>2026 국정감사 확정</b> '+esc(PL26.period.start)+' ~ '+esc(PL26.period.end)+'</span><span class="ag">계획서</span></li>';
+    if(PL26&&PL26.period){
+      scH+='<li><span><b>'+PL26.year+' 국정감사 확정</b> '+esc(PL26.period.start)+' ~ '+esc(PL26.period.end)+
+           ' ('+PL26.period.days+'일간) · 대상 '+((PL26.targets&&PL26.targets.total)||'-')+'개</span>'+
+           '<span class="ag"><a href="gukgam-year.html?y='+PL26.year+'" style="color:#2a4d7d;font-weight:800;">일정 전체 →</a></span></li>';
+      // 계획서에 적힌 질병관리청 감사일 — 이 DB를 보는 사람이 가장 먼저 찾는 날짜다.
+      // 날짜·시각·장소는 계획서 원문 그대로이고, D-day만 오늘 기준으로 센다.
+      (PL26.schedule||[]).forEach(function(day){
+        (day.sessions||[]).forEach(function(s){
+          if((s.targets||[]).indexOf('질병관리청')<0) return;
+          var n=Math.round((new Date(day.date+'T00:00:00')-new Date(tz+'T00:00:00'))/86400000);
+          if(n<0) return;
+          scH+='<li><span><b>질병관리청 감사</b> '+esc(day.date.slice(5).replace('-','.'))+'('+esc(day.dow||'')+') '+
+               esc(s.time||'')+(s.place?' '+esc(s.place):'')+'</span><span class="ag">'+
+               (n===0?'오늘':(n===1?'내일':'D-'+n))+'</span></li>';
+        });
+      });
+    }
     else scH+='<li><span>'+(ly+1)+'년 국정감사계획서 <b>아직 미공개</b> — 통상 9월 말 채택, 10월 중순 시작</span><span class="ag">'+(PL&&PL.period?ly+'년은 '+PL.period.start.slice(5).replace('-','.')+'~'+PL.period.end.slice(5).replace('-','.'):'')+'</span></li>';
     scH+=sc.map(function(i){ return '<li><span>'+esc(i.date.slice(5).replace('-','.'))+' '+esc(i.time||'')+' '+esc(i.content||'')+'</span><span class="ag">'+esc((i.committee||'').replace('위원회',''))+'</span></li>'; }).join('');
-    cards.push('<div class="ins hot"><h3>📅 다음 일정 <a href="gukgam-all.html">국회 일정 →</a></h3><ul>'+scH+'</ul><div class="why">열린국회정보 일정 API(향후 '+((SC&&SC.horizon_days)||35)+'일) 중 보건복지위·국정감사 관련만. 갱신 '+esc((SC&&SC.updated)||'')+'</div></div>');
+    cards.push('<div class="ins hot"><h3>📅 다음 일정 <a href="gukgam-all.html">국회 일정 →</a></h3><ul>'+scH+'</ul><div class="why">'+(PL26&&PL26.period?'맨 윗줄의 확정 기간과 질병관리청 감사일은 보건복지위원회가 채택한 <b>'+PL26.year+'년도 국정감사계획서</b>에 적힌 그대로이고, D-day만 오늘 기준으로 셉니다. 그 아래는 ':'')+'열린국회정보 일정 API(향후 '+((SC&&SC.horizon_days)||35)+'일) 중 보건복지위·국정감사 관련만. 갱신 '+esc((SC&&SC.updated)||'')+'</div></div>');
     // 5) 국감 관련 최근 보도 (구글 뉴스 검색 기반 — 의원실 보도자료 원문이 아님)
     var PR=r[14]; var pit=(PR&&PR.items)||[];
     if(pit.length){

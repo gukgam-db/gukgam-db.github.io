@@ -10,17 +10,25 @@ build_plan.py로 파싱한다. 첨부가 HWP뿐이면 파싱하지 못하므로 
 처리 기준: 기존 plan-연도.json이 없거나, 같은 연도라도 더 새 게시글(변경본, nttId가 큼)이면 다시 파싱.
 build_plan의 자체 검증에 걸리면 기존 파일을 그대로 둔다.
 """
-import os, re, json, sys, subprocess, urllib.request, urllib.parse
+import os, re, json, sys, time, subprocess, urllib.request, urllib.parse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA = os.path.join(ROOT, "data", "gukgam")
 UA = {"User-Agent": "Mozilla/5.0 (gukgam-db collector)"}
 
 
-def fetch(url):
-    req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return r.read().decode("utf-8", errors="ignore")
+def fetch(url, tries=6):
+    """health.na.go.kr은 연결을 중간에 끊는 일이 잦다 — 몇 번 다시 걸어본다."""
+    last = None
+    for i in range(tries):
+        try:
+            req = urllib.request.Request(url, headers=UA)
+            with urllib.request.urlopen(req, timeout=60) as r:
+                return r.read().decode("utf-8", errors="ignore")
+        except Exception as e:
+            last = e
+            time.sleep(2 * (i + 1))
+    raise last
 
 
 def post_id(url):
@@ -29,20 +37,40 @@ def post_id(url):
 
 
 def find_pdf(html, base):
-    """게시글 HTML에서 PDF 첨부 링크를 찾는다 — 링크 텍스트나 주소에 .pdf, 또는 파일 다운로드 주소에 pdf 표기."""
-    cands = []
-    for href, text in re.findall(r'<a[^>]+href="([^"]+)"[^>]*>(.*?)</a>', html, flags=re.S | re.I):
-        t = re.sub(r"<[^>]+>", "", text).strip()
-        h = href.replace("&amp;", "&")
-        if re.search(r"\.pdf\b", t, re.I) or re.search(r"\.pdf\b", h, re.I) or ("fileDown" in h and "pdf" in (t + h).lower()):
-            cands.append((h, t))
-    # 계획서 본문(변경본 포함)만 — 증인 명단 같은 다른 PDF를 계획서로 오인하지 않게
-    cands = [c for c in cands if "계획서" in c[1]]
-    cands.sort(key=lambda x: len(x[1]))
+    """게시글 HTML에서 계획서 PDF의 내려받기 주소를 만든다.
+
+    첨부는 보통 평범한 링크가 아니라 자바스크립트다.
+      <a href="javascript:void(0);"
+         onclick="gfn_atchFileDownload('cmmit','2000030','<파일묶음id>','2');"
+         title="2026년도 보건복지위원회 국정감사계획서.pdf">
+    common.js의 gfn_atchFileDownload가 /{siteId}/cmmn/file/fileDown.do 를 부르므로
+    같은 주소를 직접 만든다. 혹시 평범한 .pdf 링크로 바뀌어도 받도록 둘 다 본다.
+    """
+    cands = []   # (라벨, 주소)
+    for m in re.finditer(r"<a\b[^>]*>", html, flags=re.I):
+        tag = m.group(0)
+        mt = re.search(r'title="([^"]*)"', tag, flags=re.I)
+        label = (mt.group(1) if mt else "").strip()
+        mj = re.search(r"gfn_atchFileDownload\(\s*'([^']*)'\s*,\s*'([^']*)'\s*,\s*'([^']*)'\s*,\s*'([^']*)'\s*\)", tag)
+        if mj:
+            site, menu, fid, sn = mj.groups()
+            url = "/%s/cmmn/file/fileDown.do?menuNo=%s&atchFileId=%s&fileSn=%s" % (
+                urllib.parse.quote(site), urllib.parse.quote(menu),
+                urllib.parse.quote(fid), urllib.parse.quote(sn))
+            cands.append((label, urllib.parse.urljoin(base, url)))
+            continue
+        mh = re.search(r'href="([^"]+)"', tag, flags=re.I)
+        if mh:
+            h = mh.group(1).replace("&amp;", "&")
+            if re.search(r"\.pdf\b", h, re.I) or re.search(r"\.pdf\b", label, re.I):
+                cands.append((label or h, urllib.parse.urljoin(base, h)))
+    # 계획서 본문만 — 증인 명단 같은 다른 첨부를 계획서로 오인하지 않게.
+    # HWP는 파싱하지 못하므로 PDF만 남긴다(같은 글에 .hwp와 .pdf가 함께 올라온다).
+    cands = [c for c in cands if "계획서" in c[0] and re.search(r"\.pdf\b", c[0], re.I)]
     if not cands:
         return None, None
-    h, t = cands[0]
-    return (urllib.parse.urljoin(base, h), t)
+    label, url = cands[0]
+    return url, label
 
 
 def main():
@@ -60,7 +88,9 @@ def main():
     if not plans:
         print("계획서 게시글 없음")
         return 0
-    plans.sort(reverse=True)
+    # 게시판에 같은 글이 두 번 실리는 일이 있어(2020·2023년 등) 연도·게시글번호가 같아지면
+    # 세 번째 칸의 dict끼리 비교해 터진다. 비교는 앞 두 칸으로만 한다.
+    plans.sort(key=lambda x: (x[0], x[1]), reverse=True)
     year, nid, d = plans[0]
     out = os.path.join(DATA, "plan-%d.json" % year)
     if os.path.exists(out):
@@ -80,7 +110,8 @@ def main():
         print("PDF 첨부 없음(HWP만 있을 수 있음) — 수동 업로드(plan_url 입력 또는 PDF) 필요")
         return 0
     print("PDF 첨부: %s (%s)" % (label, pdf))
-    env = dict(os.environ, GUKGAM_PLAN_URL=pdf, GUKGAM_PLAN_YEAR=str(year), GUKGAM_PLAN_POST=str(nid))
+    env = dict(os.environ, GUKGAM_PLAN_URL=pdf, GUKGAM_PLAN_YEAR=str(year), GUKGAM_PLAN_POST=str(nid),
+               GUKGAM_PLAN_LABEL=label or "")
     r = subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "build_plan.py")], env=env)
     if r.returncode != 0:
         print("계획서 파싱 실패(자체 검증) — 기존 파일 유지, 양식 확인 필요")

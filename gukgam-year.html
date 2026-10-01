@@ -308,12 +308,13 @@
   </div>
 </div>
 <main class="wrap">
+  <div class="why" id="preNote" hidden style="margin:0 0 12px;"></div>
   <div class="kpis" id="kpis"></div>
 
   <section class="sec" id="planSec" hidden>
     <h2>🗓 확정 일정 <span style="font-size:.75rem;color:var(--muted);font-weight:400;" id="planSrc"></span></h2>
     <div style="overflow-x:auto;"><table class="ptable" id="planTable"></table></div>
-    <div class="why">보건복지위원회 국정감사계획서(변경본) 기준. 회의록이 실제로 남은 날은 아래 '회의록' 목록과 대조하세요.</div>
+    <div class="why" id="planWhy">보건복지위원회가 채택한 국정감사계획서 기준. 회의록이 실제로 남은 날은 아래 '회의록' 목록과 대조하세요.</div>
   </section>
 
   <section class="sec" id="hlSec" hidden>
@@ -354,24 +355,34 @@
   function J(u,d){ return fetch('data/gukgam/'+u+'?_='+Date.now()).then(function(r){ if(!r.ok) throw 0; return r.json(); }).catch(function(){ return d; }); }
   function num(n){ return (n||0).toLocaleString(); }
   // 연도: ?y=YYYY → 파일명 gukgam-YYYY.html → 자료에 있는 가장 최근 국감 연도 (2026 국감 회의록이 들어오면 저절로 2026)
+  var _d=new Date(); var tzNow=new Date(_d.getTime()-_d.getTimezoneOffset()*60000).toISOString().slice(0,10);
   var qm=/[?&]y=(20\d\d)/.exec(location.search||''), fm=/gukgam-(20\d\d)\.html/.exec(location.pathname||'');
   var Y=qm?parseInt(qm[1],10):(fm?parseInt(fm[1],10):0);
   J('rosters.json',null).then(function(RO0){
     var ys=((RO0&&RO0.years)||[]).map(function(y){return y.year;}).sort(function(a,b){return b-a;});
+    // 계획서가 채택된 이듬해는 회의록·명단이 아직 없어 ys에 안 들어온다.
+    // 확정 일정만이라도 볼 수 있게, 계획서가 있으면 '다른 해' 목록에 넣는다.
+    var NEXT=(ys[0]||new Date().getFullYear())+1;
     if(!Y) Y=ys[0]||new Date().getFullYear();
     var tt=Y+'년 국정감사'; document.title=tt+' — 국정감사 자료 DB';
     document.getElementById('pgTitle').innerHTML='📅 '+Y+'년 국정감사 <span style="font-size:1rem;font-weight:600;opacity:.85;">보건복지위원회</span>';
-    if(ys.length>1) document.getElementById('lead').innerHTML='일정, 하이라이트, 지적사항, 위원 명단, 회의록을 한 화면에. 다른 해: '+ys.filter(function(y){return y!==Y;}).map(function(y){ return '<a href="gukgam-year.html?y='+y+'" style="color:#fff;font-weight:800;">'+y+'</a>'; }).join(' · ');
-  return Promise.all([J('plan-'+Y+'.json',null), J('highlights.json',null), J('findings-'+Y+'.json',null), J('briefing.json',null), Promise.resolve(RO0), J('minutes.json',{items:[]}), J('remarks-index.json',null), J('covid.json',null)]); })
+    return Promise.all([J('plan-'+Y+'.json',null), J('highlights.json',null), J('findings-'+Y+'.json',null), J('briefing.json',null), Promise.resolve(RO0), J('minutes.json',{items:[]}), J('remarks-index.json',null), J('covid.json',null), J('plan-'+NEXT+'.json',null)])
+      .then(function(rr){
+        var all=ys.slice(); if(rr[8]&&all.indexOf(NEXT)<0) all.unshift(NEXT);
+        if(all.length>1) document.getElementById('lead').innerHTML='일정, 하이라이트, 지적사항, 위원 명단, 회의록을 한 화면에. 다른 해: '+all.filter(function(y){return y!==Y;}).map(function(y){ return '<a href="gukgam-year.html?y='+y+'" style="color:#fff;font-weight:800;">'+y+'</a>'; }).join(' · ');
+        return rr;
+      }); })
   .then(function(r){
     var PL=r[0], HL=r[1], FD=r[2], BR=r[3], RO=r[4], MN=r[5], RI=r[6], CV=r[7];
     var A=(BR&&BR.agencies)||{};
     var mins=(MN.items||[]).filter(function(m){ return (m.date||'').indexOf(String(Y))===0 && /보건복지/.test(m.committee||''); }).sort(function(a,b){ return a.date<b.date?-1:1; });
     var ro=((RO&&RO.years)||[]).filter(function(y){ return y.year===Y; })[0];
+    // 감사가 아직 안 열렸거나 진행 중인 해 — 회의록이 0인 것은 '없음'이 아니라 '아직'이다
+    var PRE = !mins.length && PL && PL.period && tzNow <= PL.period.end;
     // KPI
     var k=[];
     if(PL&&PL.period) k.push(['<span style="font-size:1.05rem">'+esc(PL.period.start.slice(5).replace('-','.'))+' ~ '+esc(PL.period.end.slice(5).replace('-','.'))+'</span>','감사 기간 ('+PL.period.days+'일)']);
-    k.push([mins.length,'회의록(감사 실시일)']);
+    k.push([PRE?'—':mins.length, PRE?'회의록(감사 뒤 공개)':'회의록(감사 실시일)']);
     if(PL&&PL.targets) k.push([PL.targets.total,'감사 대상기관']);
     if(FD&&FD.items) k.push([num(FD.items.length),'시정·처리요구']);
     if(ro) k.push([ro.count,'발언 위원']);
@@ -380,13 +391,21 @@
     // 확정 일정
     if(PL&&(PL.schedule||[]).length){
       document.getElementById('planSec').hidden=false;
-      document.getElementById('planSrc').textContent='국정감사계획서 '+(PL.source||'')+' · 파싱 '+(PL.updated||'');
+      document.getElementById('planSrc').innerHTML='출처: '+(PL.source_url?'<a href="'+esc(PL.source_url)+'" target="_blank" rel="noopener" style="color:#2a4d7d;font-weight:700;">'+esc(PL.source||'국정감사계획서')+'</a>':esc(PL.source||'국정감사계획서'))+' · 파싱 '+esc(PL.updated||'');
       var rows=PL.schedule.map(function(d){
         var ss=(d.sessions||[]); var rest=ss.length&&ss.every(function(s){return s.kind==='rest';});
         var body=rest?'<span class="kind rest">감사 없음</span>':ss.map(function(s){ return (s.kind==='rest'?'<span class="kind rest">휴식</span>':'<span class="kind">'+esc(s.kind||'감사')+'</span>')+(s.time?esc(s.time)+' ':'')+esc((s.targets||[]).join(', '))+(s.place?' <span style="color:var(--muted)">· '+esc(s.place)+'</span>':'')+(s.note?' <span style="color:var(--muted)">('+esc(s.note)+')</span>':''); }).join('<br>');
         return '<tr'+(rest?' class="rest"':'')+'><td class="d">'+esc(d.date.slice(5).replace('-','.'))+' ('+esc(d.dow||'')+')</td><td>'+body+'</td></tr>';
       }).join('');
       document.getElementById('planTable').innerHTML='<thead><tr><th>날짜</th><th>감사 대상 · 장소</th></tr></thead><tbody>'+rows+'</tbody>';
+      if(/변경/.test(PL.source||'')) document.getElementById('planWhy').textContent='보건복지위원회가 채택한 국정감사계획서 변경본 기준. 회의록이 실제로 남은 날은 아래 \'회의록\' 목록과 대조하세요.';
+    }
+    // 아직 감사가 열리지 않은 해 — 비어 있는 칸이 '자료 없음'으로 읽히지 않게 이유를 적는다
+    if(PRE){
+      var pn=document.getElementById('preNote'); pn.hidden=false;
+      pn.innerHTML='<b>'+Y+'년 국정감사는 아직 진행 중이거나 시작 전입니다.</b> 지금 확인할 수 있는 것은 위원회가 채택한 <b>확정 일정</b>뿐입니다. '+
+        '하이라이트·지적사항·위원 발언·회의록은 감사가 열리고 국회가 회의록과 결과보고서를 공개한 뒤에 자동으로 채워집니다(회의록은 보통 감사일로부터 2~6주 뒤 공개). '+
+        '지난 해 자료는 위 \'다른 해\' 링크에서 볼 수 있습니다.';
     }
     // 하이라이트
     var hl=((HL&&HL.items)||[]).filter(function(c){ return c.year===Y; }).sort(function(a,b){ return a.date<b.date?-1:1; });
