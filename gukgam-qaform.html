@@ -55,6 +55,7 @@
   .bdg{ border-radius:8px; padding:1px 8px; font-weight:800; background:var(--chip); color:#3d4f63; }
   .bdg.rp{ background:#f7ecef; color:#7b2d43; }
   .bdg.pr{ background:#fff1e8; color:#a1471f; }
+  .bdg.tpc{ background:#fdf1e7; color:#8a4b1c; }   /* 소관 사업 보도 */
   .bdg.fd{ background:#eef6f0; color:#1f6f4a; }
   .bdg.ag{ background:#fff1e8; color:#a1471f; border:1px solid #f0d3c1; }
   .cand .ex{ margin-top:7px; font-size:.78rem; color:var(--muted); line-height:1.5; border-top:1px dashed var(--line); padding-top:6px; }
@@ -301,9 +302,12 @@
   function ymd(d){ var p=(d||'').split('-'); return p.length===3 ? (p[0]+'. '+(+p[1])+'. '+(+p[2])+'.') : (d||''); }
   function md(d){ var p=(d||'').split('-'); return p.length===3 ? ((+p[1])+'. '+(+p[2])+'.') : (d||''); }
 
-  var AG={ kdca:{name:'질병관리청', qa:'kdca-qa.json', kw:['질병관리청','질병청','감염병','예방접종','방역','검역','만성질환','결핵']},
-           mfds:{name:'식품의약품안전처', qa:'mfds-qa.json', kw:['식품의약품안전처','식약처','의약품','마약','식품','의료기기','화장품']},
-           mohw:{name:'보건복지부', qa:null, kw:['보건복지부','복지부','건강보험','연금','의료','돌봄','저출생','장애인']} };
+  var AG={ kdca:{name:'질병관리청', qa:'kdca-qa.json', kw:['질병관리청','질병청','감염병','예방접종','방역','검역','만성질환','결핵'],
+                 tp:['국민건강영양조사','만성질환·고당사업','예방접종','감염병 대응','검역·해외유입','연구·R&D']},
+           mfds:{name:'식품의약품안전처', qa:'mfds-qa.json', kw:['식품의약품안전처','식약처','의약품','마약','식품','의료기기','화장품'],
+                 tp:['의약품·마약류']},
+           mohw:{name:'보건복지부', qa:null, kw:['보건복지부','복지부','건강보험','연금','의료','돌봄','저출생','장애인'],
+                 tp:['건강보험','의료인력','연금','돌봄·요양','저출생·아동']} };
 
   var QA=[], PRESS=[], FIND=null, AGENDA=[], CUR='kdca', CANDS=[], ITEMS=[];
 
@@ -572,7 +576,11 @@
   var PRESS_DJ=0;
   function pressOf(){
     var kw=PRESS.filter(function(p){
-      var t=(p.title||''); return AG[CUR].kw.some(function(k){ return t.indexOf(k)>=0; });
+      var t=(p.title||'');
+      if(AG[CUR].kw.some(function(k){ return t.indexOf(k)>=0; })) return true;
+      // 소관 사업 기사는 제목에 기관 이름이 없는 것이 보통이다('고혈압·당뇨 관리사업 전국 확대').
+      // 수집기가 붙여 둔 주제로 이 기관 몫인지 가린다.
+      return p.track==='소관사업' && (AG[CUR].tp||[]).indexOf(p.topic)>=0;
     });
     // 본회의 대정부질문 보도는 기관 이름이 제목에 없어도 쟁점이 되므로 앞에 붙인다
     var dj=PRESS.filter(function(p){ return p.track==='대정부질문' && kw.indexOf(p)<0; });
@@ -583,10 +591,11 @@
   }
   function pressCand(p){
     var t=(p.title||'').replace(/\s*-\s*[a-z0-9.-]+$/i,'');
-    var dj = p.track==='대정부질문';
+    var dj = p.track==='대정부질문', sg = p.track==='소관사업';
     return { kind:'press', title:t+' 관련 대응 방향',
-             src:md(p.date)+' 언론보도('+(p.source||'')+', 「'+t.slice(0,40)+'」)'+(dj?' · 본회의 대정부질문 관련':''),
-             badges:[['pr', dj?'대정부질문 보도':'최근 보도'],['',md(p.date)]], link:p.link||p.url||'', ex:[] };
+             src:md(p.date)+' 언론보도('+(p.source||'')+', 「'+t.slice(0,40)+'」)'+
+                 (dj?' · 본회의 대정부질문 관련':(sg?' · 제목에 국감은 없는 소관 사업 보도('+(p.topic||'')+')':'')),
+             badges:[['pr', dj?'대정부질문 보도':(sg?'소관 사업 보도':'최근 보도')],['',md(p.date)]], link:p.link||p.url||'', ex:[] };
   }
 
   // ── 관련 과거 질의·답변 ────────────────────────────────
@@ -657,6 +666,7 @@
       return '<div class="prrow"><div class="pt">'+esc(p.title)+'</div>'+
         '<div class="pm">'+esc(md(p.date))+' · '+esc(p.source||'')+
         (p.track==='대정부질문' ? ' <span class="bdg pr">대정부질문</span>' : '')+
+        (p.track==='소관사업' ? ' <span class="bdg tpc">소관 사업 · '+esc(p.topic||'')+'</span>' : '')+
         ' <button class="btn mini" data-p="'+i+'">이 보도로 예상 질의 만들기</button></div></div>';
     }).join('');
     list.querySelectorAll('button[data-p]').forEach(function(b){

@@ -289,6 +289,7 @@
   .ins.hot h3{ color:#7a4a12; }
   .ins .pt{ font-style:normal; font-size:.68rem; font-weight:800; border-radius:7px; padding:1px 6px; margin-left:4px; vertical-align:1px; }
   .ins .pt.ag{ background:#e8f0fb; color:#1c4f9c; } .ins .pt.mb{ background:#fdeaea; color:#a03030; }
+  .ins .pt.tp{ background:#fdf1e7; color:#8a4b1c; margin-left:0; margin-right:3px; }   /* 소관 사업 주제 */
   .fold{ background:#fff; border:1px solid var(--line); border-radius:14px; padding:12px 16px; margin-top:16px; }
   .fold > summary{ cursor:pointer; font-size:.95rem; font-weight:800; color:var(--navy); }
   .fold > summary .cnt{ font-weight:600; color:var(--muted); font-size:.8rem; margin-left:6px; }
@@ -461,11 +462,41 @@
       var short={'질병관리청':'질병청','보건복지부':'복지부','식품의약품안전처':'식약처','국민건강보험공단':'건보공단','국민연금공단':'연금공단','건강보험심사평가원':'심평원'};
       function row(a){ var tags=(a.agencies||[]).map(function(g){return '<i class="pt ag">'+esc(short[g]||g)+'</i>';}).concat((a.members||[]).map(function(n){return '<i class="pt mb">'+esc(n)+'</i>';})).join('');
         return '<li style="display:block;"><a href="'+esc(a.url)+'" target="_blank" rel="noopener" style="color:#1f3b5a;font-weight:700;text-decoration:none;">'+esc(a.title)+'</a><div style="font-size:.73rem;color:var(--muted);margin-top:2px;">'+esc((a.date||'').slice(5).replace('-','.'))+' · '+esc(a.source||'')+' '+tags+'</div></li>'; }
-      var first=pit.slice(0,6), rest=pit.slice(6);
-      cards.unshift('<div class="ins press" style="grid-column:1 / -1;"><h3>📰 국감 관련 최근 보도 <span style="font-size:.74rem;font-weight:600;color:var(--muted);">'+pit.length+'건 · 최근 '+esc((PR.window||'14d').replace('d','일'))+' · 갱신 '+esc(PR.updated_at||PR.updated||'')+'</span></h3>'+
+      // 제목에 '국감'이 든 기사와, 국감장에 그대로 올라올 소관 사업·통계 기사는 성격이 다르다.
+      // 섞어 놓으면 '국감 보도'라고 말할 수 없으므로 칸을 나누고 각각 근거를 적는다.
+      var gk0=pit.filter(function(a){ return a.track!=='소관사업'; });
+      // 제목에 국감만 있고 보건복지와 닿는 데가 없는 기사(법사위 증인 공방, 과방위 플랫폼
+      // 국감 따위)가 3할쯤 된다. 버리지 않고 뒤로 미뤄, 먼저 보이는 자리는 소관 현안에 준다.
+      var gkH=gk0.filter(function(a){ return a.health!==false; });
+      var gkO=gk0.filter(function(a){ return a.health===false; });
+      var gk=gkH.concat(gkO);
+      var tps0=pit.filter(function(a){ return a.track==='소관사업'; });
+      // 날짜순 그대로면 한 주제가 먼저 보이는 여섯 자리를 다 차지한다. 주제를 돌려 가며 뽑아
+      // 무엇무엇이 쟁점인지 한눈에 보이게 한다(주제 안에서는 최신순 그대로).
+      var tgs={}, torder=[];
+      tps0.forEach(function(a){ var k=a.topic||'소관 사업';
+        if(!tgs[k]){ tgs[k]=[]; torder.push(k); } tgs[k].push(a); });
+      var tps=[];
+      for(var ti=0; tps.length<tps0.length; ti++){
+        var added=false;
+        torder.forEach(function(k){ if(tgs[k][ti]){ tps.push(tgs[k][ti]); added=true; } });
+        if(!added) break;
+      }
+      var first=gk.slice(0,6), rest=gk.slice(6);
+      function trow(a){ return '<li style="display:block;"><a href="'+esc(a.url)+'" target="_blank" rel="noopener" style="color:#1f3b5a;font-weight:700;text-decoration:none;">'+esc(a.title)+'</a><div style="font-size:.73rem;color:var(--muted);margin-top:2px;"><i class="pt tp">'+esc(a.topic||'소관 사업')+'</i> '+esc((a.date||'').slice(5).replace('-','.'))+' · '+esc(a.source||'')+'</div></li>'; }
+      var tfirst=tps.slice(0,6), trest=tps.slice(6);
+      cards.unshift('<div class="ins press" style="grid-column:1 / -1;"><h3>📰 국감 관련 최근 보도 <span style="font-size:.74rem;font-weight:600;color:var(--muted);">'+gkH.length+'건'+(gkO.length?' <span style="font-weight:600;">+ 다른 상임위·국감 일반 '+gkO.length+'건</span>':'')+' · 최근 '+esc((PR.window||'14d').replace('d','일'))+' · 갱신 '+esc(PR.updated_at||PR.updated||'')+'</span></h3>'+
         '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:4px 18px;"><ul style="margin:0;">'+first.slice(0,3).map(row).join('')+'</ul><ul style="margin:0;">'+first.slice(3,6).map(row).join('')+'</ul></div>'+
         (rest.length?'<details style="margin-top:6px;"><summary style="cursor:pointer;font-size:.8rem;font-weight:800;color:#2a4d7d;">나머지 '+rest.length+'건 보기</summary><ul style="margin:6px 0 0;">'+rest.map(row).join('')+'</ul></details>':'')+
-        '<div class="why">구글 뉴스에서 현 보건복지위 위원 27명 이름·기관명과 "국정감사"를 매일 검색해 제목에 국감이 들어간 기사만 모은 것. <b>언론 보도 기준이며 의원실 보도자료 원문이 아닙니다.</b> 기관·위원 표식은 제목 키워드 자동 분류. 국감 시즌(9~12월)엔 매일 갱신.</div></div>');
+        (tps.length?'<div style="margin-top:10px;padding-top:8px;border-top:1px dashed var(--line);">'+
+          '<div style="font-size:.82rem;font-weight:800;color:#8a4b1c;margin-bottom:4px;">🧪 소관 사업·통계 보도 <span style="font-weight:600;color:var(--muted);font-size:.74rem;">'+tps.length+'건 · 제목에 국감은 없지만 국감장에 올라올 자료</span></div>'+
+          '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:4px 18px;"><ul style="margin:0;">'+tfirst.slice(0,3).map(trow).join('')+'</ul><ul style="margin:0;">'+tfirst.slice(3,6).map(trow).join('')+'</ul></div>'+
+          (trest.length?'<details style="margin-top:6px;"><summary style="cursor:pointer;font-size:.8rem;font-weight:800;color:#8a4b1c;">소관 사업 나머지 '+trest.length+'건 보기</summary><ul style="margin:6px 0 0;">'+trest.map(trow).join('')+'</ul></details>':'')+
+          '</div>':'')+
+        '<div class="why">위쪽은 구글 뉴스에서 현 보건복지위 위원 27명 이름·기관명과 "국정감사"를 매일 검색해 <b>제목에 국감이 들어간</b> 기사만 모은 것. '+
+        (gkO.length?'그중 보건복지와 닿는 낱말·기관·위원이 제목에 없는 '+gkO.length+'건(법사위 증인 공방, 과방위 플랫폼 국감 등)은 <b>버리지 않고 뒤로 미뤘습니다</b> — 「나머지 보기」 끝쪽에 있습니다. ':'')+
+        (tps.length?'아래쪽 <b>소관 사업·통계</b>는 제목에 국감이 없어 위 검색으로는 안 잡히지만 국감 재료가 되는 기사를, 소관 사업 주제어로 따로 검색해 모은 것입니다 — 예산·제도가 흔들리거나(삭감·개편·확대), 숫자로 따질 거리가 있거나, 조사 결과가 나온 기사만 받고, 지자체 행사·민간 보험상품·행사 안내·계도성 보도자료는 뺍니다. 같은 보도자료를 여러 곳이 받아쓴 것은 하나로 묶어 주제당 5건·21일까지만 둡니다. ':'')+
+        '<b>둘 다 언론 보도 기준이며 의원실 보도자료 원문이 아닙니다.</b> 기관·위원·주제 표식은 제목 키워드 자동 분류. 국감 시즌(9~12월)엔 매일 갱신.</div></div>');
     }
     document.getElementById('insGrid').innerHTML=cards.join('');
     // 하이라이트 최신 4장
