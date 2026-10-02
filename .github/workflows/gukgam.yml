@@ -149,6 +149,14 @@ jobs:
           pip install --quiet pypdf
           python3 scripts/gukgam/auto_plan.py
 
+      - name: 현 정부 국정과제 (123대 중 보건복지위 소관·닿음만 — 정권마다 한 번 바뀌므로 주 1회면 충분)
+        if: ${{ github.event_name == 'workflow_dispatch' || github.event.schedule == '10 20 * * 0' }}
+        timeout-minutes: 30
+        continue-on-error: true
+        run: |
+          pip install --quiet pypdf
+          python3 scripts/gukgam/build_govtasks.py
+
       - name: 국정감사계획서 파싱 (plan_url 입력 시 — 자동 탐지가 못 잡은 경우의 수동 경로)
         if: ${{ inputs.plan_url != '' && inputs.plan_url != null }}
         env:

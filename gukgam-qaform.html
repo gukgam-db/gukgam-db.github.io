@@ -56,6 +56,21 @@
   .bdg.rp{ background:#f7ecef; color:#7b2d43; }
   .bdg.pr{ background:#fff1e8; color:#a1471f; }
   .bdg.tpc{ background:#fdf1e7; color:#8a4b1c; }   /* 소관 사업 보도 */
+  /* 걸리는 국정과제 — 메모 칸 바로 위, 인쇄에는 안 나간다 */
+  .govbox{ border:1px solid #e3d6c4; background:#fffaf3; border-radius:8px; padding:8px 10px; margin:6px 0 0; }
+  .govh{ font-size:.82rem; font-weight:800; color:#8a4b1c; margin-bottom:5px; }
+  .govh .govs{ font-weight:600; color:var(--muted); font-size:.72rem; }
+  .govrow{ padding:5px 0; border-top:1px dashed #ead9c2; }
+  .govrow:first-of-type{ border-top:0; }
+  .govt{ font-size:.84rem; color:#1f3b5a; }
+  .govt .govag{ font-size:.7rem; font-weight:800; border-radius:7px; padding:1px 6px; margin-left:3px; white-space:nowrap; }
+  .govt .govag.own{ color:#1c4f9c; background:#e8f0fb; }
+  .govt .govag.tch{ color:#8a4b1c; background:#fdf1e7; }
+  .govg{ font-size:.76rem; color:var(--muted); margin:2px 0 3px; line-height:1.45; }
+  .govb{ display:flex; flex-wrap:wrap; align-items:center; gap:6px 10px; }
+  .govb a{ font-size:.74rem; font-weight:700; color:#2a4d7d; }
+  .govb .govwhy{ font-size:.7rem; color:var(--muted); }
+  @media print{ .govbox{ display:none !important; } }
   .bdg.fd{ background:#eef6f0; color:#1f6f4a; }
   .bdg.ag{ background:#fff1e8; color:#a1471f; border:1px solid #f0d3c1; }
   .cand .ex{ margin-top:7px; font-size:.78rem; color:var(--muted); line-height:1.5; border-top:1px dashed var(--line); padding-top:6px; }
@@ -309,7 +324,7 @@
            mohw:{name:'보건복지부', qa:null, kw:['보건복지부','복지부','건강보험','연금','의료','돌봄','저출생','장애인'],
                  tp:['건강보험','의료인력','연금','돌봄·요양','저출생·아동']} };
 
-  var QA=[], PRESS=[], FIND=null, AGENDA=[], CUR='kdca', CANDS=[], ITEMS=[];
+  var QA=[], PRESS=[], FIND=null, AGENDA=[], CUR='kdca', CANDS=[], ITEMS=[], GOVT=null;
 
   // ── 자동 저장 ── 새로고침해도 쓰던 내용이 남게 한다. 이 기기의 브라우저에만 보관하고 서버로 보내지 않는다.
   var SKEY='gukgam-qaform-v1', RESTORING=false, PENDING=null, _svt=null;
@@ -384,6 +399,7 @@
         el.querySelector('.evi').hidden=true;
         el.querySelector('.fillbar').hidden=true;
       }
+      renderGov(it);
       setFill(it, it.cand ? !!sv.open : true);
     });
     renumber(); renderCands();
@@ -654,6 +670,161 @@
     if(mb) mb.addEventListener('click', function(){ CSHOWN+=12; renderCands(); });
   }
 
+  // ── 걸리는 국정과제 ────────────────────────────────────
+  // 위원들은 국정과제를 번호가 아니라 이름으로 부르고("이재명 정부의 핵심 국정과제인
+  // 지역·필수·공공의료"), 묻는 꼴은 둘이다 — "국정과제인데 시기도 목표도 없다",
+  // "공약엔 있는데 국정과제에선 빠졌다". 그래서 목록을 보여 주는 게 아니라, 쓰고 있는
+  // 답변 바로 위에 걸리는 과제의 과제목표 원문을 올려 둔다.
+  var GSTOP={};
+  ('관리 강화 지원 확대 추진 개선 마련 방안 대책 현황 제도 사업 국민 정책 체계 대한 위한 관련 '+
+   '통해 등의 있는 우리 이상 경우 문제 필요 안전 확보 운영 구축 제고 기반 중심 따라 가능 대상 '+
+   '위원 장관 청장 생각 말씀 부분 지금 올해 내년 작년 사항 내용 정도 수준 결과 계획 '+
+   '중심으로 적극 신속 철저 지속 전반 각종 다양 주요 통한 상향 하는 되는 이런 그런 '+
+   '관한 의한 대해 위해 어떤 무슨 모든 일부 특히 다시 아주 매우 같은 다른 이후 이전 당시'
+  ).split(' ').forEach(function(w){ GSTOP[w]=1; });
+  // 조사가 붙은 채로 세면 '마약류를'과 '마약류'가 서로 다른 낱말이 된다
+  var JOSA=['으로','에서','에게','부터','까지','라고','하고','하는','되는','에는','에도','이나',
+            '이란','이라','와의','과의','들이','들을','들은','을','를','이','가','은','는','의',
+            '에','로','도','만','과','와','나','야','요'];
+  function bare(w){
+    for(var i=0;i<JOSA.length;i++){
+      var j=JOSA[i];
+      if(w.length-j.length>=2 && w.slice(-j.length)===j) return w.slice(0,-j.length);
+    }
+    return w;
+  }
+  function gtok(t){
+    var o={}, m=(t||'').match(/[가-힣]{2,}/g)||[];
+    m.forEach(function(w){ w=bare(w); if(w.length>=2 && !GSTOP[w]) o[w]=1; });
+    return o;
+  }
+  // 한국어 합성명사는 앞뒤로 붙는다 — '의대정원'은 '의대'로 시작하고 '중앙감염병'은
+  // '감염병'으로 끝난다. 가운데만 겹치는 것은 받지 않는다.
+  function gmatch(k, S){
+    var out=[];
+    if(S[k]) out.push(k);
+    for(var w in S){
+      if(w===k || w.length<2 || k.length<2) continue;
+      if(k.indexOf(w)===0 || k.slice(-w.length)===w ||
+         w.indexOf(k)===0 || w.slice(-k.length)===k) out.push(w);
+    }
+    return out;
+  }
+  // 과제마다 낱말 자루를 한 번만 만들고, 17건 중 몇 건에 나오는 낱말인지(df)도 센다.
+  // '의료'처럼 거의 모든 과제에 나오는 낱말로 걸리면 엉뚱한 과제가 딸려 온다.
+  var GBAG=null, GDF=null;
+  function govIndex(){
+    if(GBAG) return;
+    GBAG={}; GDF={};
+    (GOVT.items||[]).forEach(function(g){
+      var name=gtok(g.task);
+      var body=gtok((g.goal_text||[]).join(' ')+' '+(g.detail||[]).join(' '));
+      var tch={}; Object.keys(g.touch||{}).forEach(function(k){
+        (g.touch[k]||[]).forEach(function(w){ if(w.length>=2) tch[w]=1; }); });
+      GBAG[g.no]={name:name, body:body, tch:tch};
+      var all={};
+      [name,body,tch].forEach(function(o){ for(var k in o) all[k]=1; });
+      for(var k in all) GDF[k]=(GDF[k]||0)+1;
+    });
+  }
+  var GW_NAME=5, GW_TCH=4, GW_BODY=1.5, GCOMMON=0.35, GPEN=0.4, GOWN=3, GTH=5;
+  function govFor(cand){
+    if(!GOVT||!GOVT.items||!cand) return [];
+    govIndex();
+    var N=GOVT.items.length, AGN=AG[CUR].name;
+    // 소관(계획서의 부처 표기)이거나, 본문이 이 기관 일에 닿는 과제
+    var mine=GOVT.items.filter(function(g){
+      return (g.agencies||[]).indexOf(AGN)>=0 || (g.touch&&g.touch[AGN]);
+    });
+    var want=gtok((cand.topic||'')+' '+(cand.title||''));
+    var keys=Object.keys(want).filter(function(k){ return (GDF[k]||0) <= N*0.6; });
+    if(!keys.length) return [];
+    return mine.map(function(g){
+      var bag=GBAG[g.no], sc=0, seen={}, hit=[];
+      keys.forEach(function(k){
+        var best=0, bm=null;
+        [[bag.name,GW_NAME],[bag.tch,GW_TCH],[bag.body,GW_BODY]].forEach(function(z){
+          gmatch(k, z[0]).forEach(function(m){
+            if(seen[m]) return;
+            var exact=(m===k), v=exact?z[1]:GW_BODY;       // 똑같은 낱말이라야 제값
+            // 과제 이름에 똑같이 박힌 낱말은 흔하더라도 깎지 않는다
+            if(!(exact && z[0]===bag.name) && (GDF[m]||0) > N*GCOMMON) v*=GPEN;
+            if(v>best){ best=v; bm=m; }
+          });
+        });
+        // 후보 낱말 하나는 한 번만 센다 — '의료'가 의료개혁·의료계·의료기관에 저마다
+        // 걸려 점수가 부풀지 않게
+        if(bm){ seen[bm]=1; sc+=best; hit.push(bm); }
+      });
+      if((g.agencies||[]).length) sc+=GOWN;      // 계획서가 부처를 적어 둔 과제를 앞세운다
+      return {g:g, sc:sc, hit:hit.sort()};
+    }).filter(function(x){ return x.sc>=GTH; })
+      .sort(function(a,b){ return b.sc-a.sc; }).slice(0,3);
+  }
+  function govPool(){        // 이 기관과 닿는 과제가 몇 건인지 — '없음'이라 적을 때 쓴다
+    if(!GOVT||!GOVT.items) return 0;
+    var AGN=AG[CUR].name;
+    return GOVT.items.filter(function(g){
+      return (g.agencies||[]).indexOf(AGN)>=0 || (g.touch&&g.touch[AGN]);
+    }).length;
+  }
+  function govLine(g){
+    // 소관은 계획서에 부처로 적힌 것만 쓴다. 질병청·식약처는 원문에 이름이 없으므로
+    // '소관'이라고 적으면 거짓이 된다 — 그럴 때는 과제 번호와 이름만 적는다.
+    var own=(g.agencies||[]).length ? ', 소관 '+(g.agencies||[]).join('·') : '';
+    return '「'+g.task+'」(국정과제 '+g.no+'번'+own+')와 연계하여 추진하겠습니다.';
+  }
+  function renderGov(it){
+    var box=it.el.querySelector('.govbox'); if(!box) return;
+    var rs=govFor(it.cand);
+    if(!GOVT||!GOVT.items||!it.cand){ box.hidden=true; box.innerHTML=''; return; }
+    if(!rs.length){
+      // 없다는 것도 알려 둔다 — 2025년 국감에서 "공약에는 있었는데 국정과제에 빠졌다"가
+      // 그대로 질의가 됐다. 빈칸으로 두면 안 찾아본 것과 구별되지 않는다.
+      box.hidden=false;
+      box.innerHTML='<div class="govh">🏛 이 주제에 걸리는 국정과제 없음 '+
+        '<span class="govs">'+esc(GOVT.government||'')+' 123대 국정과제 중 '+
+        esc(AG[CUR].name)+' 관련 '+govPool()+'건을 모두 훑은 결과입니다</span></div>'+
+        '<div class="govg">국정과제에 없다는 사실 자체가 질의가 되기도 합니다. ' +
+        '정하기 전에 <a href="'+esc(GOVT.source_url||'')+'" target="_blank" rel="noopener">원문</a>으로 확인하십시오.</div>';
+      return;
+    }
+    box.hidden=false;
+    box.innerHTML='<div class="govh">🏛 걸리는 국정과제 '+rs.length+'건 '+
+      '<span class="govs">'+esc(GOVT.government||'')+' 123대 국정과제 원문 · 눌러 메모에 넣기</span></div>'+
+      rs.map(function(x,i){
+        var g=x.g, tgt=(g.goal_text||[]).slice(0,2);
+        var own=(g.agencies||[]).indexOf(AG[CUR].name)>=0;
+        var tw=(g.touch&&g.touch[AG[CUR].name])||[];
+        var badge = own
+          ? '<span class="govag own">'+esc(AG[CUR].name)+' 소관</span>'
+          : '<span class="govag tch" title="계획서 원문은 소관을 부처로만 적습니다. '+
+            esc(AG[CUR].name)+'는 123개 과제 본문 어디에도 이름이 없어, 소관이 아니라 '+
+            '본문이 이 기관 일에 닿는다는 뜻입니다.">주제 닿음'+(tw.length?' · '+esc(tw.slice(0,3).join(', ')):'')+'</span>';
+        return '<div class="govrow"><div class="govt"><b>'+g.no+'번</b> '+esc(g.task)+' '+badge+'</div>'+
+          (tgt.length?'<div class="govg">과제목표 — '+tgt.map(esc).join(' / ')+'</div>':'')+
+          '<div class="govb"><button class="btn mini govins" data-i="'+i+'">＋ 근거 칸에 넣기</button>'+
+          '<a href="'+esc(g.url)+'" target="_blank" rel="noopener">원문 PDF</a>'+
+          '<span class="govwhy">걸린 낱말: '+esc(x.hit.join(', '))+'</span></div></div>';
+      }).join('');
+    box.querySelectorAll('.govins').forEach(function(b){
+      b.addEventListener('click', function(){
+        var g=rs[+this.dataset.i].g, body=it.el.querySelector('.bodyx');
+        if(!body) return;
+        setFill(it, true);
+        var p=document.createElement('p'); p.className='lv1';
+        p.innerHTML='○ <span contenteditable>'+esc(govLine(g))+'</span>';
+        body.appendChild(p);
+        (g.goal_text||[]).slice(0,2).forEach(function(t){
+          var q=document.createElement('p'); q.className='lv3';
+          q.innerHTML='* <span contenteditable>'+esc('과제목표(원문): '+t)+'</span>';
+          body.appendChild(q);
+        });
+        save();
+      });
+    });
+  }
+
   // ── 최근 보도 칸 ───────────────────────────────────────
   function renderPress(){
     var rows=pressOf(), box=document.getElementById('prBox'), list=document.getElementById('prList');
@@ -687,6 +858,7 @@
       '<div class="evilist"></div></details>'+
     '<div class="fillbar noprint"><button class="btn mini fillt">✍ 답변 메모 칸 펼치기</button>'+
       '<span class="fillhint">결론·근거·참고자료·이어질 질문을 직접 씁니다</span></div>'+
+    '<div class="govbox noprint" hidden></div>'+
     '<div class="fill closed">'+
       '<p class="key">◈ <span contenteditable data-ph="결론 한 문장 — 직접 작성"></span></p>'+
       '<div class="sec">◈ 근거와 향후 계획</div>'+
@@ -754,6 +926,7 @@
       el.querySelector('.srcx').textContent=cand.src;
       it.rows=relatedQA(cand);
       renderEvi(it);
+      renderGov(it);
       setFill(it, !it.rows.filter(quotable).length);   // 옮겨 올 답변이 없으면 바로 쓰게 펼친다
     }else{
       el.querySelector('.evi').hidden=true;
@@ -868,9 +1041,10 @@
         .then(function(a){ var all=[]; a.forEach(function(x){ all=all.concat(x); }); return all; });
       });
     }
-    Promise.all([qaP, J('press.json',{items:[]}), J('findings-2025.json',null), J('agenda.json',{items:[]})])
+    Promise.all([qaP, J('press.json',{items:[]}), J('findings-2025.json',null), J('agenda.json',{items:[]}),
+                 J('gov-tasks.json',null)])
     .then(function(r){
-      QA=r[0]; PRESS=(r[1].items||[]); FIND=r[2]; AGENDA=(r[3].items||[]);
+      QA=r[0]; PRESS=(r[1].items||[]); FIND=r[2]; AGENDA=(r[3].items||[]); GOVT=r[4];
       var c={}; QA.forEach(function(x){ if(!junkName(x.member)) c[x.member]=(c[x.member]||0)+1; });
       var names=Object.keys(c).sort(function(a,b){ return c[b]-c[a]; }).slice(0,40);
       document.getElementById('pMember').innerHTML='<option value="">위원 전체</option>'+
@@ -881,6 +1055,7 @@
         '<b>산출 근거</b> — 후보는 세 가지 공개 자료에서만 만듭니다. ① <b>반복 질의</b>: 최근 5개 연도 '+esc(AG[CUR].name)+
         ' 질의 '+QA.length+'건을 주제별로 세어, 두 해 이상·네 건 이상 나온 주제. ② <b>최근 보도</b>: 공개된 국감 관련 기사 중 이 기관 관련 제목. '+
         '③ <b>지난해 지적사항</b>: 국정감사 결과보고서의 시정·처리요구 중 이 기관 소관. '+
+        (GOVT&&GOVT.items&&GOVT.items.length ? '담은 질의마다 <b>걸리는 국정과제</b>를 메모 칸 위에 올립니다 — '+esc(GOVT.government||'')+' 123대 국정과제 가운데 보건복지위 일과 닿는 '+GOVT.items.length+'건에서, 질의 주제와 겹치는 낱말로 고른 것입니다. 과제 번호·과제목표는 <a href="'+esc(GOVT.source_url||'')+'" target="_blank" rel="noopener">정책브리핑</a>의 과제별 상세 원문 그대로입니다. <b>소관</b>은 계획서가 적어 둔 부처 표기(복지부)만 공식입니다 — 계획서 본문에는 질병관리청·식품의약품안전처라는 말이 123개 과제 어디에도 나오지 않아, 그 둘은 <b>「주제 닿음」</b>으로만 적었습니다. 닿음은 소관이 아닙니다. <b>공약은 담지 않았고 과제에 대한 평가도 넣지 않았습니다</b>. 고른 것이 어긋날 수 있으니 원문 PDF로 확인하고 쓰십시오. ' : '')+
         '최근 보도에는 본회의 <b>대정부질문</b> 관련 기사도 함께 넣습니다 — 대정부질문은 연 네 차례, 보건복지는 「교육사회문화」 분야 하루라 회의록을 따로 모으지 않고 보도로만 살핍니다. '+
         '후보 제목은 그 주제를 실제로 묻는 <b>회의록 속 질의 한 문장</b>입니다(배지 「실제 질의 문장」). '+
         '회의록 원문은 두 단 편집이라 줄 끝에서 낱말이 갈라지고 쪽머리가 섞여 들어간 곳이 있어, 후보 제목과 아래 근거 목록 모두 <b>쪽머리를 걷고 갈라진 조각을 붙여</b> 보입니다. '+
