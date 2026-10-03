@@ -681,6 +681,24 @@
    ]
   },
   {
+   "article_no": 3078293,
+   "year": 2025,
+   "committee": "국토교통위원회",
+   "doc_type": "result_report",
+   "title": "2025년도 국정감사 결과보고서",
+   "posted": "2026-03-17",
+   "files": [
+    {
+     "name": "2025년도 국토교통위원회 국정감사 결과보고서.hwp",
+     "url": "https://ltc.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000031&atchFileId=a2f14ad4467c49fbb8b9f0742fa97d86&fileSn=1"
+    },
+    {
+     "name": "2025년도 국토교통위원회 국정감사 결과보고서.pdf",
+     "url": "https://ltc.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000031&atchFileId=a2f14ad4467c49fbb8b9f0742fa97d86&fileSn=2"
+    }
+   ]
+  },
+  {
    "article_no": 3078323,
    "year": 2025,
    "committee": "기후에너지환경노동위원회",
@@ -1347,6 +1365,24 @@
    ]
   },
   {
+   "article_no": 3078118,
+   "year": 2025,
+   "committee": "재정경제기획위원회",
+   "doc_type": "plan",
+   "title": "2025년도 국정감사 계획서",
+   "posted": "2026-01-02",
+   "files": [
+    {
+     "name": "2025년도 기획재정위원회 국정감사계획서(변경).hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=ad14d7411e3c47328a7b6cb28dfc7110&fileSn=1"
+    },
+    {
+     "name": "2025년도 기획재정위원회 국정감사계획서(변경).pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=ad14d7411e3c47328a7b6cb28dfc7110&fileSn=2"
+    }
+   ]
+  },
+  {
    "article_no": 3078355,
    "year": 2025,
    "committee": "정무위원회",
@@ -1559,6 +1595,42 @@
    ]
   },
   {
+   "article_no": 3078415,
+   "year": 2024,
+   "committee": "과학기술정보방송통신위원회",
+   "doc_type": "followup",
+   "title": "2024년도  국정감사결과 시정 및 처리요구사항에 대한 처리결과보고서(방송통신위원회)",
+   "posted": "2026-04-02",
+   "files": [
+    {
+     "name": "000629239.PDF",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/pdf/000629239.PDF"
+    },
+    {
+     "name": "000629239.HWP",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/hwp/000629239.HWP"
+    }
+   ]
+  },
+  {
+   "article_no": 3078417,
+   "year": 2024,
+   "committee": "과학기술정보방송통신위원회",
+   "doc_type": "followup",
+   "title": "2024년도  국정감사결과 시정 및 처리요구사항에 대한 처리결과보고서(원자력안전위원회)",
+   "posted": "2026-04-02",
+   "files": [
+    {
+     "name": "000629241.PDF",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/pdf/000629241.PDF"
+    },
+    {
+     "name": "000629241.HWP",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/hwp/000629241.HWP"
+    }
+   ]
+  },
+  {
    "article_no": 3002276,
    "year": 2024,
    "committee": "교육위원회",
@@ -1623,6 +1695,60 @@
     {
      "name": "000629245.HWP",
      "url": "https://likms.assembly.go.kr/inspection/conduct//2024/hwp/000629245.HWP"
+    }
+   ]
+  },
+  {
+   "article_no": 3078420,
+   "year": 2024,
+   "committee": "국회운영위원회",
+   "doc_type": "followup",
+   "title": "2024년도  국정감사결과 시정 및 처리요구사항에 대한 처리결과보고서(국회예산정책처)",
+   "posted": "2026-04-02",
+   "files": [
+    {
+     "name": "000629244.PDF",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/pdf/000629244.PDF"
+    },
+    {
+     "name": "000629244.HWP",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/hwp/000629244.HWP"
+    }
+   ]
+  },
+  {
+   "article_no": 3078418,
+   "year": 2024,
+   "committee": "국회운영위원회",
+   "doc_type": "followup",
+   "title": "2024년도  국정감사결과 시정 및 처리요구사항에 대한 처리결과보고서(국회도서관)",
+   "posted": "2026-04-02",
+   "files": [
+    {
+     "name": "000629242.PDF",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/pdf/000629242.PDF"
+    },
+    {
+     "name": "000629242.HWP",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/hwp/000629242.HWP"
+    }
+   ]
+  },
+  {
+   "article_no": 3078419,
+   "year": 2024,
+   "committee": "국회운영위원회",
+   "doc_type": "followup",
+   "title": "2024년도  국정감사결과 시정 및 처리요구사항에 대한 처리결과보고서(국회사무처)",
+   "posted": "2026-04-02",
+   "files": [
+    {
+     "name": "000629243.PDF",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/pdf/000629243.PDF"
+    },
+    {
+     "name": "000629243.HWP",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/hwp/000629243.HWP"
     }
    ]
   },
@@ -1699,6 +1825,24 @@
    ]
   },
   {
+   "article_no": 3078422,
+   "year": 2024,
+   "committee": "기획재정위원회",
+   "doc_type": "followup",
+   "title": "2024년도  국정감사결과 시정 및 처리요구사항에 대한 처리결과보고서(기획재정부)",
+   "posted": "2026-04-02",
+   "files": [
+    {
+     "name": "000629246.PDF",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/pdf/000629246.PDF"
+    },
+    {
+     "name": "000629246.HWP",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/hwp/000629246.HWP"
+    }
+   ]
+  },
+  {
    "article_no": 3078439,
    "year": 2024,
    "committee": "기후에너지환경노동위원회",
@@ -1713,6 +1857,96 @@
     {
      "name": "000629263.HWP",
      "url": "https://likms.assembly.go.kr/inspection/conduct//2024/hwp/000629263.HWP"
+    }
+   ]
+  },
+  {
+   "article_no": 3078440,
+   "year": 2024,
+   "committee": "기후에너지환경노동위원회",
+   "doc_type": "followup",
+   "title": "2024년도  국정감사결과 시정 및 처리요구사항에 대한 처리결과보고서(환경부)",
+   "posted": "2026-04-02",
+   "files": [
+    {
+     "name": "000629264.PDF",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/pdf/000629264.PDF"
+    },
+    {
+     "name": "000629264.HWP",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/hwp/000629264.HWP"
+    }
+   ]
+  },
+  {
+   "article_no": 3078423,
+   "year": 2024,
+   "committee": "문화체육관광위원회",
+   "doc_type": "followup",
+   "title": "2024년도  국정감사결과 시정 및 처리요구사항에 대한 처리결과보고서(국가유산청)",
+   "posted": "2026-04-02",
+   "files": [
+    {
+     "name": "000629247.PDF",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/pdf/000629247.PDF"
+    },
+    {
+     "name": "000629247.HWP",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/hwp/000629247.HWP"
+    }
+   ]
+  },
+  {
+   "article_no": 3078424,
+   "year": 2024,
+   "committee": "문화체육관광위원회",
+   "doc_type": "followup",
+   "title": "2024년도  국정감사결과 시정 및 처리요구사항에 대한 처리결과보고서(문화체육관광부)",
+   "posted": "2026-04-02",
+   "files": [
+    {
+     "name": "000629248.PDF",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/pdf/000629248.PDF"
+    },
+    {
+     "name": "000629248.HWP",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/hwp/000629248.HWP"
+    }
+   ]
+  },
+  {
+   "article_no": 3078425,
+   "year": 2024,
+   "committee": "법제사법위원회",
+   "doc_type": "followup",
+   "title": "2024년도  국정감사결과 시정 및 처리요구사항에 대한 처리결과보고서(법제처)",
+   "posted": "2026-04-02",
+   "files": [
+    {
+     "name": "000629249.PDF",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/pdf/000629249.PDF"
+    },
+    {
+     "name": "000629249.HWP",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/hwp/000629249.HWP"
+    }
+   ]
+  },
+  {
+   "article_no": 3078426,
+   "year": 2024,
+   "committee": "법제사법위원회",
+   "doc_type": "followup",
+   "title": "2024년도  국정감사결과 시정 및 처리요구사항에 대한 처리결과보고서(헌법재판소)",
+   "posted": "2026-04-02",
+   "files": [
+    {
+     "name": "000629250.PDF",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/pdf/000629250.PDF"
+    },
+    {
+     "name": "000629250.HWP",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/hwp/000629250.HWP"
     }
    ]
   },
@@ -1767,6 +2001,74 @@
    ]
   },
   {
+   "article_no": 3078429,
+   "year": 2024,
+   "committee": "외교통일위원회",
+   "doc_type": "followup",
+   "title": "2024년도  국정감사결과 시정 및 처리요구사항에 대한 처리결과보고서(민주평화통일자문회의)",
+   "posted": "2026-04-02",
+   "files": [
+    {
+     "name": "000629253.PDF",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/pdf/000629253.PDF"
+    },
+    {
+     "name": "000629253.HWP",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/hwp/000629253.HWP"
+    }
+   ]
+  },
+  {
+   "article_no": 3078432,
+   "year": 2024,
+   "committee": "외교통일위원회",
+   "doc_type": "followup",
+   "title": "2024년도  국정감사결과 시정 및 처리요구사항에 대한 처리결과보고서(통일부)",
+   "posted": "2026-04-02",
+   "files": [
+    {
+     "name": "000629256.PDF",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/pdf/000629256.PDF"
+    }
+   ]
+  },
+  {
+   "article_no": 3078430,
+   "year": 2024,
+   "committee": "외교통일위원회",
+   "doc_type": "followup",
+   "title": "2024년도  국정감사결과 시정 및 처리요구사항에 대한 처리결과보고서(외교부)",
+   "posted": "2026-04-02",
+   "files": [
+    {
+     "name": "000629254.PDF",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/pdf/000629254.PDF"
+    },
+    {
+     "name": "000629254.HWP",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/hwp/000629254.HWP"
+    }
+   ]
+  },
+  {
+   "article_no": 3078122,
+   "year": 2024,
+   "committee": "재정경제기획위원회",
+   "doc_type": "result_report",
+   "title": "2024년도 국정감사 결과보고서",
+   "posted": "2026-01-06",
+   "files": [
+    {
+     "name": "2024년도 국정감사결과보고서(의결_최종).hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000031&atchFileId=00fd0bc0567540a1b01debcdfa33c5e2&fileSn=1"
+    },
+    {
+     "name": "2024년도 국정감사결과보고서(의결_최종).pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000031&atchFileId=00fd0bc0567540a1b01debcdfa33c5e2&fileSn=2"
+    }
+   ]
+  },
+  {
    "article_no": 3078436,
    "year": 2024,
    "committee": "정무위원회",
@@ -1785,6 +2087,56 @@
    ]
   },
   {
+   "article_no": 3078435,
+   "year": 2024,
+   "committee": "정무위원회",
+   "doc_type": "followup",
+   "title": "2024년도  국정감사결과 시정 및 처리요구사항에 대한 처리결과보고서(국민권익위원회)",
+   "posted": "2026-04-02",
+   "files": [
+    {
+     "name": "000629259.PDF",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/pdf/000629259.PDF"
+    },
+    {
+     "name": "000629259.HWP",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/hwp/000629259.HWP"
+    }
+   ]
+  },
+  {
+   "article_no": 3078433,
+   "year": 2024,
+   "committee": "정무위원회",
+   "doc_type": "followup",
+   "title": "2024년도  국정감사결과 시정 및 처리요구사항에 대한 처리결과보고서(금융위원회)",
+   "posted": "2026-04-02",
+   "files": [
+    {
+     "name": "000629257.PDF",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/pdf/000629257.PDF"
+    }
+   ]
+  },
+  {
+   "article_no": 3078434,
+   "year": 2024,
+   "committee": "정무위원회",
+   "doc_type": "followup",
+   "title": "2024년도  국정감사결과 시정 및 처리요구사항에 대한 처리결과보고서(국무조정실ㆍ국무총리비서실)",
+   "posted": "2026-04-02",
+   "files": [
+    {
+     "name": "000629258.PDF",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/pdf/000629258.PDF"
+    },
+    {
+     "name": "000629258.HWP",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/hwp/000629258.HWP"
+    }
+   ]
+  },
+  {
    "article_no": 3078438,
    "year": 2024,
    "committee": "행정안전위원회",
@@ -1799,6 +2151,24 @@
     {
      "name": "000629262.HWP",
      "url": "https://likms.assembly.go.kr/inspection/conduct//2024/hwp/000629262.HWP"
+    }
+   ]
+  },
+  {
+   "article_no": 3078437,
+   "year": 2024,
+   "committee": "행정안전위원회",
+   "doc_type": "followup",
+   "title": "2024년도  국정감사결과 시정 및 처리요구사항에 대한 처리결과보고서(중앙선거관리위원회)",
+   "posted": "2026-04-02",
+   "files": [
+    {
+     "name": "000629261.PDF",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/pdf/000629261.PDF"
+    },
+    {
+     "name": "000629261.HWP",
+     "url": "https://likms.assembly.go.kr/inspection/conduct//2024/hwp/000629261.HWP"
     }
    ]
   },
