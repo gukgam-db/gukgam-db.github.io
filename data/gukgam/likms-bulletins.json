@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-06",
+ "updated": "2026-10-07",
  "source": "likms.assembly.go.kr/inspections",
  "items": [
   {
@@ -411,6 +411,24 @@
     {
      "name": "2026년도 재정경제기획위원회 국정감사계획서(최종)_0917.pdf",
      "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=5ed9af3fc7eb418f9e3aa5830d7307ac&fileSn=2"
+    }
+   ]
+  },
+  {
+   "article_no": 3078765,
+   "year": 2026,
+   "committee": "재정경제기획위원회",
+   "doc_type": "briefing",
+   "title": "2026년도 국정감사(재정경제부) 업무보고",
+   "posted": "2026-10-06",
+   "files": [
+    {
+     "name": "2026년도 국정감사 재경부 업무보고.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=37bbc085a07d4ce9a15dc3a6df9927fe&fileSn=1"
+    },
+    {
+     "name": "2026년도 국정감사 재경부 업무보고.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=37bbc085a07d4ce9a15dc3a6df9927fe&fileSn=2"
     }
    ]
   },
