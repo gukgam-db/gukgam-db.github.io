@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-07",
+ "updated": "2026-10-08",
  "mode": "full",
  "items": [
   {
@@ -21,6 +21,15 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57377"
   },
   {
+   "conf_id": "N054570",
+   "era": "제22대",
+   "sess": "제439회",
+   "dgr": "개회식",
+   "date": "2026-10-22",
+   "committee": "국방위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57394"
+  },
+  {
    "conf_id": "N054533",
    "era": "제22대",
    "sess": "제439회",
@@ -39,22 +48,13 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57365"
   },
   {
-   "conf_id": "N054531",
+   "conf_id": "N054612",
    "era": "제22대",
    "sess": "제439회",
    "dgr": "개회식",
    "date": "2026-10-20",
-   "committee": "교육위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57381"
-  },
-  {
-   "conf_id": "N054532",
-   "era": "제22대",
-   "sess": "제439회",
-   "dgr": "개회식",
-   "date": "2026-10-20",
-   "committee": "교육위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57363"
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57459"
   },
   {
    "conf_id": "N054574",
@@ -66,13 +66,31 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57397"
   },
   {
-   "conf_id": "N054612",
+   "conf_id": "N054532",
    "era": "제22대",
    "sess": "제439회",
    "dgr": "개회식",
    "date": "2026-10-20",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57459"
+   "committee": "교육위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57363"
+  },
+  {
+   "conf_id": "N054531",
+   "era": "제22대",
+   "sess": "제439회",
+   "dgr": "개회식",
+   "date": "2026-10-20",
+   "committee": "교육위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57381"
+  },
+  {
+   "conf_id": "N054522",
+   "era": "제22대",
+   "sess": "제439회",
+   "dgr": "개회식",
+   "date": "2026-10-19",
+   "committee": "기후에너지환경노동위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57358"
   },
   {
    "conf_id": "N054530",
@@ -102,15 +120,6 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57396"
   },
   {
-   "conf_id": "N054556",
-   "era": "제22대",
-   "sess": "제439회",
-   "dgr": "개회식",
-   "date": "2026-10-15",
-   "committee": "재정경제기획위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57417"
-  },
-  {
    "conf_id": "N054520",
    "era": "제22대",
    "sess": "제439회",
@@ -118,6 +127,15 @@
    "date": "2026-10-15",
    "committee": "기후에너지환경노동위원회",
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57376"
+  },
+  {
+   "conf_id": "N054556",
+   "era": "제22대",
+   "sess": "제439회",
+   "dgr": "개회식",
+   "date": "2026-10-15",
+   "committee": "재정경제기획위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57417"
   },
   {
    "conf_id": "N054540",
@@ -147,6 +165,15 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57411"
   },
   {
+   "conf_id": "N054539",
+   "era": "제22대",
+   "sess": "제439회",
+   "dgr": "개회식",
+   "date": "2026-10-12",
+   "committee": "국방위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57368"
+  },
+  {
    "conf_id": "N054547",
    "era": "제22대",
    "sess": "제439회",
@@ -154,24 +181,6 @@
    "date": "2026-10-12",
    "committee": "재정경제기획위원회",
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57388"
-  },
-  {
-   "conf_id": "N054528",
-   "era": "제22대",
-   "sess": "제439회",
-   "dgr": "개회식",
-   "date": "2026-10-12",
-   "committee": "교육위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57380"
-  },
-  {
-   "conf_id": "N054626",
-   "era": "제22대",
-   "sess": "제439회",
-   "dgr": "개회식",
-   "date": "2026-10-12",
-   "committee": "외교통일위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57490"
   },
   {
    "conf_id": "N054560",
@@ -183,13 +192,31 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57421"
   },
   {
-   "conf_id": "N054538",
+   "conf_id": "N054626",
    "era": "제22대",
    "sess": "제439회",
    "dgr": "개회식",
-   "date": "2026-10-08",
-   "committee": "국방위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57367"
+   "date": "2026-10-12",
+   "committee": "외교통일위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57490"
+  },
+  {
+   "conf_id": "N054528",
+   "era": "제22대",
+   "sess": "제439회",
+   "dgr": "개회식",
+   "date": "2026-10-12",
+   "committee": "교육위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57380"
+  },
+  {
+   "conf_id": "N054641",
+   "era": "제22대",
+   "sess": "제439회",
+   "dgr": "개회식",
+   "date": "2026-10-12",
+   "committee": "농림축산식품해양수산위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57487"
   },
   {
    "conf_id": "N054559",
@@ -201,22 +228,13 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57420"
   },
   {
-   "conf_id": "N054596",
+   "conf_id": "N054538",
    "era": "제22대",
    "sess": "제439회",
    "dgr": "개회식",
-   "date": "2026-10-07",
-   "committee": "외교통일위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57446"
-  },
-  {
-   "conf_id": "N054543",
-   "era": "제22대",
-   "sess": "제439회",
-   "dgr": "개회식",
-   "date": "2026-10-07",
-   "committee": "농림축산식품해양수산위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57391"
+   "date": "2026-10-08",
+   "committee": "국방위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57367"
   },
   {
    "conf_id": "N054537",
@@ -237,13 +255,22 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57360"
   },
   {
-   "conf_id": "N054593",
+   "conf_id": "N054596",
    "era": "제22대",
    "sess": "제439회",
    "dgr": "개회식",
-   "date": "2026-10-06",
+   "date": "2026-10-07",
    "committee": "외교통일위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57444"
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57446"
+  },
+  {
+   "conf_id": "N054543",
+   "era": "제22대",
+   "sess": "제439회",
+   "dgr": "개회식",
+   "date": "2026-10-07",
+   "committee": "농림축산식품해양수산위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57391"
   },
   {
    "conf_id": "N054587",
@@ -253,6 +280,15 @@
    "date": "2026-10-06",
    "committee": "정무위원회",
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57438"
+  },
+  {
+   "conf_id": "N054593",
+   "era": "제22대",
+   "sess": "제439회",
+   "dgr": "개회식",
+   "date": "2026-10-06",
+   "committee": "외교통일위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57444"
   },
   {
    "conf_id": "N053657",
@@ -291,13 +327,13 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55755"
   },
   {
-   "conf_id": "N053498",
+   "conf_id": "N053577",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
    "date": "2025-10-30",
-   "committee": "교육위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55550"
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55638"
   },
   {
    "conf_id": "N053523",
@@ -309,22 +345,13 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55603"
   },
   {
-   "conf_id": "N053577",
+   "conf_id": "N053498",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
    "date": "2025-10-30",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55638"
-  },
-  {
-   "conf_id": "N053571",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-30",
-   "committee": "농림축산식품해양수산위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55635"
+   "committee": "교육위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55550"
   },
   {
    "conf_id": "N053466",
@@ -336,31 +363,13 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55486"
   },
   {
-   "conf_id": "N053515",
+   "conf_id": "N053571",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
    "date": "2025-10-30",
-   "committee": "국방위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55595"
-  },
-  {
-   "conf_id": "N053504",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-30",
-   "committee": "과학기술정보방송통신위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55553"
-  },
-  {
-   "conf_id": "N053475",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-30",
-   "committee": "기획재정위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55530"
+   "committee": "농림축산식품해양수산위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55635"
   },
   {
    "conf_id": "N053451",
@@ -372,31 +381,31 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55501"
   },
   {
-   "conf_id": "N053558",
+   "conf_id": "N053504",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
-   "date": "2025-10-29",
-   "committee": "국토교통위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55587"
+   "date": "2025-10-30",
+   "committee": "과학기술정보방송통신위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55553"
   },
   {
-   "conf_id": "N053474",
+   "conf_id": "N053515",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
-   "date": "2025-10-29",
+   "date": "2025-10-30",
+   "committee": "국방위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55595"
+  },
+  {
+   "conf_id": "N053475",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-30",
    "committee": "기획재정위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55513"
-  },
-  {
-   "conf_id": "N053622",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-29",
-   "committee": "산업통상자원중소벤처기업위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55667"
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55530"
   },
   {
    "conf_id": "N053465",
@@ -408,13 +417,13 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55485"
   },
   {
-   "conf_id": "N053487",
+   "conf_id": "N053474",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
    "date": "2025-10-29",
-   "committee": "문화체육관광위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55523"
+   "committee": "기획재정위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55513"
   },
   {
    "conf_id": "N053503",
@@ -426,31 +435,31 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55552"
   },
   {
-   "conf_id": "N053456",
+   "conf_id": "N053622",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
-   "date": "2025-10-28",
-   "committee": "외교통일위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55481"
+   "date": "2025-10-29",
+   "committee": "산업통상자원중소벤처기업위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55667"
   },
   {
-   "conf_id": "N053496",
+   "conf_id": "N053558",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
-   "date": "2025-10-28",
-   "committee": "교육위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55536"
+   "date": "2025-10-29",
+   "committee": "국토교통위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55587"
   },
   {
-   "conf_id": "N053547",
+   "conf_id": "N053487",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
-   "date": "2025-10-28",
-   "committee": "정무위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55624"
+   "date": "2025-10-29",
+   "committee": "문화체육관광위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55523"
   },
   {
    "conf_id": "N053570",
@@ -471,6 +480,24 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55677"
   },
   {
+   "conf_id": "N053547",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-28",
+   "committee": "정무위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55624"
+  },
+  {
+   "conf_id": "N053456",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-28",
+   "committee": "외교통일위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55481"
+  },
+  {
    "conf_id": "N053522",
    "era": "제22대",
    "sess": "제429회",
@@ -478,24 +505,6 @@
    "date": "2025-10-28",
    "committee": "보건복지위원회",
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55602"
-  },
-  {
-   "conf_id": "N053595",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-28",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55674"
-  },
-  {
-   "conf_id": "N053597",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-28",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55676"
   },
   {
    "conf_id": "N053596",
@@ -507,6 +516,51 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55675"
   },
   {
+   "conf_id": "N053597",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-28",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55676"
+  },
+  {
+   "conf_id": "N053595",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-28",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55674"
+  },
+  {
+   "conf_id": "N053496",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-28",
+   "committee": "교육위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55536"
+  },
+  {
+   "conf_id": "N053557",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-27",
+   "committee": "국토교통위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55586"
+  },
+  {
+   "conf_id": "N053485",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-27",
+   "committee": "문화체육관광위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55521"
+  },
+  {
    "conf_id": "N053464",
    "era": "제22대",
    "sess": "제429회",
@@ -514,6 +568,33 @@
    "date": "2025-10-27",
    "committee": "기후에너지환경노동위원회",
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55484"
+  },
+  {
+   "conf_id": "N053590",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-27",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55649"
+  },
+  {
+   "conf_id": "N053546",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-27",
+   "committee": "정무위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55623"
+  },
+  {
+   "conf_id": "N053450",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-27",
+   "committee": "법제사법위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55478"
   },
   {
    "conf_id": "N053593",
@@ -561,94 +642,13 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55634"
   },
   {
-   "conf_id": "N053590",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-27",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55649"
-  },
-  {
-   "conf_id": "N053546",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-27",
-   "committee": "정무위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55623"
-  },
-  {
-   "conf_id": "N053450",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-27",
-   "committee": "법제사법위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55478"
-  },
-  {
-   "conf_id": "N053557",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-27",
-   "committee": "국토교통위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55586"
-  },
-  {
-   "conf_id": "N053485",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-27",
-   "committee": "문화체육관광위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55521"
-  },
-  {
-   "conf_id": "N053449",
+   "conf_id": "N053521",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
    "date": "2025-10-24",
-   "committee": "법제사법위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55500"
-  },
-  {
-   "conf_id": "N053586",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-24",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55645"
-  },
-  {
-   "conf_id": "N053588",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-24",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55647"
-  },
-  {
-   "conf_id": "N053568",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-24",
-   "committee": "농림축산식품해양수산위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55633"
-  },
-  {
-   "conf_id": "N053534",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-24",
-   "committee": "외교통일위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55614"
+   "committee": "보건복지위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55601"
   },
   {
    "conf_id": "N053514",
@@ -660,58 +660,13 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55594"
   },
   {
-   "conf_id": "N053521",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-24",
-   "committee": "보건복지위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55601"
-  },
-  {
-   "conf_id": "N053502",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-24",
-   "committee": "과학기술정보방송통신위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55551"
-  },
-  {
-   "conf_id": "N053587",
+   "conf_id": "N053588",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
    "date": "2025-10-24",
    "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55646"
-  },
-  {
-   "conf_id": "N053589",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-24",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55648"
-  },
-  {
-   "conf_id": "N053621",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-24",
-   "committee": "산업통상자원중소벤처기업위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55689"
-  },
-  {
-   "conf_id": "N053535",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-24",
-   "committee": "외교통일위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55615"
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55647"
   },
   {
    "conf_id": "N053448",
@@ -723,49 +678,103 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55499"
   },
   {
-   "conf_id": "N053483",
+   "conf_id": "N053586",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-24",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55645"
+  },
+  {
+   "conf_id": "N053587",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-24",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55646"
+  },
+  {
+   "conf_id": "N053535",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-24",
+   "committee": "외교통일위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55615"
+  },
+  {
+   "conf_id": "N053589",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-24",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55648"
+  },
+  {
+   "conf_id": "N053534",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-24",
+   "committee": "외교통일위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55614"
+  },
+  {
+   "conf_id": "N053449",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-24",
+   "committee": "법제사법위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55500"
+  },
+  {
+   "conf_id": "N053568",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-24",
+   "committee": "농림축산식품해양수산위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55633"
+  },
+  {
+   "conf_id": "N053621",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-24",
+   "committee": "산업통상자원중소벤처기업위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55689"
+  },
+  {
+   "conf_id": "N053502",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-24",
+   "committee": "과학기술정보방송통신위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55551"
+  },
+  {
+   "conf_id": "N053602",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
    "date": "2025-10-23",
-   "committee": "문화체육관광위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55532"
+   "committee": "산업통상자원중소벤처기업위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55658"
   },
   {
-   "conf_id": "N053492",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-23",
-   "committee": "교육위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55526"
-  },
-  {
-   "conf_id": "N053493",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-23",
-   "committee": "교육위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55535"
-  },
-  {
-   "conf_id": "N053513",
+   "conf_id": "N053512",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
    "date": "2025-10-23",
    "committee": "국방위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55593"
-  },
-  {
-   "conf_id": "N053490",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-23",
-   "committee": "교육위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55533"
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55574"
   },
   {
    "conf_id": "N053584",
@@ -775,15 +784,6 @@
    "date": "2025-10-23",
    "committee": "행정안전위원회",
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55655"
-  },
-  {
-   "conf_id": "N053494",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-23",
-   "committee": "교육위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55527"
   },
   {
    "conf_id": "N053447",
@@ -804,67 +804,13 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55483"
   },
   {
-   "conf_id": "N053472",
+   "conf_id": "N053490",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
    "date": "2025-10-23",
-   "committee": "기획재정위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55511"
-  },
-  {
-   "conf_id": "N053543",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-23",
-   "committee": "정무위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55577"
-  },
-  {
-   "conf_id": "N053512",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-23",
-   "committee": "국방위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55574"
-  },
-  {
-   "conf_id": "N053556",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-23",
-   "committee": "국토교통위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55585"
-  },
-  {
-   "conf_id": "N053501",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-23",
-   "committee": "과학기술정보방송통신위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55539"
-  },
-  {
-   "conf_id": "N053585",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-23",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55644"
-  },
-  {
-   "conf_id": "N053602",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-23",
-   "committee": "산업통상자원중소벤처기업위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55658"
+   "committee": "교육위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55533"
   },
   {
    "conf_id": "N053471",
@@ -876,40 +822,94 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55510"
   },
   {
-   "conf_id": "N053486",
+   "conf_id": "N053513",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
-   "date": "2025-10-22",
-   "committee": "교육위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55522"
+   "date": "2025-10-23",
+   "committee": "국방위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55593"
   },
   {
-   "conf_id": "N053489",
+   "conf_id": "N053492",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
-   "date": "2025-10-22",
+   "date": "2025-10-23",
    "committee": "교육위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55525"
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55526"
   },
   {
-   "conf_id": "N053482",
+   "conf_id": "N053483",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
-   "date": "2025-10-22",
+   "date": "2025-10-23",
    "committee": "문화체육관광위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55519"
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55532"
   },
   {
-   "conf_id": "N053532",
+   "conf_id": "N053494",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
-   "date": "2025-10-22",
-   "committee": "외교통일위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55612"
+   "date": "2025-10-23",
+   "committee": "교육위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55527"
+  },
+  {
+   "conf_id": "N053493",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-23",
+   "committee": "교육위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55535"
+  },
+  {
+   "conf_id": "N053585",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-23",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55644"
+  },
+  {
+   "conf_id": "N053501",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-23",
+   "committee": "과학기술정보방송통신위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55539"
+  },
+  {
+   "conf_id": "N053543",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-23",
+   "committee": "정무위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55577"
+  },
+  {
+   "conf_id": "N053556",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-23",
+   "committee": "국토교통위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55585"
+  },
+  {
+   "conf_id": "N053472",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-23",
+   "committee": "기획재정위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55511"
   },
   {
    "conf_id": "N053531",
@@ -919,6 +919,15 @@
    "date": "2025-10-22",
    "committee": "외교통일위원회",
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55611"
+  },
+  {
+   "conf_id": "N053489",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-22",
+   "committee": "교육위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55525"
   },
   {
    "conf_id": "N053488",
@@ -939,13 +948,13 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55632"
   },
   {
-   "conf_id": "N053520",
+   "conf_id": "N053486",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
    "date": "2025-10-22",
-   "committee": "보건복지위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55600"
+   "committee": "교육위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55522"
   },
   {
    "conf_id": "N053484",
@@ -957,94 +966,31 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55520"
   },
   {
-   "conf_id": "N053461",
+   "conf_id": "N053532",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
-   "date": "2025-10-21",
-   "committee": "기후에너지환경노동위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55508"
+   "date": "2025-10-22",
+   "committee": "외교통일위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55612"
   },
   {
-   "conf_id": "N053470",
+   "conf_id": "N053482",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
-   "date": "2025-10-21",
-   "committee": "기획재정위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55489"
+   "date": "2025-10-22",
+   "committee": "문화체육관광위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55519"
   },
   {
-   "conf_id": "N053452",
+   "conf_id": "N053520",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
-   "date": "2025-10-21",
-   "committee": "법제사법위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55479"
-  },
-  {
-   "conf_id": "N053555",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-21",
-   "committee": "국토교통위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55584"
-  },
-  {
-   "conf_id": "N053582",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-21",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55642"
-  },
-  {
-   "conf_id": "N053542",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-21",
-   "committee": "정무위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55620"
-  },
-  {
-   "conf_id": "N053519",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-21",
+   "date": "2025-10-22",
    "committee": "보건복지위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55599"
-  },
-  {
-   "conf_id": "N053453",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-21",
-   "committee": "법제사법위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55480"
-  },
-  {
-   "conf_id": "N053511",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-21",
-   "committee": "국방위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55592"
-  },
-  {
-   "conf_id": "N053583",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-21",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55643"
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55600"
   },
   {
    "conf_id": "N053500",
@@ -1056,6 +1002,78 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55538"
   },
   {
+   "conf_id": "N053583",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-21",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55643"
+  },
+  {
+   "conf_id": "N053519",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-21",
+   "committee": "보건복지위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55599"
+  },
+  {
+   "conf_id": "N053582",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-21",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55642"
+  },
+  {
+   "conf_id": "N053555",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-21",
+   "committee": "국토교통위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55584"
+  },
+  {
+   "conf_id": "N053452",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-21",
+   "committee": "법제사법위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55479"
+  },
+  {
+   "conf_id": "N053511",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-21",
+   "committee": "국방위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55592"
+  },
+  {
+   "conf_id": "N053470",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-21",
+   "committee": "기획재정위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55489"
+  },
+  {
+   "conf_id": "N053461",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-21",
+   "committee": "기후에너지환경노동위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55508"
+  },
+  {
    "conf_id": "N053881",
    "era": "제22대",
    "sess": "제429회",
@@ -1065,58 +1083,22 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55972"
   },
   {
-   "conf_id": "N053460",
+   "conf_id": "N053542",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
-   "date": "2025-10-20",
-   "committee": "기후에너지환경노동위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55507"
+   "date": "2025-10-21",
+   "committee": "정무위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55620"
   },
   {
-   "conf_id": "N053580",
+   "conf_id": "N053453",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
-   "date": "2025-10-20",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55641"
-  },
-  {
-   "conf_id": "N053499",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-20",
-   "committee": "과학기술정보방송통신위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55537"
-  },
-  {
-   "conf_id": "N053566",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-20",
-   "committee": "농림축산식품해양수산위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55631"
-  },
-  {
-   "conf_id": "N053581",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-20",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55654"
-  },
-  {
-   "conf_id": "N053578",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-20",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55639"
+   "date": "2025-10-21",
+   "committee": "법제사법위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55480"
   },
   {
    "conf_id": "N053579",
@@ -1126,6 +1108,42 @@
    "date": "2025-10-20",
    "committee": "행정안전위원회",
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55640"
+  },
+  {
+   "conf_id": "N053601",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-20",
+   "committee": "산업통상자원중소벤처기업위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55657"
+  },
+  {
+   "conf_id": "N053446",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-20",
+   "committee": "법제사법위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55498"
+  },
+  {
+   "conf_id": "N053480",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-20",
+   "committee": "문화체육관광위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55517"
+  },
+  {
+   "conf_id": "N053528",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-20",
+   "committee": "외교통일위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55608"
   },
   {
    "conf_id": "N053553",
@@ -1200,40 +1218,58 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55583"
   },
   {
-   "conf_id": "N053601",
+   "conf_id": "N053578",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
    "date": "2025-10-20",
-   "committee": "산업통상자원중소벤처기업위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55657"
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55639"
   },
   {
-   "conf_id": "N053446",
+   "conf_id": "N053581",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
    "date": "2025-10-20",
-   "committee": "법제사법위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55498"
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55654"
   },
   {
-   "conf_id": "N053528",
+   "conf_id": "N053566",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
    "date": "2025-10-20",
-   "committee": "외교통일위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55608"
+   "committee": "농림축산식품해양수산위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55631"
   },
   {
-   "conf_id": "N053480",
+   "conf_id": "N053499",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
    "date": "2025-10-20",
-   "committee": "문화체육관광위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55517"
+   "committee": "과학기술정보방송통신위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55537"
+  },
+  {
+   "conf_id": "N053580",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-20",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55641"
+  },
+  {
+   "conf_id": "N053460",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-20",
+   "committee": "기후에너지환경노동위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55507"
   },
   {
    "conf_id": "N053527",
@@ -1245,6 +1281,24 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55607"
   },
   {
+   "conf_id": "N053518",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-17",
+   "committee": "보건복지위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55598"
+  },
+  {
+   "conf_id": "N053459",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-17",
+   "committee": "기후에너지환경노동위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55506"
+  },
+  {
    "conf_id": "N053525",
    "era": "제22대",
    "sess": "제429회",
@@ -1254,13 +1308,13 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55605"
   },
   {
-   "conf_id": "N053445",
+   "conf_id": "N053565",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
    "date": "2025-10-17",
-   "committee": "법제사법위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55497"
+   "committee": "농림축산식품해양수산위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55589"
   },
   {
    "conf_id": "N053576",
@@ -1299,31 +1353,13 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55606"
   },
   {
-   "conf_id": "N053459",
+   "conf_id": "N053445",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
    "date": "2025-10-17",
-   "committee": "기후에너지환경노동위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55506"
-  },
-  {
-   "conf_id": "N053518",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-17",
-   "committee": "보건복지위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55598"
-  },
-  {
-   "conf_id": "N053565",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-17",
-   "committee": "농림축산식품해양수산위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55589"
+   "committee": "법제사법위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55497"
   },
   {
    "conf_id": "N053497",
@@ -1344,15 +1380,6 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55580"
   },
   {
-   "conf_id": "N053442",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-16",
-   "committee": "법제사법위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55476"
-  },
-  {
    "conf_id": "N053524",
    "era": "제22대",
    "sess": "제429회",
@@ -1369,24 +1396,6 @@
    "date": "2025-10-16",
    "committee": "문화체육관광위원회",
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55518"
-  },
-  {
-   "conf_id": "N053613",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-16",
-   "committee": "기획재정위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55686"
-  },
-  {
-   "conf_id": "N053539",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-16",
-   "committee": "정무위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55618"
   },
   {
    "conf_id": "N053600",
@@ -1407,22 +1416,31 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55515"
   },
   {
-   "conf_id": "N053458",
+   "conf_id": "N053442",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
-   "date": "2025-10-15",
-   "committee": "기후에너지환경노동위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55505"
+   "date": "2025-10-16",
+   "committee": "법제사법위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55476"
   },
   {
-   "conf_id": "N053564",
+   "conf_id": "N053613",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
-   "date": "2025-10-15",
-   "committee": "농림축산식품해양수산위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55588"
+   "date": "2025-10-16",
+   "committee": "기획재정위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55686"
+  },
+  {
+   "conf_id": "N053539",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-16",
+   "committee": "정무위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55618"
   },
   {
    "conf_id": "N053575",
@@ -1434,15 +1452,6 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55637"
   },
   {
-   "conf_id": "N053441",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-15",
-   "committee": "법제사법위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55475"
-  },
-  {
    "conf_id": "N053517",
    "era": "제22대",
    "sess": "제429회",
@@ -1452,103 +1461,31 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55597"
   },
   {
-   "conf_id": "N053574",
+   "conf_id": "N053564",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
-   "date": "2025-10-14",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55636"
-  },
-  {
-   "conf_id": "N053455",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-14",
-   "committee": "외교통일위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55503"
-  },
-  {
-   "conf_id": "N053468",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-14",
-   "committee": "기획재정위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55487"
-  },
-  {
-   "conf_id": "N053538",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-14",
-   "committee": "정무위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55575"
-  },
-  {
-   "conf_id": "N053457",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-14",
-   "committee": "기후에너지환경노동위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55504"
-  },
-  {
-   "conf_id": "N053572",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-14",
-   "committee": "산업통상자원중소벤처기업위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55651"
-  },
-  {
-   "conf_id": "N053563",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-14",
+   "date": "2025-10-15",
    "committee": "농림축산식품해양수산위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55630"
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55588"
   },
   {
-   "conf_id": "N053550",
+   "conf_id": "N053441",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
-   "date": "2025-10-14",
-   "committee": "국토교통위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55579"
-  },
-  {
-   "conf_id": "N053476",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-14",
-   "committee": "교육위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55514"
-  },
-  {
-   "conf_id": "N053508",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-14",
-   "committee": "국방위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55591"
-  },
-  {
-   "conf_id": "N053440",
-   "era": "제22대",
-   "sess": "제429회",
-   "dgr": "개회식",
-   "date": "2025-10-14",
+   "date": "2025-10-15",
    "committee": "법제사법위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55474"
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55475"
+  },
+  {
+   "conf_id": "N053458",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-15",
+   "committee": "기후에너지환경노동위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55505"
   },
   {
    "conf_id": "N053479",
@@ -1578,31 +1515,103 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55596"
   },
   {
-   "conf_id": "N053507",
+   "conf_id": "N053574",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
-   "date": "2025-10-13",
-   "committee": "국방위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55590"
+   "date": "2025-10-14",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55636"
   },
   {
-   "conf_id": "N053439",
+   "conf_id": "N053563",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
-   "date": "2025-10-13",
+   "date": "2025-10-14",
+   "committee": "농림축산식품해양수산위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55630"
+  },
+  {
+   "conf_id": "N053457",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-14",
+   "committee": "기후에너지환경노동위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55504"
+  },
+  {
+   "conf_id": "N053440",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-14",
    "committee": "법제사법위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55494"
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55474"
   },
   {
-   "conf_id": "N053467",
+   "conf_id": "N053572",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
-   "date": "2025-10-13",
+   "date": "2025-10-14",
+   "committee": "산업통상자원중소벤처기업위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55651"
+  },
+  {
+   "conf_id": "N053468",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-14",
    "committee": "기획재정위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55509"
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55487"
+  },
+  {
+   "conf_id": "N053550",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-14",
+   "committee": "국토교통위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55579"
+  },
+  {
+   "conf_id": "N053455",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-14",
+   "committee": "외교통일위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55503"
+  },
+  {
+   "conf_id": "N053476",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-14",
+   "committee": "교육위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55514"
+  },
+  {
+   "conf_id": "N053508",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-14",
+   "committee": "국방위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55591"
+  },
+  {
+   "conf_id": "N053538",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-14",
+   "committee": "정무위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55575"
   },
   {
    "conf_id": "N053491",
@@ -1623,13 +1632,13 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55578"
   },
   {
-   "conf_id": "N053454",
+   "conf_id": "N053439",
    "era": "제22대",
    "sess": "제429회",
    "dgr": "개회식",
    "date": "2025-10-13",
-   "committee": "외교통일위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55502"
+   "committee": "법제사법위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55494"
   },
   {
    "conf_id": "N053537",
@@ -1648,6 +1657,33 @@
    "date": "2025-10-13",
    "committee": "국토교통위원회",
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55622"
+  },
+  {
+   "conf_id": "N053467",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-13",
+   "committee": "기획재정위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55509"
+  },
+  {
+   "conf_id": "N053507",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-13",
+   "committee": "국방위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55590"
+  },
+  {
+   "conf_id": "N053454",
+   "era": "제22대",
+   "sess": "제429회",
+   "dgr": "개회식",
+   "date": "2025-10-13",
+   "committee": "외교통일위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55502"
   },
   {
    "conf_id": "054263",
@@ -1704,31 +1740,13 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52042"
   },
   {
-   "conf_id": "054314",
+   "conf_id": "054326",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
    "date": "2024-10-25",
-   "committee": "환경노동위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52036"
-  },
-  {
-   "conf_id": "054270",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-25",
-   "committee": "농림축산식품해양수산위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52034"
-  },
-  {
-   "conf_id": "054318",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-25",
-   "committee": "정무위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52039"
+   "committee": "과학기술정보방송통신위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52037"
   },
   {
    "conf_id": "054295",
@@ -1740,13 +1758,31 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52035"
   },
   {
-   "conf_id": "054379",
+   "conf_id": "054318",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
    "date": "2024-10-25",
-   "committee": "산업통상자원중소벤처기업위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52041"
+   "committee": "정무위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52039"
+  },
+  {
+   "conf_id": "054270",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-25",
+   "committee": "농림축산식품해양수산위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52034"
+  },
+  {
+   "conf_id": "054314",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-25",
+   "committee": "환경노동위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52036"
   },
   {
    "conf_id": "054265",
@@ -1758,13 +1794,76 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52040"
   },
   {
-   "conf_id": "054326",
+   "conf_id": "054379",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
    "date": "2024-10-25",
-   "committee": "과학기술정보방송통신위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52037"
+   "committee": "산업통상자원중소벤처기업위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52041"
+  },
+  {
+   "conf_id": "054649",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-24",
+   "committee": "기획재정위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52029"
+  },
+  {
+   "conf_id": "054651",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-24",
+   "committee": "기획재정위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52030"
+  },
+  {
+   "conf_id": "054350",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-24",
+   "committee": "국방위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52028"
+  },
+  {
+   "conf_id": "054260",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-24",
+   "committee": "국토교통위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52022"
+  },
+  {
+   "conf_id": "054249",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-24",
+   "committee": "교육위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52024"
+  },
+  {
+   "conf_id": "054623",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-24",
+   "committee": "법제사법위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52023"
+  },
+  {
+   "conf_id": "054271",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-24",
+   "committee": "정무위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52027"
   },
   {
    "conf_id": "054267",
@@ -1785,67 +1884,13 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52025"
   },
   {
-   "conf_id": "054651",
+   "conf_id": "054289",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
    "date": "2024-10-24",
-   "committee": "기획재정위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52030"
-  },
-  {
-   "conf_id": "054649",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-24",
-   "committee": "기획재정위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52029"
-  },
-  {
-   "conf_id": "054623",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-24",
-   "committee": "법제사법위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52023"
-  },
-  {
-   "conf_id": "054622",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-24",
-   "committee": "문화체육관광위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52032"
-  },
-  {
-   "conf_id": "054249",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-24",
-   "committee": "교육위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52024"
-  },
-  {
-   "conf_id": "054260",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-24",
-   "committee": "국토교통위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52022"
-  },
-  {
-   "conf_id": "054350",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-24",
-   "committee": "국방위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52028"
+   "committee": "과학기술정보방송통신위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52026"
   },
   {
    "conf_id": "054243",
@@ -1857,15 +1902,6 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52021"
   },
   {
-   "conf_id": "054271",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-24",
-   "committee": "정무위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52027"
-  },
-  {
    "conf_id": "054351",
    "era": "제22대",
    "sess": "제418회",
@@ -1875,49 +1911,13 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52031"
   },
   {
-   "conf_id": "054289",
+   "conf_id": "054622",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
    "date": "2024-10-24",
-   "committee": "과학기술정보방송통신위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52026"
-  },
-  {
-   "conf_id": "054650",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-23",
-   "committee": "기획재정위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52017"
-  },
-  {
-   "conf_id": "054654",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-23",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52019"
-  },
-  {
-   "conf_id": "054652",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-23",
-   "committee": "기획재정위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52018"
-  },
-  {
-   "conf_id": "054288",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-23",
-   "committee": "보건복지위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52016"
+   "committee": "문화체육관광위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52032"
   },
   {
    "conf_id": "054655",
@@ -1929,58 +1929,40 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52020"
   },
   {
-   "conf_id": "054597",
+   "conf_id": "054650",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
-   "date": "2024-10-22",
-   "committee": "산업통상자원중소벤처기업위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52015"
+   "date": "2024-10-23",
+   "committee": "기획재정위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52017"
   },
   {
-   "conf_id": "054573",
+   "conf_id": "054288",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
-   "date": "2024-10-22",
-   "committee": "국토교통위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52004"
+   "date": "2024-10-23",
+   "committee": "보건복지위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52016"
   },
   {
-   "conf_id": "054612",
+   "conf_id": "054652",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
-   "date": "2024-10-22",
+   "date": "2024-10-23",
+   "committee": "기획재정위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52018"
+  },
+  {
+   "conf_id": "054654",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-23",
    "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52011"
-  },
-  {
-   "conf_id": "054613",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-22",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52012"
-  },
-  {
-   "conf_id": "054618",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-22",
-   "committee": "국방위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52009"
-  },
-  {
-   "conf_id": "054636",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-22",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52013"
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52019"
   },
   {
    "conf_id": "054466",
@@ -1990,42 +1972,6 @@
    "date": "2024-10-22",
    "committee": "농림축산식품해양수산위원회",
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52003"
-  },
-  {
-   "conf_id": "054409",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-22",
-   "committee": "교육위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52006"
-  },
-  {
-   "conf_id": "054555",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-22",
-   "committee": "법제사법위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52005"
-  },
-  {
-   "conf_id": "054603",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-22",
-   "committee": "환경노동위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52007"
-  },
-  {
-   "conf_id": "054637",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-22",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52014"
   },
   {
    "conf_id": "054653",
@@ -2046,58 +1992,94 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52010"
   },
   {
-   "conf_id": "054520",
+   "conf_id": "054636",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
-   "date": "2024-10-21",
+   "date": "2024-10-22",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52013"
+  },
+  {
+   "conf_id": "054555",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-22",
+   "committee": "법제사법위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52005"
+  },
+  {
+   "conf_id": "054573",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-22",
    "committee": "국토교통위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51994"
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52004"
   },
   {
-   "conf_id": "054510",
+   "conf_id": "054603",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
-   "date": "2024-10-21",
-   "committee": "과학기술정보방송통신위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51996"
+   "date": "2024-10-22",
+   "committee": "환경노동위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52007"
   },
   {
-   "conf_id": "054627",
+   "conf_id": "054409",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
-   "date": "2024-10-21",
-   "committee": "기획재정위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51998"
+   "date": "2024-10-22",
+   "committee": "교육위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52006"
   },
   {
-   "conf_id": "054592",
+   "conf_id": "054597",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
-   "date": "2024-10-21",
+   "date": "2024-10-22",
+   "committee": "산업통상자원중소벤처기업위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52015"
+  },
+  {
+   "conf_id": "054612",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-22",
    "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52002"
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52011"
   },
   {
-   "conf_id": "054591",
+   "conf_id": "054613",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
-   "date": "2024-10-21",
+   "date": "2024-10-22",
    "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52001"
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52012"
   },
   {
-   "conf_id": "054588",
+   "conf_id": "054637",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
-   "date": "2024-10-21",
+   "date": "2024-10-22",
    "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51999"
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52014"
+  },
+  {
+   "conf_id": "054618",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-22",
+   "committee": "국방위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52009"
   },
   {
    "conf_id": "054553",
@@ -2109,22 +2091,13 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51997"
   },
   {
-   "conf_id": "054590",
+   "conf_id": "054627",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
    "date": "2024-10-21",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52000"
-  },
-  {
-   "conf_id": "054554",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-21",
-   "committee": "농림축산식품해양수산위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51992"
+   "committee": "기획재정위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51998"
   },
   {
    "conf_id": "054599",
@@ -2136,6 +2109,51 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51995"
   },
   {
+   "conf_id": "054554",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-21",
+   "committee": "농림축산식품해양수산위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51992"
+  },
+  {
+   "conf_id": "054590",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-21",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52000"
+  },
+  {
+   "conf_id": "054510",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-21",
+   "committee": "과학기술정보방송통신위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51996"
+  },
+  {
+   "conf_id": "054591",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-21",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52001"
+  },
+  {
+   "conf_id": "054592",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-21",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=52002"
+  },
+  {
    "conf_id": "054648",
    "era": "제22대",
    "sess": "제418회",
@@ -2143,6 +2161,24 @@
    "date": "2024-10-21",
    "committee": "보건복지위원회",
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51993"
+  },
+  {
+   "conf_id": "054520",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-21",
+   "committee": "국토교통위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51994"
+  },
+  {
+   "conf_id": "054588",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-21",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51999"
   },
   {
    "conf_id": "054640",
@@ -2163,69 +2199,6 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51982"
   },
   {
-   "conf_id": "054519",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-18",
-   "committee": "문화체육관광위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51990"
-  },
-  {
-   "conf_id": "054593",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-18",
-   "committee": "기획재정위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51987"
-  },
-  {
-   "conf_id": "054584",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-18",
-   "committee": "교육위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51983"
-  },
-  {
-   "conf_id": "054585",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-18",
-   "committee": "교육위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51984"
-  },
-  {
-   "conf_id": "054557",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-18",
-   "committee": "외교통일위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51989"
-  },
-  {
-   "conf_id": "054284",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-18",
-   "committee": "외교통일위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51988"
-  },
-  {
-   "conf_id": "054307",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-18",
-   "committee": "농림축산식품해양수산위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51978"
-  },
-  {
    "conf_id": "054606",
    "era": "제22대",
    "sess": "제418회",
@@ -2233,24 +2206,6 @@
    "date": "2024-10-18",
    "committee": "보건복지위원회",
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51979"
-  },
-  {
-   "conf_id": "054578",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-18",
-   "committee": "국방위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51985"
-  },
-  {
-   "conf_id": "054579",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-18",
-   "committee": "국방위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51986"
   },
   {
    "conf_id": "054560",
@@ -2262,6 +2217,78 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51980"
   },
   {
+   "conf_id": "054578",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-18",
+   "committee": "국방위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51985"
+  },
+  {
+   "conf_id": "054519",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-18",
+   "committee": "문화체육관광위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51990"
+  },
+  {
+   "conf_id": "054284",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-18",
+   "committee": "외교통일위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51988"
+  },
+  {
+   "conf_id": "054579",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-18",
+   "committee": "국방위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51986"
+  },
+  {
+   "conf_id": "054557",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-18",
+   "committee": "외교통일위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51989"
+  },
+  {
+   "conf_id": "054307",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-18",
+   "committee": "농림축산식품해양수산위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51978"
+  },
+  {
+   "conf_id": "054593",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-18",
+   "committee": "기획재정위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51987"
+  },
+  {
+   "conf_id": "054585",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-18",
+   "committee": "교육위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51984"
+  },
+  {
    "conf_id": "054582",
    "era": "제22대",
    "sess": "제418회",
@@ -2271,85 +2298,13 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51981"
   },
   {
-   "conf_id": "054543",
+   "conf_id": "054584",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
-   "date": "2024-10-17",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51975"
-  },
-  {
-   "conf_id": "054530",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-17",
+   "date": "2024-10-18",
    "committee": "교육위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51967"
-  },
-  {
-   "conf_id": "054571",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-17",
-   "committee": "보건복지위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51959"
-  },
-  {
-   "conf_id": "054611",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-17",
-   "committee": "정무위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51970"
-  },
-  {
-   "conf_id": "054533",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-17",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51974"
-  },
-  {
-   "conf_id": "054566",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-17",
-   "committee": "환경노동위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51968"
-  },
-  {
-   "conf_id": "054634",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-17",
-   "committee": "과학기술정보방송통신위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51969"
-  },
-  {
-   "conf_id": "054414",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-17",
-   "committee": "산업통상자원중소벤처기업위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51977"
-  },
-  {
-   "conf_id": "054527",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-17",
-   "committee": "교육위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51964"
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51983"
   },
   {
    "conf_id": "054528",
@@ -2359,33 +2314,6 @@
    "date": "2024-10-17",
    "committee": "교육위원회",
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51965"
-  },
-  {
-   "conf_id": "054532",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-17",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51973"
-  },
-  {
-   "conf_id": "054496",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-17",
-   "committee": "법제사법위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51960"
-  },
-  {
-   "conf_id": "054435",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-17",
-   "committee": "문화체육관광위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51972"
   },
   {
    "conf_id": "054498",
@@ -2415,22 +2343,49 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51963"
   },
   {
-   "conf_id": "054515",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-17",
-   "committee": "국방위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51971"
-  },
-  {
-   "conf_id": "054529",
+   "conf_id": "054527",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
    "date": "2024-10-17",
    "committee": "교육위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51966"
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51964"
+  },
+  {
+   "conf_id": "054435",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-17",
+   "committee": "문화체육관광위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51972"
+  },
+  {
+   "conf_id": "054533",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-17",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51974"
+  },
+  {
+   "conf_id": "054611",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-17",
+   "committee": "정무위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51970"
+  },
+  {
+   "conf_id": "054571",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-17",
+   "committee": "보건복지위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51959"
   },
   {
    "conf_id": "054544",
@@ -2442,13 +2397,121 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51976"
   },
   {
-   "conf_id": "054387",
+   "conf_id": "054543",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-17",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51975"
+  },
+  {
+   "conf_id": "054496",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-17",
+   "committee": "법제사법위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51960"
+  },
+  {
+   "conf_id": "054532",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-17",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51973"
+  },
+  {
+   "conf_id": "054566",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-17",
+   "committee": "환경노동위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51968"
+  },
+  {
+   "conf_id": "054634",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-17",
+   "committee": "과학기술정보방송통신위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51969"
+  },
+  {
+   "conf_id": "054414",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-17",
+   "committee": "산업통상자원중소벤처기업위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51977"
+  },
+  {
+   "conf_id": "054515",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-17",
+   "committee": "국방위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51971"
+  },
+  {
+   "conf_id": "054530",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-17",
+   "committee": "교육위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51967"
+  },
+  {
+   "conf_id": "054529",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-17",
+   "committee": "교육위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51966"
+  },
+  {
+   "conf_id": "054531",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
    "date": "2024-10-16",
-   "committee": "농림축산식품해양수산위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51952"
+   "committee": "기획재정위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51955"
+  },
+  {
+   "conf_id": "054604",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-16",
+   "committee": "외교통일위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51957"
+  },
+  {
+   "conf_id": "054512",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-16",
+   "committee": "보건복지위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51953"
+  },
+  {
+   "conf_id": "054234",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-16",
+   "committee": "외교통일위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51956"
   },
   {
    "conf_id": "054465",
@@ -2469,40 +2532,22 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51958"
   },
   {
-   "conf_id": "054531",
+   "conf_id": "054387",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
    "date": "2024-10-16",
-   "committee": "기획재정위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51955"
+   "committee": "농림축산식품해양수산위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51952"
   },
   {
-   "conf_id": "054512",
+   "conf_id": "054438",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
-   "date": "2024-10-16",
-   "committee": "보건복지위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51953"
-  },
-  {
-   "conf_id": "054604",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-16",
-   "committee": "외교통일위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51957"
-  },
-  {
-   "conf_id": "054234",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-16",
-   "committee": "외교통일위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51956"
+   "date": "2024-10-15",
+   "committee": "법제사법위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51944"
   },
   {
    "conf_id": "054345",
@@ -2512,6 +2557,15 @@
    "date": "2024-10-15",
    "committee": "문화체육관광위원회",
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51949"
+  },
+  {
+   "conf_id": "054513",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-15",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51950"
   },
   {
    "conf_id": "054406",
@@ -2532,15 +2586,6 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51946"
   },
   {
-   "conf_id": "054417",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-15",
-   "committee": "국방위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51948"
-  },
-  {
    "conf_id": "054514",
    "era": "제22대",
    "sess": "제418회",
@@ -2548,15 +2593,6 @@
    "date": "2024-10-15",
    "committee": "행정안전위원회",
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51951"
-  },
-  {
-   "conf_id": "054438",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-15",
-   "committee": "법제사법위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51944"
   },
   {
    "conf_id": "054287",
@@ -2568,31 +2604,40 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51945"
   },
   {
-   "conf_id": "054513",
+   "conf_id": "054417",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
    "date": "2024-10-15",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51950"
+   "committee": "국방위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51948"
   },
   {
-   "conf_id": "054433",
+   "conf_id": "054404",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
    "date": "2024-10-14",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51941"
+   "committee": "국토교통위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51931"
   },
   {
-   "conf_id": "054462",
+   "conf_id": "054629",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
    "date": "2024-10-14",
    "committee": "외교통일위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51938"
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51940"
+  },
+  {
+   "conf_id": "054481",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-14",
+   "committee": "산업통상자원중소벤처기업위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51943"
   },
   {
    "conf_id": "054443",
@@ -2631,6 +2676,51 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51930"
   },
   {
+   "conf_id": "054559",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-14",
+   "committee": "농림축산식품해양수산위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51929"
+  },
+  {
+   "conf_id": "054495",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-14",
+   "committee": "기획재정위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51937"
+  },
+  {
+   "conf_id": "054462",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-14",
+   "committee": "외교통일위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51938"
+  },
+  {
+   "conf_id": "054433",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-14",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51941"
+  },
+  {
+   "conf_id": "054434",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-14",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51942"
+  },
+  {
    "conf_id": "054385",
    "era": "제22대",
    "sess": "제418회",
@@ -2658,60 +2748,6 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51935"
   },
   {
-   "conf_id": "054404",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-14",
-   "committee": "국토교통위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51931"
-  },
-  {
-   "conf_id": "054629",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-14",
-   "committee": "외교통일위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51940"
-  },
-  {
-   "conf_id": "054481",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-14",
-   "committee": "산업통상자원중소벤처기업위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51943"
-  },
-  {
-   "conf_id": "054559",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-14",
-   "committee": "농림축산식품해양수산위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51929"
-  },
-  {
-   "conf_id": "054495",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-14",
-   "committee": "기획재정위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51937"
-  },
-  {
-   "conf_id": "054434",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-14",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51942"
-  },
-  {
    "conf_id": "054565",
    "era": "제22대",
    "sess": "제418회",
@@ -2721,49 +2757,22 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51928"
   },
   {
-   "conf_id": "054266",
+   "conf_id": "054550",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
    "date": "2024-10-11",
-   "committee": "기획재정위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51922"
+   "committee": "산업통상자원중소벤처기업위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51927"
   },
   {
-   "conf_id": "054313",
+   "conf_id": "054362",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
    "date": "2024-10-11",
-   "committee": "법제사법위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51918"
-  },
-  {
-   "conf_id": "054464",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-11",
-   "committee": "농림축산식품해양수산위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51915"
-  },
-  {
-   "conf_id": "054312",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-11",
-   "committee": "법제사법위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51917"
-  },
-  {
-   "conf_id": "054393",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-11",
-   "committee": "환경노동위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51920"
+   "committee": "국토교통위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51916"
   },
   {
    "conf_id": "054283",
@@ -2775,6 +2784,42 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51921"
   },
   {
+   "conf_id": "054393",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-11",
+   "committee": "환경노동위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51920"
+  },
+  {
+   "conf_id": "054312",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-11",
+   "committee": "법제사법위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51917"
+  },
+  {
+   "conf_id": "054313",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-11",
+   "committee": "법제사법위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51918"
+  },
+  {
+   "conf_id": "054266",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-11",
+   "committee": "기획재정위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51922"
+  },
+  {
    "conf_id": "054540",
    "era": "제22대",
    "sess": "제418회",
@@ -2784,13 +2829,31 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51924"
   },
   {
-   "conf_id": "054362",
+   "conf_id": "054372",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
    "date": "2024-10-11",
-   "committee": "국토교통위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51916"
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51926"
+  },
+  {
+   "conf_id": "054464",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-11",
+   "committee": "농림축산식품해양수산위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51915"
+  },
+  {
+   "conf_id": "054507",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-11",
+   "committee": "외교통일위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51923"
   },
   {
    "conf_id": "054427",
@@ -2811,40 +2874,22 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51925"
   },
   {
-   "conf_id": "054507",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-11",
-   "committee": "외교통일위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51923"
-  },
-  {
-   "conf_id": "054372",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-11",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51926"
-  },
-  {
-   "conf_id": "054550",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-11",
-   "committee": "산업통상자원중소벤처기업위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51927"
-  },
-  {
-   "conf_id": "054233",
+   "conf_id": "054300",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
    "date": "2024-10-10",
-   "committee": "기획재정위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51912"
+   "committee": "국토교통위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51906"
+  },
+  {
+   "conf_id": "054294",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-10",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51914"
   },
   {
    "conf_id": "054614",
@@ -2854,33 +2899,6 @@
    "date": "2024-10-10",
    "committee": "과학기술정보방송통신위원회",
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51909"
-  },
-  {
-   "conf_id": "054253",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-10",
-   "committee": "환경노동위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51907"
-  },
-  {
-   "conf_id": "054247",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-10",
-   "committee": "국방위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51911"
-  },
-  {
-   "conf_id": "054269",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-10",
-   "committee": "문화체육관광위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51913"
   },
   {
    "conf_id": "054615",
@@ -2910,31 +2928,58 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51905"
   },
   {
-   "conf_id": "054294",
+   "conf_id": "054233",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
    "date": "2024-10-10",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51914"
+   "committee": "기획재정위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51912"
   },
   {
-   "conf_id": "054300",
+   "conf_id": "054269",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
    "date": "2024-10-10",
-   "committee": "국토교통위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51906"
+   "committee": "문화체육관광위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51913"
   },
   {
-   "conf_id": "054303",
+   "conf_id": "054247",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-10",
+   "committee": "국방위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51911"
+  },
+  {
+   "conf_id": "054253",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-10",
+   "committee": "환경노동위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51907"
+  },
+  {
+   "conf_id": "054215",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
    "date": "2024-10-08",
-   "committee": "산업통상자원중소벤처기업위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51904"
+   "committee": "농림축산식품해양수산위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51895"
+  },
+  {
+   "conf_id": "054245",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-08",
+   "committee": "정무위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51901"
   },
   {
    "conf_id": "054231",
@@ -2955,31 +3000,13 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51898"
   },
   {
-   "conf_id": "054221",
+   "conf_id": "054303",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
    "date": "2024-10-08",
-   "committee": "환경노동위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51899"
-  },
-  {
-   "conf_id": "054244",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-08",
-   "committee": "과학기술정보방송통신위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51900"
-  },
-  {
-   "conf_id": "054259",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-08",
-   "committee": "외교통일위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51903"
+   "committee": "산업통상자원중소벤처기업위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51904"
   },
   {
    "conf_id": "054242",
@@ -3000,67 +3027,31 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51896"
   },
   {
-   "conf_id": "054245",
+   "conf_id": "054244",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
    "date": "2024-10-08",
-   "committee": "정무위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51901"
-  },
-  {
-   "conf_id": "054215",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-08",
-   "committee": "농림축산식품해양수산위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51895"
-  },
-  {
-   "conf_id": "054225",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-07",
    "committee": "과학기술정보방송통신위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51889"
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51900"
   },
   {
-   "conf_id": "054195",
+   "conf_id": "054221",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
-   "date": "2024-10-07",
-   "committee": "보건복지위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51886"
+   "date": "2024-10-08",
+   "committee": "환경노동위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51899"
   },
   {
-   "conf_id": "054205",
+   "conf_id": "054259",
    "era": "제22대",
    "sess": "제418회",
    "dgr": "개회식",
-   "date": "2024-10-07",
-   "committee": "법제사법위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51888"
-  },
-  {
-   "conf_id": "054194",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-07",
-   "committee": "농림축산식품해양수산위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51885"
-  },
-  {
-   "conf_id": "054236",
-   "era": "제22대",
-   "sess": "제418회",
-   "dgr": "개회식",
-   "date": "2024-10-07",
-   "committee": "행정안전위원회",
-   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51893"
+   "date": "2024-10-08",
+   "committee": "외교통일위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51903"
   },
   {
    "conf_id": "054227",
@@ -3099,6 +3090,42 @@
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51894"
   },
   {
+   "conf_id": "054194",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-07",
+   "committee": "농림축산식품해양수산위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51885"
+  },
+  {
+   "conf_id": "054195",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-07",
+   "committee": "보건복지위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51886"
+  },
+  {
+   "conf_id": "054205",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-07",
+   "committee": "법제사법위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51888"
+  },
+  {
+   "conf_id": "054236",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-07",
+   "committee": "행정안전위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51893"
+  },
+  {
    "conf_id": "054235",
    "era": "제22대",
    "sess": "제418회",
@@ -3106,6 +3133,15 @@
    "date": "2024-10-07",
    "committee": "문화체육관광위원회",
    "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51892"
+  },
+  {
+   "conf_id": "054225",
+   "era": "제22대",
+   "sess": "제418회",
+   "dgr": "개회식",
+   "date": "2024-10-07",
+   "committee": "과학기술정보방송통신위원회",
+   "url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51889"
   },
   {
    "conf_id": "053382",

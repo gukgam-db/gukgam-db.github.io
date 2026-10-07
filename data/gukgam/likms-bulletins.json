@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-07",
+ "updated": "2026-10-08",
  "source": "likms.assembly.go.kr/inspections",
  "items": [
   {
@@ -367,6 +367,24 @@
     {
      "name": "★2026년도 기관증인 명단(10.1).pdf",
      "url": "https://industry.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=d0edcb413fe64318aacaf865f0e08cdd&fileSn=2"
+    }
+   ]
+  },
+  {
+   "article_no": 3078770,
+   "year": 2026,
+   "committee": "산업통상자원중소벤처기업위원회",
+   "doc_type": "reference",
+   "title": "2026년도 국정감사 기관증인 명단 수정(10.7)",
+   "posted": "2026-10-07",
+   "files": [
+    {
+     "name": "★2026년도 기관증인 명단(10.7).hwp",
+     "url": "https://industry.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=d6e585b3557b45379a2a44d48426a366&fileSn=1"
+    },
+    {
+     "name": "★2026년도 기관증인 명단(10.7).pdf",
+     "url": "https://industry.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=d6e585b3557b45379a2a44d48426a366&fileSn=2"
     }
    ]
   },
