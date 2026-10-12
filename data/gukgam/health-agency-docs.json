@@ -1,6 +1,14 @@
 {
- "updated": "2026-10-12",
+ "updated": "2026-10-13",
  "items": [
+  {
+   "year": 2026,
+   "agency_id": "mohw",
+   "doc_type": "briefing",
+   "title": "2026년 국정감사 업무보고 자료",
+   "source": "복지부 사전정보공표",
+   "url": "https://www.mohw.go.kr/board.es?mid=a10107010100&bid=0037&act=view&list_no=1492196&tag=&cg_code=&list_depth=1"
+  },
   {
    "year": 2026,
    "agency_id": null,
