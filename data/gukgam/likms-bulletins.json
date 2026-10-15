@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15",
+ "updated": "2026-10-16",
  "source": "likms.assembly.go.kr/inspections",
  "items": [
   {
@@ -857,6 +857,20 @@
     {
      "name": "000631607.HWP",
      "url": "https://likms.assembly.go.kr/inspection/conduct//2025/hwp/000631607.HWP"
+    }
+   ]
+  },
+  {
+   "article_no": 3078788,
+   "year": 2025,
+   "committee": "기후에너지환경노동위원회",
+   "doc_type": "result_report",
+   "title": "2025년도 국정감사 결과보고서",
+   "posted": "2026-10-15",
+   "files": [
+    {
+     "name": "2025년도 국정감사 결과보고서.PDF",
+     "url": "https://environment.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000031&atchFileId=ea05a3d921214773a2b891f48b18b0b5&fileSn=1"
     }
    ]
   },
