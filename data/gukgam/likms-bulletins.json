@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22",
+ "updated": "2026-10-23",
  "source": "likms.assembly.go.kr/inspections",
  "items": [
   {
@@ -2489,6 +2489,20 @@
    ]
   },
   {
+   "article_no": 3002247,
+   "year": 2023,
+   "committee": "기획재정위원회",
+   "doc_type": "reference",
+   "title": "2023년도 국정감사 기관증인 명단",
+   "posted": "2023-10-10",
+   "files": [
+    {
+     "name": "2023년도 국정감사 기관증인 명단.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=4m9ci00rkdb05f1lrh2efv0fiolf9g6q&fileSn=1"
+    }
+   ]
+  },
+  {
    "article_no": 3078414,
    "year": 2023,
    "committee": "기후에너지환경노동위원회",
@@ -2499,6 +2513,60 @@
     {
      "name": "000629208.PDF",
      "url": "https://likms.assembly.go.kr/inspection/conduct//2023/pdf/000629208.PDF"
+    }
+   ]
+  },
+  {
+   "article_no": 3002277,
+   "year": 2023,
+   "committee": "산업통상자원중소벤처기업위원회",
+   "doc_type": "reference",
+   "title": "2023년도 국정감사 일반증인 변경 명단(23.10.10.)",
+   "posted": "2023-10-10",
+   "files": [
+    {
+     "name": "2. 2023국감 증인참고인 변경(10.10.,10.12).hwp",
+     "url": "https://industry.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=4ipb5uvdemtusejglk1w6yhnausrh6io&fileSn=1"
+    },
+    {
+     "name": "2. 2023국감 증인참고인 변경(10.10.,10.12).pdf",
+     "url": "https://industry.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=4ipb5uvdemtusejglk1w6yhnausrh6io&fileSn=2"
+    }
+   ]
+  },
+  {
+   "article_no": 3002299,
+   "year": 2023,
+   "committee": "산업통상자원중소벤처기업위원회",
+   "doc_type": "reference",
+   "title": "2023년도 국정감사 일반증인 명단(10.10, 10.12)",
+   "posted": "2023-09-25",
+   "files": [
+    {
+     "name": "2023국감 증인참고인명단(10.10, 10.12).hwp",
+     "url": "https://industry.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=zwqeh03kvec0j1p9pwjaf1fht7kln1ut&fileSn=1"
+    },
+    {
+     "name": "2023국감 증인참고인명단(10.10, 10.12).pdf",
+     "url": "https://industry.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=zwqeh03kvec0j1p9pwjaf1fht7kln1ut&fileSn=2"
+    }
+   ]
+  },
+  {
+   "article_no": 3002267,
+   "year": 2023,
+   "committee": "산업통상자원중소벤처기업위원회",
+   "doc_type": "reference",
+   "title": "2023년 국정감사 기관증인",
+   "posted": "2023-09-21",
+   "files": [
+    {
+     "name": "@('23년 국정감사) 기관증인 명단.hwp",
+     "url": "https://industry.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=q9sob2hue6p6v3g5qyi0pahy3p6cpysl&fileSn=1"
+    },
+    {
+     "name": "@('23년 국정감사) 기관증인 명단.pdf",
+     "url": "https://industry.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=q9sob2hue6p6v3g5qyi0pahy3p6cpysl&fileSn=2"
     }
    ]
   },
@@ -2535,6 +2603,24 @@
     {
      "name": "000629197.HWP",
      "url": "https://likms.assembly.go.kr/inspection/conduct//2023/hwp/000629197.HWP"
+    }
+   ]
+  },
+  {
+   "article_no": 3002239,
+   "year": 2023,
+   "committee": "행정안전위원회",
+   "doc_type": "reference",
+   "title": "2023년도 국정감사 일반증인 및 참고인 명단 (23.9.26. 기준)_수정",
+   "posted": "2023-09-26",
+   "files": [
+    {
+     "name": "2023년도 국정감사 일반증인 및 참고인 명단 (23.9.26.기준)_수정.hwp",
+     "url": "https://adminhom.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=12stozb3yqfyzj6osv2yx9mxxqxcloqf&fileSn=1"
+    },
+    {
+     "name": "2023년도 국정감사 일반증인 및 참고인 명단 (23.9.26.기준)_수정.pdf",
+     "url": "https://adminhom.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=12stozb3yqfyzj6osv2yx9mxxqxcloqf&fileSn=2"
     }
    ]
   },
@@ -2603,6 +2689,20 @@
     {
      "name": "2022년_국정감사계획(9.21.).pdf",
      "url": "https://edu.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=k410u4vkkpkw6o92ns7h20pzko3ry7me&fileSn=2"
+    }
+   ]
+  },
+  {
+   "article_no": 3002259,
+   "year": 2022,
+   "committee": "국토교통위원회",
+   "doc_type": "followup",
+   "title": "2022년도 국정감사결과 시정 및 처리요구사항에 대한 처리결과보고서",
+   "posted": "2023-10-04",
+   "files": [
+    {
+     "name": "2022년도 국정감사결과 시정및처리요구사항에 대한 처리결과보고서.hwp",
+     "url": "https://ltc.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=qe6yxyj4mi9ct4t3s1bspddxp4hnhax1&fileSn=1"
     }
    ]
   },
@@ -2679,6 +2779,248 @@
    ]
   },
   {
+   "article_no": 3002157,
+   "year": 2022,
+   "committee": "기획재정위원회",
+   "doc_type": "briefing",
+   "title": "2022년도 10월 19일 국정감사(한국수출입은행 등) 업무보고",
+   "posted": "2022-10-24",
+   "files": [
+    {
+     "name": "10.19 한국수출입은행 업무현황.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=hy27zb42tyzzldsqb6qrgmbiolfleioh&fileSn=1"
+    },
+    {
+     "name": "10.19 한국수출입은행 업무현황.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=hy27zb42tyzzldsqb6qrgmbiolfleioh&fileSn=2"
+    },
+    {
+     "name": "10.19 한국조폐공사 업무현황보고.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=hy27zb42tyzzldsqb6qrgmbiolfleioh&fileSn=3"
+    },
+    {
+     "name": "10.19 한국조폐공사 업무현황보고.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=hy27zb42tyzzldsqb6qrgmbiolfleioh&fileSn=4"
+    },
+    {
+     "name": "10.19 한국투자공사 국정감사 업무현황.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=hy27zb42tyzzldsqb6qrgmbiolfleioh&fileSn=5"
+    },
+    {
+     "name": "10.19 한국투자공사 국정감사 업무현황.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=hy27zb42tyzzldsqb6qrgmbiolfleioh&fileSn=6"
+    },
+    {
+     "name": "10.19 한국재정정보원 업무보고.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=hy27zb42tyzzldsqb6qrgmbiolfleioh&fileSn=7"
+    },
+    {
+     "name": "10.19 한국재정정보원 업무보고.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=hy27zb42tyzzldsqb6qrgmbiolfleioh&fileSn=8"
+    },
+    {
+     "name": "10.19 국제원산지정보원 업무현황보고.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=hy27zb42tyzzldsqb6qrgmbiolfleioh&fileSn=9"
+    },
+    {
+     "name": "10.19 국제원산지정보원 업무현황보고.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=hy27zb42tyzzldsqb6qrgmbiolfleioh&fileSn=10"
+    }
+   ]
+  },
+  {
+   "article_no": 3002080,
+   "year": 2022,
+   "committee": "기획재정위원회",
+   "doc_type": "briefing",
+   "title": "2022년 10월 17일 국정감사(관세청, 조달청, 통계청)업무보고",
+   "posted": "2022-10-17",
+   "files": [
+    {
+     "name": "10.17 관세청 국정감사 업무보고자료.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=h56eo1sntk6k1v0i7d5e5cmgddaf8mrl&fileSn=1"
+    },
+    {
+     "name": "10.17 관세청 국정감사 업무보고자료.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=h56eo1sntk6k1v0i7d5e5cmgddaf8mrl&fileSn=2"
+    },
+    {
+     "name": "10.17 관세청 국정감사 업무보고자료.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=h56eo1sntk6k1v0i7d5e5cmgddaf8mrl&fileSn=3"
+    },
+    {
+     "name": "10.17  조달청 업무보고.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=h56eo1sntk6k1v0i7d5e5cmgddaf8mrl&fileSn=4"
+    },
+    {
+     "name": "10.17  조달청 업무보고.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=h56eo1sntk6k1v0i7d5e5cmgddaf8mrl&fileSn=5"
+    },
+    {
+     "name": "10.17  조달청 업무보고.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=h56eo1sntk6k1v0i7d5e5cmgddaf8mrl&fileSn=6"
+    },
+    {
+     "name": "10.17 통계청 국정감사 업무현황 보고.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=h56eo1sntk6k1v0i7d5e5cmgddaf8mrl&fileSn=7"
+    }
+   ]
+  },
+  {
+   "article_no": 3002200,
+   "year": 2022,
+   "committee": "기획재정위원회",
+   "doc_type": "reference",
+   "title": "2022년 10월 14일 국정감사 지방2반(광주지방국세청등) 지역경제현안보고",
+   "posted": "2022-10-17",
+   "files": [
+    {
+     "name": "10.14 광주지방국세청 업무현황보고.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=yjuvh0861plijd8769hgktcpy5uh5h3s&fileSn=1"
+    },
+    {
+     "name": "10.14 광주지방국세청 업무현황보고.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=yjuvh0861plijd8769hgktcpy5uh5h3s&fileSn=2"
+    },
+    {
+     "name": "10.14 지방2반 광주본부세관 업무현황보고.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=yjuvh0861plijd8769hgktcpy5uh5h3s&fileSn=3"
+    },
+    {
+     "name": "10.14 지방2반 한국은행 광주전남목포본부 경제동향.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=yjuvh0861plijd8769hgktcpy5uh5h3s&fileSn=4"
+    },
+    {
+     "name": "10.14 지방2반 한국은행 광주전남목포본부 경제동향.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=yjuvh0861plijd8769hgktcpy5uh5h3s&fileSn=5"
+    },
+    {
+     "name": "10.14 지방2반 한국은행 대전세종충남충북 경제동향.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=yjuvh0861plijd8769hgktcpy5uh5h3s&fileSn=6"
+    },
+    {
+     "name": "10.14 지방2반 한국은행 대전세종충남충북 경제동향.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=yjuvh0861plijd8769hgktcpy5uh5h3s&fileSn=7"
+    },
+    {
+     "name": "10.14 대전지방국세청 업무현황보고.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=yjuvh0861plijd8769hgktcpy5uh5h3s&fileSn=8"
+    },
+    {
+     "name": "10.14 대전지방국세청 업무현황보고.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=yjuvh0861plijd8769hgktcpy5uh5h3s&fileSn=9"
+    }
+   ]
+  },
+  {
+   "article_no": 3002158,
+   "year": 2022,
+   "committee": "기획재정위원회",
+   "doc_type": "reference",
+   "title": "2022년 10월 14일 국정감사 지방1반(대구지방국세청등)  지역경제현안보고",
+   "posted": "2022-10-17",
+   "files": [
+    {
+     "name": "10.14 대구지방국세청업무현황보고.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=klcwn4bt0knivm0lflao2vtcggmvapta&fileSn=1"
+    },
+    {
+     "name": "10.14 대구지방국세청업무현황보고.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=klcwn4bt0knivm0lflao2vtcggmvapta&fileSn=2"
+    },
+    {
+     "name": "10.14 지방1반 대구본부세관 업무현황보고.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=klcwn4bt0knivm0lflao2vtcggmvapta&fileSn=3"
+    },
+    {
+     "name": "10.14 지방1반 한국은행 대구경북포항본부 경제동향.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=klcwn4bt0knivm0lflao2vtcggmvapta&fileSn=4"
+    },
+    {
+     "name": "10.14 지방1반 한국은행 대구경북포항본부 경제동향.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=klcwn4bt0knivm0lflao2vtcggmvapta&fileSn=5"
+    },
+    {
+     "name": "10.14 부산지방국세청 업무현황보고.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=klcwn4bt0knivm0lflao2vtcggmvapta&fileSn=6"
+    },
+    {
+     "name": "10.14 부산지방국세청 업무현황보고.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=klcwn4bt0knivm0lflao2vtcggmvapta&fileSn=7"
+    },
+    {
+     "name": "10.14 지방1반 부산세관 업무보고.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=klcwn4bt0knivm0lflao2vtcggmvapta&fileSn=8"
+    },
+    {
+     "name": "10.14 지방1반 한국은행 부산울산경남본부 경제동향.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=klcwn4bt0knivm0lflao2vtcggmvapta&fileSn=9"
+    },
+    {
+     "name": "10.14 지방1반 한국은행 부산울산경남본부 경제동향.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=klcwn4bt0knivm0lflao2vtcggmvapta&fileSn=10"
+    }
+   ]
+  },
+  {
+   "article_no": 3002156,
+   "year": 2022,
+   "committee": "기획재정위원회",
+   "doc_type": "briefing",
+   "title": "2022년 10월 12일 국정감사(국세청 등) 업무보고",
+   "posted": "2022-10-17",
+   "files": [
+    {
+     "name": "10.12 국세청 업무현황보고.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=03sqrwg8lckrvvztrl2otn48tsfpsnoe&fileSn=1"
+    },
+    {
+     "name": "10.12 국세청 업무현황보고.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=03sqrwg8lckrvvztrl2otn48tsfpsnoe&fileSn=2"
+    },
+    {
+     "name": "10.12 국세청 업무현황보고.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=03sqrwg8lckrvvztrl2otn48tsfpsnoe&fileSn=3"
+    },
+    {
+     "name": "10.12 서울지방국세청 업무현황보고.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=03sqrwg8lckrvvztrl2otn48tsfpsnoe&fileSn=4"
+    },
+    {
+     "name": "10.12 서울지방국세청 업무현황보고.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=03sqrwg8lckrvvztrl2otn48tsfpsnoe&fileSn=5"
+    },
+    {
+     "name": "10.12 서울지방국세청 업무현황보고.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=03sqrwg8lckrvvztrl2otn48tsfpsnoe&fileSn=6"
+    },
+    {
+     "name": "10.12 중부지방국세청 업무현황보고.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=03sqrwg8lckrvvztrl2otn48tsfpsnoe&fileSn=7"
+    },
+    {
+     "name": "10.12 중부지방국세청 업무현황보고.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=03sqrwg8lckrvvztrl2otn48tsfpsnoe&fileSn=8"
+    },
+    {
+     "name": "10.12 중부지방국세청 업무현황보고.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=03sqrwg8lckrvvztrl2otn48tsfpsnoe&fileSn=9"
+    },
+    {
+     "name": "10.12 인천지방국세청 업무현황보고.hwp",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=03sqrwg8lckrvvztrl2otn48tsfpsnoe&fileSn=10"
+    },
+    {
+     "name": "10.12 인천지방국세청 업무현황보고.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=03sqrwg8lckrvvztrl2otn48tsfpsnoe&fileSn=11"
+    },
+    {
+     "name": "10.12 인천지방국세청 업무현황보고.pdf",
+     "url": "https://finance.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=03sqrwg8lckrvvztrl2otn48tsfpsnoe&fileSn=12"
+    }
+   ]
+  },
+  {
    "article_no": 3002108,
    "year": 2022,
    "committee": "문화체육관광위원회",
@@ -2711,6 +3053,24 @@
     {
      "name": "[20221011 18시 현재] 2022년도 국정감사 증인 참고인 명단.pdf",
      "url": "https://cst.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=1hw1mrhe770vfivtdio6knui2rirbjbo&fileSn=2"
+    }
+   ]
+  },
+  {
+   "article_no": 3002168,
+   "year": 2022,
+   "committee": "문화체육관광위원회",
+   "doc_type": "reference",
+   "title": "[20221014 18:00 현재] 2022년도 국정감사 일반증인 참고인 명단",
+   "posted": "2022-10-21",
+   "files": [
+    {
+     "name": "2022년도 국정감사 증인 참고인 명단_2022년(수정반영)1014_1800기준.hwp",
+     "url": "https://cst.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=8n538xhdxq50g03s2vhbfq706gso4wyw&fileSn=1"
+    },
+    {
+     "name": "2022년도 국정감사 증인 참고인 명단_2022년(수정반영)1014_1800기준.pdf",
+     "url": "https://cst.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=8n538xhdxq50g03s2vhbfq706gso4wyw&fileSn=2"
     }
    ]
   },
@@ -2783,6 +3143,82 @@
     {
      "name": "★2022년도 국정감사계획서.pdf",
      "url": "https://industry.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=5l270hwccitnf2m4ze0ktv4an7noxzje&fileSn=2"
+    }
+   ]
+  },
+  {
+   "article_no": 3002191,
+   "year": 2022,
+   "committee": "산업통상자원중소벤처기업위원회",
+   "doc_type": "reference",
+   "title": "2022년도 국정감사 증인 명단(추가증인)",
+   "posted": "2022-10-14",
+   "files": [
+    {
+     "name": "2022국감 증인참고인명단(10.21, 10.24)-추가증인.hwp",
+     "url": "https://industry.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=wt06esxkgbjhtuw0uabjq5rv3m32pzx3&fileSn=1"
+    },
+    {
+     "name": "2022국감 증인참고인명단(10.21, 10.24)-추가증인.pdf",
+     "url": "https://industry.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=wt06esxkgbjhtuw0uabjq5rv3m32pzx3&fileSn=2"
+    }
+   ]
+  },
+  {
+   "article_no": 3002159,
+   "year": 2022,
+   "committee": "여성가족위원회",
+   "doc_type": "briefing",
+   "title": "2022년도 국정감사 업무보고자료",
+   "posted": "2022-11-08",
+   "files": [
+    {
+     "name": "여성가족부.hwp",
+     "url": "https://women.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=ow0s133lv71fwb2xhpugjqqlgov1d465&fileSn=1"
+    },
+    {
+     "name": "여성가족부.pdf",
+     "url": "https://women.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=ow0s133lv71fwb2xhpugjqqlgov1d465&fileSn=2"
+    },
+    {
+     "name": "한국건강가정진흥원.hwp",
+     "url": "https://women.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=ow0s133lv71fwb2xhpugjqqlgov1d465&fileSn=3"
+    },
+    {
+     "name": "한국건강가정진흥원.pdf",
+     "url": "https://women.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=ow0s133lv71fwb2xhpugjqqlgov1d465&fileSn=4"
+    },
+    {
+     "name": "한국양성평등교육진흥원.hwp",
+     "url": "https://women.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=ow0s133lv71fwb2xhpugjqqlgov1d465&fileSn=5"
+    },
+    {
+     "name": "한국양성평등교육진흥원.pdf",
+     "url": "https://women.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=ow0s133lv71fwb2xhpugjqqlgov1d465&fileSn=6"
+    },
+    {
+     "name": "한국여성인권진흥원.hwp",
+     "url": "https://women.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=ow0s133lv71fwb2xhpugjqqlgov1d465&fileSn=7"
+    },
+    {
+     "name": "한국여성인권진흥원.pdf",
+     "url": "https://women.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=ow0s133lv71fwb2xhpugjqqlgov1d465&fileSn=8"
+    },
+    {
+     "name": "한국청소년상담복지개발원.hwp",
+     "url": "https://women.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=ow0s133lv71fwb2xhpugjqqlgov1d465&fileSn=9"
+    },
+    {
+     "name": "한국청소년상담복지개발원.pdf",
+     "url": "https://women.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=ow0s133lv71fwb2xhpugjqqlgov1d465&fileSn=10"
+    },
+    {
+     "name": "한국청소년활동진흥원.hwp",
+     "url": "https://women.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=ow0s133lv71fwb2xhpugjqqlgov1d465&fileSn=11"
+    },
+    {
+     "name": "한국청소년활동진흥원.pdf",
+     "url": "https://women.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000051&atchFileId=ow0s133lv71fwb2xhpugjqqlgov1d465&fileSn=12"
     }
    ]
   },
