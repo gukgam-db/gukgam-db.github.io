@@ -1,14 +1,14 @@
 {
- "updated": "2026-10-01",
+ "updated": "2026-10-29",
  "year": 2026,
  "committee": "보건복지위원회",
- "source": "2026년도 보건복지위원회 국정감사계획서.pdf",
- "source_url": "https://health.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=11a174c538244b6eb2de554fa361a86d&fileSn=2",
- "source_post": 3078730,
+ "source": "2026년도 보건복지위원회 국정감사계획서(변경).pdf",
+ "source_url": "https://health.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=1ae31c5d302641bf8132b0a77798a38b&fileSn=2",
+ "source_post": 3078814,
  "period": {
   "start": "2026-10-06",
-  "end": "2026-10-27",
-  "days": 22
+  "end": "2026-10-29",
+  "days": 24
  },
  "targets": {
   "total": 57,
@@ -308,6 +308,21 @@
      "kind": "종합감사",
      "targets": [
       "종합감사"
+     ]
+    }
+   ]
+  },
+  {
+   "date": "2026-10-29",
+   "dow": "목",
+   "sessions": [
+    {
+     "time": "10:00",
+     "place": "부산",
+     "note": null,
+     "kind": "시찰",
+     "targets": [
+      "현장시찰"
      ]
     }
    ]

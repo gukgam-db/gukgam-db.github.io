@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28",
+ "updated": "2026-10-29",
  "items": [
   {
    "year": 2026,
@@ -24,6 +24,14 @@
    "title": "2026년도 국정감사계획서(260929)",
    "source": "복지위 게시판(계획서)",
    "url": "https://health.na.go.kr/cmmit/bbs/BCMT2002/view.do?nttId=3078730&menuNo=2000030&hrCmtId=9700341&pageUnit=10&pdCndCd=A&pageIndex=1\n"
+  },
+  {
+   "year": 2026,
+   "agency_id": null,
+   "doc_type": "plan",
+   "title": "2026년도 국정감사계획서 변경(261020)",
+   "source": "복지위 게시판(계획서)",
+   "url": "https://health.na.go.kr/cmmit/bbs/BCMT2002/view.do?nttId=3078814&menuNo=2000030&hrCmtId=9700341&pageUnit=10&pdCndCd=A&pageIndex=1\n"
   },
   {
    "year": 2025,
@@ -162,6 +170,14 @@
    "url": "https://health.na.go.kr/cmmit/bbs/BCMT2002/view.do?nttId=3002253&menuNo=2000030&hrCmtId=9700341&pageUnit=10&pdCndCd=A&pageIndex=2\n"
   },
   {
+   "year": 2023,
+   "agency_id": null,
+   "doc_type": "reference",
+   "title": "2023년도 국정감사 기관증인 명단(231004)",
+   "source": "복지위 게시판(계획서)",
+   "url": "https://health.na.go.kr/cmmit/bbs/BCMT2002/view.do?nttId=3002227&menuNo=2000030&hrCmtId=9700341&pageUnit=10&pdCndCd=A&pageIndex=2\n"
+  },
+  {
    "year": 2022,
    "agency_id": "mohw",
    "doc_type": "briefing",
@@ -256,6 +272,14 @@
    "title": "2021년도 국정감사 결과보고서",
    "source": "복지위 게시판(결과보고서)",
    "url": "https://health.na.go.kr/cmmit/bbs/BCMT2003/view.do?nttId=3002138&menuNo=2000031&hrCmtId=9700341&pageUnit=10&pdCndCd=A&pageIndex=1\n"
+  },
+  {
+   "year": 2021,
+   "agency_id": null,
+   "doc_type": "plan",
+   "title": "2021년도 국정감사계획서(210927)",
+   "source": "복지위 게시판(계획서)",
+   "url": "https://health.na.go.kr/cmmit/bbs/BCMT2002/view.do?nttId=3002180&menuNo=2000030&hrCmtId=9700341&pageUnit=10&pdCndCd=A&pageIndex=3\n"
   },
   {
    "year": 2020,
@@ -410,6 +434,14 @@
    "url": "https://health.na.go.kr/cmmit/bbs/BCMT2003/view.do?nttId=3001099&menuNo=2000031&hrCmtId=9700341&pageUnit=10&pdCndCd=A&pageIndex=1\n"
   },
   {
+   "year": 2016,
+   "agency_id": null,
+   "doc_type": "plan",
+   "title": "2016년도 국정감사계획서",
+   "source": "복지위 게시판(계획서)",
+   "url": "https://health.na.go.kr/cmmit/bbs/BCMT2002/view.do?nttId=3001089&menuNo=2000030&hrCmtId=9700341&pageUnit=10&pdCndCd=A&pageIndex=4\n"
+  },
+  {
    "year": 2015,
    "agency_id": null,
    "doc_type": "reference",
@@ -552,6 +584,14 @@
    "title": "2011년도 국정감사결과보고서",
    "source": "복지위 게시판(결과보고서)",
    "url": "https://health.na.go.kr/cmmit/bbs/BCMT2003/view.do?nttId=3001186&menuNo=2000031&hrCmtId=9700341&pageUnit=10&pdCndCd=A&pageIndex=2\n"
+  },
+  {
+   "year": 2011,
+   "agency_id": null,
+   "doc_type": "plan",
+   "title": "2011년도 국정감사계획서",
+   "source": "복지위 게시판(계획서)",
+   "url": "https://health.na.go.kr/cmmit/bbs/BCMT2002/view.do?nttId=3000959&menuNo=2000030&hrCmtId=9700341&pageUnit=10&pdCndCd=A&pageIndex=5\n"
   },
   {
    "year": 2010,
@@ -720,6 +760,14 @@
    "title": "2002년도 국정감사 세부일정표",
    "source": "복지위 게시판(과거자료)",
    "url": "https://health.na.go.kr/cmmit/bbs/BCMT2004/view.do?nttId=3001285&menuNo=2000030&hrCmtId=9700341&pageUnit=10&pdCndCd=A&pageIndex=2\n"
+  },
+  {
+   "year": 2002,
+   "agency_id": null,
+   "doc_type": "plan",
+   "title": "2002년도 국정감사계획서",
+   "source": "복지위 게시판(계획서)",
+   "url": "https://health.na.go.kr/cmmit/bbs/BCMT2002/view.do?nttId=3000662&menuNo=2000030&hrCmtId=9700341&pageUnit=10&pdCndCd=A&pageIndex=6\n"
   },
   {
    "year": 2001,

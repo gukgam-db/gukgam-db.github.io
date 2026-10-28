@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28",
+ "updated": "2026-10-29",
  "source": "likms.assembly.go.kr/inspections",
  "items": [
   {
@@ -367,6 +367,24 @@
     {
      "name": "2026년도 보건복지위원회 국정감사계획서.pdf",
      "url": "https://health.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=11a174c538244b6eb2de554fa361a86d&fileSn=3"
+    }
+   ]
+  },
+  {
+   "article_no": 3078814,
+   "year": 2026,
+   "committee": "보건복지위원회",
+   "doc_type": "plan",
+   "title": "2026년도 국정감사계획서 변경(261020)",
+   "posted": "2026-10-28",
+   "files": [
+    {
+     "name": "2026년도 보건복지위원회 국정감사계획서(변경).hwp",
+     "url": "https://health.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=1ae31c5d302641bf8132b0a77798a38b&fileSn=1"
+    },
+    {
+     "name": "2026년도 보건복지위원회 국정감사계획서(변경).pdf",
+     "url": "https://health.na.go.kr/cmmit/cmmn/file/fileDown.do?menuNo=2000030&atchFileId=1ae31c5d302641bf8132b0a77798a38b&fileSn=2"
     }
    ]
   },
