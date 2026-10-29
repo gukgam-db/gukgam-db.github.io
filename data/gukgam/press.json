@@ -1,14 +1,251 @@
 {
- "updated": "2026-10-29",
- "updated_at": "2026-10-29 09:27",
+ "updated": "2026-10-30",
+ "updated_at": "2026-10-30 01:05",
  "window": "14d",
  "note": "구글 뉴스 검색 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. track='국정감사'·'대정부질문'은 위원 이름·기관명에 '국정감사'를 붙여 검색해 제목에 국감이 들어간 기사. track='소관사업'은 제목에 국감이 없어도 국감 재료가 되는 소관 사업·통계 기사를 주제별로 따로 모은 것으로, 같은 보도자료 받아쓰기가 쌓이지 않게 주제당 5건·21일까지만 남긴다. health=false는 제목에 국감은 있으나 보건복지와 닿는 낱말·기관·위원이 없는 기사(다른 상임위·국감 일반)로, 버리지 않고 뒤로 미룬다. 기관·위원·주제 분류는 모두 제목 키워드 자동.",
- "count": 1935,
+ "count": 1957,
  "items": [
+  {
+   "title": "국회 보건복지위원회, 국정감사 현장방문",
+   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5DWDlING5ZWDc4bEVUNVl5Ni1HeGM2dUYwRGkxOEEzUEJTOU1YeW9LbUxGUWhaellTY2FlVDJFRV9VWFFzRmtKbURFOA?oc=5",
+   "date": "2026-10-29",
+   "source": "뉴스1",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-10-30",
+   "health": true
+  },
+  {
+   "title": "만성콩팥병 국가 종합대책 추진 탄력…국감서 정부 의지 확인",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBEV0RHTGsyMzM3ZkVHbjh3dE41ZDNkT1FlWERKeVp2djNVM01jZHhWYUpMOFBVX0lzYzlOM2ZvZTVCNFItZnMxYUdKYkpHUDEtdzVVV3BoYWdrWmtBRG5WRVJQV2tvNjBaaElz?oc=5",
+   "date": "2026-10-29",
+   "source": "헬스경향",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-10-30",
+   "health": false
+  },
+  {
+   "title": "양산부산대병원 권역책임의료기관 제외에 국감도 '우려'",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1qeHBPSWxLVm5nVmRzcFhJbkQ4N3lDd0xCbWJaY2dVb2hTN19rdHBKQWtoNTB1d2t5MHN3TEliMjJ0SEN4dVNiUU4yUGRkU0NCdlRGaQ?oc=5",
+   "date": "2026-10-29",
+   "source": "부산경남대표방송 KNN 뉴스",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-10-30",
+   "health": true
+  },
+  {
+   "title": "국회 복지위, 부산 침례병원 공공병원 전환 연내 결론 촉구",
+   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9FV2xQZ0RqQVFyV1VMU0NoQy1zSndwVXlLWG8yQ3FfWkM4bWZtZ0p3RmpWVkJEb0F2VzAwVFpjU2tSQTJsUXJ1N1ZfZUdMZ1J2UXV4WVZTR2VEZXJSYzE4?oc=5",
+   "date": "2026-10-29",
+   "source": "뉴스1",
+   "score": 2,
+   "track": "",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-10-30",
+   "health": true
+  },
+  {
+   "title": "보건복지위, 지역 필수·공공의료 현장방문 실시",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE41aHZVSm5aaVpaRVZRVHFuMmo3VTFPVDM0Z3NmdjVnS2hGcllpVm1FQ2VSaERpV3VfbjljZmpFTGxoNk9mWFFleWZUeFI1WHktcl95M2lmSU41RlVvVGllclUxRUdpdw?oc=5",
+   "date": "2026-10-29",
+   "source": "press24.co.kr",
+   "score": 2,
+   "track": "",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-10-30",
+   "health": true
+  },
+  {
+   "title": "코로나 백신 피해보상 특별법 1년···피해보상 심의 마친 건 2.6%뿐",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1QMXNsUWtpbFFvQjcwVk9oelZVNF84NW5jVXhucWx4cWM3NlpMSjVJQVA4UC1DdjZ6ZEVJcmhxZDJobmw5eC1kLThKVDdWZzZsZXg3VkRGMWdaNkpzY0dYWXFsNExNdWg2TWfSAW5BVV95cUxQZFlCWVZ4M1RXU3FDQ2lENUdOQUJhZjROMnEtRk11Tjluc1JoNmZ1bFYzYVJoVzROZUNmM1M1SVpQLWs5RnpQbFFWZnNnUTI2YUpVem9hMTNQOGIzWnlUUkpURkFSdzR3MlctZnFwdw?oc=5",
+   "date": "2026-10-29",
+   "source": "더메디컬",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "예방접종",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-10-30",
+   "health": true
+  },
+  {
+   "title": "[2026 국감] 김기웅 \"한미 훈련 일방 취소, 이게 동맹 맞나\"…靑 \"사후에 협의\"",
+   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1Hc2JDQTBTOW8tQi1FWFA4cmtaelJiOFJwcVZ0bkh1NU1IakxYbWVjc0h6UUstS190MVA5dzZ6eG12TkxBaUtiT0twX21SekctY0pN0gFTQVVfeXFMTUdzYkNBMFM5by1CLUVYUDhya1p6UmI4UnBxVnRuSHU1TUhqTFhtZWNzSHpRSy1LX3QxUDl3Nnp4bXZOTEFpS2JPS3BfbVJ6Ry1jSk0?oc=5",
+   "date": "2026-10-29",
+   "source": "더팩트",
+   "score": 3,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [
+    "김기웅"
+   ],
+   "first_seen": "2026-10-30",
+   "health": true
+  },
+  {
+   "title": "이재명 정부 집권 2년 차 청와대 국정감사, 여야 공방 격화",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE13d2x2dkZJMnR0TTNUaV9TTW9wVVk1by1DY0ZHQ015UHFHU1BuRXZkWE9hWV9QQV9EYkVHRkFYc3RRNklmRVFZU3kyTHBaQndtLUE3S3VQVEhwVm8zMlFnelRqTWZOZGNUY0pj0gFvQVVfeXFMTnAxeEtGbGVxTnQxeEJXUmZBaUd5OHR5WTNUaEFPM2MwaVVfblpUQXY3Yl80UTFQZ29QWkZ3Y2lNVklUQ2V3eC1xNHNaNG5OSG13a3lQd2lPdmptRFN1STl6cUhSMV9sTURmRmhnWkdF?oc=5",
+   "date": "2026-10-29",
+   "source": "한스경제",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-10-30",
+   "health": false
+  },
+  {
+   "title": "옛 침례병원 현장 국감서 발언하는 백종헌 간사",
+   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5BQ2VWSlF0cFd5a0FwV0VyM2lBQ0M3YWVFQmFURFRqM3B4TXBpcHJITzJoSmNfRjJXNDNjOUg2blA5MzV6MWExYmdCbw?oc=5",
+   "date": "2026-10-29",
+   "source": "뉴스1",
+   "score": 3,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [
+    "백종헌"
+   ],
+   "first_seen": "2026-10-30",
+   "health": true
+  },
+  {
+   "title": "백종헌, 국회 복지위 여야 위원과 침례병원 현장방문",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1xVWJaWVFIbmJHdHpFenRXTXViMXJYZS1scEpYb2ZhbHR4QzhmcDJYQ25YZDRoOVpSWVZ3MnBrVTUzMmprbS1SbTUzY3RWYXFVZFVuUDExZzdCOXcxUy13Ml9Rbm5vUnpRUWx4d0gzcTVoRGV6?oc=5",
+   "date": "2026-10-29",
+   "source": "글로벌뉴스통신GNA",
+   "score": 3,
+   "track": "",
+   "agencies": [],
+   "members": [
+    "백종헌"
+   ],
+   "first_seen": "2026-10-30",
+   "health": true
+  },
+  {
+   "title": "옛 침례병원 현장 국감서 발언하는 서영석 간사",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5JRHE5SnVIaDk2Ymh1el8xb3ZOMXJiR0ZoMWNGenpCYmNUU2gtSW9WbDlHTXFPQW9vUWFxT0M3d1k0WHc2dHk4bTlUaU5RZ0k2aU9KS2RaaXNBdi1YY3B2NG5Pb0p5QWJNSkE?oc=5",
+   "date": "2026-10-29",
+   "source": "네이트",
+   "score": 3,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [
+    "서영석"
+   ],
+   "first_seen": "2026-10-30",
+   "health": true
+  },
+  {
+   "title": "옛 침례병원서 발언하는 이만희 보건복지위원장",
+   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFB1RnJ3bnRURWpQVS1NczdNWEhPZ0szWmhFalBqbTNjNFhrWmlrTDByWWtvTkxRMWpPN1BJVWVUYmc2cF9PZEx2WmRZWQ?oc=5",
+   "date": "2026-10-29",
+   "source": "뉴스1",
+   "score": 3,
+   "track": "",
+   "agencies": [],
+   "members": [
+    "이만희"
+   ],
+   "first_seen": "2026-10-30",
+   "health": true
+  },
+  {
+   "title": "이수진, 건강수명 격차 지적…복지부에 재발방지·예산 확보 촉구",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9TSkhWSEpaelNiTXl2ZVlXWHpieWFXbFZ1S2NndVV6em9LQlhMY2Fwc0pDNENaU1V6Q19mTWZkWktSNWhlLWpGY1RfWUlvUnBJUFJ2Yy03ZUM0Z1lXSDMzWXViVzNmaUVCTmRWalEycTHSAXRBVV95cUxOZ3NkM3JYMkQyNmF4cklIVmdOblJXOVN6UGF5akR2Tnp0eGNpaGk2TUlsM2VGOFZ5bHlFeXBEeXFJekVBcmw3UEt3d3k0bDgxQUpoQlBlNV9YT29fQlh6Z19UOFMtNkF1d1JjSmh5bXlIUHVBcA?oc=5",
+   "date": "2026-10-29",
+   "source": "시사연합신문",
+   "score": 2,
+   "track": "",
+   "agencies": [
+    "보건복지부"
+   ],
+   "members": [
+    "이수진"
+   ],
+   "first_seen": "2026-10-30",
+   "health": true
+  },
+  {
+   "title": "[2026국감] 조배숙 \"연세사랑병원 대리수술 의혹 재조사·급여비 환수 검토해야\" |",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9HaDVjeWZ0SnU1d3ViamxUdVpld2lVWk9HYVo0eHg1Y3hjOGF2TWVhUHpLY3hVZndKbkxMOHFiSXJhTV9sQ2hWM2NwTmdGUXY3dlhBc2VGR3Z5TThmNk1yR3hpWTFlbnp0My1rSjFqa3NxVGhWMGJF?oc=5",
+   "date": "2026-10-29",
+   "source": "스트레이트뉴스",
+   "score": 3,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [
+    "조배숙"
+   ],
+   "first_seen": "2026-10-30",
+   "health": true
+  },
+  {
+   "title": "수술 55건만 본 합동조사…조배숙, 연세사랑병원 재조사 요구",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1NRmhRb1VTcFlLbjVMOEQ2b3VjVUs1RHN1X01BVGxxVGY3M19iWlJZMmVwS3FkSFVuVk8wSUFIc2M4U0t1aElYQlZnM3pqVmI3Z0VaTGY3a3VkZ3l4UFVLMUdkdjRCSkxQ?oc=5",
+   "date": "2026-10-29",
+   "source": "SR타임스",
+   "score": 2,
+   "track": "",
+   "agencies": [],
+   "members": [
+    "조배숙"
+   ],
+   "first_seen": "2026-10-30",
+   "health": true
+  },
+  {
+   "title": "\"우리는 과연 받을 수 있을까\"… 국민연금 30대 수급 가능성과 연금 개혁의 구조적 실태",
+   "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9QWGwzenVGWjRDS3RjWlRlQl85VXZvUE4yNVp5bmpQaUZSSUhaSTZpdURzbFVDUG01VzFtZ3ZpT01aSDRsOVJzYVNR?oc=5",
+   "date": "2026-10-29",
+   "source": "얼리어답터뉴스",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "연금",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-10-30",
+   "health": true
+  },
+  {
+   "title": "국감서 구멍 난 육아정책… 산모·신생아 지원금 미지급부터 어린이집 입소대기까지",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5pTVR3czM2Y3VXQjRabkh0SFoySmNxbDYxSXRlUVlzVWdGMllUUkRubkVpVF9BeXozejMtekx1RGVJb3Z6MWJua0NSSjdYYkx0eGVzdWdoMk8wZ25sZmpzdlZvWU1JdWc2aV9RMw?oc=5",
+   "date": "2026-10-29",
+   "source": "베이비뉴스",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-10-30",
+   "health": false
+  },
+  {
+   "title": "용마로지스, 4년간 가정 내 폐마약류 수거…교정시설로 사업범위 확대",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9RUXJFWXl6X00zWk5jWGVtcEk3WmtKTGY2WjlVMlo3WS1UWnFiR0pfTTUxVVNBb0cxTXBNVHFxZjVvZVBLRmtKUmE5ZjdPSWl6a2k3SGRVN0hiMWVwWW5Tam83aURoM1Ji?oc=5",
+   "date": "2026-10-29",
+   "source": "시사캐스트",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "의약품·마약류",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-10-30",
+   "health": true
+  },
   {
    "title": "“가정어린이집, 영아전문기관으로 재설계해야”…국가 책임 강화 촉구",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBNRVJSSk00aHV2Q2RZM2hvTU1uVGJ5Y2NFdkR0ck92UV9IZXVqTmxndTJOS2VQUmtGWkxxb1I4NzRPU3h1bjFsNzNNdHpMdFEzdllNdUVJT0s1c0RlVlh4YWNLVnBmM0phWl8tSg?oc=5",
-   "date": "2026-10-29",
+   "date": "2026-10-28",
    "source": "베이비뉴스",
    "score": 0,
    "track": "소관사업",
@@ -521,6 +758,42 @@
    "health": true
   },
   {
+   "title": "[국감2026] 野 “국민연금 회의록 제출하라”…정은경 “정치적 결정 아냐”",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE96cVlWaTlOVDdEczR4dlN4STlEWDVzU0JEbUk3THlzTnpYNHljR0FSUDBYV281RUJYQVFZa01ucUd3dFhrNF9iYS01cTFhUU1vemgtcXpnZkMwdGloVGF2TmkxQnBMWXpWM2tn0gFvQVVfeXFMTmZJcC0wc0Q4ZkpOUEt0eUZMMjlEcGpWT3pibGptQVVycW50Z0F2ZVpsOHhlZW5hNVVxbTgwb2EyRlprS3pENmdxQi1QUVd2Rk9WV1pYdWJqOVA3dy1UQnI0YXhpZWhJdVY1UHJFTlNV?oc=5",
+   "date": "2026-10-28",
+   "source": "한국아이닷컴",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-10-28",
+   "health": true
+  },
+  {
+   "title": "[국감] 현대약품 \"임신중지약 허가 보완자료 다음 달까지 제출\"",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE55UXNzZDZpYl9tWkxHM0FWVFZ3SDFJTHRfWktHdGNTNzVBX21FRm9XbW9UVG56dnFWN1Ywem1va0tOVTVURjNYNTd0d25FaUpSeWJra0dyTWVrSWRuZTRjQW0zNHRLdU51QUE?oc=5",
+   "date": "2026-10-28",
+   "source": "서울파이낸스",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-10-30",
+   "health": true
+  },
+  {
+   "title": "[국감] 경찰청 국정감사 진행하는 정보위원회",
+   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5oNFB5MWsxVlRrLWJ1R1QzV1hLX2ZiQXJLTnZlamsyN0RhdmhLSmgtSlpCRjczcEpzenJRbEhwQVBHVUZCYThnd24zRQ?oc=5",
+   "date": "2026-10-28",
+   "source": "뉴스1",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-10-30",
+   "health": false
+  },
+  {
    "title": "[2026 국정감사] 조기 보호종료 아동 자립지원 ‘구멍’…\"18세 전 관리 강화해야\"",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9uZ2xqaUFzSHNHNi1hSGs2Tk1XSVFpZkdzWVFlVnlNWlE1NUFMMTVSOGRISzVZV2ZnOTRaQjA4ZGw5ZWRoWVhScWl2TE1GbjlpMnlMaERVY0FNeVJ1SXRTZkhoNXZtYmk4ZGY1Rg?oc=5",
    "date": "2026-10-27",
@@ -582,7 +855,7 @@
   },
   {
    "title": "국회, 오늘 외통위·보건복지위·기후노동위 등 종합감사",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1YX3V2NGstTkFxZEZmODFsYnhyejhfb0thRFVRVVMxWUs2OTNMLWtJeWdNam9idzU2amNjYlVndVU4b0NBX3RBOTJtVHNwYlJQNTB2QS1FZUhENGh1Mkw4ZEtRRlBUQXozeXp0eC05MER6MTZB?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9GM0NtaTFUMTd3OTU0R1l3VGlhOHJzZGFEaEkyVTV0R3pBb2ZPWTBoc3pYRU81WFdabWlLZEJkaUgtTFpYb05fMS1TUm05ZzVQQ1JRa0tWMFBFRU82YzFN?oc=5",
    "date": "2026-10-27",
    "source": "조세일보",
    "score": 2,
@@ -606,7 +879,7 @@
   },
   {
    "title": "외통위 등 종합국감…한미동맹·김정은 방중 쟁점 될 듯",
-   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1lYlFkRzZBMDRsSngxT0luMHp5VldySXpMNGJYVXhfRkx4WUx4UFBrd2pGdi1xbDRndHI3cEN0LWlsNzhUQUN2V3dTQVpOME1OYnQtbF96MGNSNlhVOTRpUFZBdG13dFhOdGxyNU1mcDBRTFdLdnlpONIBeEFVX3lxTE1lYlFkRzZBMDRsSngxT0luMHp5VldySXpMNGJYVXhfRkx4WUx4UFBrd2pGdi1xbDRndHI3cEN0LWlsNzhUQUN2V3dTQVpOME1OYnQtbF96MGNSNlhVOTRpUFZBdG13dFhOdGxyNU1mcDBRTFdLdnlpOA?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBLWWJ2cDZjVGw3cjVsRnoxSXpDWXRSalBpVXNVN014RGEwS29SVkxBZjV5VjktYVM0bW5STkJJLVpRUkZwUDhjU29SSGxjZzdVWEFIQ29OcVU1c1dtWHVkeNIBeEFVX3lxTE1lYlFkRzZBMDRsSngxT0luMHp5VldySXpMNGJYVXhfRkx4WUx4UFBrd2pGdi1xbDRndHI3cEN0LWlsNzhUQUN2V3dTQVpOME1OYnQtbF96MGNSNlhVOTRpUFZBdG13dFhOdGxyNU1mcDBRTFdLdnlpOA?oc=5",
    "date": "2026-10-27",
    "source": "뉴시스",
    "score": 2,
@@ -660,7 +933,7 @@
   },
   {
    "title": "국회 보건복지위 종합 국정감사",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1ySU5Qc2E0RTZucm1QQVZ0S29QMVl0c1pnazJSR2hSM1MxaDl4Tzl3alZ0cDZaYXJEZWEwLXMwbXVvS0c4SWdwNWtEN3l2RFVoc0ZVNDN2RU9MVzRXNHota9IBYEFVX3lxTE1ySU5Qc2E0RTZucm1QQVZ0S29QMVl0c1pnazJSR2hSM1MxaDl4Tzl3alZ0cDZaYXJEZWEwLXMwbXVvS0c4SWdwNWtEN3l2RFVoc0ZVNDN2RU9MVzRXNHotaw?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9CR1FDOTZ1bDFhMF9aVjlUVTlfYlp4SFRDUHpJNjIzU1poSGM0Yjd0THhYdktDQXRnemRVSnpqT1lCR19BQ3JqS1FwbWFySUxWWFktRDc2V3d6b1XSAWBBVV95cUxNcklOUHNhNEU2bnJtUEFWdEtvUDFZdHNaZ2syUkdoUjNTMWg5eE85d2pWdHA2WmFyRGVhMC1zMG11b0tHOElncDVrRDd5dkRVaHNGVTQzdkVPTFc0VzR6LWs?oc=5",
    "date": "2026-10-27",
    "source": "연합뉴스",
    "score": 2,
@@ -778,7 +1051,7 @@
   },
   {
    "title": "복지위 '리밸런싱 회의록' 공방…소아응급실 수사엔 한목소리 질타",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBQTElNTW4tTEpLR1c3bzdPLWRWZDQ1UmtwdmZ5dnZqdVhLdFprT0FMa0xrbkl5YllFR0RpNE1ZWG12bjY1cEtWOGhhRTBhY1NMTXBraXVfSW5OWjNwQWh6StIBYEFVX3lxTFBQTElNTW4tTEpLR1c3bzdPLWRWZDQ1UmtwdmZ5dnZqdVhLdFprT0FMa0xrbkl5YllFR0RpNE1ZWG12bjY1cEtWOGhhRTBhY1NMTXBraXVfSW5OWjNwQWh6Sg?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE55SzREV1plSzFiZkduSy1ERHR0TTFBeXRzMzRpWWczTmtrSnI3Q0ZtNG1SU1dSRlYxUlNUdWx4dkoxR3BGMXoxRHNhR1JLVXVmTFNwQ05JdmxyZFXSAWBBVV95cUxQUExJTU1uLUxKS0dXN283Ty1kVmQ0NVJrcHZmeXZ2anVYS3Raa09BTGtMa25JeWJZRUdEaTRNWVhtdm42NXBLVjhoYUUwYWNTTE1wa2l1X0luTlozcEFoeko?oc=5",
    "date": "2026-10-27",
    "source": "연합뉴스",
    "score": 2,
@@ -865,18 +1138,6 @@
    "health": true
   },
   {
-   "title": "[국감2026] 野 “국민연금 회의록 제출하라”…정은경 “정치적 결정 아냐”",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBIOFl4MTl6TElQSDJ6SlhtWDJJWU5RbHVNWjNBMWVjdFZWMGVuNWpmNnJpWG9DaklzZ3hfaU5jVGJIb0lQRHdwUVNDM3FrWk9Namo5X3hhU3J1WmlEbUVOckJwbnFVSmtXLVRHX2dnUV9HUV9m0gF0QVVfeXFMUEg4WXgxOXpMSVBIMnpKWG1YMklZTlFsdU1aM0ExZWN0VlYwZW41amY2cmlYb0NqSXNneF9pTmNUYkhvSVBEd3BRU0MzcWtaT01qajlfeGFTcnVaaURtRU5yQnBucVVKa1ctVEdfZ2dRX0dRX2Y?oc=5",
-   "date": "2026-10-27",
-   "source": "주간한국",
-   "score": 2,
-   "track": "국정감사",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-10-28",
-   "health": true
-  },
-  {
    "title": "종합 국정감사 질의 답변하는 정은경 보건복지부 장관",
    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE00anA5RnZXYmdwUGNMTFZNWUFfUkdUQ1NRb2JKei1yMFE5WFlUbUtnRW1CVXhpN1BEY1Z4VTExZ1JUTkI0NFJqaUNOVUVVVTJKc1ZzREJZTlpzVC1nel8xSw?oc=5",
    "date": "2026-10-27",
@@ -906,7 +1167,7 @@
   },
   {
    "title": "[국감2026] “마사지 결제 안 하면 예약 ‘NO’”…‘산후조리원 부가서비스 강요’ 퇴출될까",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1xbnZicUFKRWVOTndHMzZGTS16Y1RVR1o4NmdjZ3pXUDBKQUhFaDFSaFlKdDZZT1FPRmoybmpMZFZybWNVcnFJbTZtVjRoU0hzdkpIMlpCekxiMEJyR2V3c05sTTQxdVFJdHJObHZESjBSNDY30gF0QVVfeXFMTXFudmJxQUpFZU5Od0czNkZNLXpjVFVHWjg2Z2NneldQMEpBSEVoMVJoWUp0NllPUU9GajJuakxkVnJtY1VycUltNm1WNGhTSHN2SkgyWkJ6TGIwQnJHZXdzTmxNNDF1UUl0ck5sdkRKMFI0Njc?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5FS0dDcG5MUmpsOVVaWHVxRHRBaXBrS05oX043M2JRUkVqNzRoUU56SXhpN3lBRl9TU1d6LW80SlZuQlZMSEh4MzNrRkxHQ19ySENaWjZxTzVUaGJ2NERGcE04dkhMNFFRMkMtdkMzaGbSAXRBVV95cUxNcW52YnFBSkVlTk53RzM2Rk0temNUVUdaODZnY2d6V1AwSkFIRWgxUmhZSnQ2WU9RT0ZqMm5qTGRWcm1jVXJxSW02bVY0aFNIc3ZKSDJaQnpMYjBCckdld3NObE00MXVRSXRyTmx2REowUjQ2Nw?oc=5",
    "date": "2026-10-27",
    "source": "주간한국",
    "score": 2,
@@ -992,7 +1253,7 @@
   },
   {
    "title": "김성주 \"국내주식 유지 안했으면 손실\"…'국회 지적'에 국감 중지(종합)",
-   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9YbWtQeVdNWl9JTk9NS2NLR1ctczUzOFFyNmlsT3QwWW9aWjJGMHk0cVkzSjBpNFpBUV9HRmxYek9zakZnQUwyZGRUWGd5ZzU0dXBSUlhKNEIzNzBHaER2dEtaQklRT0VwTDR3UHJJWEI2T21iV2lDT9IBeEFVX3lxTE9YbWtQeVdNWl9JTk9NS2NLR1ctczUzOFFyNmlsT3QwWW9aWjJGMHk0cVkzSjBpNFpBUV9HRmxYek9zakZnQUwyZGRUWGd5ZzU0dXBSUlhKNEIzNzBHaER2dEtaQklRT0VwTDR3UHJJWEI2T21iV2lDTw?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBQaVVLNHU3ZDNxN0VVa0Y3VGI3akltbDItZlV1LXJJYU9tWl9xMTRjamNva3JjLWdOTW1URUgzZ3h1TkNKXzk5MjJsblpYa2h6QXJETkpJRzBVYWlybU5EcdIBeEFVX3lxTE9YbWtQeVdNWl9JTk9NS2NLR1ctczUzOFFyNmlsT3QwWW9aWjJGMHk0cVkzSjBpNFpBUV9HRmxYek9zakZnQUwyZGRUWGd5ZzU0dXBSUlhKNEIzNzBHaER2dEtaQklRT0VwTDR3UHJJWEI2T21iV2lDTw?oc=5",
    "date": "2026-10-27",
    "source": "뉴시스",
    "score": 2,
@@ -1066,7 +1327,7 @@
   },
   {
    "title": "종합 국정감사 질의 답변하는 오유경 식품의약품안전처장",
-   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1MbWhDcks4dXRtVG9yV25MNHk3OTRtUnIycHhYWVN4OHVtWFAxeEdDZElUSTdkZ243N2JfbTFyZWhNSHRudjdzTVBPWFRIalVLSUxoWmhsUHYwOTFtVTY3ajdJYmZjYnNfcEVuSWZCLUJieVBLU1FHTNIBeEFVX3lxTE1MbWhDcks4dXRtVG9yV25MNHk3OTRtUnIycHhYWVN4OHVtWFAxeEdDZElUSTdkZ243N2JfbTFyZWhNSHRudjdzTVBPWFRIalVLSUxoWmhsUHYwOTFtVTY3ajdJYmZjYnNfcEVuSWZCLUJieVBLU1FHTA?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1mV3plYTVqTG9jS3hOVmk1QUNmckxMTG9pNHhpdnRDUG5uRGt4OTVXU1BQX1V2NzBwT19RYjhici1ZeDVuTGV1NWhZUjcwTVhCNTJLX3l0cUNhanhCNFpkdQ?oc=5",
    "date": "2026-10-27",
    "source": "뉴시스",
    "score": 3,
@@ -1246,7 +1507,7 @@
   },
   {
    "title": "(종합)[2026 국정감사] 불법 하도급 용역부터 연금 손실까지…복지위 종감 뜨거운 공방",
-   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1SSUp2RzB4YlJ2ZnBKNFJGNTh2ekpJb3ZRSy1nVHI1cF9zcFpmV3Y3bFVXQnowcFBLYjQ4RVBqbGowY2FteXg0bWpKYmYyVFRhQ0h3ODFUWm_SAVhBVV95cUxNUklKdkcweGJSdmZwSjRSRjU4dnpKSW92UUstZ1RyNXBfc3BaZld2N2xVV0J6MHBQS2I0OEVQamxqMGNhbXl4NG1qSmJmMlRUYUNIdzgxVFpv?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9BSThoazlSTlNXdlhaUGJoRzFEendkNENXODBIeGRkb1ZLeEtQZi01SG9iNWluUjVGdmJ4cjlaTFVNR3dqd2owd0VBdHI0RmFLbXpFWUprNGdoZ9IBWEFVX3lxTE1SSUp2RzB4YlJ2ZnBKNFJGNTh2ekpJb3ZRSy1nVHI1cF9zcFpmV3Y3bFVXQnowcFBLYjQ4RVBqbGowY2FteXg0bWpKYmYyVFRhQ0h3ODFUWm8?oc=5",
    "date": "2026-10-27",
    "source": "아주경제",
    "score": 2,
@@ -1437,7 +1698,7 @@
   },
   {
    "title": "[2026 국감] 마지막 날까지 증인 놓고 여야 충돌…제넨셀·국민연금 검증 난항",
-   "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNOHZTMTk5ZEJqM3RieEEtQUFpSVM4eWJrSXRVbDNGck5pTlliZ0NxOFBITDBkMHIzZDZxUkFoVXVrWU5HcWlvRFJzVTAyenlmbjdUM0I2Y1dVX0ZodkJtazNUYXVzSXdBQ2dqTVRnSEpFMzBQSlpXRmdjUHlBNzRGdUNBT3VkLWlnLWxRY3lDTDJSZWs4TzVvT29pTUtDck5OWjZ3RldnbkoyR3NCc0hUWDNid2t6OWgyc3NySW03S1M0cFZPeFBfeGFvMGotWTdCMG80T29aNWZYakRnSzJ3bl9B?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE0zRUUxZFE1S2U5Y2g1LXVXSWxfaDMzUUhmam5ZTG9Ea0E2MlN2OEtERTNCQTM0MjB6Qm9IdVltblhkcGNsNlhsZTExeTE3X3ZWVEh4Nw?oc=5",
    "date": "2026-10-27",
    "source": "데일리안",
    "score": 2,
@@ -1742,19 +2003,6 @@
    "health": true
   },
   {
-   "title": "\"코로나 백신 보상 심의 끝난 건 2.6%뿐…실질적 구제안 부족\"",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1rWWJ3Y3FQd3UySkl3ay0yZ0FkWTJ3UjA0U3FYeUlXS2Rvb2JSUjFydlhIS3dPWlh2RXlDX0pxcWlkanFNZFdFUTR2Qm1ib1pRVzRtbW5GVXRYZzhZX2pSU18xWk5EZ2FPQm1Ldkt0MNIBb0FVX3lxTE1rWWJ3Y3FQd3UySkl3ay0yZ0FkWTJ3UjA0U3FYeUlXS2Rvb2JSUjFydlhIS3dPWlh2RXlDX0pxcWlkanFNZFdFUTR2Qm1ib1pRVzRtbW5GVXRYZzhZX2pSU18xWk5EZ2FPQm1Ldkt0MA?oc=5",
-   "date": "2026-10-27",
-   "source": "머니투데이",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "예방접종",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-10-28",
-   "health": true
-  },
-  {
    "title": "\"요양병원 사회적입원 15만명?…판단 기준부터 공개하라\"",
    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9xUGN3aU5OMTBJQ3Qyd3phY1hHYWRuckc4WjhzVy1SeVhZdWlRbUZ6WEFLd1BudF9BMUd3VTZNZG0tZUhaVW9QdGhDaGhqdFF3SER1UjlMYkpJd3QxZ1F5M3RFSk5tdG02M1V2YlUxUkFXUQ?oc=5",
    "date": "2026-10-27",
@@ -1989,7 +2237,7 @@
   },
   {
    "title": "여야 복지부 국감, 임신중지약 검증·AI 취약계층 보호 한목소리",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBFVjZrSVZabjAyZVg2U0d6eWFGMGREQmxKUEd6SENIQlcxYnVwY2ZMRDJ4OTdmY1k5TXo4M2l4dExoY3NXT3FLSXNGUTltM1FXcVptSTNET3Q3azJPYXZ1bnpJaDRRUEtWb3NMMtIBb0FVX3lxTE52YVdpR3JVamVabURvVVBGMVlEYzJtMFdHU21TOEtnODFCMGIyV0pEMldhblkxNDRmT0JWbVRoSDkyLWwzYk1sU0hLMW5qQ1FrMU9xeG1lUzVpWWdqQ0NHWEk1eVZxdW1Tbk8wVkxDMA?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE52YVdpR3JVamVabURvVVBGMVlEYzJtMFdHU21TOEtnODFCMGIyV0pEMldhblkxNDRmT0JWbVRoSDkyLWwzYk1sU0hLMW5qQ1FrMU9xeG1lUzVpWWdqQ0NHWEk1eVZxdW1Tbk8wVkxDMNIBb0FVX3lxTE52YVdpR3JVamVabURvVVBGMVlEYzJtMFdHU21TOEtnODFCMGIyV0pEMldhblkxNDRmT0JWbVRoSDkyLWwzYk1sU0hLMW5qQ1FrMU9xeG1lUzVpWWdqQ0NHWEk1eVZxdW1Tbk8wVkxDMA?oc=5",
    "date": "2026-10-27",
    "source": "한스경제",
    "score": 3,
@@ -2077,7 +2325,7 @@
   },
   {
    "title": "조배숙 대리수술 의혹 조사 미흡…복지부 재조사 필요성 검토",
-   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBMQVFfck5tWHNsRmNoUHF4ZlVVQlRZZVBCdjFyVjhFMFZmenc2Q2FTNGR1ZUYtWjRCU2dxM3BmZzNDYVlZTVdfd2wyQ1JyYW5QU29MYklEYnJtXzJtOUE?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wQlliSUIwc1BFWUI3UnlJSkpXUkkxZTVBUDF6c3pseGZZM2dEZ3JidldseUVfQ2pZWXZmeUlWbzZuaHRwenRmal93Qlh5VmxvWktEelVyZGtNaGZQbU9CT3ZHYw?oc=5",
    "date": "2026-10-27",
    "source": "불탑뉴스",
    "score": 2,
@@ -2157,6 +2405,32 @@
    "health": true
   },
   {
+   "title": "국감 답변하는 정은경 보건복지부 장관",
+   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9YT1Z5Q01DSFlyR2U1anM3UndobzBKbHctQlZkd18wQ1RtU1U1N01JY1lFalVYTm5FdHkzYjNlQW1mUExCR1BpcUxPRQ?oc=5",
+   "date": "2026-10-27",
+   "source": "뉴스1",
+   "score": 3,
+   "track": "국정감사",
+   "agencies": [
+    "보건복지부"
+   ],
+   "members": [],
+   "first_seen": "2026-10-09",
+   "health": true
+  },
+  {
+   "title": "[국감현장] \"부지 확보했다더니 사실과 달라\"…전남 국립의대 심사 과정 공정성 논란",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAwbGZqTDJJZjBwbVl1T0g0aFVfemRFVkViWGhsRFZCQm9KZ3Z6SXJoc0JPOEdoZkJIN2pLSThScDBkaF9HaFo4azFrZnA1VE14UXZ6aF9aSFpVNlJjZC0wUDdzQldpZ0dWMnJHUQ?oc=5",
+   "date": "2026-10-27",
+   "source": "메디컬투데이",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-10-30",
+   "health": true
+  },
+  {
    "title": "이번주 복지위 국정감사 ‘임신중지의약품 다시 다룬다’",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBTWkVsUzQzQmVTSU9SeHkyeHkwTE9qQkxRQjE3ZXhSWUJ2Vy1xNTltcm9yQS1zVm5oekZ1NnZzdTRKenZjQVFfanFjUzBrYmlLWV83VTlGM0xseXdCYkxjRlg5M1RjUUxZSUo4ZA?oc=5",
    "date": "2026-10-26",
@@ -2232,9 +2506,9 @@
   },
   {
    "title": "[2026 국정감사] 정보공개 총괄 행안부, 국감 지적 처리결과 8년 가까이 안 올렸다",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1ac1d3c0xXZVduRmJrbUxBRVpDQ3dRU3dMMmFqMDRiZDV5c2tVSmdIMGZ3ZFZNckN6Sm1ZMmdUS1R3OS1BSC0yQ2hSZFBTSXdpeENLamxwWHd3MFZSSW5IWmRjWWQ2Rk9SWTJITmY1QdIBb0FVX3lxTE1ac1d3c0xXZVduRmJrbUxBRVpDQ3dRU3dMMmFqMDRiZDV5c2tVSmdIMGZ3ZFZNckN6Sm1ZMmdUS1R3OS1BSC0yQ2hSZFBTSXdpeENLamxwWHd3MFZSSW5IWmRjWWQ2Rk9SWTJITmY1QQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1zY3V0SEI2cGE2VVlCSUxyR3BvWEtMeUdIYmNnZ3pwd1lBdlZNNlAtQ2NDQlg0SG5ITnFyM0VubVlyZmNQbHlrNEdJRVI4UVVCQVFReU1SS3lDQlFkRllSSldHNlpUV3ROb3ZkYzVR?oc=5",
    "date": "2026-10-26",
-   "source": "서울일보",
+   "source": "https://www.seoulilbo.co.kr/",
    "score": 2,
    "track": "국정감사",
    "agencies": [],
@@ -2256,9 +2530,9 @@
   },
   {
    "title": "[2026 국정감사] 범죄 드러났는데 아이는 어디에…출생미등록 아동 126명 행방 몰라",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBENG9xZmFjM28yTkhpbE9INklRZWk4QWVQLS1lRGhxS0JvZjl2emNUTU44eFVSTGsySzRJS2wwT0Y4R3NXTTFGYUN1T3ZTVEpnRlMwTE92dFB4cGNCSlo3VDFQLVU0WDhvWEFv0gFvQVVfeXFMT3F6ZUU4ZFNsZHVEQW15WnhTNVZWM1VDVVFRMUtnV2ZBVE1Bb0FDMWhCclNydzk1VTg1dzlSTkhKOXdXcUREY0FOVHpCN21nTW93RjlMNmNublRWNXJlZ3BFZHZEaHRTckRYTDE4aGJR?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5jcUpYNXlRRDI3MWJkaElMWkxLaHR3SEI5SnJ5Vi01YmE1U3I4U1RCMEM0V2Y2WVNnS1lCOVgya2NSUHRDNVA5eDRJRUtHZ3lDQVhXLVMybVZIQ2FZd3doV0pVdmVNR1VvZm56YnVn?oc=5",
    "date": "2026-10-26",
-   "source": "서울일보",
+   "source": "https://www.seoulilbo.co.kr/",
    "score": 2,
    "track": "국정감사",
    "agencies": [],
@@ -2432,9 +2706,9 @@
   },
   {
    "title": "[2026 국정감사] 국립암센터 낙상 늘어난 걸 인증원은 봤다…무엇을 고치게 했는지는 답 못 해",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1ZYkd3b1BObEFkeFM0NllpR3NwbXdZaDVuT3NHTUE2TTRyV1p3WHIyR2huQUJ6bUdQdjI5RDllejFER0tENzFlWVVvOXRILXEyb2RmenJwRzNMM0xaMkx4TUp5a0JUaWR2eGVUWExB?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE4zSkc5S1hsd2lTc0I0ZE1TYUhoRXkwYUZ0OFVNZXdHY25kYnROUVh0bHdGbUZXdWtuTTB6Vk8wRy0tcUI1R0EtUWExdDFuWTJnUXhmMW9yZWFPSUZWdHlISU5JbGhzdmdmTDB30gFvQVVfeXFMT3NzZ3lfandPeDhkcU9vRlNHOXN2VHZMbm91QlFnWmVvRkVSRFlFT0JlQ0Fybk53NWg0RGc2SGVCTlZyNGlUQUZzMlVZQUl0djI4OXlrdVZMRW9kYjdvU19WQnZ1QnJfR0FGOVVzQV9J?oc=5",
    "date": "2026-10-25",
-   "source": "https://www.seoulilbo.co.kr/",
+   "source": "서울일보",
    "score": 2,
    "track": "국정감사",
    "agencies": [],
@@ -2494,7 +2768,7 @@
   },
   {
    "title": "병원 43곳 돌며 프로포폴 147번…딱 걸린 이유[마약, 숨을 곳 없다]",
-   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1Va2lxSjZSNkhZcnVjcjlsSXVTTHh1RnAzUWVxWTBqRldORDJmNGctS3RyMnpONks5RTVPcWpub1lUNVZMUmlxWE9JT09lUnlmQ2psSVhrMFNsYkhzSzRDWHpPM1ZoRkFIVko0S25JenNKQ3lYYmlBbdIBeEFVX3lxTE1Va2lxSjZSNkhZcnVjcjlsSXVTTHh1RnAzUWVxWTBqRldORDJmNGctS3RyMnpONks5RTVPcWpub1lUNVZMUmlxWE9JT09lUnlmQ2psSVhrMFNsYkhzSzRDWHpPM1ZoRkFIVko0S25JenNKQ3lYYmlBbQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE85aWZESGRDcF85U1p4dFRIbzFCYVZ2LVUwQjBOT3kxQ3FRWTYwX2VNTlJZTFAyVzhRMW4xN01yMUZjZEJkcWx6S0g2cm5pNkJkWlVWTGhZcDBLOHAxMEdPU9IBeEFVX3lxTE1Va2lxSjZSNkhZcnVjcjlsSXVTTHh1RnAzUWVxWTBqRldORDJmNGctS3RyMnpONks5RTVPcWpub1lUNVZMUmlxWE9JT09lUnlmQ2psSVhrMFNsYkhzSzRDWHpPM1ZoRkFIVko0S25JenNKQ3lYYmlBbQ?oc=5",
    "date": "2026-10-25",
    "source": "뉴시스",
    "score": 0,
@@ -2576,6 +2850,18 @@
    "members": [],
    "first_seen": "2026-10-28",
    "health": false
+  },
+  {
+   "title": "인구보건복지협회 회장 명의 국회 출입증 위조했다 발각... 국감서 논란",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1QTG9LMkZwVHZLZWFZTllTNklpMDdxdHBsR2xKdFdhdlR5Q3BIcjBRVEtLenp5TXdTYUdqWkpHQTRReXNReFlnV1JkNVBkR3NVTmtwMWJ1RkhxN0huWmpEdXh6SW93dUl5NTlEYg?oc=5",
+   "date": "2026-10-25",
+   "source": "베이비뉴스",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-10-30",
+   "health": true
   },
   {
    "title": "[국감]⑪ 시설 인권조사·BF인증·사법지원…제도운영·사후관리 허점",
@@ -2681,7 +2967,7 @@
   {
    "title": "[2026 국감] 권칠승 \"사망자 안구 적출, 의사가 해야 하나…의료행위 아니라 생각\"",
    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBlYzZHM0JraGVPemFFX3luN2NvVHM5cGdjZFhhWURNbXNMNEpzU1YzaWVmTFk4Sjk3Mlh1MG80XzBmZUlpZ3ZoVDEzQmxpaU1aUUdyag?oc=5",
-   "date": "2026-10-24",
+   "date": "2026-10-23",
    "source": "MEDI:GATE NEWS",
    "score": 3,
    "track": "국정감사",
@@ -2705,18 +2991,6 @@
    ],
    "first_seen": "2026-10-22",
    "health": true
-  },
-  {
-   "title": "[2026 국정감사] 사회서비스 바우처 부정수급 적발액 4배 증가…AI 탐지 조사율은 1.27%",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4zemlPMkVYOWFpTnNGdUVuRTJ6eHA4SnJhTS1EdEl3TlpfdlFVSXRwS0dKVGFLem0xYlN5cldmN2tnT2NrWVo4MmpFOTVxczNsXzFqaVRqc3RPbDU5ek5sTHhUZnYwN29vV19nNQ?oc=5",
-   "date": "2026-10-23",
-   "source": "베이비뉴스",
-   "score": 2,
-   "track": "국정감사",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-10-22",
-   "health": false
   },
   {
    "title": "원외탕전실 관리 방안 국정감사 계기 '현실화?'",
@@ -3033,6 +3307,44 @@
    "health": true
   },
   {
+   "title": "이달희,\"국가아동권리보장원, 실종아동·입양인 117만명 정보 분실\"질타",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBITGxYRTJUVG5PZFBMREdkUFYtMFNWc090QzZkbGMxeDhfeDFVcjF4UXJQMUNvcWNEeGJuN2p5a09abHlmRk1UaGtUVnNPU1VCU0N0dlk5RVZrWktsbnJDX2lCOTFSODNWUlRLdmh3S0V1TnlH?oc=5",
+   "date": "2026-10-23",
+   "source": "글로벌뉴스통신GNA",
+   "score": 2,
+   "track": "",
+   "agencies": [],
+   "members": [
+    "이달희"
+   ],
+   "first_seen": "2026-10-30",
+   "health": true
+  },
+  {
+   "title": "실종아동·입양인 정보 담긴 저장매체 분실…국감서 늑장 대응 추궁",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBPWGN6R2VZVHVhdVVjU2FJSDhMS0F5ejZ0QmdmNXEwd1V2Z0h3X3BTWEVyWG9ZQUtNNmpSRWtGSE04dm8zNE0xaDRpRnVvZ0J3ZDI0NXpWVE44MHE4R0pydXNNMA?oc=5",
+   "date": "2026-10-23",
+   "source": "인천게릴라뉴스",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-10-30",
+   "health": true
+  },
+  {
+   "title": "[2026 국정감사] 사회서비스 바우처 부정수급 적발액 4배 증가…AI 탐지 조사율은 1.27%",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4zemlPMkVYOWFpTnNGdUVuRTJ6eHA4SnJhTS1EdEl3TlpfdlFVSXRwS0dKVGFLem0xYlN5cldmN2tnT2NrWVo4MmpFOTVxczNsXzFqaVRqc3RPbDU5ek5sTHhUZnYwN29vV19nNQ?oc=5",
+   "date": "2026-10-22",
+   "source": "베이비뉴스",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-10-22",
+   "health": false
+  },
+  {
    "title": "[2026 국정감사] 입양정보공개청구 10건 중 1건만 전부공개…입양인 알 권리 우려",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1fY2tONXh4dlMwNGtiODRQeGFsS3otbERBa3cxUHQyYmdQcWZhOVk1ZGptUTMweFdaVWZxdVZnSnR6Qy1KYjdVOXNETEJZeDZQdEIxV1BQQ0thbjBPTkc3ZDRTdW9KbFRKNzNVeg?oc=5",
    "date": "2026-10-22",
@@ -3328,9 +3640,9 @@
   },
   {
    "title": "선택권 넓힌다더니 돌봄 시간 감소 우려…장애인 개인예산제 도마 [2026 국감]",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9VQ2JxRUppTXFuTHpKZHVwcVIwNFBxaEg2dWJPTkZ5QUluRzBqTDJ1N1gxYjgzR0NSYjJicF9BOWEtNlJSN1pHUXA2QnJoLThmSUpSQWZRVmlqdWM0NTZqRGoxOA?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8yc1F0VlpTM1MxMVdBM0JLM1lsdkc0c1ZoS2pyLU9HSERwVU80aUp1UEVaanBITjRWQWxPZWVDZ2h3UTRDSkUwSjNWdVQxX3UtZHZqM2JXTkl5NkZCTVJCN1VlMA?oc=5",
    "date": "2026-10-22",
-   "source": "쿠키메디",
+   "source": "쿠키뉴스",
    "score": 2,
    "track": "국정감사",
    "agencies": [],
@@ -3417,9 +3729,9 @@
   },
   {
    "title": "보건복지위, 9개 사회복지 분야 기관 국정감사 실시",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5UUzg1NGZhczRlQzl6ZmhLTDB6N2wwZi0ydXVLUVc2VS1fNW14WS1ZbkRzLXhwQl9MelZSd1p0UkI3djdUY0RuTENMZVZVd25TOTRMWTVPXzhsbE16VGRwX1lFeTRJUHRxbzZzUzlR?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9BVDNLaDZoOFgyNV9KQ0hSS1AwVkNqWU91RGxPZlRSd2R1YXNiLTJqUHUtUUU0ZnJSX0M1UHhPcjAtU2NZNGdYQVRMS29PMlN3WU9heXdqamkxRFp3cW56OUt1SkI5aVdPVHVoVw?oc=5",
    "date": "2026-10-22",
-   "source": "노동일보",
+   "source": "press24(프레스24)",
    "score": 2,
    "track": "국정감사",
    "agencies": [],
@@ -3662,6 +3974,20 @@
    "health": false
   },
   {
+   "title": "이달희 의원, “이재명 정부 국정과제 ‘의사과학자 양성’ 예산, 1년 만에 16% 삭감” 질타!",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5Nc1V2TENDN3RLTVFSNzJkOTJtbllBWnpTaXVzQWx1bFJQcFhTcGhibkZxWEFLQ180SkFNMjJvSklBZGFSdXozbE9NSi13ZWVpR0tQM0N4MHF0eXRYWkNLSmlZaWJ3ZFZ5dXFz?oc=5",
+   "date": "2026-10-22",
+   "source": "뉴스데일리",
+   "score": 2,
+   "track": "",
+   "agencies": [],
+   "members": [
+    "이달희"
+   ],
+   "first_seen": "2026-10-20",
+   "health": true
+  },
+  {
    "title": "[2026 국감] 이소희 의원, 이번엔 의료분쟁조정법 하위법령 태클…\"왜 의학회와 수의계약?\"",
    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9hWUstQmlHcGdsYjVob200bUZpb0JGSWJBaTdHS2tXU2pvWlVvWV84SE9iaDI5ZWtzNTM3Uk5wVHdEdTY3V1VoZlNrOXZDWjcyeW5nVQ?oc=5",
    "date": "2026-10-21",
@@ -3673,20 +3999,6 @@
     "이소희"
    ],
    "first_seen": "2026-10-21",
-   "health": true
-  },
-  {
-   "title": "이달희 의원, “이재명 정부 국정과제 ‘의사과학자 양성’ 예산, 1년 만에 16% 삭감” 질타!",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBVa2pqVS1hSDZId290UEw0OTFGSGgteU1vZUFjQWpIUXdDelFfTkFVWllIc0hmU0ZxbEdqQzRPME1OOFBPSjFiWTV4X1hlUzlURDN1R2RGTzlxYWcyU0lBWXJNeWgtTms?oc=5",
-   "date": "2026-10-21",
-   "source": "경기매일",
-   "score": 2,
-   "track": "",
-   "agencies": [],
-   "members": [
-    "이달희"
-   ],
-   "first_seen": "2026-10-20",
    "health": true
   },
   {
@@ -4139,19 +4451,6 @@
    "health": true
   },
   {
-   "title": "의사 셀프처방 금지의약품, 펜타닐·미다졸람 등 대폭 '확대'",
-   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9fMXktcTg0N2xLeUVyTkt6eEZWaGc2NUYyZkI2U1AwUHJVS19USTBKVWFualhjdE5RVVliTmdHZVNUX0xOenFsTUtOMVdoOXNSZHFiMXY2SHZSNWpiVGhMbC1lRk5nVWY3MEhoQVJVbFZJUQ?oc=5",
-   "date": "2026-10-21",
-   "source": "의협신문",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "의약품·마약류",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-10-25",
-   "health": true
-  },
-  {
    "title": "[국감] 허종식 의원 “입양·실종아동 정보 117만 건 유출 개별 통지받은 피해자는 858명뿐”",
    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1ya2YySEVYNXR0VXZLS09POXFzUDR1YXNsb2o2am1qclhqdW9Valdla0wtOXljRVhrRV91ZkRtd0ZDLTVmSGN0aU5Lelg3bjJ3Ym5fdmplQmlMVDNIOUhwcE13VDc?oc=5",
    "date": "2026-10-21",
@@ -4210,9 +4509,9 @@
   },
   {
    "title": "복지위 국감서 與 '공공의료 재정투입'·野 '대북의료지원' 도마",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE51V05qVEQ2Q2JiT3pPaEVwZG1HWDZlbzNlVXMzOGhITW5CeTNfSGVHWnRZSS15anpoajZwUGhJcTBpaVNMTEJGTmZKQkdkWDVTQjZ1OTJzb3c3blHSAWBBVV95cUxPbC1rTlFfMzRvdDJRUVI1aTVkWTV5SUxHRV9PVUlGS2lnelZmRXVlUlMwZ193Znk5UkQ3REdDWTZiZEFRWGVXY3VnWkFFQ2lnYW9jaFoyNUtUb3BYeHh5Rlc?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBtY1JVaHYtNzlUOHdvMDcyQ0VPZUtwUkpSeS1NaXNFUDVvalNwUFctS251LXZKX2ZHRnVfNnVtR3RsY1pPVFYwR05qSW9jNU1oY1JfZHd6RDdSZlRnSHF5aHBlbHFNRXZKaWFhQlFnM2Z0MFgt?oc=5",
    "date": "2026-10-20",
-   "source": "연합뉴스",
+   "source": "연합뉴스 한민족센터",
    "score": 2,
    "track": "국정감사",
    "agencies": [],
@@ -5186,19 +5485,6 @@
    "health": true
   },
   {
-   "title": "국민연금 주식 평가액 급감에 연금개혁 필요성 재점화",
-   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1PSkw5MWpTQlVnQ05IdjJZM2ZCLS1GV1M2eV9UakxQWFhGMnFndFBkaVg3WC1UVy14MTZwbXdTallKaTE4bXJ5WUlQSVpwa3BVdlpUbHB4ejdWdHBf?oc=5",
-   "date": "2026-10-20",
-   "source": "부산파이낸셜뉴스",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "연금",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-10-20",
-   "health": true
-  },
-  {
    "title": "어린이집 1만곳 문 닫았는데... 서울 입소 대기는 9.4개월",
    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE02YVRrYjJZMzFJUGtVXzRJd0RCaFBtbW9QX1RnTTE0ZlluOGtsVWd2YzdtYmMzbHFHeF9MbDJOR3NHZ0lYZDJQQXVrN3lGRnFmZDNjdFg0eGEzeTZwTzdHRDBmMng?oc=5",
    "date": "2026-10-20",
@@ -5359,20 +5645,6 @@
    "health": true
   },
   {
-   "title": "국정자원 화재에 심평원 자료 354만건 연계 차질…복구까지 10개월 [2026 국감]",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5vaF93WUM2SUhkM2Itakx2Z2lOYkQ5WHdUVy1kd3drak01VGxEM3dNWXBHMmVoY1pvV196bWlHbTdmby1fcWg4b0RzVnAzdWlDVlIwNE52WUVUbDJRV090c1NYVQ?oc=5",
-   "date": "2026-10-20",
-   "source": "쿠키뉴스",
-   "score": 3,
-   "track": "국정감사",
-   "agencies": [
-    "건강보험심사평가원"
-   ],
-   "members": [],
-   "first_seen": "2026-10-16",
-   "health": true
-  },
-  {
    "title": "국감 질의 답변하는 이창훈 한국의료분쟁조정중재원장",
    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1qWVd0dXk4OGhOWWlPVnNVTnFfcVYzQ1ZoMUROUmxYQjVjcWNqbTUwX1lITUdlNTFLd1lVSGJTa3Q5aUVXN2Y4SndmSlBIeFFJRGl2UjVDTlM2ekh5?oc=5",
    "date": "2026-10-20",
@@ -5450,7 +5722,7 @@
   },
   {
    "title": "임금 체불에 장비 노후화까지…“지방의료원 맞춤형 재정 지원 필요” [2026 국감]",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9Ia3BSLVBLSGJXLWkzWlJiMmszcGNvWDg5WF9KbDJ0ejZjNF9HT2VBNmdGT2VsR0hWLU8zeVM3cmJmcUhQeHo5ZEFST21WUkEtQmZ6b2NPMk0zN00yRmdxLXg3bw?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5McVlpOWc3dEUzU0IybnNQRjFMVUhtLUd3bzBWNE50cTA1eTNxWEN3RE1Mc3lCa3JwYzFLeDA5VEhQVDBuamJhdjRUZ2JFM1JEZzVKenFrQlNOT3MzTmJTaDczdw?oc=5",
    "date": "2026-10-20",
    "source": "쿠키메디",
    "score": 2,
@@ -6076,6 +6348,23 @@
    "health": true
   },
   {
+   "title": "이달희 의원, “원주 본사 출근 한 달에 이틀 … 기관장부터 지역에 뿌리내려야” 건보공단·심평원 지역 정착 촉구!",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1SVFdCWF9xd3dfejVlR2d5Zm10Ykh2RTE2OUZYSHRRSThuSF9IQUhoMEFCLUhrdDZtaXJfQzRNeFNmenA3XzNTSHItdDI3YnFOYzdMc2NQNy1jMzBVS2VFOVZSc2lyTS1FU0xF?oc=5",
+   "date": "2026-10-19",
+   "source": "뉴스데일리",
+   "score": 2,
+   "track": "",
+   "agencies": [
+    "국민건강보험공단",
+    "건강보험심사평가원"
+   ],
+   "members": [
+    "이달희"
+   ],
+   "first_seen": "2026-10-30",
+   "health": true
+  },
+  {
    "title": "[기획] 보건복지위 국정감사 중간 점검, 시니어 삶에 닿는 네 가지 쟁점",
    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE41UTUtYlJSN0Q2aUhGdl9kcG5jTFF6ZkhpUXdZV3d4XzZ5TXc3alljbWVRNy1oSzRDOG0wT2RmcGJKZzg4ZFA1c0JSOWpYb21zUHhHUjVhTHVvQVpsZlp6b0FKck5pOVdKald3S2VR?oc=5",
    "date": "2026-10-18",
@@ -6233,6 +6522,20 @@
    "health": true
   },
   {
+   "title": "이달희 \"지역 우대수가 전면 재검토 필요\"…국감서 정부 정책 비판",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9nWnFETmROUkt4REMtTXdfMmlUOUhweUZ6U1RSM0RtaENydnJrNEh4ZkRiRWtNQXViQi1sSzVXejF1aXhIQVZudnFBUkhaVWR0X2N0WUxBdXViMURwM1NZZGxvQXZjeThGejAxLTB3?oc=5",
+   "date": "2026-10-18",
+   "source": "국제뉴스",
+   "score": 3,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [
+    "이달희"
+   ],
+   "first_seen": "2026-10-17",
+   "health": true
+  },
+  {
    "title": "비만약 급여부터 허가·재평가까지… 국감서 짚은 제약 현안",
    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1qSk9IWnZrOUhLN2NnUjRHdUVNcE9zdlFDbE1ySnloejZKZDB6cFV1b3RuX0RIbTdnRG03Q204TlN1M29GU1lVMHBqRERrNzl5WUpGeVJMb0Z1a0wzcmFkNlNkUDNvS1pvTjBN?oc=5",
    "date": "2026-10-17",
@@ -6344,20 +6647,6 @@
    "health": true
   },
   {
-   "title": "이달희 \"지역 우대수가 전면 재검토 필요\"…국감서 정부 정책 비판",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9nWnFETmROUkt4REMtTXdfMmlUOUhweUZ6U1RSM0RtaENydnJrNEh4ZkRiRWtNQXViQi1sSzVXejF1aXhIQVZudnFBUkhaVWR0X2N0WUxBdXViMURwM1NZZGxvQXZjeThGejAxLTB3?oc=5",
-   "date": "2026-10-17",
-   "source": "국제뉴스",
-   "score": 3,
-   "track": "국정감사",
-   "agencies": [],
-   "members": [
-    "이달희"
-   ],
-   "first_seen": "2026-10-17",
-   "health": true
-  },
-  {
    "title": "[2026 국정감사] 건보 인건비 6천억 과다…징계는 직원만 8명",
    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1WUmFMekVSY04zTnlJM1NNU2FwRGg0LTBac2FxZ0xSTWp0ay05bHF6WmEzQUNZZm5zRDJUX3JkdVNaUTZiNjVzRl9nakRlQ2xINWxVRTBZUGYwNU9xVmRXS0d4dXpGcUcxTS040gFvQVVfeXFMUFpDQlBVS2t3TEVNQWF2VlZpMkZDSjIzMkIxN1pMWmZGR2pfcUpraEZYQjJtbkZ6cFNMZWs0eHVBdTFGbTB0NThIUHRzZEY1MjdTV0M1SmRVem9idUt5Ml8wckNLVGs4MWFiOUF1cnE4?oc=5",
    "date": "2026-10-17",
@@ -6436,6 +6725,20 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-10-23",
+   "health": true
+  },
+  {
+   "title": "국정자원 화재에 심평원 자료 354만건 연계 차질…복구까지 10개월 [2026 국감]",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1KV3d2NWJ4b3dpLWFFaDNWS1k0SFZDZWdrNnNzV180ak9WVmdoemRrU05WbEdNVW1ycW43RVoteWtCMnd0VmdlMnd6SmdGZHZEUHhIQ2tGSW05Y284X1lkVTRWTQ?oc=5",
+   "date": "2026-10-16",
+   "source": "쿠키메디",
+   "score": 3,
+   "track": "국정감사",
+   "agencies": [
+    "건강보험심사평가원"
+   ],
+   "members": [],
+   "first_seen": "2026-10-16",
    "health": true
   },
   {
@@ -7745,6 +8048,32 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-10-29",
+   "health": true
+  },
+  {
+   "title": "[2026년 국감] 2.9조 환수금 검증과 특사경 안착… 건보공단 실무 쇄신 촉구",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBsODRLMW9nLXQybFBTQTAtbXEyLXdObHRfdV9vaEtjdW9SaTFvOHlMREpib0U2ZEtzZFdiV3BLQzdQTWU2cWZGUllweWtwRkVUNnJ5NnFhTktqQVBwcWQzYVM3cEVsZnBNOVd1Sg?oc=5",
+   "date": "2026-10-16",
+   "source": "팜뉴스",
+   "score": 3,
+   "track": "국정감사",
+   "agencies": [
+    "국민건강보험공단"
+   ],
+   "members": [],
+   "first_seen": "2026-10-30",
+   "health": true
+  },
+  {
+   "title": "[국감현장] 의료취약지 지원한다더니…광역시 구도심 빠지고 대형병원만 수가 가산",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5YQ0pwRkREWm9raVFpbVM4M2V2RlF1WXZuRUFERF85Y2RFcHg5SUZTV0dWSDR1UjIzc3Z3R1hYYkNCSzdQelZTYWpMYVU2VHF6LUppa2R1STNzcERjOFR0NDAyUW9FdURNUE9uSg?oc=5",
+   "date": "2026-10-16",
+   "source": "메디컬투데이",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-10-30",
    "health": true
   },
   {
@@ -16011,19 +16340,6 @@
    "health": true
   },
   {
-   "title": "'빚만 2400억원' 충북대병원, 전공의도 실습실도 부족…\"시한폭탄\"",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5LQUhBc2VyZHE3LS03bDdISmd0N1NqUHFBV05KX1F4ZGJiNXVOMDJ2RjIxSWM1NXpHR085N2pYWEF1Z0haNjQwWGwwY2VQcWdZS3V4dlhVa2tLNlpEWDdCWG5yTEdBRk9uWFHSAW9BVV95cUxPbHR3TEtsbTlkNzJQT1BXUTRVS1hKVElsOFBfTmd3bGdESngwV19xdUx3SG16VVNORkthWnBkSklXNXgtdXJPYzlmWEdxZ1ppLWhaMGVZTEpkQVhQUDB4TWdnQjItYkJJbTJtd1doXzg?oc=5",
-   "date": "2026-10-08",
-   "source": "머니투데이",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "의료인력",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-10-09",
-   "health": true
-  },
-  {
    "title": "[2026 국감] 강의실 확충은 지연, 수술은 37.4% 감소, 충북대병원 국감서 지원 대책 추궁",
    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFA4eDFkb3c5ODA5dEUyMUhSajlfaUVRYUpITExESHJlWW5obXlRel80WGdKN0FvRFlqdWlkZkc1bzVBWnFaNDJKcVBkVDZQYXJQNTE4OExrSTJ0cWd6Z0ltMmFLYVA4VVBQdDl1UW9uRUFWXzlUZkVTMV9B0gF_QVVfeXFMTTVDaTlYVkYtOC1FNlhvdG4ycVNpaVJ2SUxNYm5zaGF3cUFSdlB2aVpwNWpMS3ZQVllHUnp0RU1NQnZkU3hidU1ObHo2V1pPay1XTFhtNXIwdk9ucVZtR3FjbmxrUWloNmRvOE4zWFRVNGF6aGo1Q0JOMnN5X2x6TQ?oc=5",
    "date": "2026-10-08",
@@ -16546,21 +16862,6 @@
    "members": [
     "허종식"
    ],
-   "first_seen": "2026-10-09",
-   "health": true
-  },
-  {
-   "title": "질병청 고당사업 개편에 45만명 지원 변화 우려...국회서 신중한 검토 주문",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5fbGJBYVBObVFIblNVaFZuQWJwUlpxU2F0S2ZSd1NYUHI5VHF6NW9ONWcyWFhCNzZTXzhha2xvdzlMcHc0ZmxfY0FlM00zYk1IbkhLSmpENndlSHJ3SU9KdXNlcUF4bnRGc3c?oc=5",
-   "date": "2026-10-08",
-   "source": "의학신문",
-   "score": 1,
-   "track": "소관사업",
-   "topic": "만성질환·고당사업",
-   "agencies": [
-    "질병관리청"
-   ],
-   "members": [],
    "first_seen": "2026-10-09",
    "health": true
   },
@@ -19655,20 +19956,6 @@
     "남인순"
    ],
    "first_seen": "2026-10-08",
-   "health": true
-  },
-  {
-   "title": "국감 답변하는 정은경 보건복지부 장관",
-   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1NSW83blR0aHJ0MXRmMWYteTNqaHNWd0x6UXBqN05QOTQtNDRkbW5OeVpSWnJMWFFUanFka3R4azFhazh4NGdqRjNadw?oc=5",
-   "date": "2026-10-07",
-   "source": "뉴스1",
-   "score": 3,
-   "track": "국정감사",
-   "agencies": [
-    "보건복지부"
-   ],
-   "members": [],
-   "first_seen": "2026-10-09",
    "health": true
   },
   {
