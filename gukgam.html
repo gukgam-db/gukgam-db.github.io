@@ -385,12 +385,16 @@
   var today=new Date(); var tz=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().slice(0,10);
   Promise.all([
     J('briefing.json',null), J('highlights.json',null), J('covid.json',null), J('index.json',null), J('last-run.json',null),
-    J('schedule.json',null), J('rosters.json',null).then(function(ro){ var ly0=((ro&&ro.years)||[]).map(function(y){return y.year;}).sort(function(a,b){return b-a;})[0]||(new Date().getFullYear()-1); return Promise.all([J('plan-'+ly0+'.json',null), ro, J('findings-'+ly0+'.json',null), J('plan-'+(ly0+1)+'.json',null)]); }), null, J('members.json',null), null,
+    J('schedule.json',null), J('rosters.json',null).then(function(ro){ var ly0=((ro&&ro.years)||[]).map(function(y){return y.year;}).sort(function(a,b){return b-a;})[0]||(new Date().getFullYear()-1); return Promise.all([J('plan-'+ly0+'.json',null), ro, J('findings-'+ly0+'.json',null), J('plan-'+(ly0+1)+'.json',null), J('vod-'+(ly0+1)+'.json',null)]); }), null, J('members.json',null), null,
     null, J('member-topics.json',{members:{}}), J('guides.json',{items:[]}), J('remarks-index.json',null), J('press.json',null)
   ]).then(function(r){
-    var BR=r[0], HL=r[1], CV=r[2], IDX=r[3], LR=r[4], SC=r[5], PL=r[6][0], RO=r[6][1], MEM=r[8], FD=r[6][2], PL26=r[6][3], MT=(r[11]||{}).members||{}, GD=r[12], RI=r[13];
+    var BR=r[0], HL=r[1], CV=r[2], IDX=r[3], LR=r[4], SC=r[5], PL=r[6][0], RO=r[6][1], MEM=r[8], FD=r[6][2], PL26=r[6][3], VD26=r[6][4], MT=(r[11]||{}).members||{}, GD=r[12], RI=r[13];
     var A=(BR&&BR.agencies)||{}; var cy=(BR&&BR.cur_year)||new Date().getFullYear()-1;
-    var ly=((RO&&RO.years)||[]).map(function(y){return y.year;}).sort(function(a,b){return b-a;})[0]||cy;   // 자료에 있는 가장 최근 국감 연도
+    var ly=((RO&&RO.years)||[]).map(function(y){return y.year;}).sort(function(a,b){return b-a;})[0]||cy;   // 회의록·명단이 있는 가장 최근 해
+    // 회의록은 감사일로부터 2~6주 뒤에 올라온다. 그 사이에 지난해를 큰 타일에 띄우면
+    // 올해 국감이 없었던 것처럼 보인다 — 계획서가 있으면 그 해가 '가장 최근 국감'이다.
+    var PLcur=PL, FDcur=FD;
+    if(PL26&&PL26.year&&PL26.year>ly){ ly=PL26.year; PLcur=PL26; FDcur=null; }
     // 갱신 배지
     var up=[]; if(IDX&&IDX.updated) up.push('자료 갱신 '+IDX.updated); if(LR&&LR.checked_kst) up.push('마지막 점검 '+LR.checked_kst);
     if(RI&&RI.years){ var tot=0; for(var k in RI.years) tot+=RI.years[k]; up.push('위원 발언 색인 '+num(tot)+'건'); }
@@ -410,10 +414,12 @@
     else document.getElementById('tsCovid').textContent='질병청 국감에서 코로나가 어떻게 줄어들었나';
     var y25=(RO&&RO.years||[]).filter(function(y){return y.year===ly;})[0];
     var tile=document.querySelector('.tile.big'); tile.href='gukgam-year.html?y='+ly; tile.querySelector('.tt').textContent=ly+'년 국정감사';
-    var s25=[]; if(PL&&PL.period) s25.push('<b>'+PL.period.start.slice(5).replace('-','.')+'~'+PL.period.end.slice(5).replace('-','.')+'</b> ('+PL.period.days+'일)');
-    if(PL&&PL.targets&&PL.targets.total) s25.push('대상기관 <b>'+PL.targets.total+'곳</b>');
-    if(FD&&FD.items) s25.push('지적사항 <b>'+num(FD.items.length)+'건</b>');
+    var s25=[]; if(PLcur&&PLcur.period) s25.push('<b>'+PLcur.period.start.slice(5).replace('-','.')+'~'+PLcur.period.end.slice(5).replace('-','.')+'</b> ('+PLcur.period.days+'일)');
+    if(PLcur&&PLcur.targets&&PLcur.targets.total) s25.push('대상기관 <b>'+PLcur.targets.total+'곳</b>');
+    if(FDcur&&FDcur.items) s25.push('지적사항 <b>'+num(FDcur.items.length)+'건</b>');
     if(y25) s25.push('발언 위원 <b>'+y25.count+'명</b>'+(y25.dates?' · 감사 '+y25.dates.length+'일':''));
+    // 회의록이 아직 없는 해는 영상 목차가 질의 규모를 말해 준다 — 빈칸으로 두지 않는다.
+    else if(VD26&&VD26.year===ly&&VD26.questions) s25.push('위원 질의 <b>'+num(VD26.questions)+'건</b>'+(VD26.days?' · 감사 '+VD26.days+'일':'')+' <span style="opacity:.75">(영상 목차)</span>');
     document.getElementById('ts2025').innerHTML=s25.join(' · ')||(ly+'년 보건복지위원회 국정감사');
     // 인사이트 카드
     var cards=[];
