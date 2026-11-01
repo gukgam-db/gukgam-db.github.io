@@ -4,11 +4,43 @@
  "committee": "복지위",
  "source": "국회 인터넷의사중계시스템 달력 + 영상회의록시스템 발언자 목차",
  "source_url": "https://w3.assembly.go.kr/",
- "note": "국회가 회의에 직접 붙여 둔 발언자 목차입니다. 발언 순서·시각·길이·발언자·답변자가 들어 있고, <b>발언 내용(속기)은 들어 있지 않습니다</b> — 목차에 없고 이 영상들에는 자막도 없습니다. 회의록 원문은 보통 감사일로부터 2~6주 뒤에 공개되며, 공개되면 그쪽이 정본입니다. 이 파일은 그때까지의 공백을 메우는 '질의의 뼈대'입니다.",
+ "note": "국회가 회의에 직접 붙여 둔 발언자 목차입니다. 발언 순서·시각·길이·발언자·답변자가 들어 있고, <b>발언 내용(속기)은 목차에 들어 있지 않습니다</b> — 국회가 AI 자막을 붙인 감사일에만 구간별 발언을 함께 담았습니다. 회의록 원문은 보통 감사일로부터 2~6주 뒤에 공개되며, 공개되면 그쪽이 정본입니다. 이 파일은 그때까지의 공백을 메우는 '질의의 뼈대'입니다.",
  "days": 8,
  "segments": 725,
  "caption_days": 1,
  "caption_segments": 103,
+ "caption_lines": 10231,
+ "caption_blank_days": [
+  {
+   "date": "2026-10-07",
+   "video_kind": "A1"
+  },
+  {
+   "date": "2026-10-08",
+   "video_kind": "A2"
+  },
+  {
+   "date": "2026-10-14",
+   "video_kind": "A5"
+  },
+  {
+   "date": "2026-10-16",
+   "video_kind": "V1"
+  },
+  {
+   "date": "2026-10-20",
+   "video_kind": "A6"
+  },
+  {
+   "date": "2026-10-22",
+   "video_kind": "A7"
+  },
+  {
+   "date": "2026-10-27",
+   "video_kind": "A8"
+  }
+ ],
+ "caption_gap_note": "자막이 없는 감사일 7일은 수집이 실패한 것이 아니라 국회가 자막을 붙이지 않은 것입니다 — 각 날의 첫 세션에 자막을 직접 요청해 0줄임을 확인했습니다. 영상 등록 구분은 2026-10-07=A1, 2026-10-08=A2, 2026-10-14=A5, 2026-10-16=V1, 2026-10-20=A6, 2026-10-22=A7, 2026-10-27=A8 입니다. 국회는 일부 회의에만 자막을 붙이므로 A1·A2… 순번이 붙은 날도 비어 있을 수 있습니다. 다만 V1 구분은 영상회의록 계열이 아니라 중계 보관영상으로 등록된 것으로 보여, 그 감사일은 앞으로도 자막이 붙을 가능성이 낮습니다. 발언 내용은 회의록 원문이 공개될 때까지 <b>영상으로만</b> 확인할 수 있습니다.",
  "caption_note": "일부 감사일에는 국회가 붙인 AI 자막이 있어 구간마다 발언(text)을 함께 담았습니다. 자막 줄은 세션 영상 시작부터의 초로 찍혀 있고, 구간은 벽시계 시각을 가지므로 구간 시작을 세션 기준 초로 바꿔 그 사이의 줄을 모았습니다. 맞춰진 결과는 2026년 10월 13일 자료로 검산했습니다 — 자막이 '존경하는 ○○○ 위원님' 하고 호명한 46개 구간 가운데 43개(93%)가 목차의 발언자와 같았고, 어긋난 3개는 모두 자막 쪽 오류였습니다(권칠승을 '권칠성'으로, 김기웅을 '김교흥'으로 받아쓴 것과, 앞 구간 꼬리에 남은 호명을 집은 것). <b>자막은 AI 받아쓰기라 이름·숫자·고유명사가 틀릴 수 있습니다.</b> 내용을 가늠하는 데 쓰고, 인용은 회의록 원문이 공개된 뒤에 하십시오. 발언자·시각·길이는 자막이 아니라 국회가 붙인 목차에서 온 값이라 이 오류와 무관합니다.",
  "questions": 465,
  "question_secs": 188029,
@@ -805,6 +837,8 @@
    "close": "22:46 감사종료",
    "captions": false,
    "caption_segments": 0,
+   "video_kind": "A1",
+   "caption_lines": 0,
    "vod": "https://w3.assembly.go.kr/main/player.do?ref=main&wv=1&mc=333&ct1=22&ct2=439&ct3=A1&no=666652",
    "sessions": [
     {
@@ -3011,6 +3045,8 @@
    "close": "23:14 감사종료",
    "captions": false,
    "caption_segments": 0,
+   "video_kind": "A2",
+   "caption_lines": 0,
    "vod": "https://w3.assembly.go.kr/main/player.do?ref=main&wv=1&mc=333&ct1=22&ct2=439&ct3=A2&no=667700",
    "sessions": [
     {
@@ -4114,6 +4150,8 @@
    "close": "22:22 감사종료",
    "captions": true,
    "caption_segments": 103,
+   "video_kind": "A4",
+   "caption_lines": 10231,
    "vod": "https://w3.assembly.go.kr/main/player.do?ref=main&wv=1&mc=333&ct1=22&ct2=439&ct3=A4&no=669431",
    "sessions": [
     {
@@ -6494,6 +6532,8 @@
    "close": "19:22 감사종료",
    "captions": false,
    "caption_segments": 0,
+   "video_kind": "A5",
+   "caption_lines": 0,
    "vod": "https://w3.assembly.go.kr/main/player.do?ref=main&wv=1&mc=333&ct1=22&ct2=439&ct3=A5&no=670247",
    "sessions": [
     {
@@ -8306,6 +8346,8 @@
    "close": "19:29 감사종료",
    "captions": false,
    "caption_segments": 0,
+   "video_kind": "V1",
+   "caption_lines": 0,
    "vod": "https://w3.assembly.go.kr/main/player.do?ref=main&wv=1&mc=333&ct1=22&ct2=439&ct3=V1&no=671413",
    "sessions": [
     {
@@ -10357,6 +10399,8 @@
    "close": "20:08 감사종료",
    "captions": false,
    "caption_segments": 0,
+   "video_kind": "A6",
+   "caption_lines": 0,
    "vod": "https://w3.assembly.go.kr/main/player.do?ref=main&wv=1&mc=333&ct1=22&ct2=439&ct3=A6&no=672508",
    "sessions": [
     {
@@ -12507,6 +12551,8 @@
    "close": "19:44 감사종료",
    "captions": false,
    "caption_segments": 0,
+   "video_kind": "A7",
+   "caption_lines": 0,
    "vod": "https://w3.assembly.go.kr/main/player.do?ref=main&wv=1&mc=333&ct1=22&ct2=439&ct3=A7&no=673358",
    "sessions": [
     {
@@ -14654,6 +14700,8 @@
    "close": "감사계속",
    "captions": false,
    "caption_segments": 0,
+   "video_kind": "A8",
+   "caption_lines": 0,
    "vod": "https://w3.assembly.go.kr/main/player.do?ref=main&wv=1&mc=333&ct1=22&ct2=439&ct3=A8&no=675225",
    "sessions": [
     {

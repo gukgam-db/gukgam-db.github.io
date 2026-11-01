@@ -161,6 +161,17 @@ def main():
             skipped.append((d, "목차 실패: %s" % str(e)[:50])); continue
 
         has_cc = str(info.get("sami") or "0").strip() not in ("", "0", "false", "False")
+
+        # 자막이 없다고 적힌 날은 첫 세션에 한 번 직접 물어 0줄임을 확인한다.
+        # 빈칸이 '수집 실패'인지 '국회가 애초에 안 붙인 것'인지 구분해 두어야 설명할 수 있다.
+        # 플래그가 늦게 붙는 경우도 있어, 실제로 줄이 오면 플래그보다 그쪽을 따른다.
+        if not has_cc:
+            first = (info.get("movieList") or [{}])[0]
+            if first.get("no") and len(captions(first["no"], mc, c1, c2, c3)):
+                has_cc = True
+            time.sleep(0.3)
+
+        cc_lines = 0
         segs, sessions, text = [], [], {}
         for g in info.get("movieList", []):
             sub = g.get("subList") or []
@@ -169,7 +180,9 @@ def main():
                                  "count": len(sub)})
             if has_cc and sub:
                 # 자막은 세션마다 따로 있다 — 회의 전체 번호로 부르면 첫 세션 것만 온다
-                text.update(attach_text(g.get("realTime"), sub, captions(g.get("no"), mc, c1, c2, c3)))
+                lines = captions(g.get("no"), mc, c1, c2, c3)
+                cc_lines += len(lines)
+                text.update(attach_text(g.get("realTime"), sub, lines))
                 time.sleep(0.3)
             for s in sub:
                 who = parse_title(s.get("movieTitle"))
@@ -195,6 +208,9 @@ def main():
             # '자막 있음' 으로 적게 된다 — 실제로 한 번 그렇게 틀렸다.
             "captions": has_cc,
             "caption_segments": sum(1 for sg in segs if sg.get("text")),
+            # 자막 공백을 설명하기 위한 값. video_kind 는 영상회의록의 등록 구분(ct3)이다.
+            "video_kind": c3,
+            "caption_lines": cc_lines,
             "vod": VOD % (mc, c1, c2, c3, no),
             "sessions": sessions, "segments": segs,
         })
@@ -223,18 +239,42 @@ def main():
                 a["answered_by"][o["org"]] = a["answered_by"].get(o["org"], 0) + 1
     members = sorted(agg.values(), key=lambda x: -x["secs"])
 
+    # 자막이 없는 날의 빈칸을 설명한다. 빈칸을 설명하지 않으면 읽는 사람은 수집이 실패한 줄 안다.
+    # 감사일에는 보통 A1·A2… 순번이 붙는데, 중계 보관영상으로 등록된 날은 다른 구분이 붙고
+    # 그런 영상에는 국회가 AI 자막을 만들지 않는다 — 2026년 10월 16일이 그런 경우였다.
+    blank = [dy for dy in days if not dy["captions"]]
+    odd = sorted({dy.get("video_kind") for dy in blank
+                  if dy.get("video_kind") and not re.match(r"^A\d+$", dy["video_kind"])})
+    gap = ""
+    if blank:
+        gap = ("자막이 없는 감사일 %d일은 수집이 실패한 것이 아니라 국회가 자막을 붙이지 않은 것입니다 — "
+               "각 날의 첫 세션에 자막을 직접 요청해 0줄임을 확인했습니다. 영상 등록 구분은 %s 입니다. "
+               % (len(blank),
+                  ", ".join("%s=%s" % (dy["date"], dy.get("video_kind") or "?") for dy in blank)))
+        if odd:
+            gap += ("국회는 일부 회의에만 자막을 붙이므로 A1·A2… 순번이 붙은 날도 비어 있을 수 "
+                    "있습니다. 다만 %s 구분은 영상회의록 계열이 아니라 중계 보관영상으로 등록된 "
+                    "것으로 보여, 그 감사일은 앞으로도 자막이 붙을 가능성이 낮습니다. 발언 내용은 "
+                    "회의록 원문이 공개될 때까지 <b>영상으로만</b> 확인할 수 있습니다."
+                    % ", ".join(odd))
+
     out = {
         "updated": datetime.date.today().isoformat(),
         "year": year, "committee": COMMITTEE,
         "source": "국회 인터넷의사중계시스템 달력 + 영상회의록시스템 발언자 목차",
         "source_url": "https://w3.assembly.go.kr/",
         "note": "국회가 회의에 직접 붙여 둔 발언자 목차입니다. 발언 순서·시각·길이·발언자·답변자가 "
-                "들어 있고, <b>발언 내용(속기)은 들어 있지 않습니다</b> — 목차에 없고 이 영상들에는 "
-                "자막도 없습니다. 회의록 원문은 보통 감사일로부터 2~6주 뒤에 공개되며, 공개되면 "
+                "들어 있고, <b>발언 내용(속기)은 목차에 들어 있지 않습니다</b> — 국회가 AI 자막을 "
+                "붙인 감사일에만 구간별 발언을 함께 담았습니다. "
+                "회의록 원문은 보통 감사일로부터 2~6주 뒤에 공개되며, 공개되면 "
                 "그쪽이 정본입니다. 이 파일은 그때까지의 공백을 메우는 '질의의 뼈대'입니다.",
         "days": len(days), "segments": sum(len(d["segments"]) for d in days),
         "caption_days": sum(1 for d in days if d["captions"]),
         "caption_segments": sum(d.get("caption_segments", 0) for d in days),
+        "caption_lines": sum(d.get("caption_lines", 0) for d in days),
+        "caption_blank_days": [{"date": dy["date"], "video_kind": dy.get("video_kind")}
+                               for dy in blank],
+        "caption_gap_note": gap.strip(),
         "caption_note": "일부 감사일에는 국회가 붙인 AI 자막이 있어 구간마다 발언(text)을 함께 담았습니다. "
                         "자막 줄은 세션 영상 시작부터의 초로 찍혀 있고, 구간은 벽시계 시각을 가지므로 "
                         "구간 시작을 세션 기준 초로 바꿔 그 사이의 줄을 모았습니다. "
@@ -258,8 +298,11 @@ def main():
     print("완료: %d년 %s 감사일 %d일 · 발언 구간 %d개 · 위원 질의 %d건 %d분 → %s"
           % (year, COMMITTEE, len(days), out["segments"], out["questions"],
              round(out["question_secs"] / 60), os.path.basename(path)))
-    print("  자막(AI) 있는 감사일 %d일 · 발언이 붙은 구간 %d개"
-          % (out["caption_days"], out["caption_segments"]))
+    print("  자막(AI) 있는 감사일 %d일 · 발언이 붙은 구간 %d개 · 자막 %d줄"
+          % (out["caption_days"], out["caption_segments"], out["caption_lines"]))
+    if blank:
+        print("  자막 없음(0줄 확인): %s"
+              % ", ".join("%s[%s]" % (dy["date"], dy.get("video_kind") or "?") for dy in blank))
     if skipped:
         print("  건너뜀: %s" % ", ".join("%s(%s)" % s for s in skipped))
     return 0

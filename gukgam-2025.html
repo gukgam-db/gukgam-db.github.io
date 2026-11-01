@@ -435,14 +435,19 @@
       document.getElementById('vodWhy').innerHTML=
         '국회가 회의에 직접 붙여 둔 <b>발언자 목차</b>입니다 — 발언 순서·시각·길이·발언자·답변자가 들어 있습니다. '+
         '<b>발언 내용(속기)은 목차에 없습니다.</b> 회의록 원문이 공개되면 그쪽이 정본입니다.'+
-        (ccN?' 다만 '+ccN+'개 감사일에는 국회 <b>AI 자막</b>이 있어 구간마다 발언을 함께 담았습니다 — 자막은 받아쓰기라 이름·숫자가 틀릴 수 있으니 내용을 가늠하는 데만 쓰십시오.':'');
+        (ccN?' 다만 '+ccN+'개 감사일에는 국회 <b>AI 자막</b>이 있어 구간마다 발언을 함께 담았습니다 — 자막은 받아쓰기라 이름·숫자가 틀릴 수 있으니 내용을 가늠하는 데만 쓰십시오.':'')+
+        (VD.caption_gap_note?' '+VD.caption_gap_note:'');
       var drows=(VD.items||[]).map(function(d){
         var q=(d.segments||[]).filter(function(s){ return s.type==='질의'; });
         var mi=Math.round(q.reduce(function(a,s){return a+(s.secs||0);},0)/60);
         var who={}; q.forEach(function(s){ if(s.speaker) who[s.speaker.name]=1; });
         return '<tr><td class="d">'+esc(d.date.slice(5).replace('-','.'))+'</td>'+
           '<td>'+esc((d.subject||'').replace(/^보건복지위원회\s*국정감사/,'').replace(/^[()\s]+|[()\s]+$/g,'')||'종합감사')+
-          (d.captions?' <span class="kind">AI 자막</span>':'')+'</td>'+
+          (d.captions
+             ? ' <span class="kind">AI 자막</span>'
+             : (d.video_kind
+                  ? ' <span class="kind" style="background:#eef1f5;color:#6b7a8d" title="영상 등록 구분 '+esc(d.video_kind)+' — 국회가 이 영상에 자막을 붙이지 않았습니다">자막 없음</span>'
+                  : ''))+'</td>'+
           '<td style="white-space:nowrap">'+esc(d.open||'')+'</td>'+
           '<td style="text-align:right">'+q.length+'건</td>'+
           '<td style="text-align:right">'+mi+'분</td>'+
