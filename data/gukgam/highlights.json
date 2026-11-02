@@ -1,7 +1,31 @@
 {
- "updated": "2026-11-02",
+ "updated": "2026-11-03",
  "note": "감사일별 자동 요약 카드(영상 캡처 아님). 큰 글씨 = 그날 질의에서 가장 많이 언급된 주제, 사진 = 그날 질의 횟수 상위 위원, 인용 = 답변이 붙은 질의 중 가장 긴 것의 앞부분, 발언 수 = 회의록에서 짝지은 질의·답변 건수.",
  "items": [
+  {
+   "date": "2026-10-07",
+   "year": 2026,
+   "n": 428,
+   "targets": [
+    "보건복지부",
+    "질병관리청"
+   ],
+   "top_topic": "건강보험·수가",
+   "topics": [
+    "건강보험·수가",
+    "노인·돌봄",
+    "장애인"
+   ],
+   "top_members": [
+    "이만희",
+    "서미화",
+    "최보윤"
+   ],
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/e1c9c9575d334b66943ed2fc9a8847ad.jpg",
+   "quote": "(영상자료를보며) 올여름 폭염은 과히 기후재난이라고 부를 만큼 심각했습니다. 지난 9월 30일까지 온열 질환 응급실감시체계로 집계된 올해 온열질환자 수는 4066명이고 그중의 사망자는 36명 에 이…",
+   "quote_member": "이수진",
+   "minutes_url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57389"
+  },
   {
    "date": "2025-10-30",
    "year": 2025,
@@ -319,31 +343,6 @@
    "quote": "이사장님 그리고 건강보험정책국장님께 질의를 하겠습니다. (영상자료를 보며) 저희 의원실로 들어온 어떤 환우의 남편분께서 보내온 내용입니다.…",
    "quote_member": "한지아",
    "minutes_url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51953"
-  },
-  {
-   "date": "2024-10-10",
-   "year": 2024,
-   "n": 443,
-   "targets": [
-    "식품의약품안전처",
-    "식품의약품안전평가원",
-    "서울지방식품의약품안전청"
-   ],
-   "top_topic": "의약품 안전",
-   "topics": [
-    "의약품 안전",
-    "식품 안전",
-    "마약류 관리"
-   ],
-   "top_members": [
-    "김미애",
-    "서미화",
-    "남인순"
-   ],
-   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/0694f551f21c40b2a4bbccd2e90ce40c.jpg",
-   "quote": "어린이 기호식품에 포함이 되면 영양 성분을 분석해서 고열량·저영양 식품, 이른바 고저식품으로 정해서 관리를 합니다.…",
-   "quote_member": "김선민",
-   "minutes_url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51905"
   }
  ]
 }

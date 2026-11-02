@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02",
+ "updated": "2026-11-03",
  "scope_v": 4,
  "source": "보건복지위 국정감사 회의록(제21~22대) 식약처 발언 자동 추출",
  "processed": [
@@ -49,7 +49,8 @@
   "N053520",
   "N053521",
   "N053522",
-  "N053523"
+  "N053523",
+  "N054548"
  ],
  "items": [
   {
@@ -33811,6 +33812,30 @@
    ],
    "basis": "answer",
    "minutes_url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55603"
+  },
+  {
+   "date": "2026-10-07",
+   "year": 2026,
+   "member": "조배숙",
+   "q": ",간단하게제넨셀에관련된부분질의하겠습니다. 제넨셀이 식약처로부터 임상시험계획 승인받은 이후인 2021년 12월부터 다섯 차례에 걸쳐서 복지부가코로나19치료제임상지원사업이있었는데거기다섯 차례신청했다모 두다 탈락이됐단말이에요,그렇지요?",
+   "a": "",
+   "topics": [
+    "임상시험·허가심사"
+   ],
+   "basis": "mention",
+   "minutes_url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57389"
+  },
+  {
+   "date": "2026-10-07",
+   "year": 2026,
+   "member": "조배숙",
+   "q": "식약처, 질병청, 국가임상시험지원재단 등등해서 5개의 이 국가기 관이TF를구성했어요.그러면이때이게공유가되지않았습니까?",
+   "a": "",
+   "topics": [
+    "임상시험·허가심사"
+   ],
+   "basis": "mention",
+   "minutes_url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57389"
   }
  ]
 }

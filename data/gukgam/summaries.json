@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-01",
+ "updated": "2026-11-03",
  "items": {
   "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55603": {
    "kind": "minutes",
@@ -757,6 +757,16 @@
      "count": 106
     }
    ]
+  },
+  "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57389": {
+   "kind": "minutes",
+   "pages": 170,
+   "targets": [
+    "보건복지부",
+    "질병관리청"
+   ],
+   "when": "2026년10월7일(수)",
+   "where": "보건복지위원회회의실"
   }
  }
 }
