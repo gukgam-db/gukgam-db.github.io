@@ -1,10 +1,38 @@
 {
  "updated": "2026-11-07",
- "updated_at": "2026-11-07 01:45",
+ "updated_at": "2026-11-07 09:23",
  "window": "14d",
  "note": "구글 뉴스 검색 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. track='국정감사'·'대정부질문'은 위원 이름·기관명에 '국정감사'를 붙여 검색해 제목에 국감이 들어간 기사. track='소관사업'은 제목에 국감이 없어도 국감 재료가 되는 소관 사업·통계 기사를 주제별로 따로 모은 것으로, 같은 보도자료 받아쓰기가 쌓이지 않게 주제당 5건·21일까지만 남긴다. health=false는 제목에 국감은 있으나 보건복지와 닿는 낱말·기관·위원이 없는 기사(다른 상임위·국감 일반)로, 버리지 않고 뒤로 미룬다. 기관·위원·주제 분류는 모두 제목 키워드 자동.",
  "count": 2063,
  "items": [
+  {
+   "title": "질병관리청, 만성질환 통합관리센터 전국으로 단계적 확대",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBWUk9UZWVKMXFWT2pQblBLdTBBSzA5MWIwZV9ZT1NERGQyeUp2blJaZGlwREQ2U1BnUE1ibXcta0dsTlRSNkc2VUFubU1tdXVSUHpYaE1UbXRNYkx2QngxM3NEck9xQ0hsNUhZQk00TQ?oc=5",
+   "date": "2026-11-07",
+   "source": "미디어생활",
+   "score": 1,
+   "track": "소관사업",
+   "topic": "만성질환·고당사업",
+   "agencies": [
+    "질병관리청"
+   ],
+   "members": [],
+   "first_seen": "2026-11-07",
+   "health": true
+  },
+  {
+   "title": "나이지리아서 에볼라 해외유입 확인…9일부터 중점검역관리지역 지정",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5Tb0dZOVFSYURJaWE2OWl4cjB3dmZOR2F4X0dYNE40anRXOUVUazZ3ZEVpeHlQSTlrNV9PcGF3LTlaWGk0dm5nX1p3LVlhWnZ1VXlaRzJrcFhzYXNyM241TG9KYWUySFN6Q2ZoZDhKODk?oc=5",
+   "date": "2026-11-07",
+   "source": "메디컬월드뉴스",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "검역·해외유입",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-07",
+   "health": true
+  },
   {
    "title": "제주 고혈압·당뇨 의료비 지원 개편… 정액 감면서 포인트로",
    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE44ZE9uTjB3S1N5NnhpRUFrTzB6WVlVNEhtdHRGTWRnajliM2tRU2VPVXpwZzdKaUhkRER2cUl0OWF5U2s3dS1yaHNpcXJmSURvU1RwWkJha2NPUQ?oc=5",
@@ -13,32 +41,6 @@
    "score": 0,
    "track": "소관사업",
    "topic": "만성질환·고당사업",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-06",
-   "health": true
-  },
-  {
-   "title": "고혈압·당뇨병 관리, 2028년 ’만성질환 통합관리센터‘로 전국 확대",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9lc18tWUVuNjZHclJCT2J4ZWM1OEFIdlNOcy1jQjFOSHQyNGJwNGlHcGFzWlU3UndQdm5CcVE3VWo0dDRkMWhiRDAxeFYxR0RnLWd2ZHdkc05zeFhDUzl0UmhsNi14YUR5NUptalhUYnU?oc=5",
-   "date": "2026-11-06",
-   "source": "medicalworldnews.co.kr",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "만성질환·고당사업",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-06",
-   "health": false
-  },
-  {
-   "title": "나이지리아 에볼라 해외유입 확인…9일부터 중점검역관리지역 지정",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5meWhTM1FFM1JzU1ZqVEZjS1NMcXB3aTZzaFBzaEZ1Z1hYVHU0Q0hKVWlqSkFJbkNyX3I4MldfTGp4STJfTGlTQ1dSdlpzSnpKN3RTYUhtTVNHam9hZ2tmOEJ4dHRZV1RZQlVGMllfTdIBb0FVX3lxTE5meWhTM1FFM1JzU1ZqVEZjS1NMcXB3aTZzaFBzaEZ1Z1hYVHU0Q0hKVWlqSkFJbkNyX3I4MldfTGp4STJfTGlTQ1dSdlpzSnpKN3RTYUhtTVNHam9hZ2tmOEJ4dHRZV1RZQlVGMllfTQ?oc=5",
-   "date": "2026-11-06",
-   "source": "머니투데이",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "검역·해외유입",
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-06",
@@ -110,6 +112,33 @@
    "health": true
   },
   {
+   "title": "“매일 휴진 안내 한의원에 원외탕전실”…한지아, 운영 실태 점검 요구 [2026 국감]",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE91bm5kNjRmb09YVEl0Q3ZNVkVRb2d5dTFTM25OQVRfNlNjR2hvLUt6S21WU1NoQmJCeEdQUC1MYUtxU1JhbzEtaHR6Y21kS1FiaExjaHVZUmpETVV2TzFHZVJjaw?oc=5",
+   "date": "2026-11-06",
+   "source": "쿠키뉴스",
+   "score": 3,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [
+    "한지아"
+   ],
+   "first_seen": "2026-10-20",
+   "health": true
+  },
+  {
+   "title": "고혈압·당뇨병 관리체계 전국 확대…2028년부터 통합관리센터로 전환",
+   "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAyRWs3ZmdLSlhUT2c5MzhwRjNkYTdMeVhxQ25PcGFXR3liRVVkOGotbHlfaDdMLVg4R1pSRGF1Ulg1TFZHWm16NGlOeTcwQ2RQamx2RDZ6UzFsNnM3YlFoM3dfWVlvZDlvTWJOX2FHbXJCT3VmaWQ4cFF4Mi0?oc=5",
+   "date": "2026-11-06",
+   "source": "금융신문",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "만성질환·고당사업",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-07",
+   "health": false
+  },
+  {
    "title": "[전북. 박지원 의원, 10월 의정활동 ‘국감·입법·지역·예산’ 4대 축 맹활약]",
    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9JQjdpLXZpYjJGTnJBTWtjNnplWTB5SWZqcUdqWWtIX2VvZF9zeTJGakoxWHVIWnFRckk0NlduSnRfbGtTMGNxQWJRRVByRmVTdnV6ZzltNWcxaXJ6ZEpCdjVxc3RNbEtlQWR6eDc5M3AxYzTSAXdBVV95cUxPLUJJcE5NbVBtbXpIekFRRnhsYUpyMTIwcUNIeFFHSkUtUFRlTHc5aERMcHAwU1BmWGRMazBzNlNKdDVPb2lCUjVia2k0NVEyalJHSHgwSmNQRzc5SzRRTFFQbTlYVHdPRTR6S0RxSlYtVzk3bGp1QQ?oc=5",
    "date": "2026-11-05",
@@ -169,19 +198,6 @@
    "source": "더메디컬",
    "score": 2,
    "track": "국정감사",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-06",
-   "health": false
-  },
-  {
-   "title": "고혈압·당뇨병 등록교육센터, 2027년 전환 준비 거쳐 개편",
-   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1tNXBpaEpZV1JMWmNTX0hnX0MyM0hpb2ZGck01WWpLTHktV1hXNG5LSklFMTV0NWF0TzRPUExEUkJKRndFT1gzSEZIazNybE1IY1gzQTFxcTVoVVg4elY5NGNQNWY?oc=5",
-   "date": "2026-11-05",
-   "source": "메디포뉴스",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "만성질환·고당사업",
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-06",
@@ -285,7 +301,7 @@
   },
   {
    "title": "허종식, \"어디에 살든 같은 인천시민\"…국감 정책자료집 발간",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBRYUJGNnlnSVN1T0RJWUx1ZnZZZDB5SFZqQmNfam4tWVB4dFZoRkFUaHJfeXRvMVhRU1Nfc092SDliT0JUajB6MWJCcUhBZnFqc2NrdDV1QTFvT043c19JVU85TjFvVTZnNzEyODZDZ9IBb0FVX3lxTFBRYUJGNnlnSVN1T0RJWUx1ZnZZZDB5SFZqQmNfam4tWVB4dFZoRkFUaHJfeXRvMVhRU1Nfc092SDliT0JUajB6MWJCcUhBZnFqc2NrdDV1QTFvT043c19JVU85TjFvVTZnNzEyODZDZw?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5JbWRsakJ6Wkp4SUJ0b1BmellYX0ZiYU5scEFILTQ1N0JLcUVFbV9COXlEMERPMW5naUtBOEtsZ21weGIxXzRhaXlSRUE4MUxVb1lwcWRkbDVlR2ZJb0F5LWVnRDhta1pNNlHSAW9BVV95cUxQUWFCRjZ5Z0lTdU9ESVlMdWZ2WWQweUhWakJjX2puLVlQeHRWaEZBVGhyX3l0bzFYUVNTX3NPdkg5Yk9CVGowejFiQnFIQWZxanNja3Q1dUExb09ON3NfSVVPOU4xb1U2ZzcxMjg2Q2c?oc=5",
    "date": "2026-11-04",
    "source": "머니투데이",
    "score": 3,
@@ -925,20 +941,6 @@
    ],
    "members": [],
    "first_seen": "2026-10-08",
-   "health": true
-  },
-  {
-   "title": "“매일 휴진 안내 한의원에 원외탕전실”…한지아, 운영 실태 점검 요구 [2026 국감]",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE91bm5kNjRmb09YVEl0Q3ZNVkVRb2d5dTFTM25OQVRfNlNjR2hvLUt6S21WU1NoQmJCeEdQUC1MYUtxU1JhbzEtaHR6Y21kS1FiaExjaHVZUmpETVV2TzFHZVJjaw?oc=5",
-   "date": "2026-10-30",
-   "source": "쿠키뉴스",
-   "score": 3,
-   "track": "국정감사",
-   "agencies": [],
-   "members": [
-    "한지아"
-   ],
-   "first_seen": "2026-10-20",
    "health": true
   },
   {
@@ -2314,7 +2316,7 @@
   },
   {
    "title": "종합 국정감사 질의 답변하는 정은경 보건복지부 장관",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9LM1A1ek95Zm1lcXBETHpEUkRTOS1BXzNuc1JfZDVQNHhTMUpmNkJLZW5KOXZZd0VnRGVKR1NvY0lMNDI4Skloay1pWmZzbXV6N3hGdFNMSm16QUJIZ2hpaw?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFB4azNqaUI0dUE3NDA5THFKbDdvRmJzM1pGM0NOTS1TcTJJcC1tQnlyeHdKa0Jlb3hsNFprU1hqc2dFT2thSUJGWUhNSEhLVWpKMlZZN3FMNWhiTlJQWkdNd0Y5c3MzcXN2dzZBU0tJVlBSS0xkQnA4LdIBeEFVX3lxTFB4azNqaUI0dUE3NDA5THFKbDdvRmJzM1pGM0NOTS1TcTJJcC1tQnlyeHdKa0Jlb3hsNFprU1hqc2dFT2thSUJGWUhNSEhLVWpKMlZZN3FMNWhiTlJQWkdNd0Y5c3MzcXN2dzZBU0tJVlBSS0xkQnA4LQ?oc=5",
    "date": "2026-10-27",
    "source": "뉴시스",
    "score": 3,
@@ -3831,9 +3833,9 @@
   },
   {
    "title": "[2026 국정감사] 정보공개 총괄 행안부, 국감 지적 처리결과 8년 가까이 안 올렸다",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE41MmZfODZzRmZ5NERmMVpLdnRDdmROcl9Fc0p2cXB1YUpITFFyS0YzQlB1bm95SEV5djZPUWMzMkM5WFZ0OUFncklYNUYzMHlfRy1FVDB2RmNVQUd1ODF1Q3dkN1VLT1UyeUkw0gFvQVVfeXFMTVpzV3dzTFdlV25GYmttTEFFWkNDd1FTd0wyYWowNGJkNXlza1VKZ0gwZndkVk1yQ3pKbVkyZ1RLVHc5LUFILTJDaFJkUFNJd2l4Q0tqbHBYd3cwVlJJbkhaZGNZZDZGT1JZMkhOZjVB?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1zY3V0SEI2cGE2VVlCSUxyR3BvWEtMeUdIYmNnZ3pwd1lBdlZNNlAtQ2NDQlg0SG5ITnFyM0VubVlyZmNQbHlrNEdJRVI4UVVCQVFReU1SS3lDQlFkRllSSldHNlpUV3ROb3ZkYzVR?oc=5",
    "date": "2026-10-26",
-   "source": "서울일보",
+   "source": "https://www.seoulilbo.co.kr/",
    "score": 2,
    "track": "국정감사",
    "agencies": [],
