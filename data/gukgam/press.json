@@ -1,6 +1,6 @@
 {
  "updated": "2026-11-09",
- "updated_at": "2026-11-09 00:58",
+ "updated_at": "2026-11-09 08:46",
  "window": "14d",
  "note": "구글 뉴스 검색 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. track='국정감사'·'대정부질문'은 위원 이름·기관명에 '국정감사'를 붙여 검색해 제목에 국감이 들어간 기사. track='소관사업'은 제목에 국감이 없어도 국감 재료가 되는 소관 사업·통계 기사를 주제별로 따로 모은 것으로, 같은 보도자료 받아쓰기가 쌓이지 않게 주제당 5건·21일까지만 남긴다. health=false는 제목에 국감은 있으나 보건복지와 닿는 낱말·기관·위원이 없는 기사(다른 상임위·국감 일반)로, 버리지 않고 뒤로 미룬다. 기관·위원·주제 분류는 모두 제목 키워드 자동.",
  "count": 2062,
@@ -35,9 +35,9 @@
   },
   {
    "title": "독감 입원환자 65세 이상이 64.9%, 예방접종과 신속 진료 챙겨야",
-   "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE03MF9hWEdCd09kMVlVYVM2eFhMbU1UaEVXV0pERzdwYWhCUmR6c05VTnNxX3JaSnpaLWYyZzlrTHJOdWNudnY1Qi1B?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1URXZDZk5kVEVuZ0xLNk5ON2lnV1dtU3BoRFJCNWcxRmN0WWhFb2FGYnhtSE53QVdmVkVNYkxyUU5aYy1zU1c3VjN3?oc=5",
    "date": "2026-11-08",
-   "source": "얼리어답터뉴스",
+   "source": "뉴스N연합",
    "score": 0,
    "track": "소관사업",
    "topic": "예방접종",
@@ -61,9 +61,9 @@
   },
   {
    "title": "나이지리아서 에볼라 해외유입 확인…9일부터 중점검역관리지역 지정",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5Tb0dZOVFSYURJaWE2OWl4cjB3dmZOR2F4X0dYNE40anRXOUVUazZ3ZEVpeHlQSTlrNV9PcGF3LTlaWGk0dm5nX1p3LVlhWnZ1VXlaRzJrcFhzYXNyM241TG9KYWUySFN6Q2ZoZDhKODk?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE05dk1Fc2ZuT2cwOWdETjIyc0xvZFVOY0pTT0tiMGZUNWROLTZ4WXBMT0N4bVhkaXNnMmNKeU5udW9fd2xScXpMcTJjMEEyNXNDTUhkaUtJU3hZVVkzNi1CZERHU1JFaW5mYTNud1JEQ09qUlVfbXVyTEd3?oc=5",
    "date": "2026-11-07",
-   "source": "메디컬월드뉴스",
+   "source": "medicalworldnews.co.kr",
    "score": 0,
    "track": "소관사업",
    "topic": "검역·해외유입",
@@ -216,6 +216,18 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-08",
+   "health": true
+  },
+  {
+   "title": "\"성남시 장애인거주시설 폭행 사망, 시설장은 국감 피하려 입원 꼼수?\" |",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9QZ0k4TFIyMUNxcHhya0daVVdKa1NUN1ZrSmxsZkVsd0FVU1l1cUdCNG1jUk5BbnlLd0hlVkNMekRxRTdwUGJSNE9lM2gyWGJRRTRPX3ZOQVo4NWpEOTJWU2FWdVNpQkEyODloSVB3?oc=5",
+   "date": "2026-11-06",
+   "source": "에이블뉴스",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-10-08",
    "health": true
   },
   {
@@ -997,18 +1009,6 @@
    "health": true
   },
   {
-   "title": "\"성남시 장애인거주시설 폭행 사망, 시설장은 국감 피하려 입원 꼼수?\" |",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9QZ0k4TFIyMUNxcHhya0daVVdKa1NUN1ZrSmxsZkVsd0FVU1l1cUdCNG1jUk5BbnlLd0hlVkNMekRxRTdwUGJSNE9lM2gyWGJRRTRPX3ZOQVo4NWpEOTJWU2FWdVNpQkEyODloSVB3?oc=5",
-   "date": "2026-10-30",
-   "source": "에이블뉴스",
-   "score": 2,
-   "track": "국정감사",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-10-08",
-   "health": true
-  },
-  {
    "title": "복지부 국감, \"보완수사권 폐지 개악·장애인 자립지원 예산 0원\" 질타",
    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1iUThQcjFrbXB3aWloVXE1ZGl5SFhMN0NlNWxrRXU0WlBKRFdIRGc5Z2o2aElRTDh0bVF2VEJqVWF4c3Q1OVpRUzg1ZWVYWm5Ba21ESVdPOXNmaXpSc0o1R2NlcDgyYndiM2tuZ1Vn?oc=5",
    "date": "2026-10-30",
@@ -1234,9 +1234,9 @@
   },
   {
    "title": "\"우리는 과연 받을 수 있을까\"… 국민연금 30대 수급 가능성과 연금 개혁의 구조적 실태",
-   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE91MVBYbWxvRjBUcjI0OW9VYUlVcTNaeWJpLXVXdVBFNjAyamdxMmg0TzZNQVRTQW9mU09DV1NkX0tzd2JDT05YOFh0dFJCTDVlZVdV?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9QWGwzenVGWjRDS3RjWlRlQl85VXZvUE4yNVp5bmpQaUZSSUhaSTZpdURzbFVDUG01VzFtZ3ZpT01aSDRsOVJzYVNR?oc=5",
    "date": "2026-10-29",
-   "source": "유스연합",
+   "source": "얼리어답터뉴스",
    "score": 0,
    "track": "소관사업",
    "topic": "연금",
@@ -1897,7 +1897,7 @@
   },
   {
    "title": "[2026 국감] 위고비·마운자로도 '관리급여' 되나…정은경 장관 \"검토체계에 포함\"",
-   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFByRnhTVmo1MDc0Ym5LcHBPUkZrN1hJMFU5ckt1M3NNX1JRMXp4MVZIR2s1RXRQSXpkeG1QZjdOVmtST1gwdEp1V1MzUHNGZVdHYWFteA?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5GMFNwNlpid3UycndjdW9mS0l0SUVyX2N0QlVYSWdIQUlDU1lPVVVqOVlFc3JuMXBPMnJGRTFyY1J5YURMMzQwSTBnM3hheTNWSlNqbXhYRQ?oc=5",
    "date": "2026-10-28",
    "source": "MEDI:GATE NEWS",
    "score": 2,
@@ -2032,6 +2032,18 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-04",
+   "health": true
+  },
+  {
+   "title": "[2026 국정감사] \"점자 있어도 읽기 어렵다\"…의약품 정보 접근성 국감서 도마",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOUm8zd0wzMzRqdmphU25RMUpaaEdvNGVNVF96SjFEM3R5aGpQY1ZXOVNnY3NkOEVhbTgxRWVpcHVsSXNoNjk1cTZ3QklzZ3o4bGEzbE9jRWhuRUI1QjUwN05lOUFmZFlzbWo4SXd4em5MaEdnbXRZOW9ad0xOaGZyamE1T05ELWZGZGhRLUV2QjduWExrNW5FalpVbzg?oc=5",
+   "date": "2026-10-28",
+   "source": "약업신문",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-10-14",
    "health": true
   },
   {
@@ -2897,7 +2909,7 @@
   },
   {
    "title": "[2026국감] 한지아 의원, 식약처에 ‘미프진’ 위해성 관리 자료 제출 촉구",
-   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1BRUxzSDlRZE45U3diZ1NNQkRFWk5xaE9zZHNFZ2tZYnlfTFZkRWZ0MU9JRVpldmxQRVNzQzRUSmdMLS1nU2Zic1FDRnFkNktZc09mcnRMSm1NOGhHYkYxVmFORUJEWV9D?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5La3g3Uzh0RUg0bmhJa1ZPWExoRERhNWJJMkJGTHRGeUVvdC04ODZjVXJJWnBtWTRwZEp4SzFFbjhMcDk1MHB4ckE2TjZsUnBaQllmdkZpUF9TdTJWVnpfS0JISVRMR1nSAWtBVV95cUxQQmtldW1NM0dwbDZOVVRiSXljQ0s5YVhxU1lyTDBUQXRsVVZwZzdZM2hZMkUwaUNTX3dOOXA2MDdfYkNBUFhwdXBGUlo1Sm5acmEyM3NjMmdvX2Jmbk9GX2tDck5wRV9GMkxZUQ?oc=5",
    "date": "2026-10-27",
    "source": "SR타임스",
    "score": 4,
@@ -3899,9 +3911,9 @@
   },
   {
    "title": "[2026 국정감사] 시니어인턴 보조금 15억 잘못 줬는데 환수 5%…감시 4년간 적발 0건",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE53TXBzYV9NMXpkbEI3OEVkdm1jWkdyOExwWlNXbVVSYURPWFVvZFZqdWduZ240bVJQU3B2ZzdOeThiX0tMWUJxbzhnWDFxZnk1R1dkem9kekRjWWF4dG8tWENQOF93NC1iY3FfcFJR?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1MbThZVUQ0UFM1YUx1MFpCdWs0dl8wQ0ZCYzVRT0NJNDY5Nm9pNlVnUjQyS1BqR2w2RGgyOEN5MHlWNVcxbklEZ195T2Z1MUI2aF9vc2ZYSXJkMWJUSmRHZjMxcC1EN3pqZ0Zn0gFvQVVfeXFMUGRjaS1kYVdpcU5FVFNvNlA0REJWRzZRVDlVbDJtXzVDelF1aWhDaHRpcVNYQU12Vm1fa29hZzd2MS1fZFZ6U05MZGIzclF3dHhxS3F3Z2JsWjJCRklVblJNSllSdzNPdGhkcDgzcWd3?oc=5",
    "date": "2026-10-26",
-   "source": "https://www.seoulilbo.co.kr/",
+   "source": "서울일보",
    "score": 2,
    "track": "국정감사",
    "agencies": [],
@@ -13932,18 +13944,6 @@
    "members": [
     "백종헌"
    ],
-   "first_seen": "2026-10-14",
-   "health": true
-  },
-  {
-   "title": "[2026 국정감사] \"점자 있어도 읽기 어렵다\"…의약품 정보 접근성 국감서 도마",
-   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFB1ZzVpMGZ5T1ZIMzNKWklzLWFoaC12dWh1UVBFUGVMRDI3SDRtNEs3OWlJdzJJTTdUaXNXOUxEdjJteGxpcldvRmdUWmZMcHR6YVZPRVpPMEFxSjBjd2NfOGhKOXF2QQ?oc=5",
-   "date": "2026-10-13",
-   "source": "약업신문",
-   "score": 2,
-   "track": "국정감사",
-   "agencies": [],
-   "members": [],
    "first_seen": "2026-10-14",
    "health": true
   },
