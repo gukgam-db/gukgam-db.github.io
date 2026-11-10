@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-10",
- "updated_at": "2026-11-10 12:00",
+ "updated": "2026-11-11",
+ "updated_at": "2026-11-11 02:01",
  "window": "14d",
  "note": "구글 뉴스 검색 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. track='국정감사'·'대정부질문'은 위원 이름·기관명에 '국정감사'를 붙여 검색해 제목에 국감이 들어간 기사. track='소관사업'은 제목에 국감이 없어도 국감 재료가 되는 소관 사업·통계 기사를 주제별로 따로 모은 것으로, 같은 보도자료 받아쓰기가 쌓이지 않게 주제당 5건·21일까지만 남긴다. health=false는 제목에 국감은 있으나 보건복지와 닿는 낱말·기관·위원이 없는 기사(다른 상임위·국감 일반)로, 버리지 않고 뒤로 미룬다. 기관·위원·주제 분류는 모두 제목 키워드 자동.",
- "count": 2066,
+ "count": 2041,
  "items": [
   {
    "title": "[2026국감이슈]박지원 “김혜경 황제골프 의혹은 중대한 허위사실”…주진우 겨냥 “합리적 근거 갖고 비판해야”",
@@ -34,7 +34,7 @@
   },
   {
    "title": "장기요양 어르신 병원 갈 때 요양보호사가 동행…정부, 의료·돌봄 사각지대 해소 나선다",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBCSlJ6UmR3c25iSkkxUW1yanRrSG9yeUFXUXZqY0RDZm5rQ1hHZ1ltQm9qT0RTWHI4Q1BZTlRRSlIwT0M0M1Q3ME5JcllFa0tSQU9TRElZV010ckE?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9wSDkxc0tSOE5xNUFnajRTcktTQUFEXzctb09BcUxTNEg3Tk5WVUVqZ0pkNTJOOWNGa3U4Ti1XTGZHT1h1RHpDQnNJX29nTkNxYVZSLTFjNVFwdw?oc=5",
    "date": "2026-11-10",
    "source": "데일리연합",
    "score": 0,
@@ -56,6 +56,55 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-10",
+   "health": true
+  },
+  {
+   "title": "복지위 '148조원' 내년 예산 논의 시작, 국감 불출석 증인은 '고발'",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1BSzdBQkswelpyZnI4cTJRUnpHcnVDNmdMSTYyTG5wZVpRdl9DWk43RVVSOTBUd3hWdW5RTUtSQjIyM2dWLTZZM2c0RURQakhOYll0QUxDODlydjM3WnNuWTBUbURDdVhhaXY2UQ?oc=5",
+   "date": "2026-11-10",
+   "source": "약사공론",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-11",
+   "health": true
+  },
+  {
+   "title": "【커버스토리】 수도권일보·시사뉴스 선정 2026국정감사 우수의원",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5neHA5QW5vc3J2WFc5WUFLa2pCcmY5SWxkWHRLOE5TZzZqWkotWi1uRkJyUVpkbldGejVOd0VhVVh5Zm8wdEhwUnViNlpXbGZGRmJpcGhERUNSNU15SHVVdVFYbw?oc=5",
+   "date": "2026-11-10",
+   "source": "시사뉴스",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-11",
+   "health": false
+  },
+  {
+   "title": "'킬레이션 주사' 부적절 투약 의혹 행정조사 착수…국정감사서 의혹 제기",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE90NUNfSHJYNmxzS0VwSnltSWhxdVliTTZWdkZ1M0g1MC1lejA3QkotSm9OQWdUMXN2RW8zanZTTGUzQzRqbEFKaEJCbW90QkFCQUxnNlphanZXc3ZtYTlsNGZCNXhITnE1eVdkdkhB?oc=5",
+   "date": "2026-11-10",
+   "source": "https://www.newfilenews.com/",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-11",
+   "health": false
+  },
+  {
+   "title": "결핵 치료 넘어 완치 후 후유증까지…국립보건연구원, 연구 범위 확대",
+   "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBGYkxFcXN2R2U2RVAtOEtfSWNCektGMks4RHhGYzBUVWtSVnRtX1hVdm9jOVd6dWYwQ0J5TVRCUnZyeURic2JqT1dwTkEzQQ?oc=5",
+   "date": "2026-11-10",
+   "source": "전자신문",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "연구·R&D",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-11",
    "health": true
   },
   {
@@ -593,6 +642,20 @@
    "health": true
   },
   {
+   "title": "\"'슈도에페' 63만정 유출 방치\"...대약, 서영석 의원 '약사법 개정안' 입법 촉구",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBmT2Izald5ZDc1TEp3Ql92YWgxQUdWdWlURXdCNXBCXzZJSzh1ZV9qWGIzeUhCbGNrT0c2dlMxOGtZR0pxQ1R0X1g2RnZ5M2d2SVZtdURRRFRyaWVHanhzcWYyNzgxNFVLdjdiQw?oc=5",
+   "date": "2026-11-04",
+   "source": "팜뉴스",
+   "score": 2,
+   "track": "",
+   "agencies": [],
+   "members": [
+    "서영석"
+   ],
+   "first_seen": "2026-11-11",
+   "health": true
+  },
+  {
    "title": "[기자의 눈] 보건복지위 국감, 요란했던 제도 도입·검증은 유시무종(有始無終)",
    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1nYnNZYmlMZzdKWmhPZVo4TEh1ckFnZE9sV0swVHJ1SjNaWGdKYXpyeXFHYTZNX1NWY0NKOUlMUDFlenl6M0NPek5IUUF0eVFsZDhQTjlpV3lPVGU4bEZfb19RLTRrQW80MzFB?oc=5",
    "date": "2026-11-03",
@@ -720,6 +783,18 @@
    "members": [],
    "first_seen": "2026-11-03",
    "health": true
+  },
+  {
+   "title": "반크, 문체부·국가유산청 11조 원 예산 ‘국민 국정감사’ 추진",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBBWFE5Ry0yUzNwRzBjc3Bxc2FTS0RLYXhZcUhKd19mZ3p6azJqQmptX0x0RG9WMDVJekFSLVdWT1FnUnJVcU94elFTVVVsX0lDMFE3bTYwaGlqV3lZSWFwUHduZTR3QTdRY2UxRm5IZzVoRFE?oc=5",
+   "date": "2026-11-02",
+   "source": "스포츠동아",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-11",
+   "health": false
   },
   {
    "title": "국회 보건복지위, 양산부산대병원 필수의료 현장 점검",
@@ -988,7 +1063,7 @@
   },
   {
    "title": "[2026 국정감사] 여야, 운영위서 이진숙 5·18 토론회 공방…막판 고성 충돌도",
-   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5EQWFBc2o5Q0sxb002NVROcHdZSG1pTS1UdlQ3S3czaUVjUlRmRUdDZThDYTFNU0ROb2gwRDJYWmRDT0J4cC1ZS0pNWjg2dTF6MHF5aUJDNFrSAVhBVV95cUxOREFhQXNqOUNLMW9NNjVUTnB3WUhtaU0tVHZUN0t3M2lFY1JUZkVHQ2U4Q2ExTVNETm9oMEQyWFpkQ09CeHAtWUtKTVo4NnUxejBxeWlCQzRa?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE93YTNRTEdyUUFRdVlrRVd5S05vNks1ODA4QUJVWjUtcnFtc0hHVGhtVDJwY3JuaFJpTGV6SnBsNnVlV0hMcERaMjhsR0dUTHdvdXdiTFJHaEhRd9IBWEFVX3lxTE5EQWFBc2o5Q0sxb002NVROcHdZSG1pTS1UdlQ3S3czaUVjUlRmRUdDZThDYTFNU0ROb2gwRDJYWmRDT0J4cC1ZS0pNWjg2dTF6MHF5aUJDNFo?oc=5",
    "date": "2026-10-30",
    "source": "아주경제",
    "score": 2,
@@ -1151,7 +1226,7 @@
   },
   {
    "title": "보건복지위, 지역 필수·공공의료 현장방문 실시",
-   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE41aHZVSm5aaVpaRVZRVHFuMmo3VTFPVDM0Z3NmdjVnS2hGcllpVm1FQ2VSaERpV3VfbjljZmpFTGxoNk9mWFFleWZUeFI1WHktcl95M2lmSU41RlVvVGllclUxRUdpdw?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBKX0s1ajVtNG9XY3Zfb2doSTU5dWJXMFNkSVBoUm5wUWtBMzBYQTF4alpyVzVOV1lZc2paM0ZZdWlsTTlaV3RpNmxHZmMtRW0tR0YteXRDSS1IYW9xQkdqMFBaUlcyX1MyR21NNg?oc=5",
    "date": "2026-10-29",
    "source": "press24(프레스24)",
    "score": 2,
@@ -1455,7 +1530,7 @@
   },
   {
    "title": "국회 보건복지위, 양산부산대병원 현장 방문",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE03X0hOYnpsa1lBRGlZR3JFQ0tjaEhrNXZFUVZjUU54eW5MaFpYX3A3ejhDUzRlTHBwUk9lekgxR2ZveWNWeWVrUGVmVVNOOEl1Z2c1RlhORUlTMXVpMWphRdIBYEFVX3lxTE03X0hOYnpsa1lBRGlZR3JFQ0tjaEhrNXZFUVZjUU54eW5MaFpYX3A3ejhDUzRlTHBwUk9lekgxR2ZveWNWeWVrUGVmVVNOOEl1Z2c1RlhORUlTMXVpMWphRQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1MSHc2c0lJbEUtS2ZZUEpnTktQNThuSFA2elI5V2o2a0dOSmJ4MnBMNkY4bmdmaGJ0aDlVSmJYdElhY3BOdFk5SF9JeGd1TTRNbzNyczJkOWd5QWPSAWBBVV95cUxNN19ITmJ6bGtZQURpWUdyRUNLY2hIazV2RVFWY1FOeHluTGhaWF9wN3o4Q1M0ZUxwcFJPZXpIMUdmb3ljVnlla1BlZlVTTjhJdWdnNUZYTkVJUzF1aTFqYUU?oc=5",
    "date": "2026-10-29",
    "source": "연합뉴스",
    "score": 2,
@@ -1500,6 +1575,20 @@
    "members": [],
    "first_seen": "2026-11-10",
    "health": false
+  },
+  {
+   "title": "한지아 “아주대병원 소아응급 의료진 7명 사직 의사…국회·정부 대책 마련해야”:경찰연합신문",
+   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5mZTluY01YTkZ1SFNWNDNZMkFmcUpveTJtTFdvRGZsVUdCVWxtNzFkMGl1SFlNY1o2R3VvODVGTVhEYk5FZnhaMEtYNWR3VHNuaV9sTVJQc01VZzRU0gFsQVVfeXFMTjd5cGFVeFp3MUd6S3lRZy1IdW42ZU9mZUxta1JscnpwRTdDZnZiWXJKYWJjWHdnVWxRaXBqUGhTNWZONnhLQXpfcU1mRXFJbVRoa04xbF84c0Q3bDlZV1NCNzh4UFdfdEpaVlFl?oc=5",
+   "date": "2026-10-29",
+   "source": "경찰연합신문",
+   "score": 2,
+   "track": "",
+   "agencies": [],
+   "members": [
+    "한지아"
+   ],
+   "first_seen": "2026-11-11",
+   "health": true
   },
   {
    "title": "“가정어린이집, 영아전문기관으로 재설계해야”…국가 책임 강화 촉구",
@@ -2012,7 +2101,7 @@
   },
   {
    "title": "[2026 국감] 미프진 가교임상 공방…현대약품 “11월 RMP 보완자료 제출”",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9FMVBYSE5sUlRoMzNEX0VQWURlVlIxUmg0YlI5UGpiNVFURktnMndobDFMSnlxYW80TDZVYWtUVndOTE40NEVORk0wNHhqYTZPS1dqa3NiUTZrUmRSbVR6dERDdG52OW10RnhR0gFuQVVfeXFMT0ExdFdEYk1PMkR0MXZFLWZvRUFValJqVUdSV0YwVGR0X3I1OTBVb21RRUptU2xXeTNZMjN2RmRHY05wZzhaT3Fja1h0UHQ4a0tQcFdlcVZwMzNyblpSdzNGeHFOR3dFS0hXbzZQcXc?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBIV2EyMFBJaUtfN01CNWN0ODY0b2twbVNNQ0xtWGRVYVVGMkNnaTNVXzVaNVN3T2ZWdlN1a2p2b25zc3ZHTlZRTU1TYUdWdzZCdzVqOEluUVdxYWtPVFF0V0Zaa0h6bzltc0HSAW5BVV95cUxPQTF0V0RiTU8yRHQxdkUtZm9FQVVqUmpVR1JXRjBUZHRfcjU5MFVvbVFFSm1TbFd5M1kyM3ZGZEdjTnBnOFpPcWNrWHRQdDhrS1BwV2VxVnAzM3JuWlJ3M0Z4cU5Hd0VLSFdvNlBxdw?oc=5",
    "date": "2026-10-28",
    "source": "파이낸셜투데이",
    "score": 2,
@@ -2127,9 +2216,9 @@
   },
   {
    "title": "[국감2026] 野 “국민연금 회의록 제출하라”…정은경 “정치적 결정 아냐”",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBsd2o2c1BBYmdRdmhtUlEwcDNIdThwTTdKbm55VW1GcXZtcm5aRjQ5dFJqU0g5OEFyemNjOGxkSGRZV2NsMGRLekdHNU1VbnBQVjJaNjgwNGlaQUZFMW1UUHVZRWFZOUl2YXkyOFJaRTjSAXRBVV95cUxQSDhZeDE5ekxJUEgyekpYbVgySVlOUWx1TVozQTFlY3RWVjBlbjVqZjZyaVhvQ2pJc2d4X2lOY1RiSG9JUER3cFFTQzNxa1pPTWpqOV94YVNydVppRG1FTnJCcG5xVUprVy1UR19nZ1FfR1FfZg?oc=5",
-   "date": "2026-10-27",
-   "source": "주간한국",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE96cVlWaTlOVDdEczR4dlN4STlEWDVzU0JEbUk3THlzTnpYNHljR0FSUDBYV281RUJYQVFZa01ucUd3dFhrNF9iYS01cTFhUU1vemgtcXpnZkMwdGloVGF2TmkxQnBMWXpWM2tn0gFvQVVfeXFMTmZJcC0wc0Q4ZkpOUEt0eUZMMjlEcGpWT3pibGptQVVycW50Z0F2ZVpsOHhlZW5hNVVxbTgwb2EyRlprS3pENmdxQi1QUVd2Rk9WV1pYdWJqOVA3dy1UQnI0YXhpZWhJdVY1UHJFTlNV?oc=5",
+   "date": "2026-10-28",
+   "source": "한국아이닷컴",
    "score": 2,
    "track": "국정감사",
    "agencies": [],
@@ -7172,19 +7261,6 @@
    "members": [],
    "first_seen": "2026-10-20",
    "health": true
-  },
-  {
-   "title": "어린이집 1만곳 문 닫았는데... 서울 입소 대기는 9.4개월",
-   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE02YVRrYjJZMzFJUGtVXzRJd0RCaFBtbW9QX1RnTTE0ZlluOGtsVWd2YzdtYmMzbHFHeF9MbDJOR3NHZ0lYZDJQQXVrN3lGRnFmZDNjdFg0eGEzeTZwTzdHRDBmMng?oc=5",
-   "date": "2026-10-20",
-   "source": "법률방송뉴스",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "저출생·아동",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-10-20",
-   "health": false
   },
   {
    "title": "“매일 휴진이라더니 한약은 택배로?”···국감서 드러난 '깡통 한의원' 의혹",
@@ -16886,20 +16962,6 @@
    "health": true
   },
   {
-   "title": "“김승원, 국감중 식약처 청탁…양씨 등과 전화-문자하려 들락날락”",
-   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQU43S2tEZkxaQ2k5X1JMRTNabWEwNkd0VjNJazlwRlVCS1JubEsxMi1YTTB1SEFyblVhM2tNYm9rbC1BUnF2X3A0dnBHdlI0dnBxYmRJeVd0T3gtSlBHWEZjSXQ2eV9jbF84QkVRMEt1WUJnOXVyWVV2cHlVMFBMZlp2bnN5amN4V2JNQ1lTQ2JKSjZMdXFjRUF5MTVyLU3SAWZBVV95cUxQRW5KSE5MZW1kaEp4V2FTOWJvcExBWXQ0d25FSU12QXJHMXpHX09aOFVSeDNWNHRiVi05WGNtdTljNDRsajNacUtnYXdfbzZiR21ic3NkeVZzR2oyeTlUWDNOdzdidHc?oc=5",
-   "date": "2026-10-09",
-   "source": "동아일보",
-   "score": 3,
-   "agencies": [
-    "식품의약품안전처"
-   ],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": true
-  },
-  {
    "title": "치협, 국감서 '자율징계권 확보' 필요성 역설",
    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5QaWVLMlNGMGh2QS1Ed0xyRl8xTWRNdl80MlV0YzZCRERzMHZVdGdNcnRReElVQ2pXMEdWUkQ4Y2xNa3kwZFFJZHN5cDVFSm9DQUF5U1A0LXI1WEdq?oc=5",
    "date": "2026-10-09",
@@ -26268,136 +26330,6 @@
    "health": true
   },
   {
-   "title": "野 “김승원, 2021년 국감중 식약처 청탁”… 金측 “통화 시간 5분 정도에 불과” 인정",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFB3Q01JVEdMc3RuaXVrTk1HQUxwQ1BUcnkwaU93VkVILXNDaGlneDJXRjI5ZG4zQTlPMWdGamIzUGpteTgyaF9JUHpTek5LeDBWQnhnU2wzdHdKRERwenJVQnhuMFFvclhHTG1ZRjZDWGk5OG9iZnRZ0gFmQVVfeXFMUE9hTGRHWXhrNEU5MmkzckVSNlRySDNvcEF2czQyVmtTT2dlaHF0aWhuYUhpa2xSTWZDenBTWWFlT2pUSGJhLVczd2FwNFF5c2tkR3Y0RERhZW1FV2VkcFEyR0U0aWxR?oc=5",
-   "date": "2026-09-11",
-   "source": "동아일보",
-   "score": 3,
-   "agencies": [
-    "식품의약품안전처"
-   ],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": true
-  },
-  {
-   "title": "국감 중 식약처 청탁?...녹취엔 '성공한 로비' 자랑 [뉴스UP]",
-   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1keFNNYkFZYkpNRzNLNmp1ejMwd2g2NHVQSW9jdVhmN3paZ3RqaFJUOElFQ3ZCenZIZWM1azN4bVFZMGg5cGFQVDJwdGxaeERHT2tnUU5paDN2U3BPamc?oc=5",
-   "date": "2026-09-11",
-   "source": "YTN",
-   "score": 3,
-   "agencies": [
-    "식품의약품안전처"
-   ],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": true
-  },
-  {
-   "title": "\"김승원, 브로커에 휘둘려 국감 들락날락하며 청탁\"",
-   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNSkIzT295SVU3RVdrYVRfLXR5ZG9zcVdWU1JLbUQ2Q0N6WnlvWGhKd1NTU3czMmFkWVlXMEh1Qm5vUlJUX2VlRDhKUGRtWGQ1d1ZkUDMtd0EtN29Vb1VSMGpjbWVmczdfak9NRjUtTjBsTVVKOXBrVjI0ZmMzMXhlbEFUNUtBN1BVY3NjRzFJXzI?oc=5",
-   "date": "2026-09-11",
-   "source": "조선일보",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": false
-  },
-  {
-   "title": "“얘기하고 다니면 국감 대상”…김승원측 공개 녹취록이 되레 의혹 키워",
-   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1wRy1NZ3pJNkR1TTRRZUNPV1A4MHdVUG1sMFpoM1hMTUxXQWFWVm1XM3l0UTFtcjRGamF5enk2RTFGS0NRRW1TNEtXbTVSSEJkUXlNeHNTQmYwbVByZDdiZGVoeDVPZ9IBZkFVX3lxTE1wRy1NZ3pJNkR1TTRRZUNPV1A4MHdVUG1sMFpoM1hMTUxXQWFWVm1XM3l0UTFtcjRGamF5enk2RTFGS0NRRW1TNEtXbTVSSEJkUXlNeHNTQmYwbVByZDdiZGVoeDVPZw?oc=5",
-   "date": "2026-09-11",
-   "source": "동아일보",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": false
-  },
-  {
-   "title": "[Only 주간현대] 흩어진 국감 자료…행간 다시 읽기",
-   "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE51QXl3MktWUzBKclp4NFhzZ2RLMkxhdm5rZ2pXaHdvN0pMNTllVG1ZNjNCV2pHd1VuWnBrcHJOTlU0M3c?oc=5",
-   "date": "2026-09-11",
-   "source": "주간현대",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": false
-  },
-  {
-   "title": "복지위, 김승원 '식약처 청탁 의혹' 공방…여 \"정쟁 용납 안돼\" 야 \"왜 뚫렸나 따져야\"",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBvandRQVYyTUc4RWJJR2ZUTFNqeWEwMmdEQ3RMV3lQclRobW51T3hlczJ4MUkxUVFEekVvdE9CTm9aRGt3dXI3bklCalV6QzY5dnl2SzB6Rk1KZmFaeGxBYtIBeEFVX3lxTE1BYjg5NFpFS0l3RUJaVzZJVUdMcFE5eDRGaVhrM3NkMTJrNjluQnJlaFp6ZU5ZWk1ic0ItcTJhcC1OSHNFdjBjTHhOeVlnd0xlanVBSnpQZC03Zjh3RFRoQ1g0ZmluM01POTZacmVWQUw1c3N1Tk1LWA?oc=5",
-   "date": "2026-09-11",
-   "source": "뉴시스",
-   "score": 3,
-   "agencies": [
-    "식품의약품안전처"
-   ],
-   "members": [],
-   "track": "",
-   "first_seen": "2026-09-11",
-   "health": true
-  },
-  {
-   "title": "법무부 장관 후보자 '식약처 청탁 의혹' 복지위까지…여야 정면 충돌",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5UVV8xM1pHaktveVZiZWxkb2lCNkx3M1NiV19XejNIMnFuQk91ZmUzdVFaUmNqRXNxbzhEdldMSjhNWlZ4YVZDOWpoV3hON2ZWZzhjcVRoUW5uWk13M0lISU52Z0ZjSWZaaUdtMVpNa9IBc0FVX3lxTE9EYV84dHZKZVUtRklxeERkSHhlRmVKQlkwdVpVYVhoWENiek9fNlhWYm9IdUdyN3o4NUUtckwyLW1QQUhfbjh0U3ZrUmZzLU1XNXl1ODlyY29VbU9pc0swRXdtTHNxbi1wRERIZ25QVHRiMDQ?oc=5",
-   "date": "2026-09-11",
-   "source": "청년의사",
-   "score": 3,
-   "agencies": [
-    "식품의약품안전처"
-   ],
-   "members": [],
-   "track": "",
-   "first_seen": "2026-09-11",
-   "health": true
-  },
-  {
-   "title": "복지위 달군 김승원 ‘신약 로비 의혹’...“정치공세” vs “특혜 승인”",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE0yMU9VZlVZakFhYW1yRUhDSC1Ua3pCTDJMVmw3Y2JSLVFfWnpGeTNqQXpfanp1QVVTTzlLa1o1Sm02X1VJNW84aVk3SU9weUNBTFFTOGNwbFpoWXloUHZXVmtNZDdYbUE?oc=5",
-   "date": "2026-09-11",
-   "source": "M이코노미뉴스",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "",
-   "first_seen": "2026-09-11",
-   "health": true
-  },
-  {
-   "title": "복지위, 김승원 신약 청탁 의혹에…與 \"정쟁 안돼\" VS 野 \"왜 뚫렸나\"",
-   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPam82a1k1X2N3eHpEVjVBOEEtYWp3dUpzYlMzLXZrbDdZS0FTVmlEMVM0Q0hpREVvMkpiZFNGb3VqQUNDT0t1UVJQT20wdjdFY1kzLUdVWkdjWk1Wcml4UFl3aVBoeXdycXZQZUtYMkNXdFJsTGRIMmgydzZDS2JqMFl3?oc=5",
-   "date": "2026-09-11",
-   "source": "sportalkorea.com",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "",
-   "first_seen": "2026-09-11",
-   "health": true
-  },
-  {
-   "title": "보건복지위원회 개의하는 이만희 위원장",
-   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1uMFVnRmd2SzBwd1pIbXhXUnhVOVFiN0xROUNVX0xNYTBHNXVLZ2VacGl6a2VtcXpwOGo2YVRNMUFCS3B6SzlFRFlsbw?oc=5",
-   "date": "2026-09-11",
-   "source": "뉴스1",
-   "score": 3,
-   "agencies": [],
-   "members": [
-    "이만희"
-   ],
-   "track": "",
-   "first_seen": "2026-09-11",
-   "health": true
-  },
-  {
    "title": "국회 복지위, ‘신약로비 의혹’ 공방…“김승원 전화로 통과”·“원칙따라 허가”",
    "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5TSDBaTV83NTgwcXNDREZrNnoxeGNiWWN6ZDJxVkhFWE8wb3dHUVFBWmd0RkV4OVJfUGl1RnZRWUNobVlSNVE?oc=5",
    "date": "2026-09-11",
@@ -26510,254 +26442,6 @@
    "track": "",
    "first_seen": "2026-09-15",
    "health": true
-  },
-  {
-   "title": "“김승원, 브로커·식약처 청탁 전화…국감 중 들락날락”",
-   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE56VjRFNHRUSFJMM3YyRXEzMnFwV19CVFRtYkFGcGdEMDA0R0JBWGc5SGJnLWhXRHc4aTlqcjZlVzlmTU5DT2h0R0ItZ3FBX3E4ZHFFVw?oc=5",
-   "date": "2026-09-11",
-   "source": "v.daum.net",
-   "score": 3,
-   "agencies": [
-    "식품의약품안전처"
-   ],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": true
-  },
-  {
-   "title": "국감 다가오는데 결론 못 내린 면역증강주사 희귀약 해제",
-   "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE04MnFMUmNXVXhsczdMNEJwQTRUajVpZHFGMmxYWXg0aVpEWko5RnFYZ1BNZ251UFBzUlZxM2NjRkxETHVRNzYyckdZdHJPdlNB?oc=5",
-   "date": "2026-09-10",
-   "source": "dailypharm.com",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": false
-  },
-  {
-   "title": "국정감사 끝나면 ‘2차 추가 개각’ 가능성있다?...복지·교육·외교부 주목",
-   "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE82SEJYVWstZzhoT0JPUVdiVXVQSnFHTzgxOGRKbmM0aG04cG5NbEY5UWx1a3dZMlhPQnlsTURIQjJ0WDdyenN3?oc=5",
-   "date": "2026-09-10",
-   "source": "신문고뉴스",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": true
-  },
-  {
-   "title": "\"김승원 국감 중 식약처 청탁... 브로커에 휘둘려 들락날락\"",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNQ0hTcEM5bG0xUVZqYUtfMWdsM2pTQVhWR0lGSVJwM2I0QWsyVU11MUJzNVFrT2dLclZHUTg5X2lHNDc5U2RhS2FZTldBT1lrNWlLRWFtNXZBNXBKY2dGZGdHVG5VOEQ3SUFKZHBXbXhDMGQxeDY0QnJDd1RuNGN5YUpMcmFoUQ?oc=5",
-   "date": "2026-09-10",
-   "source": "조선일보",
-   "score": 3,
-   "agencies": [
-    "식품의약품안전처"
-   ],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": true
-  },
-  {
-   "title": "[김종석의 왜]김승원, 국정감사 중 ‘들락날락’ 무슨 일?",
-   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1lcUozN1VDSGVfTzBOdGxwRXlpcml6a2lUbEpBVU5TYlRaaWFyOGttUGhxMGFPempzZkJKUkFCV3lyRnpwQUFZbkNpMDNBQXdwRC1ZeWtfamtWNDZUYXfSAWNBVV95cUxPY0EwcWo3bElwNktNTW43N1hqdGZqMldYOS11TWtuOTlYcEFXWlRUTWlkREQ2cDhIUHhjV19QSDh4OVpiUUdLVzI0MTlKUEsxMXBnZUhVTkpzUWV5dUdWZlcwVG8?oc=5",
-   "date": "2026-09-10",
-   "source": "채널A",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": false
-  },
-  {
-   "title": "김승원, 국정감사 중 제넨셀 임상 승인 요청 의혹…안철수 “의원 자격도 없다”",
-   "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBCeVVqc0JTM05aU3ZrZnZGYXVBMFQwUkNxMHl4VW8tSHpVWFdkZU1wR2VDQjBoWDZQVm51OGc1Vzh4dmZIZ2VGNlA0WWNTQQ?oc=5",
-   "date": "2026-09-10",
-   "source": "뉴스21일간",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": true
-  },
-  {
-   "title": "\"김승원, 국감 중 전화 돌리느라 들락날락\" 안철수, 시간대별 '청탁 정황' 직격",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA1Z2tkZGc2VVVVUHY0T0JQUWNzTWFNUGdaTVpKNlQ2SnpxeTN5YnpwZkhHWTh2RF9GU1UyVWthV09TcFJYakI3ajFtQS1DRkdDVU9KcGlqM1JxR3pPVEtsRk9jUDFoaUZ1NU5SMnVR0gFzQVVfeXFMTjFLa3l0b0lDSGZoVmdfb20zRWlhSTVsS3B2akJqczdzc3h6Tlo5ajFpa0Q5NzFyejRpYVZxUG1oUDhLM2FTSXcxWVpYRFZIbW5oSTEtMms0dDhpMWZKcEJPWXg5ZVM1bnNkV3kwMFJUSnNpcw?oc=5",
-   "date": "2026-09-10",
-   "source": "한국일보",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": false
-  },
-  {
-   "title": "안철수 \"김승원 의원 자격 없다..., 국감 중 식약처에 제넨셀 청탁\"",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9BSHU2WjRCVG5QaXJ5dzVtRVMzTk41ZFNBT1poNl9xWGlCcG5iUVB0NkZDdWlwbE5NVXlzQ0V3VXlfVWlIdUlfSGtMV0w3RUUzcXM4V3JkTGJpTERDZWZDakpUalBpaWJNWThr?oc=5",
-   "date": "2026-09-10",
-   "source": "더퍼블릭",
-   "score": 3,
-   "agencies": [
-    "식품의약품안전처"
-   ],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": true
-  },
-  {
-   "title": "녹취 원문 꺼낸 김승원 “왜곡”… 국힘 “김, 국감 중 청탁 영업”",
-   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFB6QUNCcVBVRHkwRWVPQ1VjeWtHQkJfN0pCdTZVblFRZ1VpR1g1U2Zmb0cwMlVzQmFDa21CbVJWQjNiQlIxSDZGUGJNc0JJdUd3QnFlNDlYNA?oc=5",
-   "date": "2026-09-10",
-   "source": "서울신문",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": false
-  },
-  {
-   "title": "김승원, 국감장서 '들락날락'...청탁 현장 포착?",
-   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9ycEUzLVRFS3RFaU1HbHYtUzlXSHNJWC1SNWVCNjVqamNlaEpvajlpR1Q3cnFHMmdJZE95bU1aYUpCMEhWZEdranNrTUljbThsZ3JFakVWU3FZcXpPV3c?oc=5",
-   "date": "2026-09-10",
-   "source": "YTN",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": false
-  },
-  {
-   "title": "김승원, 국감 중 통화·문자 ‘들락날락’…영상 보니",
-   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5ncGx3YWUySXNXQU15MUkwZFh2NmUxTHM1MUNTUWtHMW9CaHZWa1JWd1hYakpvSW14b0RfTjE3QjNwMG1ZalN3T0h1T2pMT3NrYTF5Sm5BNkQxUGFmbmfSAWNBVV95cUxQaXFZcWZGMVUwQzdDbUpRbTJsc20ydkdpbW9ZRmRGMG9kaUQ4QXlNcDNUU2ZSbFVVN2stcGpVdDRoMWxua2VjdUZaUGd4TDMzc09wbTBmeXM2QXNmU2VNN3l2bTA?oc=5",
-   "date": "2026-09-10",
-   "source": "ichannela.com",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": false
-  },
-  {
-   "title": "안철수 \"국감 중 양 씨 청탁 영업 金, 장관·의원 자격 없다\"",
-   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBNWXZ2OTFxc2FKbVBZUG9mdmJlbHRUSUlxWV9wTzhNeTdXWFEzUk54aV9xcGRWN3l3dEVjdXEyNWJGdEx5cUlMVkl6bFhSdkZiQXZiSmZLeVRjTWNLVzFRZTV3?oc=5",
-   "date": "2026-09-10",
-   "source": "매일신문",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": false
-  },
-  {
-   "title": "안철수 “김승원, 국감 중에도 브로커 청탁…의원 자격도 없어”",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE13MTdINk1NdmpPWTdOLUhrcEt0bjliaERaYkJLM2pjaG1rdnlYcXNWM2drcHJuTXBKMm5ZU294V1NjdFFGWXNFLVNPZzhDUC1qSUpxLTVDeWk3V0U?oc=5",
-   "date": "2026-09-10",
-   "source": "경기일보",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": false
-  },
-  {
-   "title": "[사설] 국감 중 제약사 청탁 의혹까지 나온 김승원… 자진사퇴가 답이다",
-   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5RSVVJa2VGejU5XzE5SnNXSFlILTFNWnZkMWhoOGREZlc1dDU5eHdnQ1lnTFJKMzFCdjh5SUJIbDZzQVd5SkIwY0ZUY3NjYkk?oc=5",
-   "date": "2026-09-10",
-   "source": "v.daum.net",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": true
-  },
-  {
-   "title": "안철수 “김승원, 국감 중 청탁 전화”…金 측 “통화 5분, 왜곡된 공세”",
-   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE03WnVLVExaZFRxeDRIRnk5VnRwbzJPdkhWMllLU21YT3JnVHB6U1RVNUdSWDFUbnhRSXIwSHFtMUdZTnVTQXJaSFlxV1IzeVZsNXfSAVNBVV95cUxNcE9zcjlRcmhiWFRFN3dvVWV3MksyZ2ZEVk5HRWthMUlxVTB0dmpQaWdyQVhuNnE5UVVpbUtqZ2s1blU0SVlObXZMcHN3LWE3NDdoZw?oc=5",
-   "date": "2026-09-10",
-   "source": "서울경제",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": false
-  },
-  {
-   "title": "[천지일보 사설] 국감 중 ‘청탁 전화’ 김승원… 철저히 검증해야",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE82YkFCSUt5UXdMZHBwY1lfdHo5MkhsZVBEcXNDUUpwT3BTOWZTWVMzRHBkMC1aVzRVd2ItOU45QS0zVEZoM2lDbDZXNlZjcFpVY3NySjBZUXhsUWtQLTNHejV3cWl4YjNLbXc?oc=5",
-   "date": "2026-09-10",
-   "source": "천지일보",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": false
-  },
-  {
-   "title": "후보자가 직접 공개한 녹취...안철수 \"국감 중 청탁전화 돌린 것\" [앵커리포트]",
-   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9RN0JlUDRmNFE3Q1NXZjlBR2RLWVljYVBIT3MxSUxxSVBuM1Q1WUhYbnVsSGd1RDQ0SjRCVVM3Q3BMSWxCeHR0b1pKUU82MmF6b1c2YXB3OTdhV2FabUE?oc=5",
-   "date": "2026-09-10",
-   "source": "YTN",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": false
-  },
-  {
-   "title": "시작된 국회 대정부 질문 '약사 현안' 언급될까?",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE50cHlDSmZXX0lwQzllZ3IzN1pUbmRrUmU0UWNuZWpQc1gxVWJ3U0ZhQ2hsdmZHT0xNTlZDb3lfR2tEVEVPc3gwU3VzajNKWXRvYlctbGpicGZacDdWRjlUYVF2a1ZRamZ5clJTeQ?oc=5",
-   "date": "2026-09-10",
-   "source": "약사공론",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "대정부질문",
-   "first_seen": "2026-09-11",
-   "health": true
-  },
-  {
-   "title": "“김승원, 국감 도중 식약처에 청탁…양씨와 전화 위해 들락날락”",
-   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBFbkpITkxlbWRoSnhXYVM5Ym9wTEFZdDR3bkVJTXZBckcxekdfT1o4VVJ4M1Y0dGJWLTlYY211OWM0NGxqM1pxS2dhd19vNmJHbWJzc2R5VnNHajJ5OVRYM053N2J0d9IBZkFVX3lxTFBFbkpITkxlbWRoSnhXYVM5Ym9wTEFZdDR3bkVJTXZBckcxekdfT1o4VVJ4M1Y0dGJWLTlYY211OWM0NGxqM1pxS2dhd19vNmJHbWJzc2R5VnNHajJ5OVRYM053N2J0dw?oc=5",
-   "date": "2026-09-10",
-   "source": "동아일보",
-   "score": 3,
-   "agencies": [
-    "식품의약품안전처"
-   ],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": true
-  },
-  {
-   "title": "안철수 “김승원, 국정감사 도중 브로커와 통화…공직 자격 없어”",
-   "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1odWFlUkphcHVkOEdoVUdHY29RV2hWOUJmT25oOWVqVkViRjJkckJvQzBWdU9XeXVIc2JhdENaeVlfQW9rRWc?oc=5",
-   "date": "2026-09-10",
-   "source": "v.daum.net",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-11",
-   "health": false
   },
   {
    "title": "교육·보육 종사자 아동학대 5년간 6087명… 하루 3.6명 검거 [2026 국감]",
