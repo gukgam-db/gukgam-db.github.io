@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-11",
- "updated_at": "2026-11-11 09:59",
+ "updated": "2026-11-12",
+ "updated_at": "2026-11-12 02:06",
  "window": "14d",
  "note": "구글 뉴스 검색 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. track='국정감사'·'대정부질문'은 위원 이름·기관명에 '국정감사'를 붙여 검색해 제목에 국감이 들어간 기사. track='소관사업'은 제목에 국감이 없어도 국감 재료가 되는 소관 사업·통계 기사를 주제별로 따로 모은 것으로, 같은 보도자료 받아쓰기가 쌓이지 않게 주제당 5건·21일까지만 남긴다. health=false는 제목에 국감은 있으나 보건복지와 닿는 낱말·기관·위원이 없는 기사(다른 상임위·국감 일반)로, 버리지 않고 뒤로 미룬다. 기관·위원·주제 분류는 모두 제목 키워드 자동.",
- "count": 2046,
+ "count": 2049,
  "items": [
   {
    "title": "\"2027년도 예산안 및 기금운용계획안 상정, 보건복지위 이만희 위원장\"",
@@ -72,6 +72,43 @@
    "members": [],
    "first_seen": "2026-11-11",
    "health": true
+  },
+  {
+   "title": "\"회장 불러라\" 일단 채택하고 빼주기 24건…흥정 수단된 '국감 증인'",
+   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBSZzdNUURWTTVYNWhENXhQTjQzaTlZSDNWVDRfT0Y3bVpKZUppNzZpTW5tMTRYQWNrVzY2cDR5UGtvbDV2Sk9lVmlpc3BPcmQ5YVFfNk9MOHdpdFdJaHc?oc=5",
+   "date": "2026-11-11",
+   "source": "동행미디어 시대",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-12",
+   "health": false
+  },
+  {
+   "title": "2026 국정감사에서 본 발달장애인의 노후와 사별 준비",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBCdXhXTkd1UEJnSjlZTHlWWmxnbU0wN0ItdzVlVGRfZjA4M055cS1aWkxwOEVmU3JVY1g2dDV6V2cyRnBfMU9ibTNnblhrYnBQTDlpQm1sdFk5UTJVakVlaEExMTE0dnh4NlZFdUZR0gFyQVVfeXFMTkFKUjFnR2x2M3JUTm1zODgzQklNQU13X1BBb0xrX0lkNXljeVhsaUVubURRZkR0SXBZUm5kRkJhNGdTb21KWHdlZDZmWmo2WEZNcksyQW56QUFaMnFDdFRHTmtvSVhxdGRvWl9fMWJlWERB?oc=5",
+   "date": "2026-11-11",
+   "source": "에이블뉴스",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-12",
+   "health": true
+  },
+  {
+   "title": "만성질환 진료비 90조…고혈압·당뇨 등록관리는 전국 8% 지역뿐",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9DczZnYXd0R1FoN0tUU2VDUklJUklUaFR2TGw5ellfclVlMk1EWVB2U2RNZlk1Mm5BbkdhdVQtYWN6aC13dlEzMU5WdDhwaHZqczRPZFBWdmpsR2xVZ0RWay1JZ1JRVlRneFhBU2E0SXc?oc=5",
+   "date": "2026-11-11",
+   "source": "medicalworldnews.co.kr",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "만성질환·고당사업",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-12",
+   "health": false
   },
   {
    "title": "[2026국감이슈]박지원 “김혜경 황제골프 의혹은 중대한 허위사실”…주진우 겨냥 “합리적 근거 갖고 비판해야”",
@@ -190,6 +227,20 @@
    "health": true
   },
   {
+   "title": "남인순 의원, 국민연금 운영비 국가 부담 50% 법안 발의",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBTaG9VSGlMYkRMZXhBeC0tSEVoNVlIZV9EMS14Vlo5M0lXOXdMNkFjdUhXNkdwbVJ0WWZ3ZV9TZThyckh1Xy1PNUJKVElkbG1LWGF3czdvdlBRdVRJX1VwUUJOT2p2dw?oc=5",
+   "date": "2026-11-10",
+   "source": "푸드투데이",
+   "score": 2,
+   "track": "",
+   "agencies": [],
+   "members": [
+    "남인순"
+   ],
+   "first_seen": "2026-11-12",
+   "health": true
+  },
+  {
    "title": "'제넨셀' 치고받던 식약처 국감… 정회 후엔 '규제 사각지대' 점검",
    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNTEFNc2hqVXVtSEduaUhFakRVZGRYYnphdW8zNnN0dlVFTm5PTnlRM2Y5WFZlZEN3UjJVV1M4elllR0xQTXBFY1N6Y0RpMldTanJBWXNtdFpHY0RVSmVvTVFvZ2xfYVQ2TnRqZWFTSS1mUi1saElPU3lCeTN2bjBYSzRiWVQ4OTViS0h6LUtPQTROQUpVNldqdkxtQ1ZTbEt3TXVkc2kybldmSlR4WTRRYw?oc=5",
    "date": "2026-11-09",
@@ -227,21 +278,6 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-10",
-   "health": true
-  },
-  {
-   "title": "질병관리청, 만성질환 관리 전국 확대",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9CY1BBRUFSVlhhUzk0MEhYRWtZMnQxQzNISmplTTZTeHJyaVpIQ1lOaXhLMXF1N3BCVXhDWVpaTkZwWW5fZjN4Unl1aG9oNnNud0VIa1ZEWUNsUGc5YlFxeTVOQ1BoX1pSc2ttV0o2TWvSAXBBVV95cUxPQmNQQUVBUlZYYVM5NDBIWEVrWTJ0MUMzSEpqZU02U3hycmlaSENZTml4SzFxdTdwQlV4Q1laWk5GcFluX2YzeFJ5dWhvaDZzbndFSGtWRFlDbFBnOWJRcXk1TkNQaF9aUnNrbVdKNk1r?oc=5",
-   "date": "2026-11-08",
-   "source": "내외뉴스통신",
-   "score": 1,
-   "track": "소관사업",
-   "topic": "만성질환·고당사업",
-   "agencies": [
-    "질병관리청"
-   ],
-   "members": [],
-   "first_seen": "2026-11-09",
    "health": true
   },
   {
@@ -1094,7 +1130,7 @@
   },
   {
    "title": "\"지역책임의료 말고 권역책임의료로 전환해 달라\" 양산부산대병원 국감",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5qRHdBaWRzOHIxV3A5SnVGSXh2aHpHWlZWeC1rMmRDQWNKdWY5M1g1eG1sbmFWbW9NdlZjZHQtejNlNnZLVlVfREEzUE9KTVlmdWs0N2dHejM3MktOUWFacVJXRHZDa25SUmxwbE5Zaw?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBpUk8tYWtadUQtaDM1M05hanVDbEdsR01rbHAwNWhBMVgwTnJfM3N1ZlJPNE5TVTZubzk1YTNfSmlxa2VLWmVKS3M2a0ttNlhma3lzRWdBdk85RWFWTUVBQmNyMXF1Q3NaUDdj?oc=5",
    "date": "2026-10-30",
    "source": "한스경제",
    "score": 2,
@@ -1205,6 +1241,44 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-04",
+   "health": true
+  },
+  {
+   "title": "운영위, 대통령비서실 국정감사 실시",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5Bb0NYYlFIdkhYRVZYdmhEN0FmOTBzTkVpT3h3d1FQUnQ0bTRVVlVubEtqZElNaEZRVmdESHV3M3FwcGhkWHZCUGVkSWpSVUJkTmp2M1JLaEhnLXNuY2ZIT0kwcEVLWVlQVm9KTFBB?oc=5",
+   "date": "2026-10-30",
+   "source": "국제뉴스",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-12",
+   "health": false
+  },
+  {
+   "title": "[2026 국감] 이진숙 5·18 토론회 논란, 운영위 국감서 재점화",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB2dnpUcXdaek9Ia0ZiOEtkNzhXbkFPU2Z6M0tWckxYeXZZcE5hQ0NpWnYyQjc3aE9meXM5SjhpQVZMMVVCTnROWlZFbHI4eWRVSGJmdUVUUWpFRndzM3Y3U0RycENLWEhEZEE?oc=5",
+   "date": "2026-10-30",
+   "source": "월요신문",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-12",
+   "health": false
+  },
+  {
+   "title": "안호영 의원, 국감서 「퇴직연금공단법안」 추진 제안",
+   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1nRjZrelZmVTB4WXBXcmtCcHVaUXl6Z2ViSTgtNFhHdFFkcGpPWUlsVjhmNlhaUGhuSzZWR0tpeXdZT25QMi1CR1FIaVF6OE0?oc=5",
+   "date": "2026-10-30",
+   "source": "시사전북닷컴",
+   "score": 3,
+   "track": "국정감사",
+   "agencies": [
+    "국민연금공단"
+   ],
+   "members": [],
+   "first_seen": "2026-11-12",
    "health": true
   },
   {
@@ -1621,7 +1695,7 @@
   },
   {
    "title": "한지아 “아주대병원 소아응급 의료진 7명 사직 의사…국회·정부 대책 마련해야”:경찰연합신문",
-   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5mZTluY01YTkZ1SFNWNDNZMkFmcUpveTJtTFdvRGZsVUdCVWxtNzFkMGl1SFlNY1o2R3VvODVGTVhEYk5FZnhaMEtYNWR3VHNuaV9sTVJQc01VZzRU0gFsQVVfeXFMTjd5cGFVeFp3MUd6S3lRZy1IdW42ZU9mZUxta1JscnpwRTdDZnZiWXJKYWJjWHdnVWxRaXBqUGhTNWZONnhLQXpfcU1mRXFJbVRoa04xbF84c0Q3bDlZV1NCNzh4UFdfdEpaVlFl?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5vQTdYQlE2eDVKU0RHM3B0NVRybmttRmplYUFpUGhLSUFYeTFTaVdWU2JJQnk2NkY2SjMxNG5zVjdBQWtGd3lLX0h6VlpXeUNp0gFsQVVfeXFMTjd5cGFVeFp3MUd6S3lRZy1IdW42ZU9mZUxta1JscnpwRTdDZnZiWXJKYWJjWHdnVWxRaXBqUGhTNWZONnhLQXpfcU1mRXFJbVRoa04xbF84c0Q3bDlZV1NCNzh4UFdfdEpaVlFl?oc=5",
    "date": "2026-10-29",
    "source": "경찰연합신문",
    "score": 2,
@@ -1672,6 +1746,30 @@
    ],
    "first_seen": "2026-11-11",
    "health": true
+  },
+  {
+   "title": "與 \"내란 부정 사과해야\"…'김태규 참여' 충돌에 靑국감 파행(종합)",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE04aEd5R0VRNEN1bVd4ZFBQeGh0N3FvWXphY0cxZzlhbVdjVDZ5WFZiREJBTEJjZEZCOGhheTQtZkNuZW9mTWdLMHRmaTIzOTl1U0pkOGwwZVlQSk3SAWBBVV95cUxOS1M1VS1TYWpLM3JnZE1RejI5OGdpUnhqcm85Rldpb1VuQUMwX3NPWlFoZ0hOOGc4MGlOdWVLbnFjZWJlTHZVV2NFSC1rQTZkLUZPcFdoZnB4U0tBOGs2OFI?oc=5",
+   "date": "2026-10-29",
+   "source": "연합뉴스",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-12",
+   "health": false
+  },
+  {
+   "title": "靑국감 '김태규 퇴장' 공방에 거듭 파행",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE0zS3lXMkdBd1FIQXdVSWtlVDVPcHpnZXlUay1sbXM3R1h5Z2p2MGhMV1N2Zm1sUERKUkdQRkZleEh0dmszVjJldklobXpURmpsRVB2bGZ3ell4QQ?oc=5",
+   "date": "2026-10-29",
+   "source": "한국경제",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-12",
+   "health": false
   },
   {
    "title": "“가정어린이집, 영아전문기관으로 재설계해야”…국가 책임 강화 촉구",
@@ -26381,70 +26479,6 @@
    ],
    "track": "국정감사",
    "first_seen": "2026-09-13",
-   "health": true
-  },
-  {
-   "title": "서울시약사회, 서영석 국회 복지위 간사와 정책간담회 개최",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1TU1hZT3hEbDMyeXRoQjlXLW0wcUxCdmJEUTY3aEpCS3lwTWdKbnBqZF82WG5WTGVDcDJMdWh4eHlBdUp3RUEwSnpYVkJobkZFY0ZwWkVyRXEyc0txUzZHa2plOVVkcVpmNHpXUQ?oc=5",
-   "date": "2026-09-12",
-   "source": "팜뉴스",
-   "score": 3,
-   "agencies": [],
-   "members": [
-    "서영석"
-   ],
-   "track": "",
-   "first_seen": "2026-09-12",
-   "health": true
-  },
-  {
-   "title": "국회 복지위, ‘신약로비 의혹’ 공방…“김승원 전화로 통과”·“원칙따라 허가”",
-   "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5TSDBaTV83NTgwcXNDREZrNnoxeGNiWWN6ZDJxVkhFWE8wb3dHUVFBWmd0RkV4OVJfUGl1RnZRWUNobVlSNVE?oc=5",
-   "date": "2026-09-11",
-   "source": "v.daum.net",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "",
-   "first_seen": "2026-09-12",
-   "health": true
-  },
-  {
-   "title": "보건복지위 대화하는 정은경 장관",
-   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1JYVdDWGlQSTV0WFE1OFhRZ3VIWGtOdVlzVEFzSnJLQVRiY01kdmRCVUxNZ25nOWg0VFRJbU1Xc0pKTFRJdExGeVpxMA?oc=5",
-   "date": "2026-09-11",
-   "source": "news1.kr",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "",
-   "first_seen": "2026-09-12",
-   "health": true
-  },
-  {
-   "title": "보건복지위 발언하는 이만희 위원장",
-   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBsNk4weGd0T3dtT3V3U3lTcm1IU3hyNzhGVUF2a0xLWE5SdnI2S3RZTnVWdUFOME1Kbkg2UW1QRzdoLXBfTFFndEVfOA?oc=5",
-   "date": "2026-09-11",
-   "source": "news1.kr",
-   "score": 3,
-   "agencies": [],
-   "members": [
-    "이만희"
-   ],
-   "track": "",
-   "first_seen": "2026-09-12",
-   "health": true
-  },
-  {
-   "title": "김경우 보건복지위원장, '2026 서울사회복지대회' 참석",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1VVG9UQzYtLXVTNk9IQjhILVBiOWdIcS16TW1qY3g2ZUozU0xPYUF5ZVNqeElQaUZpVjNTSU1iRFZWTEFBMUduR2t4OWRlaVJqb3pzTTNITWNkRmt0MGstRDd1b2xKeGo3WTFXSXJB?oc=5",
-   "date": "2026-09-11",
-   "source": "네이트",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "",
-   "first_seen": "2026-09-12",
    "health": true
   },
   {

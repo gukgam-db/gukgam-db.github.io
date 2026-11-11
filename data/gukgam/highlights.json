@@ -1,7 +1,31 @@
 {
- "updated": "2026-11-11",
+ "updated": "2026-11-12",
  "note": "감사일별 자동 요약 카드(영상 캡처 아님). 큰 글씨 = 그날 질의에서 가장 많이 언급된 주제, 사진 = 그날 질의 횟수 상위 위원, 인용 = 답변이 붙은 질의 중 가장 긴 것의 앞부분, 발언 수 = 회의록에서 짝지은 질의·답변 건수.",
  "items": [
+  {
+   "date": "2026-10-08",
+   "year": 2026,
+   "n": 327,
+   "targets": [
+    "보건복지부",
+    "질병관리청"
+   ],
+   "top_topic": "공공의료",
+   "topics": [
+    "공공의료",
+    "건강보험·수가",
+    "연말정산·재정"
+   ],
+   "top_members": [
+    "이만희",
+    "최보윤",
+    "서미화"
+   ],
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/e1c9c9575d334b66943ed2fc9a8847ad.jpg",
+   "quote": "밤늦게까지수고많으십니다. 서울 강남의 한 초등학교에서 3학년 학생이 지난 1일 독감으로 사망했습니다. 독감이 기승을 부리는계절이왔는데어르신들은비상입니다.…",
+   "quote_member": "조배숙",
+   "minutes_url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57412"
+  },
   {
    "date": "2026-10-07",
    "year": 2026,
@@ -319,30 +343,6 @@
    "quote": "의료기관 같은 곳에서는 직장가입이 되어 있을 때 그 직장에서 내 주는경우도많다고되어있는데지금특히취약계층돌봄시설내에는단기근로자나비 정규직 근로자들이 많기 때문에, 여기 제가 따로 물어본 바에 의하면…",
    "quote_member": "이주영",
    "minutes_url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51959"
-  },
-  {
-   "date": "2024-10-16",
-   "year": 2024,
-   "n": 67,
-   "targets": [
-    "국민건강보험공단",
-    "건강보험심사평가원"
-   ],
-   "top_topic": "건강보험·수가",
-   "topics": [
-    "건강보험·수가",
-    "필수·지역의료",
-    "노인·돌봄"
-   ],
-   "top_members": [
-    "김윤",
-    "서명옥",
-    "장종태"
-   ],
-   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/4fc8139485a9495c8bdaff681ac7c347.JPG",
-   "quote": "이사장님 그리고 건강보험정책국장님께 질의를 하겠습니다. (영상자료를 보며) 저희 의원실로 들어온 어떤 환우의 남편분께서 보내온 내용입니다.…",
-   "quote_member": "한지아",
-   "minutes_url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51953"
   }
  ]
 }

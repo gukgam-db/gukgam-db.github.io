@@ -1,15 +1,15 @@
 {
  "items": [],
- "updated": "2026-11-11",
+ "updated": "2026-11-12",
  "mode": "full",
  "counts": {
   "reports": 358,
   "followups": 960,
-  "minutes": 4871
+  "minutes": 4874
  },
  "health": {
   "reports": 59,
-  "minutes": 265
+  "minutes": 267
  },
  "years": [
   2025,

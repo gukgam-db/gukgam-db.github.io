@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03",
+ "updated": "2026-11-12",
  "items": {
   "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55603": {
    "kind": "minutes",
@@ -766,6 +766,28 @@
     "질병관리청"
    ],
    "when": "2026년10월7일(수)",
+   "where": "보건복지위원회회의실"
+  },
+  "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57410": {
+   "kind": "minutes",
+   "pages": 59,
+   "targets": [
+    "부산대학교병원",
+    "부산대학교치과병원",
+    "강원대학교병원",
+    "강원대학교치과병원"
+   ],
+   "when": "2026년10월8일(목)",
+   "where": "보건복지위원회회의실"
+  },
+  "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57412": {
+   "kind": "minutes",
+   "pages": 122,
+   "targets": [
+    "보건복지부",
+    "질병관리청"
+   ],
+   "when": "불출석을양해하였다는말씀을드립니다.",
    "where": "보건복지위원회회의실"
   }
  }
