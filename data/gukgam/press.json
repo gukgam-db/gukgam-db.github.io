@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-12",
- "updated_at": "2026-11-12 11:06",
+ "updated": "2026-11-13",
+ "updated_at": "2026-11-13 02:34",
  "window": "14d",
  "note": "구글 뉴스 검색 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. track='국정감사'·'대정부질문'은 위원 이름·기관명에 '국정감사'를 붙여 검색해 제목에 국감이 들어간 기사. track='소관사업'은 제목에 국감이 없어도 국감 재료가 되는 소관 사업·통계 기사를 주제별로 따로 모은 것으로, 같은 보도자료 받아쓰기가 쌓이지 않게 주제당 5건·21일까지만 남긴다. health=false는 제목에 국감은 있으나 보건복지와 닿는 낱말·기관·위원이 없는 기사(다른 상임위·국감 일반)로, 버리지 않고 뒤로 미룬다. 기관·위원·주제 분류는 모두 제목 키워드 자동.",
- "count": 2050,
+ "count": 2049,
  "items": [
   {
    "title": "“독감 백신 접종 이상 무”… 질병청, 수급 불안 우려 정면 반박",
@@ -34,6 +34,19 @@
    "health": true
   },
   {
+   "title": "학교 감염병 예방교육 확대…손 씻기·예방접종 실천은 얼마나 달라졌나",
+   "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFA2Y05abHdLZkxlZFZBd0JUR1AyNzVXZm02bGhzeUVDb2w0VG5ZN2FGdU9FcjA4NmI1bjlZSG96QTl2QUk?oc=5",
+   "date": "2026-11-12",
+   "source": "한국공공정책신문",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "예방접종",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-13",
+   "health": true
+  },
+  {
    "title": "\"2027년도 예산안 및 기금운용계획안 상정, 보건복지위 이만희 위원장\"",
    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE03X1Q4dFhLdUJCSE1vcEpCRkt0WDk4R01EWFhZbV9IbTRieTRsVjBVU3hHU2wtb2pnS3kzNEp3UmREWWFZWmJhVmotVk5NY3RzdVgwN2lXZFg1cm5yZnRQaGxB?oc=5",
    "date": "2026-11-11",
@@ -49,7 +62,7 @@
   },
   {
    "title": "66만 명 만성질환자 건강안전망 흔들…“고혈당·당뇨사업 예산 복원하라”",
-   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB2bG1BdFZreHZQMVBSMnhUS0FOdVJUVm10NnNWOXc4ZVdfTzZ4eGstOWRIR29aUV9UclJaMWs1Q3FGQUplOE15bUtDcC1wNU9FQ3F5SjZ3?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBrXzhlMF85S1AtUmhjdUFwaGE3SFYzS0ZNeFRrZWJJN3pMLW84RGI0bnZ3MzNTd2N0N1I1WXFqd3dKRi11MjRKQmdaRDRjZ0hhaWc0?oc=5",
    "date": "2026-11-11",
    "source": "현대건강신문",
    "score": 0,
@@ -139,6 +152,18 @@
    "health": false
   },
   {
+   "title": "발언하는 송기민 보건복지위원장",
+   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB6aHd2cG02Y2x3U3VRV1UtWjdlYWlySzJLM0lWbEFxT3JLZ3AwVVdvMnJmN2RoTG0wM2FmSmFwYUVkQ3BqQkNiX2VQM3VxNDdtSHEyLWk4aGhneVo0?oc=5",
+   "date": "2026-11-11",
+   "source": "뉴스핌",
+   "score": 2,
+   "track": "",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-13",
+   "health": true
+  },
+  {
    "title": "[2026국감이슈]박지원 “김혜경 황제골프 의혹은 중대한 허위사실”…주진우 겨냥 “합리적 근거 갖고 비판해야”",
    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1pb2V1Y0IwZDk0TWx4TmV1REhfYzdmeWdIelBMMDFKdkVXOTZhRVJuX3BzY0xzSjl0TTRkMlFFdWRhQVBRZHk4Mk1iSkZrSzVyckpnbFpGVlBmRi1ETU1QUHNGY2pJX0NK?oc=5",
    "date": "2026-11-10",
@@ -167,7 +192,7 @@
   },
   {
    "title": "장기요양 어르신 병원 갈 때 요양보호사가 동행…정부, 의료·돌봄 사각지대 해소 나선다",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBCSlJ6UmR3c25iSkkxUW1yanRrSG9yeUFXUXZqY0RDZm5rQ1hHZ1ltQm9qT0RTWHI4Q1BZTlRRSlIwT0M0M1Q3ME5JcllFa0tSQU9TRElZV010ckE?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9wSDkxc0tSOE5xNUFnajRTcktTQUFEXzctb09BcUxTNEg3Tk5WVUVqZ0pkNTJOOWNGa3U4Ti1XTGZHT1h1RHpDQnNJX29nTkNxYVZSLTFjNVFwdw?oc=5",
    "date": "2026-11-10",
    "source": "데일리연합",
    "score": 0,
@@ -297,7 +322,7 @@
   },
   {
    "title": "정부, 국민건강보험 지원율 위반 반복···\"법 개정·보장성 강화해야\"",
-   "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1oMU1YQ1FpSVNPeW9nWXVIaURXSjlGeWNCajBGR3prTS1UR2h1SnhIQ1drVDJOdG5VdG0wandJdGRxcDhqT2FZRWtSd1ZxTG5l0gFQQVVfeXFMTWgxTVhDUWlJU095b2dZdUhpRFdKOUZ5Y0JqMEZHemtNLVRHaHVKeEhDV2tUMk50blV0bTBqd0l0ZHFwOGpPYVlFa1J3VnFMbmU?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5rU2tDWUt5d1VXbVpOcm9DODFWbEVnejNNR3NGLW5BbE5oeWZpcGJ4X2k3S3hBZlFTOWR3UHRtOXdBSmVOMUZ4MGxYaTV6Vjc5Tks4MTR30gFQQVVfeXFMTWgxTVhDUWlJU095b2dZdUhpRFdKOUZ5Y0JqMEZHemtNLVRHaHVKeEhDV2tUMk50blV0bTBqd0l0ZHFwOGpPYVlFa1J3VnFMbmU?oc=5",
    "date": "2026-11-09",
    "source": "더팩트",
    "score": 0,
@@ -400,19 +425,6 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-06",
-   "health": true
-  },
-  {
-   "title": "겨울철 폐렴·RSV 주의... 성인 예방접종 이력 확인하세요",
-   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE4ycTZfa3p0azBId0tqWWdvRnBsSXRYVDd3Z1Z2VmxLWEpIOWRkV1ozLTloYU1ISzMtS1F0OTQ5aUFIUmFhaVBabGFqNXRqU2JaQWtPWA?oc=5",
-   "date": "2026-11-06",
-   "source": "김천신문",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "예방접종",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-07",
    "health": true
   },
   {
@@ -1296,6 +1308,42 @@
    "health": false
   },
   {
+   "title": "與 \"내란 부정 사과해야\"…'김태규 참여' 충돌에 靑국감 파행(종합)",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9YdjlmVGtIcWF3ZU5IV2RjWFlZN09aY05DQ2VXT1gzTXc1aFFZcDVEVHNBQnJyTndaYnd5ZUZnNUQ3eW1aT19ZclVheXZiWkg2N3dnME82MnpWTDNORmg2VGxqT3NXMXFEbERSVW5YOEtrUzEt?oc=5",
+   "date": "2026-10-30",
+   "source": "연합뉴스 한민족센터",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-12",
+   "health": false
+  },
+  {
+   "title": "국회사무처 국정감사에서 ‘5·18 폄훼 토론회’ 공방…“왜 허가” “사전 검열”",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9HUllkYkp2ZHVtTERlbWIzbm9hSzg3Q0ZkenB5Ym5WVEtaUWM3eTVnSW9QbUNKVFZObDc5V3Z2WldjeFdyQjlYX2M3UjZuTFczbzVTMEt5bjlsSjQ?oc=5",
+   "date": "2026-10-30",
+   "source": "KBS 뉴스",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-13",
+   "health": true
+  },
+  {
+   "title": "여야, 운영위 국감서 ‘5·18토론회’ 허가 두고 난타전",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9kcUtLdTkyaTZOc0M2V3E5WUJxLXRMaTNUa2hhc1lNMlkyRDZ4ZENLelBiaHB0cWF4RVVUNGRuU3pJNXg5OWhRbHFVbDE5QmxNMmpYOGVQYmdGem4yWGVLaDlTWWJMRlNac1VxNzNrRkZsdFU?oc=5",
+   "date": "2026-10-30",
+   "source": "대한경제",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-13",
+   "health": true
+  },
+  {
    "title": "국감서 확인된 구멍 난 육아정책… 산모·신생아 지원금 미지급부터 어린이집 입소대기까지",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5pTVR3czM2Y3VXQjRabkh0SFoySmNxbDYxSXRlUVlzVWdGMllUUkRubkVpVF9BeXozejMtekx1RGVJb3Z6MWJua0NSSjdYYkx0eGVzdWdoMk8wZ25sZmpzdlZvWU1JdWc2aV9RMw?oc=5",
    "date": "2026-10-29",
@@ -1760,18 +1808,6 @@
    ],
    "first_seen": "2026-11-11",
    "health": true
-  },
-  {
-   "title": "與 \"내란 부정 사과해야\"…'김태규 참여' 충돌에 靑국감 파행(종합)",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE04aEd5R0VRNEN1bVd4ZFBQeGh0N3FvWXphY0cxZzlhbVdjVDZ5WFZiREJBTEJjZEZCOGhheTQtZkNuZW9mTWdLMHRmaTIzOTl1U0pkOGwwZVlQSk3SAWBBVV95cUxOS1M1VS1TYWpLM3JnZE1RejI5OGdpUnhqcm85Rldpb1VuQUMwX3NPWlFoZ0hOOGc4MGlOdWVLbnFjZWJlTHZVV2NFSC1rQTZkLUZPcFdoZnB4U0tBOGs2OFI?oc=5",
-   "date": "2026-10-29",
-   "source": "연합뉴스",
-   "score": 2,
-   "track": "국정감사",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-12",
-   "health": false
   },
   {
    "title": "靑국감 '김태규 퇴장' 공방에 거듭 파행",
@@ -5875,19 +5911,6 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-04",
-   "health": true
-  },
-  {
-   "title": "홍보지 - 2026년 4분기 중점검역관리지역 안내(에볼라바이러스 중점검역관리지역 지정)",
-   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBDcENfbHJiQks2SUJ3dU9IdFJkaEpQcm9PTnVsdnRjbHF1b1RuZDd4NktQeTFfMG5DSlJOMVdHMWszSmNEeW1TbFVfTUVFMjBkVDhxRlZrRjlvaW4wakNtYWxWbUhjSWdTRktVZ2dRYVR2cGZhNGZJaQ?oc=5",
-   "date": "2026-10-22",
-   "source": "질병관리청",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "검역·해외유입",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-05",
    "health": true
   },
   {
@@ -26480,46 +26503,6 @@
    "track": "국정감사",
    "first_seen": "2026-09-16",
    "health": false
-  },
-  {
-   "title": "서울시약, 국감 앞두고 서영석 의원에 약배송·상비약 확대 우려 전달",
-   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBla3FWc3lEMWQwbFh5dWNCLUFkMng1SzZnVmVleldXOV8tYVN5TnV5TENmLTJ0WmpWa21kSXJJRnBFdDd3NENjNXJxbjlFZFdoWGRV?oc=5",
-   "date": "2026-09-13",
-   "source": "데일리팜",
-   "score": 3,
-   "agencies": [],
-   "members": [
-    "서영석"
-   ],
-   "track": "국정감사",
-   "first_seen": "2026-09-13",
-   "health": true
-  },
-  {
-   "title": "보건복지위원회 등장한 제넨셀",
-   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5pMlVrdVh4eHZVY24xcnI5eEE2clhwOGUwTlRhQ0RYZGZYYnBhOG1xbVV0dG8wMUlETF9VTmhDd0VpUWJ4Q1pQUlJEQQ?oc=5",
-   "date": "2026-09-11",
-   "source": "뉴스1",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "",
-   "first_seen": "2026-09-13",
-   "health": true
-  },
-  {
-   "title": "보건복지위 답변하는 오유경 식약처장",
-   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1mSmp3blh5a2pjdWpYUTl5LXFvcDE4YlBEU1hNUklPblh3OU40bUw0d3BzZTF2N28zVXNqR3dNNXJEeHBBRkp2Ylp3Zw?oc=5",
-   "date": "2026-09-11",
-   "source": "news1.kr",
-   "score": 3,
-   "agencies": [
-    "식품의약품안전처"
-   ],
-   "members": [],
-   "track": "",
-   "first_seen": "2026-09-13",
-   "health": true
   },
   {
    "title": "초선 박지원 의원 \"북미대화 기류, 대한민국이 주도해야\"…대정부질문서 촉구",
