@@ -1,10 +1,38 @@
 {
  "updated": "2026-11-12",
- "updated_at": "2026-11-12 02:06",
+ "updated_at": "2026-11-12 11:06",
  "window": "14d",
  "note": "구글 뉴스 검색 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. track='국정감사'·'대정부질문'은 위원 이름·기관명에 '국정감사'를 붙여 검색해 제목에 국감이 들어간 기사. track='소관사업'은 제목에 국감이 없어도 국감 재료가 되는 소관 사업·통계 기사를 주제별로 따로 모은 것으로, 같은 보도자료 받아쓰기가 쌓이지 않게 주제당 5건·21일까지만 남긴다. health=false는 제목에 국감은 있으나 보건복지와 닿는 낱말·기관·위원이 없는 기사(다른 상임위·국감 일반)로, 버리지 않고 뒤로 미룬다. 기관·위원·주제 분류는 모두 제목 키워드 자동.",
- "count": 2049,
+ "count": 2050,
  "items": [
+  {
+   "title": "“독감 백신 접종 이상 무”… 질병청, 수급 불안 우려 정면 반박",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBCRmFsUzFfQzU4ajJCTG1BM2tuYTB6SkJzR2dOQXBsTjA5MXJDT2JpQkNFS1BtNVNST2U1WnY2TU5oWnJQNUJONHQtY2c2aVpuZGZ5NkVlWVNnMkM5VGRSblVOSFZsZi1Yb0hMeGNn?oc=5",
+   "date": "2026-11-12",
+   "source": "간호사신문",
+   "score": 1,
+   "track": "소관사업",
+   "topic": "예방접종",
+   "agencies": [
+    "질병관리청"
+   ],
+   "members": [],
+   "first_seen": "2026-11-12",
+   "health": true
+  },
+  {
+   "title": "[이슈분석] 인건비 쥐어짜기 끝났다… 요양 인력 아웃소싱, B2B 전문화로 돌파구",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1fckwxRnFfUXJtRkJfaWxGY0pCT3JUUzZQdmhWaW9QR0JObFpwcHlYdWgzSi1mUVpGRzdweDhNLWlHYnZCWktvbFZjSHV2SndpbDN6ZVRsSF9POUxNSzBzMWczbER5cWxOM1p2ZUJaZS0wQQ?oc=5",
+   "date": "2026-11-12",
+   "source": "아웃소싱타임스",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "돌봄·요양",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-12",
+   "health": true
+  },
   {
    "title": "\"2027년도 예산안 및 기금운용계획안 상정, 보건복지위 이만희 위원장\"",
    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE03X1Q4dFhLdUJCSE1vcEpCRkt0WDk4R01EWFhZbV9IbTRieTRsVjBVU3hHU2wtb2pnS3kzNEp3UmREWWFZWmJhVmotVk5NY3RzdVgwN2lXZFg1cm5yZnRQaGxB?oc=5",
@@ -139,7 +167,7 @@
   },
   {
    "title": "장기요양 어르신 병원 갈 때 요양보호사가 동행…정부, 의료·돌봄 사각지대 해소 나선다",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9wSDkxc0tSOE5xNUFnajRTcktTQUFEXzctb09BcUxTNEg3Tk5WVUVqZ0pkNTJOOWNGa3U4Ti1XTGZHT1h1RHpDQnNJX29nTkNxYVZSLTFjNVFwdw?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBCSlJ6UmR3c25iSkkxUW1yanRrSG9yeUFXUXZqY0RDZm5rQ1hHZ1ltQm9qT0RTWHI4Q1BZTlRRSlIwT0M0M1Q3ME5JcllFa0tSQU9TRElZV010ckE?oc=5",
    "date": "2026-11-10",
    "source": "데일리연합",
    "score": 0,
@@ -308,7 +336,7 @@
   },
   {
    "title": "세금 냈는데 건보료까지?…보험료 부과 확대 검토",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5yYV83QS0yQkFJWkI0a0YyZlNhV1V1YjB2ZzhjUll4emliTm1QSVN0YkRHWmNvbHNCdkRHbHU0NlpEVFhCd2tpUmQybVI2QTFzOFZDM0tua3dYZERWM1ZMaDJmdkY1REk0NTQ2NmUxNNIBb0FVX3lxTE5yYV83QS0yQkFJWkI0a0YyZlNhV1V1YjB2ZzhjUll4emliTm1QSVN0YkRHWmNvbHNCdkRHbHU0NlpEVFhCd2tpUmQybVI2QTFzOFZDM0tua3dYZERWM1ZMaDJmdkY1REk0NTQ2NmUxNA?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE03eU5nNk42cXZTN0QxUkQ5QXhMVC1rN3F1MGxickl2aVlTZ3drTjlSSTYzRy1vNFFJSmU2NkUxYWRMLTN5Y0dnOFdSRWRXSndJSUxuTl9JS3Z0Z3Y5REQ5c2dJc0ZEWG9MUG800gFvQVVfeXFMTnJhXzdBLTJCQUlaQjRrRjJmU2FXVXViMHZnOGNSWXh6aWJObVBJU3RiREdaY29sc0J2REdsdTQ2WkRUWEJ3a2lSZDJtUjZBMXM4VkMzS25rd1hkRFYzVkxoMmZ2RjVESTQ1NDY2ZTE0?oc=5",
    "date": "2026-11-08",
    "source": "더퍼블릭",
    "score": 0,
@@ -379,19 +407,6 @@
    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE4ycTZfa3p0azBId0tqWWdvRnBsSXRYVDd3Z1Z2VmxLWEpIOWRkV1ozLTloYU1ISzMtS1F0OTQ5aUFIUmFhaVBabGFqNXRqU2JaQWtPWA?oc=5",
    "date": "2026-11-06",
    "source": "김천신문",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "예방접종",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-07",
-   "health": true
-  },
-  {
-   "title": "독감 다시 확산…입원환자 65%가 고령층, 예방접종 서둘러야",
-   "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFBIVVhDTVBrNWlUd0o4eDZVZGFUY3BpQzVzQnJrTFB2THN0LUxBWDBzUnBEOHZEMjV4SW0yZ1IxeloyNXM?oc=5",
-   "date": "2026-11-06",
-   "source": "한국공공정책신문",
    "score": 0,
    "track": "소관사업",
    "topic": "예방접종",
@@ -573,9 +588,9 @@
   },
   {
    "title": "허종식 “어디에 살든, 같은 인천시민입니다” … 2026 국감 정책자료집 발간",
-   "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1WNko3WHlRLTluQ3VKZ3dPaVloWjNyUU5HSHdDSVFldjU3R0pKOHFNT3VHWTJsa1QxZWF3Q3JMRllBbWtEUS1TaDlB?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9BMEx2RVk4aHc2bzRRX29WcGR3S19JTUhzbS1VV1ZLMUxmMk9MY1NDb2Fpdk9KX0hjVG1IZ0NYR1ZpNzd2c3hTR1o0NWo?oc=5",
    "date": "2026-11-04",
-   "source": "더뉴스코리아",
+   "source": "시사일보",
    "score": 3,
    "track": "국정감사",
    "agencies": [],
@@ -760,19 +775,6 @@
    "health": true
   },
   {
-   "title": "의사 없는 요양병원 '전문요양실' 130개 확대",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBpMFNtQ2JyZUVtZndhWFBIMEFMQVFGTzVmeGw2U2cyekFobkExU1MtWjRLQ2M1aklmdVp0YUJKSm92ek1ubHU1Y1NWT19ISmIweDcwNy1FcV9nNnZ4YmUzZFhjZzEwZ3hvQU5j?oc=5",
-   "date": "2026-11-03",
-   "source": "의료&복지뉴스",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "돌봄·요양",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-03",
-   "health": true
-  },
-  {
    "title": "“종합감사 전 보고” 되풀이하더니···공수표 속에 막 내린 복지위 국감",
    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9DYy1pckRUcTFpVGRVN2ctUVBhTXJPNm1tbEdHV21BaTRTOGZRSThHVV9lOWhlSkhLeWRoQjF6Y1ZwV0ZLQWphRnRVSWY4SU5PWlpieDVDQXRCenByM3NnMElZaFZYeFctOEHSAW5BVV95cUxPM3J1cjBVclFZd0xzbExfQmloLUlhWGppZzJlNkJyWHk1NmRiaEJzd256Ri1VTlE5T3pOd2pzaE95N1gyellUZjZfRko5Ujd1UGFNSDRXSjNvOENQYWstZkx6cFZqakZQN0dGT0tLUQ?oc=5",
    "date": "2026-11-03",
@@ -889,9 +891,9 @@
   },
   {
    "title": "이소희, 국힘 '주간 우수의원'…치과 사망사고·연금 사각지대 지적",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBkclIySnAxcUVXdjFmc1NKb3puQllLQ2ZhckVEdnQ1Q3pnWmF4c2t5cVRrM2NLSU9GRkNOUUpHVldETEgwT3QtbE1VaG41eGZMTUtKNTJ1ZndUTTZ5VFdmSA?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9vSWxMZTdwUXh3TTY4Vk1aTWN2UDVEV1VpWmxZVmpuTzR5YWhaRHNhbjFOTEtDQ3pvZ0VRSnN5enZqLUw1MUJES0dOaEFVWGZmbFR6akJR?oc=5",
    "date": "2026-11-01",
-   "source": "뉴스1",
+   "source": "매일경제",
    "score": 2,
    "track": "",
    "agencies": [],
@@ -1280,6 +1282,18 @@
    "members": [],
    "first_seen": "2026-11-12",
    "health": true
+  },
+  {
+   "title": "국감서 도마 오른 'ECM 스킨부스터'…소비자단체도 안전성 검증 촉구",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE52dGZJVHVHN0FCek9xQUc2SG1ZSjFwT205QWdqeFlGTjNJSXdJdVJQTU1DbjZjS29tMzJINU8xVWE1anpLa1Z5RzJTRjk4bGY4d1hRZjZvRTNUZnJjS0doWVJ1VGUtZDZKeUZ3?oc=5",
+   "date": "2026-10-30",
+   "source": "헬스경향",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-12",
+   "health": false
   },
   {
    "title": "국감서 확인된 구멍 난 육아정책… 산모·신생아 지원금 미지급부터 어린이집 입소대기까지",

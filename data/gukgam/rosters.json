@@ -11,7 +11,7 @@
     "2026-10-08"
    ],
    "count": 24,
-   "party_known": 23,
+   "party_known": 24,
    "members": [
     {
      "name": "이만희",
@@ -268,10 +268,10 @@
     },
     {
      "name": "김소희",
-     "party": "",
-     "elecd": "",
-     "rlct": "",
-     "photo": "",
+     "party": "국민의힘(국민의미래)",
+     "elecd": "비례대표",
+     "rlct": "초선",
+     "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/d742a583478b4cf3b42227cccb6b7e50.jpg",
      "turns": 1,
      "days": 1,
      "chair": false,

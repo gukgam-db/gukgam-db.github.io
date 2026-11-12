@@ -569,6 +569,17 @@
    "photo": "https://www.assembly.go.kr/static/portal/img/openassm/2WQ6656P.jpg"
   },
   {
+   "name": "김소희",
+   "hanja": "金素熙",
+   "party": "국민의미래",
+   "parties": "국민의미래",
+   "elecd": "비례대표",
+   "rlct": "초선",
+   "eras": "제22대",
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/d742a583478b4cf3b42227cccb6b7e50.jpg",
+   "lookup": "by_name"
+  },
+  {
    "name": "김순례",
    "hanja": "金順禮",
    "party": "새누리당",
