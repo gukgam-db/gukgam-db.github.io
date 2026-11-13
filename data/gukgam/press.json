@@ -1,10 +1,22 @@
 {
  "updated": "2026-11-13",
- "updated_at": "2026-11-13 02:34",
+ "updated_at": "2026-11-13 10:33",
  "window": "14d",
  "note": "구글 뉴스 검색 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. track='국정감사'·'대정부질문'은 위원 이름·기관명에 '국정감사'를 붙여 검색해 제목에 국감이 들어간 기사. track='소관사업'은 제목에 국감이 없어도 국감 재료가 되는 소관 사업·통계 기사를 주제별로 따로 모은 것으로, 같은 보도자료 받아쓰기가 쌓이지 않게 주제당 5건·21일까지만 남긴다. health=false는 제목에 국감은 있으나 보건복지와 닿는 낱말·기관·위원이 없는 기사(다른 상임위·국감 일반)로, 버리지 않고 뒤로 미룬다. 기관·위원·주제 분류는 모두 제목 키워드 자동.",
- "count": 2049,
+ "count": 2050,
  "items": [
+  {
+   "title": "[단독] 국감 한 달 만에 해외 처방약 반입 허용…임상 신약도 가능?",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE41VmViRU9PZU5qYzc4elUtUHMxM3dES29DY1RaSTVHcVJ0ZEtqQ0tjUUpCMmNNNEVpbWZQRTZHZnl2dFdQSUsxNFp4YXg5dFJZQmJzR0lydm9yOHF2THg0T3ZCVzc3d0pRUHNV0gFvQVVfeXFMUFg2WDZEcHhqd3ZlcGtKNWRDUHh1aHY0X0UtVHFqY1pQVWUzQnE0bmZ3YVZOZjRUcWQwaDVfYW9PSllvYmd5S0V0YnNhLVQ0NDNKanhwSGNhOWkxdmRfVC1meEtLbm0yV1BhQ2FQNVgw?oc=5",
+   "date": "2026-11-13",
+   "source": "한국아이닷컴",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-13",
+   "health": true
+  },
   {
    "title": "“독감 백신 접종 이상 무”… 질병청, 수급 불안 우려 정면 반박",
    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBCRmFsUzFfQzU4ajJCTG1BM2tuYTB6SkJzR2dOQXBsTjA5MXJDT2JpQkNFS1BtNVNST2U1WnY2TU5oWnJQNUJONHQtY2c2aVpuZGZ5NkVlWVNnMkM5VGRSblVOSFZsZi1Yb0hMeGNn?oc=5",
