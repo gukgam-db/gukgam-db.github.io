@@ -1,10 +1,62 @@
 {
  "updated": "2026-11-16",
- "updated_at": "2026-11-16 01:17",
+ "updated_at": "2026-11-16 09:03",
  "window": "14d",
  "note": "구글 뉴스 검색 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. track='국정감사'·'대정부질문'은 위원 이름·기관명에 '국정감사'를 붙여 검색해 제목에 국감이 들어간 기사. track='소관사업'은 제목에 국감이 없어도 국감 재료가 되는 소관 사업·통계 기사를 주제별로 따로 모은 것으로, 같은 보도자료 받아쓰기가 쌓이지 않게 주제당 5건·21일까지만 남긴다. health=false는 제목에 국감은 있으나 보건복지와 닿는 낱말·기관·위원이 없는 기사(다른 상임위·국감 일반)로, 버리지 않고 뒤로 미룬다. 기관·위원·주제 분류는 모두 제목 키워드 자동.",
- "count": 2043,
+ "count": 2047,
  "items": [
+  {
+   "title": "예산안 마무리한 보건복지위 \"이제는 법안이다\"",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB4SHV1cVZ4M2paSm5DSHRqcEh4SXpfS3oyaHk2YWREUGVuR2M2UEo0VWVuelNCV3NnV1Ezb0x5U1pTeWFjeXNJRV9sSldfSEpjV0txdU1MdHlSS1VoR3E4ZXNEQUFYV3pPdFlYLQ?oc=5",
+   "date": "2026-11-16",
+   "source": "약사공론",
+   "score": 2,
+   "track": "",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-16",
+   "health": true
+  },
+  {
+   "title": "[월요메일] 국감에서 드러난 국립치의학연구원 평가지표의 의혹",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBJZ2loV05aNUpSUmpwRzVRRTV1b2gyNExLN21qSFg0VTdicDdVanZxVW5kd3FQR1hMU3hrd2tnZXVVTF9HcHNsZDFOQzd5S21WX2k0XzRqcG5BV2RpbHhXTmFrSEN4ZkYyc3V3?oc=5",
+   "date": "2026-11-16",
+   "source": "영남일보",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-16",
+   "health": false
+  },
+  {
+   "title": "[캘리] ‘고혈압·당뇨 등록사업’ 예산 전액 삭감 ‘논란’",
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9vUjFsempaTUFfYnZ3Z2xrMkt5NGtXUTNMMzRMNHJTMDhSR3JjeG14aVR5TTZmdGNrVmhkcHBqcTZZTlJicmRZRzdYQTZySVJNRHJXeU1B?oc=5",
+   "date": "2026-11-16",
+   "source": "현대건강신문",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "만성질환·고당사업",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-16",
+   "health": false
+  },
+  {
+   "title": "수능 앞두고 의약품 불법거래 유인…식약처, 온라인 게시물 571건 적발",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5jSFlyVzNJdUJnSjYyWlJ6RTFPM2dVODdMYXdBa3otcmtPZHVOTm1CWVpSM3hVNjNHZURHLUFSRHRKWEtTc1Bpc090TldEaW83NFhDZkN6NmM3Z0JQRzg5emk2MlZCRHp2a1dQbHRB?oc=5",
+   "date": "2026-11-16",
+   "source": "간호사신문",
+   "score": 1,
+   "track": "소관사업",
+   "topic": "의약품·마약류",
+   "agencies": [
+    "식품의약품안전처"
+   ],
+   "members": [],
+   "first_seen": "2026-11-16",
+   "health": true
+  },
   {
    "title": "국립보건연구원, 감염병 치료제 AI·mRNA 연구협력 확대 추진",
    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE85UjNMWE1ZMng3ZlhGd203eTc5THI0LXA1WkdnVi1aZzFxdHpsZ2p1QjRiUkJQbEZ3Z3dzVzRQQmtjNkdxemRtOHFWQmZya2ljWExNb1JQamY0dTVaaTlncEp5Nkc?oc=5",
@@ -141,7 +193,7 @@
   },
   {
    "title": "野, “요양병원 중심 간병비 지원, 통합돌봄 취지와 상충…간호사 처우개선비 2460억 원 미사용도 부실 관리”",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBKRW0xU1M3VkJPd240WFQ3WUdOeVA1aWh1ZXBlUU9FUTFIQU00OW9rSUdEaG1GODRncG9oaTdFUXZYOURoOUZpdmYyVk5uQ0tCN1c5dzNMSlhkMFNfUFptc3F4V1ZnRHljY1NPbnZn?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9PSW5NdmpjRVpfNEpmWDNSYlV4ZURyWmxsdHZQUTNBWWtzV2hreXZzY2F4ZDJoeWtzZWNjU2dYdXAtTmJyUEREd09TdTNmMUxUZU1tdTV4SmkyVEpiRUxDMGsxd3dxbU4yU0ZGdmNpZHU?oc=5",
    "date": "2026-11-13",
    "source": "데일리메디팜",
    "score": 0,
@@ -217,6 +269,44 @@
    "health": true
   },
   {
+   "title": "2026 국정감사에서 본 발달장애인의 노후와 사별 준비",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBCdXhXTkd1UEJnSjlZTHlWWmxnbU0wN0ItdzVlVGRfZjA4M055cS1aWkxwOEVmU3JVY1g2dDV6V2cyRnBfMU9ibTNnblhrYnBQTDlpQm1sdFk5UTJVakVlaEExMTE0dnh4NlZFdUZR0gFyQVVfeXFMTkFKUjFnR2x2M3JUTm1zODgzQklNQU13X1BBb0xrX0lkNXljeVhsaUVubURRZkR0SXBZUm5kRkJhNGdTb21KWHdlZDZmWmo2WEZNcksyQW56QUFaMnFDdFRHTmtvSVhxdGRvWl9fMWJlWERB?oc=5",
+   "date": "2026-11-13",
+   "source": "에이블뉴스",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-12",
+   "health": true
+  },
+  {
+   "title": "서미화 의원, 국정감사서 ‘장애인 자립지원 본사업 예산 미반영’ 질타",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1xdEw3ZWZsUnIyM2szZV9sZjYtNm9IZWZvbldoV25YNjFEdFA4TERyUExRTUUzUW1odE5mQ3EwWkhPXzVHOUhrT1h5aXhOQzFRNE0xelRHUEx3NDQyV3pOSURxYXhqeHZERlZ4RU9R0gFyQVVfeXFMTzJ6SGVxM3IwU2k4aENzeWY3UXNqaVk3ZUJ3eU9Qek0zZ2dkd2NEVTdDU19hbFdoOGJ4aDBtZzlOTkM1X2xkTWNSdnBCWFVJTHJkZWxBMnRXaDRSRW01QTlnUmhuWE1FNndOM0VIWXpvNTRB?oc=5",
+   "date": "2026-11-13",
+   "source": "에이블뉴스",
+   "score": 3,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [
+    "서미화"
+   ],
+   "first_seen": "2026-10-22",
+   "health": true
+  },
+  {
+   "title": "“건물 다 짓고도 사용 못 해” BF 인증 지연 국정감사 도마 위",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5TamlWYXFMLVlFdk40WVZGX09NUTY5aDh0YmlrSElDZWlFNmJtZnFYanZSazEtSkpwWXpBSnpVOWVOdGwtLTd2U2xOSGtJQXgtNmszN3A1aFBLcVl6bU1YNVVMMlhpR1FpcW5MRkxn0gFyQVVfeXFMUExpc0tLNUdyZUI2TFM1M0J3dGdsenZfMmdaMWNSY0g0VDJMbmE3b28xczd1b3VmTm5NWFpsYm1WX3R3LTBiSVh1R2F0dnlDUWZudnN0N3hBNkVoT2w5OFdQMDdqcG0xWVVwMmJ6NnlCUWxB?oc=5",
+   "date": "2026-11-13",
+   "source": "에이블뉴스",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-10-22",
+   "health": false
+  },
+  {
    "title": "“독감 백신 접종 이상 무”… 질병청, 수급 불안 우려 정면 반박",
    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBCRmFsUzFfQzU4ajJCTG1BM2tuYTB6SkJzR2dOQXBsTjA5MXJDT2JpQkNFS1BtNVNST2U1WnY2TU5oWnJQNUJONHQtY2c2aVpuZGZ5NkVlWVNnMkM5VGRSblVOSFZsZi1Yb0hMeGNn?oc=5",
    "date": "2026-11-12",
@@ -259,7 +349,7 @@
   },
   {
    "title": "\"2027년도 예산안 및 기금운용계획안 상정, 보건복지위 이만희 위원장\"",
-   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE03X1Q4dFhLdUJCSE1vcEpCRkt0WDk4R01EWFhZbV9IbTRieTRsVjBVU3hHU2wtb2pnS3kzNEp3UmREWWFZWmJhVmotVk5NY3RzdVgwN2lXZFg1cm5yZnRQaGxB?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBzcGZfUzU5c2Q3ci11SkVuSmdreUxSUzZsMmQzcjNPREVNOHYzc3J0NTI0cVM4MElUMlJVdFhKZUxHN0V6YlJ5VWFMWEw2T01YU3E5LWwtSjNQVW1T?oc=5",
    "date": "2026-11-11",
    "source": "선데이뉴스신문",
    "score": 3,
@@ -323,18 +413,6 @@
    "members": [],
    "first_seen": "2026-11-12",
    "health": false
-  },
-  {
-   "title": "2026 국정감사에서 본 발달장애인의 노후와 사별 준비",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBCdXhXTkd1UEJnSjlZTHlWWmxnbU0wN0ItdzVlVGRfZjA4M055cS1aWkxwOEVmU3JVY1g2dDV6V2cyRnBfMU9ibTNnblhrYnBQTDlpQm1sdFk5UTJVakVlaEExMTE0dnh4NlZFdUZR0gFyQVVfeXFMTkFKUjFnR2x2M3JUTm1zODgzQklNQU13X1BBb0xrX0lkNXljeVhsaUVubURRZkR0SXBZUm5kRkJhNGdTb21KWHdlZDZmWmo2WEZNcksyQW56QUFaMnFDdFRHTmtvSVhxdGRvWl9fMWJlWERB?oc=5",
-   "date": "2026-11-11",
-   "source": "에이블뉴스",
-   "score": 2,
-   "track": "국정감사",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-12",
-   "health": true
   },
   {
    "title": "만성질환 진료비 90조…고혈압·당뇨 등록관리는 전국 8% 지역뿐",
@@ -401,19 +479,6 @@
    ],
    "first_seen": "2026-11-10",
    "health": true
-  },
-  {
-   "title": "참여 저조했던 일만사업 증가세 전환...고당사업 연계 청신호되나",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9ITmNscW4wbzZFY3dDTkZaNVNoYlRWcEVWVm1oS2stbk13a1E5cUJOV1c3QlVGNTJsQmRqY2xOZHAwRFVFbTZ2UC1HSTZSNW8zVXpTTFJ4dTJMOGZvNFQzN3dRN0NyaEplUWc?oc=5",
-   "date": "2026-11-10",
-   "source": "의학신문",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "만성질환·고당사업",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-10",
-   "health": false
   },
   {
    "title": "장기요양 어르신 병원 갈 때 요양보호사가 동행…정부, 의료·돌봄 사각지대 해소 나선다",
@@ -795,6 +860,19 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-08",
+   "health": true
+  },
+  {
+   "title": "강릉 어린이집 보육교사 5명 아동학대 혐의 기소… 3명 구속",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1TdHZrUGc3bElhSTc0WVY3TUFtMEdxbkJucGsybVRrcVUwN1dKUnktRlRRS3FUUkpZbzNQa2RRTHZVUDJIaDM5RjRRSG1pYklzd2V1Vy1ETlQ2Y25uSXk1NmVxSjMwU0xTNExRSQ?oc=5",
+   "date": "2026-11-05",
+   "source": "베이비뉴스",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "저출생·아동",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-16",
    "health": true
   },
   {
@@ -4992,20 +5070,6 @@
    "health": true
   },
   {
-   "title": "서미화 의원, 국정감사서 ‘장애인 자립지원 본사업 예산 미반영’ 질타",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1xdEw3ZWZsUnIyM2szZV9sZjYtNm9IZWZvbldoV25YNjFEdFA4TERyUExRTUUzUW1odE5mQ3EwWkhPXzVHOUhrT1h5aXhOQzFRNE0xelRHUEx3NDQyV3pOSURxYXhqeHZERlZ4RU9R0gFyQVVfeXFMTzJ6SGVxM3IwU2k4aENzeWY3UXNqaVk3ZUJ3eU9Qek0zZ2dkd2NEVTdDU19hbFdoOGJ4aDBtZzlOTkM1X2xkTWNSdnBCWFVJTHJkZWxBMnRXaDRSRW01QTlnUmhuWE1FNndOM0VIWXpvNTRB?oc=5",
-   "date": "2026-10-23",
-   "source": "에이블뉴스",
-   "score": 3,
-   "track": "국정감사",
-   "agencies": [],
-   "members": [
-    "서미화"
-   ],
-   "first_seen": "2026-10-22",
-   "health": true
-  },
-  {
    "title": "원외탕전실 관리 방안 국정감사 계기 '현실화?'",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9ZUUVCX3VXT21uZHVadW15Y1BkRHluZWIwdmdyb042cERSUm4yd1dXT1hBcGVBSi0ybGRDYzBXb2l3cXI3bnBOMXdXR3haeFFNRGFKQUdhaWJtU2NiSFFzNjRPM2RDbVhyMm54NA?oc=5",
    "date": "2026-10-23",
@@ -5327,18 +5391,6 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-03",
-   "health": false
-  },
-  {
-   "title": "“건물 다 짓고도 사용 못 해” BF 인증 지연 국정감사 도마 위",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5TamlWYXFMLVlFdk40WVZGX09NUTY5aDh0YmlrSElDZWlFNmJtZnFYanZSazEtSkpwWXpBSnpVOWVOdGwtLTd2U2xOSGtJQXgtNmszN3A1aFBLcVl6bU1YNVVMMlhpR1FpcW5MRkxn0gFyQVVfeXFMUExpc0tLNUdyZUI2TFM1M0J3dGdsenZfMmdaMWNSY0g0VDJMbmE3b28xczd1b3VmTm5NWFpsYm1WX3R3LTBiSVh1R2F0dnlDUWZudnN0N3hBNkVoT2w5OFdQMDdqcG0xWVVwMmJ6NnlCUWxB?oc=5",
-   "date": "2026-10-22",
-   "source": "에이블뉴스",
-   "score": 2,
-   "track": "국정감사",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-10-22",
    "health": false
   },
   {
