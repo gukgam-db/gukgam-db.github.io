@@ -1,21 +1,34 @@
 {
  "updated": "2026-11-18",
- "updated_at": "2026-11-18 03:26",
+ "updated_at": "2026-11-18 11:39",
  "window": "14d",
  "note": "구글 뉴스 검색 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. track='국정감사'·'대정부질문'은 위원 이름·기관명에 '국정감사'를 붙여 검색해 제목에 국감이 들어간 기사. track='소관사업'은 제목에 국감이 없어도 국감 재료가 되는 소관 사업·통계 기사를 주제별로 따로 모은 것으로, 같은 보도자료 받아쓰기가 쌓이지 않게 주제당 5건·21일까지만 남긴다. health=false는 제목에 국감은 있으나 보건복지와 닿는 낱말·기관·위원이 없는 기사(다른 상임위·국감 일반)로, 버리지 않고 뒤로 미룬다. 기관·위원·주제 분류는 모두 제목 키워드 자동.",
- "count": 2036,
+ "count": 2037,
  "items": [
   {
-   "title": "공단, “어르신 돌봄 기록 한눈에” … 요양원까지 전산관리 확대",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9reG9rTG1NcVgzMGdHUWQ3UUVXblhhTW9BSmRXZzE5NWdtcGQ2cEtudFdOcHZNNFJwUC1aTjVrUHJMMmw4Z3hrYkFSSHJGZXVQXzlFdXFlOThubHc?oc=5",
-   "date": "2026-11-17",
-   "source": "사이언스엠디뉴스",
+   "title": "고혈압·당뇨병 의료비 지원 52억 삭감 논란…66만명 영향 우려",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFAzSXE1Q3JKV1k1bHBCcjhFc2s2ajVhb01JQ0tFdXhPRXM2ektheFM1eGhTblpXX3pzMHZHMGRJV0pkc2FadHhxRnM1Y1MwQ2FQbk02SzRvS05YQmJaQ3JzZ01KenB3dw?oc=5",
+   "date": "2026-11-18",
+   "source": "푸드투데이",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "만성질환·고당사업",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-18",
+   "health": true
+  },
+  {
+   "title": "어르신 돌봄 기록 '전산관리' 대폭 확대한다",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9IRjhodTh0dlpQNndEM0tJSGxfaFd4cHZ4UXctMmwtOEdBVVJCVVd3UVZacEdTTkZnN1kzREo4eHRiSUlhYzNrMDhjbUI0b1dmclZ3YTRYSXBOak12aVdSS0pDOURhUlotcFE?oc=5",
+   "date": "2026-11-18",
+   "source": "병원신문",
    "score": 0,
    "track": "소관사업",
    "topic": "돌봄·요양",
    "agencies": [],
    "members": [],
-   "first_seen": "2026-11-17",
+   "first_seen": "2026-11-18",
    "health": true
   },
   {
@@ -52,19 +65,6 @@
    "source": "영남일보",
    "score": 2,
    "track": "국정감사",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-16",
-   "health": false
-  },
-  {
-   "title": "[캘리] ‘고혈압·당뇨 등록사업’ 예산 전액 삭감 ‘논란’",
-   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5rZ1h2cGlCUzVNTkIzaEJGbFFwUTEyemI5RTBYYXBPdVJqSWhCWjZpQ1NCdlp0ZVA4SHoxRGtEZUJkYlRRU1ZIM3BjemxrZlZHMHBJWVRFbFQ?oc=5",
-   "date": "2026-11-16",
-   "source": "현대건강신문",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "만성질환·고당사업",
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-16",
@@ -191,6 +191,19 @@
    "health": true
   },
   {
+   "title": "\"영아 입원 75% 줄었다\" 효과 입증된 RSV 백신…국내 국가 지원은 언제?",
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQTERKdUJxMmd5amhHWU5PQ3Fjb1ZOOHQ5aGRabEtDQ2lXazZ6SlpzOVJYeWhOc1dSaGJHYV9Idmw2dXVhZTVXVFV1clY1cWFYUWVQM1VfV2dnNUthYW12cDJIN0oxMHJObkZFYlg2ZkVObjkyYzlVQTZzU1E1eGVZR2dTcw?oc=5",
+   "date": "2026-11-16",
+   "source": "조선일보",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "예방접종",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-15",
+   "health": true
+  },
+  {
    "title": "국립보건연구원, 감염병 치료제 AI·mRNA 연구협력 확대 추진",
    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE85UjNMWE1ZMng3ZlhGd203eTc5THI0LXA1WkdnVi1aZzFxdHpsZ2p1QjRiUkJQbEZ3Z3dzVzRQQmtjNkdxemRtOHFWQmZya2ljWExNb1JQamY0dTVaaTlncEp5Nkc?oc=5",
    "date": "2026-11-15",
@@ -256,19 +269,6 @@
     "박지원"
    ],
    "first_seen": "2026-10-14",
-   "health": true
-  },
-  {
-   "title": "\"영아 입원 75% 줄었다\" 효과 입증된 RSV 백신…국내 국가 지원은 언제?",
-   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQTERKdUJxMmd5amhHWU5PQ3Fjb1ZOOHQ5aGRabEtDQ2lXazZ6SlpzOVJYeWhOc1dSaGJHYV9Idmw2dXVhZTVXVFV1clY1cWFYUWVQM1VfV2dnNUthYW12cDJIN0oxMHJObkZFYlg2ZkVObjkyYzlVQTZzU1E1eGVZR2dTcw?oc=5",
-   "date": "2026-11-14",
-   "source": "조선일보",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "예방접종",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-15",
    "health": true
   },
   {
@@ -442,19 +442,6 @@
    "health": true
   },
   {
-   "title": "고당사업 의료비 지원 전액 삭감…66만명 등록관리 '흔들'",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBxa0ZDQThVV3VwVklmV0FseVFhZ2JnbEktTDdROTN3cXlYVnc3YVlUS05rUXJELVpWWENZakxuRGw4ZkJWM1J5SG00dkFZQi1MbzJJS0RPNWhQeTU0bkJCcUJPcWVRUzZud3Vz?oc=5",
-   "date": "2026-11-12",
-   "source": "메디파나뉴스",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "만성질환·고당사업",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-14",
-   "health": true
-  },
-  {
    "title": "\"2027년도 예산안 및 기금운용계획안 상정, 보건복지위 이만희 위원장\"",
    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBzcGZfUzU5c2Q3ci11SkVuSmdreUxSUzZsMmQzcjNPREVNOHYzc3J0NTI0cVM4MElUMlJVdFhKZUxHN0V6YlJ5VWFMWEw2T01YU3E5LWwtSjNQVW1T?oc=5",
    "date": "2026-11-11",
@@ -542,6 +529,19 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-14",
+   "health": true
+  },
+  {
+   "title": "환자·노인회, 고당사업 의료비 지원 삭제·변경에 반발…“원상복원 촉구”",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFA3c3VQSHlSVGdoT3lRMUdsOXZ2YTUzM0cxVzJaLWR1OUxkUWp1TlVDOEIxLUQ4OXhXNzU3WTVRS1JabFdzX1F3VWhkV2tIZXR0ZGNWZzNFT2M2eV80SEhQdGpFeWcyQ3BmblE?oc=5",
+   "date": "2026-11-11",
+   "source": "의학신문",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "만성질환·고당사업",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-18",
    "health": true
   },
   {
@@ -659,6 +659,18 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-16",
+   "health": true
+  },
+  {
+   "title": "보건복지위, 2027년도 예산안 ㆍ 기금운용계획안 상정",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1mb19YcFBFQmx0TDZGV19kTlU5UkF0cFJyTlg1QU8xXzdBZEEyTGlQRG5OaEM2R0RKLWgzZlpBOXRILUxYWE5IWDhrVzVFRXlmbnZSY2Y1dG1OMVlCeTZ0VWQ0VlZLX1VON09uRmtkbkszTm1k?oc=5",
+   "date": "2026-11-10",
+   "source": "글로벌뉴스통신GNA",
+   "score": 2,
+   "track": "",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-18",
    "health": true
   },
   {
@@ -966,9 +978,9 @@
   },
   {
    "title": "허종식 “어디에 살든, 같은 인천시민입니다” … 2026 국감 정책자료집 발간",
-   "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9BMEx2RVk4aHc2bzRRX29WcGR3S19JTUhzbS1VV1ZLMUxmMk9MY1NDb2Fpdk9KX0hjVG1IZ0NYR1ZpNzd2c3hTR1o0NWo?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9kdC0wcjhKQzBMSHhpYWJQeklJVHRoR1htX2VkbjZ2QXR6ckwxVWhxMVhIUG1IWDYzRmo2c2stZHp5TjJZclcwSW9zb2J4UHdNXzN0aS00dkdXSWxVM3NJeWJQTW9xeTBzUlE?oc=5",
    "date": "2026-11-04",
-   "source": "시사일보",
+   "source": "대한투데이",
    "score": 3,
    "track": "국정감사",
    "agencies": [],
