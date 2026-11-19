@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-19",
- "updated_at": "2026-11-19 11:05",
+ "updated": "2026-11-20",
+ "updated_at": "2026-11-20 03:13",
  "window": "14d",
  "note": "구글 뉴스 검색 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. track='국정감사'·'대정부질문'은 위원 이름·기관명에 '국정감사'를 붙여 검색해 제목에 국감이 들어간 기사. track='소관사업'은 제목에 국감이 없어도 국감 재료가 되는 소관 사업·통계 기사를 주제별로 따로 모은 것으로, 같은 보도자료 받아쓰기가 쌓이지 않게 주제당 5건·21일까지만 남긴다. health=false는 제목에 국감은 있으나 보건복지와 닿는 낱말·기관·위원이 없는 기사(다른 상임위·국감 일반)로, 버리지 않고 뒤로 미룬다. 기관·위원·주제 분류는 모두 제목 키워드 자동.",
- "count": 2036,
+ "count": 2034,
  "items": [
   {
    "title": "정치에 휘둘리는 1,700조 국민연금기금·113조 건강보험 재정…이소희, 국감 후속 ‘국민노후 수호법’ 대표발의",
@@ -31,6 +31,74 @@
     "박지원"
    ],
    "first_seen": "2026-10-14",
+   "health": true
+  },
+  {
+   "title": "주수현 서울시의원 \"서울의료원 국감 민주당 이수진 의원 발언, 사실관계 바로잡아야\"",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBMbDNtdVk3R0dtbW9vdE9QVjRvbk44aXlkRjhJS0RweXNWTFdBS2xMUTlaZUFmZFhvOE1ndGdSZGgtNlFvV2lHMnBacE9VZFhxNXJ4b3A2a2NKYTRsQW5wUFU3R3g4Rkc0blF4MFQycw?oc=5",
+   "date": "2026-11-19",
+   "source": "서울시티",
+   "score": 3,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [
+    "이수진"
+   ],
+   "first_seen": "2026-11-17",
+   "health": true
+  },
+  {
+   "title": "폐렴구균 무료 예방접종, 예전에 맞았다면 접종 기록부터 확인하세요",
+   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE81WVBRRFZsWExIc0hhanRJZ3BzcTE0MVVUcldQYUs0WlUtRXJaWEtQUG1yQkVZM3hxWk5OSFlpa2IyM2xkWTJNYVRSeGhLUFU?oc=5",
+   "date": "2026-11-19",
+   "source": "뉴스N연합",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "예방접종",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-20",
+   "health": true
+  },
+  {
+   "title": "전 세계 홍역 환자 34만명 육박…해외여행 전 예방접종 확인해야",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1LRXpYNGVXM3RDY05oSVlDSFhldUJoMGlfYXMtS19MNWlGLXItc3VFZEs2aGhkNjZ4Q2hldm41dUp1WjB5WXFOWUlXV2ZTaHN5TjRUWjhNbDA1OWU5a1c2V3RQVXRlVG1QRV9LdQ?oc=5",
+   "date": "2026-11-19",
+   "source": "센머니",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "예방접종",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-20",
+   "health": true
+  },
+  {
+   "title": "복지부, 인지지원등급 서비스 설명…장기요양·통합돌봄 연계 점검",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9HdkFSWWdjT1RhM2UwWjVoaUlEMFdCSDd1MVNzYVFjam94dVdsZXl0bnhkckg0aE9wa05fX3dwSEo4OEhyQU15bDdsVVRvRUZ2ME1jVXBKa0tiZjB1cEplU2tBV3o?oc=5",
+   "date": "2026-11-19",
+   "source": "메디포뉴스",
+   "score": 1,
+   "track": "소관사업",
+   "topic": "돌봄·요양",
+   "agencies": [
+    "보건복지부"
+   ],
+   "members": [],
+   "first_seen": "2026-11-20",
+   "health": true
+  },
+  {
+   "title": "병원 가기 어려운 시흥 어르신 165명 찾아가 진료, 154명 돌봄 연계",
+   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBKRE5feldWWXdqbGV1emhXUmgxdUpfS2UzdHhEdWxiUnV0eTBudGpZNDdUYW9ZdkxPNUY1YWs5NTJDVVB6N0dRcTM4YmpoUXQzak1NWDMyNkdzRGVPTlE?oc=5",
+   "date": "2026-11-19",
+   "source": "시흥타임즈",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "돌봄·요양",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-20",
    "health": true
   },
   {
@@ -102,6 +170,19 @@
    "health": true
   },
   {
+   "title": "'예방접종률 97%'가 지켰다…한국, 홍역 퇴치국 13년 연속 인증",
+   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1yOFZzMFg0ZnFBbWt0dnpQZzlhV2VsTFA5UlBqN2NCTjhaZW96Nnk2am4wWHlOTkU3RWVCdzN2a08yQjBrQ0ttMWpRM1RSXzl6Wmc?oc=5",
+   "date": "2026-11-17",
+   "source": "뉴스1",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "예방접종",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-20",
+   "health": true
+  },
+  {
    "title": "예산안 마무리한 보건복지위 \"이제는 법안이다\"",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB4SHV1cVZ4M2paSm5DSHRqcEh4SXpfS3oyaHk2YWREUGVuR2M2UEo0VWVuelNCV3NnV1Ezb0x5U1pTeWFjeXNJRV9sSldfSEpjV0txdU1MdHlSS1VoR3E4ZXNEQUFYV3pPdFlYLQ?oc=5",
    "date": "2026-11-16",
@@ -153,20 +234,6 @@
    "health": false
   },
   {
-   "title": "주수현 서울시의원 \"서울의료원 국감 민주당 이수진 의원 발언, 사실관계 바로잡아야\"",
-   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbmdUeC1MRHNFQ08tZlpEZHNBYXZPWW5nenNnQ2JJTVFUQXB0Ry1vVlcyRWI5dDJFVnBNTGVFNmpUQTk0WVd3VUZHY1lnRGNPc3o5NlljX2p1SFY0SWp5a01QUkU3QXUyTURyVzN0TEpuVHYxNjMySjROMFBlNEpaRlRsaW1aZ1pYeHl3?oc=5",
-   "date": "2026-11-16",
-   "source": "글로벌이코노믹",
-   "score": 3,
-   "track": "국정감사",
-   "agencies": [],
-   "members": [
-    "이수진"
-   ],
-   "first_seen": "2026-11-17",
-   "health": true
-  },
-  {
    "title": "주수현 시의원, \"서울의료원 국감 민주당 이수진 의원 발언, 사실관계 바로잡아야\"",
    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5PWV9reG1wZU1nSlRLcFY0Mm0xWHpFRUUyTFhhblFidDNzQjd3VU5tV2o4WGxZNFo4eXZzRDRpQjU2NFB2cTFmTHJlM3hiYXZqRTZEdnYweHVIcmxoYVdLYjkxZ05pM3FwWmhF?oc=5",
    "date": "2026-11-16",
@@ -195,7 +262,7 @@
   },
   {
    "title": "대한약품공업, 마약류 법정 보고 의무 '위반'",
-   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE96V2JEMjA1ZVdsaDJINDdxSVlvTHltZVgyVmZKd0dMNW82RURvNFJvcDlxOGRPVnJIbWYyd1JYMWQtaDYxTFV1SUtRSlFrUHdZTXA3dzJaRU9iMzN6c3dyTi1kQWd4emFUcGJxTHdCQjFTZGfSAXNBVV95cUxPeldiRDIwNWVXbGgySDQ3cUlZb0x5bWVYMlZmSndHTDVvNkVEbzRSb3A5cThkT1ZySG1mMndSWDFkLWg2MUxVdUlLUUpRa1B3WU1wN3cyWkVPYjMzenN3ck4tZEFneHphVHBicUx3QkIxU2Rn?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5BaUFvOEtuT2IzcEVKVTBXSzFsenBNT001bHJXMWxEUHZtR0JvX05Mc3Z6a0paY1NpRVJqc1docG9QLWlKc253bkY4cF85R3BQUWxObG1tbkdqY0IwTDhza3pTdl92NzRZREppVFpEY9IBc0FVX3lxTE96V2JEMjA1ZVdsaDJINDdxSVlvTHltZVgyVmZKd0dMNW82RURvNFJvcDlxOGRPVnJIbWYyd1JYMWQtaDYxTFV1SUtRSlFrUHdZTXA3dzJaRU9iMzN6c3dyTi1kQWd4emFUcGJxTHdCQjFTZGc?oc=5",
    "date": "2026-11-16",
    "source": "세이프타임즈",
    "score": 0,
@@ -288,19 +355,6 @@
    "health": true
   },
   {
-   "title": "\"병원에서 집으로\"…퇴원 환자 위한 의료·돌봄 통합관리체계 구축 촉구",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE12RmFUb3VfTnVFdHE1UERFS2tCZjdlbzZrMk5RU281T3owOXFycTBsSzJyWE9wSlZ6NnJfcUplUUV4anFjcEZwZ1NZSnZvVV9SV2pvbDdfbkduOVVaV1k4QlBMTUg3bHp2eDMzcQ?oc=5",
-   "date": "2026-11-15",
-   "source": "메디컬투데이",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "돌봄·요양",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-16",
-   "health": true
-  },
-  {
    "title": "복지위 국감 증인 채택 신경전…미프진·약배송도 쟁점",
    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1tYThNYkhkcDZ2em9mZ1JaWk52eWVsQXQ4Wm00TS1kano2Q1ZXSzYxdWtxbENjNUJmMWtzVm5ULXJkdV9DUWZpaGJkLS1fWnpxN0x6U0dkTGZ4YkxiSGlhTGRtTQ?oc=5",
    "date": "2026-11-15",
@@ -361,19 +415,6 @@
    "members": [
     "박용갑"
    ],
-   "first_seen": "2026-11-14",
-   "health": true
-  },
-  {
-   "title": "野, “요양병원 중심 간병비 지원, 통합돌봄 취지와 상충…간호사 처우개선비 2460억 원 미사용도 부실 관리”",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9PSW5NdmpjRVpfNEpmWDNSYlV4ZURyWmxsdHZQUTNBWWtzV2hreXZzY2F4ZDJoeWtzZWNjU2dYdXAtTmJyUEREd09TdTNmMUxUZU1tdTV4SmkyVEpiRUxDMGsxd3dxbU4yU0ZGdmNpZHU?oc=5",
-   "date": "2026-11-13",
-   "source": "데일리메디팜",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "돌봄·요양",
-   "agencies": [],
-   "members": [],
    "first_seen": "2026-11-14",
    "health": true
   },
@@ -464,34 +505,6 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-19",
-   "health": true
-  },
-  {
-   "title": "“독감 백신 접종 이상 무”… 질병청, 수급 불안 우려 정면 반박",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBCRmFsUzFfQzU4ajJCTG1BM2tuYTB6SkJzR2dOQXBsTjA5MXJDT2JpQkNFS1BtNVNST2U1WnY2TU5oWnJQNUJONHQtY2c2aVpuZGZ5NkVlWVNnMkM5VGRSblVOSFZsZi1Yb0hMeGNn?oc=5",
-   "date": "2026-11-12",
-   "source": "간호사신문",
-   "score": 1,
-   "track": "소관사업",
-   "topic": "예방접종",
-   "agencies": [
-    "질병관리청"
-   ],
-   "members": [],
-   "first_seen": "2026-11-12",
-   "health": true
-  },
-  {
-   "title": "학교 감염병 예방교육 확대…손 씻기·예방접종 실천은 얼마나 달라졌나",
-   "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFA2Y05abHdLZkxlZFZBd0JUR1AyNzVXZm02bGhzeUVDb2w0VG5ZN2FGdU9FcjA4NmI1bjlZSG96QTl2QUk?oc=5",
-   "date": "2026-11-12",
-   "source": "한국공공정책신문",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "예방접종",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-13",
    "health": true
   },
   {
@@ -751,19 +764,6 @@
    "members": [],
    "first_seen": "2026-10-14",
    "health": true
-  },
-  {
-   "title": "이미 독감 걸렸어도 또 걸린다...어린이 접종률 아직 56%, 인플루엔자 2주 연속 다시 늘어",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1ndHNuOUgxbkJxMmNoVFZTNGNDOGIwTFQ1Q2VqMXVOemVTSUd4bzVzYVNXTk1kTnFkR1ZMTWxEX0VCNWJhVXQ0MlN2eElRejh3MzBnOEItbklsR2lMRVQ2Tl9JTG5tRS1aQlFLUQ?oc=5",
-   "date": "2026-11-09",
-   "source": "사이드뷰 인터넷신문사",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "예방접종",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-10",
-   "health": false
   },
   {
    "title": "정부, 국민건강보험 지원율 위반 반복···\"법 개정·보장성 강화해야\"",
@@ -26398,30 +26398,6 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-10-04",
-   "health": false
-  },
-  {
-   "title": "[2026 국감] 도수치료 막자 냉각치료 급증…실손보험 '풍선효과'",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9VUjBWeGc5RnJaVW9LX1c2Rnp4Z0d2U19DSjFmeDhTMU94cW5ZSTZpYnEwMzVhS1Zvc3k0ZVAzazBOWDJKZVN1Mjdmd2ZVMkl2bE1EellDMHBTSTd3MlNZd092eU1PUHpoVXdJV0VfdWU?oc=5",
-   "date": "2026-09-20",
-   "source": "신아일보",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-20",
-   "health": false
-  },
-  {
-   "title": "김현지 정조준한 국민의힘 … \"인사 흑막\" \"국정감사 출석하라\"",
-   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPOUJXU21Vd0FqTUJmdkxMOW4xOC1SamRwLTROM2lYNUEwRDFJRmFBT283TWI3dklIcnVncTJfRzAwbUZRanN2enA5clFfRkdYLS1VcTJTejFnOGwzREpwRk11SWt1dDhPS250amZ4RU1TSlREQkFpVXIzTlI3VFh2VtIBgAFBVV95cUxPOUJXU21Vd0FqTUJmdkxMOW4xOC1SamRwLTROM2lYNUEwRDFJRmFBT283TWI3dklIcnVncTJfRzAwbUZRanN2enA5clFfRkdYLS1VcTJTejFnOGwzREpwRk11SWt1dDhPS250amZ4RU1TSlREQkFpVXIzTlI3VFh2Vg?oc=5",
-   "date": "2026-09-20",
-   "source": "뉴데일리",
-   "score": 2,
-   "agencies": [],
-   "members": [],
-   "track": "국정감사",
-   "first_seen": "2026-09-20",
    "health": false
   }
  ]
