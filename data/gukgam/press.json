@@ -1,26 +1,10 @@
 {
- "updated": "2026-11-20",
- "updated_at": "2026-11-20 10:58",
+ "updated": "2026-11-21",
+ "updated_at": "2026-11-21 02:47",
  "window": "14d",
  "note": "구글 뉴스 검색 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. track='국정감사'·'대정부질문'은 위원 이름·기관명에 '국정감사'를 붙여 검색해 제목에 국감이 들어간 기사. track='소관사업'은 제목에 국감이 없어도 국감 재료가 되는 소관 사업·통계 기사를 주제별로 따로 모은 것으로, 같은 보도자료 받아쓰기가 쌓이지 않게 주제당 5건·21일까지만 남긴다. health=false는 제목에 국감은 있으나 보건복지와 닿는 낱말·기관·위원이 없는 기사(다른 상임위·국감 일반)로, 버리지 않고 뒤로 미룬다. 기관·위원·주제 분류는 모두 제목 키워드 자동.",
- "count": 2036,
+ "count": 2039,
  "items": [
-  {
-   "title": "이소희, 연금·건보공단 임원에 정치 이력 결격사유 신설 추진",
-   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE4tN2VkTG5oY3J5NkdtWEdUZmJwTWJTOEtVV1ItaURxTERZS1hETnhTclIzRlRQWW1JRFMtMkprR1JCYUpGUUdEQjF2Y2plQnVxMjJhYUtvdHlGQ1N0c0E?oc=5",
-   "date": "2026-11-20",
-   "source": "불탑뉴스",
-   "score": 2,
-   "track": "",
-   "agencies": [
-    "국민건강보험공단"
-   ],
-   "members": [
-    "이소희"
-   ],
-   "first_seen": "2026-11-20",
-   "health": true
-  },
   {
    "title": "이만희 보건복지위원장, '만성콩팥병관리법' 제정에 힘 싣는다",
    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9mVjZPQThlZGoxLUg4MERxZU8zSS1CN3RsZWpZcktna1JQRnBMU3BzWEFpVVRSSWNYNTNtQjl6ZnZPQ05mVFYtWmh5ai1uYTRiWkVfX1FVVHd1Q0hVdVRvRERIc2pRUXhVMmhnclgycXFHQ0nSAXNBVV95cUxPZlY2T0E4ZWRqMS1IODBEcWVPM0ktQjd0bGVqWXJLZ2tSUEZwTFNwc1hBaVVUUkljWDUzbUI5emZ2T0NOZlRWLVpoeWotbmE0YlpFX19RVVR3dUNIVXVUb0RESHNqUVF4VTJoZ3JYMnFxR0NJ?oc=5",
@@ -33,6 +17,76 @@
     "이만희"
    ],
    "first_seen": "2026-11-20",
+   "health": true
+  },
+  {
+   "title": "국회 이만희 보건복지위원장, '만성콩팥병관리법' 제정에 힘 싣는다",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE05dG1HSEt5a29zbk85RFp3cHpHeWh5MmJpYkU4OFpLOW5MR0RyTlNBZTljNURTc0FsZUVGRzRvY1dfSlUxWUFpVE8waGFfS3Rza2VQUmhHajNQZEljMVNkdEM4VmYtYzVEWnNMMVlVYkpoZ05RWkHSAXZBVV95cUxNOXRtR0hLeWtvc25POURad3B6R3loeTJiaWJFODhaSzluTEdEck5TQWU5YzVEU3NBbGVFRkc0b2NXX0pVMVlBaVRPMGhhX0t0c2tlUFJoR2ozUGRJYzFTZHRDOFZmLWM1RFpzTDFZVWJKaGdOUVpB?oc=5",
+   "date": "2026-11-20",
+   "source": "코리아헬스로그",
+   "score": 3,
+   "track": "",
+   "agencies": [],
+   "members": [
+    "이만희"
+   ],
+   "first_seen": "2026-11-21",
+   "health": true
+  },
+  {
+   "title": "[의료/건강] 독감 환자 4주 연속 급증… 65세 이상 고령층 예방접종 서둘러야",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8yTkhMS201cFZJMUpXeWxNaF9BUldxQXZXRnp6YVlpbHRIZzNlZFlKeUJic0xTVlh0NWdrSEphOW8ycGRRTDUzUmN2dE9MUXA4V1lKbHVhWmdHUGdMTTNIRTY4TkpNVGlNZ2dYZ9IBcEFVX3lxTE95dWlFWjZFcU1EaFVpQzJ6RlE3WVpjSFlVekxvLXJfd1BOSUpkc0IyanlsdUlVWFF2bTJIY3RGYlMtYzZhSDhQbjlNczFpNGxLaGVaLXc4N3h6SGJLQUFXRUNtWnlweWpOdzVBbmlrRXI?oc=5",
+   "date": "2026-11-20",
+   "source": "내외뉴스통신",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "예방접종",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-21",
+   "health": true
+  },
+  {
+   "title": "에볼라 국내 의심신고 58건…질병청, 해외유입 대비 합동훈련",
+   "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFB1WWZEN3FDNjVZdFBFVFJDclhlem1feHFlbGd6RUJKYzl6MnI3Y0lud2szdFlBV0FZSElvTVh0RDZQZHBVRWRvRHFwUHBNdw?oc=5",
+   "date": "2026-11-20",
+   "source": "전자신문",
+   "score": 1,
+   "track": "소관사업",
+   "topic": "검역·해외유입",
+   "agencies": [
+    "질병관리청"
+   ],
+   "members": [],
+   "first_seen": "2026-11-21",
+   "health": true
+  },
+  {
+   "title": "[서툰케어 27] 장기요양등급 포기 1만 5000명, 왜?",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5wVXNVTTRhRGtoR0JBX2J1dlF1eHJmZmJQbmR5VnhidzVaUGd5RTZPQXFvS0FNQnRwRUMtVlExU0ZPNkFFblFVNUhvOUNyWm9FMkxlbkVjTUo3Zi1mdERMakdEeC12bUlRNnlfdFVXaGbSAXRBVV95cUxPMzJfWnlwQnRvczF3YTZPbHJJLVkwLWJJenBBQUh5eDctOEtTckRCZmZVVFJmVW1VVGRDZ1VEcnRvb3lsTWh0TVdnTWlTVUNaeUVyY1pCa3g4SGwtbW0wUE0tTDNzSklrMzV4SzFyNk5ma1dZbg?oc=5",
+   "date": "2026-11-20",
+   "source": "오아시스뉴스",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "돌봄·요양",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-21",
+   "health": true
+  },
+  {
+   "title": "식약처, 마약류 진통제 수칙 배포∙∙∙펜타닐 환자 35% 급감 뒤엔 ‘풍선효과’",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9wUE5ORWsybjRaOXF0cmFQb1R0bUM0U0ZRekNqeTRsNEtsZTI1R0c3dHlnS1hySS1UQkNndjN5di15M1lnSlFKUl9KYXR4NW4taGZzaTM1TF9hcTREQlhGU0E2dDgzS21SV3k0Rw?oc=5",
+   "date": "2026-11-20",
+   "source": "바이오타임즈",
+   "score": 1,
+   "track": "소관사업",
+   "topic": "의약품·마약류",
+   "agencies": [
+    "식품의약품안전처"
+   ],
+   "members": [],
+   "first_seen": "2026-11-21",
    "health": true
   },
   {
@@ -61,20 +115,6 @@
     "박지원"
    ],
    "first_seen": "2026-10-14",
-   "health": true
-  },
-  {
-   "title": "주수현 서울시의원 \"서울의료원 국감 민주당 이수진 의원 발언, 사실관계 바로잡아야\"",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBMbDNtdVk3R0dtbW9vdE9QVjRvbk44aXlkRjhJS0RweXNWTFdBS2xMUTlaZUFmZFhvOE1ndGdSZGgtNlFvV2lHMnBacE9VZFhxNXJ4b3A2a2NKYTRsQW5wUFU3R3g4Rkc0blF4MFQycw?oc=5",
-   "date": "2026-11-19",
-   "source": "서울시티",
-   "score": 3,
-   "track": "국정감사",
-   "agencies": [],
-   "members": [
-    "이수진"
-   ],
-   "first_seen": "2026-11-17",
    "health": true
   },
   {
@@ -128,6 +168,36 @@
    "topic": "돌봄·요양",
    "agencies": [],
    "members": [],
+   "first_seen": "2026-11-20",
+   "health": true
+  },
+  {
+   "title": "서미화 “국회 장애인 고용률 1.59%…법정 기준 절반에도 못 미쳐”",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1UblZYT1R4U1l0Sm5mdER1THpCd3FXby1VSDhiUmluSDk3dTVqcXZHRWhsODVmSUhYdDU4QmlIZXFlVC04U1pXVngxVGI1QUdnTWRaVVdZQWNjbTJIRWliRzJVNA?oc=5",
+   "date": "2026-11-19",
+   "source": "쿠키뉴스",
+   "score": 2,
+   "track": "",
+   "agencies": [],
+   "members": [
+    "서미화"
+   ],
+   "first_seen": "2026-10-31",
+   "health": true
+  },
+  {
+   "title": "이소희, 연금·건보공단 임원에 정치 이력 결격사유 신설 추진",
+   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE4tN2VkTG5oY3J5NkdtWEdUZmJwTWJTOEtVV1ItaURxTERZS1hETnhTclIzRlRQWW1JRFMtMkprR1JCYUpGUUdEQjF2Y2plQnVxMjJhYUtvdHlGQ1N0c0E?oc=5",
+   "date": "2026-11-18",
+   "source": "불탑뉴스",
+   "score": 2,
+   "track": "",
+   "agencies": [
+    "국민건강보험공단"
+   ],
+   "members": [
+    "이소희"
+   ],
    "first_seen": "2026-11-20",
    "health": true
   },
@@ -228,6 +298,35 @@
    "health": true
   },
   {
+   "title": "질병청, WHO 홍역 퇴치국가 13년 연속 인증…해외유입 환자 86명 발생",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9aZFJZN2Zsd1BzbHpSUGJHQS0xeWZ4eUFlOXZLTmctUGRWdGxoSlhkcVZFZy1YUEc1ekdOU2xLZUtDVW4xenBHaFBTMmNkRlI0a2dBSFNuYTdaczRHTzdqcG9QUQ?oc=5",
+   "date": "2026-11-17",
+   "source": "뉴시니어",
+   "score": 1,
+   "track": "소관사업",
+   "topic": "검역·해외유입",
+   "agencies": [
+    "질병관리청"
+   ],
+   "members": [],
+   "first_seen": "2026-11-21",
+   "health": true
+  },
+  {
+   "title": "주수현 서울시의원 \"서울의료원 국감 민주당 이수진 의원 발언, 사실관계 바로잡아야\"",
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbmdUeC1MRHNFQ08tZlpEZHNBYXZPWW5nenNnQ2JJTVFUQXB0Ry1vVlcyRWI5dDJFVnBNTGVFNmpUQTk0WVd3VUZHY1lnRGNPc3o5NlljX2p1SFY0SWp5a01QUkU3QXUyTURyVzN0TEpuVHYxNjMySjROMFBlNEpaRlRsaW1aZ1pYeHl3?oc=5",
+   "date": "2026-11-16",
+   "source": "글로벌이코노믹",
+   "score": 3,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [
+    "이수진"
+   ],
+   "first_seen": "2026-11-17",
+   "health": true
+  },
+  {
    "title": "예산안 마무리한 보건복지위 \"이제는 법안이다\"",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB4SHV1cVZ4M2paSm5DSHRqcEh4SXpfS3oyaHk2YWREUGVuR2M2UEo0VWVuelNCV3NnV1Ezb0x5U1pTeWFjeXNJRV9sSldfSEpjV0txdU1MdHlSS1VoR3E4ZXNEQUFYV3pPdFlYLQ?oc=5",
    "date": "2026-11-16",
@@ -293,19 +392,6 @@
    "health": true
   },
   {
-   "title": "이승미 시의원, 영보정신요양원 장기입소자 88%…고령화 문제 심각",
-   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB0YWd1d18taVJBYzNJTkVVUGRxMXAyaGJGSVFDQWFIV25tRmY3ejluQ1o3dE0xZERBdFdubExtaXBBNE1keVFIM3VFMWh0SlVsYlVjV3plUXZ0Z1Fo?oc=5",
-   "date": "2026-11-16",
-   "source": "뉴스핌",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "돌봄·요양",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-17",
-   "health": true
-  },
-  {
    "title": "대한약품공업, 마약류 법정 보고 의무 '위반'",
    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5BaUFvOEtuT2IzcEVKVTBXSzFsenBNT001bHJXMWxEUHZtR0JvX05Mc3Z6a0paY1NpRVJqc1docG9QLWlKc253bkY4cF85R3BQUWxObG1tbkdqY0IwTDhza3pTdl92NzRZREppVFpEY9IBc0FVX3lxTE96V2JEMjA1ZVdsaDJINDdxSVlvTHltZVgyVmZKd0dMNW82RURvNFJvcDlxOGRPVnJIbWYyd1JYMWQtaDYxTFV1SUtRSlFrUHdZTXA3dzJaRU9iMzN6c3dyTi1kQWd4emFUcGJxTHdCQjFTZGc?oc=5",
    "date": "2026-11-16",
@@ -342,32 +428,6 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-17",
-   "health": true
-  },
-  {
-   "title": "“집중 잘되는 약” 이라더니…마약류 불법 판매 게시물 571건 적발",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBJNDlWTWpZcElicFI2VjNmWUlCektmeDBtTHhWMEdwYVBRQzFfZnBTd1hsTEJXa1owaXBuVGJXMllBVUJHUkhMY3BfZmpQRTloaWJOb1p5alBoQURJSXBGRnZEOUVjeDg?oc=5",
-   "date": "2026-11-16",
-   "source": "강원도민일보",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "의약품·마약류",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-17",
-   "health": true
-  },
-  {
-   "title": "\"영아 입원 75% 줄었다\" 효과 입증된 RSV 백신…국내 국가 지원은 언제?",
-   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQTERKdUJxMmd5amhHWU5PQ3Fjb1ZOOHQ5aGRabEtDQ2lXazZ6SlpzOVJYeWhOc1dSaGJHYV9Idmw2dXVhZTVXVFV1clY1cWFYUWVQM1VfV2dnNUthYW12cDJIN0oxMHJObkZFYlg2ZkVObjkyYzlVQTZzU1E1eGVZR2dTcw?oc=5",
-   "date": "2026-11-16",
-   "source": "조선일보",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "예방접종",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-15",
    "health": true
   },
   {
@@ -409,6 +469,18 @@
    "members": [],
    "track": "국정감사",
    "first_seen": "2026-09-30",
+   "health": true
+  },
+  {
+   "title": "보건복지위, 2027년도 예산안 및 기금운용계획안 상정",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE44Vk9EZUhEMlRMVWl5TnZVWlZfTTRoZHcxZ1VTaUFDUExiOTgxQUFYX2g0dHZLSGptM0dyX0lCMEdZTktqdGhRSXo1aDVFN3lMRWwtYVNZSkFWeUw1VGV5ck1nckFMT3kyTVp3?oc=5",
+   "date": "2026-11-15",
+   "source": "내외통신",
+   "score": 2,
+   "track": "",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-19",
    "health": true
   },
   {
@@ -539,18 +611,6 @@
    "members": [],
    "first_seen": "2026-10-22",
    "health": false
-  },
-  {
-   "title": "보건복지위, 2027년도 예산안 및 기금운용계획안 상정",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBGeW5HaFFqeWVTUXFzelpCbnR2WW15MXdoc2EzNVY0MWxSaTBObFp4Y0VzSVhFTGN4cVlHSXh4RkJtTlNIVmFHd25IT1JIcnY3MkZuVnFubDQ0N2VzTGNPenRhVF8xU3RGSVE?oc=5",
-   "date": "2026-11-12",
-   "source": "병원신문",
-   "score": 2,
-   "track": "",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-19",
-   "health": true
   },
   {
    "title": "만성질환 진료비 90조…고혈압·당뇨 등록관리는 전국 8% 지역뿐",
@@ -782,6 +842,19 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-18",
+   "health": true
+  },
+  {
+   "title": "대전협 \"전공의 정원 5:5 배정 철회하라\" 규탄 성명",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5Fc3RNWnlXemZKekJQTG5oRHF0OWxyekRFNTAzYnB2S3p0ZnlzQTJEUllzaWJaWXNzVWg4b19UaTdHVUJMbG1iWUFNTHBwUl9ZdlltZl9sU1BmVHA3RlhZQmdZNzU4dGhKNnQyN1o3dHVYZw?oc=5",
+   "date": "2026-11-10",
+   "source": "의협신문",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "의료인력",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-21",
    "health": true
   },
   {
@@ -1177,19 +1250,6 @@
    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5rei1RSzk4eFpkVkl4b1dmbmVLY2lDTVRYTHJ2TzFWUkVMMjRBOWtUSXA3NzBBMXFnNks0ME0yMy1INHQzb05xT0ZFbTYzVzJ3QjJrVmxmZV9pOUFZMER1NmVOMk16Um5qcDFB?oc=5",
    "date": "2026-11-04",
    "source": "경기메디뉴스",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "의료인력",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-05",
-   "health": true
-  },
-  {
-   "title": "의대 정원 100명 늘려도 지역 필수의료 공백 해소는 미지수",
-   "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTE5Sal9ZTjQ4Z3lBdTQxMnlBQTg5X0xpSkw4dHBCWmY3TE5LRUpVM3UyOWZCUjVxd1VmUkl0aHdIZ3FRSmFj?oc=5",
-   "date": "2026-11-04",
-   "source": "후생신보",
    "score": 0,
    "track": "소관사업",
    "topic": "의료인력",
@@ -1640,20 +1700,6 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-01",
-   "health": true
-  },
-  {
-   "title": "서미화 “국회 장애인 고용률 1.59%…법정 기준 절반에도 못 미쳐”",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1UblZYT1R4U1l0Sm5mdER1THpCd3FXby1VSDhiUmluSDk3dTVqcXZHRWhsODVmSUhYdDU4QmlIZXFlVC04U1pXVngxVGI1QUdnTWRaVVdZQWNjbTJIRWliRzJVNA?oc=5",
-   "date": "2026-10-30",
-   "source": "쿠키뉴스",
-   "score": 2,
-   "track": "",
-   "agencies": [],
-   "members": [
-    "서미화"
-   ],
-   "first_seen": "2026-10-31",
    "health": true
   },
   {
