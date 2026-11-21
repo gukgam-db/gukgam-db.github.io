@@ -1,10 +1,23 @@
 {
  "updated": "2026-11-21",
- "updated_at": "2026-11-21 02:47",
+ "updated_at": "2026-11-21 10:48",
  "window": "14d",
  "note": "구글 뉴스 검색 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. track='국정감사'·'대정부질문'은 위원 이름·기관명에 '국정감사'를 붙여 검색해 제목에 국감이 들어간 기사. track='소관사업'은 제목에 국감이 없어도 국감 재료가 되는 소관 사업·통계 기사를 주제별로 따로 모은 것으로, 같은 보도자료 받아쓰기가 쌓이지 않게 주제당 5건·21일까지만 남긴다. health=false는 제목에 국감은 있으나 보건복지와 닿는 낱말·기관·위원이 없는 기사(다른 상임위·국감 일반)로, 버리지 않고 뒤로 미룬다. 기관·위원·주제 분류는 모두 제목 키워드 자동.",
- "count": 2039,
+ "count": 2042,
  "items": [
+  {
+   "title": "국민연금 고갈 걱정보다 중요한 실질적인 노후 준비와 변화의 흐름",
+   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5jNXV4aV9HVlpzMDFSNHRQU282NHdPcjd1ZVByZkYzcXdmdEhVOV9CVy1LNnBnblVJZldzWGFJRF9kaE5ycDM0NzFXbzRwT1JkcTFJ?oc=5",
+   "date": "2026-11-21",
+   "source": "블로그차트",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "연금",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-21",
+   "health": true
+  },
   {
    "title": "이만희 보건복지위원장, '만성콩팥병관리법' 제정에 힘 싣는다",
    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9mVjZPQThlZGoxLUg4MERxZU8zSS1CN3RsZWpZcktna1JQRnBMU3BzWEFpVVRSSWNYNTNtQjl6ZnZPQ05mVFYtWmh5ai1uYTRiWkVfX1FVVHd1Q0hVdVRvRERIc2pRUXhVMmhnclgycXFHQ0nSAXNBVV95cUxPZlY2T0E4ZWRqMS1IODBEcWVPM0ktQjd0bGVqWXJLZ2tSUEZwTFNwc1hBaVVUUkljWDUzbUI5emZ2T0NOZlRWLVpoeWotbmE0YlpFX19RVVR3dUNIVXVUb0RESHNqUVF4VTJoZ3JYMnFxR0NJ?oc=5",
@@ -90,6 +103,35 @@
    "health": true
   },
   {
+   "title": "서미화 “국회 장애인 고용률 1.59%…법정 기준 절반에도 못 미쳐”",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1UblZYT1R4U1l0Sm5mdER1THpCd3FXby1VSDhiUmluSDk3dTVqcXZHRWhsODVmSUhYdDU4QmlIZXFlVC04U1pXVngxVGI1QUdnTWRaVVdZQWNjbTJIRWliRzJVNA?oc=5",
+   "date": "2026-11-20",
+   "source": "쿠키뉴스",
+   "score": 2,
+   "track": "",
+   "agencies": [],
+   "members": [
+    "서미화"
+   ],
+   "first_seen": "2026-10-31",
+   "health": true
+  },
+  {
+   "title": "감염병 조기 탐지 'AI 동맹' 강화…질병청·美 CDC 협력 확대 : 정책",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9leU9SWUxQNmktYWgtSk1COC1BQjNERlFpck5Icm1OelBjNTl6dVVYTFRGNjUyM0s2VWg4bmpaYUxtZHoyaEhUMVJXX1I4bkJhajJWYQ?oc=5",
+   "date": "2026-11-20",
+   "source": "의약일보",
+   "score": 1,
+   "track": "소관사업",
+   "topic": "감염병 대응",
+   "agencies": [
+    "질병관리청"
+   ],
+   "members": [],
+   "first_seen": "2026-11-21",
+   "health": true
+  },
+  {
    "title": "정치에 휘둘리는 1,700조 국민연금기금·113조 건강보험 재정…이소희, 국감 후속 ‘국민노후 수호법’ 대표발의",
    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1sT3hzTWp1SlR1QVZXNnc2WGxRNXVMbDUxUlJNT3FqVlpXaWpVT2tiWmNhaGtSX3lvQnh4OE0tTzBqbG45RmIxMFZ5RjFkSFBCMVN3ODFWdXNuOWZIYmNqUEttQWozRkhBdXNEUUNsZWJHalJs?oc=5",
    "date": "2026-11-19",
@@ -169,20 +211,6 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-20",
-   "health": true
-  },
-  {
-   "title": "서미화 “국회 장애인 고용률 1.59%…법정 기준 절반에도 못 미쳐”",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1UblZYT1R4U1l0Sm5mdER1THpCd3FXby1VSDhiUmluSDk3dTVqcXZHRWhsODVmSUhYdDU4QmlIZXFlVC04U1pXVngxVGI1QUdnTWRaVVdZQWNjbTJIRWliRzJVNA?oc=5",
-   "date": "2026-11-19",
-   "source": "쿠키뉴스",
-   "score": 2,
-   "track": "",
-   "agencies": [],
-   "members": [
-    "서미화"
-   ],
-   "first_seen": "2026-10-31",
    "health": true
   },
   {
@@ -487,7 +515,7 @@
    "title": "박지원·홍준표 100% 의견 일치!…한동훈 절대 못 돌아온다? [판도라]",
    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE4yLTVpRWpaN3pGeDdtLWhaWk9QcEtxbWVWeDlnYVJGTFpYOXVWMllNSTNsLVhUQUJkb1haMkY2TnA2bDd5V1V3TElOeFEtYTdJWU12dGtRVUlXYkJSdnlLcVptVFFQMTZtaGcxRUpsUlIzQno4dEdJWG9R?oc=5",
    "date": "2026-11-14",
-   "source": "MBN",
+   "source": "MBN 홈페이지",
    "score": 2,
    "track": "",
    "agencies": [],
@@ -611,6 +639,47 @@
    "members": [],
    "first_seen": "2026-10-22",
    "health": false
+  },
+  {
+   "title": "[박용갑국회의원] 국회 보건복지위 , 어르신 ‧ 아동 ‧ 청년 ‧ 취약계층 예산 증액 국립대병원 ‧ 바이오헬스 5 극 3 특 거점화 예산도 상임위 통과",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5qNFFqUWY2Y21rREpaUU1odUo2Z2ZpWXFHWnJSMmtyaURTMVlCUFNYWjBfU0lNZ3h6ZVlrQ0Y4TkthNmhVMnRzQ0VHT2VZSHJJREdNR0pRa0U2VS1adWVtVUlZUzZDQXc?oc=5",
+   "date": "2026-11-13",
+   "source": "유성매거진",
+   "score": 3,
+   "track": "",
+   "agencies": [],
+   "members": [
+    "박용갑"
+   ],
+   "first_seen": "2026-11-21",
+   "health": true
+  },
+  {
+   "title": "[뉴스워커_박용갑 의원] 노인 일자리 활동비 29만→32만1000원…복지위 예산안 통과",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5NaU01QVF4MWxDOGJPSDlrMHR3YThFVmJ3RWdMQlZyV1ZJVDY3WGpwV2lkUmVrbUZNRVpUT3pFVHh5bUs5aVh1cTUyd1V4NGJ6OWJJeEc1SFd3ZGQtc19vdDlWNG5SOW9YZzdWb2t2SmHSAXRBVV95cUxPY2t2SVV2NXhfN21jRDY0OUJzYUJQdGRnRUZaZlNGR3B3ZGxWbUo1U3prY3l1MVc2YUdlSElrUUx2WWFBT1MxVFNUMlRNQ3RNODR3c3dna1BXcTlXUXRrLUk5ZVQ4N01INy04T0N4VmRoQXBIUA?oc=5",
+   "date": "2026-11-13",
+   "source": "뉴스워커",
+   "score": 3,
+   "track": "",
+   "agencies": [],
+   "members": [
+    "박용갑"
+   ],
+   "first_seen": "2026-11-21",
+   "health": true
+  },
+  {
+   "title": "전공의들도 수도권·비수도권 '5대 5' 비판…\"교육 안 되는 병원에 배정만?\"",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9aVklra1dfdFRHQk1qRVJRQU1EeEpieHI2bUdfdmtwNGJJYkl0MnMybDB5c2JFN3d4ai1TX1RHSGdEQ0ZuSjJBSEJaN1pyU2pmSkJ3YXp5YVh2MGdfaXkwMlF4MmVRN2RPaFJNaGJPNNIBc0FVX3lxTE9aSkJLZFZ6ZzBGal8xcUZhaURNY3NmM1h0NjhxTnJWUHAzS1Q3TlVtclVNcUpYMUZldlZsRVlUeVVTUlY0VFhWOTdwYW1SRTNIVUNScmJmb0RfTHpZTHFYSkdwdlYxSWNGNU5aSVdER2t6ZjQ?oc=5",
+   "date": "2026-11-13",
+   "source": "청년의사",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "의료인력",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-21",
+   "health": true
   },
   {
    "title": "만성질환 진료비 90조…고혈압·당뇨 등록관리는 전국 8% 지역뿐",
@@ -849,6 +918,19 @@
    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5Fc3RNWnlXemZKekJQTG5oRHF0OWxyekRFNTAzYnB2S3p0ZnlzQTJEUllzaWJaWXNzVWg4b19UaTdHVUJMbG1iWUFNTHBwUl9ZdlltZl9sU1BmVHA3RlhZQmdZNzU4dGhKNnQyN1o3dHVYZw?oc=5",
    "date": "2026-11-10",
    "source": "의협신문",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "의료인력",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-21",
+   "health": true
+  },
+  {
+   "title": "전공의들, 수도권·지역 5대5 배정에 \"기피과 문제 심화\"",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE43RWhmR20yZ2kzN3dIWVB4Z3o1bFBjYk1tcFhCT2RCLUs1SDlDay1ENDFqRTNBN2g5c2czaWlNMXFFWm5VY1NGWW5Mb0pKbmdVd2FTdk1fTUppZXVQbUtaQ21qZkplZnJCYVY4T3ltc0Q?oc=5",
+   "date": "2026-11-10",
+   "source": "메디칼타임즈",
    "score": 0,
    "track": "소관사업",
    "topic": "의료인력",
@@ -1233,32 +1315,6 @@
    "health": true
   },
   {
-   "title": "지역의대 정원 100명…기초의학 교수·교육병원 확보 과제",
-   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5vU3BGV1JLRVB3N3E4VXdPY0pxaVJTYmJlcmthWDFFdS1sV0ZvQVNoQzBiQUI5cVdBVG1EekVaajVxblpFNDBIaW9IcmM2ZnFZU2lzdm5pbFhSMWxw?oc=5",
-   "date": "2026-11-04",
-   "source": "뉴스1",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "의료인력",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-05",
-   "health": true
-  },
-  {
-   "title": "의대 증원보다 필수의료 유인정책 필요…의료계 주장 뒷받침하는 학술적 분석 주목",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5rei1RSzk4eFpkVkl4b1dmbmVLY2lDTVRYTHJ2TzFWUkVMMjRBOWtUSXA3NzBBMXFnNks0ME0yMy1INHQzb05xT0ZFbTYzVzJ3QjJrVmxmZV9pOUFZMER1NmVOMk16Um5qcDFB?oc=5",
-   "date": "2026-11-04",
-   "source": "경기메디뉴스",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "의료인력",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-05",
-   "health": true
-  },
-  {
    "title": "필수백신 비축률 46.4%…올해 목표치보다 17.6%p 낮아 [2026 국감]",
    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE56YXpYdjZYSE55MUVGSWlsLW1hbU5BU0hzcWRXLXJiUXNnbG9aUVduQUtkYmVuNGdqaUhkQWtiWW1YeUxlanF4VWFqOC15LTJQUWI4cUVQejExWUhlOFlXdkt5aw?oc=5",
    "date": "2026-11-04",
@@ -1463,19 +1519,6 @@
     "백종헌"
    ],
    "first_seen": "2026-11-03",
-   "health": true
-  },
-  {
-   "title": "[기획] 기금형 퇴직연금에 국민연금 참여하나...수익률 기대에도 시장개입 우려",
-   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBvMUJEaS11UWRacV9qVWtqWnBEaGgtcy1ma3BOZXpYXzR5MXdfUnFCMWo1alpqU1otZHNIUExaMC1FaTA2blRqSEp1SERsUUFWV0g0WGlNTnE2Rlgtb01LX3VWd1Q?oc=5",
-   "date": "2026-11-01",
-   "source": "매일일보",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "연금",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-04",
    "health": true
   },
   {
