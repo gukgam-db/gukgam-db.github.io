@@ -1,7 +1,32 @@
 {
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "note": "감사일별 자동 요약 카드(영상 캡처 아님). 큰 글씨 = 그날 질의에서 가장 많이 언급된 주제, 사진 = 그날 질의 횟수 상위 위원, 인용 = 답변이 붙은 질의 중 가장 긴 것의 앞부분, 발언 수 = 회의록에서 짝지은 질의·답변 건수.",
  "items": [
+  {
+   "date": "2026-10-27",
+   "year": 2026,
+   "n": 461,
+   "targets": [
+    "보건복지부",
+    "식품의약품안전처",
+    "질병관리청및기타감사대상기관"
+   ],
+   "top_topic": "건강보험·수가",
+   "topics": [
+    "건강보험·수가",
+    "연말정산·재정",
+    "필수·지역의료"
+   ],
+   "top_members": [
+    "이만희",
+    "최보윤",
+    "한지아"
+   ],
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/e1c9c9575d334b66943ed2fc9a8847ad.jpg",
+   "quote": "다음은존경하는박지원위원님질의하십시오. ◯朴芝源위원 식약처장님께질의하겠습니다. 제가 오늘 소품 좀 가져왔어요.…",
+   "quote_member": "이만희",
+   "minutes_url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57422"
+  },
   {
    "date": "2026-10-08",
    "year": 2026,
@@ -318,31 +343,6 @@
    "quote": "제가 알기로는초안은 연구원에서작성을했고 그다음에최종안은 복지부와 상의를 해 서 저런 안이 나왔다고 들었는데요.맞습니까?",
    "quote_member": "강선우",
    "minutes_url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51979"
-  },
-  {
-   "date": "2024-10-17",
-   "year": 2024,
-   "n": 133,
-   "targets": [
-    "한국보건산업진흥원",
-    "한국건강증진개발원",
-    "국립암센터"
-   ],
-   "top_topic": "연말정산·재정",
-   "topics": [
-    "연말정산·재정",
-    "공공의료",
-    "건강보험·수가"
-   ],
-   "top_members": [
-    "서미화",
-    "전진숙",
-    "김윤"
-   ],
-   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/0694f551f21c40b2a4bbccd2e90ce40c.jpg",
-   "quote": "의료기관 같은 곳에서는 직장가입이 되어 있을 때 그 직장에서 내 주는경우도많다고되어있는데지금특히취약계층돌봄시설내에는단기근로자나비 정규직 근로자들이 많기 때문에, 여기 제가 따로 물어본 바에 의하면…",
-   "quote_member": "이주영",
-   "minutes_url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51959"
   }
  ]
 }
