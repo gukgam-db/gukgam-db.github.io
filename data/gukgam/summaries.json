@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24",
+ "updated": "2026-11-26",
  "items": {
   "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=55603": {
    "kind": "minutes",
@@ -799,6 +799,18 @@
     "질병관리청및기타감사대상기관"
    ],
    "when": "불출석을 요청하였고 위원장과 간사위원들 간의 협의를 거쳐",
+   "where": "보건복지위원회회의실"
+  },
+  "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57413": {
+   "kind": "minutes",
+   "pages": 166,
+   "targets": [
+    "식품의약품안전처",
+    "식품의약품안전평가원",
+    "서울지방식품의약품안전청",
+    "부산지방"
+   ],
+   "when": "2026년10월13일(화)",
    "where": "보건복지위원회회의실"
   }
  }

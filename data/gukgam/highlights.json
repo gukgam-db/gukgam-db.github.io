@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "note": "감사일별 자동 요약 카드(영상 캡처 아님). 큰 글씨 = 그날 질의에서 가장 많이 언급된 주제, 사진 = 그날 질의 횟수 상위 위원, 인용 = 답변이 붙은 질의 중 가장 긴 것의 앞부분, 발언 수 = 회의록에서 짝지은 질의·답변 건수.",
  "items": [
   {
@@ -26,6 +26,31 @@
    "quote": "다음은존경하는박지원위원님질의하십시오. ◯朴芝源위원 식약처장님께질의하겠습니다. 제가 오늘 소품 좀 가져왔어요.…",
    "quote_member": "이만희",
    "minutes_url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57422"
+  },
+  {
+   "date": "2026-10-13",
+   "year": 2026,
+   "n": 578,
+   "targets": [
+    "식품의약품안전처",
+    "식품의약품안전평가원",
+    "서울지방식품의약품안전청"
+   ],
+   "top_topic": "의약품 안전",
+   "topics": [
+    "의약품 안전",
+    "식품 안전",
+    "마약류 관리"
+   ],
+   "top_members": [
+    "이만희",
+    "서미화",
+    "남인순"
+   ],
+   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/e1c9c9575d334b66943ed2fc9a8847ad.jpg",
+   "quote": "리종합정보센터 자료에 따르면 GLP-1 계열 비만치료제 국내 유통량이 2024년 10월에 월 16만 개에서 현재 2026년 7월에 월 311만 9941개로 1.9배에 서 19.4배로 폭증했습니다.…",
+   "quote_member": "백선희",
+   "minutes_url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=57413"
   },
   {
    "date": "2026-10-08",
@@ -319,30 +344,6 @@
    "quote": "만드는 아이패드가 도대체 어떻게 중증장애인생산품이 됩니 까? 보조배터리의 경우 원부자재값이 실적 등록금액의 85%, 텀블러는 81%, 주차안내판은 무려 89%나 됩니다.…",
    "quote_member": "김선민",
    "minutes_url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51993"
-  },
-  {
-   "date": "2024-10-18",
-   "year": 2024,
-   "n": 70,
-   "targets": [
-    "국민연금공단",
-    "한국사회보장정보원"
-   ],
-   "top_topic": "연금",
-   "topics": [
-    "연금",
-    "연말정산·재정",
-    "건강보험·수가"
-   ],
-   "top_members": [
-    "김예지",
-    "이주영",
-    "이수진"
-   ],
-   "photo": "https://www.assembly.go.kr/static/portal/img/openassm/new/813a596915cc475d89c50722ce5764bc.jpg",
-   "quote": "제가 알기로는초안은 연구원에서작성을했고 그다음에최종안은 복지부와 상의를 해 서 저런 안이 나왔다고 들었는데요.맞습니까?",
-   "quote_member": "강선우",
-   "minutes_url": "https://record.assembly.go.kr/assembly/viewer/minutes/download/pdf.do?id=51979"
   }
  ]
 }

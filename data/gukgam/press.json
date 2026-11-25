@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-25",
- "updated_at": "2026-11-25 12:48",
+ "updated": "2026-11-26",
+ "updated_at": "2026-11-26 04:09",
  "window": "14d",
  "note": "구글 뉴스 검색 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. track='국정감사'·'대정부질문'은 위원 이름·기관명에 '국정감사'를 붙여 검색해 제목에 국감이 들어간 기사. track='소관사업'은 제목에 국감이 없어도 국감 재료가 되는 소관 사업·통계 기사를 주제별로 따로 모은 것으로, 같은 보도자료 받아쓰기가 쌓이지 않게 주제당 5건·21일까지만 남긴다. health=false는 제목에 국감은 있으나 보건복지와 닿는 낱말·기관·위원이 없는 기사(다른 상임위·국감 일반)로, 버리지 않고 뒤로 미룬다. 기관·위원·주제 분류는 모두 제목 키워드 자동.",
- "count": 2014,
+ "count": 2015,
  "items": [
   {
    "title": "요양병원 간병비 지원 2027년부터 추진, 지원 대상과 신청 조건 확인하세요",
@@ -71,6 +71,87 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-25",
+   "health": true
+  },
+  {
+   "title": "김교흥 의원 공동발의 ‘자살예방기금 설치법’, 복지위 법안소위 통과",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5YdEkyQ3JVZFRLTVMzUHNxR05iTHdSR3Y1b2xsNHNMTEVock1QVk1PQzQ1RkRfVXYxRFJvdTNnY0VVbTBRVEl0LWFnY0ZneDBvYkRFWlFIQmVGMUJFY3BIOE9UZWllWnZ4?oc=5",
+   "date": "2026-11-25",
+   "source": "문화투데이",
+   "score": 3,
+   "track": "",
+   "agencies": [],
+   "members": [
+    "김교흥"
+   ],
+   "first_seen": "2026-11-26",
+   "health": true
+  },
+  {
+   "title": "고혈압·당뇨병 환자 의료비 지원 52억 전액 삭감 직전...“예산 복원하라”",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5UajdBaGk3dThYS08zMDdtNnpyRmhOSWtkZWctbzIxOTR0c3VROWRQUWVvZkhkZ0c3OUxaOVF4OUNnNklha0VodEczaDNCSkx3M1J5LTdrMThSbGMwZlJtQlRXRk9OMFlrdHc?oc=5",
+   "date": "2026-11-25",
+   "source": "의학신문",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "만성질환·고당사업",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-26",
+   "health": true
+  },
+  {
+   "title": "질병관리청, 고혈압·당뇨병 관리체계 개편… 전국·전 연령으로 확대 추진",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8yTGJkMXVaY3hSamo5TFZwRER5dl9PS2JaODhGSmY5MHVxTG0ya2VYX3A5MHBMb3NwUVF1UGpxaVowQVFBOHdWdnRzcFlPdDkyaEtmNjlOUmlUTGJ1SklvMGxXa052UkRkNmZOWtIBcEFVX3lxTFBSTzRDUjlTa3p3N016Z1hQUEVvc1VRQl9oNHgwcXkwcGpveWU4UHl1eC1zQkNBa0cxbmFKVlVzZXFSU2VQT0RoM0RpNUhQRk1iUVNEYm5PTmV5X0ZSdXZpcVhMWXJpYnJSVnU3QS1TZ2k?oc=5",
+   "date": "2026-11-25",
+   "source": "내외뉴스통신",
+   "score": 1,
+   "track": "소관사업",
+   "topic": "만성질환·고당사업",
+   "agencies": [
+    "질병관리청"
+   ],
+   "members": [],
+   "first_seen": "2026-11-26",
+   "health": true
+  },
+  {
+   "title": "인플루엔자 71%·코로나19는 34%… 고령층 백신 격차 줄일 '예방접종관리법'의 숙제",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9HNW93RDk2YjhkZGgyd2RvVWFRNXFySXgwRUJYSDBUaTcwRlltSmlqSjk2U1Q2c2NrdW9ldmJJalhnTFMtaFAzclBfSUpKcVZHUkdXbUxUaHAwclpwcWY3Q2Z6NVplUE9vLVBPdg?oc=5",
+   "date": "2026-11-25",
+   "source": "매경헬스",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "예방접종",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-26",
+   "health": true
+  },
+  {
+   "title": "고령층 10명 중 8명 독감 백신 맞는데 입원 줄지 않는 이유 '면역노화'",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9hM2MzaEROaEp5Rkt2SmRSSEVFOFVWTXV0Rl9SRkVWdThmN3ZSY040b0lmQTI4SmQ4MlpBY2pYR2R4WXV0Y0tDQXpZdVdFclh0aVRQTF9fNmNldV9iTzJIVlVJcE40eTlveURIMEpR?oc=5",
+   "date": "2026-11-25",
+   "source": "한국일보",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "예방접종",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-26",
+   "health": true
+  },
+  {
+   "title": "고령가구 35.6% 돌봄 이용 하고 싶은데…자격 안돼",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1PU3NJRkxrU0loVnZ4NFE3bzN5bjU1ZjRMREVzR2ZhSzFQZURCNEJfa1c5NmlkdlVHQWc2Tk1Cc043c0xTR0xiX2hqSGhCSTVlN1JyX2R1N0ZKUQ?oc=5",
+   "date": "2026-11-25",
+   "source": "이투데이",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "돌봄·요양",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-26",
    "health": true
   },
   {
@@ -181,32 +262,6 @@
    "health": true
   },
   {
-   "title": "[인식개선&ESG]독감 입원환자 1000명 육박·사망 2배 급증… 고령층·장애인 예방접종 접근성 보완 시급:장애인인식개선신문",
-   "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE9NNVhGZGJkak1RZFFYcVNnZVZNRGxKaG9adkRFRVlzMUkxbUdaVmJrcko0RG9WOW05UjhiR2d0NzFHdknSAV9BVV95cUxNTUI2NFdDRHItLVJiQ2QtZENqbkZSSWlNTUpGVzdkUzlHYndFNGpWdnJqU1gzY2tDMzlZSk1aMGxMUEFtemlhT05rU3lyRUNzTHNHRTlxRE5lcnA2WFZwYw?oc=5",
-   "date": "2026-11-24",
-   "source": "장애인인식개선신문",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "예방접종",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-25",
-   "health": true
-  },
-  {
-   "title": "독감 환자 4주 만에 약 2배인데 백신 접종률은 지난해보다 낮아",
-   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1nblFfejhqOWVDSHM2VUxQS2RXVGJ0bGtrVlY4d2Y0SFZfTXFHT3ZnZ2NLN28xT0R4UkRab25OS21CYTRlQlNoMjMwOHhsV2VWemN0TWs0a3ZyYlotal93R2tHZ19weU1PUDdWem93Y0hXa2fSAXNBVV95cUxNZ25RX3o4ajllQ0hzNlVMUEtkV1RidGxra1ZWOHdmNEhWX01xR092Z2djSzdvMU9EeFJEWm9uTkttQmE0ZUJTaDIzMDh4bFdlVnpjdE1rNGt2cmJaLWpfd0drR2dfcHlNT1A3Vnpvd2NIV2tn?oc=5",
-   "date": "2026-11-24",
-   "source": "시사저널",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "예방접종",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-25",
-   "health": true
-  },
-  {
    "title": "\"독감 백신 미뤘다간 큰코다친다\"… 전국 검출률 33.1% 급등에 고양시도 '방역 비상등' |",
    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1PZ21hMDhMaVY4a1dqMzJ2VWppVHlmUkpPTlhlaEZVM1RpTUZWU1h5QnNjcks3ZzVtYTI4NEQxOGJKcnl1cE1iTmtDRjJBQnFuQmwxUXNZOF9Md1VhemtpN2dGQzZJdnoxWlNr?oc=5",
    "date": "2026-11-24",
@@ -247,7 +302,7 @@
   },
   {
    "title": "돌봄부터 생애 마지막까지, 장기요양 지원체계 개편 모색",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9Td05tZFFwNVlvZ3phQUN5c3RvQWh6TGJMU0VvekJyUTZPczFsdnA5ZEdZZjZZLS1rQk8zVW9PcEIwbnNseDJSS1pOVTRNa1BZdC1ESXdHNUx4bU00amhaNFRpZEFMNXV3emRFTGpNMNIBb0FVX3lxTE9Td05tZFFwNVlvZ3phQUN5c3RvQWh6TGJMU0VvekJyUTZPczFsdnA5ZEdZZjZZLS1rQk8zVW9PcEIwbnNseDJSS1pOVTRNa1BZdC1ESXdHNUx4bU00amhaNFRpZEFMNXV3emRFTGpNMA?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1ISjh0dWNJdVFCUksxVmotdWRLT2dOVExUWlZsNllWQWROZGVYaDVCYkNFU0NxelNpWTNrNVkwZkRveUVJVDZmSEp0RGxveXFVbWxWTFZiT1BOb1pKT1VodnVUeW9uVFlBT3Nz0gFvQVVfeXFMT1N3Tm1kUXA1WW9nemFBQ3lzdG9BaHpMYkxTRW96QnJRNk9zMWx2cDlkR1lmNlktLWtCTzNVb09wQjBuc2x4MlJLWk5VNE1rUFl0LURJd0c1THhtTTRqaFo0VGlkQUw1dXd6ZEVMak0w?oc=5",
    "date": "2026-11-24",
    "source": "e-의료정보",
    "score": 0,
@@ -274,6 +329,33 @@
    "health": true
   },
   {
+   "title": "서미화 “국회 장애인 고용률 1.59%…법정 기준 절반에도 못 미쳐”",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1UblZYT1R4U1l0Sm5mdER1THpCd3FXby1VSDhiUmluSDk3dTVqcXZHRWhsODVmSUhYdDU4QmlIZXFlVC04U1pXVngxVGI1QUdnTWRaVVdZQWNjbTJIRWliRzJVNA?oc=5",
+   "date": "2026-11-23",
+   "source": "쿠키뉴스",
+   "score": 2,
+   "track": "",
+   "agencies": [],
+   "members": [
+    "서미화"
+   ],
+   "first_seen": "2026-10-31",
+   "health": true
+  },
+  {
+   "title": "예천실버요양원 직원들 십시일반…예천군에 510만 원 기탁",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1uYlNTMUdRelFJWnlsdjg0Q0lEeVdRYW1STzducXgwVVdOMEYzcU95S1JKUWs4TEd5MzMwQ2dadHkxd29XTnM3eTJYNHlIR0trUmtDWm9GYldyd1JwSUd4Sm5QVl91Rm5IdDZyai1fMA?oc=5",
+   "date": "2026-11-23",
+   "source": "경북일보",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "돌봄·요양",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-26",
+   "health": true
+  },
+  {
    "title": "“매일 휴진 안내 한의원에 원외탕전실”…한지아, 운영 실태 점검 요구 [2026 국감]",
    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE91bm5kNjRmb09YVEl0Q3ZNVkVRb2d5dTFTM25OQVRfNlNjR2hvLUt6S21WU1NoQmJCeEdQUC1MYUtxU1JhbzEtaHR6Y21kS1FiaExjaHVZUmpETVV2TzFHZVJjaw?oc=5",
    "date": "2026-11-22",
@@ -286,19 +368,6 @@
    ],
    "first_seen": "2026-10-20",
    "health": true
-  },
-  {
-   "title": "고혈압·당뇨병 등록관리 예산 52억 ‘전액 삭감’",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5EaElPLWhwcVBPRThWX0cwMkVaZlUxOVRPWXktbGs1MG1MaDRfT0lYVzVsMUZsREpZM0lmNGN0bEJrX3ltZjljc2w2SUtWMjBEbDcyUjg0ei14Z3dPNjNUai1kNA?oc=5",
-   "date": "2026-11-22",
-   "source": "데일리메디",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "만성질환·고당사업",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-23",
-   "health": false
   },
   {
    "title": "국감 사과 한달만에 또…한전, 3만명 이어 152만명 개인정보 유출",
@@ -367,25 +436,12 @@
   },
   {
    "title": "고혈압당뇨병센터 개편 논란 지속···환자·노인회 반발",
-   "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBOdTlsWFBBejBkWDFzN195VWhGTkVwX0tqLXVkazBIZlNEQno1TmlHZ3RmLTJadFY3TGNWMS0taGdrcjlmQUE5NGNudTQ1ZVBv0gFQQVVfeXFMUE51OWxYUEF6MGRYMXM3X3lVaEZORXBfS2otdWRrMEhmU0RCejVOaUdndGYtMlp0VjdMY1YxLS1oZ2tyOWZBQTk0Y251NDVlUG8?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9sWmxjcm9nQTNBQ19LZF9qbm1OTnJ4anVsNXJTSnFpbGRLcEVFUVZVeHNuNmd5WWUxd2JuZ0E1MXdkNV95T3J1TGFudUNCaDZRZHBKNVpB0gFQQVVfeXFMUE51OWxYUEF6MGRYMXM3X3lVaEZORXBfS2otdWRrMEhmU0RCejVOaUdndGYtMlp0VjdMY1YxLS1oZ2tyOWZBQTk0Y251NDVlUG8?oc=5",
    "date": "2026-11-21",
    "source": "더팩트",
    "score": 0,
    "track": "소관사업",
    "topic": "만성질환·고당사업",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-22",
-   "health": true
-  },
-  {
-   "title": "\"요양원 안 가도 된다\" 2027년 중증 어르신 집에서 월 48회 돌봄·65만 명 낙상 치료비 전격 지원",
-   "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE14eEY1OGg0SmhBQnFxLVMzUEVfS0ZmNU1ydFBLYXBIbFNFdHNZSVZZNUZZNkI5bW45eGpmcU04UUh4Qml3Yk5kOU1KYW0?oc=5",
-   "date": "2026-11-21",
-   "source": "한국IT산업뉴스",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "돌봄·요양",
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-22",
@@ -416,18 +472,6 @@
    "members": [],
    "first_seen": "2026-10-24",
    "health": true
-  },
-  {
-   "title": "날카로운 질의, 구체적인 대안…쿠키뉴스 2026 국감 우수의원 시상",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBVUU0yTGRfZ0Q5S0ljUG42bDBubE1UOFdnY0NRaUtLOU00RmZ6RS1vLTZqbFc4UWVIcGlqRTlFWlRyX1Bad2cwQTljY0lxTWF4UHI0S3NBclRmdG1XX1gxY2xMUQ?oc=5",
-   "date": "2026-11-21",
-   "source": "쿠키뉴스",
-   "score": 2,
-   "track": "국정감사",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-24",
-   "health": false
   },
   {
    "title": "동의 없이 건강보험 임플란트 등록됐는데…취소하려니 “법원 판단 필요” [2026 국감]",
@@ -485,19 +529,6 @@
    "health": true
   },
   {
-   "title": "[서툰케어 27] 장기요양등급 포기 1만 5000명, 왜?",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5wVXNVTTRhRGtoR0JBX2J1dlF1eHJmZmJQbmR5VnhidzVaUGd5RTZPQXFvS0FNQnRwRUMtVlExU0ZPNkFFblFVNUhvOUNyWm9FMkxlbkVjTUo3Zi1mdERMakdEeC12bUlRNnlfdFVXaGbSAXRBVV95cUxPMzJfWnlwQnRvczF3YTZPbHJJLVkwLWJJenBBQUh5eDctOEtTckRCZmZVVFJmVW1VVGRDZ1VEcnRvb3lsTWh0TVdnTWlTVUNaeUVyY1pCa3g4SGwtbW0wUE0tTDNzSklrMzV4SzFyNk5ma1dZbg?oc=5",
-   "date": "2026-11-20",
-   "source": "오아시스뉴스",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "돌봄·요양",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-21",
-   "health": true
-  },
-  {
    "title": "식약처, 마약류 진통제 수칙 배포∙∙∙펜타닐 환자 35% 급감 뒤엔 ‘풍선효과’",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9wUE5ORWsybjRaOXF0cmFQb1R0bUM0U0ZRekNqeTRsNEtsZTI1R0c3dHlnS1hySS1UQkNndjN5di15M1lnSlFKUl9KYXR4NW4taGZzaTM1TF9hcTREQlhGU0E2dDgzS21SV3k0Rw?oc=5",
    "date": "2026-11-20",
@@ -510,20 +541,6 @@
    ],
    "members": [],
    "first_seen": "2026-11-21",
-   "health": true
-  },
-  {
-   "title": "서미화 “국회 장애인 고용률 1.59%…법정 기준 절반에도 못 미쳐”",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1UblZYT1R4U1l0Sm5mdER1THpCd3FXby1VSDhiUmluSDk3dTVqcXZHRWhsODVmSUhYdDU4QmlIZXFlVC04U1pXVngxVGI1QUdnTWRaVVdZQWNjbTJIRWliRzJVNA?oc=5",
-   "date": "2026-11-20",
-   "source": "쿠키뉴스",
-   "score": 2,
-   "track": "",
-   "agencies": [],
-   "members": [
-    "서미화"
-   ],
-   "first_seen": "2026-10-31",
    "health": true
   },
   {
@@ -650,6 +667,18 @@
    "members": [],
    "first_seen": "2026-11-25",
    "health": true
+  },
+  {
+   "title": "날카로운 질의, 구체적인 대안…쿠키뉴스 2026 국감 우수의원 시상",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBVUU0yTGRfZ0Q5S0ljUG42bDBubE1UOFdnY0NRaUtLOU00RmZ6RS1vLTZqbFc4UWVIcGlqRTlFWlRyX1Bad2cwQTljY0lxTWF4UHI0S3NBclRmdG1XX1gxY2xMUQ?oc=5",
+   "date": "2026-11-18",
+   "source": "쿠키뉴스",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-24",
+   "health": false
   },
   {
    "title": "이소희, 연금·건보공단 임원에 정치 이력 결격사유 신설 추진",
@@ -1049,19 +1078,6 @@
    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBrXzhlMF85S1AtUmhjdUFwaGE3SFYzS0ZNeFRrZWJJN3pMLW84RGI0bnZ3MzNTd2N0N1I1WXFqd3dKRi11MjRKQmdaRDRjZ0hhaWc0?oc=5",
    "date": "2026-11-11",
    "source": "현대건강신문",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "만성질환·고당사업",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-11",
-   "health": true
-  },
-  {
-   "title": "“66만 노인 건강권 위협”…고당사업 52억 삭감 반발",
-   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE0tOE42Zk5mY3hoVnZaV2xiWUFsRExSREV4b1hqVzE0ZmM5RlJRV0QxVk8yclJKcGNFTm1hX3hMbkExVEc5S3ktS3BwaEl6UUVTdjlzaUYxSzRDX2oxQ3BoY3NvWHVRQVNz?oc=5",
-   "date": "2026-11-11",
-   "source": "헬스이슈앤뉴스",
    "score": 0,
    "track": "소관사업",
    "topic": "만성질환·고당사업",
