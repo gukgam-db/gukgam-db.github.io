@@ -1,9 +1,9 @@
 {
  "updated": "2026-11-25",
- "updated_at": "2026-11-25 05:09",
+ "updated_at": "2026-11-25 12:48",
  "window": "14d",
  "note": "구글 뉴스 검색 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. track='국정감사'·'대정부질문'은 위원 이름·기관명에 '국정감사'를 붙여 검색해 제목에 국감이 들어간 기사. track='소관사업'은 제목에 국감이 없어도 국감 재료가 되는 소관 사업·통계 기사를 주제별로 따로 모은 것으로, 같은 보도자료 받아쓰기가 쌓이지 않게 주제당 5건·21일까지만 남긴다. health=false는 제목에 국감은 있으나 보건복지와 닿는 낱말·기관·위원이 없는 기사(다른 상임위·국감 일반)로, 버리지 않고 뒤로 미룬다. 기관·위원·주제 분류는 모두 제목 키워드 자동.",
- "count": 2013,
+ "count": 2014,
  "items": [
   {
    "title": "요양병원 간병비 지원 2027년부터 추진, 지원 대상과 신청 조건 확인하세요",
@@ -13,6 +13,61 @@
    "score": 0,
    "track": "소관사업",
    "topic": "돌봄·요양",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-25",
+   "health": true
+  },
+  {
+   "title": "소병훈 의원 \"수면마취의원 85% 제세동기 미보유, 응급장비 의무화 필요\"",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1OMEx1b2NVa0dlVm02QjJPQmRTNGxGQkRmYlFRZFBzTUxkU0JRQnVhUzdZRDZFR3NLU2M5UlFWTC1uRnFrUEloV19SSWRQaEVTTlI3Z3ZwYkVfWXRMTVhqZWZoQjUtLU1aMl93?oc=5",
+   "date": "2026-11-25",
+   "source": "히트뉴스",
+   "score": 2,
+   "track": "",
+   "agencies": [],
+   "members": [
+    "소병훈"
+   ],
+   "first_seen": "2026-11-25",
+   "health": true
+  },
+  {
+   "title": "질병청 “예방접종비 지급률 94.1%…대규모 지연 아냐”",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1vTEpGaHVYNWtHRk81X2NuUTNxSktUUlozRWotX3h0Q01jMl9HZFJzX1hBeFFvREdwUHFEbzR5U1NiSkFjUHlzYzltNGRoWDZYdXdqZVc2NDAyUGIxOGR6X191dGdnM3pHbEhEMUtR?oc=5",
+   "date": "2026-11-25",
+   "source": "간호사신문",
+   "score": 1,
+   "track": "소관사업",
+   "topic": "예방접종",
+   "agencies": [
+    "질병관리청"
+   ],
+   "members": [],
+   "first_seen": "2026-11-25",
+   "health": true
+  },
+  {
+   "title": "미래에셋생명, 보유 CSM 2조3000억원 돌파… 건강보험 신계약 확대",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNS2daZkR5bnN5X1NmOUhhbFRSZ2VvXzB1d3hZeTZwaHBhVzM0V2ZJQlNhMEhHdUhMdTlKUzVHQlpSa01xd3JUVW5uOE1jS2lsbDlZY2dsaU1zSTNwSm9RaF82dHBCamNWV3M5R3I3ZWxkLWpwRDhYdUluU2s0MXB1TVZxc21NeVo5eTJLNE92RnBXeDlQ0gGUAUFVX3lxTE1LZ1pmRHluc3lfU2Y5SGFsVFJnZW9fMHV3eFl5NnBocGFXMzRXZklCU2EwSEd1SEx1OUpTNUdCWlJrTXF3clRVbm44TWNLaWxsOVljZ2xpTXNJM3BKb1FoXzZ0cEJqY1ZXczlHcjdlbGQtanBEOFh1SW5TazQxcHVNVnFzbU15Wjl5Mks0T3ZGcFd4OVA?oc=5",
+   "date": "2026-11-25",
+   "source": "Chosunbiz",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "건강보험",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-25",
+   "health": true
+  },
+  {
+   "title": "대구·경북 전공의 630명 모집…레지던트 경북대병원 66명 최다",
+   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9DTlFOUEN1THlqY2lNMVU1b1p3N2N0eDlwUmJRZTFpd29rbmZvT2xjMDJjVjBmR2RBSzdLRGJNbXFRMzZDdmpRTW9vMkxRZS1UMlJFTllsbzRYbEgxMlhz?oc=5",
+   "date": "2026-11-25",
+   "source": "뉴스1",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "의료인력",
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-25",
@@ -61,7 +116,7 @@
   },
   {
    "title": "화순 전남제일요양병원, AI 흉부영상 분석 솔루션 도입",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE56WnpEUG0xODBISFlCeF9xdjNLN2ZjZDRvTGRZMmc5M04xVWh1VnM1aVdrVHFkMWE5S29Qc3hwSjB6S1FBbnhVY0xkcVhZMm9XelVvaHZyRWVPWTNtUDdtREJTMFpXSWNKZDZxeQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9FcXBubGVnWVVXUm10WGdEVEVlaEMxQWdxc2lJVVlsMTN3VHNvdld1Z2p0ZlliNlAtVzZYSXp6VGlVbDlWMmV5MXVac0VvanJEcW9EcDM3WlBFRllwbURCcmlIeS11bGs?oc=5",
    "date": "2026-11-24",
    "source": "의료&복지뉴스",
    "score": 0,
@@ -152,21 +207,6 @@
    "health": true
   },
   {
-   "title": "올해 국가예방접종비 331억 미정산…질병청 \"내년 1월 신속히 집행\"",
-   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9ZRjRTTko4alc2Z19PY1BZSHNRTkptY0lEMkJvRmV6R2c4ekYxbW5ZY0RLZ2lkWVZCaXI2MDEwcUJDUm1ESXg2dlpoZjlTcTBiVGJIWDNkMFgxS25T?oc=5",
-   "date": "2026-11-24",
-   "source": "뉴스핌",
-   "score": 1,
-   "track": "소관사업",
-   "topic": "예방접종",
-   "agencies": [
-    "질병관리청"
-   ],
-   "members": [],
-   "first_seen": "2026-11-25",
-   "health": true
-  },
-  {
    "title": "\"독감 백신 미뤘다간 큰코다친다\"… 전국 검출률 33.1% 급등에 고양시도 '방역 비상등' |",
    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1PZ21hMDhMaVY4a1dqMzJ2VWppVHlmUkpPTlhlaEZVM1RpTUZWU1h5QnNjcks3ZzVtYTI4NEQxOGJKcnl1cE1iTmtDRjJBQnFuQmwxUXNZOF9Md1VhemtpN2dGQzZJdnoxWlNr?oc=5",
    "date": "2026-11-24",
@@ -206,16 +246,16 @@
    "health": true
   },
   {
-   "title": "대구·경북 전공의 정원 630명…이번에 온전히 채워질까",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1MU3ZTWDNxQzlQZEZyS0h6NlBwQjdnYkhuSGZ5RDVWd28xNnZYRkJ5dXNsNGlUTDNfZDAtbXF2b2dJcmxOYWx4aE1FRU9KQ1N3c0pkSUs0eHB6bWhDTVBrNnlILVNqd0EzUk9F?oc=5",
-   "date": "2026-11-23",
-   "source": "영남일보",
+   "title": "돌봄부터 생애 마지막까지, 장기요양 지원체계 개편 모색",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9Td05tZFFwNVlvZ3phQUN5c3RvQWh6TGJMU0VvekJyUTZPczFsdnA5ZEdZZjZZLS1rQk8zVW9PcEIwbnNseDJSS1pOVTRNa1BZdC1ESXdHNUx4bU00amhaNFRpZEFMNXV3emRFTGpNMNIBb0FVX3lxTE9Td05tZFFwNVlvZ3phQUN5c3RvQWh6TGJMU0VvekJyUTZPczFsdnA5ZEdZZjZZLS1rQk8zVW9PcEIwbnNseDJSS1pOVTRNa1BZdC1ESXdHNUx4bU00amhaNFRpZEFMNXV3emRFTGpNMA?oc=5",
+   "date": "2026-11-24",
+   "source": "e-의료정보",
    "score": 0,
    "track": "소관사업",
-   "topic": "의료인력",
+   "topic": "돌봄·요양",
    "agencies": [],
    "members": [],
-   "first_seen": "2026-11-24",
+   "first_seen": "2026-11-25",
    "health": true
   },
   {
@@ -542,21 +582,8 @@
    "health": false
   },
   {
-   "title": "요양보호사 등 장기요양 현장 '부당대우' 여전…피해자 38.5%는 ‘침묵 속 근무’",
-   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5iVDEtV2Q4TDhsVHl4ZnFxcnlNWFE0ZlBnYTU4SE92cDF6bTg0bjZ0eXZIZkhCNnhCQWhpUzc0Q21YTlFFMnUwRmxPNEhYNjBnSE5iazFrMlZQMjhRZXR2ZXZENHhLVHZm?oc=5",
-   "date": "2026-11-20",
-   "source": "한국NGO신문",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "돌봄·요양",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-24",
-   "health": true
-  },
-  {
    "title": "정치에 휘둘리는 1,700조 국민연금기금·113조 건강보험 재정…이소희, 국감 후속 ‘국민노후 수호법’ 대표발의",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1sT3hzTWp1SlR1QVZXNnc2WGxRNXVMbDUxUlJNT3FqVlpXaWpVT2tiWmNhaGtSX3lvQnh4OE0tTzBqbG45RmIxMFZ5RjFkSFBCMVN3ODFWdXNuOWZIYmNqUEttQWozRkhBdXNEUUNsZWJHalJs?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE01clFZd25pYzdsWUNXNjZ5bEpmRnFBSVBUU21hZ0hrcjU3NFE0UUpHMG56ZHlIQzdpSHBVTXozaXQyYlYzUWdGV240bjRDOXAzQXNCSmU1M1NjT1ZlS3JzNjZB?oc=5",
    "date": "2026-11-19",
    "source": "아시아뉴스통신",
    "score": 3,
@@ -919,19 +946,6 @@
    "score": 0,
    "track": "소관사업",
    "topic": "감염병 대응",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-14",
-   "health": true
-  },
-  {
-   "title": "미래에셋생명, 건강보험 성장에 보유 CSM 2.3조원…12.7% 증가",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBHVmEwNFJPbXZ0YXc1bXdFcDN6X19sTXFrdkhleEltOHRib3hHYjE4RUNmYXlXYVhpekZDSlNxNlNsTUxwcnhadmFxeGRHTHVvQUs5QVpHVHRDZG1XcUo0MTMyd0xlWm0xRDVuQXlSMA?oc=5",
-   "date": "2026-11-13",
-   "source": "비즈니스플러스",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "건강보험",
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-14",
