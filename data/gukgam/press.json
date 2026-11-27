@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-27",
- "updated_at": "2026-11-27 12:19",
+ "updated": "2026-11-28",
+ "updated_at": "2026-11-28 03:53",
  "window": "14d",
  "note": "구글 뉴스 검색 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. track='국정감사'·'대정부질문'은 위원 이름·기관명에 '국정감사'를 붙여 검색해 제목에 국감이 들어간 기사. track='소관사업'은 제목에 국감이 없어도 국감 재료가 되는 소관 사업·통계 기사를 주제별로 따로 모은 것으로, 같은 보도자료 받아쓰기가 쌓이지 않게 주제당 5건·21일까지만 남긴다. health=false는 제목에 국감은 있으나 보건복지와 닿는 낱말·기관·위원이 없는 기사(다른 상임위·국감 일반)로, 버리지 않고 뒤로 미룬다. 기관·위원·주제 분류는 모두 제목 키워드 자동.",
- "count": 2004,
+ "count": 2006,
  "items": [
   {
    "title": "엔지티비 모바일 사이트, 기사상세페이지, 전남광주 광산구, 고혈압·당뇨병 등록관리사업 개편 !!",
@@ -62,6 +62,33 @@
    "health": true
   },
   {
+   "title": "농지·식품 담합·GMO…푸드투데이 ‘2026 국감 우수의원’ 20명 선정",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBQWGw5TlBGbkoxVGlzVy1JQUxHbHZnM1dnUVF4ckZUQ3M0U0N6LWdWWFE3OTVCbUpDXzhsbTgzQ3UyVndNN3M1V0VZRXFBa3FCT3NNcFJZeTM2OC1Na3FkRnZNYlRFZw?oc=5",
+   "date": "2026-11-27",
+   "source": "푸드투데이",
+   "score": 2,
+   "track": "국정감사",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-28",
+   "health": true
+  },
+  {
+   "title": "질병관리청장, 제주공항 검역 현장 점검",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5yejJqeFgzQVdPMkpYaUlPMU9qQUdUdjNTelEzQnJ4d3JRcExZUkI3cnRWWnBWdUVUQmtoekFnS2M5UVU4dG15TjBOMmNjdmh0bE5heUU0bDVKUXhFWklleUxnNmFyTVdKMWdsN9IBcEFVX3lxTFBPb1ZuejNSMlU4aTJpa292LUs3b0xxWjdIUUpEM1VvRGd6azhwWWxvZFU3TzVBcEx3RjdFR3p2M1BaYkdTa0lzb0hlTF9jbEFIT0dZUU50YW80UHpOSncxSzI2YnpCSDZ3QWQtek4tVV8?oc=5",
+   "date": "2026-11-27",
+   "source": "내외뉴스통신",
+   "score": 1,
+   "track": "소관사업",
+   "topic": "검역·해외유입",
+   "agencies": [
+    "질병관리청"
+   ],
+   "members": [],
+   "first_seen": "2026-11-28",
+   "health": true
+  },
+  {
    "title": "[단독]'코로나19 백신 보상' 심의율 3%…질병청 \"심층 검토로 늦어져\"",
    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1WTWQtaDBPYlFlSDFqbTgwTmdrZEtRenBQaElmUVgwSE11MTctY3hhTHlKNTBlZ2I4aGJyeFJiN2s2d2NoVTR1OXN6S25GSzNWRFg0T0Rtb3NoRmg4TTNJYWZCUjM2Vkx4Rnh6dlF0Z9IBb0FVX3lxTE1WTWQtaDBPYlFlSDFqbTgwTmdrZEtRenBQaElmUVgwSE11MTctY3hhTHlKNTBlZ2I4aGJyeFJiN2s2d2NoVTR1OXN6S25GSzNWRFg0T0Rtb3NoRmg4TTNJYWZCUjM2Vkx4Rnh6dlF0Zw?oc=5",
    "date": "2026-11-26",
@@ -114,6 +141,20 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-27",
+   "health": true
+  },
+  {
+   "title": "'건강보험 본인부담상한액 초과금' 소멸시효 도래로 환급 못 받은 사례 한해 3만 건 : 민주당 박용갑 \"자동지급으로 전환해야\"",
+   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBRMTYxZVg2ZTE0TGU1WWJ4bzNmZWJNM212MlRhX2RVd21CZDloUG5ETFVtdkhoLVFxOWhUZEU4c1lkNFRRTnlQWXdqWmQ3QWR0TENBNDVKWQ?oc=5",
+   "date": "2026-11-26",
+   "source": "허프포스트코리아",
+   "score": 2,
+   "track": "",
+   "agencies": [],
+   "members": [
+    "박용갑"
+   ],
+   "first_seen": "2026-11-28",
    "health": true
   },
   {
@@ -333,7 +374,7 @@
   },
   {
    "title": "수도권·지방 전공의 ‘5대5’ 진통…부실수련 우려",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9OZ1ZtY0ZuV3FNQ0p1Z3RaNEYwUFBMUFM5VzA3VEdTOHFGb2t4STl6ZEV2OXJnZUJiMFoyNFkyRHV2RmEzZkVOR2txdzJ6Sm1icmJYNkF2ckdRYkhWV3hyUGp0SQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1ZZWRHa3lDcmpJUnFhZkVkbXR3UHJhdXNCUktienJVLW1Hb2k1SU43MVctT3FIVklnVVpPT3JJR25iN1ltTEc4c1l2NVEwMlVyY0lpYllmdVdRNWlHVG5XWk9QYzNQOGpreS1DYlNVZmRfdnlU?oc=5",
    "date": "2026-11-24",
    "source": "데일리메디",
    "score": 0,
@@ -810,6 +851,19 @@
     "이소희"
    ],
    "first_seen": "2026-11-23",
+   "health": true
+  },
+  {
+   "title": "경기도 당뇨환자 5년간 18만 명 증가… 관리 빨간불",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFAwLXhOQmxlS0IxSUtwb1ZwaEQ0dllfbjVBOGQyZVNJVk5vbnNBbG1fMzZzdjF5SDAwa1pfaHhZNkRSVTJlaVBpWTltZnZuOUFDT2RyQVNlQ0pKSWtsbXJ3U1ViWGVJRUEtLVowMjVXaw?oc=5",
+   "date": "2026-11-18",
+   "source": "기호일보",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "만성질환·고당사업",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-28",
    "health": true
   },
   {
@@ -1385,19 +1439,6 @@
    ],
    "members": [],
    "first_seen": "2026-11-10",
-   "health": true
-  },
-  {
-   "title": "나이지리아서 에볼라 해외유입 확인…9일부터 중점검역관리지역 지정",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5Tb0dZOVFSYURJaWE2OWl4cjB3dmZOR2F4X0dYNE40anRXOUVUazZ3ZEVpeHlQSTlrNV9PcGF3LTlaWGk0dm5nX1p3LVlhWnZ1VXlaRzJrcFhzYXNyM241TG9KYWUySFN6Q2ZoZDhKODk?oc=5",
-   "date": "2026-11-07",
-   "source": "medicalworldnews.co.kr",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "검역·해외유입",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-07",
    "health": true
   },
   {
@@ -25898,18 +25939,6 @@
    "members": [],
    "first_seen": "2026-09-29",
    "health": true
-  },
-  {
-   "title": "與 \"발목잡기\" vs 野 \"민심 싸늘\"…인사·검찰·안보 '국감 전면전'",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFA5VnB2RmVsTkRKV2pjRE9mWUdleDV5a2lIUTNmWE9qdDdycFFaeTl5ZHZ3dmtVQzlGWDN2TWR3ZlpYWllkYW1iSmNrMjRvSU9RcW1KanpOYkVVaHlpbGdDa0xYS3Y0RFg3enFaSNIBckFVX3lxTE1QSDJzTER4TGQyc25kek5CaEsxSjk5eWs1eTU0MjVZNDliYkxlRHN6dTdBMnRSTk1WYWN5cmRxQl9BNHhmc0gtSFl5YTNwUzVTN21jLTlwMEV6ZERaWjhhemxVUURPcjhORXlJZlc0YkUtdw?oc=5",
-   "date": "2026-09-28",
-   "source": "머니투데이",
-   "score": 2,
-   "track": "국정감사",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-09-28",
-   "health": false
   },
   {
    "title": "국회 재경위, 배민·구글코리아 대표 등 국감 증인 채택",
