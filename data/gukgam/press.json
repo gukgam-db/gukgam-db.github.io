@@ -1,10 +1,66 @@
 {
  "updated": "2026-11-27",
- "updated_at": "2026-11-27 04:00",
+ "updated_at": "2026-11-27 12:19",
  "window": "14d",
  "note": "구글 뉴스 검색 기반 최근 기사. 언론 보도 기준이며 의원실 보도자료 원문이 아님. track='국정감사'·'대정부질문'은 위원 이름·기관명에 '국정감사'를 붙여 검색해 제목에 국감이 들어간 기사. track='소관사업'은 제목에 국감이 없어도 국감 재료가 되는 소관 사업·통계 기사를 주제별로 따로 모은 것으로, 같은 보도자료 받아쓰기가 쌓이지 않게 주제당 5건·21일까지만 남긴다. health=false는 제목에 국감은 있으나 보건복지와 닿는 낱말·기관·위원이 없는 기사(다른 상임위·국감 일반)로, 버리지 않고 뒤로 미룬다. 기관·위원·주제 분류는 모두 제목 키워드 자동.",
- "count": 2005,
+ "count": 2004,
  "items": [
+  {
+   "title": "엔지티비 모바일 사이트, 기사상세페이지, 전남광주 광산구, 고혈압·당뇨병 등록관리사업 개편 !!",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE44cjZUN19NS1lJSHp3UGZ4RHZvaGN2LXJIVU1FMzMzdWxrYjFwSDFTenY0dFdvdC1pMWVrQk1LNzJBbGdxWDBHOGRIbFhZQklCTjNrYVVHd3hXc0tDdW1rUjVKMA?oc=5",
+   "date": "2026-11-27",
+   "source": "www.ngtv.tv",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "만성질환·고당사업",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-27",
+   "health": false
+  },
+  {
+   "title": "질병관리청, '무작위 표본 검역조사' 법제화, 항공기·선박 검역 사각지대 줄인다",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB1d2dDUGZaR3ZjN3ctVjJHalU1Q0xobjViUzRqbkdTQmxrRXNZckFVSXJfQTZRRjJvZkJWWV8xYklWRVdEUjl3VXZaeFBhU3d3cE5xUzdYQ3VvRFp0SEhCZEtqUXFNcFU?oc=5",
+   "date": "2026-11-27",
+   "source": "코리아방송",
+   "score": 1,
+   "track": "소관사업",
+   "topic": "검역·해외유입",
+   "agencies": [
+    "질병관리청"
+   ],
+   "members": [],
+   "first_seen": "2026-11-27",
+   "health": true
+  },
+  {
+   "title": "질병관리청, 27일 조류인플루엔자 인체감염증 유입 가능성에 대비 ‘검역 대응체계’ 점검",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE4zTHBPSVNObXdIeXpCdGI1NWplZzR6QzRWakxEaWdreTdocGZzUDZwak5ZUjBUblhuQTJWMy1MNjBKNjNka1BtdXg2blM1WVJzT2hsTnF1dnFrM2I3eFlxcDZKeFAwdml6MHZR?oc=5",
+   "date": "2026-11-27",
+   "source": "재활뉴스",
+   "score": 1,
+   "track": "소관사업",
+   "topic": "검역·해외유입",
+   "agencies": [
+    "질병관리청"
+   ],
+   "members": [],
+   "first_seen": "2026-11-27",
+   "health": true
+  },
+  {
+   "title": "하루 여러 번 돌봄부터 병원동행까지…재가 지원 확대·내년 노인일자리 118만 개 모집",
+   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1JSkVSZnBZVklPUDZaaXEzUlFqaVhLcUMtTG56YURXX3NPNEg1WDNseDNnMGh2OU4tUmVOc29pVU1lbThHcmJvemVjT3FUMHVONF9Z?oc=5",
+   "date": "2026-11-27",
+   "source": "유스연합",
+   "score": 0,
+   "track": "소관사업",
+   "topic": "돌봄·요양",
+   "agencies": [],
+   "members": [],
+   "first_seen": "2026-11-27",
+   "health": true
+  },
   {
    "title": "[단독]'코로나19 백신 보상' 심의율 3%…질병청 \"심층 검토로 늦어져\"",
    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1WTWQtaDBPYlFlSDFqbTgwTmdrZEtRenBQaElmUVgwSE11MTctY3hhTHlKNTBlZ2I4aGJyeFJiN2s2d2NoVTR1OXN6S25GSzNWRFg0T0Rtb3NoRmg4TTNJYWZCUjM2Vkx4Rnh6dlF0Z9IBb0FVX3lxTE1WTWQtaDBPYlFlSDFqbTgwTmdrZEtRenBQaElmUVgwSE11MTctY3hhTHlKNTBlZ2I4aGJyeFJiN2s2d2NoVTR1OXN6S25GSzNWRFg0T0Rtb3NoRmg4TTNJYWZCUjM2Vkx4Rnh6dlF0Zw?oc=5",
@@ -46,19 +102,6 @@
    "members": [],
    "first_seen": "2026-11-27",
    "health": true
-  },
-  {
-   "title": "전남광주 광산구, 고혈압·당뇨 관리사업 개편",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9uVzlKNjFBMmRLcUNZNG9nd3kzQnN2RElYQTJVWkI3TXp4ajVOYXJVZ014eUJiNndjMFc5M0c2cEExTGtoOTZjTi14dmVZalVGbTd0Um5ESHo3ajlkOVN5VWhSWERCM3Z1dUFpcF9xT1k4TV81aWU40gF3QVVfeXFMT25XOUo2MUEyZEtxQ1k0b2d3eTNCc3ZESVhBMlVaQjdNenhqNU5hclVnTXh5QmI2d2MwVzkzRzZwQTFMa2g5NmNOLXh2ZVlqVUZtN3RSbkRIejdqOWQ5U3lVaFJYREIzdnV1QWlwX3FPWThNXzVpZTg?oc=5",
-   "date": "2026-11-26",
-   "source": "핀포인트뉴스",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "만성질환·고당사업",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-27",
-   "health": false
   },
   {
    "title": "키움투자자산운용, 전주사무소 개소…국민연금과 실무 협력 확대",
@@ -117,7 +160,7 @@
   },
   {
    "title": "미래에셋생명, 보유 CSM 2조3000억원 돌파… 건강보험 신계약 확대",
-   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNS2daZkR5bnN5X1NmOUhhbFRSZ2VvXzB1d3hZeTZwaHBhVzM0V2ZJQlNhMEhHdUhMdTlKUzVHQlpSa01xd3JUVW5uOE1jS2lsbDlZY2dsaU1zSTNwSm9RaF82dHBCamNWV3M5R3I3ZWxkLWpwRDhYdUluU2s0MXB1TVZxc21NeVo5eTJLNE92RnBXeDlQ0gGUAUFVX3lxTE1LZ1pmRHluc3lfU2Y5SGFsVFJnZW9fMHV3eFl5NnBocGFXMzRXZklCU2EwSEd1SEx1OUpTNUdCWlJrTXF3clRVbm44TWNLaWxsOVljZ2xpTXNJM3BKb1FoXzZ0cEJqY1ZXczlHcjdlbGQtanBEOFh1SW5TazQxcHVNVnFzbU15Wjl5Mks0T3ZGcFd4OVA?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPc0RQMnZDV19lWDBLYkxPa2thTTFoWjZsTWVmVDFGWGt0TFhhUjZBUnBCUTdfRkxqdXdUbmdIZ3JxVHFiNy1PbU16TG5QWTI0U09ER0w2M1Fwa3AtdzNEbkh6SUR2UDFKRVNiLTA0TUNDT3dkVWduSmpiaXRITVYwTw?oc=5",
    "date": "2026-11-25",
    "source": "Chosunbiz",
    "score": 0,
@@ -164,21 +207,6 @@
    "track": "소관사업",
    "topic": "만성질환·고당사업",
    "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-26",
-   "health": true
-  },
-  {
-   "title": "질병관리청, 고혈압·당뇨병 관리체계 개편… 전국·전 연령으로 확대 추진",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8yTGJkMXVaY3hSamo5TFZwRER5dl9PS2JaODhGSmY5MHVxTG0ya2VYX3A5MHBMb3NwUVF1UGpxaVowQVFBOHdWdnRzcFlPdDkyaEtmNjlOUmlUTGJ1SklvMGxXa052UkRkNmZOWtIBcEFVX3lxTFBSTzRDUjlTa3p3N016Z1hQUEVvc1VRQl9oNHgwcXkwcGpveWU4UHl1eC1zQkNBa0cxbmFKVlVzZXFSU2VQT0RoM0RpNUhQRk1iUVNEYm5PTmV5X0ZSdXZpcVhMWXJpYnJSVnU3QS1TZ2k?oc=5",
-   "date": "2026-11-25",
-   "source": "내외뉴스통신",
-   "score": 1,
-   "track": "소관사업",
-   "topic": "만성질환·고당사업",
-   "agencies": [
-    "질병관리청"
-   ],
    "members": [],
    "first_seen": "2026-11-26",
    "health": true
@@ -252,7 +280,7 @@
   },
   {
    "title": "화순 전남제일요양병원, AI 흉부영상 분석 솔루션 도입",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9FcXBubGVnWVVXUm10WGdEVEVlaEMxQWdxc2lJVVlsMTN3VHNvdld1Z2p0ZlliNlAtVzZYSXp6VGlVbDlWMmV5MXVac0VvanJEcW9EcDM3WlBFRllwbURCcmlIeS11bGs?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE56WnpEUG0xODBISFlCeF9xdjNLN2ZjZDRvTGRZMmc5M04xVWh1VnM1aVdrVHFkMWE5S29Qc3hwSjB6S1FBbnhVY0xkcVhZMm9XelVvaHZyRWVPWTNtUDdtREJTMFpXSWNKZDZxeQ?oc=5",
    "date": "2026-11-24",
    "source": "의료&복지뉴스",
    "score": 0,
@@ -395,19 +423,6 @@
     "서미화"
    ],
    "first_seen": "2026-10-31",
-   "health": true
-  },
-  {
-   "title": "예천실버요양원 직원들 십시일반…예천군에 510만 원 기탁",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1uYlNTMUdRelFJWnlsdjg0Q0lEeVdRYW1STzducXgwVVdOMEYzcU95S1JKUWs4TEd5MzMwQ2dadHkxd29XTnM3eTJYNHlIR0trUmtDWm9GYldyd1JwSUd4Sm5QVl91Rm5IdDZyai1fMA?oc=5",
-   "date": "2026-11-23",
-   "source": "경북일보",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "돌봄·요양",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-26",
    "health": true
   },
   {
@@ -1383,34 +1398,6 @@
    "agencies": [],
    "members": [],
    "first_seen": "2026-11-07",
-   "health": true
-  },
-  {
-   "title": "[질병관리청] 나이지리아 에볼라 중점검역지역 추가… 9일부터 입국 시 건강상태 신고",
-   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5vUUw3dFZaQVZnc1ZlS2dXaGFOLWlyUjhFWFNVZzg5bmw1c1pLVjlQOTBPUXVNWmFqM0lHT3QzT2ZnOHBuT1BSX3J1bnFMdDZCdFdoMkhvZDFZTzV5SHc?oc=5",
-   "date": "2026-11-07",
-   "source": "커넥트이천",
-   "score": 1,
-   "track": "소관사업",
-   "topic": "검역·해외유입",
-   "agencies": [
-    "질병관리청"
-   ],
-   "members": [],
-   "first_seen": "2026-11-08",
-   "health": true
-  },
-  {
-   "title": "에볼라 확산에… 나이지리아도 ‘중점검역’ 지정",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE12WUs5ZTJfQTU0S21pRVBSdElRVEdGX25ua1ZhM2tYU2dGRDZBdEl4dUdUa2Z5eVh4cTF2UTJOdEs2Y3h0Yk1waXhBNDhEcW5YYXpsTU81TXg5Z1Azbl82cnkwM21WdW5JdE1OWk1R?oc=5",
-   "date": "2026-11-06",
-   "source": "간호사신문",
-   "score": 0,
-   "track": "소관사업",
-   "topic": "검역·해외유입",
-   "agencies": [],
-   "members": [],
-   "first_seen": "2026-11-06",
    "health": true
   },
   {
